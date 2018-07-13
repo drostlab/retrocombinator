@@ -1,0 +1,10 @@
+# R specific
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+# C++ output
+src/*.o
+src/*.so
+src/*.dll
