@@ -8,7 +8,7 @@ Description: This software package performs simulations on retrotransposon
     sequences over long periods of time (~500M years). It takes into account
     bursts and recombination events. Furthermore, it has functions to perform
     basic data analysis on the simulation results.
-Depends: R (>= 3.5.1)
+Depends: R (>= 3.5.0)
 Imports:
     Rcpp (>= 0.12.17)
 LinkingTo: Rcpp
