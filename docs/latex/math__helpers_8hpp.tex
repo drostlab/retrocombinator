@@ -1,0 +1,98 @@
+\hypertarget{math__helpers_8hpp}{}\section{src/math\+\_\+helpers.hpp File Reference}
+\label{math__helpers_8hpp}\index{src/math\+\_\+helpers.\+hpp@{src/math\+\_\+helpers.\+hpp}}
+
+
+Definitions of basic mathematical helper functions.  
+
+
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$random$>$}\newline
+{\ttfamily \#include $<$set$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \char`\"{}exception.\+hpp\char`\"{}}\newline
+Include dependency graph for math\+\_\+helpers.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{math__helpers_8hpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classrcombinator_1_1RandMaths}{rcombinator\+::\+Rand\+Maths}}
+\begin{DoxyCompactList}\small\item\em For all maths helper functions that use random number generation. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structrcombinator_1_1SummaryStats}{rcombinator\+::\+Summary\+Stats$<$ T, T\+\_\+cont $>$}}
+\begin{DoxyCompactList}\small\item\em Plain-\/\+Old-\/\+Data struct to store summary statistics for a list of values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{math__helpers_8hpp_a2059c09809a346c042b3377c6cf190fd}{rcombinator\+::is\+\_\+in\+\_\+range}} (long test, long lb, long ub)
+\begin{DoxyCompactList}\small\item\em Checks whether a number lies within a range. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename T\+\_\+cont $>$ }\\Summary\+Stats$<$ T, T\+\_\+cont $>$ \mbox{\hyperlink{math__helpers_8hpp_ad8584b8640f01617dcf0cf230daff5a5}{rcombinator\+::get\+\_\+summary\+\_\+stats}} (std\+::vector$<$ T $>$ xs)
+\begin{DoxyCompactList}\small\item\em Returns the \mbox{\hyperlink{structrcombinator_1_1SummaryStats}{Summary\+Stats}} for a list of values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Definitions of basic mathematical helper functions. 
+
+Used for random number generation, and basic methods in statistics and probability. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{math__helpers_8hpp_file_ad8584b8640f01617dcf0cf230daff5a5}\label{math__helpers_8hpp_file_ad8584b8640f01617dcf0cf230daff5a5}} 
+\index{math\+\_\+helpers.\+hpp@{math\+\_\+helpers.\+hpp}!get\+\_\+summary\+\_\+stats@{get\+\_\+summary\+\_\+stats}}
+\index{get\+\_\+summary\+\_\+stats@{get\+\_\+summary\+\_\+stats}!math\+\_\+helpers.\+hpp@{math\+\_\+helpers.\+hpp}}
+\subsubsection{\texorpdfstring{get\+\_\+summary\+\_\+stats()}{get\_summary\_stats()}}
+{\footnotesize\ttfamily template$<$typename T , typename T\+\_\+cont $>$ \\
+Summary\+Stats$<$T, T\+\_\+cont$>$ rcombinator\+::get\+\_\+summary\+\_\+stats (\begin{DoxyParamCaption}\item[{std\+::vector$<$ T $>$}]{xs }\end{DoxyParamCaption})}
+
+
+
+Returns the Summary\+Stats for a list of values. 
+
+This is not a linear operation as it sorts the values. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{math__helpers_8hpp_ad8584b8640f01617dcf0cf230daff5a5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{math__helpers_8hpp_ad8584b8640f01617dcf0cf230daff5a5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{math__helpers_8hpp_file_a2059c09809a346c042b3377c6cf190fd}\label{math__helpers_8hpp_file_a2059c09809a346c042b3377c6cf190fd}} 
+\index{math\+\_\+helpers.\+hpp@{math\+\_\+helpers.\+hpp}!is\+\_\+in\+\_\+range@{is\+\_\+in\+\_\+range}}
+\index{is\+\_\+in\+\_\+range@{is\+\_\+in\+\_\+range}!math\+\_\+helpers.\+hpp@{math\+\_\+helpers.\+hpp}}
+\subsubsection{\texorpdfstring{is\+\_\+in\+\_\+range()}{is\_in\_range()}}
+{\footnotesize\ttfamily bool rcombinator\+::is\+\_\+in\+\_\+range (\begin{DoxyParamCaption}\item[{long}]{test,  }\item[{long}]{lb,  }\item[{long}]{ub }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks whether a number lies within a range. 
+
+The bounds are \mbox{[}inclusive, exclusive). Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{math__helpers_8hpp_a2059c09809a346c042b3377c6cf190fd_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{math__helpers_8hpp_a2059c09809a346c042b3377c6cf190fd_icgraph}
+\end{center}
+\end{figure}

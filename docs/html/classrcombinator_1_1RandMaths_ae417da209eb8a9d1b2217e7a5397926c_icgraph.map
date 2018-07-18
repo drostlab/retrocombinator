@@ -1,0 +1,4 @@
+<map id="rcombinator::RandMaths::rand_int" name="rcombinator::RandMaths::rand_int">
+<area shape="rect" id="node2" href="$classrcombinator_1_1RandMaths.html#a2c31949c9ac03952cb0006e6a88e3d85" title="Samples m integers within a range, without replacement. " alt="" coords="235,5,457,47"/>
+<area shape="rect" id="node3" href="$classrcombinator_1_1RandMaths.html#aaa759efa3059b6793100cb6b6442f26d" title="Samples a non&#45;diagonal pair (2 distinct values) within a range. " alt="" coords="255,71,437,112"/>
+</map>
