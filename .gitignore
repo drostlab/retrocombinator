@@ -4,7 +4,11 @@
 .RData
 .Ruserdata
 
-# C++ output
+# RCpp output
 src/*.o
 src/*.so
 src/*.dll
+
+# C++ output
+obj/
+rcombinator

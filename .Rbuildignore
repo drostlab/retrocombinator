@@ -2,4 +2,8 @@
 ^\.Rproj\.user$
 ^Doxyfile$
 ^docs$
-^index.html$
+^rcombinator$
+^obj$
+^cpp$
+^Makefile$
+^clean_rcpp.sh$

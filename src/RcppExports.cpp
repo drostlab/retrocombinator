@@ -5,41 +5,41 @@
 
 using namespace Rcpp;
 
-// test_main
-double test_main();
-RcppExport SEXP _rcombinator_test_main() {
+// rcpp_test_main
+double rcpp_test_main();
+RcppExport SEXP _rcombinator_rcpp_test_main() {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    rcpp_result_gen = Rcpp::wrap(test_main());
+    rcpp_result_gen = Rcpp::wrap(rcpp_test_main());
     return rcpp_result_gen;
 END_RCPP
 }
-// test_other
-double test_other();
-RcppExport SEXP _rcombinator_test_other() {
+// rcpp_test_other
+double rcpp_test_other();
+RcppExport SEXP _rcombinator_rcpp_test_other() {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    rcpp_result_gen = Rcpp::wrap(test_other());
+    rcpp_result_gen = Rcpp::wrap(rcpp_test_other());
     return rcpp_result_gen;
 END_RCPP
 }
-// test_new
-double test_new();
-RcppExport SEXP _rcombinator_test_new() {
+// rcpp_test_new
+double rcpp_test_new();
+RcppExport SEXP _rcombinator_rcpp_test_new() {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    rcpp_result_gen = Rcpp::wrap(test_new());
+    rcpp_result_gen = Rcpp::wrap(rcpp_test_new());
     return rcpp_result_gen;
 END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_rcombinator_test_main", (DL_FUNC) &_rcombinator_test_main, 0},
-    {"_rcombinator_test_other", (DL_FUNC) &_rcombinator_test_other, 0},
-    {"_rcombinator_test_new", (DL_FUNC) &_rcombinator_test_new, 0},
+    {"_rcombinator_rcpp_test_main", (DL_FUNC) &_rcombinator_rcpp_test_main, 0},
+    {"_rcombinator_rcpp_test_other", (DL_FUNC) &_rcombinator_rcpp_test_other, 0},
+    {"_rcombinator_rcpp_test_new", (DL_FUNC) &_rcombinator_rcpp_test_new, 0},
     {NULL, NULL, 0}
 };
 

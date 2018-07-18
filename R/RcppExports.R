@@ -2,17 +2,17 @@
 # Generator token: 10BE3573-1514-4C36-9D1C-5A225CD40393
 
 #' @export
-test_main <- function() {
-    .Call('_rcombinator_test_main', PACKAGE = 'rcombinator')
+rcpp_test_main <- function() {
+    .Call('_rcombinator_rcpp_test_main', PACKAGE = 'rcombinator')
 }
 
 #' @export
-test_other <- function() {
-    .Call('_rcombinator_test_other', PACKAGE = 'rcombinator')
+rcpp_test_other <- function() {
+    .Call('_rcombinator_rcpp_test_other', PACKAGE = 'rcombinator')
 }
 
 #' @export
-test_new <- function() {
-    .Call('_rcombinator_test_new', PACKAGE = 'rcombinator')
+rcpp_test_new <- function() {
+    .Call('_rcombinator_rcpp_test_new', PACKAGE = 'rcombinator')
 }
 
