@@ -1,13 +1,20 @@
 Package: rcombinator
-Type: Package
-Title: Simulating The Evolution Of Retrotransposons Over Time
 Version: 1.0
-Author: Anindya Sharma
-Maintainer: Anindya Sharma <anindya.sharma1@gmail.com>
+Title: Simulating The Evolution Of Retrotransposons Over Time
+Authors@R: person("Anindya", "Sharma",
+                  email = "anindya.sharma1@gmail.com",
+                  role = c("aut", "cre"))
+Description: This software package performs simulations on retrotransposon
+    sequences over long periods of time (~500M years). It takes into account
+    bursts and recombination events. Furthermore, it has functions to perform
+    basic data analysis on the simulation results.
+Depends: R (>= 3.5.1)
+Imports:
+    Rcpp (>= 0.12.17)
+LinkingTo: Rcpp
+License: GPL-3 + file LICENSE
 URL: https://github.com/sams25/rcombinator
 BugReports: https://github.com/sams25/rcombinator/issues
-Description: This software package performs simulations on retrotransposon sequences over long periods of time (~500M years). It takes into account bursts and recombination events. Furthermore, it has functions to perform basic data analysis on the simulation results.
-License: GPL (>= 2)
-Imports: Rcpp (>= 0.12.17)
-LinkingTo: Rcpp
+LazyData: true
+Encoding: UTF-8
 RoxygenNote: 6.0.1
