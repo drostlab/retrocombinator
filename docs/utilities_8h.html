@@ -68,6 +68,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">utilities.h File Reference</div>  </div>
@@ -93,113 +94,26 @@ Include dependency graph for utilities.h:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrcombinator_1_1SummaryStats.html">rcombinator::SummaryStats&lt; T, T_cont &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plain-Old-Data struct to store summary statistics for a list of values.  <a href="structrcombinator_1_1SummaryStats.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrcombinator_1_1Utils_1_1SummaryStats.html">rcombinator::Utils::SummaryStats&lt; T, T_cont &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plain-Old-Data struct to store summary statistics for a list of values.  <a href="structrcombinator_1_1Utils_1_1SummaryStats.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacercombinator_1_1Utils"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacercombinator_1_1Utils.html">rcombinator::Utils</a></td></tr>
+<tr class="memdesc:namespacercombinator_1_1Utils"><td class="mdescLeft">&#160;</td><td class="mdescRight">To store some useful functions in a namespace and prevent conflicts. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a2059c09809a346c042b3377c6cf190fd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utilities_8h.html#a2059c09809a346c042b3377c6cf190fd">rcombinator::is_in_range</a> (long test, long lb, long ub)</td></tr>
-<tr class="memdesc:a2059c09809a346c042b3377c6cf190fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether a number lies within a range.  <a href="utilities_8h.html#a2059c09809a346c042b3377c6cf190fd">More...</a><br /></td></tr>
-<tr class="separator:a2059c09809a346c042b3377c6cf190fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8584b8640f01617dcf0cf230daff5a5"><td class="memTemplParams" colspan="2">template&lt;typename T , typename T_cont &gt; </td></tr>
-<tr class="memitem:ad8584b8640f01617dcf0cf230daff5a5"><td class="memTemplItemLeft" align="right" valign="top">SummaryStats&lt; T, T_cont &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="utilities_8h.html#ad8584b8640f01617dcf0cf230daff5a5">rcombinator::get_summary_stats</a> (std::vector&lt; T &gt; xs)</td></tr>
-<tr class="memdesc:ad8584b8640f01617dcf0cf230daff5a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="structrcombinator_1_1SummaryStats.html" title="Plain-Old-Data struct to store summary statistics for a list of values. ">SummaryStats</a> for a list of values.  <a href="utilities_8h.html#ad8584b8640f01617dcf0cf230daff5a5">More...</a><br /></td></tr>
-<tr class="separator:ad8584b8640f01617dcf0cf230daff5a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa38fa31292dbf3a06522dc76b20e2572"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacercombinator_1_1Utils.html#aa38fa31292dbf3a06522dc76b20e2572">rcombinator::Utils::is_in_range</a> (long test, long lb, long ub)</td></tr>
+<tr class="memdesc:aa38fa31292dbf3a06522dc76b20e2572"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether a number lies within a range.  <a href="namespacercombinator_1_1Utils.html#aa38fa31292dbf3a06522dc76b20e2572">More...</a><br /></td></tr>
+<tr class="separator:aa38fa31292dbf3a06522dc76b20e2572"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Definitions of basic helper functions. </p>
 <p>A collection of short, useful functions and data structures </p>
-</div><h2 class="groupheader">Function Documentation</h2>
-<a id="file_ad8584b8640f01617dcf0cf230daff5a5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_ad8584b8640f01617dcf0cf230daff5a5">&#9670;&nbsp;</a></span>get_summary_stats()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , typename T_cont &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">SummaryStats&lt;T, T_cont&gt; rcombinator::get_summary_stats </td>
-          <td>(</td>
-          <td class="paramtype">std::vector&lt; T &gt;&#160;</td>
-          <td class="paramname"><em>xs</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the SummaryStats for a list of values. </p>
-<p>This is not a linear operation as it sorts the values. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="utilities_8h_ad8584b8640f01617dcf0cf230daff5a5_cgraph.png" border="0" usemap="#utilities_8h_ad8584b8640f01617dcf0cf230daff5a5_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="utilities_8h_ad8584b8640f01617dcf0cf230daff5a5_icgraph.png" border="0" usemap="#utilities_8h_ad8584b8640f01617dcf0cf230daff5a5_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-<a id="file_a2059c09809a346c042b3377c6cf190fd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a2059c09809a346c042b3377c6cf190fd">&#9670;&nbsp;</a></span>is_in_range()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool rcombinator::is_in_range </td>
-          <td>(</td>
-          <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>test</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>lb</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>ub</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Checks whether a number lies within a range. </p>
-<p>The bounds are [inclusive, exclusive). </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="utilities_8h_a2059c09809a346c042b3377c6cf190fd_cgraph.png" border="0" usemap="#utilities_8h_a2059c09809a346c042b3377c6cf190fd_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="utilities_8h_a2059c09809a346c042b3377c6cf190fd_icgraph.png" border="0" usemap="#utilities_8h_a2059c09809a346c042b3377c6cf190fd_icgraph" alt=""/></div>
-</div>
-
-</div>
-</div>
-</div><!-- contents -->
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

@@ -82,6 +82,16 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a76c7dc43d0faee17d4b328bd342934e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1RandMaths.html#a76c7dc43d0faee17d4b328bd342934e0">set_specific_seed</a> (long seed)</td></tr>
+<tr class="memdesc:a76c7dc43d0faee17d4b328bd342934e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uses a user-specified seed for RNG.  <a href="#a76c7dc43d0faee17d4b328bd342934e0">More...</a><br /></td></tr>
+<tr class="separator:a76c7dc43d0faee17d4b328bd342934e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b61e31de6067ffa35531d5bde40f4c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1RandMaths.html#a2b61e31de6067ffa35531d5bde40f4c6">set_random_seed</a> ()</td></tr>
+<tr class="memdesc:a2b61e31de6067ffa35531d5bde40f4c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uses system time to seed the RNG.  <a href="#a2b61e31de6067ffa35531d5bde40f4c6">More...</a><br /></td></tr>
+<tr class="separator:a2b61e31de6067ffa35531d5bde40f4c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f82863502ca04438a331fd309ca8b5e"><td class="memItemLeft" align="right" valign="top"><a id="a4f82863502ca04438a331fd309ca8b5e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1RandMaths.html#a4f82863502ca04438a331fd309ca8b5e">rand_bit</a> ()</td></tr>
+<tr class="memdesc:a4f82863502ca04438a331fd309ca8b5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a random true/false value. <br /></td></tr>
+<tr class="separator:a4f82863502ca04438a331fd309ca8b5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae417da209eb8a9d1b2217e7a5397926c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1RandMaths.html#ae417da209eb8a9d1b2217e7a5397926c">rand_int</a> (int low, int high)</td></tr>
 <tr class="memdesc:ae417da209eb8a9d1b2217e7a5397926c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a random integer within a range.  <a href="#ae417da209eb8a9d1b2217e7a5397926c">More...</a><br /></td></tr>
 <tr class="separator:ae417da209eb8a9d1b2217e7a5397926c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -113,9 +123,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a cla
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:aa96396651fba75ffb972b5fa1c2994c7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classrcombinator_1_1RandMaths.html">RandMaths</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1RandMaths.html#aa96396651fba75ffb972b5fa1c2994c7">initializeRandMaths</a> (long seed=0)</td></tr>
-<tr class="memdesc:aa96396651fba75ffb972b5fa1c2994c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an instance of a <a class="el" href="classrcombinator_1_1RandMaths.html" title="For all maths helper functions that use random number generation. ">RandMaths</a> class, after seeding it.  <a href="#aa96396651fba75ffb972b5fa1c2994c7">More...</a><br /></td></tr>
-<tr class="separator:aa96396651fba75ffb972b5fa1c2994c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae54dee1a16fb0e275e1624ccaa7dc87e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classrcombinator_1_1RandMaths.html">RandMaths</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1RandMaths.html#ae54dee1a16fb0e275e1624ccaa7dc87e">get_instance</a> ()</td></tr>
+<tr class="memdesc:ae54dee1a16fb0e275e1624ccaa7dc87e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an instance of a <a class="el" href="classrcombinator_1_1RandMaths.html" title="For all maths helper functions that use random number generation. ">RandMaths</a> class, after seeding it with system time.  <a href="#ae54dee1a16fb0e275e1624ccaa7dc87e">More...</a><br /></td></tr>
+<tr class="separator:ae54dee1a16fb0e275e1624ccaa7dc87e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>For all maths helper functions that use random number generation. </p>
@@ -179,8 +189,8 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Chooses an event from a list of possible events. </p>
 <p>Takes the probabilities of each of the events as input. Throws an exception if the probabilites do not add up to at least 1.</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>Make this a safe pointer rather than a raw one, or use a vector rather than a raw array.</dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>Throw an exception even if probabilities add up to something greater than 1. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>Make this a safe pointer rather than a raw one, or use a vector rather than a raw array.</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd>Throw an exception even if probabilities add up to something greater than 1. </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -192,8 +202,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="aa96396651fba75ffb972b5fa1c2994c7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa96396651fba75ffb972b5fa1c2994c7">&#9670;&nbsp;</a></span>initializeRandMaths()</h2>
+<a id="ae54dee1a16fb0e275e1624ccaa7dc87e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae54dee1a16fb0e275e1624ccaa7dc87e">&#9670;&nbsp;</a></span>get_instance()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -202,10 +212,9 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classrcombinator_1_1RandMaths.html">RandMaths</a> &amp; RandMaths::initializeRandMaths </td>
+          <td class="memname"><a class="el" href="classrcombinator_1_1RandMaths.html">RandMaths</a> &amp; RandMaths::get_instance </td>
           <td>(</td>
-          <td class="paramtype">long&#160;</td>
-          <td class="paramname"><em>seed</em> = <code>0</code></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -216,8 +225,8 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Returns an instance of a <a class="el" href="classrcombinator_1_1RandMaths.html" title="For all maths helper functions that use random number generation. ">RandMaths</a> class, after seeding it. </p>
-<p>Can be done only once as we want to share the random number generation among all other classes, and seed only once for controlling the numbers that are generated. If the seed is set to the special value 0 during construction, the seed is randomly chosen using system time. </p>
+<p>Returns an instance of a <a class="el" href="classrcombinator_1_1RandMaths.html" title="For all maths helper functions that use random number generation. ">RandMaths</a> class, after seeding it with system time. </p>
+<p>Can be done only once as we want to share the random number generation among all other classes, and seed only once for controlling the numbers that are generated. </p>
 
 </div>
 </div>
@@ -255,7 +264,8 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="classrcombinator_1_1RandMaths_ae417da209eb8a9d1b2217e7a5397926c_icgraph.png" border="0" usemap="#classrcombinator_1_1RandMaths_ae417da209eb8a9d1b2217e7a5397926c_icgraph" alt=""/></div>
 <map name="classrcombinator_1_1RandMaths_ae417da209eb8a9d1b2217e7a5397926c_icgraph" id="classrcombinator_1_1RandMaths_ae417da209eb8a9d1b2217e7a5397926c_icgraph">
 <area shape="rect" id="node2" href="classrcombinator_1_1RandMaths.html#a2c31949c9ac03952cb0006e6a88e3d85" title="Samples m integers within a range, without replacement. " alt="" coords="235,5,457,47"/>
-<area shape="rect" id="node3" href="classrcombinator_1_1RandMaths.html#aaa759efa3059b6793100cb6b6442f26d" title="Samples a non&#45;diagonal pair (2 distinct values) within a range. " alt="" coords="255,71,437,112"/>
+<area shape="rect" id="node3" href="classrcombinator_1_1Sequence.html#a976b331689ec55d9d306281bbff5d22d" title="Constructs a sequence from recombining two other sequences. " alt="" coords="505,35,677,76"/>
+<area shape="rect" id="node4" href="classrcombinator_1_1RandMaths.html#aaa759efa3059b6793100cb6b6442f26d" title="Samples a non&#45;diagonal pair (2 distinct values) within a range. " alt="" coords="255,123,437,164"/>
 </map>
 </div>
 
@@ -403,6 +413,55 @@ Here is the call graph for this function:</div>
 <area shape="rect" id="node2" href="classrcombinator_1_1RandMaths.html#ae417da209eb8a9d1b2217e7a5397926c" title="Generates a random integer within a range. " alt="" coords="276,5,457,47"/>
 </map>
 </div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classrcombinator_1_1RandMaths_a2c31949c9ac03952cb0006e6a88e3d85_icgraph.png" border="0" usemap="#classrcombinator_1_1RandMaths_a2c31949c9ac03952cb0006e6a88e3d85_icgraph" alt=""/></div>
+<map name="classrcombinator_1_1RandMaths_a2c31949c9ac03952cb0006e6a88e3d85_icgraph" id="classrcombinator_1_1RandMaths_a2c31949c9ac03952cb0006e6a88e3d85_icgraph">
+<area shape="rect" id="node2" href="classrcombinator_1_1Sequence.html#a976b331689ec55d9d306281bbff5d22d" title="Constructs a sequence from recombining two other sequences. " alt="" coords="276,5,448,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2b61e31de6067ffa35531d5bde40f4c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b61e31de6067ffa35531d5bde40f4c6">&#9670;&nbsp;</a></span>set_random_seed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RandMaths::set_random_seed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Uses system time to seed the RNG. </p>
+<p>This can be undone by calling <code><a class="el" href="classrcombinator_1_1RandMaths.html#a76c7dc43d0faee17d4b328bd342934e0" title="Uses a user-specified seed for RNG. ">set_specific_seed()</a></code> </p>
+
+</div>
+</div>
+<a id="a76c7dc43d0faee17d4b328bd342934e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76c7dc43d0faee17d4b328bd342934e0">&#9670;&nbsp;</a></span>set_specific_seed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RandMaths::set_specific_seed </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>seed</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Uses a user-specified seed for RNG. </p>
+<p>This can be undone by calling <code><a class="el" href="classrcombinator_1_1RandMaths.html#a2b61e31de6067ffa35531d5bde40f4c6" title="Uses system time to seed the RNG. ">set_random_seed()</a></code> </p>
 
 </div>
 </div>
@@ -411,9 +470,6 @@ Here is the call graph for this function:</div>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool RandMaths::test_event </td>
@@ -423,11 +479,6 @@ Here is the call graph for this function:</div>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Tests whether or not an event happened. </p>

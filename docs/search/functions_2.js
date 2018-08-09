@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['get_5fsummary_5fstats',['get_summary_stats',['../utilities_8h.html#ad8584b8640f01617dcf0cf230daff5a5',1,'rcombinator']]]
+  ['exception',['Exception',['../classrcombinator_1_1Exception.html#a7d3c8825d7c2d7d1d8c9c537725734de',1,'rcombinator::Exception']]]
 ];

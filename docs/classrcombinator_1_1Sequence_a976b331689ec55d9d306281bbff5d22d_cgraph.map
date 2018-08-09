@@ -1,0 +1,6 @@
+<map id="rcombinator::Sequence::Sequence" name="rcombinator::Sequence::Sequence">
+<area shape="rect" id="node2" href="$classrcombinator_1_1RandMaths.html#ae417da209eb8a9d1b2217e7a5397926c" title="Generates a random integer within a range. " alt="" coords="496,36,677,77"/>
+<area shape="rect" id="node3" href="$classrcombinator_1_1Sequence.html#a690c3f7adffafdf45056b5ae632c515d" title="Returns length of the sequence. " alt="" coords="251,32,423,73"/>
+<area shape="rect" id="node4" href="$classrcombinator_1_1RandMaths.html#a2c31949c9ac03952cb0006e6a88e3d85" title="Samples m integers within a range, without replacement. " alt="" coords="225,97,448,139"/>
+<area shape="rect" id="node5" href="$namespacercombinator_1_1Utils.html#aa38fa31292dbf3a06522dc76b20e2572" title="Checks whether a number lies within a range. " alt="" coords="267,163,406,204"/>
+</map>

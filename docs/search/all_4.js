@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['max',['max',['../structrcombinator_1_1SummaryStats.html#ac2d4ef64bf7cc7a7b9dd74d733daa144',1,'rcombinator::SummaryStats']]],
-  ['mean',['mean',['../structrcombinator_1_1SummaryStats.html#a0352cb2fb67bd9653519058608507c45',1,'rcombinator::SummaryStats']]],
-  ['median',['median',['../structrcombinator_1_1SummaryStats.html#a2fcd7e66d2532d9dec8cb064a020946b',1,'rcombinator::SummaryStats']]],
-  ['min',['min',['../structrcombinator_1_1SummaryStats.html#a19e17a4824f604754cef6b255767e3dc',1,'rcombinator::SummaryStats']]]
+  ['is_5factive',['is_active',['../classrcombinator_1_1Sequence.html#a5af66ddd3c8bc05307b56737c56060bf',1,'rcombinator::Sequence']]],
+  ['is_5fin_5frange',['is_in_range',['../namespacercombinator_1_1Utils.html#aa38fa31292dbf3a06522dc76b20e2572',1,'rcombinator::Utils']]]
 ];

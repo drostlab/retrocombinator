@@ -19,69 +19,21 @@ Include dependency graph for utilities.\+h\+:\nopagebreak
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-struct \mbox{\hyperlink{structrcombinator_1_1SummaryStats}{rcombinator\+::\+Summary\+Stats$<$ T, T\+\_\+cont $>$}}
+struct \mbox{\hyperlink{structrcombinator_1_1Utils_1_1SummaryStats}{rcombinator\+::\+Utils\+::\+Summary\+Stats$<$ T, T\+\_\+cont $>$}}
 \begin{DoxyCompactList}\small\item\em Plain-\/\+Old-\/\+Data struct to store summary statistics for a list of values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacercombinator_1_1Utils}{rcombinator\+::\+Utils}}
+\begin{DoxyCompactList}\small\item\em To store some useful functions in a namespace and prevent conflicts. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-bool \mbox{\hyperlink{utilities_8h_a2059c09809a346c042b3377c6cf190fd}{rcombinator\+::is\+\_\+in\+\_\+range}} (long test, long lb, long ub)
-\begin{DoxyCompactList}\small\item\em Checks whether a number lies within a range. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T , typename T\+\_\+cont $>$ }\\Summary\+Stats$<$ T, T\+\_\+cont $>$ \mbox{\hyperlink{utilities_8h_ad8584b8640f01617dcf0cf230daff5a5}{rcombinator\+::get\+\_\+summary\+\_\+stats}} (std\+::vector$<$ T $>$ xs)
-\begin{DoxyCompactList}\small\item\em Returns the \mbox{\hyperlink{structrcombinator_1_1SummaryStats}{Summary\+Stats}} for a list of values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+bool \mbox{\hyperlink{namespacercombinator_1_1Utils_aa38fa31292dbf3a06522dc76b20e2572}{rcombinator\+::\+Utils\+::is\+\_\+in\+\_\+range}} (long test, long lb, long ub)
+\begin{DoxyCompactList}\small\item\em Checks whether a number lies within a range. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 Definitions of basic helper functions. 
 
 A collection of short, useful functions and data structures 
-
-\subsection{Function Documentation}
-\mbox{\Hypertarget{utilities_8h_file_ad8584b8640f01617dcf0cf230daff5a5}\label{utilities_8h_file_ad8584b8640f01617dcf0cf230daff5a5}} 
-\index{utilities.\+h@{utilities.\+h}!get\+\_\+summary\+\_\+stats@{get\+\_\+summary\+\_\+stats}}
-\index{get\+\_\+summary\+\_\+stats@{get\+\_\+summary\+\_\+stats}!utilities.\+h@{utilities.\+h}}
-\subsubsection{\texorpdfstring{get\+\_\+summary\+\_\+stats()}{get\_summary\_stats()}}
-{\footnotesize\ttfamily template$<$typename T , typename T\+\_\+cont $>$ \\
-Summary\+Stats$<$T, T\+\_\+cont$>$ rcombinator\+::get\+\_\+summary\+\_\+stats (\begin{DoxyParamCaption}\item[{std\+::vector$<$ T $>$}]{xs }\end{DoxyParamCaption})}
-
-
-
-Returns the Summary\+Stats for a list of values. 
-
-This is not a linear operation as it sorts the values. Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=229pt]{utilities_8h_ad8584b8640f01617dcf0cf230daff5a5_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=229pt]{utilities_8h_ad8584b8640f01617dcf0cf230daff5a5_icgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{utilities_8h_file_a2059c09809a346c042b3377c6cf190fd}\label{utilities_8h_file_a2059c09809a346c042b3377c6cf190fd}} 
-\index{utilities.\+h@{utilities.\+h}!is\+\_\+in\+\_\+range@{is\+\_\+in\+\_\+range}}
-\index{is\+\_\+in\+\_\+range@{is\+\_\+in\+\_\+range}!utilities.\+h@{utilities.\+h}}
-\subsubsection{\texorpdfstring{is\+\_\+in\+\_\+range()}{is\_in\_range()}}
-{\footnotesize\ttfamily bool rcombinator\+::is\+\_\+in\+\_\+range (\begin{DoxyParamCaption}\item[{long}]{test,  }\item[{long}]{lb,  }\item[{long}]{ub }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Checks whether a number lies within a range. 
-
-The bounds are \mbox{[}inclusive, exclusive). Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=184pt]{utilities_8h_a2059c09809a346c042b3377c6cf190fd_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=184pt]{utilities_8h_a2059c09809a346c042b3377c6cf190fd_icgraph}
-\end{center}
-\end{figure}

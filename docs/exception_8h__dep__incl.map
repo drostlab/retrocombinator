@@ -1,4 +1,6 @@
 <map id="src/exception.h" name="src/exception.h">
-<area shape="rect" id="node2" href="$rand__maths_8h.html" title="Declaration of RandMaths, a random number generator. " alt="" coords="5,80,140,107"/>
-<area shape="rect" id="node3" href="$utilities_8h.html" title="Definitions of basic helper functions. " alt="" coords="165,80,271,107"/>
+<area shape="rect" id="node2" href="$constants_8h.html" title="Definitions for enums/constants that are used throughout the project. " alt="" coords="5,80,125,107"/>
+<area shape="rect" id="node4" href="$rand__maths_8h.html" title="Declaration of the global random number generator. " alt="" coords="150,80,285,107"/>
+<area shape="rect" id="node5" href="$utilities_8h.html" title="Definitions of basic helper functions. " alt="" coords="309,80,416,107"/>
+<area shape="rect" id="node3" href="$sequence_8h.html" title="To store a DNA sequence and the mutations that it has undergone. " alt="" coords="6,155,125,181"/>
 </map>

@@ -1,0 +1,45 @@
+\hypertarget{structrcombinator_1_1Utils_1_1SummaryStats}{}\section{rcombinator\+:\+:Utils\+:\+:Summary\+Stats$<$ T, T\+\_\+cont $>$ Struct Template Reference}
+\label{structrcombinator_1_1Utils_1_1SummaryStats}\index{rcombinator\+::\+Utils\+::\+Summary\+Stats$<$ T, T\+\_\+cont $>$@{rcombinator\+::\+Utils\+::\+Summary\+Stats$<$ T, T\+\_\+cont $>$}}
+
+
+Plain-\/\+Old-\/\+Data struct to store summary statistics for a list of values.  
+
+
+
+
+{\ttfamily \#include $<$utilities.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structrcombinator_1_1Utils_1_1SummaryStats_a298556c55f80ec5341f68e4437175290}\label{structrcombinator_1_1Utils_1_1SummaryStats_a298556c55f80ec5341f68e4437175290}} 
+T \mbox{\hyperlink{structrcombinator_1_1Utils_1_1SummaryStats_a298556c55f80ec5341f68e4437175290}{min}}
+\begin{DoxyCompactList}\small\item\em Minimum. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structrcombinator_1_1Utils_1_1SummaryStats_aee0b73cf97c3992b2924007ab7cf7677}\label{structrcombinator_1_1Utils_1_1SummaryStats_aee0b73cf97c3992b2924007ab7cf7677}} 
+T\+\_\+cont \mbox{\hyperlink{structrcombinator_1_1Utils_1_1SummaryStats_aee0b73cf97c3992b2924007ab7cf7677}{q25}}
+\begin{DoxyCompactList}\small\item\em First quartile, 25th percentile. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structrcombinator_1_1Utils_1_1SummaryStats_aaef96ba301012a1d3620dc8a57c68af7}\label{structrcombinator_1_1Utils_1_1SummaryStats_aaef96ba301012a1d3620dc8a57c68af7}} 
+T\+\_\+cont \mbox{\hyperlink{structrcombinator_1_1Utils_1_1SummaryStats_aaef96ba301012a1d3620dc8a57c68af7}{median}}
+\begin{DoxyCompactList}\small\item\em Median. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structrcombinator_1_1Utils_1_1SummaryStats_a8d8b1e856b0cee4474297ce3fc5bc702}\label{structrcombinator_1_1Utils_1_1SummaryStats_a8d8b1e856b0cee4474297ce3fc5bc702}} 
+T\+\_\+cont \mbox{\hyperlink{structrcombinator_1_1Utils_1_1SummaryStats_a8d8b1e856b0cee4474297ce3fc5bc702}{q75}}
+\begin{DoxyCompactList}\small\item\em Third quartile, 75th percentile. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structrcombinator_1_1Utils_1_1SummaryStats_a0b47d0ce5dab397ba9595573a988051c}\label{structrcombinator_1_1Utils_1_1SummaryStats_a0b47d0ce5dab397ba9595573a988051c}} 
+T \mbox{\hyperlink{structrcombinator_1_1Utils_1_1SummaryStats_a0b47d0ce5dab397ba9595573a988051c}{max}}
+\begin{DoxyCompactList}\small\item\em Maximum. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structrcombinator_1_1Utils_1_1SummaryStats_a02fb885c4b1c828ff5fee577f5206594}\label{structrcombinator_1_1Utils_1_1SummaryStats_a02fb885c4b1c828ff5fee577f5206594}} 
+T\+\_\+cont \mbox{\hyperlink{structrcombinator_1_1Utils_1_1SummaryStats_a02fb885c4b1c828ff5fee577f5206594}{mean}}
+\begin{DoxyCompactList}\small\item\em Arithmetic mean. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T, typename T\+\_\+cont$>$\newline
+struct rcombinator\+::\+Utils\+::\+Summary\+Stats$<$ T, T\+\_\+cont $>$}
+
+Plain-\/\+Old-\/\+Data struct to store summary statistics for a list of values. 
+
+Is templated on T and T\+\_\+cont, where T is a numeric type, and T\+\_\+cont is a numeric type that can store fractional parts. Stores the quartiles and the mean for a list of values. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{utilities_8h}{utilities.\+h}}\end{DoxyCompactItemize}

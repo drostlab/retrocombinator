@@ -12,6 +12,13 @@ For all maths helper functions that use random number generation.
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+void \mbox{\hyperlink{classrcombinator_1_1RandMaths_a76c7dc43d0faee17d4b328bd342934e0}{set\+\_\+specific\+\_\+seed}} (long seed)
+\begin{DoxyCompactList}\small\item\em Uses a user-\/specified seed for R\+NG. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrcombinator_1_1RandMaths_a2b61e31de6067ffa35531d5bde40f4c6}{set\+\_\+random\+\_\+seed}} ()
+\begin{DoxyCompactList}\small\item\em Uses system time to seed the R\+NG. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classrcombinator_1_1RandMaths_a4f82863502ca04438a331fd309ca8b5e}\label{classrcombinator_1_1RandMaths_a4f82863502ca04438a331fd309ca8b5e}} 
+bool \mbox{\hyperlink{classrcombinator_1_1RandMaths_a4f82863502ca04438a331fd309ca8b5e}{rand\+\_\+bit}} ()
+\begin{DoxyCompactList}\small\item\em Generates a random true/false value. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classrcombinator_1_1RandMaths_ae417da209eb8a9d1b2217e7a5397926c}{rand\+\_\+int}} (int low, int high)
 \begin{DoxyCompactList}\small\item\em Generates a random integer within a range. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{classrcombinator_1_1RandMaths_aa6441baa59bff50f588c0c54e3c54140}{rand\+\_\+real}} (double low=0.\+0, double high=1.\+0)
@@ -38,8 +45,8 @@ void {\bfseries operator=} (\mbox{\hyperlink{classrcombinator_1_1RandMaths}{Rand
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static \mbox{\hyperlink{classrcombinator_1_1RandMaths}{Rand\+Maths}} \& \mbox{\hyperlink{classrcombinator_1_1RandMaths_aa96396651fba75ffb972b5fa1c2994c7}{initialize\+Rand\+Maths}} (long seed=0)
-\begin{DoxyCompactList}\small\item\em Returns an instance of a \mbox{\hyperlink{classrcombinator_1_1RandMaths}{Rand\+Maths}} class, after seeding it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+static \mbox{\hyperlink{classrcombinator_1_1RandMaths}{Rand\+Maths}} \& \mbox{\hyperlink{classrcombinator_1_1RandMaths_ae54dee1a16fb0e275e1624ccaa7dc87e}{get\+\_\+instance}} ()
+\begin{DoxyCompactList}\small\item\em Returns an instance of a \mbox{\hyperlink{classrcombinator_1_1RandMaths}{Rand\+Maths}} class, after seeding it with system time. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -74,11 +81,11 @@ Chooses an event from a list of possible events.
 Takes the probabilities of each of the events as input. Throws an exception if the probabilites do not add up to at least 1.
 
 \begin{DoxyRefDesc}{Todo}
-\item[\mbox{\hyperlink{todo__todo000001}{Todo}}]Make this a safe pointer rather than a raw one, or use a vector rather than a raw array.\end{DoxyRefDesc}
+\item[\mbox{\hyperlink{todo__todo000002}{Todo}}]Make this a safe pointer rather than a raw one, or use a vector rather than a raw array.\end{DoxyRefDesc}
 
 
 \begin{DoxyRefDesc}{Todo}
-\item[\mbox{\hyperlink{todo__todo000002}{Todo}}]Throw an exception even if probabilities add up to something greater than 1. \end{DoxyRefDesc}
+\item[\mbox{\hyperlink{todo__todo000003}{Todo}}]Throw an exception even if probabilities add up to something greater than 1. \end{DoxyRefDesc}
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -86,17 +93,17 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=350pt]{classrcombinator_1_1RandMaths_afbc0d35bd9744ecab1983914ac32d68c_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{classrcombinator_1_1RandMaths_aa96396651fba75ffb972b5fa1c2994c7}\label{classrcombinator_1_1RandMaths_aa96396651fba75ffb972b5fa1c2994c7}} 
-\index{rcombinator\+::\+Rand\+Maths@{rcombinator\+::\+Rand\+Maths}!initialize\+Rand\+Maths@{initialize\+Rand\+Maths}}
-\index{initialize\+Rand\+Maths@{initialize\+Rand\+Maths}!rcombinator\+::\+Rand\+Maths@{rcombinator\+::\+Rand\+Maths}}
-\subsubsection{\texorpdfstring{initialize\+Rand\+Maths()}{initializeRandMaths()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classrcombinator_1_1RandMaths}{Rand\+Maths}} \& Rand\+Maths\+::initialize\+Rand\+Maths (\begin{DoxyParamCaption}\item[{long}]{seed = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+\mbox{\Hypertarget{classrcombinator_1_1RandMaths_ae54dee1a16fb0e275e1624ccaa7dc87e}\label{classrcombinator_1_1RandMaths_ae54dee1a16fb0e275e1624ccaa7dc87e}} 
+\index{rcombinator\+::\+Rand\+Maths@{rcombinator\+::\+Rand\+Maths}!get\+\_\+instance@{get\+\_\+instance}}
+\index{get\+\_\+instance@{get\+\_\+instance}!rcombinator\+::\+Rand\+Maths@{rcombinator\+::\+Rand\+Maths}}
+\subsubsection{\texorpdfstring{get\+\_\+instance()}{get\_instance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrcombinator_1_1RandMaths}{Rand\+Maths}} \& Rand\+Maths\+::get\+\_\+instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
-Returns an instance of a \mbox{\hyperlink{classrcombinator_1_1RandMaths}{Rand\+Maths}} class, after seeding it. 
+Returns an instance of a \mbox{\hyperlink{classrcombinator_1_1RandMaths}{Rand\+Maths}} class, after seeding it with system time. 
 
-Can be done only once as we want to share the random number generation among all other classes, and seed only once for controlling the numbers that are generated. If the seed is set to the special value 0 during construction, the seed is randomly chosen using system time. \mbox{\Hypertarget{classrcombinator_1_1RandMaths_ae417da209eb8a9d1b2217e7a5397926c}\label{classrcombinator_1_1RandMaths_ae417da209eb8a9d1b2217e7a5397926c}} 
+Can be done only once as we want to share the random number generation among all other classes, and seed only once for controlling the numbers that are generated. \mbox{\Hypertarget{classrcombinator_1_1RandMaths_ae417da209eb8a9d1b2217e7a5397926c}\label{classrcombinator_1_1RandMaths_ae417da209eb8a9d1b2217e7a5397926c}} 
 \index{rcombinator\+::\+Rand\+Maths@{rcombinator\+::\+Rand\+Maths}!rand\+\_\+int@{rand\+\_\+int}}
 \index{rand\+\_\+int@{rand\+\_\+int}!rcombinator\+::\+Rand\+Maths@{rcombinator\+::\+Rand\+Maths}}
 \subsubsection{\texorpdfstring{rand\+\_\+int()}{rand\_int()}}
@@ -106,7 +113,8 @@ Can be done only once as we want to share the random number generation among all
 
 Generates a random integer within a range. 
 
-The bounds are \mbox{[}inclusive\+\_\+low, exclusive\+\_\+high). Here is the caller graph for this function\+:\nopagebreak
+The bounds are \mbox{[}inclusive\+\_\+low, exclusive\+\_\+high). Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -133,7 +141,8 @@ Takes the mean as a parameter. \mbox{\Hypertarget{classrcombinator_1_1RandMaths_
 
 Generates a random real number within a range. 
 
-The bounds are \mbox{[}inclusive\+\_\+low, exclusive high). Here is the caller graph for this function\+:\nopagebreak
+The bounds are \mbox{[}inclusive\+\_\+low, exclusive high). Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -150,7 +159,8 @@ The bounds are \mbox{[}inclusive\+\_\+low, exclusive high). Here is the caller g
 
 Samples a non-\/diagonal pair (2 distinct values) within a range. 
 
-The bounds for each value are \mbox{[}inclusive\+\_\+low, exclusive high). Here is the call graph for this function\+:\nopagebreak
+The bounds for each value are \mbox{[}inclusive\+\_\+low, exclusive high). Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -167,24 +177,54 @@ The bounds for each value are \mbox{[}inclusive\+\_\+low, exclusive high). Here 
 
 Samples {\itshape m} integers within a range, without replacement. 
 
-The bounds are \mbox{[}inclusive\+\_\+low, exclusive high). The integers are returned in ascending order. Here is the call graph for this function\+:\nopagebreak
+The bounds are \mbox{[}inclusive\+\_\+low, exclusive high). The integers are returned in ascending order. Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classrcombinator_1_1RandMaths_a2c31949c9ac03952cb0006e6a88e3d85_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{classrcombinator_1_1RandMaths_a183686140a9da18ad40c7e048ee8914e}\label{classrcombinator_1_1RandMaths_a183686140a9da18ad40c7e048ee8914e}} 
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrcombinator_1_1RandMaths_a2c31949c9ac03952cb0006e6a88e3d85_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrcombinator_1_1RandMaths_a2b61e31de6067ffa35531d5bde40f4c6}\label{classrcombinator_1_1RandMaths_a2b61e31de6067ffa35531d5bde40f4c6}} 
+\index{rcombinator\+::\+Rand\+Maths@{rcombinator\+::\+Rand\+Maths}!set\+\_\+random\+\_\+seed@{set\+\_\+random\+\_\+seed}}
+\index{set\+\_\+random\+\_\+seed@{set\+\_\+random\+\_\+seed}!rcombinator\+::\+Rand\+Maths@{rcombinator\+::\+Rand\+Maths}}
+\subsubsection{\texorpdfstring{set\+\_\+random\+\_\+seed()}{set\_random\_seed()}}
+{\footnotesize\ttfamily void Rand\+Maths\+::set\+\_\+random\+\_\+seed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Uses system time to seed the R\+NG. 
+
+This can be undone by calling {\ttfamily \mbox{\hyperlink{classrcombinator_1_1RandMaths_a76c7dc43d0faee17d4b328bd342934e0}{set\+\_\+specific\+\_\+seed()}}} \mbox{\Hypertarget{classrcombinator_1_1RandMaths_a76c7dc43d0faee17d4b328bd342934e0}\label{classrcombinator_1_1RandMaths_a76c7dc43d0faee17d4b328bd342934e0}} 
+\index{rcombinator\+::\+Rand\+Maths@{rcombinator\+::\+Rand\+Maths}!set\+\_\+specific\+\_\+seed@{set\+\_\+specific\+\_\+seed}}
+\index{set\+\_\+specific\+\_\+seed@{set\+\_\+specific\+\_\+seed}!rcombinator\+::\+Rand\+Maths@{rcombinator\+::\+Rand\+Maths}}
+\subsubsection{\texorpdfstring{set\+\_\+specific\+\_\+seed()}{set\_specific\_seed()}}
+{\footnotesize\ttfamily void Rand\+Maths\+::set\+\_\+specific\+\_\+seed (\begin{DoxyParamCaption}\item[{long}]{seed }\end{DoxyParamCaption})}
+
+
+
+Uses a user-\/specified seed for R\+NG. 
+
+This can be undone by calling {\ttfamily \mbox{\hyperlink{classrcombinator_1_1RandMaths_a2b61e31de6067ffa35531d5bde40f4c6}{set\+\_\+random\+\_\+seed()}}} \mbox{\Hypertarget{classrcombinator_1_1RandMaths_a183686140a9da18ad40c7e048ee8914e}\label{classrcombinator_1_1RandMaths_a183686140a9da18ad40c7e048ee8914e}} 
 \index{rcombinator\+::\+Rand\+Maths@{rcombinator\+::\+Rand\+Maths}!test\+\_\+event@{test\+\_\+event}}
 \index{test\+\_\+event@{test\+\_\+event}!rcombinator\+::\+Rand\+Maths@{rcombinator\+::\+Rand\+Maths}}
 \subsubsection{\texorpdfstring{test\+\_\+event()}{test\_event()}}
-{\footnotesize\ttfamily bool Rand\+Maths\+::test\+\_\+event (\begin{DoxyParamCaption}\item[{double}]{event\+\_\+probability }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily bool Rand\+Maths\+::test\+\_\+event (\begin{DoxyParamCaption}\item[{double}]{event\+\_\+probability }\end{DoxyParamCaption})}
 
 
 
 Tests whether or not an event happened. 
 
-Takes the probability of an event as paramter, and then compares it to a random value in \mbox{[}0, 1). Here is the call graph for this function\+:\nopagebreak
+Takes the probability of an event as paramter, and then compares it to a random value in \mbox{[}0, 1). Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

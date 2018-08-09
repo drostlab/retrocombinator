@@ -1,0 +1,159 @@
+\hypertarget{classrcombinator_1_1Sequence}{}\section{rcombinator\+:\+:Sequence Class Reference}
+\label{classrcombinator_1_1Sequence}\index{rcombinator\+::\+Sequence@{rcombinator\+::\+Sequence}}
+
+
+To represent a D\+NA sequence and the mutations that it has undergone.  
+
+
+
+
+{\ttfamily \#include $<$sequence.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrcombinator_1_1Sequence_afab8bafaf1283f4e699ba9111ee452b3}{Sequence}} (long n)
+\begin{DoxyCompactList}\small\item\em Constructs a random sequence of length {\itshape n}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classrcombinator_1_1Sequence_af5b3b62eba07f0e09f532fcf1681c289}{Sequence}} (std\+::string s)
+\begin{DoxyCompactList}\small\item\em Constructs a sequence from a given string. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classrcombinator_1_1Sequence_a976b331689ec55d9d306281bbff5d22d}{Sequence}} (\mbox{\hyperlink{classrcombinator_1_1Sequence}{Sequence}} \&s1, \mbox{\hyperlink{classrcombinator_1_1Sequence}{Sequence}} \&s2, int num\+\_\+template\+\_\+switches)
+\begin{DoxyCompactList}\small\item\em Constructs a sequence from recombining two other sequences. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classrcombinator_1_1Sequence_a690c3f7adffafdf45056b5ae632c515d}\label{classrcombinator_1_1Sequence_a690c3f7adffafdf45056b5ae632c515d}} 
+long \mbox{\hyperlink{classrcombinator_1_1Sequence_a690c3f7adffafdf45056b5ae632c515d}{get\+\_\+length}} () const
+\begin{DoxyCompactList}\small\item\em Returns length of the sequence. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classrcombinator_1_1Sequence_a5690b6b125807696c81533e7be0be296}\label{classrcombinator_1_1Sequence_a5690b6b125807696c81533e7be0be296}} 
+long \mbox{\hyperlink{classrcombinator_1_1Sequence_a5690b6b125807696c81533e7be0be296}{get\+\_\+tag}} () const
+\begin{DoxyCompactList}\small\item\em Returns the unique label for this sequence. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classrcombinator_1_1Sequence_a5f7bccd4725bb8c46f6b93bd01a6b2f0}{point\+\_\+mutate}} (long n, char new\+\_\+nucleotide, bool is\+\_\+lethal=false)
+\begin{DoxyCompactList}\small\item\em Changes the nucleotide at position {\itshape n} to {\itshape new\+\_\+nucleotide}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classrcombinator_1_1Sequence_a5fa45e155a1e4b3c257f19369ace05a8}\label{classrcombinator_1_1Sequence_a5fa45e155a1e4b3c257f19369ace05a8}} 
+std\+::string \mbox{\hyperlink{classrcombinator_1_1Sequence_a5fa45e155a1e4b3c257f19369ace05a8}{as\+\_\+string}} () const
+\begin{DoxyCompactList}\small\item\em Returns the raw nucleotide sequence as a string. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classrcombinator_1_1Sequence_a5af66ddd3c8bc05307b56737c56060bf}{is\+\_\+active}} () const
+\begin{DoxyCompactList}\small\item\em Tests whether this sequence is active (can transpose) or not. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classrcombinator_1_1Sequence_a821299743e342f028cf7cff51289e3cf}\label{classrcombinator_1_1Sequence_a821299743e342f028cf7cff51289e3cf}} 
+long \mbox{\hyperlink{classrcombinator_1_1Sequence_a821299743e342f028cf7cff51289e3cf}{num\+\_\+mutations}} () const
+\begin{DoxyCompactList}\small\item\em Returns how many mutations are present in this sequence. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+long \mbox{\hyperlink{classrcombinator_1_1Sequence_abdc71a8f6617dcb6ab73f0e07eb63b67}{operator$\ast$}} (const \mbox{\hyperlink{classrcombinator_1_1Sequence}{Sequence}} \&s1, const \mbox{\hyperlink{classrcombinator_1_1Sequence}{Sequence}} \&s2)
+\begin{DoxyCompactList}\small\item\em Computes pairwise distances between two sequences. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+To represent a D\+NA sequence and the mutations that it has undergone. 
+
+Keeps track of the actual sequence, mutations and lethal mutations. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrcombinator_1_1Sequence_afab8bafaf1283f4e699ba9111ee452b3}\label{classrcombinator_1_1Sequence_afab8bafaf1283f4e699ba9111ee452b3}} 
+\index{rcombinator\+::\+Sequence@{rcombinator\+::\+Sequence}!Sequence@{Sequence}}
+\index{Sequence@{Sequence}!rcombinator\+::\+Sequence@{rcombinator\+::\+Sequence}}
+\subsubsection{\texorpdfstring{Sequence()}{Sequence()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Sequence\+::\+Sequence (\begin{DoxyParamCaption}\item[{long}]{n }\end{DoxyParamCaption})}
+
+
+
+Constructs a random sequence of length {\itshape n}. 
+
+This is considered initial, so no mutations are present. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrcombinator_1_1Sequence_afab8bafaf1283f4e699ba9111ee452b3_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrcombinator_1_1Sequence_af5b3b62eba07f0e09f532fcf1681c289}\label{classrcombinator_1_1Sequence_af5b3b62eba07f0e09f532fcf1681c289}} 
+\index{rcombinator\+::\+Sequence@{rcombinator\+::\+Sequence}!Sequence@{Sequence}}
+\index{Sequence@{Sequence}!rcombinator\+::\+Sequence@{rcombinator\+::\+Sequence}}
+\subsubsection{\texorpdfstring{Sequence()}{Sequence()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Sequence\+::\+Sequence (\begin{DoxyParamCaption}\item[{std\+::string}]{s }\end{DoxyParamCaption})}
+
+
+
+Constructs a sequence from a given string. 
+
+This is considered initial, so no mutations are present. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrcombinator_1_1Sequence_af5b3b62eba07f0e09f532fcf1681c289_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classrcombinator_1_1Sequence_a976b331689ec55d9d306281bbff5d22d}\label{classrcombinator_1_1Sequence_a976b331689ec55d9d306281bbff5d22d}} 
+\index{rcombinator\+::\+Sequence@{rcombinator\+::\+Sequence}!Sequence@{Sequence}}
+\index{Sequence@{Sequence}!rcombinator\+::\+Sequence@{rcombinator\+::\+Sequence}}
+\subsubsection{\texorpdfstring{Sequence()}{Sequence()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Sequence\+::\+Sequence (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrcombinator_1_1Sequence}{Sequence}} \&}]{s1,  }\item[{\mbox{\hyperlink{classrcombinator_1_1Sequence}{Sequence}} \&}]{s2,  }\item[{int}]{num\+\_\+template\+\_\+switches }\end{DoxyParamCaption})}
+
+
+
+Constructs a sequence from recombining two other sequences. 
+
+The number of template switches has to be specified, and the positions at which the template switches are made is random.
+
+The mutations recorded are with respect to the original sequences. That is, the new sequence {\itshape s\+\_\+new} will have a mutation {\itshape m} at position {\itshape l} if and only if the sequence {\itshape s\+\_\+old} whose nucleotide is used for {\itshape s\+\_\+new} at position {\itshape l} had mutation {\itshape m} present at that position.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000004}{Todo}}]Add an option for specifying the positions of the template switches too, or overload this function. \end{DoxyRefDesc}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrcombinator_1_1Sequence_a976b331689ec55d9d306281bbff5d22d_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classrcombinator_1_1Sequence_a5af66ddd3c8bc05307b56737c56060bf}\label{classrcombinator_1_1Sequence_a5af66ddd3c8bc05307b56737c56060bf}} 
+\index{rcombinator\+::\+Sequence@{rcombinator\+::\+Sequence}!is\+\_\+active@{is\+\_\+active}}
+\index{is\+\_\+active@{is\+\_\+active}!rcombinator\+::\+Sequence@{rcombinator\+::\+Sequence}}
+\subsubsection{\texorpdfstring{is\+\_\+active()}{is\_active()}}
+{\footnotesize\ttfamily bool rcombinator\+::\+Sequence\+::is\+\_\+active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Tests whether this sequence is active (can transpose) or not. 
+
+Returns true if and only if there are no lethal mutations. \mbox{\Hypertarget{classrcombinator_1_1Sequence_a5f7bccd4725bb8c46f6b93bd01a6b2f0}\label{classrcombinator_1_1Sequence_a5f7bccd4725bb8c46f6b93bd01a6b2f0}} 
+\index{rcombinator\+::\+Sequence@{rcombinator\+::\+Sequence}!point\+\_\+mutate@{point\+\_\+mutate}}
+\index{point\+\_\+mutate@{point\+\_\+mutate}!rcombinator\+::\+Sequence@{rcombinator\+::\+Sequence}}
+\subsubsection{\texorpdfstring{point\+\_\+mutate()}{point\_mutate()}}
+{\footnotesize\ttfamily void Sequence\+::point\+\_\+mutate (\begin{DoxyParamCaption}\item[{long}]{n,  }\item[{char}]{new\+\_\+nucleotide,  }\item[{bool}]{is\+\_\+lethal = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Changes the nucleotide at position {\itshape n} to {\itshape new\+\_\+nucleotide}. 
+
+If the new\+\_\+nucleotide is the same as the original nucleotide in the string, the mutation disappears, else a mutation is created. It can also be specified whether or not the mutation is lethal. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrcombinator_1_1Sequence_a5f7bccd4725bb8c46f6b93bd01a6b2f0_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classrcombinator_1_1Sequence_abdc71a8f6617dcb6ab73f0e07eb63b67}\label{classrcombinator_1_1Sequence_abdc71a8f6617dcb6ab73f0e07eb63b67}} 
+\index{rcombinator\+::\+Sequence@{rcombinator\+::\+Sequence}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!rcombinator\+::\+Sequence@{rcombinator\+::\+Sequence}}
+\subsubsection{\texorpdfstring{operator$\ast$}{operator*}}
+{\footnotesize\ttfamily long operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classrcombinator_1_1Sequence}{Sequence}} \&}]{s1,  }\item[{const \mbox{\hyperlink{classrcombinator_1_1Sequence}{Sequence}} \&}]{s2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Computes pairwise distances between two sequences. 
+
+This is the standard edit distance score, and is the number of mismatches (because insertions and deletions are not possible in this system). 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{sequence_8h}{sequence.\+h}}\item 
+src/sequence.\+cpp\end{DoxyCompactItemize}
