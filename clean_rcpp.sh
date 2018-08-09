@@ -2,6 +2,12 @@
 
 options="$1"
 
+# default is 'all'
+if [ "$options" == "" ]
+then
+    options="a"
+fi
+
 if [ "$options" == "o" ] || [ "$options" == "a" ]
 then
     # Clean Rcpp generated object files
@@ -22,4 +28,5 @@ then
     echo -e "o: Rcpp generated object files"
     echo -e "c: Rcpp generated source files"
     echo -e "a: all Rcpp generated files"
+    echo -e "Default behaviour is 'a'"
 fi

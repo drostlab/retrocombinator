@@ -12,3 +12,4 @@ src/*.dll
 # C++ output
 obj/
 rcombinator
+test_all

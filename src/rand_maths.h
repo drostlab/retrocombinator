@@ -1,10 +1,10 @@
 /**
  * @file
  *
- * \brief Declaration of RandMaths, a random number generator
+ * \brief Declaration of the global random number generator.
  *
- * Used for random number generation, and basic methods in statistics and
- * probability.
+ * Used for basic methods in statistics and probability.
+ * RNG is the global instance name.
  */
 #ifndef RAND_MATHS_HPP
 #define RAND_MATHS_HPP
@@ -32,27 +32,19 @@ namespace rcombinator
          */
         std::default_random_engine re;
 
-        /** The initial seed for the engine that generates random numbers.
-         *  If it is set to the special value 0 during construction, the seed is
-         *  randomly chosen using system time.
+        /** Constructor, which seeds the random engine with system time.
+         *  Is private because we want this to be a singleton.
          */
-        const long seed;
-
-        /** Constructor, which seeds the random engine.
-         *  If the seed is 0, the random engine is seeded with system time.
-         *  Any non-zero seed is directly used as the seed for the engine.
-         */
-        RandMaths(long seed = 0);
+        RandMaths();
 
     public:
-        /** Returns an instance of a RandMaths class, after seeding it.
+        /** Returns an instance of a RandMaths class, after seeding it with
+         *  system time.
          *  Can be done only once as we want to share the random number
          *  generation among all other classes, and seed only once for
          *  controlling the numbers that are generated.
-         *  If the seed is set to the special value 0 during construction, the
-         *  seed is randomly chosen using system time.
          */
-        static RandMaths& initializeRandMaths(long seed = 0);
+        static RandMaths& get_instance();
 
         //@{
         /** Delete copy constructors as want RandMaths to be a singleton.
@@ -64,6 +56,20 @@ namespace rcombinator
         RandMaths(RandMaths const&) = delete;
         void operator=(RandMaths const&) = delete;
         //@}
+
+        /** Uses a user-specified seed for RNG.
+         *  This can be undone by calling \p set_random_seed()
+         */
+        void set_specific_seed(long seed);
+
+        /** Uses system time to seed the RNG.
+         *  This can be undone by calling \p set_specific_seed()
+         */
+        void set_random_seed();
+
+        /** Generates a random true/false value.
+         */
+        bool rand_bit();
 
         /** Generates a random integer within a range.
          *  The bounds are [inclusive_low, exclusive_high).
@@ -95,7 +101,7 @@ namespace rcombinator
          *  Takes the probability of an event as paramter, and then compares it to a
          *  random value in [0, 1).
          */
-        inline bool test_event(double event_probability);
+        bool test_event(double event_probability);
 
         /** Chooses an event from a list of possible events.
          *  Takes the probabilities of each of the events as input.
@@ -109,5 +115,9 @@ namespace rcombinator
          */
         int choose_event(double * events, long num_events);
     };
+
+    // Global random number generator
+    extern RandMaths& RNG;
 }
+
 #endif // RAND_MATHS_HPP

@@ -1,36 +1,39 @@
 #include "rand_maths.h"
 
-using namespace rcombinator;
-
-RandMaths::RandMaths(long seed /*= 0*/) : seed(seed)
+// Declaration of global random number generator
+namespace rcombinator
 {
-    // user specified seed, for deterministic output
-    if (seed)
-    {
-        re.seed(seed);
-    }
-    // user hasn't specified a seed, use a random clock-based one
-    else
-    {
-        re.seed(std::chrono::system_clock::now().time_since_epoch().count());
-    }
+    RandMaths& RNG = RandMaths::get_instance();
 }
 
-/*static*/ RandMaths& RandMaths::initializeRandMaths(long seed /*= 0*/)
-{
-    // keeps track of whether the engine has been seeded or not
-    static bool seeded(false);
+using namespace rcombinator;
 
-    if (!seeded)
-    {
-        static RandMaths instance(seed);
-        seeded = true;
-        return instance;
-    }
-    else
-    {
-        throw Exception("Trying to seed the singleton RandMaths object again");
-    }
+RandMaths::RandMaths()
+{
+    re.seed(std::chrono::system_clock::now().time_since_epoch().count());
+}
+
+/*static*/ RandMaths& RandMaths::get_instance()
+{
+    static RandMaths instance;
+    return instance;
+}
+
+void RandMaths::set_specific_seed(long seed)
+{
+    re.seed(seed);
+}
+
+void RandMaths::set_random_seed()
+{
+    re.seed(std::chrono::system_clock::now().time_since_epoch().count());
+}
+
+bool RandMaths::rand_bit()
+{
+    static std::uniform_int_distribution<int> bit_gen(0, 1);
+    // implicity convert 0 or 1 to bool
+    return bit_gen(re);
 }
 
 int RandMaths::rand_int(int low, int high)
@@ -100,7 +103,7 @@ std::pair<int, int> RandMaths::sample_distinct_pair(int low, int high)
     return std::make_pair(a, b);
 }
 
-/*inline*/ bool RandMaths::test_event(double event_probability)
+bool RandMaths::test_event(double event_probability)
 {
     if (event_probability < 0 || event_probability > 1)
     {

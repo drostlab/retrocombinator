@@ -12,18 +12,23 @@ $(OUT_DIR):
 CC = g++
 CCFLAGS = -I./$(LIB_DIR) -I./$(IN_DIR)
 
-_DEPS = exception.h 			\
-  	    rand_maths.h 			\
-	    utilities.h
+_DEPS = constants.h				\
+		exception.h				\
+		sequence.h				
 DEPS := $(addprefix $(LIB_DIR), $(_DEPS))
 
-_LIBS = rand_maths.o
+_LIBS = sequence.o				\
+		rand_maths.o			
 LIBS := $(addprefix $(OUT_DIR), $(_LIBS))
 
 _OBJS = test_main.o
 OBJS := $(addprefix $(OUT_DIR), $(_OBJS))
 
+_TEST = test_all.o
+TEST := $(addprefix $(OUT_DIR), $(_TEST))
+
 TARGET = rcombinator
+TEST_TARGET = test_all
 
 $(OUT_DIR)%.o: $(IN_DIR)%.cpp $(DEPS) | $(OUT_DIR)
 	$(CC) -c $(IN_DIR)$*.cpp -o $(OUT_DIR)$*.o $(CCFLAGS)
@@ -34,8 +39,17 @@ $(OUT_DIR)%.o: $(LIB_DIR)%.cpp $(DEPS) | $(OUT_DIR)
 $(TARGET): $(OBJS) $(LIBS)
 	$(CC) -o $@ $^ $(CCFLAGS)
 
+$(TEST_TARGET): $(TEST) $(LIBS)
+	$(CC) -o $@ $^ $(CCFLAGS)
+
+.PHONY: target
+target: $(TARGET)
+
+.PHONY: test
+test: $(TEST_TARGET)
+
 .PHONY: all
-all: $(TARGET)
+all: target test
 
 .PHONY: clean
 clean:
