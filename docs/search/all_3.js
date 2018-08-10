@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['g',['G',['../namespacercombinator_1_1Consts.html#aaa096a23d1bc2fdb1992265192fae907a5020e318d196247b860e9fe541f74d33',1,'rcombinator::Consts']]],
-  ['get_5finstance',['get_instance',['../classrcombinator_1_1RandMaths.html#ae54dee1a16fb0e275e1624ccaa7dc87e',1,'rcombinator::RandMaths']]],
-  ['get_5flength',['get_length',['../classrcombinator_1_1Sequence.html#a690c3f7adffafdf45056b5ae632c515d',1,'rcombinator::Sequence']]],
-  ['get_5ftag',['get_tag',['../classrcombinator_1_1Sequence.html#a5690b6b125807696c81533e7be0be296',1,'rcombinator::Sequence']]]
+  ['error_5fmsg',['error_msg',['../classrcombinator_1_1Exception.html#a982a342c7c75134b7323ecd67e43e13d',1,'rcombinator::Exception']]],
+  ['exception',['Exception',['../classrcombinator_1_1Exception.html',1,'rcombinator::Exception'],['../classrcombinator_1_1Exception.html#a7d3c8825d7c2d7d1d8c9c537725734de',1,'rcombinator::Exception::Exception()']]],
+  ['exception_2eh',['exception.h',['../exception_8h.html',1,'']]]
 ];

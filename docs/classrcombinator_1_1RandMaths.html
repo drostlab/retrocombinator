@@ -69,6 +69,8 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classrcombinator_1_1RandMaths-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">rcombinator::RandMaths Class Reference</div>  </div>
@@ -126,13 +128,53 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ae54dee1a16fb0e275e1624ccaa7dc87e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classrcombinator_1_1RandMaths.html">RandMaths</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1RandMaths.html#ae54dee1a16fb0e275e1624ccaa7dc87e">get_instance</a> ()</td></tr>
 <tr class="memdesc:ae54dee1a16fb0e275e1624ccaa7dc87e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an instance of a <a class="el" href="classrcombinator_1_1RandMaths.html" title="For all maths helper functions that use random number generation. ">RandMaths</a> class, after seeding it with system time.  <a href="#ae54dee1a16fb0e275e1624ccaa7dc87e">More...</a><br /></td></tr>
 <tr class="separator:ae54dee1a16fb0e275e1624ccaa7dc87e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:aa507e7465f9a650d560aa42c7f75310f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1RandMaths.html#aa507e7465f9a650d560aa42c7f75310f">RandMaths</a> ()</td></tr>
+<tr class="memdesc:aa507e7465f9a650d560aa42c7f75310f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor, which seeds the random engine with system time.  <a href="#aa507e7465f9a650d560aa42c7f75310f">More...</a><br /></td></tr>
+<tr class="separator:aa507e7465f9a650d560aa42c7f75310f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a69ed49d4f595e927d803d79b0c679ba6"><td class="memItemLeft" align="right" valign="top">std::default_random_engine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1RandMaths.html#a69ed49d4f595e927d803d79b0c679ba6">re</a></td></tr>
+<tr class="memdesc:a69ed49d4f595e927d803d79b0c679ba6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Engine that produces random numbers for all functions that require them.  <a href="#a69ed49d4f595e927d803d79b0c679ba6">More...</a><br /></td></tr>
+<tr class="separator:a69ed49d4f595e927d803d79b0c679ba6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>For all maths helper functions that use random number generation. </p>
 <p>This is implemented as a singleton that can either be specifically seeded (for testing and debugging) or can be randomly seeded (for simulations). </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aa507e7465f9a650d560aa42c7f75310f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa507e7465f9a650d560aa42c7f75310f">&#9670;&nbsp;</a></span>RandMaths() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RandMaths::RandMaths </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor, which seeds the random engine with system time. </p>
+<p>Is private because we want this to be a singleton. </p>
+
+</div>
+</div>
 <a id="ac9b350a4aa07b739dcc2bb12c3b5c0e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac9b350a4aa07b739dcc2bb12c3b5c0e5">&#9670;&nbsp;</a></span>RandMaths()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9b350a4aa07b739dcc2bb12c3b5c0e5">&#9670;&nbsp;</a></span>RandMaths() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -189,14 +231,22 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Chooses an event from a list of possible events. </p>
 <p>Takes the probabilities of each of the events as input. Throws an exception if the probabilites do not add up to at least 1.</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>Make this a safe pointer rather than a raw one, or use a vector rather than a raw array.</dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd>Throw an exception even if probabilities add up to something greater than 1. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">Todo:</a></b></dt><dd>Make this a safe pointer rather than a raw one, or use a vector rather than a raw array.</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000009">Todo:</a></b></dt><dd>Throw an exception even if probabilities add up to something greater than 1. </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classrcombinator_1_1RandMaths_afbc0d35bd9744ecab1983914ac32d68c_cgraph.png" border="0" usemap="#classrcombinator_1_1RandMaths_afbc0d35bd9744ecab1983914ac32d68c_cgraph" alt=""/></div>
 <map name="classrcombinator_1_1RandMaths_afbc0d35bd9744ecab1983914ac32d68c_cgraph" id="classrcombinator_1_1RandMaths_afbc0d35bd9744ecab1983914ac32d68c_cgraph">
 <area shape="rect" id="node2" href="classrcombinator_1_1RandMaths.html#aa6441baa59bff50f588c0c54e3c54140" title="Generates a random real number within a range. " alt="" coords="235,5,416,47"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classrcombinator_1_1RandMaths_afbc0d35bd9744ecab1983914ac32d68c_icgraph.png" border="0" usemap="#classrcombinator_1_1RandMaths_afbc0d35bd9744ecab1983914ac32d68c_icgraph" alt=""/></div>
+<map name="classrcombinator_1_1RandMaths_afbc0d35bd9744ecab1983914ac32d68c_icgraph" id="classrcombinator_1_1RandMaths_afbc0d35bd9744ecab1983914ac32d68c_icgraph">
+<area shape="rect" id="node2" href="classrcombinator_1_1PointMutator.html#aba3c2b8641affe8a06d815c33cafdc1b" title="Mutates a sequence according to a given transition matrix. " alt="" coords="235,5,427,47"/>
 </map>
 </div>
 
@@ -263,9 +313,10 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classrcombinator_1_1RandMaths_ae417da209eb8a9d1b2217e7a5397926c_icgraph.png" border="0" usemap="#classrcombinator_1_1RandMaths_ae417da209eb8a9d1b2217e7a5397926c_icgraph" alt=""/></div>
 <map name="classrcombinator_1_1RandMaths_ae417da209eb8a9d1b2217e7a5397926c_icgraph" id="classrcombinator_1_1RandMaths_ae417da209eb8a9d1b2217e7a5397926c_icgraph">
-<area shape="rect" id="node2" href="classrcombinator_1_1RandMaths.html#a2c31949c9ac03952cb0006e6a88e3d85" title="Samples m integers within a range, without replacement. " alt="" coords="235,5,457,47"/>
-<area shape="rect" id="node3" href="classrcombinator_1_1Sequence.html#a976b331689ec55d9d306281bbff5d22d" title="Constructs a sequence from recombining two other sequences. " alt="" coords="505,35,677,76"/>
-<area shape="rect" id="node4" href="classrcombinator_1_1RandMaths.html#aaa759efa3059b6793100cb6b6442f26d" title="Samples a non&#45;diagonal pair (2 distinct values) within a range. " alt="" coords="255,123,437,164"/>
+<area shape="rect" id="node2" href="classrcombinator_1_1RandMaths.html#a2c31949c9ac03952cb0006e6a88e3d85" title="Samples m integers within a range, without replacement. " alt="" coords="235,12,457,53"/>
+<area shape="rect" id="node4" href="classrcombinator_1_1Sequence.html#a976b331689ec55d9d306281bbff5d22d" title="Constructs a sequence from recombining two other sequences. " alt="" coords="515,71,687,112"/>
+<area shape="rect" id="node5" href="classrcombinator_1_1RandMaths.html#aaa759efa3059b6793100cb6b6442f26d" title="Samples a non&#45;diagonal pair (2 distinct values) within a range. " alt="" coords="255,129,437,171"/>
+<area shape="rect" id="node3" href="classrcombinator_1_1PointMutator.html#ab8051bc801ddedf28cca4e863cfa99d6" title="Constructor that chooses a point mutation model and the probabilities for lethal mutations at each po..." alt="" coords="505,5,697,47"/>
 </map>
 </div>
 
@@ -326,7 +377,8 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="classrcombinator_1_1RandMaths_aa6441baa59bff50f588c0c54e3c54140_icgraph.png" border="0" usemap="#classrcombinator_1_1RandMaths_aa6441baa59bff50f588c0c54e3c54140_icgraph" alt=""/></div>
 <map name="classrcombinator_1_1RandMaths_aa6441baa59bff50f588c0c54e3c54140_icgraph" id="classrcombinator_1_1RandMaths_aa6441baa59bff50f588c0c54e3c54140_icgraph">
 <area shape="rect" id="node2" href="classrcombinator_1_1RandMaths.html#a183686140a9da18ad40c7e048ee8914e" title="Tests whether or not an event happened. " alt="" coords="235,5,416,47"/>
-<area shape="rect" id="node3" href="classrcombinator_1_1RandMaths.html#afbc0d35bd9744ecab1983914ac32d68c" title="Chooses an event from a list of possible events. " alt="" coords="235,71,416,112"/>
+<area shape="rect" id="node4" href="classrcombinator_1_1RandMaths.html#afbc0d35bd9744ecab1983914ac32d68c" title="Chooses an event from a list of possible events. " alt="" coords="235,71,416,112"/>
+<area shape="rect" id="node3" href="classrcombinator_1_1PointMutator.html#aba3c2b8641affe8a06d815c33cafdc1b" title="Mutates a sequence according to a given transition matrix. " alt="" coords="464,39,656,80"/>
 </map>
 </div>
 
@@ -418,7 +470,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classrcombinator_1_1RandMaths_a2c31949c9ac03952cb0006e6a88e3d85_icgraph.png" border="0" usemap="#classrcombinator_1_1RandMaths_a2c31949c9ac03952cb0006e6a88e3d85_icgraph" alt=""/></div>
 <map name="classrcombinator_1_1RandMaths_a2c31949c9ac03952cb0006e6a88e3d85_icgraph" id="classrcombinator_1_1RandMaths_a2c31949c9ac03952cb0006e6a88e3d85_icgraph">
-<area shape="rect" id="node2" href="classrcombinator_1_1Sequence.html#a976b331689ec55d9d306281bbff5d22d" title="Constructs a sequence from recombining two other sequences. " alt="" coords="276,5,448,47"/>
+<area shape="rect" id="node2" href="classrcombinator_1_1PointMutator.html#ab8051bc801ddedf28cca4e863cfa99d6" title="Constructor that chooses a point mutation model and the probabilities for lethal mutations at each po..." alt="" coords="276,5,468,47"/>
+<area shape="rect" id="node3" href="classrcombinator_1_1Sequence.html#a976b331689ec55d9d306281bbff5d22d" title="Constructs a sequence from recombining two other sequences. " alt="" coords="286,71,458,112"/>
 </map>
 </div>
 
@@ -491,6 +544,40 @@ Here is the call graph for this function:</div>
 <area shape="rect" id="node2" href="classrcombinator_1_1RandMaths.html#aa6441baa59bff50f588c0c54e3c54140" title="Generates a random real number within a range. " alt="" coords="235,5,416,47"/>
 </map>
 </div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classrcombinator_1_1RandMaths_a183686140a9da18ad40c7e048ee8914e_icgraph.png" border="0" usemap="#classrcombinator_1_1RandMaths_a183686140a9da18ad40c7e048ee8914e_icgraph" alt=""/></div>
+<map name="classrcombinator_1_1RandMaths_a183686140a9da18ad40c7e048ee8914e_icgraph" id="classrcombinator_1_1RandMaths_a183686140a9da18ad40c7e048ee8914e_icgraph">
+<area shape="rect" id="node2" href="classrcombinator_1_1PointMutator.html#aba3c2b8641affe8a06d815c33cafdc1b" title="Mutates a sequence according to a given transition matrix. " alt="" coords="235,5,427,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a69ed49d4f595e927d803d79b0c679ba6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69ed49d4f595e927d803d79b0c679ba6">&#9670;&nbsp;</a></span>re</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::default_random_engine rcombinator::RandMaths::re</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Engine that produces random numbers for all functions that require them. </p>
+<p>This is seeded during initialisation of the class, and once set, its RNG is shared by all other parts of the code that require it. </p>
 
 </div>
 </div>

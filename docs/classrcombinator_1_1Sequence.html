@@ -68,6 +68,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="classrcombinator_1_1Sequence-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -99,6 +101,14 @@ long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1Sequence.html#a5690b6b125807696c81533e7be0be296">get_tag</a> () const</td></tr>
 <tr class="memdesc:a5690b6b125807696c81533e7be0be296"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the unique label for this sequence. <br /></td></tr>
 <tr class="separator:a5690b6b125807696c81533e7be0be296"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1367e984a24069fb18f4eb85f5c55dbb"><td class="memItemLeft" align="right" valign="top"><a id="a1367e984a24069fb18f4eb85f5c55dbb"></a>
+std::pair&lt; bool, bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1Sequence.html#a1367e984a24069fb18f4eb85f5c55dbb">bits_at</a> (long n) const</td></tr>
+<tr class="memdesc:a1367e984a24069fb18f4eb85f5c55dbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the 2bit encoding for a base at a given position. <br /></td></tr>
+<tr class="separator:a1367e984a24069fb18f4eb85f5c55dbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19672a1fbefcdf0c317fddb177f80a15"><td class="memItemLeft" align="right" valign="top"><a id="a19672a1fbefcdf0c317fddb177f80a15"></a>
+char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1Sequence.html#a19672a1fbefcdf0c317fddb177f80a15">char_at</a> (long n) const</td></tr>
+<tr class="memdesc:a19672a1fbefcdf0c317fddb177f80a15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the character for a base at a given position. <br /></td></tr>
+<tr class="separator:a19672a1fbefcdf0c317fddb177f80a15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f7bccd4725bb8c46f6b93bd01a6b2f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1Sequence.html#a5f7bccd4725bb8c46f6b93bd01a6b2f0">point_mutate</a> (long n, char new_nucleotide, bool is_lethal=false)</td></tr>
 <tr class="memdesc:a5f7bccd4725bb8c46f6b93bd01a6b2f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the nucleotide at position <em>n</em> to <em>new_nucleotide</em>.  <a href="#a5f7bccd4725bb8c46f6b93bd01a6b2f0">More...</a><br /></td></tr>
 <tr class="separator:a5f7bccd4725bb8c46f6b93bd01a6b2f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -114,6 +124,37 @@ long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:a821299743e342f028cf7cff51289e3cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns how many mutations are present in this sequence. <br /></td></tr>
 <tr class="separator:a821299743e342f028cf7cff51289e3cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
+Private Types</h2></td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:a95c6d1eea79f9551118a4c988433e5b7"><td class="memItemLeft" align="right" valign="top">typedef std::unordered_map&lt; long, char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1Sequence.html#a95c6d1eea79f9551118a4c988433e5b7">mutations_type</a></td></tr>
+<tr class="memdesc:a95c6d1eea79f9551118a4c988433e5b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Basic typedefs - hashed data structures for quick lookup.  <a href="#a95c6d1eea79f9551118a4c988433e5b7">More...</a><br /></td></tr>
+<tr class="separator:a95c6d1eea79f9551118a4c988433e5b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5b0638255a262292d6f4bb31367fc90"><td class="memItemLeft" align="right" valign="top"><a id="ae5b0638255a262292d6f4bb31367fc90"></a>
+typedef std::unordered_set&lt; long &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>lethal_mutations_type</b></td></tr>
+<tr class="separator:ae5b0638255a262292d6f4bb31367fc90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a9f9a2f4654d8b0e0cdb3061b9e0775d7"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1Sequence.html#a9f9a2f4654d8b0e0cdb3061b9e0775d7">tag</a></td></tr>
+<tr class="memdesc:a9f9a2f4654d8b0e0cdb3061b9e0775d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">A number that uniquely identifies this sequence.  <a href="#a9f9a2f4654d8b0e0cdb3061b9e0775d7">More...</a><br /></td></tr>
+<tr class="separator:a9f9a2f4654d8b0e0cdb3061b9e0775d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab37aa0bdc97b3d923407e3a7e17b3209"><td class="memItemLeft" align="right" valign="top">std::vector&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1Sequence.html#ab37aa0bdc97b3d923407e3a7e17b3209">bases</a></td></tr>
+<tr class="memdesc:ab37aa0bdc97b3d923407e3a7e17b3209"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actual sequence of nucleotides.  <a href="#ab37aa0bdc97b3d923407e3a7e17b3209">More...</a><br /></td></tr>
+<tr class="separator:ab37aa0bdc97b3d923407e3a7e17b3209"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8aac49ef635b95fe0088e5fb59e2bce7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classrcombinator_1_1Sequence.html#a95c6d1eea79f9551118a4c988433e5b7">mutations_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1Sequence.html#a8aac49ef635b95fe0088e5fb59e2bce7">mutations</a></td></tr>
+<tr class="memdesc:a8aac49ef635b95fe0088e5fb59e2bce7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Positions of mutations and what the <em>original</em> nucleotide was.  <a href="#a8aac49ef635b95fe0088e5fb59e2bce7">More...</a><br /></td></tr>
+<tr class="separator:a8aac49ef635b95fe0088e5fb59e2bce7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbef2567c1f68239c80769db85455b00"><td class="memItemLeft" align="right" valign="top">lethal_mutations_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1Sequence.html#abbef2567c1f68239c80769db85455b00">lethal_mutations</a></td></tr>
+<tr class="memdesc:abbef2567c1f68239c80769db85455b00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Positions of mutations that are lethal.  <a href="#abbef2567c1f68239c80769db85455b00">More...</a><br /></td></tr>
+<tr class="separator:abbef2567c1f68239c80769db85455b00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:abb45023862671bbc450bdea543e72165"><td class="memItemLeft" align="right" valign="top">static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1Sequence.html#abb45023862671bbc450bdea543e72165">global_sequence_count</a> = 0</td></tr>
+<tr class="memdesc:abb45023862671bbc450bdea543e72165"><td class="mdescLeft">&#160;</td><td class="mdescRight">An internal counter that is incremented every time a sequence is created.  <a href="#abb45023862671bbc450bdea543e72165">More...</a><br /></td></tr>
+<tr class="separator:abb45023862671bbc450bdea543e72165"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
 <tr class="memitem:abdc71a8f6617dcb6ab73f0e07eb63b67"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1Sequence.html#abdc71a8f6617dcb6ab73f0e07eb63b67">operator*</a> (const <a class="el" href="classrcombinator_1_1Sequence.html">Sequence</a> &amp;s1, const <a class="el" href="classrcombinator_1_1Sequence.html">Sequence</a> &amp;s2)</td></tr>
@@ -123,7 +164,33 @@ Friends</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>To represent a DNA sequence and the mutations that it has undergone. </p>
 <p>Keeps track of the actual sequence, mutations and lethal mutations. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a95c6d1eea79f9551118a4c988433e5b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95c6d1eea79f9551118a4c988433e5b7">&#9670;&nbsp;</a></span>mutations_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::unordered_map&lt;long, char&gt; <a class="el" href="classrcombinator_1_1Sequence.html#a95c6d1eea79f9551118a4c988433e5b7">rcombinator::Sequence::mutations_type</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Basic typedefs - hashed data structures for quick lookup. </p>
+<p>For keeping track of mutations and lethal mutations. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="afab8bafaf1283f4e699ba9111ee452b3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afab8bafaf1283f4e699ba9111ee452b3">&#9670;&nbsp;</a></span>Sequence() <span class="overload">[1/3]</span></h2>
 
@@ -217,7 +284,7 @@ Here is the call graph for this function:</div>
 <p>Constructs a sequence from recombining two other sequences. </p>
 <p>The number of template switches has to be specified, and the positions at which the template switches are made is random.</p>
 <p>The mutations recorded are with respect to the original sequences. That is, the new sequence <em>s_new</em> will have a mutation <em>m</em> at position <em>l</em> if and only if the sequence <em>s_old</em> whose nucleotide is used for <em>s_new</em> at position <em>l</em> had mutation <em>m</em> present at that position.</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd>Add an option for specifying the positions of the template switches too, or overload this function. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000010">Todo:</a></b></dt><dd>Add an option for specifying the positions of the template switches too, or overload this function. </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -300,7 +367,18 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classrcombinator_1_1Sequence_a5f7bccd4725bb8c46f6b93bd01a6b2f0_cgraph.png" border="0" usemap="#classrcombinator_1_1Sequence_a5f7bccd4725bb8c46f6b93bd01a6b2f0_cgraph" alt=""/></div>
 <map name="classrcombinator_1_1Sequence_a5f7bccd4725bb8c46f6b93bd01a6b2f0_cgraph" id="classrcombinator_1_1Sequence_a5f7bccd4725bb8c46f6b93bd01a6b2f0_cgraph">
-<area shape="rect" id="node2" href="namespacercombinator_1_1Consts.html#ab38bb458e46ca910f572862145ca2948" title="Returns the 2bit&#45;encoding of a nucleotide given its character form. " alt="" coords="225,5,379,47"/>
+<area shape="rect" id="node2" href="classrcombinator_1_1Sequence.html#a19672a1fbefcdf0c317fddb177f80a15" title="Returns the character for a base at a given position. " alt="" coords="225,37,397,79"/>
+<area shape="rect" id="node5" href="namespacercombinator_1_1Consts.html#ab38bb458e46ca910f572862145ca2948" title="Returns the 2bit&#45;encoding of a nucleotide given its character form. " alt="" coords="235,103,388,144"/>
+<area shape="rect" id="node3" href="namespacercombinator_1_1Consts.html#acebf7c5a777e8d06bd20142a969bc606" title="Returns the character of a nucleotide given its 2bit&#45;encoding. " alt="" coords="455,5,608,47"/>
+<area shape="rect" id="node4" href="classrcombinator_1_1Sequence.html#a1367e984a24069fb18f4eb85f5c55dbb" title="Returns the 2bit encoding for a base at a given position. " alt="" coords="445,71,617,112"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classrcombinator_1_1Sequence_a5f7bccd4725bb8c46f6b93bd01a6b2f0_icgraph.png" border="0" usemap="#classrcombinator_1_1Sequence_a5f7bccd4725bb8c46f6b93bd01a6b2f0_icgraph" alt=""/></div>
+<map name="classrcombinator_1_1Sequence_a5f7bccd4725bb8c46f6b93bd01a6b2f0_icgraph" id="classrcombinator_1_1Sequence_a5f7bccd4725bb8c46f6b93bd01a6b2f0_icgraph">
+<area shape="rect" id="node2" href="classrcombinator_1_1PointMutator.html#aba3c2b8641affe8a06d815c33cafdc1b" title="Mutates a sequence according to a given transition matrix. " alt="" coords="225,5,417,47"/>
 </map>
 </div>
 
@@ -343,6 +421,132 @@ Here is the call graph for this function:</div>
 
 <p>Computes pairwise distances between two sequences. </p>
 <p>This is the standard edit distance score, and is the number of mismatches (because insertions and deletions are not possible in this system). </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ab37aa0bdc97b3d923407e3a7e17b3209"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab37aa0bdc97b3d923407e3a7e17b3209">&#9670;&nbsp;</a></span>bases</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;bool&gt; rcombinator::Sequence::bases</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Actual sequence of nucleotides. </p>
+<p>Stored as a string internally. </p>
+
+</div>
+</div>
+<a id="abb45023862671bbc450bdea543e72165"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb45023862671bbc450bdea543e72165">&#9670;&nbsp;</a></span>global_sequence_count</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long rcombinator::Sequence::global_sequence_count = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>An internal counter that is incremented every time a sequence is created. </p>
+<p>Used to assign each sequence a unique tag. </p>
+
+</div>
+</div>
+<a id="abbef2567c1f68239c80769db85455b00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbef2567c1f68239c80769db85455b00">&#9670;&nbsp;</a></span>lethal_mutations</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">lethal_mutations_type rcombinator::Sequence::lethal_mutations</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Positions of mutations that are lethal. </p>
+<p>Internally stored as a set. This set is always a subset of <code>mutations.keys</code>. </p>
+
+</div>
+</div>
+<a id="a8aac49ef635b95fe0088e5fb59e2bce7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8aac49ef635b95fe0088e5fb59e2bce7">&#9670;&nbsp;</a></span>mutations</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classrcombinator_1_1Sequence.html#a95c6d1eea79f9551118a4c988433e5b7">mutations_type</a> rcombinator::Sequence::mutations</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Positions of mutations and what the <em>original</em> nucleotide was. </p>
+<p>Stored as an unordered map locally. </p>
+
+</div>
+</div>
+<a id="a9f9a2f4654d8b0e0cdb3061b9e0775d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f9a2f4654d8b0e0cdb3061b9e0775d7">&#9670;&nbsp;</a></span>tag</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long rcombinator::Sequence::tag</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A number that uniquely identifies this sequence. </p>
+<p>This tag transcends activity (if an inactive sequence becomes active again, it has the same tag) </p>
 
 </div>
 </div>

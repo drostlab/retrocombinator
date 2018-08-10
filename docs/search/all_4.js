@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['is_5factive',['is_active',['../classrcombinator_1_1Sequence.html#a5af66ddd3c8bc05307b56737c56060bf',1,'rcombinator::Sequence']]],
-  ['is_5fin_5frange',['is_in_range',['../namespacercombinator_1_1Utils.html#aa38fa31292dbf3a06522dc76b20e2572',1,'rcombinator::Utils']]]
+  ['f81model',['F81Model',['../classrcombinator_1_1F81Model.html',1,'rcombinator::F81Model'],['../classrcombinator_1_1F81Model.html#a6efce55b280e00a48471632574fe7944',1,'rcombinator::F81Model::F81Model()']]]
 ];

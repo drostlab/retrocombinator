@@ -24,6 +24,12 @@ long \mbox{\hyperlink{classrcombinator_1_1Sequence_a690c3f7adffafdf45056b5ae632c
 \mbox{\Hypertarget{classrcombinator_1_1Sequence_a5690b6b125807696c81533e7be0be296}\label{classrcombinator_1_1Sequence_a5690b6b125807696c81533e7be0be296}} 
 long \mbox{\hyperlink{classrcombinator_1_1Sequence_a5690b6b125807696c81533e7be0be296}{get\+\_\+tag}} () const
 \begin{DoxyCompactList}\small\item\em Returns the unique label for this sequence. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classrcombinator_1_1Sequence_a1367e984a24069fb18f4eb85f5c55dbb}\label{classrcombinator_1_1Sequence_a1367e984a24069fb18f4eb85f5c55dbb}} 
+std\+::pair$<$ bool, bool $>$ \mbox{\hyperlink{classrcombinator_1_1Sequence_a1367e984a24069fb18f4eb85f5c55dbb}{bits\+\_\+at}} (long n) const
+\begin{DoxyCompactList}\small\item\em Returns the 2bit encoding for a base at a given position. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classrcombinator_1_1Sequence_a19672a1fbefcdf0c317fddb177f80a15}\label{classrcombinator_1_1Sequence_a19672a1fbefcdf0c317fddb177f80a15}} 
+char \mbox{\hyperlink{classrcombinator_1_1Sequence_a19672a1fbefcdf0c317fddb177f80a15}{char\+\_\+at}} (long n) const
+\begin{DoxyCompactList}\small\item\em Returns the character for a base at a given position. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classrcombinator_1_1Sequence_a5f7bccd4725bb8c46f6b93bd01a6b2f0}{point\+\_\+mutate}} (long n, char new\+\_\+nucleotide, bool is\+\_\+lethal=false)
 \begin{DoxyCompactList}\small\item\em Changes the nucleotide at position {\itshape n} to {\itshape new\+\_\+nucleotide}. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classrcombinator_1_1Sequence_a5fa45e155a1e4b3c257f19369ace05a8}\label{classrcombinator_1_1Sequence_a5fa45e155a1e4b3c257f19369ace05a8}} 
@@ -34,6 +40,32 @@ bool \mbox{\hyperlink{classrcombinator_1_1Sequence_a5af66ddd3c8bc05307b56737c560
 \mbox{\Hypertarget{classrcombinator_1_1Sequence_a821299743e342f028cf7cff51289e3cf}\label{classrcombinator_1_1Sequence_a821299743e342f028cf7cff51289e3cf}} 
 long \mbox{\hyperlink{classrcombinator_1_1Sequence_a821299743e342f028cf7cff51289e3cf}{num\+\_\+mutations}} () const
 \begin{DoxyCompactList}\small\item\em Returns how many mutations are present in this sequence. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Types}
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::unordered\+\_\+map$<$ long, char $>$ \mbox{\hyperlink{classrcombinator_1_1Sequence_a95c6d1eea79f9551118a4c988433e5b7}{mutations\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em Basic typedefs -\/ hashed data structures for quick lookup. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classrcombinator_1_1Sequence_ae5b0638255a262292d6f4bb31367fc90}\label{classrcombinator_1_1Sequence_ae5b0638255a262292d6f4bb31367fc90}} 
+typedef std\+::unordered\+\_\+set$<$ long $>$ {\bfseries lethal\+\_\+mutations\+\_\+type}
+\end{DoxyCompactItemize}
+
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+long \mbox{\hyperlink{classrcombinator_1_1Sequence_a9f9a2f4654d8b0e0cdb3061b9e0775d7}{tag}}
+\begin{DoxyCompactList}\small\item\em A number that uniquely identifies this sequence. \end{DoxyCompactList}\item 
+std\+::vector$<$ bool $>$ \mbox{\hyperlink{classrcombinator_1_1Sequence_ab37aa0bdc97b3d923407e3a7e17b3209}{bases}}
+\begin{DoxyCompactList}\small\item\em Actual sequence of nucleotides. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classrcombinator_1_1Sequence_a95c6d1eea79f9551118a4c988433e5b7}{mutations\+\_\+type}} \mbox{\hyperlink{classrcombinator_1_1Sequence_a8aac49ef635b95fe0088e5fb59e2bce7}{mutations}}
+\begin{DoxyCompactList}\small\item\em Positions of mutations and what the {\itshape original} nucleotide was. \end{DoxyCompactList}\item 
+lethal\+\_\+mutations\+\_\+type \mbox{\hyperlink{classrcombinator_1_1Sequence_abbef2567c1f68239c80769db85455b00}{lethal\+\_\+mutations}}
+\begin{DoxyCompactList}\small\item\em Positions of mutations that are lethal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static long \mbox{\hyperlink{classrcombinator_1_1Sequence_abb45023862671bbc450bdea543e72165}{global\+\_\+sequence\+\_\+count}} = 0
+\begin{DoxyCompactList}\small\item\em An internal counter that is incremented every time a sequence is created. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
@@ -46,6 +78,19 @@ To represent a D\+NA sequence and the mutations that it has undergone.
 
 Keeps track of the actual sequence, mutations and lethal mutations. 
 
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classrcombinator_1_1Sequence_a95c6d1eea79f9551118a4c988433e5b7}\label{classrcombinator_1_1Sequence_a95c6d1eea79f9551118a4c988433e5b7}} 
+\index{rcombinator\+::\+Sequence@{rcombinator\+::\+Sequence}!mutations\+\_\+type@{mutations\+\_\+type}}
+\index{mutations\+\_\+type@{mutations\+\_\+type}!rcombinator\+::\+Sequence@{rcombinator\+::\+Sequence}}
+\subsubsection{\texorpdfstring{mutations\+\_\+type}{mutations\_type}}
+{\footnotesize\ttfamily typedef std\+::unordered\+\_\+map$<$long, char$>$ \mbox{\hyperlink{classrcombinator_1_1Sequence_a95c6d1eea79f9551118a4c988433e5b7}{rcombinator\+::\+Sequence\+::mutations\+\_\+type}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Basic typedefs -\/ hashed data structures for quick lookup. 
+
+For keeping track of mutations and lethal mutations. 
+
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classrcombinator_1_1Sequence_afab8bafaf1283f4e699ba9111ee452b3}\label{classrcombinator_1_1Sequence_afab8bafaf1283f4e699ba9111ee452b3}} 
 \index{rcombinator\+::\+Sequence@{rcombinator\+::\+Sequence}!Sequence@{Sequence}}
@@ -57,8 +102,7 @@ Keeps track of the actual sequence, mutations and lethal mutations.
 
 Constructs a random sequence of length {\itshape n}. 
 
-This is considered initial, so no mutations are present. Here is the call graph for this function\+:
-\nopagebreak
+This is considered initial, so no mutations are present. Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -75,8 +119,7 @@ This is considered initial, so no mutations are present. Here is the call graph 
 
 Constructs a sequence from a given string. 
 
-This is considered initial, so no mutations are present. Here is the call graph for this function\+:
-\nopagebreak
+This is considered initial, so no mutations are present. Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -98,9 +141,8 @@ The number of template switches has to be specified, and the positions at which 
 The mutations recorded are with respect to the original sequences. That is, the new sequence {\itshape s\+\_\+new} will have a mutation {\itshape m} at position {\itshape l} if and only if the sequence {\itshape s\+\_\+old} whose nucleotide is used for {\itshape s\+\_\+new} at position {\itshape l} had mutation {\itshape m} present at that position.
 
 \begin{DoxyRefDesc}{Todo}
-\item[\mbox{\hyperlink{todo__todo000004}{Todo}}]Add an option for specifying the positions of the template switches too, or overload this function. \end{DoxyRefDesc}
-Here is the call graph for this function\+:
-\nopagebreak
+\item[\mbox{\hyperlink{todo__todo000010}{Todo}}]Add an option for specifying the positions of the template switches too, or overload this function. \end{DoxyRefDesc}
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -138,6 +180,13 @@ If the new\+\_\+nucleotide is the same as the original nucleotide in the string,
 \includegraphics[width=350pt]{classrcombinator_1_1Sequence_a5f7bccd4725bb8c46f6b93bd01a6b2f0_cgraph}
 \end{center}
 \end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrcombinator_1_1Sequence_a5f7bccd4725bb8c46f6b93bd01a6b2f0_icgraph}
+\end{center}
+\end{figure}
 
 
 \subsection{Friends And Related Function Documentation}
@@ -152,6 +201,59 @@ If the new\+\_\+nucleotide is the same as the original nucleotide in the string,
 Computes pairwise distances between two sequences. 
 
 This is the standard edit distance score, and is the number of mismatches (because insertions and deletions are not possible in this system). 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classrcombinator_1_1Sequence_ab37aa0bdc97b3d923407e3a7e17b3209}\label{classrcombinator_1_1Sequence_ab37aa0bdc97b3d923407e3a7e17b3209}} 
+\index{rcombinator\+::\+Sequence@{rcombinator\+::\+Sequence}!bases@{bases}}
+\index{bases@{bases}!rcombinator\+::\+Sequence@{rcombinator\+::\+Sequence}}
+\subsubsection{\texorpdfstring{bases}{bases}}
+{\footnotesize\ttfamily std\+::vector$<$bool$>$ rcombinator\+::\+Sequence\+::bases\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Actual sequence of nucleotides. 
+
+Stored as a string internally. \mbox{\Hypertarget{classrcombinator_1_1Sequence_abb45023862671bbc450bdea543e72165}\label{classrcombinator_1_1Sequence_abb45023862671bbc450bdea543e72165}} 
+\index{rcombinator\+::\+Sequence@{rcombinator\+::\+Sequence}!global\+\_\+sequence\+\_\+count@{global\+\_\+sequence\+\_\+count}}
+\index{global\+\_\+sequence\+\_\+count@{global\+\_\+sequence\+\_\+count}!rcombinator\+::\+Sequence@{rcombinator\+::\+Sequence}}
+\subsubsection{\texorpdfstring{global\+\_\+sequence\+\_\+count}{global\_sequence\_count}}
+{\footnotesize\ttfamily long rcombinator\+::\+Sequence\+::global\+\_\+sequence\+\_\+count = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+An internal counter that is incremented every time a sequence is created. 
+
+Used to assign each sequence a unique tag. \mbox{\Hypertarget{classrcombinator_1_1Sequence_abbef2567c1f68239c80769db85455b00}\label{classrcombinator_1_1Sequence_abbef2567c1f68239c80769db85455b00}} 
+\index{rcombinator\+::\+Sequence@{rcombinator\+::\+Sequence}!lethal\+\_\+mutations@{lethal\+\_\+mutations}}
+\index{lethal\+\_\+mutations@{lethal\+\_\+mutations}!rcombinator\+::\+Sequence@{rcombinator\+::\+Sequence}}
+\subsubsection{\texorpdfstring{lethal\+\_\+mutations}{lethal\_mutations}}
+{\footnotesize\ttfamily lethal\+\_\+mutations\+\_\+type rcombinator\+::\+Sequence\+::lethal\+\_\+mutations\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Positions of mutations that are lethal. 
+
+Internally stored as a set. This set is always a subset of {\ttfamily mutations.\+keys}. \mbox{\Hypertarget{classrcombinator_1_1Sequence_a8aac49ef635b95fe0088e5fb59e2bce7}\label{classrcombinator_1_1Sequence_a8aac49ef635b95fe0088e5fb59e2bce7}} 
+\index{rcombinator\+::\+Sequence@{rcombinator\+::\+Sequence}!mutations@{mutations}}
+\index{mutations@{mutations}!rcombinator\+::\+Sequence@{rcombinator\+::\+Sequence}}
+\subsubsection{\texorpdfstring{mutations}{mutations}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classrcombinator_1_1Sequence_a95c6d1eea79f9551118a4c988433e5b7}{mutations\+\_\+type}} rcombinator\+::\+Sequence\+::mutations\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Positions of mutations and what the {\itshape original} nucleotide was. 
+
+Stored as an unordered map locally. \mbox{\Hypertarget{classrcombinator_1_1Sequence_a9f9a2f4654d8b0e0cdb3061b9e0775d7}\label{classrcombinator_1_1Sequence_a9f9a2f4654d8b0e0cdb3061b9e0775d7}} 
+\index{rcombinator\+::\+Sequence@{rcombinator\+::\+Sequence}!tag@{tag}}
+\index{tag@{tag}!rcombinator\+::\+Sequence@{rcombinator\+::\+Sequence}}
+\subsubsection{\texorpdfstring{tag}{tag}}
+{\footnotesize\ttfamily long rcombinator\+::\+Sequence\+::tag\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A number that uniquely identifies this sequence. 
+
+This tag transcends activity (if an inactive sequence becomes active again, it has the same tag) 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

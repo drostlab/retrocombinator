@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['sample_5fdistinct_5fpair',['sample_distinct_pair',['../classrcombinator_1_1RandMaths.html#aaa759efa3059b6793100cb6b6442f26d',1,'rcombinator::RandMaths']]],
-  ['sample_5fwithout_5freplacement',['sample_without_replacement',['../classrcombinator_1_1RandMaths.html#a2c31949c9ac03952cb0006e6a88e3d85',1,'rcombinator::RandMaths']]],
-  ['sequence',['Sequence',['../classrcombinator_1_1Sequence.html',1,'rcombinator::Sequence'],['../classrcombinator_1_1Sequence.html#afab8bafaf1283f4e699ba9111ee452b3',1,'rcombinator::Sequence::Sequence(long n)'],['../classrcombinator_1_1Sequence.html#af5b3b62eba07f0e09f532fcf1681c289',1,'rcombinator::Sequence::Sequence(std::string s)'],['../classrcombinator_1_1Sequence.html#a976b331689ec55d9d306281bbff5d22d',1,'rcombinator::Sequence::Sequence(Sequence &amp;s1, Sequence &amp;s2, int num_template_switches)']]],
-  ['sequence_2eh',['sequence.h',['../sequence_8h.html',1,'']]],
-  ['set_5frandom_5fseed',['set_random_seed',['../classrcombinator_1_1RandMaths.html#a2b61e31de6067ffa35531d5bde40f4c6',1,'rcombinator::RandMaths']]],
-  ['set_5fspecific_5fseed',['set_specific_seed',['../classrcombinator_1_1RandMaths.html#a76c7dc43d0faee17d4b328bd342934e0',1,'rcombinator::RandMaths']]],
-  ['summarystats',['SummaryStats',['../structrcombinator_1_1Utils_1_1SummaryStats.html',1,'rcombinator::Utils']]]
+  ['max',['max',['../structrcombinator_1_1Utils_1_1SummaryStats.html#a0b47d0ce5dab397ba9595573a988051c',1,'rcombinator::Utils::SummaryStats']]],
+  ['mean',['mean',['../structrcombinator_1_1Utils_1_1SummaryStats.html#a02fb885c4b1c828ff5fee577f5206594',1,'rcombinator::Utils::SummaryStats']]],
+  ['median',['median',['../structrcombinator_1_1Utils_1_1SummaryStats.html#aaef96ba301012a1d3620dc8a57c68af7',1,'rcombinator::Utils::SummaryStats']]],
+  ['min',['min',['../structrcombinator_1_1Utils_1_1SummaryStats.html#a298556c55f80ec5341f68e4437175290',1,'rcombinator::Utils::SummaryStats']]],
+  ['mutate_5fsequence',['mutate_sequence',['../classrcombinator_1_1PointMutator.html#aba3c2b8641affe8a06d815c33cafdc1b',1,'rcombinator::PointMutator']]],
+  ['mutations',['mutations',['../classrcombinator_1_1Sequence.html#a8aac49ef635b95fe0088e5fb59e2bce7',1,'rcombinator::Sequence']]],
+  ['mutations_5ftype',['mutations_type',['../classrcombinator_1_1Sequence.html#a95c6d1eea79f9551118a4c988433e5b7',1,'rcombinator::Sequence']]]
 ];

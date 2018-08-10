@@ -1,5 +1,6 @@
 <map id="rcombinator::RandMaths::rand_int" name="rcombinator::RandMaths::rand_int">
-<area shape="rect" id="node2" href="$classrcombinator_1_1RandMaths.html#a2c31949c9ac03952cb0006e6a88e3d85" title="Samples m integers within a range, without replacement. " alt="" coords="235,5,457,47"/>
-<area shape="rect" id="node3" href="$classrcombinator_1_1Sequence.html#a976b331689ec55d9d306281bbff5d22d" title="Constructs a sequence from recombining two other sequences. " alt="" coords="505,35,677,76"/>
-<area shape="rect" id="node4" href="$classrcombinator_1_1RandMaths.html#aaa759efa3059b6793100cb6b6442f26d" title="Samples a non&#45;diagonal pair (2 distinct values) within a range. " alt="" coords="255,123,437,164"/>
+<area shape="rect" id="node2" href="$classrcombinator_1_1RandMaths.html#a2c31949c9ac03952cb0006e6a88e3d85" title="Samples m integers within a range, without replacement. " alt="" coords="235,12,457,53"/>
+<area shape="rect" id="node4" href="$classrcombinator_1_1Sequence.html#a976b331689ec55d9d306281bbff5d22d" title="Constructs a sequence from recombining two other sequences. " alt="" coords="515,71,687,112"/>
+<area shape="rect" id="node5" href="$classrcombinator_1_1RandMaths.html#aaa759efa3059b6793100cb6b6442f26d" title="Samples a non&#45;diagonal pair (2 distinct values) within a range. " alt="" coords="255,129,437,171"/>
+<area shape="rect" id="node3" href="$classrcombinator_1_1PointMutator.html#ab8051bc801ddedf28cca4e863cfa99d6" title="Constructor that chooses a point mutation model and the probabilities for lethal mutations at each po..." alt="" coords="505,5,697,47"/>
 </map>

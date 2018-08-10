@@ -1,0 +1,103 @@
+\hypertarget{classrcombinator_1_1PointMutationModel}{}\section{rcombinator\+:\+:Point\+Mutation\+Model Class Reference}
+\label{classrcombinator_1_1PointMutationModel}\index{rcombinator\+::\+Point\+Mutation\+Model@{rcombinator\+::\+Point\+Mutation\+Model}}
+
+
+To represent a model of D\+NA evolution through point mutations.  
+
+
+
+
+{\ttfamily \#include $<$point\+\_\+mutation\+\_\+models.\+h$>$}
+
+
+
+Inheritance diagram for rcombinator\+:\+:Point\+Mutation\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrcombinator_1_1PointMutationModel__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrcombinator_1_1PointMutationModel_a099dd1d991389c50d1e22f6d25dc913d}\label{classrcombinator_1_1PointMutationModel_a099dd1d991389c50d1e22f6d25dc913d}} 
+\mbox{\hyperlink{classrcombinator_1_1PointMutationModel_a099dd1d991389c50d1e22f6d25dc913d}{Point\+Mutation\+Model}} (double \mbox{\hyperlink{classrcombinator_1_1PointMutationModel_a328a30a438bb1b6a625faa3f714a85c8}{scale}}=0.\+25)
+\begin{DoxyCompactList}\small\item\em Constructor that allocates memory for transition matrix. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classrcombinator_1_1PointMutationModel_a2ac7ebc4b6264c6597808574501e45e5}{$\sim$\+Point\+Mutation\+Model}} ()
+\begin{DoxyCompactList}\small\item\em Destructor that allocates memory for transition matrix. \end{DoxyCompactList}\item 
+double $\ast$$\ast$ \mbox{\hyperlink{classrcombinator_1_1PointMutationModel_a43457739c51566273d471098dc2cacf0}{get\+\_\+Q}} ()
+\begin{DoxyCompactList}\small\item\em Returns a rate matrix for the mutations. \end{DoxyCompactList}\item 
+virtual double $\ast$$\ast$ \mbox{\hyperlink{classrcombinator_1_1PointMutationModel_a35a8b397c8fa932cd870174aa45180da}{get\+\_\+transition\+\_\+matrix}} (double t)=0
+\begin{DoxyCompactList}\small\item\em Returns a transition matrix to represent the probabilities of mutations from each nucleotide to the other. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrcombinator_1_1PointMutationModel_a5affb482b1e4434bd1b2c6fc1c579934}\label{classrcombinator_1_1PointMutationModel_a5affb482b1e4434bd1b2c6fc1c579934}} 
+double $\ast$$\ast$ \mbox{\hyperlink{classrcombinator_1_1PointMutationModel_a5affb482b1e4434bd1b2c6fc1c579934}{Q\+\_\+mat}}
+\begin{DoxyCompactList}\small\item\em The transition rate matrix. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classrcombinator_1_1PointMutationModel_a328a30a438bb1b6a625faa3f714a85c8}\label{classrcombinator_1_1PointMutationModel_a328a30a438bb1b6a625faa3f714a85c8}} 
+double \mbox{\hyperlink{classrcombinator_1_1PointMutationModel_a328a30a438bb1b6a625faa3f714a85c8}{scale}}
+\begin{DoxyCompactList}\small\item\em How much to scale Q by in the differential equation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classrcombinator_1_1PointMutationModel_a8ae23bc482a483e139cdb94bdc332a72}\label{classrcombinator_1_1PointMutationModel_a8ae23bc482a483e139cdb94bdc332a72}} 
+double \mbox{\hyperlink{classrcombinator_1_1PointMutationModel_a8ae23bc482a483e139cdb94bdc332a72}{t\+\_\+stored}}
+\begin{DoxyCompactList}\small\item\em The timestep by which we jump in our simulation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classrcombinator_1_1PointMutationModel_ac8ec41d0bffdc2221ad4b1cfb06424e8}\label{classrcombinator_1_1PointMutationModel_ac8ec41d0bffdc2221ad4b1cfb06424e8}} 
+double $\ast$$\ast$ \mbox{\hyperlink{classrcombinator_1_1PointMutationModel_ac8ec41d0bffdc2221ad4b1cfb06424e8}{T\+\_\+mat}}
+\begin{DoxyCompactList}\small\item\em The transition matrix for timestep {\itshape t}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+To represent a model of D\+NA evolution through point mutations. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classrcombinator_1_1PointMutationModel_a2ac7ebc4b6264c6597808574501e45e5}\label{classrcombinator_1_1PointMutationModel_a2ac7ebc4b6264c6597808574501e45e5}} 
+\index{rcombinator\+::\+Point\+Mutation\+Model@{rcombinator\+::\+Point\+Mutation\+Model}!````~Point\+Mutation\+Model@{$\sim$\+Point\+Mutation\+Model}}
+\index{````~Point\+Mutation\+Model@{$\sim$\+Point\+Mutation\+Model}!rcombinator\+::\+Point\+Mutation\+Model@{rcombinator\+::\+Point\+Mutation\+Model}}
+\subsubsection{\texorpdfstring{$\sim$\+Point\+Mutation\+Model()}{~PointMutationModel()}}
+{\footnotesize\ttfamily Point\+Mutation\+Model\+::$\sim$\+Point\+Mutation\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor that allocates memory for transition matrix. 
+
+Is virtual because we want all specific point mutation models to derive from this class. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classrcombinator_1_1PointMutationModel_a43457739c51566273d471098dc2cacf0}\label{classrcombinator_1_1PointMutationModel_a43457739c51566273d471098dc2cacf0}} 
+\index{rcombinator\+::\+Point\+Mutation\+Model@{rcombinator\+::\+Point\+Mutation\+Model}!get\+\_\+Q@{get\+\_\+Q}}
+\index{get\+\_\+Q@{get\+\_\+Q}!rcombinator\+::\+Point\+Mutation\+Model@{rcombinator\+::\+Point\+Mutation\+Model}}
+\subsubsection{\texorpdfstring{get\+\_\+\+Q()}{get\_Q()}}
+{\footnotesize\ttfamily double$\ast$$\ast$ rcombinator\+::\+Point\+Mutation\+Model\+::get\+\_\+Q (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a rate matrix for the mutations. 
+
+After {\itshape t} years have passed, the probability is exp(rate$\ast$t). \mbox{\Hypertarget{classrcombinator_1_1PointMutationModel_a35a8b397c8fa932cd870174aa45180da}\label{classrcombinator_1_1PointMutationModel_a35a8b397c8fa932cd870174aa45180da}} 
+\index{rcombinator\+::\+Point\+Mutation\+Model@{rcombinator\+::\+Point\+Mutation\+Model}!get\+\_\+transition\+\_\+matrix@{get\+\_\+transition\+\_\+matrix}}
+\index{get\+\_\+transition\+\_\+matrix@{get\+\_\+transition\+\_\+matrix}!rcombinator\+::\+Point\+Mutation\+Model@{rcombinator\+::\+Point\+Mutation\+Model}}
+\subsubsection{\texorpdfstring{get\+\_\+transition\+\_\+matrix()}{get\_transition\_matrix()}}
+{\footnotesize\ttfamily virtual double$\ast$$\ast$ rcombinator\+::\+Point\+Mutation\+Model\+::get\+\_\+transition\+\_\+matrix (\begin{DoxyParamCaption}\item[{double}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns a transition matrix to represent the probabilities of mutations from each nucleotide to the other. 
+
+{\itshape t} is the time that has passed. P(\+A to B) is matrix(\+A, B). 
+
+Implemented in \mbox{\hyperlink{classrcombinator_1_1K80Model_a35aec33b0b090ab23dc7e0985d1bedf5}{rcombinator\+::\+K80\+Model}}, \mbox{\hyperlink{classrcombinator_1_1F81Model_a7b8cc2e77bd7d15582aaa77aa876755c}{rcombinator\+::\+F81\+Model}}, \mbox{\hyperlink{classrcombinator_1_1HKY85Model_a156ac5c3789bc479857299469269c4de}{rcombinator\+::\+H\+K\+Y85\+Model}}, \mbox{\hyperlink{classrcombinator_1_1T93Model_ac8e280547d6af408e24df5e114d2c5c9}{rcombinator\+::\+T93\+Model}}, and \mbox{\hyperlink{classrcombinator_1_1GTRModel_aca26ae97d8ee3af6cc3c372d4d606e64}{rcombinator\+::\+G\+T\+R\+Model}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrcombinator_1_1PointMutationModel_a35a8b397c8fa932cd870174aa45180da_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{point__mutation__models_8h}{point\+\_\+mutation\+\_\+models.\+h}}\item 
+src/point\+\_\+mutation\+\_\+models.\+cpp\end{DoxyCompactItemize}

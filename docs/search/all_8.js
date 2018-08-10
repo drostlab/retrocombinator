@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['point_5fmutate',['point_mutate',['../classrcombinator_1_1Sequence.html#a5f7bccd4725bb8c46f6b93bd01a6b2f0',1,'rcombinator::Sequence']]]
+  ['jc69model',['JC69Model',['../classrcombinator_1_1JC69Model.html',1,'rcombinator::JC69Model'],['../classrcombinator_1_1JC69Model.html#a979834f85de8b2bb92d0cce5e64d6346',1,'rcombinator::JC69Model::JC69Model()']]]
 ];

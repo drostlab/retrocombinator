@@ -47,6 +47,16 @@ void {\bfseries operator=} (\mbox{\hyperlink{classrcombinator_1_1RandMaths}{Rand
 \item 
 static \mbox{\hyperlink{classrcombinator_1_1RandMaths}{Rand\+Maths}} \& \mbox{\hyperlink{classrcombinator_1_1RandMaths_ae54dee1a16fb0e275e1624ccaa7dc87e}{get\+\_\+instance}} ()
 \begin{DoxyCompactList}\small\item\em Returns an instance of a \mbox{\hyperlink{classrcombinator_1_1RandMaths}{Rand\+Maths}} class, after seeding it with system time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classrcombinator_1_1RandMaths_aa507e7465f9a650d560aa42c7f75310f}{Rand\+Maths}} ()
+\begin{DoxyCompactList}\small\item\em Constructor, which seeds the random engine with system time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::default\+\_\+random\+\_\+engine \mbox{\hyperlink{classrcombinator_1_1RandMaths_a69ed49d4f595e927d803d79b0c679ba6}{re}}
+\begin{DoxyCompactList}\small\item\em Engine that produces random numbers for all functions that require them. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -55,10 +65,20 @@ For all maths helper functions that use random number generation.
 This is implemented as a singleton that can either be specifically seeded (for testing and debugging) or can be randomly seeded (for simulations). 
 
 \subsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classrcombinator_1_1RandMaths_ac9b350a4aa07b739dcc2bb12c3b5c0e5}\label{classrcombinator_1_1RandMaths_ac9b350a4aa07b739dcc2bb12c3b5c0e5}} 
+\mbox{\Hypertarget{classrcombinator_1_1RandMaths_aa507e7465f9a650d560aa42c7f75310f}\label{classrcombinator_1_1RandMaths_aa507e7465f9a650d560aa42c7f75310f}} 
 \index{rcombinator\+::\+Rand\+Maths@{rcombinator\+::\+Rand\+Maths}!Rand\+Maths@{Rand\+Maths}}
 \index{Rand\+Maths@{Rand\+Maths}!rcombinator\+::\+Rand\+Maths@{rcombinator\+::\+Rand\+Maths}}
-\subsubsection{\texorpdfstring{Rand\+Maths()}{RandMaths()}}
+\subsubsection{\texorpdfstring{Rand\+Maths()}{RandMaths()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Rand\+Maths\+::\+Rand\+Maths (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Constructor, which seeds the random engine with system time. 
+
+Is private because we want this to be a singleton. \mbox{\Hypertarget{classrcombinator_1_1RandMaths_ac9b350a4aa07b739dcc2bb12c3b5c0e5}\label{classrcombinator_1_1RandMaths_ac9b350a4aa07b739dcc2bb12c3b5c0e5}} 
+\index{rcombinator\+::\+Rand\+Maths@{rcombinator\+::\+Rand\+Maths}!Rand\+Maths@{Rand\+Maths}}
+\index{Rand\+Maths@{Rand\+Maths}!rcombinator\+::\+Rand\+Maths@{rcombinator\+::\+Rand\+Maths}}
+\subsubsection{\texorpdfstring{Rand\+Maths()}{RandMaths()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily rcombinator\+::\+Rand\+Maths\+::\+Rand\+Maths (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrcombinator_1_1RandMaths}{Rand\+Maths}} const \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
 
 
@@ -81,16 +101,24 @@ Chooses an event from a list of possible events.
 Takes the probabilities of each of the events as input. Throws an exception if the probabilites do not add up to at least 1.
 
 \begin{DoxyRefDesc}{Todo}
-\item[\mbox{\hyperlink{todo__todo000002}{Todo}}]Make this a safe pointer rather than a raw one, or use a vector rather than a raw array.\end{DoxyRefDesc}
+\item[\mbox{\hyperlink{todo__todo000008}{Todo}}]Make this a safe pointer rather than a raw one, or use a vector rather than a raw array.\end{DoxyRefDesc}
 
 
 \begin{DoxyRefDesc}{Todo}
-\item[\mbox{\hyperlink{todo__todo000003}{Todo}}]Throw an exception even if probabilities add up to something greater than 1. \end{DoxyRefDesc}
-Here is the call graph for this function\+:\nopagebreak
+\item[\mbox{\hyperlink{todo__todo000009}{Todo}}]Throw an exception even if probabilities add up to something greater than 1. \end{DoxyRefDesc}
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classrcombinator_1_1RandMaths_afbc0d35bd9744ecab1983914ac32d68c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrcombinator_1_1RandMaths_afbc0d35bd9744ecab1983914ac32d68c_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classrcombinator_1_1RandMaths_ae54dee1a16fb0e275e1624ccaa7dc87e}\label{classrcombinator_1_1RandMaths_ae54dee1a16fb0e275e1624ccaa7dc87e}} 
@@ -231,7 +259,27 @@ Takes the probability of an event as paramter, and then compares it to a random 
 \includegraphics[width=350pt]{classrcombinator_1_1RandMaths_a183686140a9da18ad40c7e048ee8914e_cgraph}
 \end{center}
 \end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classrcombinator_1_1RandMaths_a183686140a9da18ad40c7e048ee8914e_icgraph}
+\end{center}
+\end{figure}
 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classrcombinator_1_1RandMaths_a69ed49d4f595e927d803d79b0c679ba6}\label{classrcombinator_1_1RandMaths_a69ed49d4f595e927d803d79b0c679ba6}} 
+\index{rcombinator\+::\+Rand\+Maths@{rcombinator\+::\+Rand\+Maths}!re@{re}}
+\index{re@{re}!rcombinator\+::\+Rand\+Maths@{rcombinator\+::\+Rand\+Maths}}
+\subsubsection{\texorpdfstring{re}{re}}
+{\footnotesize\ttfamily std\+::default\+\_\+random\+\_\+engine rcombinator\+::\+Rand\+Maths\+::re\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Engine that produces random numbers for all functions that require them. 
+
+This is seeded during initialisation of the class, and once set, its R\+NG is shared by all other parts of the code that require it. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
