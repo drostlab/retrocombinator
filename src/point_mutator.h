@@ -17,6 +17,10 @@ namespace rcombinator
     class PointMutationModel;
     class Sequence;
 
+    /** A class that can mutate a given sequence according to a specified point
+     *  mutation model.
+     *  We need to specify how long the sequence has evolved for.
+     */
     class PointMutator
     {
     private:

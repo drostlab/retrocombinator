@@ -17,7 +17,9 @@ namespace rcombinator
     class Exception
     {
     private:
+        /// A helpful diagnostic message
         const std::string error_msg;
+
     public:
         /** Basic constructor for an exception that is to be thrown.
          *  Takes the error message as input argument.

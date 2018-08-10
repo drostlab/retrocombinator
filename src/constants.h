@@ -24,8 +24,7 @@ namespace rcombinator
      */
     namespace Consts
     {
-        /** \enum
-         *  This defines an ordering on the nucleotides, used for arrays and
+        /** This defines an ordering on the nucleotides, used for arrays and
          *  transition matrices that work on nucleotides.
          */
         enum NUC_VALS
