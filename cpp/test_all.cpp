@@ -1,5 +1,9 @@
 #include <iostream>
 #include <cassert>
+
+#include "exception.h"
+#include "point_mutation_models.h"
+#include "point_mutator.h"
 #include "rand_maths.h"
 #include "sequence.h"
 
@@ -8,8 +12,8 @@ using namespace rcombinator;
 
 int test_sequence()
 {
-    cout << "TESTING SEQUENCES MODULE" << endl
-         << "---" << endl;
+    cout << "---" << endl
+         << "TESTING SEQUENCES MODULE" << endl;
 
     // Check that random string generation works
     cout << endl << "TESTING: string generation" << endl;
@@ -79,14 +83,104 @@ int test_sequence()
     cout << "Recombining them with num_switches = 3 " << S8.as_string() << endl;
     assert (S8.as_string() == "AAAAAGGGAAAG");
 
+    // Checking that sequence tagging works
+    cout << endl << "TESTING: tagging" << endl;
+
+    cout << "Tag of S0 " << S0.get_tag() << endl;
+    assert (S0.get_tag() == 0);
+
+    cout << "Tag of S1 " << S1.get_tag() << endl;
+    assert (S1.get_tag() == 1);
+
+    cout << "Tag of S8 " << S8.get_tag() << endl;
+    assert (S8.get_tag() == 8);
+
     // Done testing
-    cout << endl << "---" << endl
-        << "TESTED SEQUENCES MODULE" << endl;
+    cout << "TESTED MODULE" << endl
+         << endl << "---" << endl;
+
 
     return 0;
 }
 
+void print_transition_matrix(double ** mat)
+{
+    for (int i=0; i<Consts::NUC_COUNT; ++i)
+    {
+        for (int j=0; j<Consts::NUC_COUNT; ++j)
+        {
+            cout << mat[i][j] << " ";
+        }
+        cout << endl;
+    }
+    cout << endl;
+}
+
+int test_point_mutation_models()
+{
+    cout << "---" << endl
+         << "TESTING POINT MUTATION MODELS MODULE" << endl;
+
+
+    double **mat;
+
+    // Testing the K80 model
+    K80Model k80model;
+    mat = k80model.get_transition_matrix(1);
+    cout << "K80 Model: " << endl;
+    print_transition_matrix(mat);
+
+    // Testing the JC69 model
+    JC69Model jc69model;
+    mat = jc69model.get_transition_matrix(1);
+    cout << "JC69 Model: " << endl;
+    print_transition_matrix(mat);
+
+    // Done testing
+    cout << "TESTED MODULE" << endl
+         << endl << "---" << endl;
+
+
+    return 0;
+}
+
+int test_point_mutator()
+{
+    cout << "---" << endl
+         << "TESTING POINT MUTATOR" << endl;
+
+    // Test basic functionality
+    RNG.set_specific_seed(0);
+
+    try
+    {
+        long seq_length = 60;
+        Sequence s(seq_length);
+        PointMutator pm("K80", seq_length, 30, 0.5);
+        cout << "Sequence is " << s.as_string() << endl;
+        cout << "Active? " << s.is_active() << endl;
+        pm.mutate_sequence(s, 1);
+        cout << "Mutated it" << endl;
+        cout << "Sequence is " << s.as_string() << endl;
+        cout << "Num of mutations " << s.num_mutations() << endl;
+        cout << "Active? " << s.is_active() << endl;
+    }
+    catch (Exception e)
+    {
+        cout << e.what();
+    }
+
+    // Done testing
+    cout << "TESTED MODULE" << endl
+         << endl << "---" << endl;
+
+    return 0;
+}
+
+
 int main()
 {
     test_sequence();
+    test_point_mutation_models();
+    test_point_mutator();
 }

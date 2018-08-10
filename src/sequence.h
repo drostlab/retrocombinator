@@ -65,20 +65,6 @@ namespace rcombinator
          */
         lethal_mutations_type lethal_mutations;
 
-        /** Returns the 2bit encoding for a base at a given position.
-         */
-        inline std::pair<bool, bool> bits_at(long n) const
-        {
-            return std::make_pair(bases[2*n], bases[2*n+1]);
-        }
-
-        /** Returns the character for a base at a given position.
-         */
-        inline char char_at(long n) const
-        {
-            return Consts::NUC_BOOL2CHAR(bits_at(n));
-        }
-
     public:
 
         /** Constructs a random sequence of length \a n.
@@ -111,6 +97,20 @@ namespace rcombinator
 
         /// Returns the unique label for this sequence
         long get_tag() const { return tag; }
+
+        /** Returns the 2bit encoding for a base at a given position.
+         */
+        inline std::pair<bool, bool> bits_at(long n) const
+        {
+            return std::make_pair(bases[2*n], bases[2*n+1]);
+        }
+
+        /** Returns the character for a base at a given position.
+         */
+        inline char char_at(long n) const
+        {
+            return Consts::NUC_BOOL2CHAR(bits_at(n));
+        }
 
         /** Changes the nucleotide at position \a n to \a new_nucleotide.
          *

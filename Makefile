@@ -17,7 +17,9 @@ _DEPS = constants.h				\
 		sequence.h				
 DEPS := $(addprefix $(LIB_DIR), $(_DEPS))
 
-_LIBS = sequence.o				\
+_LIBS = point_mutation_models.o \
+		point_mutator.o			\
+		sequence.o				\
 		rand_maths.o			
 LIBS := $(addprefix $(OUT_DIR), $(_LIBS))
 
