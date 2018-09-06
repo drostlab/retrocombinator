@@ -6,4 +6,5 @@
 ^obj$
 ^cpp$
 ^Makefile$
+^tags$
 ^clean_rcpp.sh$

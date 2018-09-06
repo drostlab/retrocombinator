@@ -1,3 +1,6 @@
+# Vim tags
+tags
+
 # R specific
 .Rproj.user
 .Rhistory
@@ -10,6 +13,10 @@ src/*.so
 src/*.dll
 
 # C++ output
+test_obj/
 obj/
 rcombinator
-test_all
+test_rcombinator
+
+# rcombinator output
+*.out

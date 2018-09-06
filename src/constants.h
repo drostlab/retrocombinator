@@ -1,29 +1,33 @@
 /**
  * @file
  *
- * \brief Definitions for enums/constants that are used throughout the project.
+ * \brief Definitions for enums/constants/functions that are used everywhere.
  *
  * More specifically,
  * - biological constants (things like nucleotide names, a fixed nucleotide
  *   ordering etc),
- * - \todo add default constants for the simulation here as well
+ * - implementation specific typedefs and constants
  */
-#ifndef CONSTANTS_HPP
-#define CONSTANTS_HPP
+#ifndef CONSTANTS_H
+#define CONSTANTS_H
 
 #include "exception.h"
+#include <cmath>
 #include <utility>
 
 namespace rcombinator
 {
     /** \namespace rcombinator::Consts
-     *  To store all global constants that can be accessed from anywhere in the
-     *  code.
+     *  To store all constant values that we define.
      *  Stores biological constants and constants that are specific to the
      *  implementation of the simulation.
      */
     namespace Consts
     {
+        /** Tolerance for double operations.
+         */
+        const double DOUBLE_TOLERANCE = pow(10.0, -8);
+
         /** This defines an ordering on the nucleotides, used for arrays and
          *  transition matrices that work on nucleotides.
          */
@@ -33,8 +37,16 @@ namespace rcombinator
             C = 1,          ///< Cytosine
             A = 2,          ///< Adenine
             G = 3,          ///< Guanine
-            NUC_COUNT = 4   ///< Number of nucleotides, used as an upper bound for loops
+            NUC_COUNT = 4   ///< Number of nucleotides
         };
+
+        //@{
+        /** Defaults for different point mutation models
+         */
+        const double K80_K      = 10;
+        const double K80_SCALE  = 0.01;
+        const double JC69_SCALE = 0.1;
+        //@}
 
         /** Returns a character corresponding a nucleotide given its index.
          */
@@ -94,6 +106,15 @@ namespace rcombinator
             }
         }
     }
+
+    /// For transition matrices, rate matrices etc
+    typedef double NucMatrix[Consts::NUC_COUNT][Consts::NUC_COUNT];
+
+    /// For functions that return NucMatrix and accept no parameters
+    typedef const double (*ReturnsNucMatrix())[Consts::NUC_COUNT];
+
+    /// For functions that return NucMatrix and accept time as parameter
+    typedef const double (*ReturnsNucMatrixFromDouble(double))[Consts::NUC_COUNT];
 }
 
-#endif //CONSTANTS_HPP
+#endif //CONSTANTS_H

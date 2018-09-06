@@ -4,8 +4,8 @@
  * \brief Basic exception class that can store an error message.
  *
  */
-#ifndef EXCEPTION_HPP
-#define EXCEPTION_HPP
+#ifndef EXCEPTION_H
+#define EXCEPTION_H
 
 #include <string>
 
@@ -33,4 +33,4 @@ namespace rcombinator
     };
 }
 
-#endif //EXCEPTION_HPP
+#endif //EXCEPTION_H

@@ -5,8 +5,8 @@
  *
  * A collection of short, useful functions and data structures
  */
-#ifndef UTILITIES_HPP
-#define UTILITIES_HPP
+#ifndef UTILITIES_H
+#define UTILITIES_H
 
 #include <algorithm>
 #include <cmath>
@@ -49,4 +49,4 @@ namespace rcombinator
     }
 }
 
-#endif // UTILITIES_HPP
+#endif // UTILITIES_H

@@ -7,34 +7,16 @@
 
 namespace rcombinator
 {
-    long Sequence::global_sequence_count = 0;
+    long Sequence::global_sequence_count = -1;
+    const long Sequence::RAND = -10;
+    const long Sequence::INIT = -20;
 }
 
 using namespace rcombinator;
 
-Sequence::Sequence(long n) :
-    bases(2*n, false) // assign 2n because we have 2 bits per nucleotide base
+void Sequence::renumber_sequences(long new_start_tag)
 {
-    this->tag = Sequence::global_sequence_count;
-    ++Sequence::global_sequence_count;
-
-    for (unsigned i=0; i<bases.size(); ++i)
-    {
-        bases[i] = RNG.rand_bit();
-    }
-}
-
-Sequence::Sequence(std::string s) : bases(2*s.size(), false)
-{
-    this->tag = Sequence::global_sequence_count;
-    ++Sequence::global_sequence_count;
-
-    for (unsigned i=0; i<s.size(); ++i)
-    {
-        auto bits = Consts::NUC_CHAR2BOOL(s[i]);
-        bases[2*i]   = bits.first;
-        bases[2*i+1] = bits.second;
-    }
+    Sequence::global_sequence_count = new_start_tag - 1;
 }
 
 std::string Sequence::as_string() const
@@ -48,15 +30,43 @@ std::string Sequence::as_string() const
     }
     return s;
 }
+Sequence::Sequence(long n) :
 
-Sequence::Sequence(Sequence& s1, Sequence& s2, int num_template_switches)
+    bases(2*n, false) // assign 2n because we have 2 bits per nucleotide base
 {
-    this->tag = Sequence::global_sequence_count;
     ++Sequence::global_sequence_count;
+    this->tag = Sequence::global_sequence_count;
+    this->parent_tags = std::make_pair(Sequence::RAND, Sequence::RAND);
 
-    Sequence * s1_ptr = &s1;
-    Sequence * s2_ptr = &s2;
-    Sequence * sequences[] = { s1_ptr, s2_ptr };
+    for (unsigned i=0; i<bases.size(); ++i)
+    {
+        bases[i] = RNG.rand_bit();
+    }
+}
+
+Sequence::Sequence(std::string s) : bases(2*s.size(), false)
+{
+    ++Sequence::global_sequence_count;
+    this->tag = Sequence::global_sequence_count;
+    this->parent_tags = std::make_pair(Sequence::INIT, Sequence::INIT);
+
+    for (unsigned i=0; i<s.size(); ++i)
+    {
+        auto bits = Consts::NUC_CHAR2BOOL(s[i]);
+        bases[2*i]   = bits.first;
+        bases[2*i+1] = bits.second;
+    }
+}
+
+Sequence::Sequence(const Sequence& s1, const Sequence& s2, int num_template_switches)
+{
+    ++Sequence::global_sequence_count;
+    this->tag = Sequence::global_sequence_count;
+    this->parent_tags = std::make_pair(s1.get_tag(), s2.get_tag());
+
+    const Sequence * s1_ptr = &s1;
+    const Sequence * s2_ptr = &s2;
+    const Sequence * sequences[] = { s1_ptr, s2_ptr };
     int curr = RNG.rand_int(0, 2); // index of current sequence
 
     long n = sequences[curr]->get_length();
@@ -167,6 +177,22 @@ namespace rcombinator
         for (long i=0; i<min_size; ++i)
         {
             if (s1.char_at(i) != s2.char_at(i))
+            {
+                ++differences;
+            }
+        }
+        return (differences + extra);
+    }
+
+    long operator *(const Sequence& s1, std::string s2)
+    {
+        auto min_size = std::min(s1.get_length(), long(s2.size()));
+        long extra = std::abs(s1.get_length() - long(s2.size()));
+        long differences = 0;
+
+        for (long i=0; i<min_size; ++i)
+        {
+            if (s1.char_at(i) != s2[i])
             {
                 ++differences;
             }

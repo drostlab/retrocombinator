@@ -1,3 +1,4 @@
+#include "constants.h"
 #include "rand_maths.h"
 
 // Declaration of global random number generator
@@ -10,9 +11,9 @@ using namespace rcombinator;
 
 RandMaths::RandMaths()
 {
-    re.seed(std::chrono::system_clock::now().time_since_epoch().count());
+    last_seed = std::chrono::system_clock::now().time_since_epoch().count();
+    re.seed(last_seed);
 }
-
 /*static*/ RandMaths& RandMaths::get_instance()
 {
     static RandMaths instance;
@@ -21,12 +22,14 @@ RandMaths::RandMaths()
 
 void RandMaths::set_specific_seed(long seed)
 {
+    last_seed = seed;
     re.seed(seed);
 }
 
 void RandMaths::set_random_seed()
 {
-    re.seed(std::chrono::system_clock::now().time_since_epoch().count());
+    last_seed = std::chrono::system_clock::now().time_since_epoch().count();
+    re.seed(last_seed);
 }
 
 bool RandMaths::rand_bit()
@@ -38,9 +41,11 @@ bool RandMaths::rand_bit()
 
 int RandMaths::rand_int(int low, int high)
 {
-    if (low > high)
+    if (low >= high)
     {
-        throw Exception("low is > high");
+        std::string msg = "rand_int: low is >= high: " + std::to_string(low) + " > " +
+            std::to_string(high);
+        throw Exception(msg);
     }
     using Dist = std::uniform_int_distribution<int>;
     static Dist uid {};
@@ -49,9 +54,11 @@ int RandMaths::rand_int(int low, int high)
 
 double RandMaths::rand_real(double low /*= 0.0*/, double high /*= 1.0*/)
 {
-    if (low > high)
+    if (low >= high)
     {
-        throw Exception("low is > high");
+        std::string msg = "rand_real: low is >= high: " + std::to_string(low) + " > " +
+            std::to_string(high);
+        throw Exception(msg);
     }
     using Dist = std::uniform_real_distribution<double>;
     static Dist urd {};
@@ -71,9 +78,12 @@ long RandMaths::rand_poisson(double mean)
 
 std::set<int> RandMaths::sample_without_replacement(int low, int high, int m)
 {
-    if (low > high)
+    if (low >= high)
     {
-        throw Exception("low is > high");
+        std::string msg = "sample_without_replacement: low is >= high: " +
+            std::to_string(low) + " > " +
+            std::to_string(high);
+        throw Exception(msg);
     }
     if (m < 0)
     {
@@ -112,7 +122,7 @@ bool RandMaths::test_event(double event_probability)
     return (rand_real() < event_probability);
 }
 
-int RandMaths::choose_event(double * events, long num_events)
+int RandMaths::choose_event(const double events[], long num_events)
 {
     double rand_num = rand_real();
     double running_total = 0;
@@ -121,5 +131,13 @@ int RandMaths::choose_event(double * events, long num_events)
         running_total += events[i];
         if (running_total >= rand_num) return i;
     }
-    throw Exception("Event probabilities do not add up to at least 1");
+    if (fabs(running_total-1.0) > Consts::DOUBLE_TOLERANCE)
+    {
+        throw Exception("Event probabilities do not add up to 1");
+    }
+    else
+    {
+        // else it is the last event
+        return (num_events-1);
+    }
 }

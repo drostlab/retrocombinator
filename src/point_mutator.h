@@ -6,8 +6,8 @@
  * Includes a class which has methods for modifying sequences in place according
  * to some point mutation model.
  */
-#ifndef POINT_MUTATOR_HPP
-#define POINT_MUTATOR_HPP
+#ifndef POINT_MUTATOR_H
+#define POINT_MUTATOR_H
 
 #include <string>
 #include <vector>
@@ -36,7 +36,8 @@ namespace rcombinator
          *  probabilities for lethal mutations at each position in the sequence
          */
         PointMutator(std::string model, long n,
-                     long num_sensitive_posns, double inactive_probability);
+                     long num_sensitive_posns = 0,
+                     double inactive_probability = 0.0);
 
         /// Destructor that frees up memory
         ~PointMutator();
@@ -46,4 +47,4 @@ namespace rcombinator
     };
 }
 
-#endif //POINT_MUTATOR_HPP
+#endif //POINT_MUTATOR_H

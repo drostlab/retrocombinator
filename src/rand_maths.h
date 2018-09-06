@@ -6,8 +6,8 @@
  * Used for basic methods in statistics and probability.
  * RNG is the global instance name.
  */
-#ifndef RAND_MATHS_HPP
-#define RAND_MATHS_HPP
+#ifndef RAND_MATHS_H
+#define RAND_MATHS_H
 
 #include <chrono>
 #include <random>
@@ -32,12 +32,21 @@ namespace rcombinator
          */
         std::default_random_engine re;
 
+        /** Last seed for the random engine, either by the user or by the
+         *  system.
+         *  Note that this does not reflect the internal state of the random
+         *  engine at all points as once random number generation begins, this
+         *  value is not touched.
+         */
+        long double last_seed;
+
         /** Constructor, which seeds the random engine with system time.
          *  Is private because we want this to be a singleton.
          */
         RandMaths();
 
     public:
+
         /** Returns an instance of a RandMaths class, after seeding it with
          *  system time.
          *  Can be done only once as we want to share the random number
@@ -66,6 +75,11 @@ namespace rcombinator
          *  This can be undone by calling \p set_specific_seed()
          */
         void set_random_seed();
+
+        /** Gets the last set seed.
+         *  Look at the definition of last_seed for more details.
+         */
+        long get_last_seed() { return last_seed; }
 
         /** Generates a random true/false value.
          */
@@ -107,17 +121,13 @@ namespace rcombinator
          *  Takes the probabilities of each of the events as input.
          *  Throws an exception if the probabilites do not add up to at least 1.
          *
-         *  \todo Make this a safe pointer rather than a raw one, or use a vector
-         *  rather than a raw array.
-         *
-         *  \todo Throw an exception even if probabilities add up to something
-         *  greater than 1.
+         *  This does not check if the array is valid.
          */
-        int choose_event(double * events, long num_events);
+        int choose_event(const double events[], long num_events);
     };
 
     // Global random number generator
     extern RandMaths& RNG;
 }
 
-#endif // RAND_MATHS_HPP
+#endif // RAND_MATHS_H

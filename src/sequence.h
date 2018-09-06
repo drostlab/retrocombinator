@@ -7,8 +7,8 @@
  * recombine sequences and methods to get the pairwise distances between two
  * strings.
  */
-#ifndef SEQUENCE_HPP
-#define SEQUENCE_HPP
+#ifndef SEQUENCE_H
+#define SEQUENCE_H
 
 #include <string>
 #include <unordered_map>
@@ -41,6 +41,14 @@ namespace rcombinator
          */
         long tag;
 
+        /** The parent tags that this sequence was created from.
+         *  If this was created as Sequence(S1, S2), the tags are ordered as
+         *  <S1.get_tag(), S2.get_tag()>.
+         *  If this was created randomly, the tags are <RAND, RAND>.
+         *  If this was created from a string, the tags are <INIT, INIT>.
+         */
+        std::pair<long, long> parent_tags;
+
         /** Actual sequence of nucleotides.
          *  Stored as a string internally.
          */
@@ -65,7 +73,28 @@ namespace rcombinator
          */
         lethal_mutations_type lethal_mutations;
 
+        /** Returns the 2bit encoding for a base at a given position.
+         */
+        inline std::pair<bool, bool> bits_at(long n) const
+        {
+            return std::make_pair(bases[2*n], bases[2*n+1]);
+        }
+
     public:
+
+        //@{ Constants that represent how a sequence was born.
+        /// This sequence was created randomly.
+        static const long RAND;
+        /// This sequence was created from a specified string
+        static const long INIT;
+        //@}
+
+        /** Explicitly update the global sequence count to start from a
+         *  particular number.
+         *  new_start_tag will be given to the next sequence created.
+         *  Used when running multiple simulations one after the other.
+         */
+        static void renumber_sequences(long new_start_tag);
 
         /** Constructs a random sequence of length \a n.
          *  This is considered initial, so no mutations are present.
@@ -90,7 +119,22 @@ namespace rcombinator
          *  \todo Add an option for specifying the positions of the template
          *  switches too, or overload this function.
          */
-        Sequence(Sequence& s1, Sequence& s2, int num_template_switches);
+        Sequence(const Sequence& s1, const Sequence& s2,
+                 int num_template_switches);
+
+        //@{
+        /** Delete copy constructors as we want tags to be unique.
+         */
+        Sequence(Sequence const&) = delete;
+        void operator=(Sequence const&) = delete;
+        //@}
+
+        //@{
+        /** But make the objects moveable, to create containers of them.
+         */
+        Sequence(Sequence&&) = default;
+        Sequence& operator=(Sequence&&) = default;
+        //@}
 
         /// Returns length of the sequence
         long get_length() const { return (bases.size()/2); }
@@ -98,12 +142,11 @@ namespace rcombinator
         /// Returns the unique label for this sequence
         long get_tag() const { return tag; }
 
-        /** Returns the 2bit encoding for a base at a given position.
+        /** Returns the tags of the sequences that this sequence was created
+         *  from.
+         *  See the definition of parent_tags for more details.
          */
-        inline std::pair<bool, bool> bits_at(long n) const
-        {
-            return std::make_pair(bases[2*n], bases[2*n+1]);
-        }
+        std::pair<long, long> get_parent_tags() const { return parent_tags; }
 
         /** Returns the character for a base at a given position.
          */
@@ -133,13 +176,17 @@ namespace rcombinator
          */
         long num_mutations() const { return mutations.size(); }
 
+        //@{
         /** Computes pairwise distances between two sequences.
          *  This is the standard edit distance score, and is the number of
          *  mismatches (because insertions and deletions are not possible in this
          *  system).
          */
         friend long operator *(const Sequence& s1, const Sequence& s2);
+        /// Pairwise distance between a sequence and a string
+        friend long operator *(const Sequence& s1, std::string s2);
+        //@}
     };
 }
 
-#endif //SEQUENCE_HPP
+#endif //SEQUENCE_H
