@@ -1,7 +1,7 @@
 .DEFAULT_GOAL := all
 
 # Options for valgrind on/off in strings
-mem_check="on"
+mem_check = "on"
 
 # Library files exposed to C++ and R
 SRC_DIR = src/
@@ -20,7 +20,7 @@ $(OBJ_DIR):
 $(TEST_OBJ_DIR):
 	mkdir -p $(TEST_OBJ_DIR)
 
-CC = clang++
+CC = g++
 CCFLAGS = -I./$(SRC_DIR) -I./$(CPP_DIR) -Wall
 CCTESTFLAGS = -I./$(TEST_DIR)
 

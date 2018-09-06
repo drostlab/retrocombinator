@@ -19,13 +19,18 @@ namespace rcombinator
     {
     protected:
         /// The transition rate matrix (unscaled)
-        NucMatrix Q_mat;
+        NucMatrix Q;
         /// The transition matrix for timestep \a t_stored
-        NucMatrix T_mat;
-        /// T_mat = exp(scale * Q_mat * time)
+        NucMatrix P;
+        /// P = exp(scale * Q * time)
         double scale;
         /// The timestep jump for which our transition matrix is valid
         double t_stored;
+
+        /** Computes Q from P using t_stored.
+         *  P(t) = exp(scale*Qt)
+         */
+        virtual void compute_transition_matrix() = 0;
 
     public:
         /// Constructor that allocates memory for transition matrix
@@ -47,14 +52,27 @@ namespace rcombinator
          *  \a t is the time that has passed in millions of years.
          *  P(A to B) is matrix(A, B).
          *
-         * P(t) = exp(scale*Qt)
          */
-        virtual ReturnsNucMatrixFromDouble get_transition_matrix = 0;
+        ReturnsNucMatrixFromDouble get_transition_matrix;
     };
 
     /// General Time Reversible Model, Tavare 1986
     class GTRModel : public PointMutationModel
     {
+    protected:
+        //@{
+        /** The base frequency parameters.
+         *  pi_X is the proportion of the sequence that has nucleotide X after
+         *  the system has reached equilibrium.
+         */
+        const double pi_T;
+        const double pi_C;
+        const double pi_A;
+        const double pi_G;
+        //@}
+
+        /// To be computed using exponentiation of Q
+        void compute_transition_matrix() override;
     public:
         /** 4 equilibrium base frequency parameters, 6 substitution rate
          * parameters and 1 scale parameter.
@@ -69,31 +87,34 @@ namespace rcombinator
                  double C2A=1, double C2G=1,
                  double A2G=1,
                  double scale=1);
-
-        /// To be computed using exponentiation of Q
-        ReturnsNucMatrixFromDouble get_transition_matrix override;
     };
 
     /// Tamura ane Nei 1983 Model
     class T93Model : public GTRModel
     {
+    protected:
+        //@{
+        /** The subsitution rate parameters.
+         *  Look at the constructor for more details.
+         */
+        const double k1;
+        const double k2;
+        //@}
+
+        /// Computed by exploiting symmetry
+        void compute_transition_matrix() override;
     public:
         /** 4 equilibrium base frequency parameters, 2 substitution rate
          * parameters and 1 scale parameter.
          * pi_X  = same as for GTR
-         * k1    = rate of transition
-         * k2    = rate of transversion
+         * k1    = rate of transition T <-> C when transversion rate is 1
+         * k2    = rate of transition A <-> G when transversion rate is 1
          * scale = same as for GTR
          */
         T93Model(double pi_T=0.25, double pi_C=0.25,
                  double pi_A=0.25, double pi_G=0.25,
                  double k1=1, double k2=1,
                  double scale=1);
-
-        /// To be computed using exponentiation of Q
-        ReturnsNucMatrixFromDouble get_transition_matrix override;
-
-
     };
 
     /// Hasegawa, Kishino and Yano 1985 Model
@@ -103,20 +124,20 @@ namespace rcombinator
         /** 4 equilibrium base frequency parameters, 1 substitution rate
          * parameter and 1 scale parameter.
          * pi_X  = same as for GTR
-         * k     = rate of transitions/transversions (assuming other rate is 1)
+         * k     = rate of transitions(assuming rate of transversions is 1)
          * scale = same as for GTR
          */
         HKY85Model(double pi_T=0.25, double pi_C=0.25,
                    double pi_A=0.25, double pi_G=0.25,
                    double k=1, double scale=1);
-
-        /// To be computed using exponentiation of Q
-        ReturnsNucMatrixFromDouble get_transition_matrix override;
     };
 
     /// Felsenstein 1981 Model
     class F81Model : public HKY85Model
     {
+    protected:
+        /// Computed by exploiting symmetry
+        void compute_transition_matrix() override;
     public:
         /** 4 equilibrium base frequency parameters and 1 scale parameter.
          * pi_X  = same as for GTR
@@ -125,23 +146,20 @@ namespace rcombinator
         F81Model(double pi_T=0.25, double pi_C=0.25,
                  double pi_A=0.25, double pi_G=0.25,
                  double scale=1);
-
-        /// To be computed using exponentiation of Q
-        ReturnsNucMatrixFromDouble get_transition_matrix override;
     };
 
     /// Kimura 2 Parameter Model, 1980
     class K80Model : public HKY85Model
     {
+    protected:
+        /// Computed by exploiting symmetry
+        void compute_transition_matrix() override;
     public:
         /** 1 substitution rate parameter and 1 scale parameter.
-         * k     = rate of transitions/transversions (assuming other rate is 1)
+         * k     = rate of transitions (assuming rate of transversions is 1)
          * scale = same as for GTR
          */
         K80Model(double k=Consts::K80_K, double scale=Consts::K80_SCALE);
-
-        /// Computed by exploiting symmetry
-        ReturnsNucMatrixFromDouble get_transition_matrix override;
     };
 
     /// Jules and Cantor, 1969
