@@ -71,10 +71,12 @@ namespace rcombinator
         /** Helper print functions.
          *  init: display distance to inital sequence
          *  pair: display pairwise distances between the sequences
-         *  seqs: display raw sequences
-         *  seq_tags: the tags within a family*
+         *  seqs: display raw sequences*
+         *  seq_tags: the tags within a family**
          *
-         *  *Note that if any print function needs to be performed, tags are
+         *  *seqs are only output if init are output
+         *
+         *  **Note that if any print function needs to be performed, tags are
          *  always printed automatically takes place alongside it.
          */
 

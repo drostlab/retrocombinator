@@ -135,11 +135,10 @@ void Output::print(long timestep, double real_time,
             if (timestep % to_output_init == 0 || timestep == final_time)
             {
                 print_init(family.seqs);
-            }
-
-            if (timestep % to_output_seqs == 0 || timestep == final_time)
-            {
-                print_seqs(family.seqs);
+                if (timestep % to_output_seqs == 0 || timestep == final_time)
+                {
+                    print_seqs(family.seqs);
+                }
             }
         }
         if (timestep % to_output_pair == 0 || timestep == final_time)
