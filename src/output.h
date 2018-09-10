@@ -77,9 +77,26 @@ namespace rcombinator
          *  *Note that if any print function needs to be performed, tags are
          *  always printed automatically takes place alongside it.
          */
+
+        /// Prints distance to initial sequence family-wise, in order
         void print_init(const seqs_type& seqs);
-        void print_pair(const seqs_type& seqs);
+
+        /** Prints pairwise distances across all families.
+         *  The order is as follows:
+         *  for each family F1:
+         *      for each seq S1 in F1:
+         *          for each other seq S2 in F1:
+         *              print S1*S2
+         *          for each other family F2:
+         *              for each seq S2 in F2:
+         *                  print S1*S2
+         */
+        void print_pair(const std::vector<Family>& families);
+
+        /// Prints raw sequences family-wise, in order
         void print_seqs(const seqs_type& seqs);
+
+        /// Prints sequence tags family-wise, in order
         void print_seq_tags(const seqs_type& seqs);
         //@}
 

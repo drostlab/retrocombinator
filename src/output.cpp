@@ -47,14 +47,24 @@ void Output::print_init(const seqs_type& seqs)
     fout << endl;
 }
 
-void Output::print_pair(const seqs_type& seqs)
+void Output::print_pair(const std::vector<Family>& families)
 {
     fout << "P" << endl;
-    for (auto it = seqs.begin(); it != seqs.end(); ++it)
+    for (auto f1 = families.begin(); f1 != families.end(); ++f1)
     {
-        for (auto jt = std::next(it); jt != seqs.end(); ++jt)
+        for (auto s1 = f1->seqs.begin(); s1 != f1->seqs.end(); ++s1)
         {
-            fout << ((*it) * (*jt)) << " ";
+            for (auto s2 = std::next(s1); s2 != f1->seqs.end(); ++s2)
+            {
+                fout << ((*s1) * (*s2)) << " ";
+            }
+            for (auto f2 = std::next(f1); f2 != families.end(); ++f2)
+            {
+                for (auto s2 = f2->seqs.begin(); s2 != f2->seqs.end(); ++s2)
+                {
+                    fout << ((*s1) * (*s2)) << " ";
+                }
+            }
         }
     }
     fout << endl;
@@ -127,15 +137,14 @@ void Output::print(long timestep, double real_time,
                 print_init(family.seqs);
             }
 
-            if (timestep % to_output_pair == 0 || timestep == final_time)
-            {
-                print_pair(family.seqs);
-            }
-
             if (timestep % to_output_seqs == 0 || timestep == final_time)
             {
                 print_seqs(family.seqs);
             }
+        }
+        if (timestep % to_output_pair == 0 || timestep == final_time)
+        {
+            print_pair(families);
         }
     }
 }
