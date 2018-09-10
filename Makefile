@@ -32,9 +32,9 @@ endif
 _HEADERS = exception.h					\
 		   constants.h					\
 		   utilities.h					\
-		   evolution.h					\
 		   rand_maths.h					\
 		   sequence.h					\
+		   family.h						\
 		   point_mutation_models.h		\
 		   point_mutator.h				\
 		   output.h						\
@@ -45,6 +45,7 @@ HEADERS := $(addprefix $(SRC_DIR), $(_HEADERS))
 
 _SRCS = rand_maths.o				\
 		sequence.o					\
+		family.o					\
 		point_mutation_models.o		\
 		point_mutator.o				\
 		output.o					\
@@ -56,7 +57,9 @@ SRCS := $(addprefix $(OBJ_DIR), $(_SRCS))
 _OBJS = main.o
 OBJS := $(addprefix $(OBJ_DIR), $(_OBJS))
 
-TEST_HEADERS = test_sequence.h					\
+TEST_HEADERS = test_header.h					\
+			   test_sequence.h					\
+			   test_family.h					\
 			   test_point_mutation_models.h     \
 			   test_point_mutator.h             \
 			   test_output.h					\
@@ -96,6 +99,7 @@ all: target test
 
 .PHONY: clean
 clean:
-	rm -f $(OBJ_DIR)*.o $(TEST_OBJ_DIR)*.o $(TARGET) $(TEST_TARGET)
+	rm -f $(OBJ_DIR)*.o $(TARGET)
 	rm -d -f $(OBJ_DIR)
+	rm -f $(TEST_OBJ_DIR)*.o $(TEST_OBJ_DIR)*.out $(TEST_TARGET)
 	rm -d -f $(TEST_OBJ_DIR)

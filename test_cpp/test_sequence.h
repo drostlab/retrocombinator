@@ -7,16 +7,14 @@
 #ifndef TEST_SEQUENCE_H
 #define TEST_SEQUENCE_H
 
-#include <cassert>
-
-#include "rand_maths.h"
+#include "test_header.h"
 #include "sequence.h"
 
 namespace rcombinator
 {
     int test_sequence()
     {
-        RNG.set_specific_seed(0);
+        test_initialize();
         Sequence::renumber_sequences(0);
 
         // Testing string to bool conversion
@@ -27,7 +25,7 @@ namespace rcombinator
 
         // Testing random sequence generation
         Sequence S1(10);
-        assert (S1.as_string() == "TAACGCACAT");
+        assert (S1.as_string() == "GGGGCATAAT");
 
         // Testing non-lethal point mutations
         std::string seq_string2("TTTTTTTTTTTT");
@@ -67,9 +65,9 @@ namespace rcombinator
         Sequence S7(S4, S5, 2);
         Sequence S8(S4, S5, 3);
 
-        assert (S6.as_string() == "AAAAAAAAGGGG");
-        assert (S7.as_string() == "GGGGGGGGGGAG");
-        assert (S8.as_string() == "GGAAAGGGAAAA");
+        assert (S6.as_string() == "GGGGGGGGGAAA");
+        assert (S7.as_string() == "GGGGGGAGGGGG");
+        assert (S8.as_string() == "AGGGGGGGGGAG");
 
         // Testing individual sequence tagging
         assert (S0.get_tag() == 0);

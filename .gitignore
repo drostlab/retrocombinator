@@ -1,4 +1,5 @@
-# Vim tags
+# Vim tags and settings
+.vimrc
 tags
 
 # R specific

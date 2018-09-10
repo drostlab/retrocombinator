@@ -6,12 +6,12 @@
  */
 #ifndef TEST_POINT_MUTATION_MODELS_H
 #define TEST_POINT_MUTATION_MODELS_H
-#include <iostream>
-#include <cassert>
-#include <limits>
 
-#include "rand_maths.h"
+#include "test_header.h"
 #include "point_mutation_models.h"
+
+#include <iostream>
+#include <limits>
 
 namespace rcombinator
 {

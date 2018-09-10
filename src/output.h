@@ -7,54 +7,17 @@
 #ifndef OUTPUT_H
 #define OUTPUT_H
 
-#include "sequence.h"
+#include "family.h"
 #include <fstream>
 
 namespace rcombinator
 {
     class Output
     {
-    private:
-        /// A stream for the output
-        std::fstream fout;
-
-        /** The final timestep in our simulation.
-         *  Make sure we output everything we can at this timestep, regardless
-         *  of what we explicity said should be output.
-         */
-        const long final_time;
-
-        //@{
-        /** Only output X if \p to_output_X is a multiple of the current
-         *  timestep in the simulation.
-         *  Look at the definition of print_<X> to learn what <X> is.
-         */
-        const long to_output_init;
-        const long to_output_pair;
-        const long to_output_seqs;
-        const long to_output_tags;
-        //@}
-
-        //@{
-        /** Helper print functions.
-         *  init: display distance to inital sequence
-         *  pair: display pairwise distances between the sequences
-         *  seqs: display raw sequences
-         *  tags: the tags and family tags of each of our sequences*
-         *
-         *  *Note that if any print function needs to be performed, print_tags
-         *  automatically takes place alongside it.
-         */
-        void print_init(const std::vector<Sequence>& seqs);
-        void print_pair(const std::vector<Sequence>& seqs);
-        void print_seqs(const std::vector<Sequence>& seqs);
-        void print_tags(const std::vector<Sequence>& seqs);
-        //@}
-
-        /// The initial sequence to compare to
-        std::string init_seq;
-
     public:
+        /// Borrow typedef
+        typedef Family::seqs_type seqs_type;
+
         /** Constructor, to specify how often we write to file.
          *  \p num_out_X = \a n means that the <X> output will occur \a n
          *  times. Look at the definitions of print_<X> to learn what <X> is.
@@ -81,8 +44,47 @@ namespace rcombinator
         /** Prints the required information during the simulation.
          */
         void print(long timestep, double real_time,
-                   const std::vector<Sequence>& seqs);
+                   const std::vector<Family>& seqs);
 
+    private:
+        /// A stream for the output
+        std::fstream fout;
+
+        /** The final timestep in our simulation.
+         *  Make sure we output everything we can at this timestep, regardless
+         *  of what we explicity said should be output.
+         */
+        const long final_time;
+
+        //@{
+        /** Only output X if \p to_output_X is a multiple of the current
+         *  timestep in the simulation.
+         *  Look at the definition of print_<X> to learn what <X> is.
+         */
+        const long to_output_init;
+        const long to_output_pair;
+        const long to_output_seqs;
+        const long to_output_tags;
+        //@}
+
+        //@{
+        /** Helper print functions.
+         *  init: display distance to inital sequence
+         *  pair: display pairwise distances between the sequences
+         *  seqs: display raw sequences
+         *  seq_tags: the tags within a family*
+         *
+         *  *Note that if any print function needs to be performed, tags are
+         *  always printed automatically takes place alongside it.
+         */
+        void print_init(const seqs_type& seqs);
+        void print_pair(const seqs_type& seqs);
+        void print_seqs(const seqs_type& seqs);
+        void print_seq_tags(const seqs_type& seqs);
+        //@}
+
+        /// The initial sequence to compare to
+        std::string init_seq;
     };
 }
 

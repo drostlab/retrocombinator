@@ -33,7 +33,7 @@ void Output::set_init_seq (std::string _init_seq)
     init_seq = _init_seq;
 }
 
-void Output::print_init(const std::vector<Sequence>& seqs)
+void Output::print_init(const seqs_type& seqs)
 {
     if (init_seq.size() == 0)
     {
@@ -47,7 +47,7 @@ void Output::print_init(const std::vector<Sequence>& seqs)
     fout << endl;
 }
 
-void Output::print_pair(const std::vector<Sequence>& seqs)
+void Output::print_pair(const seqs_type& seqs)
 {
     fout << "P" << endl;
     for (auto it = seqs.begin(); it != seqs.end(); ++it)
@@ -60,7 +60,7 @@ void Output::print_pair(const std::vector<Sequence>& seqs)
     fout << endl;
 }
 
-void Output::print_seqs(const std::vector<Sequence>& seqs)
+void Output::print_seqs(const seqs_type& seqs)
 {
     fout << "S" << endl;
     for (const auto& seq : seqs)
@@ -69,7 +69,7 @@ void Output::print_seqs(const std::vector<Sequence>& seqs)
     }
 }
 
-void Output::print_tags(const std::vector<Sequence>& seqs)
+void Output::print_seq_tags(const seqs_type& seqs)
 {
     fout << "T" << endl;
     fout << seqs.size() << endl;
@@ -104,7 +104,7 @@ void Output::print_tags(const std::vector<Sequence>& seqs)
 }
 
 void Output::print(long timestep, double real_time,
-                   const std::vector<Sequence>& seqs)
+                   const std::vector<Family>& families)
 {
     if (timestep % to_output_tags == 0 ||
         timestep % to_output_init == 0 ||
@@ -114,21 +114,28 @@ void Output::print(long timestep, double real_time,
     {
         fout << "@" << endl;
         fout << timestep << " " << real_time << endl;
-        print_tags(seqs);
 
-        if (timestep % to_output_init == 0 || timestep == final_time)
+        fout << "F" << endl;
+        fout << families.size() << endl;
+        for (const auto& family : families)
         {
-            print_init(seqs);
-        }
+            fout << family.get_tag() << endl;
+            print_seq_tags(family.seqs);
 
-        if (timestep % to_output_pair == 0 || timestep == final_time)
-        {
-            print_pair(seqs);
-        }
+            if (timestep % to_output_init == 0 || timestep == final_time)
+            {
+                print_init(family.seqs);
+            }
 
-        if (timestep % to_output_seqs == 0 || timestep == final_time)
-        {
-            print_seqs(seqs);
+            if (timestep % to_output_pair == 0 || timestep == final_time)
+            {
+                print_pair(family.seqs);
+            }
+
+            if (timestep % to_output_seqs == 0 || timestep == final_time)
+            {
+                print_seqs(family.seqs);
+            }
         }
     }
 }

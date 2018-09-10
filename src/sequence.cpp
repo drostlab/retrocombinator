@@ -1,20 +1,61 @@
-#include <iterator>
-#include <algorithm>
-
 #include "sequence.h"
 #include "rand_maths.h"
 #include "utilities.h"
 
+#include <iterator>
+#include <algorithm>
+
 namespace rcombinator
 {
-    long Sequence::global_sequence_count = -1;
+    tag_type Sequence::global_sequence_count = -1;
     const long Sequence::RAND = -10;
     const long Sequence::INIT = -20;
 }
 
+namespace rcombinator
+{
+    size_type operator *(const Sequence& s1, const Sequence& s2)
+    {
+        auto min_size = std::min(s1.get_length(), s2.get_length());
+        auto max_size = std::max(s1.get_length(), s2.get_length());
+        // the difference due to sequence length difference
+        size_type extra = max_size - min_size;
+        // the difference due to mutations
+        size_type differences = 0;
+
+        for (size_type i=0; i<min_size; ++i)
+        {
+            if (s1.char_at(i) != s2.char_at(i))
+            {
+                ++differences;
+            }
+        }
+        return (differences + extra);
+    }
+
+    size_type operator *(const Sequence& s1, std::string s2)
+    {
+        auto min_size = std::min(s1.get_length(), size_type(s2.size()));
+        auto max_size = std::max(s1.get_length(), size_type(s2.size()));
+        // the difference due to sequence length difference
+        size_type extra = max_size - min_size;
+        // the difference due to mutations
+        size_type differences = 0;
+
+        for (size_type i=0; i<min_size; ++i)
+        {
+            if (s1.char_at(i) != s2[i])
+            {
+                ++differences;
+            }
+        }
+        return (differences + extra);
+    }
+}
+
 using namespace rcombinator;
 
-void Sequence::renumber_sequences(long new_start_tag)
+void Sequence::renumber_sequences(tag_type new_start_tag)
 {
     Sequence::global_sequence_count = new_start_tag - 1;
 }
@@ -24,13 +65,13 @@ std::string Sequence::as_string() const
     // bases.size() should be an exact multiple of 2
     std::string s(bases.size()/2, ' ');
 
-    for(unsigned i=0; i<s.size(); ++i)
+    for(size_type i=0; i<s.size(); ++i)
     {
         s[i] = Consts::NUC_BOOL2CHAR(std::make_pair(bases[2*i], bases[2*i+1]));
     }
     return s;
 }
-Sequence::Sequence(long n) :
+Sequence::Sequence(size_type n) :
 
     bases(2*n, false) // assign 2n because we have 2 bits per nucleotide base
 {
@@ -38,7 +79,7 @@ Sequence::Sequence(long n) :
     this->tag = Sequence::global_sequence_count;
     this->parent_tags = std::make_pair(Sequence::RAND, Sequence::RAND);
 
-    for (unsigned i=0; i<bases.size(); ++i)
+    for (size_type i=0; i<bases.size(); ++i)
     {
         bases[i] = RNG.rand_bit();
     }
@@ -50,7 +91,7 @@ Sequence::Sequence(std::string s) : bases(2*s.size(), false)
     this->tag = Sequence::global_sequence_count;
     this->parent_tags = std::make_pair(Sequence::INIT, Sequence::INIT);
 
-    for (unsigned i=0; i<s.size(); ++i)
+    for (size_type i=0; i<s.size(); ++i)
     {
         auto bits = Consts::NUC_CHAR2BOOL(s[i]);
         bases[2*i]   = bits.first;
@@ -58,7 +99,8 @@ Sequence::Sequence(std::string s) : bases(2*s.size(), false)
     }
 }
 
-Sequence::Sequence(const Sequence& s1, const Sequence& s2, int num_template_switches)
+Sequence::Sequence(const Sequence& s1, const Sequence& s2,
+                   size_type num_template_switches)
 {
     ++Sequence::global_sequence_count;
     this->tag = Sequence::global_sequence_count;
@@ -67,9 +109,9 @@ Sequence::Sequence(const Sequence& s1, const Sequence& s2, int num_template_swit
     const Sequence * s1_ptr = &s1;
     const Sequence * s2_ptr = &s2;
     const Sequence * sequences[] = { s1_ptr, s2_ptr };
-    int curr = RNG.rand_int(0, 2); // index of current sequence
+    size_type curr = RNG.rand_int(0, 2); // index of current sequence
 
-    long n = sequences[curr]->get_length();
+    size_type n = sequences[curr]->get_length();
     bases.assign(sequences[curr]->bases.begin(),
                  sequences[curr]->bases.end());
 
@@ -81,20 +123,21 @@ Sequence::Sequence(const Sequence& s1, const Sequence& s2, int num_template_swit
     // Cannot include 0 because that would mean we have one fewer template
     // switch. So, we sample from 1 to (n-1) (note that the sampler exludes the
     // upper bound).
-    std::set<int> posns_of_recomb = RNG.sample_without_replacement(1, n, num_template_switches);
+    std::set<size_type> posns_of_recomb =
+        RNG.sample_without_replacement(1, n, num_template_switches);
     // If there are an odd number, add the last position as a place of
     // recombination too (this means we can just read from the other
     // sequence between consecutive values of posns_of_recomb).
     if (num_template_switches % 2 != 0) { posns_of_recomb.insert(n); }
 
-    for (std::set<int>::iterator it = posns_of_recomb.begin();
+    for (auto it = posns_of_recomb.begin();
          it != posns_of_recomb.end(); it = std::next(it, 2))
     {
-        long beg = *it;
-        long end = *std::next(it);
+        size_type beg = *it;
+        size_type end = *std::next(it);
 
         // copy nucleotides from the other sequence
-        for (long i = 2*beg; i < 2*end; ++i)
+        for (size_type i = 2*beg; i < 2*end; ++i)
         {
             bases[i] = (sequences[1-curr]->bases)[i];
         }
@@ -132,7 +175,8 @@ Sequence::Sequence(const Sequence& s1, const Sequence& s2, int num_template_swit
     }
 }
 
-void Sequence::point_mutate(long n, char new_nucleotide, bool is_lethal /* = false */)
+void Sequence::point_mutate(size_type n, char new_nucleotide,
+                            bool is_lethal /* = false */)
 {
     // only if there is something new to do
     if (char_at(n) != new_nucleotide)
@@ -166,37 +210,3 @@ void Sequence::point_mutate(long n, char new_nucleotide, bool is_lethal /* = fal
     }
 }
 
-namespace rcombinator
-{
-    long operator *(const Sequence& s1, const Sequence& s2)
-    {
-        auto min_size = std::min(s1.get_length(), s2.get_length());
-        long extra = std::abs(s1.get_length() - s2.get_length());
-        long differences = 0;
-
-        for (long i=0; i<min_size; ++i)
-        {
-            if (s1.char_at(i) != s2.char_at(i))
-            {
-                ++differences;
-            }
-        }
-        return (differences + extra);
-    }
-
-    long operator *(const Sequence& s1, std::string s2)
-    {
-        auto min_size = std::min(s1.get_length(), long(s2.size()));
-        long extra = std::abs(s1.get_length() - long(s2.size()));
-        long differences = 0;
-
-        for (long i=0; i<min_size; ++i)
-        {
-            if (s1.char_at(i) != s2[i])
-            {
-                ++differences;
-            }
-        }
-        return (differences + extra);
-    }
-}

@@ -24,28 +24,10 @@ namespace rcombinator
         /** Checks whether a number lies within a range.
          *  The bounds are [inclusive, exclusive).
          */
-        inline bool is_in_range(long test, long lb, long ub)
+        inline bool is_in_range(size_type test, size_type lb, size_type ub)
         {
             return ((lb <= test) && (test < ub));
         }
-
-        /** Plain-Old-Data struct to store summary statistics for a list of values.
-         *
-         *  Is templated on T and T_cont, where
-         *  T is a numeric type, and
-         *  T_cont is a numeric type that can store fractional parts.
-         *  Stores the quartiles and the mean for a list of values.
-         */
-        template <typename T, typename T_cont>
-        struct SummaryStats
-        {
-            T      min;     ///< Minimum
-            T_cont q25;     ///< First quartile, 25th percentile
-            T_cont median;  ///< Median
-            T_cont q75;     ///< Third quartile, 75th percentile
-            T      max;     ///< Maximum
-            T_cont mean;    ///< Arithmetic mean
-        };
     }
 }
 

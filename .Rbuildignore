@@ -7,4 +7,5 @@
 ^cpp$
 ^Makefile$
 ^tags$
+^.vimrc$
 ^clean_rcpp.sh$

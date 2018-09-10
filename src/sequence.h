@@ -10,13 +10,13 @@
 #ifndef SEQUENCE_H
 #define SEQUENCE_H
 
+#include "constants.h"
+
 #include <string>
 #include <unordered_map>
 #include <unordered_set>
 #include <utility>
 #include <vector>
-
-#include "constants.h"
 
 namespace rcombinator
 {
@@ -33,13 +33,13 @@ namespace rcombinator
          *  created.
          *  Used to assign each sequence a unique tag.
          */
-        static long global_sequence_count;
+        static tag_type global_sequence_count;
 
         /** A number that uniquely identifies this sequence.
          *  This tag transcends activity (if an inactive sequence becomes active
          *  again, it has the same tag)
          */
-        long tag;
+        tag_type tag;
 
         /** The parent tags that this sequence was created from.
          *  If this was created as Sequence(S1, S2), the tags are ordered as
@@ -47,7 +47,7 @@ namespace rcombinator
          *  If this was created randomly, the tags are <RAND, RAND>.
          *  If this was created from a string, the tags are <INIT, INIT>.
          */
-        std::pair<long, long> parent_tags;
+        std::pair<tag_type, tag_type> parent_tags;
 
         /** Actual sequence of nucleotides.
          *  Stored as a string internally.
@@ -58,8 +58,8 @@ namespace rcombinator
         /** Basic typedefs - hashed data structures for quick lookup.
          *  For keeping track of mutations and lethal mutations.
          */
-        typedef std::unordered_map<long, char> mutations_type;
-        typedef std::unordered_set<long> lethal_mutations_type;
+        typedef std::unordered_map<tag_type, char> mutations_type;
+        typedef std::unordered_set<tag_type> lethal_mutations_type;
         //@}
 
         /** Positions of mutations and what the *original* nucleotide was.
@@ -75,7 +75,7 @@ namespace rcombinator
 
         /** Returns the 2bit encoding for a base at a given position.
          */
-        inline std::pair<bool, bool> bits_at(long n) const
+        inline std::pair<bool, bool> bits_at(size_type n) const
         {
             return std::make_pair(bases[2*n], bases[2*n+1]);
         }
@@ -84,9 +84,9 @@ namespace rcombinator
 
         //@{ Constants that represent how a sequence was born.
         /// This sequence was created randomly.
-        static const long RAND;
+        static const tag_type RAND;
         /// This sequence was created from a specified string
-        static const long INIT;
+        static const tag_type INIT;
         //@}
 
         /** Explicitly update the global sequence count to start from a
@@ -94,12 +94,12 @@ namespace rcombinator
          *  new_start_tag will be given to the next sequence created.
          *  Used when running multiple simulations one after the other.
          */
-        static void renumber_sequences(long new_start_tag);
+        static void renumber_sequences(tag_type new_start_tag);
 
         /** Constructs a random sequence of length \a n.
          *  This is considered initial, so no mutations are present.
          */
-        Sequence(long n);
+        Sequence(size_type n);
 
         /** Constructs a sequence from a given string.
          *  This is considered initial, so no mutations are present.
@@ -120,7 +120,7 @@ namespace rcombinator
          *  switches too, or overload this function.
          */
         Sequence(const Sequence& s1, const Sequence& s2,
-                 int num_template_switches);
+                 size_type num_template_switches);
 
         //@{
         /** Delete copy constructors as we want tags to be unique.
@@ -137,20 +137,20 @@ namespace rcombinator
         //@}
 
         /// Returns length of the sequence
-        long get_length() const { return (bases.size()/2); }
+        size_type get_length() const { return (bases.size()/2); }
 
         /// Returns the unique label for this sequence
-        long get_tag() const { return tag; }
+        tag_type get_tag() const { return tag; }
 
         /** Returns the tags of the sequences that this sequence was created
          *  from.
          *  See the definition of parent_tags for more details.
          */
-        std::pair<long, long> get_parent_tags() const { return parent_tags; }
+        std::pair<tag_type, tag_type> get_parent_tags() const { return parent_tags; }
 
         /** Returns the character for a base at a given position.
          */
-        inline char char_at(long n) const
+        inline char char_at(size_type n) const
         {
             return Consts::NUC_BOOL2CHAR(bits_at(n));
         }
@@ -161,7 +161,7 @@ namespace rcombinator
          *  string, the mutation disappears, else a mutation is created.
          *  It can also be specified whether or not the mutation is lethal.
          */
-        void point_mutate(long n, char new_nucleotide, bool is_lethal = false);
+        void point_mutate(size_type n, char new_nucleotide, bool is_lethal = false);
 
         /** Returns the raw nucleotide sequence as a string.
          */
@@ -174,7 +174,14 @@ namespace rcombinator
 
         /** Returns how many mutations are present in this sequence.
          */
-        long num_mutations() const { return mutations.size(); }
+        size_type num_mutations() const { return mutations.size(); }
+
+        /** Returns sequence similarity to initial sequence.
+         */
+        double init_seq_similarity() const
+        {
+            return ((100.0*mutations.size())/this->get_length());
+        }
 
         //@{
         /** Computes pairwise distances between two sequences.
@@ -182,9 +189,9 @@ namespace rcombinator
          *  mismatches (because insertions and deletions are not possible in this
          *  system).
          */
-        friend long operator *(const Sequence& s1, const Sequence& s2);
+        friend size_type operator *(const Sequence& s1, const Sequence& s2);
         /// Pairwise distance between a sequence and a string
-        friend long operator *(const Sequence& s1, std::string s2);
+        friend size_type operator *(const Sequence& s1, std::string s2);
         //@}
     };
 }

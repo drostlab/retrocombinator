@@ -7,10 +7,9 @@
 #ifndef TEST_POINT_MUTATOR_H
 #define TEST_POINT_MUTATOR_H
 
-#include <cassert>
-#include <iostream>
-
+#include "test_header.h"
 #include "point_mutator.h"
+#include <iostream>
 
 namespace rcombinator
 {
@@ -24,9 +23,9 @@ namespace rcombinator
             Sequence s("TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT");
             PointMutator pm("K80", 40, 20, 0.5);
             assert (s.is_active());
-            pm.mutate_sequence(s, 1 );
-            assert (s.num_mutations() == 1);
-            assert (s.as_string() == "TCTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT");
+            pm.mutate_sequence(s, 1);
+            assert (s.num_mutations() == 4);
+            assert (s.as_string() == "TTTCTTTTTTTTTTTTTTTCTTTTTTTTCCTTTTTTTTTT");
             assert (!s.is_active());
             return 0;
         }

@@ -20,7 +20,7 @@ RandMaths::RandMaths()
     return instance;
 }
 
-void RandMaths::set_specific_seed(long seed)
+void RandMaths::set_specific_seed(size_type seed)
 {
     last_seed = seed;
     re.seed(seed);
@@ -34,12 +34,12 @@ void RandMaths::set_random_seed()
 
 bool RandMaths::rand_bit()
 {
-    static std::uniform_int_distribution<int> bit_gen(0, 1);
+    static std::uniform_int_distribution<size_type> bit_gen(0, 1);
     // implicity convert 0 or 1 to bool
     return bit_gen(re);
 }
 
-int RandMaths::rand_int(int low, int high)
+size_type RandMaths::rand_int(size_type low, size_type high)
 {
     if (low >= high)
     {
@@ -47,7 +47,7 @@ int RandMaths::rand_int(int low, int high)
             std::to_string(high);
         throw Exception(msg);
     }
-    using Dist = std::uniform_int_distribution<int>;
+    using Dist = std::uniform_int_distribution<size_type>;
     static Dist uid {};
     return uid(re, Dist::param_type{low,high-1});
 }
@@ -65,18 +65,18 @@ double RandMaths::rand_real(double low /*= 0.0*/, double high /*= 1.0*/)
     return urd(re, Dist::param_type{low, high});
 }
 
-long RandMaths::rand_poisson(double mean)
+size_type RandMaths::rand_poisson(double mean)
 {
     if (mean <= 0)
     {
         throw Exception("mean is <= 0 for Poisson distribution");
     }
-    using Dist = std::poisson_distribution<long>;
+    using Dist = std::poisson_distribution<size_type>;
     static Dist pd {};
     return pd(re, Dist::param_type{mean});
 }
 
-std::set<int> RandMaths::sample_without_replacement(int low, int high, int m)
+std::set<size_type> RandMaths::sample_without_replacement(size_type low, size_type high, size_type m)
 {
     if (low >= high)
     {
@@ -89,7 +89,7 @@ std::set<int> RandMaths::sample_without_replacement(int low, int high, int m)
     {
         throw Exception("sample size is < 0");
     }
-    std::set<int> s;
+    std::set<size_type> s;
     while(s.size() != m)
     {
         s.insert(rand_int(low, high));
@@ -97,14 +97,14 @@ std::set<int> RandMaths::sample_without_replacement(int low, int high, int m)
     return s;
 }
 
-std::pair<int, int> RandMaths::sample_distinct_pair(int low, int high)
+std::pair<size_type, size_type> RandMaths::sample_distinct_pair(size_type low, size_type high)
 {
     if (high - low <= 1)
     {
         throw Exception("Cannot sample distinct values in such a small range");
     }
-    int a = rand_int(low, high);
-    int b = a;
+    size_type a = rand_int(low, high);
+    size_type b = a;
     while (b == a)
     {
         b = rand_int(low, high);
@@ -122,11 +122,11 @@ bool RandMaths::test_event(double event_probability)
     return (rand_real() < event_probability);
 }
 
-int RandMaths::choose_event(const double events[], long num_events)
+size_type RandMaths::choose_event(const double events[], size_type num_events)
 {
     double rand_num = rand_real();
     double running_total = 0;
-    for (long i=0; i<num_events; ++i)
+    for (size_type i=0; i<num_events; ++i)
     {
         running_total += events[i];
         if (running_total >= rand_num) return i;

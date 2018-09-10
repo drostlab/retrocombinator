@@ -12,8 +12,10 @@
 #define CONSTANTS_H
 
 #include "exception.h"
+
 #include <cmath>
 #include <utility>
+
 
 namespace rcombinator
 {
@@ -115,6 +117,19 @@ namespace rcombinator
 
     /// For functions that return NucMatrix and accept time as parameter
     typedef const double (*ReturnsNucMatrixFromDouble(double))[Consts::NUC_COUNT];
+
+    /// For all indices and sizes
+    typedef std::size_t size_type;
+
+    /// For all integer-based codes
+    typedef long tag_type;
+
+    namespace Consts
+    {
+        /** The family tag to represent initial sequences in a simulation.
+         */
+        const tag_type INIT_FAMILY_COUNT = -1;
+    }
 }
 
 #endif //CONSTANTS_H

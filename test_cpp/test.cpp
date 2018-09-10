@@ -1,6 +1,7 @@
 #include <iostream>
 
 #include "test_sequence.h"
+#include "test_family.h"
 #include "test_point_mutation_models.h"
 #include "test_point_mutator.h"
 #include "test_output.h"
@@ -15,6 +16,8 @@ int main()
     cout << "Testing Modules (0 is success)" << endl;
     cout << "Testing Sequence: " << endl;
     cout << test_sequence() << endl;
+    cout << "Testing Family: " << endl;
+    cout << test_family() << endl;
     cout << "Testing Point Mutation Models: " << endl;
     cout << test_point_mutation_models() << endl;
     cout << "Testing Point Mutator: " << endl;

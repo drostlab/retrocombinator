@@ -9,11 +9,12 @@
 #ifndef RAND_MATHS_H
 #define RAND_MATHS_H
 
+#include "constants.h"
+
 #include <chrono>
 #include <random>
 #include <set>
 
-#include "exception.h"
 
 namespace rcombinator
 {
@@ -30,7 +31,7 @@ namespace rcombinator
          *  This is seeded during initialisation of the class, and once set,
          *  its RNG is shared by all other parts of the code that require it.
          */
-        std::default_random_engine re;
+        std::mt19937 re;
 
         /** Last seed for the random engine, either by the user or by the
          *  system.
@@ -38,7 +39,7 @@ namespace rcombinator
          *  engine at all points as once random number generation begins, this
          *  value is not touched.
          */
-        long double last_seed;
+        size_type last_seed;
 
         /** Constructor, which seeds the random engine with system time.
          *  Is private because we want this to be a singleton.
@@ -69,7 +70,7 @@ namespace rcombinator
         /** Uses a user-specified seed for RNG.
          *  This can be undone by calling \p set_random_seed()
          */
-        void set_specific_seed(long seed);
+        void set_specific_seed(size_type seed);
 
         /** Uses system time to seed the RNG.
          *  This can be undone by calling \p set_specific_seed()
@@ -79,7 +80,7 @@ namespace rcombinator
         /** Gets the last set seed.
          *  Look at the definition of last_seed for more details.
          */
-        long get_last_seed() { return last_seed; }
+        size_type get_last_seed() { return last_seed; }
 
         /** Generates a random true/false value.
          */
@@ -88,7 +89,7 @@ namespace rcombinator
         /** Generates a random integer within a range.
          *  The bounds are [inclusive_low, exclusive_high).
          */
-        int rand_int(int low, int high);
+        size_type rand_int(size_type low, size_type high);
 
         /** Generates a random real number within a range.
          *  The bounds are [inclusive_low, exclusive high).
@@ -98,18 +99,21 @@ namespace rcombinator
         /** Chooses a number sampled from a Poisson distribution.
          *  Takes the mean as a parameter.
          */
-        long rand_poisson(double mean);
+        size_type rand_poisson(double mean);
 
         /** Samples \a m integers within a range, without replacement.
          *  The bounds are [inclusive_low, exclusive high).
          *  The integers are returned in ascending order.
          */
-        std::set<int> sample_without_replacement(int low, int high, int m);
+        std::set<size_type> sample_without_replacement(size_type low,
+                                                       size_type high,
+                                                       size_type m);
 
         /** Samples a non-diagonal pair (2 distinct values) within a range.
          *  The bounds for each value are [inclusive_low, exclusive high).
          */
-        std::pair<int, int> sample_distinct_pair(int low, int high);
+        std::pair<size_type, size_type> sample_distinct_pair(size_type low,
+                                                             size_type high);
 
         /** Tests whether or not an event happened.
          *  Takes the probability of an event as paramter, and then compares it to a
@@ -123,7 +127,7 @@ namespace rcombinator
          *
          *  This does not check if the array is valid.
          */
-        int choose_event(const double events[], long num_events);
+        size_type choose_event(const double events[], size_type num_events);
     };
 
     // Global random number generator
