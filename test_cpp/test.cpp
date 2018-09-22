@@ -1,5 +1,6 @@
 #include <iostream>
 
+#include "test_utilities.h"
 #include "test_sequence.h"
 #include "test_family.h"
 #include "test_point_mutation_models.h"
@@ -14,6 +15,8 @@ using namespace rcombinator;
 int main()
 {
     cout << "Testing Modules (0 is success)" << endl;
+    cout << "Testing Utilities: " << endl;
+    cout << test_utilities() << endl;
     cout << "Testing Sequence: " << endl;
     cout << test_sequence() << endl;
     cout << "Testing Family: " << endl;

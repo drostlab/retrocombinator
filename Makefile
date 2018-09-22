@@ -44,6 +44,7 @@ _HEADERS = exception.h					\
 HEADERS := $(addprefix $(SRC_DIR), $(_HEADERS))
 
 _SRCS = rand_maths.o				\
+		utilities.o					\
 		sequence.o					\
 		family.o					\
 		point_mutation_models.o		\
@@ -59,6 +60,7 @@ OBJS := $(addprefix $(OBJ_DIR), $(_OBJS))
 
 TEST_HEADERS = test_header.h					\
 			   test_sequence.h					\
+			   test_utilities.h					\
 			   test_family.h					\
 			   test_point_mutation_models.h     \
 			   test_point_mutator.h             \

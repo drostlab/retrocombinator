@@ -14,8 +14,9 @@
 #include "exception.h"
 
 #include <cmath>
+#include <set>
 #include <utility>
-
+#include <vector>
 
 namespace rcombinator
 {
@@ -120,6 +121,15 @@ namespace rcombinator
 
     /// For all indices and sizes
     typedef std::size_t size_type;
+
+    //@{
+    /** For clustering algorithms.
+     */
+    /// For a set of indices
+    typedef std::set<size_type> cluster_type;
+    /// For a distance matrix between data points
+    typedef std::vector<std::vector<size_type>> dist_type;
+    //@}
 
     /// For all integer-based codes
     typedef long tag_type;

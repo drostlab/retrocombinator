@@ -10,8 +10,8 @@
 
 #include <algorithm>
 #include <cmath>
-#include <vector>
 
+#include "constants.h"
 #include "exception.h"
 
 namespace rcombinator
@@ -28,6 +28,31 @@ namespace rcombinator
         {
             return ((lb <= test) && (test < ub));
         }
+
+        /** Breaks a set into two clusters.
+         *  \param n the number of data points
+         *  \param dist the nXn distance matrix between the data points
+         *  Takes a distance matrix D, where D(i, j) is the distance between i
+         *  and j, with D(i, i) being 0 for all i.
+         *  Returns a vector of indices that belong to the first cluster (the
+         *  second cluster corresponds to everything else).
+         *
+         *  Algorithm:
+         *      Start with n clusters
+         *          Compute the cluster distance between all pairs of clusters
+         *          Where cluster distance is:
+         *              average distance of points from one cluster to the other
+         *          Pick the two closest clusters, and merge them
+         */
+        cluster_type cluster(const dist_type& dist, size_type n);
+
+
+        /** Computes the cluster distance between two clusters.
+         *  Equal to the average of all pairs (a1, a2) in C1 X C2.
+         */
+        double cluster_dist(const dist_type& dist, size_type n,
+                            const cluster_type& C1,
+                            const cluster_type& C2);
     }
 }
 
