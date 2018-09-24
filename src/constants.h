@@ -128,7 +128,7 @@ namespace rcombinator
     /// For a set of indices
     typedef std::set<size_type> cluster_type;
     /// For a distance matrix between data points
-    typedef std::vector<std::vector<size_type>> dist_type;
+    typedef std::vector<std::vector<double>> dist_type;
     //@}
 
     /// For all integer-based codes
