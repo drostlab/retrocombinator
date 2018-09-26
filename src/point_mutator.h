@@ -35,8 +35,8 @@ namespace rcombinator
         /** Constructor that chooses a point mutation model and the
          *  probabilities for lethal mutations at each position in the sequence
          */
-        PointMutator(std::string model, long n,
-                     long num_sensitive_posns = 0,
+        PointMutator(std::string model, size_type n,
+                     size_type num_sensitive_posns = 0,
                      double inactive_probability = 0.0);
 
         /// Destructor that frees up memory

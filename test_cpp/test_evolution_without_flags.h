@@ -44,7 +44,7 @@ namespace rcombinator
 
             PointMutator pm("K80", 50);
             Output output("test_obj/test_without_flags.out", 60,
-                          30, 6, 2, 60);
+                          60, 30, 10, 6);
             output.set_init_seq(S0.as_string());
             e.evolve(output, pm, base_strings, 1);
             assert (files_same("test_obj/test_without_flags.out",

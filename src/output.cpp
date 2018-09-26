@@ -4,16 +4,16 @@
 using namespace rcombinator;
 using namespace std;
 
-Output::Output(const std::string& filename_out, long final_time,
-               long num_out_init,
-               long num_out_pair,
-               long num_out_seqs,
-               long num_out_tags):
+Output::Output(const std::string& filename_out, size_type final_time,
+               size_type num_out_tags,
+               size_type num_out_init,
+               size_type num_out_seqs,
+               size_type num_out_pair):
     final_time(final_time),
+    to_output_tags(floor(double(final_time)/num_out_tags)),
     to_output_init(floor(double(final_time)/num_out_init)),
-    to_output_pair(floor(double(final_time)/num_out_pair)),
     to_output_seqs(floor(double(final_time)/num_out_seqs)),
-    to_output_tags(floor(double(final_time)/num_out_tags))
+    to_output_pair(floor(double(final_time)/num_out_pair))
 {
     fout.open(filename_out, std::fstream::out | std::fstream::trunc);
 }
@@ -113,38 +113,37 @@ void Output::print_seq_tags(const seqs_type& seqs)
     fout << endl;
 }
 
-void Output::print(long timestep, double real_time,
+void Output::print(size_type timestep, double real_time,
                    const std::list<Family>& families)
 {
-    if (timestep % to_output_tags == 0 ||
-        timestep % to_output_init == 0 ||
-        timestep % to_output_pair == 0 ||
-        timestep % to_output_seqs == 0 ||
-        timestep == final_time)
+    bool p_tags = (timestep % to_output_tags || timestep == final_time);
+    bool p_init = (timestep % to_output_init || timestep == final_time);
+    bool p_seqs = (timestep % to_output_seqs || timestep == final_time);
+    bool p_pair = (timestep % to_output_pair || timestep == final_time);
+
+    if (p_tags || p_init || p_seqs || p_pair)
     {
+        // always print tags if we have to print something else
+        p_tags = true;
+        // print distance to initial sequence if we are printing raw sequences
+        if (p_seqs) { p_init = true; }
+
+        // for this timestep
         fout << "@" << endl;
         fout << timestep << " " << real_time << endl;
+        fout << p_tags << " " << p_init << " " << p_seqs << " " << p_pair
+             << endl;
 
         fout << "F" << endl;
         fout << families.size() << endl;
         for (const auto& family : families)
         {
             fout << family.get_tag() << " " << family.get_parent_tag() << endl;
-            print_seq_tags(family.seqs);
-
-            if (timestep % to_output_init == 0 || timestep == final_time)
-            {
-                print_init(family.seqs);
-                if (timestep % to_output_seqs == 0 || timestep == final_time)
-                {
-                    print_seqs(family.seqs);
-                }
-            }
+            if (p_tags) print_seq_tags(family.seqs);
+            if (p_init) print_init(family.seqs);
+            if (p_seqs) print_seqs(family.seqs);
         }
-        if (timestep % to_output_pair == 0 || timestep == final_time)
-        {
-            print_pair(families);
-        }
+        if (p_pair) print_pair(families);
     }
 }
 

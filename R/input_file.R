@@ -25,13 +25,23 @@ input_data <- function(filename)
     {
       break
     }
-
+    if (next_line[1] == "0") # header info
+    {
+      next
+    }
     if (next_line[1] == "@")
     {
       # First, get the time
       time_line <- as.numeric(extract_line(con))
       t <- time_line[1]
       real_time <- time_line[2]
+
+      # Get which things are going to be output
+      which_output_line <- as.numeric(extract_line(con))
+      to_tags <- which_output_line[1]
+      to_init <- which_output_line[2]
+      to_seqs <- which_output_line[3]
+      to_pair <- which_output_line[4]
 
       family_line <- extract_line(con)
       stopifnot(family_line[1] == "F")
@@ -40,6 +50,7 @@ input_data <- function(filename)
 
       # To store the tags in memory
       fam_tags <- integer(num_families)
+      fam_par_tags <- integer(num_families)
       seq_tags <- list()
 
       # For each family, parse all the data
@@ -47,12 +58,13 @@ input_data <- function(filename)
       {
         family_tag_line <- extract_line(con)
         fam_tags[fam_i] <- as.numeric(family_tag_line)[1]
+        fam_par_tags[fam_i] <- as.numeric(family_tag_line)[2]
 
-        seq_line <- extract_line(con)
+        tags_line <- extract_line(con)
 
-        stopifnot(seq_line[1] == "T")
-        seq_line <- extract_line(con)
-        num_seqs <- seq_line[1]
+        stopifnot(tags_line[1] == "T")
+        tags_line <- extract_line(con)
+        num_seqs <- tags_line[1]
         all_seqs <- extract_line(con)
 
         # Extract sequence tag data
@@ -81,79 +93,87 @@ input_data <- function(filename)
           }
           is_active[seq_i] <- stringr::str_detect(all_seqs[seq_i], "\\*")
         }
-      }
-    }
 
-    else if (next_line[1] == "I")
-    {
-      # Extract distance to initial sequence
-      init_line <- extract_line(con)
-      init_dists <- as.numeric(init_line)
-      for (seq_i in 1:num_seqs)
-      {
-        row <- list(step=t, real_time=real_time,
-                    seq=seq_tags[[fam_i]][seq_i], fam=fam_tags[fam_i],
-                    p1=p1[seq_i], p2=p2[seq_i], is_active=is_active[seq_i],
-                    init_dist=init_dists[seq_i], raw=NA)
-        data$init <- rbind(data$init, row)
-      }
-    }
-
-    else if(next_line[1] == "S")
-    {
-      # Extract raw sequence
-      for (seq_i in 1:num_seqs)
-      {
-        raw_seq <- extract_line(con)
-        found <- which(data$init$step == t & data$init$seq==seq_tags[[fam_i]][seq_i],
-                       arr.ind = TRUE)
-        data$init[found, ]$raw  <- raw_seq
-      }
-    }
-
-    else if (next_line[1] == "P")
-    {
-      # Pairwise distances
-      pairs <- as.numeric(extract_line(con))
-      count <- 1
-
-      f1 <- 1 # Family F1
-      while (f1 <= length(fam_tags))
-      {
-        s1 <- 1 # Sequence S1
-        while (s1 <= length(seq_tags[[f1]]))
+        if (to_init)
         {
-          s2 <- s1 + 1 # Sequence S2 in F1
-          while (s2 <= length(seq_tags[[f1]]))
+          init_line <- extract_line(con)
+          stopifnot(init_line[1] == "I")
+          # Extract distance to initial sequence
+          init_line <- extract_line(con)
+          init_dists <- as.numeric(init_line)
+          for (seq_i in 1:num_seqs)
           {
             row <- list(step=t, real_time=real_time,
-                        seq1=seq_tags[[f1]][s1], seq2=seq_tags[[f1]][s2],
-                        pair=pairs[count])
-            count <- count + 1
-            data$pair <- rbind(data$pair, row)
-            s2  <- s2 + 1
+                        seq=seq_tags[[fam_i]][seq_i],
+                        fam=fam_tags[fam_i], fam_par=fam_par_tags[fam_i],
+                        p1=p1[seq_i], p2=p2[seq_i], is_active=is_active[seq_i],
+                        init_dist=init_dists[seq_i], raw=NA)
+            data$init <- rbind(data$init, row)
           }
+        }
 
-          f2 <- f1 + 1 # Family F2
-          while (f2 <= length(fam_tags))
+        if (to_seqs)
+        {
+          seqs_line <- extract_line(con)
+          stopifnot(seqs_line[1] == "S")
+          # Extract raw sequence
+          for (seq_i in 1:num_seqs)
           {
-            s2 <- 1 # Sequence S2 in F2
-            while (s2 <= length(seq_tags[[f2]]))
+            raw_seq <- extract_line(con)
+            found <- which(data$init$step == t & data$init$seq==seq_tags[[fam_i]][seq_i],
+                           arr.ind = TRUE)
+            data$init[found, ]$raw  <- raw_seq
+          }
+        }
+      } # End 'for each family'
+
+      if (to_pair)
+      {
+        pairs_line <- extract_line(con)
+        stopifnot(pairs_line[1] == "P")
+        # Pairwise distances
+        pairs <- as.numeric(extract_line(con))
+        count <- 1
+
+        f1 <- 1 # Family F1
+        while (f1 <= length(fam_tags))
+        {
+          s1 <- 1 # Sequence S1
+          while (s1 <= length(seq_tags[[f1]]))
+          {
+            s2 <- s1 + 1 # Sequence S2 in F1
+            while (s2 <= length(seq_tags[[f1]]))
             {
               row <- list(step=t, real_time=real_time,
-                          seq1=seq_tags[[f1]][s1], seq2=seq_tags[[f2]][s2],
+                          seq1=seq_tags[[f1]][s1], seq2=seq_tags[[f1]][s2],
                           pair=pairs[count])
               count <- count + 1
               data$pair <- rbind(data$pair, row)
-              s2 <- s2 + 1
+              s2  <- s2 + 1
             }
-            f2 <- f2 + 1
+
+            f2 <- f1 + 1 # Family F2
+            while (f2 <= length(fam_tags))
+            {
+              s2 <- 1 # Sequence S2 in F2
+              while (s2 <= length(seq_tags[[f2]]))
+              {
+                row <- list(step=t, real_time=real_time,
+                            seq1=seq_tags[[f1]][s1], seq2=seq_tags[[f2]][s2],
+                            pair=pairs[count])
+                count <- count + 1
+                data$pair <- rbind(data$pair, row)
+                s2 <- s2 + 1
+              }
+              f2 <- f2 + 1
+            }
+            s1 <- s1 + 1
           }
-          s1 <- s1 + 1
-        }
-        f1 <- f1 + 1
-      } # end family 1
-    }
+          f1 <- f1 + 1
+        } # end <for family F1>
+
+      } # end <extract pair data>
+    } # end <for this timestamp>
     else
     {
         stop(paste("Unknown letter in file", next_line[2]))

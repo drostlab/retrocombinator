@@ -21,7 +21,7 @@ namespace rcombinator
             Family::renumber_families(0);
 
             Output o1("test_obj/test_output.out", 60,
-                      30, 6, 2, 60);
+                      60, 30, 10, 6);
             o1.set_init_seq("TTTT");
 
             // Test basic frequency of outputting and header
@@ -37,7 +37,7 @@ namespace rcombinator
             fs.back().seqs.emplace_back("AAAA");
 
             // Test each of the individual print functions
-            for (long t = 0; t <= 60; ++t)
+            for (size_type t = 0; t <= 60; ++t)
             {
                 o1.print(t, t, fs);
             }

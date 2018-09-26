@@ -5,8 +5,8 @@
 
 using namespace rcombinator;
 
-PointMutator::PointMutator(std::string model, long n,
-                           long num_sensitive_posns, double inactive_probability)
+PointMutator::PointMutator(std::string model, size_type n,
+                           size_type num_sensitive_posns, double inactive_probability)
 {
     if (model == "GTR")
     {
@@ -54,8 +54,8 @@ void PointMutator::mutate_sequence(Sequence& s, double timestep) const
 {
     auto tr_mat = point_mutation_model->get_transition_matrix(timestep);
 
-    long len = s.get_length();
-    for (long i=0; i<len; ++i)
+    size_type len = s.get_length();
+    for (size_type i=0; i<len; ++i)
     {
         int mutation_index = RNG.choose_event(tr_mat[Consts::NUC_CHAR2INT(s.char_at(i))],
                                               Consts::NUC_COUNT);

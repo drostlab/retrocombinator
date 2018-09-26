@@ -24,11 +24,11 @@ namespace rcombinator
          *  \p num_out_X = \a n means that the <X> output will occur \a n
          *  times. Look at the definitions of print_<X> to learn what <X> is.
          */
-        Output(const std::string& filename_out, long final_time,
-               long num_out_init,
-               long num_out_pair,
-               long num_out_seqs,
-               long num_out_tags);
+        Output(const std::string& filename_out, size_type final_time,
+               size_type num_out_tags,
+               size_type num_out_init,
+               size_type num_out_seqs,
+               size_type num_out_pair);
 
         /** Destructor to close the file and clean-up.
          */
@@ -45,7 +45,7 @@ namespace rcombinator
 
         /** Prints the required information during the simulation.
          */
-        void print(long timestep, double real_time,
+        void print(size_type timestep, double real_time,
                    const std::list<Family>& seqs);
 
     private:
@@ -56,30 +56,30 @@ namespace rcombinator
          *  Make sure we output everything we can at this timestep, regardless
          *  of what we explicity said should be output.
          */
-        const long final_time;
+        const size_type final_time;
 
         //@{
-        /** Only output X if \p to_output_X is a multiple of the current
-         *  timestep in the simulation.
-         *  Look at the definition of print_<X> to learn what <X> is.
+        /** When to print out what data.
+         *  * Only output X if \p to_output_X is a multiple of the current
+         *    timestep in the simulation
+         *  * Look at the definition of print_<X> to learn what <X> is.
          */
-        const long to_output_init;
-        const long to_output_pair;
-        const long to_output_seqs;
-        const long to_output_tags;
+        const size_type to_output_tags;
+        const size_type to_output_init;
+        const size_type to_output_seqs;
+        const size_type to_output_pair;
         //@}
 
         //@{
         /** Helper print functions.
-         *  init: display distance to inital sequence
+         *  tags: the tags of all sequences*
+         *  init: display distance to inital sequence**
+         *  seqs: display raw sequences
          *  pair: display pairwise distances between the sequences
-         *  seqs: display raw sequences*
-         *  seq_tags: the tags within a family**
          *
-         *  *seqs are only output if init are output
-         *
-         *  **Note that if any print function needs to be performed, tags are
-         *  always printed automatically takes place alongside it.
+         *  NOTES:
+         *  * tags is always printed if something else is to be printed
+         *  ** init is always printed if seqs is to be printed
          */
 
         /// Prints distance to initial sequence family-wise, in order
