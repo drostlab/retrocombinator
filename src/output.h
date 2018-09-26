@@ -8,7 +8,9 @@
 #define OUTPUT_H
 
 #include "family.h"
+
 #include <fstream>
+#include <list>
 
 namespace rcombinator
 {
@@ -44,7 +46,7 @@ namespace rcombinator
         /** Prints the required information during the simulation.
          */
         void print(long timestep, double real_time,
-                   const std::vector<Family>& seqs);
+                   const std::list<Family>& seqs);
 
     private:
         /// A stream for the output
@@ -93,7 +95,7 @@ namespace rcombinator
          *              for each seq S2 in F2:
          *                  print S1*S2
          */
-        void print_pair(const std::vector<Family>& families);
+        void print_pair(const std::list<Family>& families);
 
         /// Prints raw sequences family-wise, in order
         void print_seqs(const seqs_type& seqs);

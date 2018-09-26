@@ -70,7 +70,7 @@ void EvolutionWithoutFlags::calculate_copy_number_tree(size_type num_init_seq)
 void EvolutionWithoutFlags::burst_seqs(const size_type t, const double recomb_mean)
 {
     // this assumes there is only family
-    auto& seqs = families[0].seqs;
+    auto& seqs = families.front().seqs;
 
     // STEP 1) store the deleted sequences for later recombination
     // NOTE: we can only start deleting sequences after we have done this

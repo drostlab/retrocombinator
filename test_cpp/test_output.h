@@ -27,13 +27,14 @@ namespace rcombinator
             // Test basic frequency of outputting and header
             o1.print_header();
 
-            std::vector<Family> fs;
+            std::list<Family> fs;
             fs.emplace_back(Consts::INIT_FAMILY_COUNT);
-            fs[0].seqs.emplace_back(4);
-            fs[0].seqs.emplace_back("TTTT");
-            fs[0].seqs.emplace_back(fs[0].seqs[0], fs[0].seqs[1], 1);
-            fs.emplace_back(fs[0].get_tag());
-            fs[1].seqs.emplace_back("AAAA");
+            fs.front().seqs.emplace_back(4);
+            fs.front().seqs.emplace_back("TTTT");
+            fs.front().seqs.emplace_back(fs.front().seqs[0],
+                                         fs.front().seqs[1], 1);
+            fs.emplace_back(fs.front().get_tag());
+            fs.back().seqs.emplace_back("AAAA");
 
             // Test each of the individual print functions
             for (long t = 0; t <= 60; ++t)

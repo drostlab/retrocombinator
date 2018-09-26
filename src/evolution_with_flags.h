@@ -30,23 +30,40 @@ namespace rcombinator
          */
         void kill_sequences(size_type num_active_copies,
                             size_type num_total_copies);
+        /** Removes empty families.
+         */
+        void remove_dead_families();
+
+        /** To split any large family into two families that can no longer
+         *  recombine with each other.
+         */
+        void split_families();
+
+        //@{
+        /** Parameters for deciding when to split a family into two.
+         *  If \p fam_proportion of the sequence similarity matrix goes
+         *  below \p fam_percentage then split the family into two.
+         */
+        double fam_proportion;
+        double fam_percentage;
+        //@}
 
     public:
+        /** Inherited constructor.
+         *  \p max_total_copies is the total number of active and inactive
+         *  sequences that we allow in our simulation.
+         */
         EvolutionWithFlags(size_type num_jumps, double timestep,
                   double burst_probability, double burst_mean,
                   size_type max_active_copies, size_type max_total_copies);
 
         /// To kill sequences that have diverged too much
-        void set_selection_threshold(double percentage)
-        {
-            selection_threshold = percentage;
-        }
+        void set_selection_threshold(double percentage);
 
         /** To prevent distant sequences from recombining.
          *  If \p proportion of the sequence similarity matrix goes below \p
          *  percentage then split the family into two.
          */
-        //TODO: implement this
         void use_families_at(double proportion, double percentage);
     };
 }

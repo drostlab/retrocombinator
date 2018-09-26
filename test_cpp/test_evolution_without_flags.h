@@ -10,8 +10,6 @@
 #include "test_header.h"
 #include "evolution_without_flags.h"
 
-#include <fstream>
-
 namespace rcombinator
 {
     int test_evolution_without_flags()

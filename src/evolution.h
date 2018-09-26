@@ -2,6 +2,7 @@
 #define EVOLUTION_H
 
 #include "family.h"
+#include <list>
 
 namespace rcombinator
 {
@@ -53,8 +54,10 @@ namespace rcombinator
 
         /** The actual values of the sequences during the simulation.
          *  All sequences in family \a i are present in families[i].
+         *  NOTE: Needs to be list so that iterators are valid after
+         *  insertion/deletion of families.
          */
-        std::vector<Family> families;
+        std::list<Family> families;
         /// The overall number of sequences across all families
         size_type total_num_sequences;
 

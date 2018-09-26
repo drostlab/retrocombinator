@@ -37,6 +37,12 @@ namespace rcombinator
             assert (fs[1].get_tag() == 1);
             assert(fs[1].seqs[0].get_tag() == 3);
 
+            fs.emplace_back(fs[0].get_tag());
+            fs[0].split();
+            assert (fs[2].get_tag() == 2);
+            assert (fs[0].get_tag() == 3);
+            assert (fs[2].get_parent_tag() == 0);
+            assert (fs[0].get_parent_tag() == 0);
             return 0;
         }
         catch (Exception e)

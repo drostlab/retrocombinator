@@ -22,7 +22,7 @@ void Evolution::evolve(Output& output, PointMutator& pm,
 {
     size_type real_time = 0;
 
-    families[0].seqs.assign(init_seqs.begin(), init_seqs.end());
+    families.front().seqs.assign(init_seqs.begin(), init_seqs.end());
 
     output.print(0, 0, families);
     for (size_type t = 1; t <= num_jumps; ++t)

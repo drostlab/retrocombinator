@@ -18,3 +18,12 @@ Family::Family(tag_type parent_tag):
     ++Family::global_family_count;
     this->tag = Family::global_family_count;
 }
+
+void Family::split()
+{
+    // Make sure its parent tag is its current tag
+    this->parent_tag = this->tag;
+    // Update the current tag
+    ++Family::global_family_count;
+    this->tag = Family::global_family_count;
+}

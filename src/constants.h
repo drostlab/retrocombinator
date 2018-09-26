@@ -129,6 +129,7 @@ namespace rcombinator
     typedef std::set<size_type> cluster_type;
     /// For a distance matrix between data points
     typedef std::vector<std::vector<double>> dist_type;
+    typedef std::vector<double> dist_row_type;
     //@}
 
     /// For all integer-based codes

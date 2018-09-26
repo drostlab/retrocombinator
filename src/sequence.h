@@ -180,7 +180,7 @@ namespace rcombinator
          */
         double init_seq_similarity() const
         {
-            return ((100.0*mutations.size())/this->get_length());
+            return (100.0-(100.0*mutations.size())/this->get_length());
         }
 
         //@{
@@ -189,9 +189,18 @@ namespace rcombinator
          *  mismatches (because insertions and deletions are not possible in this
          *  system).
          */
+
+        /** Pairwise distances.
+         *  Between two sequences or between a sequence and a string.
+         */
         friend size_type operator *(const Sequence& s1, const Sequence& s2);
-        /// Pairwise distance between a sequence and a string
         friend size_type operator *(const Sequence& s1, std::string s2);
+
+        /** Pairwise sequence dissimilarity (as a percentage).
+         *  Similarity is 100-dissimilarity.
+         */
+        friend double operator %(const Sequence& s1, const Sequence& s2);
+        friend double operator %(const Sequence& s1, std::string s2);
         //@}
     };
 }

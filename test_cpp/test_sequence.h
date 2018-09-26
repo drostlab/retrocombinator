@@ -45,6 +45,8 @@ namespace rcombinator
         S2.point_mutate(8, 'G', true);
         assert (S2.as_string() == "TTCTATTTGTTT");
         assert (S2.num_mutations() == 3);
+        // Testing sequence similarity as a percentage
+        assert (S2.init_seq_similarity() == 75);
         assert (!S2.is_active());
 
         // Testing diff operator
@@ -52,7 +54,9 @@ namespace rcombinator
         Sequence S3(seq_string3);
 
         assert (S2 * S3 == 3);
+        assert (S2 % S3 == 25);
         assert (S2 * "TTTTTTTTTTTT" == 3);
+        assert (S2 % "TTTTTTTTTTTT" == 25);
 
         // Testing recombination
         std::string seq_string4("AAAAAAAAAAAA");

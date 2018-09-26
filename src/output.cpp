@@ -47,7 +47,7 @@ void Output::print_init(const seqs_type& seqs)
     fout << endl;
 }
 
-void Output::print_pair(const std::vector<Family>& families)
+void Output::print_pair(const std::list<Family>& families)
 {
     fout << "P" << endl;
     for (auto f1 = families.begin(); f1 != families.end(); ++f1)
@@ -114,7 +114,7 @@ void Output::print_seq_tags(const seqs_type& seqs)
 }
 
 void Output::print(long timestep, double real_time,
-                   const std::vector<Family>& families)
+                   const std::list<Family>& families)
 {
     if (timestep % to_output_tags == 0 ||
         timestep % to_output_init == 0 ||

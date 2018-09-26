@@ -51,6 +51,17 @@ namespace rcombinator
         }
         return (differences + extra);
     }
+
+    double operator %(const Sequence& s1, const Sequence& s2)
+    {
+        auto min_size = std::min(s1.get_length(), size_type(s2.get_length()));
+        return (100*double(s1*s2))/double(min_size);
+    }
+    double operator %(const Sequence& s1, std::string s2)
+    {
+        auto min_size = std::min(s1.get_length(), size_type(s2.size()));
+        return (100*double(s1*s2))/double(min_size);
+    }
 }
 
 using namespace rcombinator;
