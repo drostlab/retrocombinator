@@ -57,7 +57,7 @@ namespace rcombinator
         /// Gets the tag of this family
         tag_type get_tag() const { return tag; }
         /// Gets the tag of the parent family
-        tag_type get_parent_tag() { return parent_tag; }
+        tag_type get_parent_tag() const { return parent_tag; }
 
         /** When this family has split into subfamilies, update the tags.
          *  Give it a new tag.

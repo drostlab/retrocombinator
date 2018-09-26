@@ -129,7 +129,7 @@ void Output::print(long timestep, double real_time,
         fout << families.size() << endl;
         for (const auto& family : families)
         {
-            fout << family.get_tag() << endl;
+            fout << family.get_tag() << " " << family.get_parent_tag() << endl;
             print_seq_tags(family.seqs);
 
             if (timestep % to_output_init == 0 || timestep == final_time)
