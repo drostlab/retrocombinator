@@ -14,6 +14,13 @@
 
 namespace rcombinator
 {
+    /** Outputs the results of the simulation to a file.
+     *  Can output the following things at specified timesteps:
+     *  * The tags of the sequences and the families.
+     *  * The raw sequences themselves.
+     *  * The distance of each sequence to the inital sequence.
+     *  * The pairwise distances between sequences.
+     */
     class Output
     {
     public:
@@ -21,8 +28,8 @@ namespace rcombinator
         typedef Family::seqs_type seqs_type;
 
         /** Constructor, to specify how often we write to file.
-         *  \p num_out_X = \a n means that the <X> output will occur \a n
-         *  times. Look at the definitions of print_<X> to learn what <X> is.
+         *  \p num_out_X = \a n means that the 'X' output will occur \a n
+         *  times. Look at the definitions of print_'X' to learn what 'X' is.
          */
         Output(const std::string& filename_out, size_type final_time,
                size_type num_out_tags,
@@ -62,7 +69,7 @@ namespace rcombinator
         /** When to print out what data.
          *  * Only output X if \p to_output_X is a multiple of the current
          *    timestep in the simulation
-         *  * Look at the definition of print_<X> to learn what <X> is.
+         *  * Look at the definition of print_'X' to learn what 'X' is.
          */
         const size_type to_output_tags;
         const size_type to_output_init;

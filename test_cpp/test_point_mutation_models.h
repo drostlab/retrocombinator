@@ -15,6 +15,9 @@
 
 namespace rcombinator
 {
+    /** Checks if two probability matrices are equal.
+     *  Since this compares floating point values, it uses some tolerance.
+     */
     bool matrix_equal(const double mat1[][Consts::NUC_COUNT],
                              const double mat2[][Consts::NUC_COUNT])
     {
@@ -31,6 +34,8 @@ namespace rcombinator
         return true;
     }
 
+    /** Prints out a probability matrix neatly.
+     */
     void print_matrix(const double mat[][Consts::NUC_COUNT])
     {
         std::cout.precision(std::numeric_limits<double>::max_digits10);
@@ -45,6 +50,7 @@ namespace rcombinator
         std::cout << std::endl;
     }
 
+    /// Tests all the PointMutationModels we have
     int test_point_mutation_models()
     {
         const double (*mat)[Consts::NUC_COUNT];

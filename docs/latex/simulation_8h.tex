@@ -1,0 +1,75 @@
+\hypertarget{simulation_8h}{}\section{src/simulation.h File Reference}
+\label{simulation_8h}\index{src/simulation.\+h@{src/simulation.\+h}}
+{\ttfamily \#include \char`\"{}evolution\+\_\+without\+\_\+flags.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}evolution\+\_\+with\+\_\+flags.\+h\char`\"{}}\newline
+Include dependency graph for simulation.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{simulation_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{simulation_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries rcombinator\+::simulate\+\_\+without\+\_\+flags} (std\+::vector$<$ std\+::string $>$ init\+\_\+seqs, size\+\_\+type init\+\_\+seq\+\_\+index, std\+::string point\+\_\+mutation\+\_\+model, size\+\_\+type num\+\_\+jumps, double timestep, double burst\+\_\+probability, double burst\+\_\+mean, size\+\_\+type max\+\_\+active\+\_\+copies, double recomb\+\_\+mean, std\+::string file\+\_\+out, size\+\_\+type num\+\_\+out\+\_\+tags, size\+\_\+type num\+\_\+out\+\_\+init, size\+\_\+type num\+\_\+out\+\_\+seqs, size\+\_\+type num\+\_\+out\+\_\+pair, bool to\+\_\+randomise, bool to\+\_\+seed, size\+\_\+type seed, size\+\_\+type sequence\+\_\+numbering, size\+\_\+type family\+\_\+numbering)
+\begin{DoxyCompactList}\small\item\em Sets up and runs a simulation without flags. \end{DoxyCompactList}\item 
+void {\bfseries rcombinator\+::simulate\+\_\+with\+\_\+flags} (std\+::vector$<$ std\+::string $>$ init\+\_\+seqs, size\+\_\+type init\+\_\+seq\+\_\+index, std\+::string point\+\_\+mutation\+\_\+model, size\+\_\+type num\+\_\+sensitive\+\_\+posns, double inactive\+\_\+probability, size\+\_\+type num\+\_\+jumps, double timestep, double burst\+\_\+probability, double burst\+\_\+mean, size\+\_\+type max\+\_\+active\+\_\+copies, size\+\_\+type max\+\_\+total\+\_\+copies, double recomb\+\_\+mean, double selection\+\_\+threshold, double fam\+\_\+proportion, double fam\+\_\+percentage, std\+::string file\+\_\+out, size\+\_\+type num\+\_\+out\+\_\+tags, size\+\_\+type num\+\_\+out\+\_\+init, size\+\_\+type num\+\_\+out\+\_\+seqs, size\+\_\+type num\+\_\+out\+\_\+pair, bool to\+\_\+randomise, bool to\+\_\+seed, size\+\_\+type seed, size\+\_\+type sequence\+\_\+numbering, size\+\_\+type family\+\_\+numbering)
+\begin{DoxyCompactList}\small\item\em Sets up and runs a simulation with flags. \end{DoxyCompactList}\item 
+void {\bfseries rcombinator\+::simulate\+\_\+without\+\_\+flags} (size\+\_\+type num\+\_\+seq, size\+\_\+type seq\+\_\+length, std\+::string point\+\_\+mutation\+\_\+model, size\+\_\+type num\+\_\+jumps, double timestep, double burst\+\_\+probability, double burst\+\_\+mean, size\+\_\+type max\+\_\+active\+\_\+copies, double recomb\+\_\+mean, std\+::string file\+\_\+out, size\+\_\+type num\+\_\+out\+\_\+tags, size\+\_\+type num\+\_\+out\+\_\+init, size\+\_\+type num\+\_\+out\+\_\+seqs, size\+\_\+type num\+\_\+out\+\_\+pair, bool to\+\_\+randomise, bool to\+\_\+seed, size\+\_\+type seed, size\+\_\+type sequence\+\_\+numbering, size\+\_\+type family\+\_\+numbering)
+\begin{DoxyCompactList}\small\item\em Sets up and runs a simulation without flags. \end{DoxyCompactList}\item 
+void {\bfseries rcombinator\+::simulate\+\_\+with\+\_\+flags} (size\+\_\+type num\+\_\+seq, size\+\_\+type seq\+\_\+length, std\+::string point\+\_\+mutation\+\_\+model, size\+\_\+type num\+\_\+sensitive\+\_\+posns, double inactive\+\_\+probability, size\+\_\+type num\+\_\+jumps, double timestep, double burst\+\_\+probability, double burst\+\_\+mean, size\+\_\+type max\+\_\+active\+\_\+copies, size\+\_\+type max\+\_\+total\+\_\+copies, double recomb\+\_\+mean, double selection\+\_\+threshold, double fam\+\_\+proportion, double fam\+\_\+percentage, std\+::string file\+\_\+out, size\+\_\+type num\+\_\+out\+\_\+tags, size\+\_\+type num\+\_\+out\+\_\+init, size\+\_\+type num\+\_\+out\+\_\+seqs, size\+\_\+type num\+\_\+out\+\_\+pair, bool to\+\_\+randomise, bool to\+\_\+seed, size\+\_\+type seed, size\+\_\+type sequence\+\_\+numbering, size\+\_\+type family\+\_\+numbering)
+\begin{DoxyCompactList}\small\item\em Sets up and runs a simulation with flags. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{simulation_8cpp_file_ac8ce29cbd6cc7950d7f188805d5748f1}\label{simulation_8cpp_file_ac8ce29cbd6cc7950d7f188805d5748f1}} 
+\index{simulation.\+h@{simulation.\+h}!simulate\+\_\+with\+\_\+flags@{simulate\+\_\+with\+\_\+flags}}
+\index{simulate\+\_\+with\+\_\+flags@{simulate\+\_\+with\+\_\+flags}!simulation.\+h@{simulation.\+h}}
+\subsubsection{\texorpdfstring{simulate\+\_\+with\+\_\+flags()}{simulate\_with\_flags()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void rcombinator\+::simulate\+\_\+with\+\_\+flags (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{init\+\_\+seqs,  }\item[{\mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}}}]{init\+\_\+seq\+\_\+index,  }\item[{std\+::string}]{point\+\_\+mutation\+\_\+model,  }\item[{\mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}}}]{num\+\_\+sensitive\+\_\+posns,  }\item[{double}]{inactive\+\_\+probability,  }\item[{\mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}}}]{num\+\_\+jumps,  }\item[{double}]{timestep,  }\item[{double}]{burst\+\_\+probability,  }\item[{double}]{burst\+\_\+mean,  }\item[{\mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}}}]{max\+\_\+active\+\_\+copies,  }\item[{\mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}}}]{max\+\_\+total\+\_\+copies,  }\item[{double}]{recomb\+\_\+mean,  }\item[{double}]{selection\+\_\+threshold,  }\item[{double}]{fam\+\_\+proportion,  }\item[{double}]{fam\+\_\+percentage,  }\item[{std\+::string}]{file\+\_\+out,  }\item[{\mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}}}]{num\+\_\+out\+\_\+tags,  }\item[{\mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}}}]{num\+\_\+out\+\_\+init,  }\item[{\mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}}}]{num\+\_\+out\+\_\+seqs,  }\item[{\mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}}}]{num\+\_\+out\+\_\+pair,  }\item[{bool}]{to\+\_\+randomise,  }\item[{bool}]{to\+\_\+seed,  }\item[{\mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}}}]{seed,  }\item[{\mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}}}]{sequence\+\_\+numbering,  }\item[{\mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}}}]{family\+\_\+numbering }\end{DoxyParamCaption})}
+
+
+
+Sets up and runs a simulation with flags. 
+
+Takes a specified set of initial sequences. \mbox{\Hypertarget{simulation_8cpp_file_a1028a5d48362f682bbafa1f656214565}\label{simulation_8cpp_file_a1028a5d48362f682bbafa1f656214565}} 
+\index{simulation.\+h@{simulation.\+h}!simulate\+\_\+with\+\_\+flags@{simulate\+\_\+with\+\_\+flags}}
+\index{simulate\+\_\+with\+\_\+flags@{simulate\+\_\+with\+\_\+flags}!simulation.\+h@{simulation.\+h}}
+\subsubsection{\texorpdfstring{simulate\+\_\+with\+\_\+flags()}{simulate\_with\_flags()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void rcombinator\+::simulate\+\_\+with\+\_\+flags (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}}}]{num\+\_\+seq,  }\item[{\mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}}}]{seq\+\_\+length,  }\item[{std\+::string}]{point\+\_\+mutation\+\_\+model,  }\item[{\mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}}}]{num\+\_\+sensitive\+\_\+posns,  }\item[{double}]{inactive\+\_\+probability,  }\item[{\mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}}}]{num\+\_\+jumps,  }\item[{double}]{timestep,  }\item[{double}]{burst\+\_\+probability,  }\item[{double}]{burst\+\_\+mean,  }\item[{\mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}}}]{max\+\_\+active\+\_\+copies,  }\item[{\mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}}}]{max\+\_\+total\+\_\+copies,  }\item[{double}]{recomb\+\_\+mean,  }\item[{double}]{selection\+\_\+threshold,  }\item[{double}]{fam\+\_\+proportion,  }\item[{double}]{fam\+\_\+percentage,  }\item[{std\+::string}]{file\+\_\+out,  }\item[{\mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}}}]{num\+\_\+out\+\_\+tags,  }\item[{\mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}}}]{num\+\_\+out\+\_\+init,  }\item[{\mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}}}]{num\+\_\+out\+\_\+seqs,  }\item[{\mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}}}]{num\+\_\+out\+\_\+pair,  }\item[{bool}]{to\+\_\+randomise,  }\item[{bool}]{to\+\_\+seed,  }\item[{\mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}}}]{seed,  }\item[{\mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}}}]{sequence\+\_\+numbering,  }\item[{\mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}}}]{family\+\_\+numbering }\end{DoxyParamCaption})}
+
+
+
+Sets up and runs a simulation with flags. 
+
+Constructs initial sequences randomly. \mbox{\Hypertarget{simulation_8cpp_file_afba2945dc7e7c5476acd1685337b1747}\label{simulation_8cpp_file_afba2945dc7e7c5476acd1685337b1747}} 
+\index{simulation.\+h@{simulation.\+h}!simulate\+\_\+without\+\_\+flags@{simulate\+\_\+without\+\_\+flags}}
+\index{simulate\+\_\+without\+\_\+flags@{simulate\+\_\+without\+\_\+flags}!simulation.\+h@{simulation.\+h}}
+\subsubsection{\texorpdfstring{simulate\+\_\+without\+\_\+flags()}{simulate\_without\_flags()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void rcombinator\+::simulate\+\_\+without\+\_\+flags (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{init\+\_\+seqs,  }\item[{\mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}}}]{init\+\_\+seq\+\_\+index,  }\item[{std\+::string}]{point\+\_\+mutation\+\_\+model,  }\item[{\mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}}}]{num\+\_\+jumps,  }\item[{double}]{timestep,  }\item[{double}]{burst\+\_\+probability,  }\item[{double}]{burst\+\_\+mean,  }\item[{\mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}}}]{max\+\_\+active\+\_\+copies,  }\item[{double}]{recomb\+\_\+mean,  }\item[{std\+::string}]{file\+\_\+out,  }\item[{\mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}}}]{num\+\_\+out\+\_\+tags,  }\item[{\mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}}}]{num\+\_\+out\+\_\+init,  }\item[{\mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}}}]{num\+\_\+out\+\_\+seqs,  }\item[{\mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}}}]{num\+\_\+out\+\_\+pair,  }\item[{bool}]{to\+\_\+randomise,  }\item[{bool}]{to\+\_\+seed,  }\item[{\mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}}}]{seed,  }\item[{\mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}}}]{sequence\+\_\+numbering,  }\item[{\mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}}}]{family\+\_\+numbering }\end{DoxyParamCaption})}
+
+
+
+Sets up and runs a simulation without flags. 
+
+Takes a specified set of initial sequences. \mbox{\Hypertarget{simulation_8cpp_file_af15fdd4c04ddaa23178db4bff53f459f}\label{simulation_8cpp_file_af15fdd4c04ddaa23178db4bff53f459f}} 
+\index{simulation.\+h@{simulation.\+h}!simulate\+\_\+without\+\_\+flags@{simulate\+\_\+without\+\_\+flags}}
+\index{simulate\+\_\+without\+\_\+flags@{simulate\+\_\+without\+\_\+flags}!simulation.\+h@{simulation.\+h}}
+\subsubsection{\texorpdfstring{simulate\+\_\+without\+\_\+flags()}{simulate\_without\_flags()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void rcombinator\+::simulate\+\_\+without\+\_\+flags (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}}}]{num\+\_\+seq,  }\item[{\mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}}}]{seq\+\_\+length,  }\item[{std\+::string}]{point\+\_\+mutation\+\_\+model,  }\item[{\mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}}}]{num\+\_\+jumps,  }\item[{double}]{timestep,  }\item[{double}]{burst\+\_\+probability,  }\item[{double}]{burst\+\_\+mean,  }\item[{\mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}}}]{max\+\_\+active\+\_\+copies,  }\item[{double}]{recomb\+\_\+mean,  }\item[{std\+::string}]{file\+\_\+out,  }\item[{\mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}}}]{num\+\_\+out\+\_\+tags,  }\item[{\mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}}}]{num\+\_\+out\+\_\+init,  }\item[{\mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}}}]{num\+\_\+out\+\_\+seqs,  }\item[{\mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}}}]{num\+\_\+out\+\_\+pair,  }\item[{bool}]{to\+\_\+randomise,  }\item[{bool}]{to\+\_\+seed,  }\item[{\mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}}}]{seed,  }\item[{\mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}}}]{sequence\+\_\+numbering,  }\item[{\mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}}}]{family\+\_\+numbering }\end{DoxyParamCaption})}
+
+
+
+Sets up and runs a simulation without flags. 
+
+Constructs initial sequences randomly. 

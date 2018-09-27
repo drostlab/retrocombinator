@@ -12,6 +12,7 @@
 
 namespace rcombinator
 {
+    /// Tests the Sequence class
     int test_sequence()
     {
         test_initialize();

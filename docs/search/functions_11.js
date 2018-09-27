@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['_7epointmutationmodel',['~PointMutationModel',['../classrcombinator_1_1PointMutationModel.html#a2ac7ebc4b6264c6597808574501e45e5',1,'rcombinator::PointMutationModel']]],
-  ['_7epointmutator',['~PointMutator',['../classrcombinator_1_1PointMutator.html#ab4bb79937f1824e7fba92fb824f27c56',1,'rcombinator::PointMutator']]]
+  ['use_5ffamilies_5fat',['use_families_at',['../classrcombinator_1_1EvolutionWithFlags.html#ad94cabcb6a894d503c3d84c6022a1438',1,'rcombinator::EvolutionWithFlags']]]
 ];

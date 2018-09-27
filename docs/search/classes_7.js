@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['randmaths',['RandMaths',['../classrcombinator_1_1RandMaths.html',1,'rcombinator']]]
+  ['pointmutationmodel',['PointMutationModel',['../classrcombinator_1_1PointMutationModel.html',1,'rcombinator']]],
+  ['pointmutator',['PointMutator',['../classrcombinator_1_1PointMutator.html',1,'rcombinator']]]
 ];

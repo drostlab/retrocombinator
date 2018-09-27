@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['t_5fmat',['T_mat',['../classrcombinator_1_1PointMutationModel.html#ac8ec41d0bffdc2221ad4b1cfb06424e8',1,'rcombinator::PointMutationModel']]],
-  ['t_5fstored',['t_stored',['../classrcombinator_1_1PointMutationModel.html#a8ae23bc482a483e139cdb94bdc332a72',1,'rcombinator::PointMutationModel']]],
-  ['tag',['tag',['../classrcombinator_1_1Sequence.html#a9f9a2f4654d8b0e0cdb3061b9e0775d7',1,'rcombinator::Sequence']]]
+  ['max_5factive_5fcopies',['max_active_copies',['../classrcombinator_1_1Evolution.html#a8a542398bf9a3a7d42623d4d090a6e96',1,'rcombinator::Evolution']]],
+  ['max_5ftotal_5fcopies',['max_total_copies',['../classrcombinator_1_1EvolutionWithFlags.html#ae43e5acb13e9d8f1d8a4da9c42a22d1c',1,'rcombinator::EvolutionWithFlags']]],
+  ['mutations',['mutations',['../classrcombinator_1_1Sequence.html#a8aac49ef635b95fe0088e5fb59e2bce7',1,'rcombinator::Sequence']]]
 ];

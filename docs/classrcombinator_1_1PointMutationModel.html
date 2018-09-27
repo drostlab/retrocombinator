@@ -68,6 +68,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classrcombinator_1_1PointMutationModel-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -95,44 +97,53 @@ Inheritance diagram for rcombinator::PointMutationModel:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a099dd1d991389c50d1e22f6d25dc913d"><td class="memItemLeft" align="right" valign="top"><a id="a099dd1d991389c50d1e22f6d25dc913d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1PointMutationModel.html#a099dd1d991389c50d1e22f6d25dc913d">PointMutationModel</a> (double <a class="el" href="classrcombinator_1_1PointMutationModel.html#a328a30a438bb1b6a625faa3f714a85c8">scale</a>=0.25)</td></tr>
-<tr class="memdesc:a099dd1d991389c50d1e22f6d25dc913d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that allocates memory for transition matrix. <br /></td></tr>
-<tr class="separator:a099dd1d991389c50d1e22f6d25dc913d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ac7ebc4b6264c6597808574501e45e5"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1PointMutationModel.html#a2ac7ebc4b6264c6597808574501e45e5">~PointMutationModel</a> ()</td></tr>
-<tr class="memdesc:a2ac7ebc4b6264c6597808574501e45e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor that allocates memory for transition matrix.  <a href="#a2ac7ebc4b6264c6597808574501e45e5">More...</a><br /></td></tr>
-<tr class="separator:a2ac7ebc4b6264c6597808574501e45e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43457739c51566273d471098dc2cacf0"><td class="memItemLeft" align="right" valign="top">double **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1PointMutationModel.html#a43457739c51566273d471098dc2cacf0">get_Q</a> ()</td></tr>
-<tr class="memdesc:a43457739c51566273d471098dc2cacf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a rate matrix for the mutations.  <a href="#a43457739c51566273d471098dc2cacf0">More...</a><br /></td></tr>
-<tr class="separator:a43457739c51566273d471098dc2cacf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35a8b397c8fa932cd870174aa45180da"><td class="memItemLeft" align="right" valign="top">virtual double **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1PointMutationModel.html#a35a8b397c8fa932cd870174aa45180da">get_transition_matrix</a> (double t)=0</td></tr>
-<tr class="memdesc:a35a8b397c8fa932cd870174aa45180da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a transition matrix to represent the probabilities of mutations from each nucleotide to the other.  <a href="#a35a8b397c8fa932cd870174aa45180da">More...</a><br /></td></tr>
-<tr class="separator:a35a8b397c8fa932cd870174aa45180da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c83f671b3d76f8cf39ae5b5a1be658e"><td class="memItemLeft" align="right" valign="top"><a id="a4c83f671b3d76f8cf39ae5b5a1be658e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1PointMutationModel.html#a4c83f671b3d76f8cf39ae5b5a1be658e">PointMutationModel</a> (double <a class="el" href="classrcombinator_1_1PointMutationModel.html#a328a30a438bb1b6a625faa3f714a85c8">scale</a>=1)</td></tr>
+<tr class="memdesc:a4c83f671b3d76f8cf39ae5b5a1be658e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that allocates memory for transition matrix. <br /></td></tr>
+<tr class="separator:a4c83f671b3d76f8cf39ae5b5a1be658e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e21c6b161e6c42d593bdffb3265d701"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1PointMutationModel.html#a8e21c6b161e6c42d593bdffb3265d701">~PointMutationModel</a> ()=default</td></tr>
+<tr class="memdesc:a8e21c6b161e6c42d593bdffb3265d701"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use the default destructor.  <a href="#a8e21c6b161e6c42d593bdffb3265d701">More...</a><br /></td></tr>
+<tr class="separator:a8e21c6b161e6c42d593bdffb3265d701"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a6c6e94bfbf16c3893068e3db1597e941"><td class="memItemLeft" align="right" valign="top">ReturnsNucMatrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1PointMutationModel.html#a6c6e94bfbf16c3893068e3db1597e941">get_Q</a></td></tr>
+<tr class="memdesc:a6c6e94bfbf16c3893068e3db1597e941"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a rate matrix for the mutations.  <a href="#a6c6e94bfbf16c3893068e3db1597e941">More...</a><br /></td></tr>
+<tr class="separator:a6c6e94bfbf16c3893068e3db1597e941"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f17e2f93b22723721a4d04ac2c77aaa"><td class="memItemLeft" align="right" valign="top">ReturnsNucMatrixFromDouble&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1PointMutationModel.html#a5f17e2f93b22723721a4d04ac2c77aaa">get_transition_matrix</a></td></tr>
+<tr class="memdesc:a5f17e2f93b22723721a4d04ac2c77aaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a transition matrix to represent the probabilities of mutations from each nucleotide to the other.  <a href="#a5f17e2f93b22723721a4d04ac2c77aaa">More...</a><br /></td></tr>
+<tr class="separator:a5f17e2f93b22723721a4d04ac2c77aaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a2c09d4382b77a3b0e3d9d097a679075d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1PointMutationModel.html#a2c09d4382b77a3b0e3d9d097a679075d">compute_transition_matrix</a> ()=0</td></tr>
+<tr class="memdesc:a2c09d4382b77a3b0e3d9d097a679075d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes Q from P using t_stored.  <a href="#a2c09d4382b77a3b0e3d9d097a679075d">More...</a><br /></td></tr>
+<tr class="separator:a2c09d4382b77a3b0e3d9d097a679075d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a5affb482b1e4434bd1b2c6fc1c579934"><td class="memItemLeft" align="right" valign="top"><a id="a5affb482b1e4434bd1b2c6fc1c579934"></a>
-double **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1PointMutationModel.html#a5affb482b1e4434bd1b2c6fc1c579934">Q_mat</a></td></tr>
-<tr class="memdesc:a5affb482b1e4434bd1b2c6fc1c579934"><td class="mdescLeft">&#160;</td><td class="mdescRight">The transition rate matrix. <br /></td></tr>
-<tr class="separator:a5affb482b1e4434bd1b2c6fc1c579934"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0260e78df73c82b912984b7c916f21a9"><td class="memItemLeft" align="right" valign="top"><a id="a0260e78df73c82b912984b7c916f21a9"></a>
+NucMatrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1PointMutationModel.html#a0260e78df73c82b912984b7c916f21a9">Q</a></td></tr>
+<tr class="memdesc:a0260e78df73c82b912984b7c916f21a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The transition rate matrix (unscaled) <br /></td></tr>
+<tr class="separator:a0260e78df73c82b912984b7c916f21a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f2f6977702777b9f8b14f986db06c78"><td class="memItemLeft" align="right" valign="top"><a id="a6f2f6977702777b9f8b14f986db06c78"></a>
+NucMatrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1PointMutationModel.html#a6f2f6977702777b9f8b14f986db06c78">P</a></td></tr>
+<tr class="memdesc:a6f2f6977702777b9f8b14f986db06c78"><td class="mdescLeft">&#160;</td><td class="mdescRight">The transition matrix for timestep <em>t_stored</em>. <br /></td></tr>
+<tr class="separator:a6f2f6977702777b9f8b14f986db06c78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a328a30a438bb1b6a625faa3f714a85c8"><td class="memItemLeft" align="right" valign="top"><a id="a328a30a438bb1b6a625faa3f714a85c8"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1PointMutationModel.html#a328a30a438bb1b6a625faa3f714a85c8">scale</a></td></tr>
-<tr class="memdesc:a328a30a438bb1b6a625faa3f714a85c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">How much to scale Q by in the differential equation. <br /></td></tr>
+<tr class="memdesc:a328a30a438bb1b6a625faa3f714a85c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">P = exp(scale * Q * time) <br /></td></tr>
 <tr class="separator:a328a30a438bb1b6a625faa3f714a85c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ae23bc482a483e139cdb94bdc332a72"><td class="memItemLeft" align="right" valign="top"><a id="a8ae23bc482a483e139cdb94bdc332a72"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1PointMutationModel.html#a8ae23bc482a483e139cdb94bdc332a72">t_stored</a></td></tr>
-<tr class="memdesc:a8ae23bc482a483e139cdb94bdc332a72"><td class="mdescLeft">&#160;</td><td class="mdescRight">The timestep by which we jump in our simulation. <br /></td></tr>
+<tr class="memdesc:a8ae23bc482a483e139cdb94bdc332a72"><td class="mdescLeft">&#160;</td><td class="mdescRight">The timestep jump for which our transition matrix is valid. <br /></td></tr>
 <tr class="separator:a8ae23bc482a483e139cdb94bdc332a72"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8ec41d0bffdc2221ad4b1cfb06424e8"><td class="memItemLeft" align="right" valign="top"><a id="ac8ec41d0bffdc2221ad4b1cfb06424e8"></a>
-double **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1PointMutationModel.html#ac8ec41d0bffdc2221ad4b1cfb06424e8">T_mat</a></td></tr>
-<tr class="memdesc:ac8ec41d0bffdc2221ad4b1cfb06424e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The transition matrix for timestep <em>t</em>. <br /></td></tr>
-<tr class="separator:ac8ec41d0bffdc2221ad4b1cfb06424e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>To represent a model of DNA evolution through point mutations. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a2ac7ebc4b6264c6597808574501e45e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2ac7ebc4b6264c6597808574501e45e5">&#9670;&nbsp;</a></span>~PointMutationModel()</h2>
+<a id="a8e21c6b161e6c42d593bdffb3265d701"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e21c6b161e6c42d593bdffb3265d701">&#9670;&nbsp;</a></span>~PointMutationModel()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -141,7 +152,7 @@ double **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">PointMutationModel::~PointMutationModel </td>
+          <td class="memname">virtual rcombinator::PointMutationModel::~PointMutationModel </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -149,19 +160,19 @@ double **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Destructor that allocates memory for transition matrix. </p>
+<p>Use the default destructor. </p>
 <p>Is virtual because we want all specific point mutation models to derive from this class. </p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a43457739c51566273d471098dc2cacf0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a43457739c51566273d471098dc2cacf0">&#9670;&nbsp;</a></span>get_Q()</h2>
+<a id="a2c09d4382b77a3b0e3d9d097a679075d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c09d4382b77a3b0e3d9d097a679075d">&#9670;&nbsp;</a></span>compute_transition_matrix()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -170,7 +181,7 @@ double **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double** rcombinator::PointMutationModel::get_Q </td>
+          <td class="memname">virtual void rcombinator::PointMutationModel::compute_transition_matrix </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -178,9 +189,29 @@ double **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
   </tr>
 </table>
+</div><div class="memdoc">
+
+<p>Computes Q from P using t_stored. </p>
+<p>P(t) = exp(scale*Qt) </p>
+
+<p>Implemented in <a class="el" href="classrcombinator_1_1K80Model.html#a70f669e2a31d34a37b19fd185219a9ce">rcombinator::K80Model</a>, <a class="el" href="classrcombinator_1_1F81Model.html#a5bb9c63e55c4f8f7b9573281ff6ee610">rcombinator::F81Model</a>, <a class="el" href="classrcombinator_1_1T93Model.html#aaa8c96927a1ff3b8c611f0d0f9d6f36a">rcombinator::T93Model</a>, and <a class="el" href="classrcombinator_1_1GTRModel.html#a7d71f990fd33bcb7fc6a74accf03d7ae">rcombinator::GTRModel</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a6c6e94bfbf16c3893068e3db1597e941"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c6e94bfbf16c3893068e3db1597e941">&#9670;&nbsp;</a></span>get_Q</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const double(* PointMutationModel::get_Q</td>
+        </tr>
+      </table>
 </div><div class="memdoc">
 
 <p>Returns a rate matrix for the mutations. </p>
@@ -188,42 +219,20 @@ double **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
 
 </div>
 </div>
-<a id="a35a8b397c8fa932cd870174aa45180da"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a35a8b397c8fa932cd870174aa45180da">&#9670;&nbsp;</a></span>get_transition_matrix()</h2>
+<a id="a5f17e2f93b22723721a4d04ac2c77aaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f17e2f93b22723721a4d04ac2c77aaa">&#9670;&nbsp;</a></span>get_transition_matrix</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual double** rcombinator::PointMutationModel::get_transition_matrix </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>t</em></td><td>)</td>
-          <td></td>
+          <td class="memname">const double(* PointMutationModel::get_transition_matrix</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Returns a transition matrix to represent the probabilities of mutations from each nucleotide to the other. </p>
-<p><em>t</em> is the time that has passed. P(A to B) is matrix(A, B). </p>
-
-<p>Implemented in <a class="el" href="classrcombinator_1_1K80Model.html#a35aec33b0b090ab23dc7e0985d1bedf5">rcombinator::K80Model</a>, <a class="el" href="classrcombinator_1_1F81Model.html#a7b8cc2e77bd7d15582aaa77aa876755c">rcombinator::F81Model</a>, <a class="el" href="classrcombinator_1_1HKY85Model.html#a156ac5c3789bc479857299469269c4de">rcombinator::HKY85Model</a>, <a class="el" href="classrcombinator_1_1T93Model.html#ac8e280547d6af408e24df5e114d2c5c9">rcombinator::T93Model</a>, and <a class="el" href="classrcombinator_1_1GTRModel.html#aca26ae97d8ee3af6cc3c372d4d606e64">rcombinator::GTRModel</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classrcombinator_1_1PointMutationModel_a35a8b397c8fa932cd870174aa45180da_icgraph.png" border="0" usemap="#classrcombinator_1_1PointMutationModel_a35a8b397c8fa932cd870174aa45180da_icgraph" alt=""/></div>
-<map name="classrcombinator_1_1PointMutationModel_a35a8b397c8fa932cd870174aa45180da_icgraph" id="classrcombinator_1_1PointMutationModel_a35a8b397c8fa932cd870174aa45180da_icgraph">
-<area shape="rect" id="node2" href="classrcombinator_1_1PointMutator.html#aba3c2b8641affe8a06d815c33cafdc1b" title="Mutates a sequence according to a given transition matrix. " alt="" coords="263,5,455,47"/>
-</map>
-</div>
+<p><em>t</em> is the time that has passed in millions of years. P(A to B) is matrix(A, B). </p>
 
 </div>
 </div>

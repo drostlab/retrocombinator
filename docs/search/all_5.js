@@ -1,11 +1,11 @@
 var searchData=
 [
-  ['g',['G',['../namespacercombinator_1_1Consts.html#aaa096a23d1bc2fdb1992265192fae907a5020e318d196247b860e9fe541f74d33',1,'rcombinator::Consts']]],
-  ['get_5finstance',['get_instance',['../classrcombinator_1_1RandMaths.html#ae54dee1a16fb0e275e1624ccaa7dc87e',1,'rcombinator::RandMaths']]],
-  ['get_5flength',['get_length',['../classrcombinator_1_1Sequence.html#a690c3f7adffafdf45056b5ae632c515d',1,'rcombinator::Sequence']]],
-  ['get_5fq',['get_Q',['../classrcombinator_1_1PointMutationModel.html#a43457739c51566273d471098dc2cacf0',1,'rcombinator::PointMutationModel']]],
-  ['get_5ftag',['get_tag',['../classrcombinator_1_1Sequence.html#a5690b6b125807696c81533e7be0be296',1,'rcombinator::Sequence']]],
-  ['get_5ftransition_5fmatrix',['get_transition_matrix',['../classrcombinator_1_1PointMutationModel.html#a35a8b397c8fa932cd870174aa45180da',1,'rcombinator::PointMutationModel::get_transition_matrix()'],['../classrcombinator_1_1GTRModel.html#aca26ae97d8ee3af6cc3c372d4d606e64',1,'rcombinator::GTRModel::get_transition_matrix()'],['../classrcombinator_1_1T93Model.html#ac8e280547d6af408e24df5e114d2c5c9',1,'rcombinator::T93Model::get_transition_matrix()'],['../classrcombinator_1_1HKY85Model.html#a156ac5c3789bc479857299469269c4de',1,'rcombinator::HKY85Model::get_transition_matrix()'],['../classrcombinator_1_1F81Model.html#a7b8cc2e77bd7d15582aaa77aa876755c',1,'rcombinator::F81Model::get_transition_matrix()'],['../classrcombinator_1_1K80Model.html#a35aec33b0b090ab23dc7e0985d1bedf5',1,'rcombinator::K80Model::get_transition_matrix()']]],
-  ['global_5fsequence_5fcount',['global_sequence_count',['../classrcombinator_1_1Sequence.html#abb45023862671bbc450bdea543e72165',1,'rcombinator::Sequence']]],
-  ['gtrmodel',['GTRModel',['../classrcombinator_1_1GTRModel.html',1,'rcombinator::GTRModel'],['../classrcombinator_1_1GTRModel.html#a0493ce5888bbaf6f0c856493b273a6ef',1,'rcombinator::GTRModel::GTRModel()']]]
+  ['f81model',['F81Model',['../classrcombinator_1_1F81Model.html',1,'rcombinator::F81Model'],['../classrcombinator_1_1F81Model.html#a80c3357497cdc6b91ff4c408750b47bb',1,'rcombinator::F81Model::F81Model()']]],
+  ['fam_5fproportion',['fam_proportion',['../classrcombinator_1_1EvolutionWithFlags.html#a9548c1768894470bdf094f06be156fc1',1,'rcombinator::EvolutionWithFlags']]],
+  ['families',['families',['../classrcombinator_1_1Evolution.html#a32a114f62cd6b0f075b8dc47fe86514e',1,'rcombinator::Evolution']]],
+  ['family',['Family',['../classrcombinator_1_1Family.html',1,'rcombinator::Family'],['../classrcombinator_1_1Family.html#aefb8619ac695a3ad8e654ed8302668ee',1,'rcombinator::Family::Family()']]],
+  ['family_2eh',['family.h',['../family_8h.html',1,'']]],
+  ['files_5fsame',['files_same',['../test__header_8h.html#aaa11818269fabefbdbbd90c410c0709c',1,'rcombinator']]],
+  ['final_5ftime',['final_time',['../classrcombinator_1_1Output.html#a6cb6e4bce4969d70ef39bfd35cea199e',1,'rcombinator::Output']]],
+  ['fout',['fout',['../classrcombinator_1_1Output.html#a3bd494563f6baa676326ccf9b6ca5257',1,'rcombinator::Output']]]
 ];

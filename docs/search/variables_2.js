@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['global_5fsequence_5fcount',['global_sequence_count',['../classrcombinator_1_1Sequence.html#abb45023862671bbc450bdea543e72165',1,'rcombinator::Sequence']]]
+  ['double_5ftolerance',['DOUBLE_TOLERANCE',['../namespacercombinator_1_1Consts.html#a52bd90fa02fe1a2d01f1b38b195be714',1,'rcombinator::Consts']]]
 ];

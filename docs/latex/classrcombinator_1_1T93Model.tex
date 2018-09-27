@@ -30,11 +30,24 @@ Collaboration diagram for rcombinator\+:\+:T93\+Model\+:\nopagebreak
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classrcombinator_1_1T93Model_ad975a4779689bb7ea958be8d956c31ed}{T93\+Model}} (double pi\+\_\+T=0.\+25, double pi\+\_\+C=0.\+25, double pi\+\_\+A=0.\+25, double pi\+\_\+G=0.\+25, double k1=0.\+1, double k2=0.\+1, double \mbox{\hyperlink{classrcombinator_1_1PointMutationModel_a328a30a438bb1b6a625faa3f714a85c8}{scale}}=0.\+25)
+\mbox{\hyperlink{classrcombinator_1_1T93Model_ad857daf369e1d16fc8233b08dc0deef8}{T93\+Model}} (double \mbox{\hyperlink{classrcombinator_1_1GTRModel_a1f58fe556a5ce9aaba6168c9f91e8372}{pi\+\_\+T}}=0.\+25, double pi\+\_\+C=0.\+25, double pi\+\_\+A=0.\+25, double pi\+\_\+G=0.\+25, double \mbox{\hyperlink{classrcombinator_1_1T93Model_a98c3187ba2e9da1f608f17b1e3cf341b}{k1}}=1, double k2=1, double \mbox{\hyperlink{classrcombinator_1_1PointMutationModel_a328a30a438bb1b6a625faa3f714a85c8}{scale}}=1)
+\begin{DoxyCompactList}\small\item\em 4 equilibrium base frequency parameters, 2 substitution rate parameters and 1 scale parameter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classrcombinator_1_1T93Model_ac8e280547d6af408e24df5e114d2c5c9}\label{classrcombinator_1_1T93Model_ac8e280547d6af408e24df5e114d2c5c9}} 
-double $\ast$$\ast$ \mbox{\hyperlink{classrcombinator_1_1T93Model_ac8e280547d6af408e24df5e114d2c5c9}{get\+\_\+transition\+\_\+matrix}} (double t) override
-\begin{DoxyCompactList}\small\item\em To be computed using exponentiation of Q. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\Hypertarget{classrcombinator_1_1T93Model_aaa8c96927a1ff3b8c611f0d0f9d6f36a}\label{classrcombinator_1_1T93Model_aaa8c96927a1ff3b8c611f0d0f9d6f36a}} 
+void \mbox{\hyperlink{classrcombinator_1_1T93Model_aaa8c96927a1ff3b8c611f0d0f9d6f36a}{compute\+\_\+transition\+\_\+matrix}} () override
+\begin{DoxyCompactList}\small\item\em Computed by exploiting symmetry. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+const double \mbox{\hyperlink{classrcombinator_1_1T93Model_a98c3187ba2e9da1f608f17b1e3cf341b}{k1}}
+\begin{DoxyCompactList}\small\item\em The subsitution rate parameters. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classrcombinator_1_1T93Model_a1806ba62860b111c56accc16f1ffdb3d}\label{classrcombinator_1_1T93Model_a1806ba62860b111c56accc16f1ffdb3d}} 
+const double {\bfseries k2}
+\end{DoxyCompactItemize}
+
 \subsection*{Additional Inherited Members}
 
 
@@ -42,15 +55,30 @@ double $\ast$$\ast$ \mbox{\hyperlink{classrcombinator_1_1T93Model_ac8e280547d6af
 Tamura ane Nei 1983 Model. 
 
 \subsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classrcombinator_1_1T93Model_ad975a4779689bb7ea958be8d956c31ed}\label{classrcombinator_1_1T93Model_ad975a4779689bb7ea958be8d956c31ed}} 
+\mbox{\Hypertarget{classrcombinator_1_1T93Model_ad857daf369e1d16fc8233b08dc0deef8}\label{classrcombinator_1_1T93Model_ad857daf369e1d16fc8233b08dc0deef8}} 
 \index{rcombinator\+::\+T93\+Model@{rcombinator\+::\+T93\+Model}!T93\+Model@{T93\+Model}}
 \index{T93\+Model@{T93\+Model}!rcombinator\+::\+T93\+Model@{rcombinator\+::\+T93\+Model}}
 \subsubsection{\texorpdfstring{T93\+Model()}{T93Model()}}
-{\footnotesize\ttfamily T93\+Model\+::\+T93\+Model (\begin{DoxyParamCaption}\item[{double}]{pi\+\_\+T = {\ttfamily 0.25},  }\item[{double}]{pi\+\_\+C = {\ttfamily 0.25},  }\item[{double}]{pi\+\_\+A = {\ttfamily 0.25},  }\item[{double}]{pi\+\_\+G = {\ttfamily 0.25},  }\item[{double}]{k1 = {\ttfamily 0.1},  }\item[{double}]{k2 = {\ttfamily 0.1},  }\item[{double}]{scale = {\ttfamily 0.25} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily T93\+Model\+::\+T93\+Model (\begin{DoxyParamCaption}\item[{double}]{pi\+\_\+T = {\ttfamily 0.25},  }\item[{double}]{pi\+\_\+C = {\ttfamily 0.25},  }\item[{double}]{pi\+\_\+A = {\ttfamily 0.25},  }\item[{double}]{pi\+\_\+G = {\ttfamily 0.25},  }\item[{double}]{k1 = {\ttfamily 1},  }\item[{double}]{k2 = {\ttfamily 1},  }\item[{double}]{scale = {\ttfamily 1} }\end{DoxyParamCaption})}
 
-\begin{DoxyRefDesc}{Todo}
-\item[\mbox{\hyperlink{todo__todo000003}{Todo}}]Use the defaults from \mbox{\hyperlink{constants_8h}{constants.\+h}} \end{DoxyRefDesc}
 
+
+4 equilibrium base frequency parameters, 2 substitution rate parameters and 1 scale parameter. 
+
+pi\+\_\+X = same as for G\+TR k1 = rate of transition T $<$-\/$>$ C when transversion rate is 1 k2 = rate of transition A $<$-\/$>$ G when transversion rate is 1 scale = same as for G\+TR 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classrcombinator_1_1T93Model_a98c3187ba2e9da1f608f17b1e3cf341b}\label{classrcombinator_1_1T93Model_a98c3187ba2e9da1f608f17b1e3cf341b}} 
+\index{rcombinator\+::\+T93\+Model@{rcombinator\+::\+T93\+Model}!k1@{k1}}
+\index{k1@{k1}!rcombinator\+::\+T93\+Model@{rcombinator\+::\+T93\+Model}}
+\subsubsection{\texorpdfstring{k1}{k1}}
+{\footnotesize\ttfamily const double rcombinator\+::\+T93\+Model\+::k1\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The subsitution rate parameters. 
+
+Look at the constructor for more details. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

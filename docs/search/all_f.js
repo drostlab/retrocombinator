@@ -1,6 +1,20 @@
 var searchData=
 [
-  ['q25',['q25',['../structrcombinator_1_1Utils_1_1SummaryStats.html#aee0b73cf97c3992b2924007ab7cf7677',1,'rcombinator::Utils::SummaryStats']]],
-  ['q75',['q75',['../structrcombinator_1_1Utils_1_1SummaryStats.html#a8d8b1e856b0cee4474297ce3fc5bc702',1,'rcombinator::Utils::SummaryStats']]],
-  ['q_5fmat',['Q_mat',['../classrcombinator_1_1PointMutationModel.html#a5affb482b1e4434bd1b2c6fc1c579934',1,'rcombinator::PointMutationModel']]]
+  ['p',['P',['../classrcombinator_1_1PointMutationModel.html#a6f2f6977702777b9f8b14f986db06c78',1,'rcombinator::PointMutationModel']]],
+  ['parent_5ftag',['parent_tag',['../classrcombinator_1_1Family.html#adfb3bf4271451de8917ea1ababd43b07',1,'rcombinator::Family']]],
+  ['parent_5ftags',['parent_tags',['../classrcombinator_1_1Sequence.html#a81a264faf65b131fe857511680b5aa25',1,'rcombinator::Sequence']]],
+  ['pi_5ft',['pi_T',['../classrcombinator_1_1GTRModel.html#a1f58fe556a5ce9aaba6168c9f91e8372',1,'rcombinator::GTRModel']]],
+  ['point_5fmutate',['point_mutate',['../classrcombinator_1_1Sequence.html#a85299c3dbf2efb993a43acc2e42fcb00',1,'rcombinator::Sequence']]],
+  ['point_5fmutation_5fmodel',['point_mutation_model',['../classrcombinator_1_1PointMutator.html#a2e6661ed12c29646de00485b10bd8c74',1,'rcombinator::PointMutator']]],
+  ['point_5fmutation_5fmodels_2eh',['point_mutation_models.h',['../point__mutation__models_8h.html',1,'']]],
+  ['point_5fmutator_2eh',['point_mutator.h',['../point__mutator_8h.html',1,'']]],
+  ['pointmutationmodel',['PointMutationModel',['../classrcombinator_1_1PointMutationModel.html',1,'rcombinator::PointMutationModel'],['../classrcombinator_1_1PointMutationModel.html#a4c83f671b3d76f8cf39ae5b5a1be658e',1,'rcombinator::PointMutationModel::PointMutationModel()']]],
+  ['pointmutator',['PointMutator',['../classrcombinator_1_1PointMutator.html',1,'rcombinator::PointMutator'],['../classrcombinator_1_1PointMutator.html#a084f37ad47f0a820028a87695bd2c88e',1,'rcombinator::PointMutator::PointMutator()']]],
+  ['print',['print',['../classrcombinator_1_1Output.html#a9b28f297886b9e8f1e764b688c9a9da7',1,'rcombinator::Output']]],
+  ['print_5fheader',['print_header',['../classrcombinator_1_1Output.html#a210fa5a86077912c8cf95d15603c1ad2',1,'rcombinator::Output']]],
+  ['print_5finit',['print_init',['../classrcombinator_1_1Output.html#a365f66ac8299882ebfd6239d4c90b1bb',1,'rcombinator::Output']]],
+  ['print_5fmatrix',['print_matrix',['../test__point__mutation__models_8h.html#a0e5aa62414a6f6ea45a87dc4f00f0046',1,'rcombinator']]],
+  ['print_5fpair',['print_pair',['../classrcombinator_1_1Output.html#ac5632b57357788ba7d25769c412a2a11',1,'rcombinator::Output']]],
+  ['print_5fseq_5ftags',['print_seq_tags',['../classrcombinator_1_1Output.html#a89392e3e01808946eaeb160955e87b21',1,'rcombinator::Output']]],
+  ['print_5fseqs',['print_seqs',['../classrcombinator_1_1Output.html#ac56d04591e50cbb8170da04a5ffa233a',1,'rcombinator::Output']]]
 ];

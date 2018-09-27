@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['error_5fmsg',['error_msg',['../classrcombinator_1_1Exception.html#a982a342c7c75134b7323ecd67e43e13d',1,'rcombinator::Exception']]]
+  ['copy_5fnumbers',['copy_numbers',['../classrcombinator_1_1EvolutionWithoutFlags.html#a4aeca4ee651183448dc8c2468d29e4ee',1,'rcombinator::EvolutionWithoutFlags']]]
 ];

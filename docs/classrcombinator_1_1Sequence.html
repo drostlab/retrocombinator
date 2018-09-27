@@ -68,9 +68,10 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="#pri-static-attribs">Static Private Attributes</a> &#124;
-<a href="#friends">Friends</a> &#124;
 <a href="classrcombinator_1_1Sequence-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">rcombinator::Sequence Class Reference</div>  </div>
@@ -84,34 +85,33 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:afab8bafaf1283f4e699ba9111ee452b3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1Sequence.html#afab8bafaf1283f4e699ba9111ee452b3">Sequence</a> (long n)</td></tr>
-<tr class="memdesc:afab8bafaf1283f4e699ba9111ee452b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a random sequence of length <em>n</em>.  <a href="#afab8bafaf1283f4e699ba9111ee452b3">More...</a><br /></td></tr>
-<tr class="separator:afab8bafaf1283f4e699ba9111ee452b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04d0d6977316f2ab30844e584c4531ec"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1Sequence.html#a04d0d6977316f2ab30844e584c4531ec">Sequence</a> (<a class="el" href="constants_8h.html#abcd18a5521fc90ff6e7b00e4fee98397">size_type</a> n)</td></tr>
+<tr class="memdesc:a04d0d6977316f2ab30844e584c4531ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a random sequence of length <em>n</em>.  <a href="#a04d0d6977316f2ab30844e584c4531ec">More...</a><br /></td></tr>
+<tr class="separator:a04d0d6977316f2ab30844e584c4531ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5b3b62eba07f0e09f532fcf1681c289"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1Sequence.html#af5b3b62eba07f0e09f532fcf1681c289">Sequence</a> (std::string s)</td></tr>
 <tr class="memdesc:af5b3b62eba07f0e09f532fcf1681c289"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a sequence from a given string.  <a href="#af5b3b62eba07f0e09f532fcf1681c289">More...</a><br /></td></tr>
 <tr class="separator:af5b3b62eba07f0e09f532fcf1681c289"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a976b331689ec55d9d306281bbff5d22d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1Sequence.html#a976b331689ec55d9d306281bbff5d22d">Sequence</a> (<a class="el" href="classrcombinator_1_1Sequence.html">Sequence</a> &amp;s1, <a class="el" href="classrcombinator_1_1Sequence.html">Sequence</a> &amp;s2, int num_template_switches)</td></tr>
-<tr class="memdesc:a976b331689ec55d9d306281bbff5d22d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a sequence from recombining two other sequences.  <a href="#a976b331689ec55d9d306281bbff5d22d">More...</a><br /></td></tr>
-<tr class="separator:a976b331689ec55d9d306281bbff5d22d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a690c3f7adffafdf45056b5ae632c515d"><td class="memItemLeft" align="right" valign="top"><a id="a690c3f7adffafdf45056b5ae632c515d"></a>
-long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1Sequence.html#a690c3f7adffafdf45056b5ae632c515d">get_length</a> () const</td></tr>
-<tr class="memdesc:a690c3f7adffafdf45056b5ae632c515d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns length of the sequence. <br /></td></tr>
-<tr class="separator:a690c3f7adffafdf45056b5ae632c515d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5690b6b125807696c81533e7be0be296"><td class="memItemLeft" align="right" valign="top"><a id="a5690b6b125807696c81533e7be0be296"></a>
-long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1Sequence.html#a5690b6b125807696c81533e7be0be296">get_tag</a> () const</td></tr>
-<tr class="memdesc:a5690b6b125807696c81533e7be0be296"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the unique label for this sequence. <br /></td></tr>
-<tr class="separator:a5690b6b125807696c81533e7be0be296"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1367e984a24069fb18f4eb85f5c55dbb"><td class="memItemLeft" align="right" valign="top"><a id="a1367e984a24069fb18f4eb85f5c55dbb"></a>
-std::pair&lt; bool, bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1Sequence.html#a1367e984a24069fb18f4eb85f5c55dbb">bits_at</a> (long n) const</td></tr>
-<tr class="memdesc:a1367e984a24069fb18f4eb85f5c55dbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the 2bit encoding for a base at a given position. <br /></td></tr>
-<tr class="separator:a1367e984a24069fb18f4eb85f5c55dbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19672a1fbefcdf0c317fddb177f80a15"><td class="memItemLeft" align="right" valign="top"><a id="a19672a1fbefcdf0c317fddb177f80a15"></a>
-char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1Sequence.html#a19672a1fbefcdf0c317fddb177f80a15">char_at</a> (long n) const</td></tr>
-<tr class="memdesc:a19672a1fbefcdf0c317fddb177f80a15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the character for a base at a given position. <br /></td></tr>
-<tr class="separator:a19672a1fbefcdf0c317fddb177f80a15"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f7bccd4725bb8c46f6b93bd01a6b2f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1Sequence.html#a5f7bccd4725bb8c46f6b93bd01a6b2f0">point_mutate</a> (long n, char new_nucleotide, bool is_lethal=false)</td></tr>
-<tr class="memdesc:a5f7bccd4725bb8c46f6b93bd01a6b2f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the nucleotide at position <em>n</em> to <em>new_nucleotide</em>.  <a href="#a5f7bccd4725bb8c46f6b93bd01a6b2f0">More...</a><br /></td></tr>
-<tr class="separator:a5f7bccd4725bb8c46f6b93bd01a6b2f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af334c44bea806196b5037e61b0e831b1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1Sequence.html#af334c44bea806196b5037e61b0e831b1">Sequence</a> (const <a class="el" href="classrcombinator_1_1Sequence.html">Sequence</a> &amp;s1, const <a class="el" href="classrcombinator_1_1Sequence.html">Sequence</a> &amp;s2, <a class="el" href="constants_8h.html#abcd18a5521fc90ff6e7b00e4fee98397">size_type</a> num_template_switches)</td></tr>
+<tr class="memdesc:af334c44bea806196b5037e61b0e831b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a sequence from recombining two other sequences.  <a href="#af334c44bea806196b5037e61b0e831b1">More...</a><br /></td></tr>
+<tr class="separator:af334c44bea806196b5037e61b0e831b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a743beee42a3f42eb30e0988016d74bb4"><td class="memItemLeft" align="right" valign="top"><a id="a743beee42a3f42eb30e0988016d74bb4"></a>
+<a class="el" href="constants_8h.html#abcd18a5521fc90ff6e7b00e4fee98397">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1Sequence.html#a743beee42a3f42eb30e0988016d74bb4">get_length</a> () const</td></tr>
+<tr class="memdesc:a743beee42a3f42eb30e0988016d74bb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns length of the sequence. <br /></td></tr>
+<tr class="separator:a743beee42a3f42eb30e0988016d74bb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6084bc8134a677e6e30fb7c1be1df978"><td class="memItemLeft" align="right" valign="top"><a id="a6084bc8134a677e6e30fb7c1be1df978"></a>
+<a class="el" href="constants_8h.html#a3e6daf1646e952257330d8cfe20e96f8">tag_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1Sequence.html#a6084bc8134a677e6e30fb7c1be1df978">get_tag</a> () const</td></tr>
+<tr class="memdesc:a6084bc8134a677e6e30fb7c1be1df978"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the unique label for this sequence. <br /></td></tr>
+<tr class="separator:a6084bc8134a677e6e30fb7c1be1df978"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2b82b11141c68a065d05c02c6ea3a58"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="constants_8h.html#a3e6daf1646e952257330d8cfe20e96f8">tag_type</a>, <a class="el" href="constants_8h.html#a3e6daf1646e952257330d8cfe20e96f8">tag_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1Sequence.html#ac2b82b11141c68a065d05c02c6ea3a58">get_parent_tags</a> () const</td></tr>
+<tr class="memdesc:ac2b82b11141c68a065d05c02c6ea3a58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the tags of the sequences that this sequence was created from.  <a href="#ac2b82b11141c68a065d05c02c6ea3a58">More...</a><br /></td></tr>
+<tr class="separator:ac2b82b11141c68a065d05c02c6ea3a58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f8b25d42af4aaf2463b4d2bdf3f023a"><td class="memItemLeft" align="right" valign="top"><a id="a5f8b25d42af4aaf2463b4d2bdf3f023a"></a>
+char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1Sequence.html#a5f8b25d42af4aaf2463b4d2bdf3f023a">char_at</a> (<a class="el" href="constants_8h.html#abcd18a5521fc90ff6e7b00e4fee98397">size_type</a> n) const</td></tr>
+<tr class="memdesc:a5f8b25d42af4aaf2463b4d2bdf3f023a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the character for a base at a given position. <br /></td></tr>
+<tr class="separator:a5f8b25d42af4aaf2463b4d2bdf3f023a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85299c3dbf2efb993a43acc2e42fcb00"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1Sequence.html#a85299c3dbf2efb993a43acc2e42fcb00">point_mutate</a> (<a class="el" href="constants_8h.html#abcd18a5521fc90ff6e7b00e4fee98397">size_type</a> n, char new_nucleotide, bool is_lethal=false)</td></tr>
+<tr class="memdesc:a85299c3dbf2efb993a43acc2e42fcb00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the nucleotide at position <em>n</em> to <em>new_nucleotide</em>.  <a href="#a85299c3dbf2efb993a43acc2e42fcb00">More...</a><br /></td></tr>
+<tr class="separator:a85299c3dbf2efb993a43acc2e42fcb00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5fa45e155a1e4b3c257f19369ace05a8"><td class="memItemLeft" align="right" valign="top"><a id="a5fa45e155a1e4b3c257f19369ace05a8"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1Sequence.html#a5fa45e155a1e4b3c257f19369ace05a8">as_string</a> () const</td></tr>
 <tr class="memdesc:a5fa45e155a1e4b3c257f19369ace05a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the raw nucleotide sequence as a string. <br /></td></tr>
@@ -119,30 +119,78 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <tr class="memitem:a5af66ddd3c8bc05307b56737c56060bf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1Sequence.html#a5af66ddd3c8bc05307b56737c56060bf">is_active</a> () const</td></tr>
 <tr class="memdesc:a5af66ddd3c8bc05307b56737c56060bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests whether this sequence is active (can transpose) or not.  <a href="#a5af66ddd3c8bc05307b56737c56060bf">More...</a><br /></td></tr>
 <tr class="separator:a5af66ddd3c8bc05307b56737c56060bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a821299743e342f028cf7cff51289e3cf"><td class="memItemLeft" align="right" valign="top"><a id="a821299743e342f028cf7cff51289e3cf"></a>
-long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1Sequence.html#a821299743e342f028cf7cff51289e3cf">num_mutations</a> () const</td></tr>
-<tr class="memdesc:a821299743e342f028cf7cff51289e3cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns how many mutations are present in this sequence. <br /></td></tr>
-<tr class="separator:a821299743e342f028cf7cff51289e3cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56331a5a1495bbe08904b9b690825dc4"><td class="memItemLeft" align="right" valign="top"><a id="a56331a5a1495bbe08904b9b690825dc4"></a>
+<a class="el" href="constants_8h.html#abcd18a5521fc90ff6e7b00e4fee98397">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1Sequence.html#a56331a5a1495bbe08904b9b690825dc4">num_mutations</a> () const</td></tr>
+<tr class="memdesc:a56331a5a1495bbe08904b9b690825dc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns how many mutations are present in this sequence. <br /></td></tr>
+<tr class="separator:a56331a5a1495bbe08904b9b690825dc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71ce8dc60f882b4945993603f7ed677f"><td class="memItemLeft" align="right" valign="top"><a id="a71ce8dc60f882b4945993603f7ed677f"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1Sequence.html#a71ce8dc60f882b4945993603f7ed677f">init_seq_similarity</a> () const</td></tr>
+<tr class="memdesc:a71ce8dc60f882b4945993603f7ed677f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns sequence similarity to initial sequence. <br /></td></tr>
+<tr class="separator:a71ce8dc60f882b4945993603f7ed677f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:aba3432661c3c8e33fd8f9c426af258f7"><td class="memItemLeft" align="right" valign="top"><a id="aba3432661c3c8e33fd8f9c426af258f7"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1Sequence.html#aba3432661c3c8e33fd8f9c426af258f7">Sequence</a> (<a class="el" href="classrcombinator_1_1Sequence.html">Sequence</a> const &amp;)=delete</td></tr>
+<tr class="memdesc:aba3432661c3c8e33fd8f9c426af258f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete copy constructors as we want tags to be unique. <br /></td></tr>
+<tr class="separator:aba3432661c3c8e33fd8f9c426af258f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f692c108ad7fbeeaee3ed65493741ee"><td class="memItemLeft" align="right" valign="top"><a id="a4f692c108ad7fbeeaee3ed65493741ee"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classrcombinator_1_1Sequence.html">Sequence</a> const &amp;)=delete</td></tr>
+<tr class="separator:a4f692c108ad7fbeeaee3ed65493741ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:a31b69c2dc9a3cd9176eb5714bb9bedd4"><td class="memItemLeft" align="right" valign="top"><a id="a31b69c2dc9a3cd9176eb5714bb9bedd4"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1Sequence.html#a31b69c2dc9a3cd9176eb5714bb9bedd4">Sequence</a> (<a class="el" href="classrcombinator_1_1Sequence.html">Sequence</a> &amp;&amp;)=default</td></tr>
+<tr class="memdesc:a31b69c2dc9a3cd9176eb5714bb9bedd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">But make the objects moveable, to create containers of them. <br /></td></tr>
+<tr class="separator:a31b69c2dc9a3cd9176eb5714bb9bedd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0313d7dcc8da8d3a15084e313a386b5b"><td class="memItemLeft" align="right" valign="top"><a id="a0313d7dcc8da8d3a15084e313a386b5b"></a>
+<a class="el" href="classrcombinator_1_1Sequence.html">Sequence</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classrcombinator_1_1Sequence.html">Sequence</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:a0313d7dcc8da8d3a15084e313a386b5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:ad4791ec3cefbea417081cd349ac6c23b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1Sequence.html#ad4791ec3cefbea417081cd349ac6c23b">renumber_sequences</a> (<a class="el" href="constants_8h.html#a3e6daf1646e952257330d8cfe20e96f8">tag_type</a> new_start_tag)</td></tr>
+<tr class="memdesc:ad4791ec3cefbea417081cd349ac6c23b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Explicitly update the global sequence count to start from a particular number.  <a href="#ad4791ec3cefbea417081cd349ac6c23b">More...</a><br /></td></tr>
+<tr class="separator:ad4791ec3cefbea417081cd349ac6c23b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:ad664cb632dff588e181b90250642d32d"><td class="memItemLeft" align="right" valign="top"><a id="ad664cb632dff588e181b90250642d32d"></a>
+static const <a class="el" href="constants_8h.html#a3e6daf1646e952257330d8cfe20e96f8">tag_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1Sequence.html#ad664cb632dff588e181b90250642d32d">RAND</a> = -10</td></tr>
+<tr class="memdesc:ad664cb632dff588e181b90250642d32d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This sequence was created randomly. <br /></td></tr>
+<tr class="separator:ad664cb632dff588e181b90250642d32d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ea5c3181fcb056ed3f0ab0a758f89a9"><td class="memItemLeft" align="right" valign="top"><a id="a2ea5c3181fcb056ed3f0ab0a758f89a9"></a>
+static const <a class="el" href="constants_8h.html#a3e6daf1646e952257330d8cfe20e96f8">tag_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1Sequence.html#a2ea5c3181fcb056ed3f0ab0a758f89a9">INIT</a> = -20</td></tr>
+<tr class="memdesc:a2ea5c3181fcb056ed3f0ab0a758f89a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">This sequence was created from a specified string. <br /></td></tr>
+<tr class="separator:a2ea5c3181fcb056ed3f0ab0a758f89a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
 Private Types</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a95c6d1eea79f9551118a4c988433e5b7"><td class="memItemLeft" align="right" valign="top">typedef std::unordered_map&lt; long, char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1Sequence.html#a95c6d1eea79f9551118a4c988433e5b7">mutations_type</a></td></tr>
-<tr class="memdesc:a95c6d1eea79f9551118a4c988433e5b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Basic typedefs - hashed data structures for quick lookup.  <a href="#a95c6d1eea79f9551118a4c988433e5b7">More...</a><br /></td></tr>
-<tr class="separator:a95c6d1eea79f9551118a4c988433e5b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5b0638255a262292d6f4bb31367fc90"><td class="memItemLeft" align="right" valign="top"><a id="ae5b0638255a262292d6f4bb31367fc90"></a>
-typedef std::unordered_set&lt; long &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>lethal_mutations_type</b></td></tr>
-<tr class="separator:ae5b0638255a262292d6f4bb31367fc90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4adff5141a0bf95a89b350ef5008000d"><td class="memItemLeft" align="right" valign="top">typedef std::unordered_map&lt; <a class="el" href="constants_8h.html#a3e6daf1646e952257330d8cfe20e96f8">tag_type</a>, char &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1Sequence.html#a4adff5141a0bf95a89b350ef5008000d">mutations_type</a></td></tr>
+<tr class="memdesc:a4adff5141a0bf95a89b350ef5008000d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Basic typedefs - hashed data structures for quick lookup.  <a href="#a4adff5141a0bf95a89b350ef5008000d">More...</a><br /></td></tr>
+<tr class="separator:a4adff5141a0bf95a89b350ef5008000d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0452804550c0e3008809f1e507aa761e"><td class="memItemLeft" align="right" valign="top"><a id="a0452804550c0e3008809f1e507aa761e"></a>
+typedef std::unordered_set&lt; <a class="el" href="constants_8h.html#a3e6daf1646e952257330d8cfe20e96f8">tag_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>lethal_mutations_type</b></td></tr>
+<tr class="separator:a0452804550c0e3008809f1e507aa761e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a9ee9c6d8eec0a284a4a02d813ea5ea76"><td class="memItemLeft" align="right" valign="top"><a id="a9ee9c6d8eec0a284a4a02d813ea5ea76"></a>
+std::pair&lt; bool, bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1Sequence.html#a9ee9c6d8eec0a284a4a02d813ea5ea76">bits_at</a> (<a class="el" href="constants_8h.html#abcd18a5521fc90ff6e7b00e4fee98397">size_type</a> n) const</td></tr>
+<tr class="memdesc:a9ee9c6d8eec0a284a4a02d813ea5ea76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the 2bit encoding for a base at a given position. <br /></td></tr>
+<tr class="separator:a9ee9c6d8eec0a284a4a02d813ea5ea76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a9f9a2f4654d8b0e0cdb3061b9e0775d7"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1Sequence.html#a9f9a2f4654d8b0e0cdb3061b9e0775d7">tag</a></td></tr>
-<tr class="memdesc:a9f9a2f4654d8b0e0cdb3061b9e0775d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">A number that uniquely identifies this sequence.  <a href="#a9f9a2f4654d8b0e0cdb3061b9e0775d7">More...</a><br /></td></tr>
-<tr class="separator:a9f9a2f4654d8b0e0cdb3061b9e0775d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f20589d14483addafdc75aa9448c2a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="constants_8h.html#a3e6daf1646e952257330d8cfe20e96f8">tag_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1Sequence.html#a6f20589d14483addafdc75aa9448c2a2">tag</a></td></tr>
+<tr class="memdesc:a6f20589d14483addafdc75aa9448c2a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">A number that uniquely identifies this sequence.  <a href="#a6f20589d14483addafdc75aa9448c2a2">More...</a><br /></td></tr>
+<tr class="separator:a6f20589d14483addafdc75aa9448c2a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81a264faf65b131fe857511680b5aa25"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="constants_8h.html#a3e6daf1646e952257330d8cfe20e96f8">tag_type</a>, <a class="el" href="constants_8h.html#a3e6daf1646e952257330d8cfe20e96f8">tag_type</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1Sequence.html#a81a264faf65b131fe857511680b5aa25">parent_tags</a></td></tr>
+<tr class="memdesc:a81a264faf65b131fe857511680b5aa25"><td class="mdescLeft">&#160;</td><td class="mdescRight">The parent tags that this sequence was created from.  <a href="#a81a264faf65b131fe857511680b5aa25">More...</a><br /></td></tr>
+<tr class="separator:a81a264faf65b131fe857511680b5aa25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab37aa0bdc97b3d923407e3a7e17b3209"><td class="memItemLeft" align="right" valign="top">std::vector&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1Sequence.html#ab37aa0bdc97b3d923407e3a7e17b3209">bases</a></td></tr>
 <tr class="memdesc:ab37aa0bdc97b3d923407e3a7e17b3209"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actual sequence of nucleotides.  <a href="#ab37aa0bdc97b3d923407e3a7e17b3209">More...</a><br /></td></tr>
 <tr class="separator:ab37aa0bdc97b3d923407e3a7e17b3209"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8aac49ef635b95fe0088e5fb59e2bce7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classrcombinator_1_1Sequence.html#a95c6d1eea79f9551118a4c988433e5b7">mutations_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1Sequence.html#a8aac49ef635b95fe0088e5fb59e2bce7">mutations</a></td></tr>
+<tr class="memitem:a8aac49ef635b95fe0088e5fb59e2bce7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classrcombinator_1_1Sequence.html#a4adff5141a0bf95a89b350ef5008000d">mutations_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1Sequence.html#a8aac49ef635b95fe0088e5fb59e2bce7">mutations</a></td></tr>
 <tr class="memdesc:a8aac49ef635b95fe0088e5fb59e2bce7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Positions of mutations and what the <em>original</em> nucleotide was.  <a href="#a8aac49ef635b95fe0088e5fb59e2bce7">More...</a><br /></td></tr>
 <tr class="separator:a8aac49ef635b95fe0088e5fb59e2bce7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abbef2567c1f68239c80769db85455b00"><td class="memItemLeft" align="right" valign="top">lethal_mutations_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1Sequence.html#abbef2567c1f68239c80769db85455b00">lethal_mutations</a></td></tr>
@@ -151,22 +199,32 @@ Private Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
-<tr class="memitem:abb45023862671bbc450bdea543e72165"><td class="memItemLeft" align="right" valign="top">static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1Sequence.html#abb45023862671bbc450bdea543e72165">global_sequence_count</a> = 0</td></tr>
-<tr class="memdesc:abb45023862671bbc450bdea543e72165"><td class="mdescLeft">&#160;</td><td class="mdescRight">An internal counter that is incremented every time a sequence is created.  <a href="#abb45023862671bbc450bdea543e72165">More...</a><br /></td></tr>
-<tr class="separator:abb45023862671bbc450bdea543e72165"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80eb0a06612458d27aeafcb3c526f324"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="constants_8h.html#a3e6daf1646e952257330d8cfe20e96f8">tag_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1Sequence.html#a80eb0a06612458d27aeafcb3c526f324">global_sequence_count</a> = -1</td></tr>
+<tr class="memdesc:a80eb0a06612458d27aeafcb3c526f324"><td class="mdescLeft">&#160;</td><td class="mdescRight">An internal counter that is incremented every time a sequence is created.  <a href="#a80eb0a06612458d27aeafcb3c526f324">More...</a><br /></td></tr>
+<tr class="separator:a80eb0a06612458d27aeafcb3c526f324"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:abdc71a8f6617dcb6ab73f0e07eb63b67"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1Sequence.html#abdc71a8f6617dcb6ab73f0e07eb63b67">operator*</a> (const <a class="el" href="classrcombinator_1_1Sequence.html">Sequence</a> &amp;s1, const <a class="el" href="classrcombinator_1_1Sequence.html">Sequence</a> &amp;s2)</td></tr>
-<tr class="memdesc:abdc71a8f6617dcb6ab73f0e07eb63b67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes pairwise distances between two sequences.  <a href="#abdc71a8f6617dcb6ab73f0e07eb63b67">More...</a><br /></td></tr>
-<tr class="separator:abdc71a8f6617dcb6ab73f0e07eb63b67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:a8cd9dc2cfea97399387e2876ee028c32"><td class="memItemLeft" align="right" valign="top"><a class="el" href="constants_8h.html#abcd18a5521fc90ff6e7b00e4fee98397">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1Sequence.html#a8cd9dc2cfea97399387e2876ee028c32">operator*</a> (const <a class="el" href="classrcombinator_1_1Sequence.html">Sequence</a> &amp;s1, const <a class="el" href="classrcombinator_1_1Sequence.html">Sequence</a> &amp;s2)</td></tr>
+<tr class="memdesc:a8cd9dc2cfea97399387e2876ee028c32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes pairwise distances between two sequences.  <a href="#a8cd9dc2cfea97399387e2876ee028c32">More...</a><br /></td></tr>
+<tr class="separator:a8cd9dc2cfea97399387e2876ee028c32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdd1af7009804b182798c40d25bb1bb5"><td class="memItemLeft" align="right" valign="top"><a id="afdd1af7009804b182798c40d25bb1bb5"></a>
+<a class="el" href="constants_8h.html#abcd18a5521fc90ff6e7b00e4fee98397">size_type</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator*</b> (const <a class="el" href="classrcombinator_1_1Sequence.html">Sequence</a> &amp;s1, std::string s2)</td></tr>
+<tr class="separator:afdd1af7009804b182798c40d25bb1bb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a951eb38b75bb0b9a808e3a8bc7170a09"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrcombinator_1_1Sequence.html#a951eb38b75bb0b9a808e3a8bc7170a09">operator%</a> (const <a class="el" href="classrcombinator_1_1Sequence.html">Sequence</a> &amp;s1, const <a class="el" href="classrcombinator_1_1Sequence.html">Sequence</a> &amp;s2)</td></tr>
+<tr class="memdesc:a951eb38b75bb0b9a808e3a8bc7170a09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pairwise sequence dissimilarity (as a percentage).  <a href="#a951eb38b75bb0b9a808e3a8bc7170a09">More...</a><br /></td></tr>
+<tr class="separator:a951eb38b75bb0b9a808e3a8bc7170a09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56fd21ad6db6a3cb7f7f4b9b5b6c84ea"><td class="memItemLeft" align="right" valign="top"><a id="a56fd21ad6db6a3cb7f7f4b9b5b6c84ea"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>operator%</b> (const <a class="el" href="classrcombinator_1_1Sequence.html">Sequence</a> &amp;s1, std::string s2)</td></tr>
+<tr class="separator:a56fd21ad6db6a3cb7f7f4b9b5b6c84ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>To represent a DNA sequence and the mutations that it has undergone. </p>
 <p>Keeps track of the actual sequence, mutations and lethal mutations. </p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a95c6d1eea79f9551118a4c988433e5b7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a95c6d1eea79f9551118a4c988433e5b7">&#9670;&nbsp;</a></span>mutations_type</h2>
+<a id="a4adff5141a0bf95a89b350ef5008000d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4adff5141a0bf95a89b350ef5008000d">&#9670;&nbsp;</a></span>mutations_type</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -175,7 +233,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::unordered_map&lt;long, char&gt; <a class="el" href="classrcombinator_1_1Sequence.html#a95c6d1eea79f9551118a4c988433e5b7">rcombinator::Sequence::mutations_type</a></td>
+          <td class="memname">typedef std::unordered_map&lt;<a class="el" href="constants_8h.html#a3e6daf1646e952257330d8cfe20e96f8">tag_type</a>, char&gt; <a class="el" href="classrcombinator_1_1Sequence.html#a4adff5141a0bf95a89b350ef5008000d">rcombinator::Sequence::mutations_type</a></td>
         </tr>
       </table>
   </td>
@@ -191,8 +249,8 @@ Friends</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="afab8bafaf1283f4e699ba9111ee452b3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afab8bafaf1283f4e699ba9111ee452b3">&#9670;&nbsp;</a></span>Sequence() <span class="overload">[1/3]</span></h2>
+<a id="a04d0d6977316f2ab30844e584c4531ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04d0d6977316f2ab30844e584c4531ec">&#9670;&nbsp;</a></span>Sequence() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -200,7 +258,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">Sequence::Sequence </td>
           <td>(</td>
-          <td class="paramtype">long&#160;</td>
+          <td class="paramtype"><a class="el" href="constants_8h.html#abcd18a5521fc90ff6e7b00e4fee98397">size_type</a>&#160;</td>
           <td class="paramname"><em>n</em></td><td>)</td>
           <td></td>
         </tr>
@@ -212,8 +270,8 @@ Friends</h2></td></tr>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classrcombinator_1_1Sequence_afab8bafaf1283f4e699ba9111ee452b3_cgraph.png" border="0" usemap="#classrcombinator_1_1Sequence_afab8bafaf1283f4e699ba9111ee452b3_cgraph" alt=""/></div>
-<map name="classrcombinator_1_1Sequence_afab8bafaf1283f4e699ba9111ee452b3_cgraph" id="classrcombinator_1_1Sequence_afab8bafaf1283f4e699ba9111ee452b3_cgraph">
+<div class="center"><img src="classrcombinator_1_1Sequence_a04d0d6977316f2ab30844e584c4531ec_cgraph.png" border="0" usemap="#classrcombinator_1_1Sequence_a04d0d6977316f2ab30844e584c4531ec_cgraph" alt=""/></div>
+<map name="classrcombinator_1_1Sequence_a04d0d6977316f2ab30844e584c4531ec_cgraph" id="classrcombinator_1_1Sequence_a04d0d6977316f2ab30844e584c4531ec_cgraph">
 <area shape="rect" id="node2" href="classrcombinator_1_1RandMaths.html#a4f82863502ca04438a331fd309ca8b5e" title="Generates a random true/false value. " alt="" coords="225,5,407,47"/>
 </map>
 </div>
@@ -249,8 +307,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a976b331689ec55d9d306281bbff5d22d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a976b331689ec55d9d306281bbff5d22d">&#9670;&nbsp;</a></span>Sequence() <span class="overload">[3/3]</span></h2>
+<a id="af334c44bea806196b5037e61b0e831b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af334c44bea806196b5037e61b0e831b1">&#9670;&nbsp;</a></span>Sequence() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -258,19 +316,19 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">Sequence::Sequence </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classrcombinator_1_1Sequence.html">Sequence</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classrcombinator_1_1Sequence.html">Sequence</a> &amp;&#160;</td>
           <td class="paramname"><em>s1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classrcombinator_1_1Sequence.html">Sequence</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classrcombinator_1_1Sequence.html">Sequence</a> &amp;&#160;</td>
           <td class="paramname"><em>s2</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype"><a class="el" href="constants_8h.html#abcd18a5521fc90ff6e7b00e4fee98397">size_type</a>&#160;</td>
           <td class="paramname"><em>num_template_switches</em>&#160;</td>
         </tr>
         <tr>
@@ -284,22 +342,59 @@ Here is the call graph for this function:</div>
 <p>Constructs a sequence from recombining two other sequences. </p>
 <p>The number of template switches has to be specified, and the positions at which the template switches are made is random.</p>
 <p>The mutations recorded are with respect to the original sequences. That is, the new sequence <em>s_new</em> will have a mutation <em>m</em> at position <em>l</em> if and only if the sequence <em>s_old</em> whose nucleotide is used for <em>s_new</em> at position <em>l</em> had mutation <em>m</em> present at that position.</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000010">Todo:</a></b></dt><dd>Add an option for specifying the positions of the template switches too, or overload this function. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>Add an option for specifying the positions of the template switches too, or overload this function. </dd></dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classrcombinator_1_1Sequence_a976b331689ec55d9d306281bbff5d22d_cgraph.png" border="0" usemap="#classrcombinator_1_1Sequence_a976b331689ec55d9d306281bbff5d22d_cgraph" alt=""/></div>
-<map name="classrcombinator_1_1Sequence_a976b331689ec55d9d306281bbff5d22d_cgraph" id="classrcombinator_1_1Sequence_a976b331689ec55d9d306281bbff5d22d_cgraph">
-<area shape="rect" id="node2" href="classrcombinator_1_1RandMaths.html#ae417da209eb8a9d1b2217e7a5397926c" title="Generates a random integer within a range. " alt="" coords="496,36,677,77"/>
-<area shape="rect" id="node3" href="classrcombinator_1_1Sequence.html#a690c3f7adffafdf45056b5ae632c515d" title="Returns length of the sequence. " alt="" coords="251,32,423,73"/>
-<area shape="rect" id="node4" href="classrcombinator_1_1RandMaths.html#a2c31949c9ac03952cb0006e6a88e3d85" title="Samples m integers within a range, without replacement. " alt="" coords="225,97,448,139"/>
-<area shape="rect" id="node5" href="namespacercombinator_1_1Utils.html#aa38fa31292dbf3a06522dc76b20e2572" title="Checks whether a number lies within a range. " alt="" coords="267,163,406,204"/>
+<div class="center"><img src="classrcombinator_1_1Sequence_af334c44bea806196b5037e61b0e831b1_cgraph.png" border="0" usemap="#classrcombinator_1_1Sequence_af334c44bea806196b5037e61b0e831b1_cgraph" alt=""/></div>
+<map name="classrcombinator_1_1Sequence_af334c44bea806196b5037e61b0e831b1_cgraph" id="classrcombinator_1_1Sequence_af334c44bea806196b5037e61b0e831b1_cgraph">
+<area shape="rect" id="node2" href="classrcombinator_1_1Sequence.html#a6084bc8134a677e6e30fb7c1be1df978" title="Returns the unique label for this sequence. " alt="" coords="251,5,423,47"/>
+<area shape="rect" id="node3" href="classrcombinator_1_1RandMaths.html#a8072bad64e64ef042e5257e1bee85635" title="Generates a random integer within a range. " alt="" coords="496,127,677,168"/>
+<area shape="rect" id="node4" href="classrcombinator_1_1Sequence.html#a743beee42a3f42eb30e0988016d74bb4" title="Returns length of the sequence. " alt="" coords="251,123,423,164"/>
+<area shape="rect" id="node5" href="classrcombinator_1_1RandMaths.html#a6a7fe159f46afec51d997e4d07d2cfe6" title="Samples m integers within a range, without replacement. " alt="" coords="225,188,448,229"/>
+<area shape="rect" id="node6" href="namespacercombinator_1_1Utils.html#a2693553db4ed242f1488e6c9fd491692" title="Checks whether a number lies within a range. " alt="" coords="267,253,406,295"/>
 </map>
 </div>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac2b82b11141c68a065d05c02c6ea3a58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2b82b11141c68a065d05c02c6ea3a58">&#9670;&nbsp;</a></span>get_parent_tags()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt;<a class="el" href="constants_8h.html#a3e6daf1646e952257330d8cfe20e96f8">tag_type</a>, <a class="el" href="constants_8h.html#a3e6daf1646e952257330d8cfe20e96f8">tag_type</a>&gt; rcombinator::Sequence::get_parent_tags </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the tags of the sequences that this sequence was created from. </p>
+<p>See the definition of parent_tags for more details. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classrcombinator_1_1Sequence_ac2b82b11141c68a065d05c02c6ea3a58_icgraph.png" border="0" usemap="#classrcombinator_1_1Sequence_ac2b82b11141c68a065d05c02c6ea3a58_icgraph" alt=""/></div>
+<map name="classrcombinator_1_1Sequence_ac2b82b11141c68a065d05c02c6ea3a58_icgraph" id="classrcombinator_1_1Sequence_ac2b82b11141c68a065d05c02c6ea3a58_icgraph">
+<area shape="rect" id="node2" href="test__sequence_8h.html#a5cb51839bd3abebc3375b555ec6462dd" title="Tests the Sequence class. " alt="" coords="225,29,428,56"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a5af66ddd3c8bc05307b56737c56060bf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5af66ddd3c8bc05307b56737c56060bf">&#9670;&nbsp;</a></span>is_active()</h2>
 
@@ -325,11 +420,20 @@ Here is the call graph for this function:</div>
 
 <p>Tests whether this sequence is active (can transpose) or not. </p>
 <p>Returns true if and only if there are no lethal mutations. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classrcombinator_1_1Sequence_a5af66ddd3c8bc05307b56737c56060bf_icgraph.png" border="0" usemap="#classrcombinator_1_1Sequence_a5af66ddd3c8bc05307b56737c56060bf_icgraph" alt=""/></div>
+<map name="classrcombinator_1_1Sequence_a5af66ddd3c8bc05307b56737c56060bf_icgraph" id="classrcombinator_1_1Sequence_a5af66ddd3c8bc05307b56737c56060bf_icgraph">
+<area shape="rect" id="node2" href="test__point__mutator_8h.html#a2853d097c1b068f0a631ece5eab08154" title="Tests PointMutator. " alt="" coords="239,29,414,71"/>
+<area shape="rect" id="node3" href="test__sequence_8h.html#a5cb51839bd3abebc3375b555ec6462dd" title="Tests the Sequence class. " alt="" coords="225,119,428,146"/>
+</map>
+</div>
 
 </div>
 </div>
-<a id="a5f7bccd4725bb8c46f6b93bd01a6b2f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5f7bccd4725bb8c46f6b93bd01a6b2f0">&#9670;&nbsp;</a></span>point_mutate()</h2>
+<a id="a85299c3dbf2efb993a43acc2e42fcb00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85299c3dbf2efb993a43acc2e42fcb00">&#9670;&nbsp;</a></span>point_mutate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -337,7 +441,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">void Sequence::point_mutate </td>
           <td>(</td>
-          <td class="paramtype">long&#160;</td>
+          <td class="paramtype"><a class="el" href="constants_8h.html#abcd18a5521fc90ff6e7b00e4fee98397">size_type</a>&#160;</td>
           <td class="paramname"><em>n</em>, </td>
         </tr>
         <tr>
@@ -365,28 +469,32 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classrcombinator_1_1Sequence_a5f7bccd4725bb8c46f6b93bd01a6b2f0_cgraph.png" border="0" usemap="#classrcombinator_1_1Sequence_a5f7bccd4725bb8c46f6b93bd01a6b2f0_cgraph" alt=""/></div>
-<map name="classrcombinator_1_1Sequence_a5f7bccd4725bb8c46f6b93bd01a6b2f0_cgraph" id="classrcombinator_1_1Sequence_a5f7bccd4725bb8c46f6b93bd01a6b2f0_cgraph">
-<area shape="rect" id="node2" href="classrcombinator_1_1Sequence.html#a19672a1fbefcdf0c317fddb177f80a15" title="Returns the character for a base at a given position. " alt="" coords="225,37,397,79"/>
+<div class="center"><img src="classrcombinator_1_1Sequence_a85299c3dbf2efb993a43acc2e42fcb00_cgraph.png" border="0" usemap="#classrcombinator_1_1Sequence_a85299c3dbf2efb993a43acc2e42fcb00_cgraph" alt=""/></div>
+<map name="classrcombinator_1_1Sequence_a85299c3dbf2efb993a43acc2e42fcb00_cgraph" id="classrcombinator_1_1Sequence_a85299c3dbf2efb993a43acc2e42fcb00_cgraph">
+<area shape="rect" id="node2" href="classrcombinator_1_1Sequence.html#a5f8b25d42af4aaf2463b4d2bdf3f023a" title="Returns the character for a base at a given position. " alt="" coords="225,37,397,79"/>
 <area shape="rect" id="node5" href="namespacercombinator_1_1Consts.html#ab38bb458e46ca910f572862145ca2948" title="Returns the 2bit&#45;encoding of a nucleotide given its character form. " alt="" coords="235,103,388,144"/>
 <area shape="rect" id="node3" href="namespacercombinator_1_1Consts.html#acebf7c5a777e8d06bd20142a969bc606" title="Returns the character of a nucleotide given its 2bit&#45;encoding. " alt="" coords="455,5,608,47"/>
-<area shape="rect" id="node4" href="classrcombinator_1_1Sequence.html#a1367e984a24069fb18f4eb85f5c55dbb" title="Returns the 2bit encoding for a base at a given position. " alt="" coords="445,71,617,112"/>
+<area shape="rect" id="node4" href="classrcombinator_1_1Sequence.html#a9ee9c6d8eec0a284a4a02d813ea5ea76" title="Returns the 2bit encoding for a base at a given position. " alt="" coords="445,71,617,112"/>
 </map>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classrcombinator_1_1Sequence_a5f7bccd4725bb8c46f6b93bd01a6b2f0_icgraph.png" border="0" usemap="#classrcombinator_1_1Sequence_a5f7bccd4725bb8c46f6b93bd01a6b2f0_icgraph" alt=""/></div>
-<map name="classrcombinator_1_1Sequence_a5f7bccd4725bb8c46f6b93bd01a6b2f0_icgraph" id="classrcombinator_1_1Sequence_a5f7bccd4725bb8c46f6b93bd01a6b2f0_icgraph">
-<area shape="rect" id="node2" href="classrcombinator_1_1PointMutator.html#aba3c2b8641affe8a06d815c33cafdc1b" title="Mutates a sequence according to a given transition matrix. " alt="" coords="225,5,417,47"/>
+<div class="center"><img src="classrcombinator_1_1Sequence_a85299c3dbf2efb993a43acc2e42fcb00_icgraph.png" border="0" usemap="#classrcombinator_1_1Sequence_a85299c3dbf2efb993a43acc2e42fcb00_icgraph" alt=""/></div>
+<map name="classrcombinator_1_1Sequence_a85299c3dbf2efb993a43acc2e42fcb00_icgraph" id="classrcombinator_1_1Sequence_a85299c3dbf2efb993a43acc2e42fcb00_icgraph">
+<area shape="rect" id="node2" href="classrcombinator_1_1PointMutator.html#aba3c2b8641affe8a06d815c33cafdc1b" title="Mutates a sequence according to a given transition matrix. " alt="" coords="231,96,423,137"/>
+<area shape="rect" id="node7" href="test__sequence_8h.html#a5cb51839bd3abebc3375b555ec6462dd" title="Tests the Sequence class. " alt="" coords="225,186,428,213"/>
+<area shape="rect" id="node3" href="classrcombinator_1_1Evolution.html#a0b8a181242ea8ee3072258fa7ed416f4" title="Run a simulation, modify the sequences, and output results to file. " alt="" coords="478,51,649,92"/>
+<area shape="rect" id="node6" href="test__point__mutator_8h.html#a2853d097c1b068f0a631ece5eab08154" title="Tests PointMutator. " alt="" coords="476,140,651,181"/>
+<area shape="rect" id="node4" href="classrcombinator_1_1EvolutionWithoutFlags.html#a9e27b532826998a88d2c157daf53c447" title="Overrides to create a copy number tree if it hasn&#39;t already been created. " alt="" coords="699,5,920,47"/>
+<area shape="rect" id="node5" href="test__evolution__with__flags_8h.html#a2d63c076cc4d62869e4ed031a81bebca" title="Tests EvolutionWithFlags. " alt="" coords="708,95,911,136"/>
 </map>
 </div>
 
 </div>
 </div>
-<h2 class="groupheader">Friends And Related Function Documentation</h2>
-<a id="abdc71a8f6617dcb6ab73f0e07eb63b67"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abdc71a8f6617dcb6ab73f0e07eb63b67">&#9670;&nbsp;</a></span>operator*</h2>
+<a id="ad4791ec3cefbea417081cd349ac6c23b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4791ec3cefbea417081cd349ac6c23b">&#9670;&nbsp;</a></span>renumber_sequences()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -395,7 +503,89 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">long operator* </td>
+          <td class="memname">void Sequence::renumber_sequences </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="constants_8h.html#a3e6daf1646e952257330d8cfe20e96f8">tag_type</a>&#160;</td>
+          <td class="paramname"><em>new_start_tag</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Explicitly update the global sequence count to start from a particular number. </p>
+<p>new_start_tag will be given to the next sequence created. Used when running multiple simulations one after the other. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classrcombinator_1_1Sequence_ad4791ec3cefbea417081cd349ac6c23b_icgraph.png" border="0" usemap="#classrcombinator_1_1Sequence_ad4791ec3cefbea417081cd349ac6c23b_icgraph" alt=""/></div>
+<map name="classrcombinator_1_1Sequence_ad4791ec3cefbea417081cd349ac6c23b_icgraph" id="classrcombinator_1_1Sequence_ad4791ec3cefbea417081cd349ac6c23b_icgraph">
+<area shape="rect" id="node2" href="test__evolution__with__flags_8h.html#a2d63c076cc4d62869e4ed031a81bebca" title="Tests EvolutionWithFlags. " alt="" coords="225,29,428,71"/>
+<area shape="rect" id="node3" href="test__evolution__without__flags_8h.html#a7f1623c288c205cd37b50aa7fee2f7ac" title="Tests EvolutionWithoutFlags. " alt="" coords="225,119,428,160"/>
+<area shape="rect" id="node4" href="test__family_8h.html#a67f92ededd9e9bf552ea2a191180c2b5" title="Tests the Family class. " alt="" coords="235,209,418,235"/>
+<area shape="rect" id="node5" href="test__output_8h.html#a3a6099d97afa618b42b1719ebb7ff0da" title="Tests the Output class. " alt="" coords="235,283,418,310"/>
+<area shape="rect" id="node6" href="test__point__mutator_8h.html#a2853d097c1b068f0a631ece5eab08154" title="Tests PointMutator. " alt="" coords="239,359,414,400"/>
+<area shape="rect" id="node7" href="test__sequence_8h.html#a5cb51839bd3abebc3375b555ec6462dd" title="Tests the Sequence class. " alt="" coords="225,449,428,475"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="a951eb38b75bb0b9a808e3a8bc7170a09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a951eb38b75bb0b9a808e3a8bc7170a09">&#9670;&nbsp;</a></span>operator%</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double operator% </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classrcombinator_1_1Sequence.html">Sequence</a> &amp;&#160;</td>
+          <td class="paramname"><em>s1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classrcombinator_1_1Sequence.html">Sequence</a> &amp;&#160;</td>
+          <td class="paramname"><em>s2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pairwise sequence dissimilarity (as a percentage). </p>
+<p>Similarity is 100-dissimilarity. </p>
+
+</div>
+</div>
+<a id="a8cd9dc2cfea97399387e2876ee028c32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cd9dc2cfea97399387e2876ee028c32">&#9670;&nbsp;</a></span>operator*</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="constants_8h.html#abcd18a5521fc90ff6e7b00e4fee98397">size_type</a> operator* </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classrcombinator_1_1Sequence.html">Sequence</a> &amp;&#160;</td>
           <td class="paramname"><em>s1</em>, </td>
@@ -420,7 +610,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Computes pairwise distances between two sequences. </p>
-<p>This is the standard edit distance score, and is the number of mismatches (because insertions and deletions are not possible in this system). </p>
+<p>This is the standard edit distance score, and is the number of mismatches (because insertions and deletions are not possible in this system).Pairwise distances. Between two sequences or between a sequence and a string. </p>
 
 </div>
 </div>
@@ -450,8 +640,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="abb45023862671bbc450bdea543e72165"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abb45023862671bbc450bdea543e72165">&#9670;&nbsp;</a></span>global_sequence_count</h2>
+<a id="a80eb0a06612458d27aeafcb3c526f324"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80eb0a06612458d27aeafcb3c526f324">&#9670;&nbsp;</a></span>global_sequence_count</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -460,7 +650,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">long rcombinator::Sequence::global_sequence_count = 0</td>
+          <td class="memname"><a class="el" href="constants_8h.html#a3e6daf1646e952257330d8cfe20e96f8">tag_type</a> rcombinator::Sequence::global_sequence_count = -1</td>
         </tr>
       </table>
   </td>
@@ -510,7 +700,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classrcombinator_1_1Sequence.html#a95c6d1eea79f9551118a4c988433e5b7">mutations_type</a> rcombinator::Sequence::mutations</td>
+          <td class="memname"><a class="el" href="classrcombinator_1_1Sequence.html#a4adff5141a0bf95a89b350ef5008000d">mutations_type</a> rcombinator::Sequence::mutations</td>
         </tr>
       </table>
   </td>
@@ -525,8 +715,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a9f9a2f4654d8b0e0cdb3061b9e0775d7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9f9a2f4654d8b0e0cdb3061b9e0775d7">&#9670;&nbsp;</a></span>tag</h2>
+<a id="a81a264faf65b131fe857511680b5aa25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81a264faf65b131fe857511680b5aa25">&#9670;&nbsp;</a></span>parent_tags</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -535,7 +725,32 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">long rcombinator::Sequence::tag</td>
+          <td class="memname">std::pair&lt;<a class="el" href="constants_8h.html#a3e6daf1646e952257330d8cfe20e96f8">tag_type</a>, <a class="el" href="constants_8h.html#a3e6daf1646e952257330d8cfe20e96f8">tag_type</a>&gt; rcombinator::Sequence::parent_tags</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The parent tags that this sequence was created from. </p>
+<p>If this was created as Sequence(S1, S2), the tags are ordered as &lt;S1.get_tag(), S2.get_tag()&gt;. If this was created randomly, the tags are &lt;RAND, RAND&gt;. If this was created from a string, the tags are &lt;INIT, INIT&gt;. </p>
+
+</div>
+</div>
+<a id="a6f20589d14483addafdc75aa9448c2a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f20589d14483addafdc75aa9448c2a2">&#9670;&nbsp;</a></span>tag</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="constants_8h.html#a3e6daf1646e952257330d8cfe20e96f8">tag_type</a> rcombinator::Sequence::tag</td>
         </tr>
       </table>
   </td>

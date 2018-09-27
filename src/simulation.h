@@ -12,6 +12,9 @@
 
 namespace rcombinator
 {
+    /** Sets up and runs a simulation without flags.
+     *  Takes a specified set of initial sequences.
+     */
     void simulate_without_flags(
             std::vector<std::string> init_seqs, size_type init_seq_index,
             std::string point_mutation_model,
@@ -25,6 +28,9 @@ namespace rcombinator
             bool to_randomise, bool to_seed, size_type seed,
             size_type sequence_numbering, size_type family_numbering);
 
+    /** Sets up and runs a simulation with flags.
+     *  Takes a specified set of initial sequences.
+     */
     void simulate_with_flags(
             std::vector<std::string> init_seqs, size_type init_seq_index,
             std::string point_mutation_model,
@@ -41,6 +47,9 @@ namespace rcombinator
             bool to_randomise, bool to_seed, size_type seed,
             size_type sequence_numbering, size_type family_numbering);
 
+    /** Sets up and runs a simulation without flags.
+     *  Constructs initial sequences randomly.
+     */
     void simulate_without_flags(
             size_type num_seq, size_type seq_length,
             std::string point_mutation_model,
@@ -54,6 +63,9 @@ namespace rcombinator
             bool to_randomise, bool to_seed, size_type seed,
             size_type sequence_numbering, size_type family_numbering);
 
+    /** Sets up and runs a simulation with flags.
+     *  Constructs initial sequences randomly.
+     */
     void simulate_with_flags(
             size_type num_seq, size_type seq_length,
             std::string point_mutation_model,

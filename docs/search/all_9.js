@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['k80model',['K80Model',['../classrcombinator_1_1K80Model.html',1,'rcombinator::K80Model'],['../classrcombinator_1_1K80Model.html#a73baeeb9bbddfcd006e4642f28c95411',1,'rcombinator::K80Model::K80Model()']]]
+  ['jc69model',['JC69Model',['../classrcombinator_1_1JC69Model.html',1,'rcombinator::JC69Model'],['../classrcombinator_1_1JC69Model.html#ab28021c22ed997738e2eac2f280930a5',1,'rcombinator::JC69Model::JC69Model()']]]
 ];

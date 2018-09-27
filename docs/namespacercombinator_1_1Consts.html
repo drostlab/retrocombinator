@@ -68,13 +68,14 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#enum-members">Enumerations</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">rcombinator::Consts Namespace Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>To store all global constants that can be accessed from anywhere in the code.  
+<p>To store all constant values that we define.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
@@ -109,9 +110,31 @@ std::pair&lt; bool, bool &gt;&#160;</td><td class="memItemRight" valign="bottom"
 char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacercombinator_1_1Consts.html#acebf7c5a777e8d06bd20142a969bc606">NUC_BOOL2CHAR</a> (std::pair&lt; bool, bool &gt; bits)</td></tr>
 <tr class="memdesc:acebf7c5a777e8d06bd20142a969bc606"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the character of a nucleotide given its 2bit-encoding. <br /></td></tr>
 <tr class="separator:acebf7c5a777e8d06bd20142a969bc606"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a52bd90fa02fe1a2d01f1b38b195be714"><td class="memItemLeft" align="right" valign="top"><a id="a52bd90fa02fe1a2d01f1b38b195be714"></a>
+const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacercombinator_1_1Consts.html#a52bd90fa02fe1a2d01f1b38b195be714">DOUBLE_TOLERANCE</a> = pow(10.0, -8)</td></tr>
+<tr class="memdesc:a52bd90fa02fe1a2d01f1b38b195be714"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tolerance for double operations. <br /></td></tr>
+<tr class="separator:a52bd90fa02fe1a2d01f1b38b195be714"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7163f2df9e53340e78501c19f9dbe92"><td class="memItemLeft" align="right" valign="top"><a id="ab7163f2df9e53340e78501c19f9dbe92"></a>
+const <a class="el" href="constants_8h.html#a3e6daf1646e952257330d8cfe20e96f8">tag_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacercombinator_1_1Consts.html#ab7163f2df9e53340e78501c19f9dbe92">INIT_FAMILY_COUNT</a> = -1</td></tr>
+<tr class="memdesc:ab7163f2df9e53340e78501c19f9dbe92"><td class="mdescLeft">&#160;</td><td class="mdescRight">The family tag to represent initial sequences in a simulation. <br /></td></tr>
+<tr class="separator:ab7163f2df9e53340e78501c19f9dbe92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:af2e735f6e0661176144a8769131b8aa7"><td class="memItemLeft" align="right" valign="top"><a id="af2e735f6e0661176144a8769131b8aa7"></a>
+const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacercombinator_1_1Consts.html#af2e735f6e0661176144a8769131b8aa7">K80_K</a> = 10</td></tr>
+<tr class="memdesc:af2e735f6e0661176144a8769131b8aa7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defaults for different point mutation models. <br /></td></tr>
+<tr class="separator:af2e735f6e0661176144a8769131b8aa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8e3174f5a8da44816e1eaa07e382c80"><td class="memItemLeft" align="right" valign="top"><a id="ab8e3174f5a8da44816e1eaa07e382c80"></a>
+const double&#160;</td><td class="memItemRight" valign="bottom"><b>K80_SCALE</b> = 0.01</td></tr>
+<tr class="separator:ab8e3174f5a8da44816e1eaa07e382c80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad885bb45659383aa604820b9aa8d31d"><td class="memItemLeft" align="right" valign="top"><a id="aad885bb45659383aa604820b9aa8d31d"></a>
+const double&#160;</td><td class="memItemRight" valign="bottom"><b>JC69_SCALE</b> = 0.1</td></tr>
+<tr class="separator:aad885bb45659383aa604820b9aa8d31d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>To store all global constants that can be accessed from anywhere in the code. </p>
+<div class="textblock"><p>To store all constant values that we define. </p>
 <p>Stores biological constants and constants that are specific to the implementation of the simulation. </p>
 </div><h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="aaa096a23d1bc2fdb1992265192fae907"></a>
@@ -136,7 +159,7 @@ char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="name
 </td></tr>
 <tr><td class="fieldname"><a id="aaa096a23d1bc2fdb1992265192fae907a5020e318d196247b860e9fe541f74d33"></a>G&#160;</td><td class="fielddoc"><p>Guanine. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="aaa096a23d1bc2fdb1992265192fae907aa51005e405016569840eefdd20caf39b"></a>NUC_COUNT&#160;</td><td class="fielddoc"><p>Number of nucleotides, used as an upper bound for loops. </p>
+<tr><td class="fieldname"><a id="aaa096a23d1bc2fdb1992265192fae907aa51005e405016569840eefdd20caf39b"></a>NUC_COUNT&#160;</td><td class="fielddoc"><p>Number of nucleotides. </p>
 </td></tr>
 </table>
 

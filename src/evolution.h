@@ -9,6 +9,10 @@ namespace rcombinator
     class Output;
     class PointMutator;
 
+    /** An interface for simulating the evolution of sequences.
+     *  Provides basic functionality, all subclasses specialise some methods
+     *  provided by this class to add events/flags/copy trees etc.
+     */
     class Evolution
     {
     public:

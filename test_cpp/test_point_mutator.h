@@ -13,6 +13,7 @@
 
 namespace rcombinator
 {
+    /// Tests PointMutator
     int test_point_mutator()
     {
         try

@@ -7,7 +7,7 @@ Definitions of basic helper functions.
 
 {\ttfamily \#include $<$algorithm$>$}\newline
 {\ttfamily \#include $<$cmath$>$}\newline
-{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \char`\"{}constants.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}exception.\+h\char`\"{}}\newline
 Include dependency graph for utilities.\+h\+:\nopagebreak
 \begin{figure}[H]
@@ -16,11 +16,14 @@ Include dependency graph for utilities.\+h\+:\nopagebreak
 \includegraphics[width=350pt]{utilities_8h__incl}
 \end{center}
 \end{figure}
-\subsection*{Classes}
-\begin{DoxyCompactItemize}
-\item 
-struct \mbox{\hyperlink{structrcombinator_1_1Utils_1_1SummaryStats}{rcombinator\+::\+Utils\+::\+Summary\+Stats$<$ T, T\+\_\+cont $>$}}
-\begin{DoxyCompactList}\small\item\em Plain-\/\+Old-\/\+Data struct to store summary statistics for a list of values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{utilities_8h__dep__incl}
+\end{center}
+\end{figure}
 \subsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
@@ -29,8 +32,12 @@ struct \mbox{\hyperlink{structrcombinator_1_1Utils_1_1SummaryStats}{rcombinator\
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-bool \mbox{\hyperlink{namespacercombinator_1_1Utils_aa38fa31292dbf3a06522dc76b20e2572}{rcombinator\+::\+Utils\+::is\+\_\+in\+\_\+range}} (long test, long lb, long ub)
-\begin{DoxyCompactList}\small\item\em Checks whether a number lies within a range. \end{DoxyCompactList}\end{DoxyCompactItemize}
+bool \mbox{\hyperlink{namespacercombinator_1_1Utils_a2693553db4ed242f1488e6c9fd491692}{rcombinator\+::\+Utils\+::is\+\_\+in\+\_\+range}} (size\+\_\+type test, size\+\_\+type lb, size\+\_\+type ub)
+\begin{DoxyCompactList}\small\item\em Checks whether a number lies within a range. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{constants_8h_aa5d5324de5e3188e825da6a7a40df01d}{cluster\+\_\+type}} \mbox{\hyperlink{namespacercombinator_1_1Utils_a7dbf5072b1cc3d4756c46b4acdc59de9}{rcombinator\+::\+Utils\+::cluster}} (const \mbox{\hyperlink{constants_8h_a0d6ecb761af58b56a675077153fa9ba9}{dist\+\_\+type}} \&dist, \mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}} n)
+\begin{DoxyCompactList}\small\item\em Breaks a set into two clusters. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{namespacercombinator_1_1Utils_a948886c343b7c56fae8e1921dfa5114a}{rcombinator\+::\+Utils\+::cluster\+\_\+dist}} (const \mbox{\hyperlink{constants_8h_a0d6ecb761af58b56a675077153fa9ba9}{dist\+\_\+type}} \&dist, \mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}} n, const \mbox{\hyperlink{constants_8h_aa5d5324de5e3188e825da6a7a40df01d}{cluster\+\_\+type}} \&C1, const \mbox{\hyperlink{constants_8h_aa5d5324de5e3188e825da6a7a40df01d}{cluster\+\_\+type}} \&C2)
+\begin{DoxyCompactList}\small\item\em Computes the cluster distance between two clusters. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}

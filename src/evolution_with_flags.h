@@ -5,6 +5,10 @@
 
 namespace rcombinator
 {
+    /** A simulation where some sequences can become inactive over time.
+     *  A sequence becomes inactive if some sensitive positions are mutated. The
+     *  sequence is then 'flagged'.
+     */
     class EvolutionWithFlags : public Evolution
     {
     protected:

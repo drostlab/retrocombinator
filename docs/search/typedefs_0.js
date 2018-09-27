@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mutations_5ftype',['mutations_type',['../classrcombinator_1_1Sequence.html#a95c6d1eea79f9551118a4c988433e5b7',1,'rcombinator::Sequence']]]
+  ['cluster_5ftype',['cluster_type',['../constants_8h.html#aa5d5324de5e3188e825da6a7a40df01d',1,'rcombinator']]]
 ];

@@ -1,3 +1,9 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classrcombinator_1_1Sequence.html" title="To represent a DNA sequence and the mutations that it has undergone. " alt="" coords="5,5,177,32"/>
+<area shape="rect" id="node1" href="$classrcombinator_1_1PointMutationModel.html" title="To represent a model of DNA evolution through point mutations. " alt="" coords="5,23,204,65"/>
+<area shape="rect" id="node2" href="$classrcombinator_1_1GTRModel.html" title="General Time Reversible Model, Tavare 1986. " alt="" coords="252,31,427,57"/>
+<area shape="rect" id="node3" href="$classrcombinator_1_1T93Model.html" title="Tamura ane Nei 1983 Model. " alt="" coords="475,31,647,57"/>
+<area shape="rect" id="node4" href="$classrcombinator_1_1HKY85Model.html" title="Hasegawa, Kishino and Yano 1985 Model. " alt="" coords="695,31,885,57"/>
+<area shape="rect" id="node5" href="$classrcombinator_1_1F81Model.html" title="Felsenstein 1981 Model. " alt="" coords="935,5,1105,32"/>
+<area shape="rect" id="node6" href="$classrcombinator_1_1K80Model.html" title="Kimura 2 Parameter Model, 1980. " alt="" coords="933,56,1107,83"/>
+<area shape="rect" id="node7" href="$classrcombinator_1_1JC69Model.html" title="Jules and Cantor, 1969. " alt="" coords="1155,56,1332,83"/>
 </map>

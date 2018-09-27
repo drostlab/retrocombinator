@@ -12,6 +12,7 @@
 
 namespace rcombinator
 {
+    /// Tests the Family class
     int test_family()
     {
         try

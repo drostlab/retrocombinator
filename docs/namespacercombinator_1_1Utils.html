@@ -67,7 +67,6 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">rcombinator::Utils Namespace Reference</div>  </div>
@@ -77,23 +76,133 @@ $(function() {
 <p>To store some useful functions in a namespace and prevent conflicts.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrcombinator_1_1Utils_1_1SummaryStats.html">SummaryStats</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plain-Old-Data struct to store summary statistics for a list of values.  <a href="structrcombinator_1_1Utils_1_1SummaryStats.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aa38fa31292dbf3a06522dc76b20e2572"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacercombinator_1_1Utils.html#aa38fa31292dbf3a06522dc76b20e2572">is_in_range</a> (long test, long lb, long ub)</td></tr>
-<tr class="memdesc:aa38fa31292dbf3a06522dc76b20e2572"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether a number lies within a range.  <a href="#aa38fa31292dbf3a06522dc76b20e2572">More...</a><br /></td></tr>
-<tr class="separator:aa38fa31292dbf3a06522dc76b20e2572"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a948886c343b7c56fae8e1921dfa5114a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacercombinator_1_1Utils.html#a948886c343b7c56fae8e1921dfa5114a">cluster_dist</a> (const <a class="el" href="constants_8h.html#a0d6ecb761af58b56a675077153fa9ba9">dist_type</a> &amp;dist, <a class="el" href="constants_8h.html#abcd18a5521fc90ff6e7b00e4fee98397">size_type</a> n, const <a class="el" href="constants_8h.html#aa5d5324de5e3188e825da6a7a40df01d">cluster_type</a> &amp;C1, const <a class="el" href="constants_8h.html#aa5d5324de5e3188e825da6a7a40df01d">cluster_type</a> &amp;C2)</td></tr>
+<tr class="memdesc:a948886c343b7c56fae8e1921dfa5114a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the cluster distance between two clusters.  <a href="#a948886c343b7c56fae8e1921dfa5114a">More...</a><br /></td></tr>
+<tr class="separator:a948886c343b7c56fae8e1921dfa5114a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7dbf5072b1cc3d4756c46b4acdc59de9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="constants_8h.html#aa5d5324de5e3188e825da6a7a40df01d">cluster_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacercombinator_1_1Utils.html#a7dbf5072b1cc3d4756c46b4acdc59de9">cluster</a> (const <a class="el" href="constants_8h.html#a0d6ecb761af58b56a675077153fa9ba9">dist_type</a> &amp;dist, <a class="el" href="constants_8h.html#abcd18a5521fc90ff6e7b00e4fee98397">size_type</a> n)</td></tr>
+<tr class="memdesc:a7dbf5072b1cc3d4756c46b4acdc59de9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Breaks a set into two clusters.  <a href="#a7dbf5072b1cc3d4756c46b4acdc59de9">More...</a><br /></td></tr>
+<tr class="separator:a7dbf5072b1cc3d4756c46b4acdc59de9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2693553db4ed242f1488e6c9fd491692"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacercombinator_1_1Utils.html#a2693553db4ed242f1488e6c9fd491692">is_in_range</a> (<a class="el" href="constants_8h.html#abcd18a5521fc90ff6e7b00e4fee98397">size_type</a> test, <a class="el" href="constants_8h.html#abcd18a5521fc90ff6e7b00e4fee98397">size_type</a> lb, <a class="el" href="constants_8h.html#abcd18a5521fc90ff6e7b00e4fee98397">size_type</a> ub)</td></tr>
+<tr class="memdesc:a2693553db4ed242f1488e6c9fd491692"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether a number lies within a range.  <a href="#a2693553db4ed242f1488e6c9fd491692">More...</a><br /></td></tr>
+<tr class="separator:a2693553db4ed242f1488e6c9fd491692"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>To store some useful functions in a namespace and prevent conflicts. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="aa38fa31292dbf3a06522dc76b20e2572"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa38fa31292dbf3a06522dc76b20e2572">&#9670;&nbsp;</a></span>is_in_range()</h2>
+<a id="a7dbf5072b1cc3d4756c46b4acdc59de9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7dbf5072b1cc3d4756c46b4acdc59de9">&#9670;&nbsp;</a></span>cluster()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="constants_8h.html#aa5d5324de5e3188e825da6a7a40df01d">cluster_type</a> rcombinator::Utils::cluster </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="constants_8h.html#a0d6ecb761af58b56a675077153fa9ba9">dist_type</a> &amp;&#160;</td>
+          <td class="paramname"><em>dist</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="constants_8h.html#abcd18a5521fc90ff6e7b00e4fee98397">size_type</a>&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Breaks a set into two clusters. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>the number of data points </td></tr>
+    <tr><td class="paramname">dist</td><td>the nXn distance matrix between the data points Takes a distance matrix D, where D(i, j) is the distance between i and j, with D(i, i) being 0 for all i. Returns a vector of indices that belong to the first cluster (the second cluster corresponds to everything else).</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Algorithm: Start with n clusters Compute the cluster distance between all pairs of clusters Where cluster distance is: average distance of points from one cluster to the other Pick the two closest clusters, and merge them </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacercombinator_1_1Utils_a7dbf5072b1cc3d4756c46b4acdc59de9_cgraph.png" border="0" usemap="#namespacercombinator_1_1Utils_a7dbf5072b1cc3d4756c46b4acdc59de9_cgraph" alt=""/></div>
+<map name="namespacercombinator_1_1Utils_a7dbf5072b1cc3d4756c46b4acdc59de9_cgraph" id="namespacercombinator_1_1Utils_a7dbf5072b1cc3d4756c46b4acdc59de9_cgraph">
+<area shape="rect" id="node2" href="namespacercombinator_1_1Utils.html#a948886c343b7c56fae8e1921dfa5114a" title="Computes the cluster distance between two clusters. " alt="" coords="192,5,331,47"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacercombinator_1_1Utils_a7dbf5072b1cc3d4756c46b4acdc59de9_icgraph.png" border="0" usemap="#namespacercombinator_1_1Utils_a7dbf5072b1cc3d4756c46b4acdc59de9_icgraph" alt=""/></div>
+<map name="namespacercombinator_1_1Utils_a7dbf5072b1cc3d4756c46b4acdc59de9_icgraph" id="namespacercombinator_1_1Utils_a7dbf5072b1cc3d4756c46b4acdc59de9_icgraph">
+<area shape="rect" id="node2" href="classrcombinator_1_1EvolutionWithFlags.html#a53b7da04d209f7c1adb2f74af5d56149" title="To split any large family into two families that can no longer recombine with each other..." alt="" coords="192,5,392,47"/>
+<area shape="rect" id="node4" href="test__utilities_8h.html#a3225d409342c6c2fa08177a515ff81a8" title="Tests all the helper functions in the Utils namespace. " alt="" coords="197,95,387,122"/>
+<area shape="rect" id="node3" href="classrcombinator_1_1EvolutionWithFlags.html#abad180fa8494b259e5167a13285347dd" title="Burst by taking into consideration activity of sequences, events, and selection. " alt="" coords="440,5,640,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a948886c343b7c56fae8e1921dfa5114a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a948886c343b7c56fae8e1921dfa5114a">&#9670;&nbsp;</a></span>cluster_dist()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double rcombinator::Utils::cluster_dist </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="constants_8h.html#a0d6ecb761af58b56a675077153fa9ba9">dist_type</a> &amp;&#160;</td>
+          <td class="paramname"><em>dist</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="constants_8h.html#abcd18a5521fc90ff6e7b00e4fee98397">size_type</a>&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="constants_8h.html#aa5d5324de5e3188e825da6a7a40df01d">cluster_type</a> &amp;&#160;</td>
+          <td class="paramname"><em>C1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="constants_8h.html#aa5d5324de5e3188e825da6a7a40df01d">cluster_type</a> &amp;&#160;</td>
+          <td class="paramname"><em>C2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Computes the cluster distance between two clusters. </p>
+<p>Equal to the average of all pairs (a1, a2) in C1 X C2. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacercombinator_1_1Utils_a948886c343b7c56fae8e1921dfa5114a_icgraph.png" border="0" usemap="#namespacercombinator_1_1Utils_a948886c343b7c56fae8e1921dfa5114a_icgraph" alt=""/></div>
+<map name="namespacercombinator_1_1Utils_a948886c343b7c56fae8e1921dfa5114a_icgraph" id="namespacercombinator_1_1Utils_a948886c343b7c56fae8e1921dfa5114a_icgraph">
+<area shape="rect" id="node2" href="namespacercombinator_1_1Utils.html#a7dbf5072b1cc3d4756c46b4acdc59de9" title="Breaks a set into two clusters. " alt="" coords="192,29,331,71"/>
+<area shape="rect" id="node5" href="test__utilities_8h.html#a3225d409342c6c2fa08177a515ff81a8" title="Tests all the helper functions in the Utils namespace. " alt="" coords="383,95,574,122"/>
+<area shape="rect" id="node3" href="classrcombinator_1_1EvolutionWithFlags.html#a53b7da04d209f7c1adb2f74af5d56149" title="To split any large family into two families that can no longer recombine with each other..." alt="" coords="379,5,579,47"/>
+<area shape="rect" id="node4" href="classrcombinator_1_1EvolutionWithFlags.html#abad180fa8494b259e5167a13285347dd" title="Burst by taking into consideration activity of sequences, events, and selection. " alt="" coords="627,5,827,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2693553db4ed242f1488e6c9fd491692"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2693553db4ed242f1488e6c9fd491692">&#9670;&nbsp;</a></span>is_in_range()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -104,19 +213,19 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">bool rcombinator::Utils::is_in_range </td>
           <td>(</td>
-          <td class="paramtype">long&#160;</td>
+          <td class="paramtype"><a class="el" href="constants_8h.html#abcd18a5521fc90ff6e7b00e4fee98397">size_type</a>&#160;</td>
           <td class="paramname"><em>test</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">long&#160;</td>
+          <td class="paramtype"><a class="el" href="constants_8h.html#abcd18a5521fc90ff6e7b00e4fee98397">size_type</a>&#160;</td>
           <td class="paramname"><em>lb</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">long&#160;</td>
+          <td class="paramtype"><a class="el" href="constants_8h.html#abcd18a5521fc90ff6e7b00e4fee98397">size_type</a>&#160;</td>
           <td class="paramname"><em>ub</em>&#160;</td>
         </tr>
         <tr>
@@ -137,9 +246,9 @@ Functions</h2></td></tr>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="namespacercombinator_1_1Utils_aa38fa31292dbf3a06522dc76b20e2572_icgraph.png" border="0" usemap="#namespacercombinator_1_1Utils_aa38fa31292dbf3a06522dc76b20e2572_icgraph" alt=""/></div>
-<map name="namespacercombinator_1_1Utils_aa38fa31292dbf3a06522dc76b20e2572_icgraph" id="namespacercombinator_1_1Utils_aa38fa31292dbf3a06522dc76b20e2572_icgraph">
-<area shape="rect" id="node2" href="classrcombinator_1_1Sequence.html#a976b331689ec55d9d306281bbff5d22d" title="Constructs a sequence from recombining two other sequences. " alt="" coords="192,5,364,47"/>
+<div class="center"><img src="namespacercombinator_1_1Utils_a2693553db4ed242f1488e6c9fd491692_icgraph.png" border="0" usemap="#namespacercombinator_1_1Utils_a2693553db4ed242f1488e6c9fd491692_icgraph" alt=""/></div>
+<map name="namespacercombinator_1_1Utils_a2693553db4ed242f1488e6c9fd491692_icgraph" id="namespacercombinator_1_1Utils_a2693553db4ed242f1488e6c9fd491692_icgraph">
+<area shape="rect" id="node2" href="classrcombinator_1_1Sequence.html#af334c44bea806196b5037e61b0e831b1" title="Constructs a sequence from recombining two other sequences. " alt="" coords="192,5,364,47"/>
 </map>
 </div>
 

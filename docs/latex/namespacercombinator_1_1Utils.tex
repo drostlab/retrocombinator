@@ -5,15 +5,14 @@
 To store some useful functions in a namespace and prevent conflicts.  
 
 
-\subsection*{Classes}
-\begin{DoxyCompactItemize}
-\item 
-struct \mbox{\hyperlink{structrcombinator_1_1Utils_1_1SummaryStats}{Summary\+Stats}}
-\begin{DoxyCompactList}\small\item\em Plain-\/\+Old-\/\+Data struct to store summary statistics for a list of values. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-bool \mbox{\hyperlink{namespacercombinator_1_1Utils_aa38fa31292dbf3a06522dc76b20e2572}{is\+\_\+in\+\_\+range}} (long test, long lb, long ub)
+double \mbox{\hyperlink{namespacercombinator_1_1Utils_a948886c343b7c56fae8e1921dfa5114a}{cluster\+\_\+dist}} (const \mbox{\hyperlink{constants_8h_a0d6ecb761af58b56a675077153fa9ba9}{dist\+\_\+type}} \&dist, \mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}} n, const \mbox{\hyperlink{constants_8h_aa5d5324de5e3188e825da6a7a40df01d}{cluster\+\_\+type}} \&C1, const \mbox{\hyperlink{constants_8h_aa5d5324de5e3188e825da6a7a40df01d}{cluster\+\_\+type}} \&C2)
+\begin{DoxyCompactList}\small\item\em Computes the cluster distance between two clusters. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{constants_8h_aa5d5324de5e3188e825da6a7a40df01d}{cluster\+\_\+type}} \mbox{\hyperlink{namespacercombinator_1_1Utils_a7dbf5072b1cc3d4756c46b4acdc59de9}{cluster}} (const \mbox{\hyperlink{constants_8h_a0d6ecb761af58b56a675077153fa9ba9}{dist\+\_\+type}} \&dist, \mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}} n)
+\begin{DoxyCompactList}\small\item\em Breaks a set into two clusters. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacercombinator_1_1Utils_a2693553db4ed242f1488e6c9fd491692}{is\+\_\+in\+\_\+range}} (\mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}} test, \mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}} lb, \mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}} ub)
 \begin{DoxyCompactList}\small\item\em Checks whether a number lies within a range. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -21,20 +20,72 @@ bool \mbox{\hyperlink{namespacercombinator_1_1Utils_aa38fa31292dbf3a06522dc76b20
 To store some useful functions in a namespace and prevent conflicts. 
 
 \subsection{Function Documentation}
-\mbox{\Hypertarget{namespacercombinator_1_1Utils_aa38fa31292dbf3a06522dc76b20e2572}\label{namespacercombinator_1_1Utils_aa38fa31292dbf3a06522dc76b20e2572}} 
+\mbox{\Hypertarget{namespacercombinator_1_1Utils_a7dbf5072b1cc3d4756c46b4acdc59de9}\label{namespacercombinator_1_1Utils_a7dbf5072b1cc3d4756c46b4acdc59de9}} 
+\index{rcombinator\+::\+Utils@{rcombinator\+::\+Utils}!cluster@{cluster}}
+\index{cluster@{cluster}!rcombinator\+::\+Utils@{rcombinator\+::\+Utils}}
+\subsubsection{\texorpdfstring{cluster()}{cluster()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{constants_8h_aa5d5324de5e3188e825da6a7a40df01d}{cluster\+\_\+type}} rcombinator\+::\+Utils\+::cluster (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{constants_8h_a0d6ecb761af58b56a675077153fa9ba9}{dist\+\_\+type}} \&}]{dist,  }\item[{\mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}}}]{n }\end{DoxyParamCaption})}
+
+
+
+Breaks a set into two clusters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & the number of data points \\
+\hline
+{\em dist} & the n\+Xn distance matrix between the data points Takes a distance matrix D, where D(i, j) is the distance between i and j, with D(i, i) being 0 for all i. Returns a vector of indices that belong to the first cluster (the second cluster corresponds to everything else).\\
+\hline
+\end{DoxyParams}
+Algorithm\+: Start with n clusters Compute the cluster distance between all pairs of clusters Where cluster distance is\+: average distance of points from one cluster to the other Pick the two closest clusters, and merge them Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{namespacercombinator_1_1Utils_a7dbf5072b1cc3d4756c46b4acdc59de9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacercombinator_1_1Utils_a7dbf5072b1cc3d4756c46b4acdc59de9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacercombinator_1_1Utils_a948886c343b7c56fae8e1921dfa5114a}\label{namespacercombinator_1_1Utils_a948886c343b7c56fae8e1921dfa5114a}} 
+\index{rcombinator\+::\+Utils@{rcombinator\+::\+Utils}!cluster\+\_\+dist@{cluster\+\_\+dist}}
+\index{cluster\+\_\+dist@{cluster\+\_\+dist}!rcombinator\+::\+Utils@{rcombinator\+::\+Utils}}
+\subsubsection{\texorpdfstring{cluster\+\_\+dist()}{cluster\_dist()}}
+{\footnotesize\ttfamily double rcombinator\+::\+Utils\+::cluster\+\_\+dist (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{constants_8h_a0d6ecb761af58b56a675077153fa9ba9}{dist\+\_\+type}} \&}]{dist,  }\item[{\mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}}}]{n,  }\item[{const \mbox{\hyperlink{constants_8h_aa5d5324de5e3188e825da6a7a40df01d}{cluster\+\_\+type}} \&}]{C1,  }\item[{const \mbox{\hyperlink{constants_8h_aa5d5324de5e3188e825da6a7a40df01d}{cluster\+\_\+type}} \&}]{C2 }\end{DoxyParamCaption})}
+
+
+
+Computes the cluster distance between two clusters. 
+
+Equal to the average of all pairs (a1, a2) in C1 X C2. Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacercombinator_1_1Utils_a948886c343b7c56fae8e1921dfa5114a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacercombinator_1_1Utils_a2693553db4ed242f1488e6c9fd491692}\label{namespacercombinator_1_1Utils_a2693553db4ed242f1488e6c9fd491692}} 
 \index{rcombinator\+::\+Utils@{rcombinator\+::\+Utils}!is\+\_\+in\+\_\+range@{is\+\_\+in\+\_\+range}}
 \index{is\+\_\+in\+\_\+range@{is\+\_\+in\+\_\+range}!rcombinator\+::\+Utils@{rcombinator\+::\+Utils}}
 \subsubsection{\texorpdfstring{is\+\_\+in\+\_\+range()}{is\_in\_range()}}
-{\footnotesize\ttfamily bool rcombinator\+::\+Utils\+::is\+\_\+in\+\_\+range (\begin{DoxyParamCaption}\item[{long}]{test,  }\item[{long}]{lb,  }\item[{long}]{ub }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily bool rcombinator\+::\+Utils\+::is\+\_\+in\+\_\+range (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}}}]{test,  }\item[{\mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}}}]{lb,  }\item[{\mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{size\+\_\+type}}}]{ub }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 Checks whether a number lies within a range. 
 
-The bounds are \mbox{[}inclusive, exclusive). Here is the caller graph for this function\+:\nopagebreak
+The bounds are \mbox{[}inclusive, exclusive). Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=349pt]{namespacercombinator_1_1Utils_aa38fa31292dbf3a06522dc76b20e2572_icgraph}
+\includegraphics[width=349pt]{namespacercombinator_1_1Utils_a2693553db4ed242f1488e6c9fd491692_icgraph}
 \end{center}
 \end{figure}

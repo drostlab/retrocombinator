@@ -10,12 +10,9 @@
 #include "test_header.h"
 #include "utilities.h"
 
-//TODO: remove
-#include <iostream>
-using namespace std;
-
 namespace rcombinator
 {
+    /// Tests all the helper functions in the Utils namespace
     int test_utilities()
     {
         size_type N = 8;

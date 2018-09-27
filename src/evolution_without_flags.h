@@ -9,6 +9,10 @@
 
 namespace rcombinator
 {
+    /** A simulation where all sequences are active.
+     *  In this class, a sequence beocoming inactive is equivalent to a sequence
+     *  dying and being removed from the simulation and sequence pool.
+     */
     class EvolutionWithoutFlags : public Evolution
     {
     public:

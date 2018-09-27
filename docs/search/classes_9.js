@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['t93model',['T93Model',['../classrcombinator_1_1T93Model.html',1,'rcombinator']]]
+  ['sequence',['Sequence',['../classrcombinator_1_1Sequence.html',1,'rcombinator']]]
 ];

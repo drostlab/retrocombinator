@@ -12,6 +12,7 @@
 
 namespace rcombinator
 {
+    /// Tests all the wrapper functions to set-up and run simulations
     int test_simulation()
     {
         try

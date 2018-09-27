@@ -68,17 +68,22 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">constants.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Definitions for enums/constants that are used throughout the project.  
+<p>Definitions for enums/constants/functions that are used everywhere.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="exception_8h_source.html">exception.h</a>&quot;</code><br />
+<code>#include &lt;cmath&gt;</code><br />
+<code>#include &lt;set&gt;</code><br />
 <code>#include &lt;utility&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for constants.h:</div>
 <div class="dyncontent">
@@ -102,8 +107,42 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacercombinator_1_1Consts"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacercombinator_1_1Consts.html">rcombinator::Consts</a></td></tr>
-<tr class="memdesc:namespacercombinator_1_1Consts"><td class="mdescLeft">&#160;</td><td class="mdescRight">To store all global constants that can be accessed from anywhere in the code. <br /></td></tr>
+<tr class="memdesc:namespacercombinator_1_1Consts"><td class="mdescLeft">&#160;</td><td class="mdescRight">To store all constant values that we define. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:aac4f867a016f1ea925ad797f14a88729"><td class="memItemLeft" align="right" valign="top"><a id="aac4f867a016f1ea925ad797f14a88729"></a>
+typedef double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="constants_8h.html#aac4f867a016f1ea925ad797f14a88729">rcombinator::NucMatrix</a>[Consts::NUC_COUNT][Consts::NUC_COUNT]</td></tr>
+<tr class="memdesc:aac4f867a016f1ea925ad797f14a88729"><td class="mdescLeft">&#160;</td><td class="mdescRight">For transition matrices, rate matrices etc. <br /></td></tr>
+<tr class="separator:aac4f867a016f1ea925ad797f14a88729"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac174a80e881aca74442d87be4e5a8d46"><td class="memItemLeft" align="right" valign="top"><a id="ac174a80e881aca74442d87be4e5a8d46"></a>
+typedef const double(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="constants_8h.html#ac174a80e881aca74442d87be4e5a8d46">rcombinator::ReturnsNucMatrix</a>())[Consts::NUC_COUNT]</td></tr>
+<tr class="memdesc:ac174a80e881aca74442d87be4e5a8d46"><td class="mdescLeft">&#160;</td><td class="mdescRight">For functions that return NucMatrix and accept no parameters. <br /></td></tr>
+<tr class="separator:ac174a80e881aca74442d87be4e5a8d46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cb8eb29546940a64c155d5b07de9261"><td class="memItemLeft" align="right" valign="top"><a id="a6cb8eb29546940a64c155d5b07de9261"></a>
+typedef const double(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="constants_8h.html#a6cb8eb29546940a64c155d5b07de9261">rcombinator::ReturnsNucMatrixFromDouble</a>(double))[Consts::NUC_COUNT]</td></tr>
+<tr class="memdesc:a6cb8eb29546940a64c155d5b07de9261"><td class="mdescLeft">&#160;</td><td class="mdescRight">For functions that return NucMatrix and accept time as parameter. <br /></td></tr>
+<tr class="separator:a6cb8eb29546940a64c155d5b07de9261"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcd18a5521fc90ff6e7b00e4fee98397"><td class="memItemLeft" align="right" valign="top"><a id="abcd18a5521fc90ff6e7b00e4fee98397"></a>
+typedef std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="constants_8h.html#abcd18a5521fc90ff6e7b00e4fee98397">rcombinator::size_type</a></td></tr>
+<tr class="memdesc:abcd18a5521fc90ff6e7b00e4fee98397"><td class="mdescLeft">&#160;</td><td class="mdescRight">For all indices and sizes. <br /></td></tr>
+<tr class="separator:abcd18a5521fc90ff6e7b00e4fee98397"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e6daf1646e952257330d8cfe20e96f8"><td class="memItemLeft" align="right" valign="top"><a id="a3e6daf1646e952257330d8cfe20e96f8"></a>
+typedef long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="constants_8h.html#a3e6daf1646e952257330d8cfe20e96f8">rcombinator::tag_type</a></td></tr>
+<tr class="memdesc:a3e6daf1646e952257330d8cfe20e96f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">For all integer-based codes. <br /></td></tr>
+<tr class="separator:a3e6daf1646e952257330d8cfe20e96f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:aa5d5324de5e3188e825da6a7a40df01d"><td class="memItemLeft" align="right" valign="top">typedef std::set&lt; size_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="constants_8h.html#aa5d5324de5e3188e825da6a7a40df01d">rcombinator::cluster_type</a></td></tr>
+<tr class="memdesc:aa5d5324de5e3188e825da6a7a40df01d"><td class="mdescLeft">&#160;</td><td class="mdescRight">For clustering algorithms.  <a href="constants_8h.html#aa5d5324de5e3188e825da6a7a40df01d">More...</a><br /></td></tr>
+<tr class="separator:aa5d5324de5e3188e825da6a7a40df01d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d6ecb761af58b56a675077153fa9ba9"><td class="memItemLeft" align="right" valign="top"><a id="a0d6ecb761af58b56a675077153fa9ba9"></a>
+typedef std::vector&lt; std::vector&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="constants_8h.html#a0d6ecb761af58b56a675077153fa9ba9">rcombinator::dist_type</a></td></tr>
+<tr class="memdesc:a0d6ecb761af58b56a675077153fa9ba9"><td class="mdescLeft">&#160;</td><td class="mdescRight">For a distance matrix between data points. <br /></td></tr>
+<tr class="separator:a0d6ecb761af58b56a675077153fa9ba9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93a58cede5037faca4a4ac05ccf530cc"><td class="memItemLeft" align="right" valign="top"><a id="a93a58cede5037faca4a4ac05ccf530cc"></a>
+typedef std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>rcombinator::dist_row_type</b></td></tr>
+<tr class="separator:a93a58cede5037faca4a4ac05ccf530cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -137,15 +176,54 @@ std::pair&lt; bool, bool &gt;&#160;</td><td class="memItemRight" valign="bottom"
 char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacercombinator_1_1Consts.html#acebf7c5a777e8d06bd20142a969bc606">rcombinator::Consts::NUC_BOOL2CHAR</a> (std::pair&lt; bool, bool &gt; bits)</td></tr>
 <tr class="memdesc:acebf7c5a777e8d06bd20142a969bc606"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the character of a nucleotide given its 2bit-encoding. <br /></td></tr>
 <tr class="separator:acebf7c5a777e8d06bd20142a969bc606"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a52bd90fa02fe1a2d01f1b38b195be714"><td class="memItemLeft" align="right" valign="top"><a id="a52bd90fa02fe1a2d01f1b38b195be714"></a>
+const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacercombinator_1_1Consts.html#a52bd90fa02fe1a2d01f1b38b195be714">rcombinator::Consts::DOUBLE_TOLERANCE</a> = pow(10.0, -8)</td></tr>
+<tr class="memdesc:a52bd90fa02fe1a2d01f1b38b195be714"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tolerance for double operations. <br /></td></tr>
+<tr class="separator:a52bd90fa02fe1a2d01f1b38b195be714"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7163f2df9e53340e78501c19f9dbe92"><td class="memItemLeft" align="right" valign="top"><a id="ab7163f2df9e53340e78501c19f9dbe92"></a>
+const tag_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacercombinator_1_1Consts.html#ab7163f2df9e53340e78501c19f9dbe92">rcombinator::Consts::INIT_FAMILY_COUNT</a> = -1</td></tr>
+<tr class="memdesc:ab7163f2df9e53340e78501c19f9dbe92"><td class="mdescLeft">&#160;</td><td class="mdescRight">The family tag to represent initial sequences in a simulation. <br /></td></tr>
+<tr class="separator:ab7163f2df9e53340e78501c19f9dbe92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:af2e735f6e0661176144a8769131b8aa7"><td class="memItemLeft" align="right" valign="top"><a id="af2e735f6e0661176144a8769131b8aa7"></a>
+const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacercombinator_1_1Consts.html#af2e735f6e0661176144a8769131b8aa7">rcombinator::Consts::K80_K</a> = 10</td></tr>
+<tr class="memdesc:af2e735f6e0661176144a8769131b8aa7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defaults for different point mutation models. <br /></td></tr>
+<tr class="separator:af2e735f6e0661176144a8769131b8aa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8e3174f5a8da44816e1eaa07e382c80"><td class="memItemLeft" align="right" valign="top"><a id="ab8e3174f5a8da44816e1eaa07e382c80"></a>
+const double&#160;</td><td class="memItemRight" valign="bottom"><b>rcombinator::Consts::K80_SCALE</b> = 0.01</td></tr>
+<tr class="separator:ab8e3174f5a8da44816e1eaa07e382c80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad885bb45659383aa604820b9aa8d31d"><td class="memItemLeft" align="right" valign="top"><a id="aad885bb45659383aa604820b9aa8d31d"></a>
+const double&#160;</td><td class="memItemRight" valign="bottom"><b>rcombinator::Consts::JC69_SCALE</b> = 0.1</td></tr>
+<tr class="separator:aad885bb45659383aa604820b9aa8d31d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Definitions for enums/constants that are used throughout the project. </p>
+<div class="textblock"><p>Definitions for enums/constants/functions that are used everywhere. </p>
 <p>More specifically,</p><ul>
 <li>biological constants (things like nucleotide names, a fixed nucleotide ordering etc),</li>
-<li><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>add default constants for the simulation here as well </dd></dl>
-</li>
+<li>implementation specific typedefs and constants </li>
 </ul>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Typedef Documentation</h2>
+<a id="file_aa5d5324de5e3188e825da6a7a40df01d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#file_aa5d5324de5e3188e825da6a7a40df01d">&#9670;&nbsp;</a></span>cluster_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::set&lt;size_type&gt; <a class="el" href="constants_8h.html#aa5d5324de5e3188e825da6a7a40df01d">rcombinator::cluster_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>For clustering algorithms. </p>
+<p>For a set of indices </p>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

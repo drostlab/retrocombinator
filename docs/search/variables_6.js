@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['q25',['q25',['../structrcombinator_1_1Utils_1_1SummaryStats.html#aee0b73cf97c3992b2924007ab7cf7677',1,'rcombinator::Utils::SummaryStats']]],
-  ['q75',['q75',['../structrcombinator_1_1Utils_1_1SummaryStats.html#a8d8b1e856b0cee4474297ce3fc5bc702',1,'rcombinator::Utils::SummaryStats']]],
-  ['q_5fmat',['Q_mat',['../classrcombinator_1_1PointMutationModel.html#a5affb482b1e4434bd1b2c6fc1c579934',1,'rcombinator::PointMutationModel']]]
+  ['init',['INIT',['../classrcombinator_1_1Sequence.html#a2ea5c3181fcb056ed3f0ab0a758f89a9',1,'rcombinator::Sequence']]],
+  ['init_5ffamily_5fcount',['INIT_FAMILY_COUNT',['../namespacercombinator_1_1Consts.html#ab7163f2df9e53340e78501c19f9dbe92',1,'rcombinator::Consts']]],
+  ['init_5fseq',['init_seq',['../classrcombinator_1_1Output.html#ade0f06566f9ee4896143cf0eaa15bf2b',1,'rcombinator::Output']]]
 ];

@@ -12,6 +12,7 @@
 
 namespace rcombinator
 {
+    /// Tests EvolutionWithoutFlags
     int test_evolution_without_flags()
     {
         try

@@ -2,11 +2,14 @@
 \label{constants_8h}\index{src/constants.\+h@{src/constants.\+h}}
 
 
-Definitions for enums/constants that are used throughout the project.  
+Definitions for enums/constants/functions that are used everywhere.  
 
 
 {\ttfamily \#include \char`\"{}exception.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$set$>$}\newline
 {\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
 Include dependency graph for constants.\+h\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -14,8 +17,7 @@ Include dependency graph for constants.\+h\+:\nopagebreak
 \includegraphics[width=218pt]{constants_8h__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:
-\nopagebreak
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -26,7 +28,37 @@ This graph shows which files directly or indirectly include this file\+:
 \begin{DoxyCompactItemize}
 \item 
  \mbox{\hyperlink{namespacercombinator_1_1Consts}{rcombinator\+::\+Consts}}
-\begin{DoxyCompactList}\small\item\em To store all global constants that can be accessed from anywhere in the code. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em To store all constant values that we define. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{constants_8h_aac4f867a016f1ea925ad797f14a88729}\label{constants_8h_aac4f867a016f1ea925ad797f14a88729}} 
+typedef double \mbox{\hyperlink{constants_8h_aac4f867a016f1ea925ad797f14a88729}{rcombinator\+::\+Nuc\+Matrix}}\mbox{[}Consts\+::\+N\+U\+C\+\_\+\+C\+O\+U\+NT\mbox{]}\mbox{[}Consts\+::\+N\+U\+C\+\_\+\+C\+O\+U\+NT\mbox{]}
+\begin{DoxyCompactList}\small\item\em For transition matrices, rate matrices etc. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{constants_8h_ac174a80e881aca74442d87be4e5a8d46}\label{constants_8h_ac174a80e881aca74442d87be4e5a8d46}} 
+typedef const double($\ast$ \mbox{\hyperlink{constants_8h_ac174a80e881aca74442d87be4e5a8d46}{rcombinator\+::\+Returns\+Nuc\+Matrix}}())\mbox{[}Consts\+::\+N\+U\+C\+\_\+\+C\+O\+U\+NT\mbox{]}
+\begin{DoxyCompactList}\small\item\em For functions that return Nuc\+Matrix and accept no parameters. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{constants_8h_a6cb8eb29546940a64c155d5b07de9261}\label{constants_8h_a6cb8eb29546940a64c155d5b07de9261}} 
+typedef const double($\ast$ \mbox{\hyperlink{constants_8h_a6cb8eb29546940a64c155d5b07de9261}{rcombinator\+::\+Returns\+Nuc\+Matrix\+From\+Double}}(double))\mbox{[}Consts\+::\+N\+U\+C\+\_\+\+C\+O\+U\+NT\mbox{]}
+\begin{DoxyCompactList}\small\item\em For functions that return Nuc\+Matrix and accept time as parameter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}\label{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}} 
+typedef std\+::size\+\_\+t \mbox{\hyperlink{constants_8h_abcd18a5521fc90ff6e7b00e4fee98397}{rcombinator\+::size\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em For all indices and sizes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{constants_8h_a3e6daf1646e952257330d8cfe20e96f8}\label{constants_8h_a3e6daf1646e952257330d8cfe20e96f8}} 
+typedef long \mbox{\hyperlink{constants_8h_a3e6daf1646e952257330d8cfe20e96f8}{rcombinator\+::tag\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em For all integer-\/based codes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::set$<$ size\+\_\+type $>$ \mbox{\hyperlink{constants_8h_aa5d5324de5e3188e825da6a7a40df01d}{rcombinator\+::cluster\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em For clustering algorithms. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{constants_8h_a0d6ecb761af58b56a675077153fa9ba9}\label{constants_8h_a0d6ecb761af58b56a675077153fa9ba9}} 
+typedef std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \mbox{\hyperlink{constants_8h_a0d6ecb761af58b56a675077153fa9ba9}{rcombinator\+::dist\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em For a distance matrix between data points. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{constants_8h_a93a58cede5037faca4a4ac05ccf530cc}\label{constants_8h_a93a58cede5037faca4a4ac05ccf530cc}} 
+typedef std\+::vector$<$ double $>$ {\bfseries rcombinator\+::dist\+\_\+row\+\_\+type}
+\end{DoxyCompactItemize}
+
 \subsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
@@ -54,15 +86,48 @@ std\+::pair$<$ bool, bool $>$ \mbox{\hyperlink{namespacercombinator_1_1Consts_ab
 \mbox{\Hypertarget{namespacercombinator_1_1Consts_acebf7c5a777e8d06bd20142a969bc606}\label{namespacercombinator_1_1Consts_acebf7c5a777e8d06bd20142a969bc606}} 
 char \mbox{\hyperlink{namespacercombinator_1_1Consts_acebf7c5a777e8d06bd20142a969bc606}{rcombinator\+::\+Consts\+::\+N\+U\+C\+\_\+\+B\+O\+O\+L2\+C\+H\+AR}} (std\+::pair$<$ bool, bool $>$ bits)
 \begin{DoxyCompactList}\small\item\em Returns the character of a nucleotide given its 2bit-\/encoding. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacercombinator_1_1Consts_a52bd90fa02fe1a2d01f1b38b195be714}\label{namespacercombinator_1_1Consts_a52bd90fa02fe1a2d01f1b38b195be714}} 
+const double \mbox{\hyperlink{namespacercombinator_1_1Consts_a52bd90fa02fe1a2d01f1b38b195be714}{rcombinator\+::\+Consts\+::\+D\+O\+U\+B\+L\+E\+\_\+\+T\+O\+L\+E\+R\+A\+N\+CE}} = pow(10.\+0, -\/8)
+\begin{DoxyCompactList}\small\item\em Tolerance for double operations. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespacercombinator_1_1Consts_ab7163f2df9e53340e78501c19f9dbe92}\label{namespacercombinator_1_1Consts_ab7163f2df9e53340e78501c19f9dbe92}} 
+const tag\+\_\+type \mbox{\hyperlink{namespacercombinator_1_1Consts_ab7163f2df9e53340e78501c19f9dbe92}{rcombinator\+::\+Consts\+::\+I\+N\+I\+T\+\_\+\+F\+A\+M\+I\+L\+Y\+\_\+\+C\+O\+U\+NT}} = -\/1
+\begin{DoxyCompactList}\small\item\em The family tag to represent initial sequences in a simulation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacercombinator_1_1Consts_af2e735f6e0661176144a8769131b8aa7}\label{namespacercombinator_1_1Consts_af2e735f6e0661176144a8769131b8aa7}} 
+const double \mbox{\hyperlink{namespacercombinator_1_1Consts_af2e735f6e0661176144a8769131b8aa7}{rcombinator\+::\+Consts\+::\+K80\+\_\+K}} = 10
+\begin{DoxyCompactList}\small\item\em Defaults for different point mutation models. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespacercombinator_1_1Consts_ab8e3174f5a8da44816e1eaa07e382c80}\label{namespacercombinator_1_1Consts_ab8e3174f5a8da44816e1eaa07e382c80}} 
+const double {\bfseries rcombinator\+::\+Consts\+::\+K80\+\_\+\+S\+C\+A\+LE} = 0.\+01
+\item 
+\mbox{\Hypertarget{namespacercombinator_1_1Consts_aad885bb45659383aa604820b9aa8d31d}\label{namespacercombinator_1_1Consts_aad885bb45659383aa604820b9aa8d31d}} 
+const double {\bfseries rcombinator\+::\+Consts\+::\+J\+C69\+\_\+\+S\+C\+A\+LE} = 0.\+1
+\end{DoxyCompactItemize}
+
 
 
 \subsection{Detailed Description}
-Definitions for enums/constants that are used throughout the project. 
+Definitions for enums/constants/functions that are used everywhere. 
 
 More specifically,
 \begin{DoxyItemize}
 \item biological constants (things like nucleotide names, a fixed nucleotide ordering etc),
-\item \begin{DoxyRefDesc}{Todo}
-\item[\mbox{\hyperlink{todo__todo000001}{Todo}}]add default constants for the simulation here as well \end{DoxyRefDesc}
-
+\item implementation specific typedefs and constants 
 \end{DoxyItemize}
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{constants_8h_file_aa5d5324de5e3188e825da6a7a40df01d}\label{constants_8h_file_aa5d5324de5e3188e825da6a7a40df01d}} 
+\index{constants.\+h@{constants.\+h}!cluster\+\_\+type@{cluster\+\_\+type}}
+\index{cluster\+\_\+type@{cluster\+\_\+type}!constants.\+h@{constants.\+h}}
+\subsubsection{\texorpdfstring{cluster\+\_\+type}{cluster\_type}}
+{\footnotesize\ttfamily typedef std\+::set$<$size\+\_\+type$>$ \mbox{\hyperlink{constants_8h_aa5d5324de5e3188e825da6a7a40df01d}{rcombinator\+::cluster\+\_\+type}}}
+
+
+
+For clustering algorithms. 
+
+For a set of indices 

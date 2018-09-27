@@ -12,6 +12,7 @@
 
 namespace rcombinator
 {
+    /// Tests the Output class
     int test_output()
     {
         try
