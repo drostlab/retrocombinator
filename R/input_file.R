@@ -34,6 +34,7 @@ input_data <- function(filename)
       # First, get the time
       time_line <- as.numeric(extract_line(con))
       t <- time_line[1]
+      print(paste("Time", t))
       real_time <- time_line[2]
 
       # Get which things are going to be output
@@ -52,6 +53,17 @@ input_data <- function(filename)
       fam_tags <- integer(num_families)
       fam_par_tags <- integer(num_families)
       seq_tags <- list()
+
+      if (num_families == 0)
+      {
+        if (to_pair)
+        {
+          pairs_line <- extract_line(con)
+          stopifnot(pairs_line[1] == "P")
+          blank_line <- extract_line(con)
+        }
+        next
+      }
 
       # For each family, parse all the data
       for (fam_i in 1:num_families)
