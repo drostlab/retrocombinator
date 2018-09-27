@@ -7,28 +7,10 @@
 
 using namespace rcombinator;
 
-static RandMaths& r = RandMaths::initializeRandMaths(1);
-
 //' @export
 // [[Rcpp::export]]
-double rcpp_test_main()
+double return_zero()
 {
-    auto ans = r.rand_real();
-    return ans;
+    return 0;
 }
 
-//' @export
-// [[Rcpp::export]]
-double rcpp_test_other()
-{
-    auto ans = is_in_range(10, 11, 14);
-    return ans;
-}
-
-//' @export
-// [[Rcpp::export]]
-double rcpp_test_new()
-{
-    auto ans = r.rand_int(10, 100);
-    return ans;
-}

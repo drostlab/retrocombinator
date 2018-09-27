@@ -1,5 +1,5 @@
 #' Input data from CPP output into a set of R data frames
-#' @importFrom magrittr "%>"
+#' @importFrom magrittr "%>%"
 #' @export
 input_data <- function(filename)
 {

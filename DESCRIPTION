@@ -10,7 +10,8 @@ Description: This software package performs simulations on retrotransposon
     basic data analysis on the simulation results.
 Depends: R (>= 3.5.0)
 Imports:
-    Rcpp (>= 0.12.17)
+    Rcpp (>= 0.12.17),
+    magrittr
 LinkingTo: Rcpp
 License: GPL-3 + file LICENSE
 URL: https://github.com/sams25/rcombinator
