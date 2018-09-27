@@ -21,7 +21,7 @@ $(TEST_OBJ_DIR):
 	mkdir -p $(TEST_OBJ_DIR)
 
 CC = g++
-CCFLAGS = -I./$(SRC_DIR) -I./$(CPP_DIR) -Wall
+CCFLAGS = -I./$(SRC_DIR) -I./$(CPP_DIR) -Wall -Wextra
 CCTESTFLAGS = -I./$(TEST_DIR)
 
 ifeq ($(mem_check), "on")

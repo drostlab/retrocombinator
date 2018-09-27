@@ -30,7 +30,7 @@ namespace rcombinator
      */
     void test_initialize(size_type seed = 0)
     {
-        RNG.set_specific_seed(0);
+        RNG.set_specific_seed(seed);
     }
 }
 

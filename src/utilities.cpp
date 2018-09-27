@@ -6,7 +6,7 @@ using namespace rcombinator;
 
 namespace rcombinator::Utils
 {
-    double cluster_dist(const dist_type& dist, size_type n,
+    double cluster_dist(const dist_type& dist, size_type,
                         const cluster_type& C1,
                         const cluster_type& C2)
     {
