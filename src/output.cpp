@@ -10,10 +10,10 @@ Output::Output(const std::string& filename_out, size_type final_time,
                size_type num_out_seqs,
                size_type num_out_pair):
     final_time(final_time),
-    to_output_tags(floor(double(final_time)/num_out_tags)),
-    to_output_init(floor(double(final_time)/num_out_init)),
-    to_output_seqs(floor(double(final_time)/num_out_seqs)),
-    to_output_pair(floor(double(final_time)/num_out_pair))
+    to_output_tags(num_out_tags!=0 ? floor(double(final_time)/num_out_tags) : 1),
+    to_output_init(num_out_init!=0 ? floor(double(final_time)/num_out_init) : 1),
+    to_output_seqs(num_out_seqs!=0 ? floor(double(final_time)/num_out_seqs) : 1),
+    to_output_pair(num_out_pair!=0 ? floor(double(final_time)/num_out_pair) : 1)
 {
     fout.open(filename_out, std::fstream::out | std::fstream::trunc);
 }

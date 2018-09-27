@@ -7,15 +7,18 @@ tags
 .Rhistory
 .RData
 .Ruserdata
+
 # RCpp output
 src/*.o
 src/*.so
 src/*.dll
+
 # C++ output
 test_obj/
 obj/
 rcombinator
 test_rcombinator
+
 # rcombinator output
 *.out
 inst/doc
