@@ -128,7 +128,7 @@ namespace rcombinator
         {
             RNG.set_random_seed();
         }
-        else if (to_seed)
+        if (to_seed)
         {
             RNG.set_specific_seed(seed);
         }
@@ -165,7 +165,7 @@ namespace rcombinator
         {
             RNG.set_random_seed();
         }
-        else if (to_seed)
+        if (to_seed)
         {
             RNG.set_specific_seed(seed);
         }
