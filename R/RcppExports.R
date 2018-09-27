@@ -11,8 +11,3 @@ rcpp_simulate_with_flags <- function(num_seq, seq_length, point_mutation_model, 
     invisible(.Call('_rcombinator_rcpp_simulate_with_flags', PACKAGE = 'rcombinator', num_seq, seq_length, point_mutation_model, num_sensitive_posns, inactive_probability, num_jumps, timestep, burst_probability, burst_mean, max_active_copies, max_total_copies, recomb_mean, selection_threshold, fam_proportion, fam_percentage, file_out, num_out_tags, num_out_init, num_out_seqs, num_out_pair, to_randomise, to_seed, seed, sequence_numbering, family_numbering))
 }
 
-#' @export
-return_zero <- function() {
-    .Call('_rcombinator_return_zero', PACKAGE = 'rcombinator')
-}
-

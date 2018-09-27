@@ -3,7 +3,6 @@
 export(input_data)
 export(rcpp_simulate_with_flags)
 export(rcpp_simulate_without_flags)
-export(return_zero)
 export(simulate_with_flags)
 export(simulate_without_flags)
 importFrom(Rcpp,evalCpp)
