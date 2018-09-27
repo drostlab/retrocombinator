@@ -38,6 +38,10 @@ PointMutator::PointMutator(std::string model, size_type n,
     }
     lethal_mutation_probs.assign(n, 0);
 
+    if (num_sensitive_posns > n)
+    {
+        num_sensitive_posns = n;
+    }
     auto sensitive_posns = RNG.sample_without_replacement(0, n, num_sensitive_posns);
     for (auto sensitive_posn : sensitive_posns)
     {

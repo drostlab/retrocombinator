@@ -89,6 +89,10 @@ std::set<size_type> RandMaths::sample_without_replacement(size_type low, size_ty
     {
         throw Exception("sample size is < 0");
     }
+    if (m > high - low)
+    {
+        throw Exception("Sample space is too small to pick from");
+    }
     std::set<size_type> s;
     while(s.size() != m)
     {

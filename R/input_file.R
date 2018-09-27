@@ -34,7 +34,6 @@ input_data <- function(filename)
       # First, get the time
       time_line <- as.numeric(extract_line(con))
       t <- time_line[1]
-      print(paste("Time", t))
       real_time <- time_line[2]
 
       # Get which things are going to be output
