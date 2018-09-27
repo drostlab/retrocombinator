@@ -8,6 +8,7 @@
 #include "test_output.h"
 #include "test_evolution_without_flags.h"
 #include "test_evolution_with_flags.h"
+#include "test_simulation.h"
 
 using namespace std;
 using namespace rcombinator;
@@ -31,6 +32,8 @@ int main()
     cout << test_evolution_without_flags() << endl;
     cout << "Testing Evolution With Flags: " << endl;
     cout << test_evolution_with_flags() << endl;
+    cout << "Testing Simulation: " << endl;
+    cout << test_simulation() << endl;
 
     return 0;
 }

@@ -40,7 +40,8 @@ _HEADERS = exception.h					\
 		   output.h						\
 		   evolution.h					\
 		   evolution_without_flags.h	\
-		   evolution_with_flags.h
+		   evolution_with_flags.h		\
+		   simulation.h
 HEADERS := $(addprefix $(SRC_DIR), $(_HEADERS))
 
 _SRCS = rand_maths.o				\
@@ -52,7 +53,8 @@ _SRCS = rand_maths.o				\
 		output.o					\
 		evolution.o					\
 		evolution_without_flags.o	\
-		evolution_with_flags.o
+		evolution_with_flags.o		\
+		simulation.o
 SRCS := $(addprefix $(OBJ_DIR), $(_SRCS))
 
 _OBJS = main.o
@@ -66,7 +68,8 @@ TEST_HEADERS = test_header.h					\
 			   test_point_mutator.h             \
 			   test_output.h					\
 			   test_evolution_without_flags.h	\
-			   test_evolution_with_flags.h
+			   test_evolution_with_flags.h		\
+			   test_simulation.h
 TEST_HEADERS := $(addprefix $(TEST_DIR), $(TEST_HEADERS))
 
 _TESTS = test.o

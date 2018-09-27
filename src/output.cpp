@@ -113,13 +113,13 @@ void Output::print_seq_tags(const seqs_type& seqs)
     fout << endl;
 }
 
-void Output::print(size_type timestep, double real_time,
+void Output::print(size_type time, double real_time,
                    const std::list<Family>& families)
 {
-    bool p_tags = (timestep % to_output_tags || timestep == final_time);
-    bool p_init = (timestep % to_output_init || timestep == final_time);
-    bool p_seqs = (timestep % to_output_seqs || timestep == final_time);
-    bool p_pair = (timestep % to_output_pair || timestep == final_time);
+    bool p_tags = (time % to_output_tags == 0 || time == final_time || time == 0);
+    bool p_init = (time % to_output_init == 0 || time == final_time || time == 0);
+    bool p_seqs = (time % to_output_seqs == 0 || time == final_time || time == 0);
+    bool p_pair = (time % to_output_pair == 0 || time == final_time || time == 0);
 
     if (p_tags || p_init || p_seqs || p_pair)
     {
@@ -130,7 +130,7 @@ void Output::print(size_type timestep, double real_time,
 
         // for this timestep
         fout << "@" << endl;
-        fout << timestep << " " << real_time << endl;
+        fout << time << " " << real_time << endl;
         fout << p_tags << " " << p_init << " " << p_seqs << " " << p_pair
              << endl;
 
