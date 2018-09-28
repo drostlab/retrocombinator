@@ -24,12 +24,12 @@ To use it, load the library first.
 library(rcombinator)
 ```
 
-This can be done in two ways - with and without flags for inactivity.
+Simulations can be done in two ways - with and without flags for inactivity.
 The functions can be called in the following way:
 
 ```{r}
 # Calling a simulation without flags
-simulate_without_flags(num_seq = 5, seq_length = 20,
+simulate_without_flags_random(num_seq = 5, seq_length = 20,
                        point_mutation_model = "K80",
                        num_jumps = 20, timestep = 2,
                        burst_probability = 0.1, burst_mean = 1,
@@ -58,7 +58,7 @@ Similarly, we can run a simulation with flags.
 
 ```{r}
 # Calling a simulation without flags
-simulate_with_flags(num_seq = 5, seq_length = 20,
+simulate_with_flags_random(num_seq = 5, seq_length = 20,
                     point_mutation_model = "K80",
                     num_sensitive_posns = 10, inactive_probability = 0.1, 
                     num_jumps = 20, timestep = 2,

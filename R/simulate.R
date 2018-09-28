@@ -115,7 +115,7 @@ simulate_without_flags_specified <- function(
                                    sequence_numbering = 0, family_numbering = 0)
 {
   rcpp_simulate_without_flags_specified(
-                              num_seq, seq_length, point_mutation_model,
+                              init_seqs, init_seq_index, point_mutation_model,
                               num_jumps, timestep, burst_probability,
                               burst_mean, max_active_copies, recomb_mean,
                               file_out, num_out_tags, num_out_init,

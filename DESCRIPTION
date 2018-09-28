@@ -11,7 +11,8 @@ Description: This software package performs simulations on retrotransposon
 Depends: R (>= 3.5.0)
 Imports:
     Rcpp (>= 0.12.17),
-    magrittr
+    magrittr,
+    stringr
 LinkingTo: Rcpp
 License: GPL-3 + file LICENSE
 URL: https://github.com/sams25/rcombinator

@@ -3,9 +3,12 @@
 ^Doxyfile$
 ^docs$
 ^rcombinator$
+^test_rcombinator$
 ^obj$
 ^cpp$
 ^Makefile$
 ^tags$
 ^.vimrc$
 ^clean_rcpp.sh$
+^test_obj$
+^test_cpp$
