@@ -125,6 +125,11 @@ Sequence::Sequence(const Sequence& s1, const Sequence& s2,
     size_type n = sequences[curr]->get_length();
     bases.assign(sequences[curr]->bases.begin(),
                  sequences[curr]->bases.end());
+    // sanitize the number of times we are allowed to template switch
+    if (num_template_switches > n-1)
+    {
+        num_template_switches = n-1;
+    }
 
     this->mutations = sequences[curr]->mutations;
     this->lethal_mutations = sequences[curr]->lethal_mutations;
