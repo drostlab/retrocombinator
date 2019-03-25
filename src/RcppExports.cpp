@@ -129,16 +129,3 @@ BEGIN_RCPP
     return R_NilValue;
 END_RCPP
 }
-
-static const R_CallMethodDef CallEntries[] = {
-    {"_rcombinator_rcpp_simulate_without_flags_random", (DL_FUNC) &_rcombinator_rcpp_simulate_without_flags_random, 19},
-    {"_rcombinator_rcpp_simulate_with_flags_random", (DL_FUNC) &_rcombinator_rcpp_simulate_with_flags_random, 25},
-    {"_rcombinator_rcpp_simulate_without_flags_specified", (DL_FUNC) &_rcombinator_rcpp_simulate_without_flags_specified, 19},
-    {"_rcombinator_rcpp_simulate_with_flags_specified", (DL_FUNC) &_rcombinator_rcpp_simulate_with_flags_specified, 25},
-    {NULL, NULL, 0}
-};
-
-RcppExport void R_init_rcombinator(DllInfo *dll) {
-    R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
-    R_useDynamicSymbols(dll, FALSE);
-}
