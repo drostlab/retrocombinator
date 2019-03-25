@@ -1,13 +1,10 @@
 Package: rcombinator
 Version: 1.0
-Title: Simulating The Evolution Of Retrotransposons Over Time
+Title: A molecular evolution framework for retrotransposons
 Authors@R: person("Anindya", "Sharma",
                   email = "anindya.sharma1@gmail.com",
                   role = c("aut", "cre"))
-Description: This software package performs simulations on retrotransposon
-    sequences over long periods of time (~500M years). It takes into account
-    bursts and recombination events. Furthermore, it has functions to perform
-    basic data analysis on the simulation results.
+Description: An optimized framework to simulate the molecular evolutionary processes of retrotransposon evolution including extrachromosomal recombination.
 Depends: R (>= 3.5.0)
 Imports:
     Rcpp (>= 0.12.17),
@@ -20,6 +17,7 @@ BugReports: https://github.com/sams25/rcombinator/issues
 LazyData: true
 Encoding: UTF-8
 RoxygenNote: 6.0.1
+SystemRequirements: C++11
 Suggests: knitr,
     rmarkdown
 VignetteBuilder: knitr
