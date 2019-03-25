@@ -1,4 +1,6 @@
 #' Run an entire simulation with flags
+#' @useDynLib rcombinator, .registration = TRUE
+#' @importFrom Rcpp sourceCpp`
 #' @export
 simulate_with_flags_random <- function(
                                 num_seq, seq_length,
