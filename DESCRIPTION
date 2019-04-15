@@ -1,9 +1,10 @@
 Package: rcombinator
 Version: 1.0
 Title: A molecular evolution framework for retrotransposons
-Authors@R: person("Anindya", "Sharma",
-                  email = "anindya.sharma1@gmail.com",
-                  role = c("aut", "cre"))
+Authors@R: c(
+    person("Anindya", "Sharma", , "anindya.sharma1@gmail.com", role = c("aut", "cre")),
+    person("Hajk-Georg", "Drost", , "hgd23@cam.ac.uk", role = "aut")
+    )
 Description: An optimized framework to simulate the molecular evolutionary processes of retrotransposon evolution including extrachromosomal recombination.
 Depends: R (>= 3.5.0)
 Imports:
