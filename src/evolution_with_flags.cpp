@@ -118,8 +118,8 @@ void EvolutionWithFlags::kill_sequences(size_type num_active_seqs,
     remove_dead_families();
 
     // then, kill sequences until we are within our limits
-    while (num_total_seqs > max_total_copies ||
-           num_active_seqs > max_active_copies)
+    while ((num_total_seqs > max_total_copies ||
+           num_active_seqs > max_active_copies) && families.size() > 0)
     {
         size_type random_family_index = RNG.rand_int(0, families.size());
         auto& seqs = std::next(families.begin(), random_family_index)->seqs;
