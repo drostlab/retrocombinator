@@ -18,7 +18,7 @@ typedef \hyperlink{classretrocombinator_1_1Family_a994b8646d1c0c4e19420d2e5c6c53
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classretrocombinator_1_1Output_ac4dcc9e837413d0669f5b943f8d82dde}{Output} (const std\+::string \&filename\+\_\+out, \hyperlink{constants_8h_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} \hyperlink{classretrocombinator_1_1Output_a94f5e60b0aafcc409c78507c5e34ba7a}{final\+\_\+time}, \hyperlink{constants_8h_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} num\+\_\+out\+\_\+tags, \hyperlink{constants_8h_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} num\+\_\+out\+\_\+init, \hyperlink{constants_8h_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} num\+\_\+out\+\_\+seqs, \hyperlink{constants_8h_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} num\+\_\+out\+\_\+pair)
+\hyperlink{classretrocombinator_1_1Output_ac4dcc9e837413d0669f5b943f8d82dde}{Output} (const std\+::string \&filename\+\_\+out, \hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} \hyperlink{classretrocombinator_1_1Output_a94f5e60b0aafcc409c78507c5e34ba7a}{final\+\_\+time}, \hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} num\+\_\+out\+\_\+tags, \hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} num\+\_\+out\+\_\+init, \hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} num\+\_\+out\+\_\+seqs, \hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} num\+\_\+out\+\_\+pair)
 \begin{DoxyCompactList}\small\item\em Constructor, to specify how often we write to file. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classretrocombinator_1_1Output_a61d0840daf98bea49e4dc471f235eeab}\label{classretrocombinator_1_1Output_a61d0840daf98bea49e4dc471f235eeab}} 
 \hyperlink{classretrocombinator_1_1Output_a61d0840daf98bea49e4dc471f235eeab}{$\sim$\+Output} ()
@@ -30,7 +30,7 @@ void \hyperlink{classretrocombinator_1_1Output_a5feb518230443e8259aeb3b12ecae437
 void \hyperlink{classretrocombinator_1_1Output_a210fa5a86077912c8cf95d15603c1ad2}{print\+\_\+header} ()
 \begin{DoxyCompactList}\small\item\em Prints auxillary information regarding the simulation. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classretrocombinator_1_1Output_a9b28f297886b9e8f1e764b688c9a9da7}\label{classretrocombinator_1_1Output_a9b28f297886b9e8f1e764b688c9a9da7}} 
-void \hyperlink{classretrocombinator_1_1Output_a9b28f297886b9e8f1e764b688c9a9da7}{print} (\hyperlink{constants_8h_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} timestep, double real\+\_\+time, const std\+::list$<$ \hyperlink{classretrocombinator_1_1Family}{Family} $>$ \&seqs)
+void \hyperlink{classretrocombinator_1_1Output_a9b28f297886b9e8f1e764b688c9a9da7}{print} (\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} timestep, double real\+\_\+time, const std\+::list$<$ \hyperlink{classretrocombinator_1_1Family}{Family} $>$ \&seqs)
 \begin{DoxyCompactList}\small\item\em Prints the required information during the simulation. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \textbf{ }\par
@@ -53,7 +53,7 @@ void \hyperlink{classretrocombinator_1_1Output_a89392e3e01808946eaeb160955e87b21
 \mbox{\Hypertarget{classretrocombinator_1_1Output_a892712f42ff097ec7b3622fe88d7c441}\label{classretrocombinator_1_1Output_a892712f42ff097ec7b3622fe88d7c441}} 
 std\+::fstream \hyperlink{classretrocombinator_1_1Output_a892712f42ff097ec7b3622fe88d7c441}{fout}
 \begin{DoxyCompactList}\small\item\em A stream for the output. \end{DoxyCompactList}\item 
-const \hyperlink{constants_8h_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} \hyperlink{classretrocombinator_1_1Output_a94f5e60b0aafcc409c78507c5e34ba7a}{final\+\_\+time}
+const \hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} \hyperlink{classretrocombinator_1_1Output_a94f5e60b0aafcc409c78507c5e34ba7a}{final\+\_\+time}
 \begin{DoxyCompactList}\small\item\em The final timestep in our simulation. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classretrocombinator_1_1Output_a338c2b8688791c8e1be4c5637e36f37f}\label{classretrocombinator_1_1Output_a338c2b8688791c8e1be4c5637e36f37f}} 
 std\+::string \hyperlink{classretrocombinator_1_1Output_a338c2b8688791c8e1be4c5637e36f37f}{init\+\_\+seq}
@@ -61,16 +61,16 @@ std\+::string \hyperlink{classretrocombinator_1_1Output_a338c2b8688791c8e1be4c56
 \textbf{ }\par
 \begin{DoxyCompactItemize}
 \item 
-const \hyperlink{constants_8h_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} \hyperlink{classretrocombinator_1_1Output_a52a175aea7babe70c97021c0ccc47b4f}{to\+\_\+output\+\_\+tags}
+const \hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} \hyperlink{classretrocombinator_1_1Output_a52a175aea7babe70c97021c0ccc47b4f}{to\+\_\+output\+\_\+tags}
 \begin{DoxyCompactList}\small\item\em When to print out what data. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classretrocombinator_1_1Output_a63d41cf2393760562e67c8c20ea48120}\label{classretrocombinator_1_1Output_a63d41cf2393760562e67c8c20ea48120}} 
-const \hyperlink{constants_8h_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} {\bfseries to\+\_\+output\+\_\+init}
+const \hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} {\bfseries to\+\_\+output\+\_\+init}
 \item 
 \mbox{\Hypertarget{classretrocombinator_1_1Output_a9ac4938969e63a74c821463b4626eaa8}\label{classretrocombinator_1_1Output_a9ac4938969e63a74c821463b4626eaa8}} 
-const \hyperlink{constants_8h_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} {\bfseries to\+\_\+output\+\_\+seqs}
+const \hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} {\bfseries to\+\_\+output\+\_\+seqs}
 \item 
 \mbox{\Hypertarget{classretrocombinator_1_1Output_a54bab660e5cbe5c8f5dc60aa5df9c607}\label{classretrocombinator_1_1Output_a54bab660e5cbe5c8f5dc60aa5df9c607}} 
-const \hyperlink{constants_8h_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} {\bfseries to\+\_\+output\+\_\+pair}
+const \hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} {\bfseries to\+\_\+output\+\_\+pair}
 \end{DoxyCompactItemize}
 
 
@@ -91,7 +91,7 @@ Can output the following things at specified timesteps\+:
 \index{retrocombinator\+::\+Output@{retrocombinator\+::\+Output}!Output@{Output}}
 \index{Output@{Output}!retrocombinator\+::\+Output@{retrocombinator\+::\+Output}}
 \subsubsection{\texorpdfstring{Output()}{Output()}}
-{\footnotesize\ttfamily Output\+::\+Output (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename\+\_\+out,  }\item[{\hyperlink{constants_8h_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}]{final\+\_\+time,  }\item[{\hyperlink{constants_8h_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}]{num\+\_\+out\+\_\+tags,  }\item[{\hyperlink{constants_8h_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}]{num\+\_\+out\+\_\+init,  }\item[{\hyperlink{constants_8h_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}]{num\+\_\+out\+\_\+seqs,  }\item[{\hyperlink{constants_8h_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}]{num\+\_\+out\+\_\+pair }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Output\+::\+Output (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename\+\_\+out,  }\item[{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}]{final\+\_\+time,  }\item[{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}]{num\+\_\+out\+\_\+tags,  }\item[{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}]{num\+\_\+out\+\_\+init,  }\item[{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}]{num\+\_\+out\+\_\+seqs,  }\item[{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}]{num\+\_\+out\+\_\+pair }\end{DoxyParamCaption})}
 
 
 
@@ -148,7 +148,7 @@ The order is as follows\+: for each family F1\+: for each seq S1 in F1\+: for ea
 \index{retrocombinator\+::\+Output@{retrocombinator\+::\+Output}!final\+\_\+time@{final\+\_\+time}}
 \index{final\+\_\+time@{final\+\_\+time}!retrocombinator\+::\+Output@{retrocombinator\+::\+Output}}
 \subsubsection{\texorpdfstring{final\+\_\+time}{final\_time}}
-{\footnotesize\ttfamily const \hyperlink{constants_8h_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} retrocombinator\+::\+Output\+::final\+\_\+time\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily const \hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} retrocombinator\+::\+Output\+::final\+\_\+time\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -158,7 +158,7 @@ Make sure we output everything we can at this timestep, regardless of what we ex
 \index{retrocombinator\+::\+Output@{retrocombinator\+::\+Output}!to\+\_\+output\+\_\+tags@{to\+\_\+output\+\_\+tags}}
 \index{to\+\_\+output\+\_\+tags@{to\+\_\+output\+\_\+tags}!retrocombinator\+::\+Output@{retrocombinator\+::\+Output}}
 \subsubsection{\texorpdfstring{to\+\_\+output\+\_\+tags}{to\_output\_tags}}
-{\footnotesize\ttfamily const \hyperlink{constants_8h_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} retrocombinator\+::\+Output\+::to\+\_\+output\+\_\+tags\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily const \hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} retrocombinator\+::\+Output\+::to\+\_\+output\+\_\+tags\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

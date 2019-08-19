@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Rcombinator: test_cpp/test_header.h File Reference</title>
+<title>Retrocombinator: test_cpp/test_header.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Rcombinator
+   <div id="projectname">Retrocombinator
    </div>
    <div id="projectbrief">A package for simulating the evolution of retrotransposons over time.</div>
   </td>
@@ -64,6 +64,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#namespaces">Namespaces</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">test_header.h File Reference</div>  </div>
@@ -102,66 +103,22 @@ This graph shows which files directly or indirectly include this file:</div>
 </div>
 <p><a href="test__header_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespaceretrocombinator"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceretrocombinator.html">retrocombinator</a></td></tr>
+<tr class="memdesc:namespaceretrocombinator"><td class="mdescLeft">&#160;</td><td class="mdescRight">The overall namespace for the C++ component of the package. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aadb27262663ae58fda77172ae3d828dc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__header_8h.html#aadb27262663ae58fda77172ae3d828dc">retrocombinator::files_same</a> (std::string file1, std::string file2)</td></tr>
-<tr class="memdesc:aadb27262663ae58fda77172ae3d828dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simple utility to check if two files are identical or not.  <a href="test__header_8h.html#aadb27262663ae58fda77172ae3d828dc">More...</a><br /></td></tr>
+<tr class="memitem:aadb27262663ae58fda77172ae3d828dc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceretrocombinator.html#aadb27262663ae58fda77172ae3d828dc">retrocombinator::files_same</a> (std::string file1, std::string file2)</td></tr>
+<tr class="memdesc:aadb27262663ae58fda77172ae3d828dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simple utility to check if two files are identical or not.  <a href="namespaceretrocombinator.html#aadb27262663ae58fda77172ae3d828dc">More...</a><br /></td></tr>
 <tr class="separator:aadb27262663ae58fda77172ae3d828dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae16ffd9c27be531d7abd3e582cfe1455"><td class="memItemLeft" align="right" valign="top"><a id="ae16ffd9c27be531d7abd3e582cfe1455"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__header_8h.html#ae16ffd9c27be531d7abd3e582cfe1455">retrocombinator::test_initialize</a> (size_type seed=0)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceretrocombinator.html#ae16ffd9c27be531d7abd3e582cfe1455">retrocombinator::test_initialize</a> (size_type seed=0)</td></tr>
 <tr class="memdesc:ae16ffd9c27be531d7abd3e582cfe1455"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialises a test harness, with a default seed. <br /></td></tr>
 <tr class="separator:ae16ffd9c27be531d7abd3e582cfe1455"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="file_aadb27262663ae58fda77172ae3d828dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_aadb27262663ae58fda77172ae3d828dc">&#9670;&nbsp;</a></span>files_same()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool retrocombinator::files_same </td>
-          <td>(</td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>file1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>file2</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Simple utility to check if two files are identical or not. </p>
-<p>Needs the command-line utility diff, on a Unix machine, to work. </p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="test__header_8h_aadb27262663ae58fda77172ae3d828dc_cgraph.png" border="0" usemap="#test__header_8h_aadb27262663ae58fda77172ae3d828dc_cgraph" alt=""/></div>
-<map name="test__header_8h_aadb27262663ae58fda77172ae3d828dc_cgraph" id="test__header_8h_aadb27262663ae58fda77172ae3d828dc_cgraph">
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="test__header_8h_aadb27262663ae58fda77172ae3d828dc_icgraph.png" border="0" usemap="#test__header_8h_aadb27262663ae58fda77172ae3d828dc_icgraph" alt=""/></div>
-<map name="test__header_8h_aadb27262663ae58fda77172ae3d828dc_icgraph" id="test__header_8h_aadb27262663ae58fda77172ae3d828dc_icgraph">
-<area shape="rect" id="node2" href="test__evolution__with__flags_8h.html#a7900e3e3c62ac1f2231fee7a086225b7" title="Tests EvolutionWithFlags. " alt="" coords="245,29,392,71"/>
-<area shape="rect" id="node3" href="test__evolution__without__flags_8h.html#a3ad1d5cfdeffa706970f9176989460ca" title="Tests EvolutionWithoutFlags. " alt="" coords="236,119,401,160"/>
-<area shape="rect" id="node4" href="test__output_8h.html#a48c6a2be6e6f3dbd9ae86114223983ac" title="Tests the Output class. " alt="" coords="247,208,390,249"/>
-<area shape="rect" id="node5" href="test__simulation_8h.html#a48d115c48074ffd5cd46b517a23983ec" title="Tests all the wrapper functions to set&#45;up and run simulations. " alt="" coords="247,297,390,339"/>
-</map>
-</div>
-
-</div>
-</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

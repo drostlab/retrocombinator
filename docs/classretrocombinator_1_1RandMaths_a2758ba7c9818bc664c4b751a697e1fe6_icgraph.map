@@ -1,5 +1,5 @@
 <map id="retrocombinator::RandMaths::sample_distinct_pair" name="retrocombinator::RandMaths::sample_distinct_pair">
-<area shape="rect" id="node2" href="$classretrocombinator_1_1RandMaths.html#ae3a186a8f3124cbfc698eeae09b708a0" title="Gets the last set seed. " alt="" coords="240,29,427,71"/>
-<area shape="rect" id="node3" href="$classretrocombinator_1_1Output.html#a210fa5a86077912c8cf95d15603c1ad2" title="Prints auxillary information regarding the simulation. " alt="" coords="475,29,633,71"/>
-<area shape="rect" id="node4" href="$test__output_8h.html#a48c6a2be6e6f3dbd9ae86114223983ac" title="Tests the Output class. " alt="" coords="681,29,824,71"/>
+<area shape="rect" id="node2" href="$classretrocombinator_1_1RandMaths.html#ae3a186a8f3124cbfc698eeae09b708a0" title="Gets the last set seed. " alt="" coords="240,5,427,47"/>
+<area shape="rect" id="node3" href="$classretrocombinator_1_1Output.html#a210fa5a86077912c8cf95d15603c1ad2" title="Prints auxillary information regarding the simulation. " alt="" coords="475,5,633,47"/>
+<area shape="rect" id="node4" href="$namespaceretrocombinator.html#a48c6a2be6e6f3dbd9ae86114223983ac" title="Tests the Output class. " alt="" coords="681,5,824,47"/>
 </map>

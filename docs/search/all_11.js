@@ -12,7 +12,9 @@ var searchData=
   ['remove_5fdead_5ffamilies',['remove_dead_families',['../classretrocombinator_1_1EvolutionWithFlags.html#adbf96b693339f0b902ba1a2bb83a01d4',1,'retrocombinator::EvolutionWithFlags']]],
   ['renumber_5ffamilies',['renumber_families',['../classretrocombinator_1_1Family.html#a79b180c88225ee52d21da020375d2dfd',1,'retrocombinator::Family']]],
   ['renumber_5fsequences',['renumber_sequences',['../classretrocombinator_1_1Sequence.html#ad4791ec3cefbea417081cd349ac6c23b',1,'retrocombinator::Sequence']]],
-  ['returnsnucmatrix',['ReturnsNucMatrix',['../constants_8h.html#a9556122795cc5d0307ae7d2f4e5c36ef',1,'retrocombinator']]],
-  ['returnsnucmatrixfromdouble',['ReturnsNucMatrixFromDouble',['../constants_8h.html#a8c467e58c8e3e2f58b916ac063c671b1',1,'retrocombinator']]],
+  ['retrocombinator',['retrocombinator',['../namespaceretrocombinator.html',1,'']]],
+  ['returnsnucmatrix',['ReturnsNucMatrix',['../namespaceretrocombinator.html#a9556122795cc5d0307ae7d2f4e5c36ef',1,'retrocombinator']]],
+  ['returnsnucmatrixfromdouble',['ReturnsNucMatrixFromDouble',['../namespaceretrocombinator.html#a8c467e58c8e3e2f58b916ac063c671b1',1,'retrocombinator']]],
+  ['rng',['RNG',['../namespaceretrocombinator.html#a4987db6a228df9ffab41c0a5342556f6',1,'retrocombinator']]],
   ['utils',['Utils',['../namespaceretrocombinator_1_1Utils.html',1,'retrocombinator']]]
 ];

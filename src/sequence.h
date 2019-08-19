@@ -183,25 +183,27 @@ namespace retrocombinator
             return (100.0-(100.0*mutations.size())/this->get_length());
         }
 
-        //@{
-        /** Computes pairwise distances between two sequences.
+        /** Pairwise distances between two sequences.
          *  This is the standard edit distance score, and is the number of
-         *  mismatches (because insertions and deletions are not possible in this
-         *  system).
-         */
-
-        /** Pairwise distances.
-         *  Between two sequences or between a sequence and a string.
-         */
+         *  mismatches (because insertions and deletions are not possible in
+         *  this system).
+          */
         friend size_type operator *(const Sequence& s1, const Sequence& s2);
+        /** Pairwise distances between a sequence and a string.
+         *  This is the standard edit distance score, and is the number of
+         *  mismatches (because insertions and deletions are not possible in
+         *  this system).
+          */
         friend size_type operator *(const Sequence& s1, std::string s2);
 
-        /** Pairwise sequence dissimilarity (as a percentage).
+        /** Pairwise dissimilarity (%) between two sequences.
          *  Similarity is 100-dissimilarity.
-         */
+          */
         friend double operator %(const Sequence& s1, const Sequence& s2);
+        /** Pairwise dissimilarity (%) between a sequence and a string.
+         *  Similarity is 100-dissimilarity.
+          */
         friend double operator %(const Sequence& s1, std::string s2);
-        //@}
     };
 }
 

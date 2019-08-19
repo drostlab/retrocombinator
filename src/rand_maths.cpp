@@ -4,6 +4,10 @@
 // Declaration of global random number generator
 namespace retrocombinator
 {
+    /** Global random number generator.
+      * Used to completely determine the random effects of a simulation by
+      * specifying a seed.
+      */
     RandMaths& RNG = RandMaths::get_instance();
 }
 

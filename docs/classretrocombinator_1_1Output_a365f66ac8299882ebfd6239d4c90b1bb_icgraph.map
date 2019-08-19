@@ -1,7 +1,12 @@
 <map id="retrocombinator::Output::print_init" name="retrocombinator::Output::print_init">
-<area shape="rect" id="node2" href="$classretrocombinator_1_1Output.html#a9b28f297886b9e8f1e764b688c9a9da7" title="Prints the required information during the simulation. " alt="" coords="212,95,371,136"/>
-<area shape="rect" id="node3" href="$classretrocombinator_1_1Evolution.html#a0b8a181242ea8ee3072258fa7ed416f4" title="Run a simulation, modify the sequences, and output results to file. " alt="" coords="419,49,593,91"/>
-<area shape="rect" id="node6" href="$test__output_8h.html#a48c6a2be6e6f3dbd9ae86114223983ac" title="Tests the Output class. " alt="" coords="435,139,577,180"/>
-<area shape="rect" id="node4" href="$classretrocombinator_1_1EvolutionWithoutFlags.html#a9e27b532826998a88d2c157daf53c447" title="Overrides to create a copy number tree if it hasn&#39;t already been created. " alt="" coords="641,5,816,47"/>
-<area shape="rect" id="node5" href="$test__evolution__with__flags_8h.html#a7900e3e3c62ac1f2231fee7a086225b7" title="Tests EvolutionWithFlags. " alt="" coords="655,95,802,136"/>
+<area shape="rect" id="node2" href="$classretrocombinator_1_1Output.html#a9b28f297886b9e8f1e764b688c9a9da7" title="Prints the required information during the simulation. " alt="" coords="212,107,371,148"/>
+<area shape="rect" id="node3" href="$classretrocombinator_1_1Evolution.html#a0b8a181242ea8ee3072258fa7ed416f4" title="Run a simulation, modify the sequences, and output results to file. " alt="" coords="419,73,593,115"/>
+<area shape="rect" id="node11" href="$namespaceretrocombinator.html#a48c6a2be6e6f3dbd9ae86114223983ac" title="Tests the Output class. " alt="" coords="435,139,577,180"/>
+<area shape="rect" id="node4" href="$classretrocombinator_1_1EvolutionWithoutFlags.html#a9e27b532826998a88d2c157daf53c447" title="Overrides to create a copy number tree if it hasn&#39;t already been created. " alt="" coords="641,8,816,49"/>
+<area shape="rect" id="node8" href="$namespaceretrocombinator.html#a3d34bdb68843d370ccb2374dfb8e9eac" title="Sets up and runs a simulation with flags. " alt="" coords="644,73,813,115"/>
+<area shape="rect" id="node10" href="$namespaceretrocombinator.html#a7900e3e3c62ac1f2231fee7a086225b7" title="Tests EvolutionWithFlags. " alt="" coords="655,139,802,180"/>
+<area shape="rect" id="node5" href="$namespaceretrocombinator.html#ab4bb894621063b932d80c1473b359534" title="Sets up and runs a simulation without flags. " alt="" coords="864,8,1033,49"/>
+<area shape="rect" id="node6" href="$namespaceretrocombinator.html#a0dc31e2b9d6473e995395d8171f56312" title="Sets up and runs a simulation without flags. " alt="" coords="1081,5,1251,47"/>
+<area shape="rect" id="node7" href="$namespaceretrocombinator.html#a48d115c48074ffd5cd46b517a23983ec" title="Tests all the wrapper functions to set&#45;up and run simulations. " alt="" coords="1095,71,1237,112"/>
+<area shape="rect" id="node9" href="$namespaceretrocombinator.html#a3875c27225976a6e04bde555c3acca36" title="Sets up and runs a simulation with flags. " alt="" coords="864,129,1033,171"/>
 </map>

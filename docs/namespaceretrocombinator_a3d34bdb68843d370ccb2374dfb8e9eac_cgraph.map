@@ -1,0 +1,29 @@
+<map id="retrocombinator::simulate_with_flags" name="retrocombinator::simulate_with_flags">
+<area shape="rect" id="node2" href="$classretrocombinator_1_1RandMaths.html#a2b61e31de6067ffa35531d5bde40f4c6" title="Uses system time to seed the RNG. " alt="" coords="223,5,409,47"/>
+<area shape="rect" id="node3" href="$classretrocombinator_1_1RandMaths.html#a0bf1c2e7a1eccb1f9246b3fceeb5db8a" title="Uses a user&#45;specified seed for RNG. " alt="" coords="223,71,409,112"/>
+<area shape="rect" id="node4" href="$classretrocombinator_1_1Sequence.html#ad4791ec3cefbea417081cd349ac6c23b" title="Explicitly update the global sequence count to start from a particular number. " alt="" coords="227,136,405,177"/>
+<area shape="rect" id="node5" href="$classretrocombinator_1_1Family.html#a79b180c88225ee52d21da020375d2dfd" title="Explicitly update the global family count to start from a particular number. " alt="" coords="237,201,395,243"/>
+<area shape="rect" id="node6" href="$classretrocombinator_1_1Output.html#a5feb518230443e8259aeb3b12ecae437" title="This sets the sequence that we compare all sequences in our simulation against. " alt="" coords="237,267,395,308"/>
+<area shape="rect" id="node7" href="$classretrocombinator_1_1EvolutionWithFlags.html#a3dd922a0ddfa93218e95f733332c21f3" title="To kill sequences that have diverged too much. " alt="" coords="229,333,403,389"/>
+<area shape="rect" id="node8" href="$classretrocombinator_1_1EvolutionWithFlags.html#ad94cabcb6a894d503c3d84c6022a1438" title="To prevent distant sequences from recombining. " alt="" coords="226,413,406,455"/>
+<area shape="rect" id="node9" href="$classretrocombinator_1_1Evolution.html#a0b8a181242ea8ee3072258fa7ed416f4" title="Run a simulation, modify the sequences, and output results to file. " alt="" coords="229,479,403,520"/>
+<area shape="rect" id="node10" href="$classretrocombinator_1_1Output.html#a9b28f297886b9e8f1e764b688c9a9da7" title="Prints the required information during the simulation. " alt="" coords="475,184,634,225"/>
+<area shape="rect" id="node15" href="$classretrocombinator_1_1PointMutator.html#aba3c2b8641affe8a06d815c33cafdc1b" title="Mutates a sequence according to a given transition matrix. " alt="" coords="457,479,652,520"/>
+<area shape="rect" id="node28" href="$classretrocombinator_1_1Evolution.html#abab94a3f14460300a6a3b7a0286236a6" title="How the sequences burst after a timestep in the simulation. " alt="" coords="467,544,642,585"/>
+<area shape="rect" id="node11" href="$classretrocombinator_1_1Output.html#a89392e3e01808946eaeb160955e87b21" title="Prints sequence tags family&#45;wise, in order. " alt="" coords="714,53,873,95"/>
+<area shape="rect" id="node12" href="$classretrocombinator_1_1Output.html#a365f66ac8299882ebfd6239d4c90b1bb" title="Helper print functions. " alt="" coords="714,119,873,160"/>
+<area shape="rect" id="node13" href="$classretrocombinator_1_1Output.html#ac56d04591e50cbb8170da04a5ffa233a" title="Prints raw sequences family&#45;wise, in order. " alt="" coords="714,184,873,225"/>
+<area shape="rect" id="node14" href="$classretrocombinator_1_1Output.html#ac5632b57357788ba7d25769c412a2a11" title="Prints pairwise distances across all families. " alt="" coords="714,249,873,291"/>
+<area shape="rect" id="node16" href="$classretrocombinator_1_1Sequence.html#aeefc98943c08769af4ed9f73157d26d1" title="Returns length of the sequence. " alt="" coords="704,315,883,356"/>
+<area shape="rect" id="node17" href="$classretrocombinator_1_1RandMaths.html#a3834f9a074546f0d588247610f16fb0e" title="Chooses an event from a list of possible events. " alt="" coords="700,380,887,421"/>
+<area shape="rect" id="node19" href="$namespaceretrocombinator_1_1Consts.html#a074bd1a42191d4770f74beb2bf228111" title="Returns the index of a nucleotide given its character form. " alt="" coords="712,445,875,487"/>
+<area shape="rect" id="node20" href="$classretrocombinator_1_1Sequence.html#a23c73a4ccfbe9baded2e99479e3ffb5e" title="Returns the character for a base at a given position. " alt="" coords="704,576,883,617"/>
+<area shape="rect" id="node23" href="$classretrocombinator_1_1Sequence.html#a85299c3dbf2efb993a43acc2e42fcb00" title="Changes the nucleotide at position n to new_nucleotide. " alt="" coords="939,637,1117,679"/>
+<area shape="rect" id="node26" href="$classretrocombinator_1_1RandMaths.html#a183686140a9da18ad40c7e048ee8914e" title="Tests whether or not an event happened. " alt="" coords="700,511,887,552"/>
+<area shape="rect" id="node27" href="$namespaceretrocombinator_1_1Consts.html#a4f7296df50158c4273a1c5300c24c2f7" title="Returns a character corresponding a nucleotide given its index. " alt="" coords="712,693,875,735"/>
+<area shape="rect" id="node18" href="$classretrocombinator_1_1RandMaths.html#aa6441baa59bff50f588c0c54e3c54140" title="Generates a random real number within a range. " alt="" coords="935,387,1121,428"/>
+<area shape="rect" id="node21" href="$namespaceretrocombinator_1_1Consts.html#af335f61cbdfff27175d7f41cd95d426d" title="Returns the character of a nucleotide given its 2bit&#45;encoding. " alt="" coords="1169,511,1332,552"/>
+<area shape="rect" id="node22" href="$classretrocombinator_1_1Sequence.html#a378e5aecc7fa4524cd90d352cfd651fe" title="Returns the 2bit encoding for a base at a given position. " alt="" coords="939,507,1117,548"/>
+<area shape="rect" id="node25" href="$classretrocombinator_1_1Sequence.html#a5fa45e155a1e4b3c257f19369ace05a8" title="Returns the raw nucleotide sequence as a string. " alt="" coords="939,572,1117,613"/>
+<area shape="rect" id="node24" href="$namespaceretrocombinator_1_1Consts.html#a95eb077a2bba2fe988b44e68a3284314" title="Returns the 2bit&#45;encoding of a nucleotide given its character form. " alt="" coords="1169,637,1332,679"/>
+</map>

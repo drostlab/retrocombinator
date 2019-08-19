@@ -1,7 +1,12 @@
 <map id="retrocombinator::Family::renumber_families" name="retrocombinator::Family::renumber_families">
-<area shape="rect" id="node2" href="$classretrocombinator_1_1Family.html#a8f730b881fa67c9fc664ef293b46434b" title="Gets the tag of the parent family. " alt="" coords="215,5,374,47"/>
-<area shape="rect" id="node3" href="$test__evolution__with__flags_8h.html#a7900e3e3c62ac1f2231fee7a086225b7" title="Tests EvolutionWithFlags. " alt="" coords="221,95,368,136"/>
-<area shape="rect" id="node4" href="$test__evolution__without__flags_8h.html#a3ad1d5cfdeffa706970f9176989460ca" title="Tests EvolutionWithoutFlags. " alt="" coords="212,184,377,225"/>
-<area shape="rect" id="node5" href="$test__family_8h.html#a08d7fbb4685cd952f8e4330b1370ba17" title="Tests the Family class. " alt="" coords="223,273,366,315"/>
-<area shape="rect" id="node6" href="$test__output_8h.html#a48c6a2be6e6f3dbd9ae86114223983ac" title="Tests the Output class. " alt="" coords="223,363,366,404"/>
+<area shape="rect" id="node2" href="$classretrocombinator_1_1Family.html#a8f730b881fa67c9fc664ef293b46434b" title="Gets the tag of the parent family. " alt="" coords="217,5,376,47"/>
+<area shape="rect" id="node3" href="$namespaceretrocombinator.html#ab4bb894621063b932d80c1473b359534" title="Sets up and runs a simulation without flags. " alt="" coords="212,71,381,112"/>
+<area shape="rect" id="node6" href="$namespaceretrocombinator.html#a3d34bdb68843d370ccb2374dfb8e9eac" title="Sets up and runs a simulation with flags. " alt="" coords="212,136,381,177"/>
+<area shape="rect" id="node8" href="$namespaceretrocombinator.html#a7900e3e3c62ac1f2231fee7a086225b7" title="Tests EvolutionWithFlags. " alt="" coords="223,201,370,243"/>
+<area shape="rect" id="node9" href="$namespaceretrocombinator.html#a3ad1d5cfdeffa706970f9176989460ca" title="Tests EvolutionWithoutFlags. " alt="" coords="214,267,379,308"/>
+<area shape="rect" id="node10" href="$namespaceretrocombinator.html#a08d7fbb4685cd952f8e4330b1370ba17" title="Tests the Family class. " alt="" coords="225,332,368,373"/>
+<area shape="rect" id="node11" href="$namespaceretrocombinator.html#a48c6a2be6e6f3dbd9ae86114223983ac" title="Tests the Output class. " alt="" coords="225,397,368,439"/>
+<area shape="rect" id="node4" href="$namespaceretrocombinator.html#a0dc31e2b9d6473e995395d8171f56312" title="Sets up and runs a simulation without flags. " alt="" coords="429,39,599,80"/>
+<area shape="rect" id="node5" href="$namespaceretrocombinator.html#a48d115c48074ffd5cd46b517a23983ec" title="Tests all the wrapper functions to set&#45;up and run simulations. " alt="" coords="443,104,585,145"/>
+<area shape="rect" id="node7" href="$namespaceretrocombinator.html#a3875c27225976a6e04bde555c3acca36" title="Sets up and runs a simulation with flags. " alt="" coords="429,169,599,211"/>
 </map>

@@ -10,6 +10,9 @@
 #include "evolution_without_flags.h"
 #include "evolution_with_flags.h"
 
+/** \namespace retrocombinator
+ *  The overall namespace for the C++ component of the package.
+ */
 namespace retrocombinator
 {
     /** Sets up and runs a simulation without flags.

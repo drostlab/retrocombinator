@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Rcombinator: src/constants.h File Reference</title>
+<title>Retrocombinator: src/constants.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Rcombinator
+   <div id="projectname">Retrocombinator
    </div>
    <div id="projectbrief">A package for simulating the evolution of retrotransposons over time.</div>
   </td>
@@ -103,6 +103,9 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
+<tr class="memitem:namespaceretrocombinator"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceretrocombinator.html">retrocombinator</a></td></tr>
+<tr class="memdesc:namespaceretrocombinator"><td class="mdescLeft">&#160;</td><td class="mdescRight">The overall namespace for the C++ component of the package. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespaceretrocombinator_1_1Consts"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceretrocombinator_1_1Consts.html">retrocombinator::Consts</a></td></tr>
 <tr class="memdesc:namespaceretrocombinator_1_1Consts"><td class="mdescLeft">&#160;</td><td class="mdescRight">To store all constant values that we define. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -110,31 +113,31 @@ Namespaces</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:a47bcd6dd938a6f8e34b0996d940f81ef"><td class="memItemLeft" align="right" valign="top"><a id="a47bcd6dd938a6f8e34b0996d940f81ef"></a>
-typedef double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="constants_8h.html#a47bcd6dd938a6f8e34b0996d940f81ef">retrocombinator::NucMatrix</a>[Consts::NUC_COUNT][Consts::NUC_COUNT]</td></tr>
+typedef double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceretrocombinator.html#a47bcd6dd938a6f8e34b0996d940f81ef">retrocombinator::NucMatrix</a>[Consts::NUC_COUNT][Consts::NUC_COUNT]</td></tr>
 <tr class="memdesc:a47bcd6dd938a6f8e34b0996d940f81ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">For transition matrices, rate matrices etc. <br /></td></tr>
 <tr class="separator:a47bcd6dd938a6f8e34b0996d940f81ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9556122795cc5d0307ae7d2f4e5c36ef"><td class="memItemLeft" align="right" valign="top"><a id="a9556122795cc5d0307ae7d2f4e5c36ef"></a>
-typedef const double(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="constants_8h.html#a9556122795cc5d0307ae7d2f4e5c36ef">retrocombinator::ReturnsNucMatrix</a>())[Consts::NUC_COUNT]</td></tr>
+typedef const double(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceretrocombinator.html#a9556122795cc5d0307ae7d2f4e5c36ef">retrocombinator::ReturnsNucMatrix</a>())[Consts::NUC_COUNT]</td></tr>
 <tr class="memdesc:a9556122795cc5d0307ae7d2f4e5c36ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">For functions that return NucMatrix and accept no parameters. <br /></td></tr>
 <tr class="separator:a9556122795cc5d0307ae7d2f4e5c36ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c467e58c8e3e2f58b916ac063c671b1"><td class="memItemLeft" align="right" valign="top"><a id="a8c467e58c8e3e2f58b916ac063c671b1"></a>
-typedef const double(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="constants_8h.html#a8c467e58c8e3e2f58b916ac063c671b1">retrocombinator::ReturnsNucMatrixFromDouble</a>(double))[Consts::NUC_COUNT]</td></tr>
+typedef const double(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceretrocombinator.html#a8c467e58c8e3e2f58b916ac063c671b1">retrocombinator::ReturnsNucMatrixFromDouble</a>(double))[Consts::NUC_COUNT]</td></tr>
 <tr class="memdesc:a8c467e58c8e3e2f58b916ac063c671b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">For functions that return NucMatrix and accept time as parameter. <br /></td></tr>
 <tr class="separator:a8c467e58c8e3e2f58b916ac063c671b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e1541b50cee66a791df4c437ccbb385"><td class="memItemLeft" align="right" valign="top"><a id="a8e1541b50cee66a791df4c437ccbb385"></a>
-typedef std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="constants_8h.html#a8e1541b50cee66a791df4c437ccbb385">retrocombinator::size_type</a></td></tr>
+typedef std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceretrocombinator.html#a8e1541b50cee66a791df4c437ccbb385">retrocombinator::size_type</a></td></tr>
 <tr class="memdesc:a8e1541b50cee66a791df4c437ccbb385"><td class="mdescLeft">&#160;</td><td class="mdescRight">For all indices and sizes. <br /></td></tr>
 <tr class="separator:a8e1541b50cee66a791df4c437ccbb385"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd7c6eb4293e8c4d12827609a9a34b9b"><td class="memItemLeft" align="right" valign="top"><a id="afd7c6eb4293e8c4d12827609a9a34b9b"></a>
-typedef long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="constants_8h.html#afd7c6eb4293e8c4d12827609a9a34b9b">retrocombinator::tag_type</a></td></tr>
+typedef long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceretrocombinator.html#afd7c6eb4293e8c4d12827609a9a34b9b">retrocombinator::tag_type</a></td></tr>
 <tr class="memdesc:afd7c6eb4293e8c4d12827609a9a34b9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">For all integer-based codes. <br /></td></tr>
 <tr class="separator:afd7c6eb4293e8c4d12827609a9a34b9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
-<tr class="memitem:a316667a6633d664fe892bd7e0eb0141e"><td class="memItemLeft" align="right" valign="top">typedef std::set&lt; size_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="constants_8h.html#a316667a6633d664fe892bd7e0eb0141e">retrocombinator::cluster_type</a></td></tr>
-<tr class="memdesc:a316667a6633d664fe892bd7e0eb0141e"><td class="mdescLeft">&#160;</td><td class="mdescRight">For clustering algorithms.  <a href="constants_8h.html#a316667a6633d664fe892bd7e0eb0141e">More...</a><br /></td></tr>
+<tr class="memitem:a316667a6633d664fe892bd7e0eb0141e"><td class="memItemLeft" align="right" valign="top">typedef std::set&lt; size_type &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceretrocombinator.html#a316667a6633d664fe892bd7e0eb0141e">retrocombinator::cluster_type</a></td></tr>
+<tr class="memdesc:a316667a6633d664fe892bd7e0eb0141e"><td class="mdescLeft">&#160;</td><td class="mdescRight">For clustering algorithms.  <a href="namespaceretrocombinator.html#a316667a6633d664fe892bd7e0eb0141e">More...</a><br /></td></tr>
 <tr class="separator:a316667a6633d664fe892bd7e0eb0141e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa416b6a3a9e444eae3309a16b8607750"><td class="memItemLeft" align="right" valign="top"><a id="aa416b6a3a9e444eae3309a16b8607750"></a>
-typedef std::vector&lt; std::vector&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="constants_8h.html#aa416b6a3a9e444eae3309a16b8607750">retrocombinator::dist_type</a></td></tr>
+typedef std::vector&lt; std::vector&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceretrocombinator.html#aa416b6a3a9e444eae3309a16b8607750">retrocombinator::dist_type</a></td></tr>
 <tr class="memdesc:aa416b6a3a9e444eae3309a16b8607750"><td class="mdescLeft">&#160;</td><td class="mdescRight">For a distance matrix between data points. <br /></td></tr>
 <tr class="separator:aa416b6a3a9e444eae3309a16b8607750"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2386ae0e40bc342fbf7ec8b1c16246c1"><td class="memItemLeft" align="right" valign="top"><a id="a2386ae0e40bc342fbf7ec8b1c16246c1"></a>
@@ -202,25 +205,7 @@ const double&#160;</td><td class="memItemRight" valign="bottom"><b>retrocombinat
 <li>biological constants (things like nucleotide names, a fixed nucleotide ordering etc),</li>
 <li>implementation specific typedefs and constants </li>
 </ul>
-</div><h2 class="groupheader">Typedef Documentation</h2>
-<a id="file_a316667a6633d664fe892bd7e0eb0141e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a316667a6633d664fe892bd7e0eb0141e">&#9670;&nbsp;</a></span>cluster_type</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef std::set&lt;size_type&gt; <a class="el" href="constants_8h.html#a316667a6633d664fe892bd7e0eb0141e">retrocombinator::cluster_type</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>For clustering algorithms. </p>
-<p>For a set of indices </p>
-
-</div>
-</div>
-</div><!-- contents -->
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

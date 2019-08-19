@@ -11,8 +11,7 @@ An interface for simulating the evolution of sequences.
 
 
 
-Inheritance diagram for retrocombinator\+:\+:Evolution\+:
-\nopagebreak
+Inheritance diagram for retrocombinator\+:\+:Evolution\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -28,7 +27,7 @@ typedef \hyperlink{classretrocombinator_1_1Family_a994b8646d1c0c4e19420d2e5c6c53
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classretrocombinator_1_1Evolution_a0aa94cf8dd5f6184535faf82842337fd}{Evolution} (\hyperlink{constants_8h_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} \hyperlink{classretrocombinator_1_1Evolution_a043c016f93a961d0e3a2fc9d257b01d9}{num\+\_\+jumps}, double \hyperlink{classretrocombinator_1_1Evolution_afdb375b975d48d9915c6e8337c33a175}{timestep}, double \hyperlink{classretrocombinator_1_1Evolution_afb663b25070c1ca619e682cef2a32196}{burst\+\_\+probability}, double \hyperlink{classretrocombinator_1_1Evolution_ac2f4821269c08b23f21b5333f2067e5f}{burst\+\_\+mean}, \hyperlink{constants_8h_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} \hyperlink{classretrocombinator_1_1Evolution_a0e6b2c75bdc36f8f482162f2f8c67d56}{max\+\_\+active\+\_\+copies})
+\hyperlink{classretrocombinator_1_1Evolution_a0aa94cf8dd5f6184535faf82842337fd}{Evolution} (\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} \hyperlink{classretrocombinator_1_1Evolution_a043c016f93a961d0e3a2fc9d257b01d9}{num\+\_\+jumps}, double \hyperlink{classretrocombinator_1_1Evolution_afdb375b975d48d9915c6e8337c33a175}{timestep}, double \hyperlink{classretrocombinator_1_1Evolution_afb663b25070c1ca619e682cef2a32196}{burst\+\_\+probability}, double \hyperlink{classretrocombinator_1_1Evolution_ac2f4821269c08b23f21b5333f2067e5f}{burst\+\_\+mean}, \hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} \hyperlink{classretrocombinator_1_1Evolution_a0e6b2c75bdc36f8f482162f2f8c67d56}{max\+\_\+active\+\_\+copies})
 \begin{DoxyCompactList}\small\item\em Set up a simulation with given parameters. \end{DoxyCompactList}\item 
 virtual void \hyperlink{classretrocombinator_1_1Evolution_a0b8a181242ea8ee3072258fa7ed416f4}{evolve} (\hyperlink{classretrocombinator_1_1Output}{Output} \&output, \hyperlink{classretrocombinator_1_1PointMutator}{Point\+Mutator} \&pm, const std\+::vector$<$ std\+::string $>$ \&init\+\_\+seqs, double recomb\+\_\+mean)
 \begin{DoxyCompactList}\small\item\em Run a simulation, modify the sequences, and output results to file. \end{DoxyCompactList}\item 
@@ -38,13 +37,13 @@ virtual \hyperlink{classretrocombinator_1_1Evolution_a6162b87324d550c4e4e9315a64
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-virtual void \hyperlink{classretrocombinator_1_1Evolution_abab94a3f14460300a6a3b7a0286236a6}{burst\+\_\+seqs} (const \hyperlink{constants_8h_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} t, const double recomb\+\_\+mean)=0
+virtual void \hyperlink{classretrocombinator_1_1Evolution_abab94a3f14460300a6a3b7a0286236a6}{burst\+\_\+seqs} (const \hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} t, const double recomb\+\_\+mean)=0
 \begin{DoxyCompactList}\small\item\em How the sequences burst after a timestep in the simulation. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classretrocombinator_1_1Evolution_a043c016f93a961d0e3a2fc9d257b01d9}\label{classretrocombinator_1_1Evolution_a043c016f93a961d0e3a2fc9d257b01d9}} 
-const \hyperlink{constants_8h_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} \hyperlink{classretrocombinator_1_1Evolution_a043c016f93a961d0e3a2fc9d257b01d9}{num\+\_\+jumps}
+const \hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} \hyperlink{classretrocombinator_1_1Evolution_a043c016f93a961d0e3a2fc9d257b01d9}{num\+\_\+jumps}
 \begin{DoxyCompactList}\small\item\em Number of jumps in our simulation. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classretrocombinator_1_1Evolution_afdb375b975d48d9915c6e8337c33a175}\label{classretrocombinator_1_1Evolution_afdb375b975d48d9915c6e8337c33a175}} 
 const double \hyperlink{classretrocombinator_1_1Evolution_afdb375b975d48d9915c6e8337c33a175}{timestep}
@@ -56,12 +55,12 @@ const double \hyperlink{classretrocombinator_1_1Evolution_afb663b25070c1ca619e68
 const double \hyperlink{classretrocombinator_1_1Evolution_ac2f4821269c08b23f21b5333f2067e5f}{burst\+\_\+mean}
 \begin{DoxyCompactList}\small\item\em The Poisson mean for new number of sequences to be created. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classretrocombinator_1_1Evolution_a0e6b2c75bdc36f8f482162f2f8c67d56}\label{classretrocombinator_1_1Evolution_a0e6b2c75bdc36f8f482162f2f8c67d56}} 
-const \hyperlink{constants_8h_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} \hyperlink{classretrocombinator_1_1Evolution_a0e6b2c75bdc36f8f482162f2f8c67d56}{max\+\_\+active\+\_\+copies}
+const \hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} \hyperlink{classretrocombinator_1_1Evolution_a0e6b2c75bdc36f8f482162f2f8c67d56}{max\+\_\+active\+\_\+copies}
 \begin{DoxyCompactList}\small\item\em The total number of sequences that have the ability to burst we allow in our simulation. \end{DoxyCompactList}\item 
 std\+::list$<$ \hyperlink{classretrocombinator_1_1Family}{Family} $>$ \hyperlink{classretrocombinator_1_1Evolution_a163715452c511724ecc0ef16a5030dea}{families}
 \begin{DoxyCompactList}\small\item\em The actual values of the sequences during the simulation. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classretrocombinator_1_1Evolution_abc218e27bae28eb73089e56cc8b51b4e}\label{classretrocombinator_1_1Evolution_abc218e27bae28eb73089e56cc8b51b4e}} 
-\hyperlink{constants_8h_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} \hyperlink{classretrocombinator_1_1Evolution_abc218e27bae28eb73089e56cc8b51b4e}{total\+\_\+num\+\_\+sequences}
+\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} \hyperlink{classretrocombinator_1_1Evolution_abc218e27bae28eb73089e56cc8b51b4e}{total\+\_\+num\+\_\+sequences}
 \begin{DoxyCompactList}\small\item\em The overall number of sequences across all families. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -75,7 +74,7 @@ Provides basic functionality, all subclasses specialise some methods provided by
 \index{retrocombinator\+::\+Evolution@{retrocombinator\+::\+Evolution}!Evolution@{Evolution}}
 \index{Evolution@{Evolution}!retrocombinator\+::\+Evolution@{retrocombinator\+::\+Evolution}}
 \subsubsection{\texorpdfstring{Evolution()}{Evolution()}}
-{\footnotesize\ttfamily Evolution\+::\+Evolution (\begin{DoxyParamCaption}\item[{\hyperlink{constants_8h_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}]{num\+\_\+jumps,  }\item[{double}]{timestep,  }\item[{double}]{burst\+\_\+probability,  }\item[{double}]{burst\+\_\+mean,  }\item[{\hyperlink{constants_8h_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}]{max\+\_\+active\+\_\+copies }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Evolution\+::\+Evolution (\begin{DoxyParamCaption}\item[{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}]{num\+\_\+jumps,  }\item[{double}]{timestep,  }\item[{double}]{burst\+\_\+probability,  }\item[{double}]{burst\+\_\+mean,  }\item[{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}]{max\+\_\+active\+\_\+copies }\end{DoxyParamCaption})}
 
 
 
@@ -88,7 +87,7 @@ Look at documenation for the individual members to understand what they mean.
 \index{retrocombinator\+::\+Evolution@{retrocombinator\+::\+Evolution}!burst\+\_\+seqs@{burst\+\_\+seqs}}
 \index{burst\+\_\+seqs@{burst\+\_\+seqs}!retrocombinator\+::\+Evolution@{retrocombinator\+::\+Evolution}}
 \subsubsection{\texorpdfstring{burst\+\_\+seqs()}{burst\_seqs()}}
-{\footnotesize\ttfamily virtual void retrocombinator\+::\+Evolution\+::burst\+\_\+seqs (\begin{DoxyParamCaption}\item[{const \hyperlink{constants_8h_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}]{t,  }\item[{const double}]{recomb\+\_\+mean }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual void retrocombinator\+::\+Evolution\+::burst\+\_\+seqs (\begin{DoxyParamCaption}\item[{const \hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}]{t,  }\item[{const double}]{recomb\+\_\+mean }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
 
 
 

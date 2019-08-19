@@ -1,10 +1,15 @@
 <map id="retrocombinator::RandMaths::choose_event" name="retrocombinator::RandMaths::choose_event">
-<area shape="rect" id="node2" href="$classretrocombinator_1_1PointMutator.html#aba3c2b8641affe8a06d815c33cafdc1b" title="Mutates a sequence according to a given transition matrix. " alt="" coords="240,151,435,192"/>
-<area shape="rect" id="node7" href="$classretrocombinator_1_1RandMaths.html#ae3a186a8f3124cbfc698eeae09b708a0" title="Gets the last set seed. " alt="" coords="244,216,431,257"/>
-<area shape="rect" id="node3" href="$classretrocombinator_1_1Evolution.html#a0b8a181242ea8ee3072258fa7ed416f4" title="Run a simulation, modify the sequences, and output results to file. " alt="" coords="483,61,657,103"/>
-<area shape="rect" id="node6" href="$test__point__mutator_8h.html#a3f99050424a8b7cf5dcb7978dc09a9dd" title="Tests PointMutator. " alt="" coords="499,151,641,192"/>
-<area shape="rect" id="node4" href="$classretrocombinator_1_1EvolutionWithoutFlags.html#a9e27b532826998a88d2c157daf53c447" title="Overrides to create a copy number tree if it hasn&#39;t already been created. " alt="" coords="705,5,880,47"/>
-<area shape="rect" id="node5" href="$test__evolution__with__flags_8h.html#a7900e3e3c62ac1f2231fee7a086225b7" title="Tests EvolutionWithFlags. " alt="" coords="719,95,866,136"/>
-<area shape="rect" id="node8" href="$classretrocombinator_1_1Output.html#a210fa5a86077912c8cf95d15603c1ad2" title="Prints auxillary information regarding the simulation. " alt="" coords="491,216,649,257"/>
-<area shape="rect" id="node9" href="$test__output_8h.html#a48c6a2be6e6f3dbd9ae86114223983ac" title="Tests the Output class. " alt="" coords="721,216,864,257"/>
+<area shape="rect" id="node2" href="$classretrocombinator_1_1PointMutator.html#aba3c2b8641affe8a06d815c33cafdc1b" title="Mutates a sequence according to a given transition matrix. " alt="" coords="240,140,435,181"/>
+<area shape="rect" id="node12" href="$classretrocombinator_1_1RandMaths.html#ae3a186a8f3124cbfc698eeae09b708a0" title="Gets the last set seed. " alt="" coords="244,205,431,247"/>
+<area shape="rect" id="node3" href="$classretrocombinator_1_1Evolution.html#a0b8a181242ea8ee3072258fa7ed416f4" title="Run a simulation, modify the sequences, and output results to file. " alt="" coords="483,75,657,116"/>
+<area shape="rect" id="node11" href="$namespaceretrocombinator.html#a3f99050424a8b7cf5dcb7978dc09a9dd" title="Tests PointMutator. " alt="" coords="499,140,641,181"/>
+<area shape="rect" id="node4" href="$classretrocombinator_1_1EvolutionWithoutFlags.html#a9e27b532826998a88d2c157daf53c447" title="Overrides to create a copy number tree if it hasn&#39;t already been created. " alt="" coords="705,9,880,51"/>
+<area shape="rect" id="node8" href="$namespaceretrocombinator.html#a3d34bdb68843d370ccb2374dfb8e9eac" title="Sets up and runs a simulation with flags. " alt="" coords="708,75,877,116"/>
+<area shape="rect" id="node10" href="$namespaceretrocombinator.html#a7900e3e3c62ac1f2231fee7a086225b7" title="Tests EvolutionWithFlags. " alt="" coords="719,140,866,181"/>
+<area shape="rect" id="node5" href="$namespaceretrocombinator.html#ab4bb894621063b932d80c1473b359534" title="Sets up and runs a simulation without flags. " alt="" coords="928,9,1097,51"/>
+<area shape="rect" id="node6" href="$namespaceretrocombinator.html#a0dc31e2b9d6473e995395d8171f56312" title="Sets up and runs a simulation without flags. " alt="" coords="1145,5,1315,47"/>
+<area shape="rect" id="node7" href="$namespaceretrocombinator.html#a48d115c48074ffd5cd46b517a23983ec" title="Tests all the wrapper functions to set&#45;up and run simulations. " alt="" coords="1159,71,1301,112"/>
+<area shape="rect" id="node9" href="$namespaceretrocombinator.html#a3875c27225976a6e04bde555c3acca36" title="Sets up and runs a simulation with flags. " alt="" coords="928,129,1097,171"/>
+<area shape="rect" id="node13" href="$classretrocombinator_1_1Output.html#a210fa5a86077912c8cf95d15603c1ad2" title="Prints auxillary information regarding the simulation. " alt="" coords="491,205,649,247"/>
+<area shape="rect" id="node14" href="$namespaceretrocombinator.html#a48c6a2be6e6f3dbd9ae86114223983ac" title="Tests the Output class. " alt="" coords="721,205,864,247"/>
 </map>
