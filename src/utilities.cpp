@@ -4,7 +4,7 @@
 
 using namespace retrocombinator;
 
-namespace retrocombinator::Utils
+namespace retrocombinator { namespace Utils
 {
     double cluster_dist(const dist_type& dist, size_type,
                         const cluster_type& C1,
@@ -88,4 +88,4 @@ namespace retrocombinator::Utils
             return(all_clusters.back());
         }
     }
-}
+} }
