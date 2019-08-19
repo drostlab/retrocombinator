@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['double_5ftolerance',['DOUBLE_TOLERANCE',['../namespacercombinator_1_1Consts.html#a52bd90fa02fe1a2d01f1b38b195be714',1,'rcombinator::Consts']]]
+  ['double_5ftolerance',['DOUBLE_TOLERANCE',['../namespaceretrocombinator_1_1Consts.html#a2b743049e71f91009273f493c164679a',1,'retrocombinator::Consts']]]
 ];

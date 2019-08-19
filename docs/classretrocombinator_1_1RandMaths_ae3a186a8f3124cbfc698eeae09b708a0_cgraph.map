@@ -1,0 +1,10 @@
+<map id="retrocombinator::RandMaths::get_last_seed" name="retrocombinator::RandMaths::get_last_seed">
+<area shape="rect" id="node2" href="$classretrocombinator_1_1RandMaths.html#a4f82863502ca04438a331fd309ca8b5e" title="Generates a random true/false value. " alt="" coords="246,5,433,47"/>
+<area shape="rect" id="node3" href="$classretrocombinator_1_1RandMaths.html#a8072bad64e64ef042e5257e1bee85635" title="Generates a random integer within a range. " alt="" coords="487,136,673,177"/>
+<area shape="rect" id="node4" href="$classretrocombinator_1_1RandMaths.html#aa6441baa59bff50f588c0c54e3c54140" title="Generates a random real number within a range. " alt="" coords="487,369,673,411"/>
+<area shape="rect" id="node5" href="$classretrocombinator_1_1RandMaths.html#adef66efd4d58f6130982ff0ee0e25750" title="Chooses a number sampled from a Poisson distribution. " alt="" coords="246,201,433,243"/>
+<area shape="rect" id="node6" href="$classretrocombinator_1_1RandMaths.html#a6a7fe159f46afec51d997e4d07d2cfe6" title="Samples m integers within a range, without replacement. " alt="" coords="240,71,439,112"/>
+<area shape="rect" id="node7" href="$classretrocombinator_1_1RandMaths.html#a2758ba7c9818bc664c4b751a697e1fe6" title="Samples a non&#45;diagonal pair (2 distinct values) within a range. " alt="" coords="246,136,433,177"/>
+<area shape="rect" id="node8" href="$classretrocombinator_1_1RandMaths.html#a183686140a9da18ad40c7e048ee8914e" title="Tests whether or not an event happened. " alt="" coords="246,369,433,411"/>
+<area shape="rect" id="node9" href="$classretrocombinator_1_1RandMaths.html#a3834f9a074546f0d588247610f16fb0e" title="Chooses an event from a list of possible events. " alt="" coords="246,435,433,476"/>
+</map>

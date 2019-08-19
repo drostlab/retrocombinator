@@ -1,0 +1,106 @@
+\hypertarget{classretrocombinator_1_1EvolutionWithoutFlags}{}\section{retrocombinator\+:\+:Evolution\+Without\+Flags Class Reference}
+\label{classretrocombinator_1_1EvolutionWithoutFlags}\index{retrocombinator\+::\+Evolution\+Without\+Flags@{retrocombinator\+::\+Evolution\+Without\+Flags}}
+
+
+A simulation where all sequences are active.  
+
+
+
+
+{\ttfamily \#include $<$evolution\+\_\+without\+\_\+flags.\+h$>$}
+
+
+
+Inheritance diagram for retrocombinator\+:\+:Evolution\+Without\+Flags\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{classretrocombinator_1_1EvolutionWithoutFlags__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for retrocombinator\+:\+:Evolution\+Without\+Flags\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{classretrocombinator_1_1EvolutionWithoutFlags__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::vector$<$ std\+::list$<$ std\+::pair$<$ \hyperlink{constants_8h_afd7c6eb4293e8c4d12827609a9a34b9b}{tag\+\_\+type}, \hyperlink{constants_8h_afd7c6eb4293e8c4d12827609a9a34b9b}{tag\+\_\+type} $>$ $>$ $>$ \hyperlink{classretrocombinator_1_1EvolutionWithoutFlags_ac6bd9b8af2b258bf76aae5b62ef78327}{tree\+\_\+type}
+\begin{DoxyCompactList}\small\item\em To represent a phyogenetic tree. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classretrocombinator_1_1EvolutionWithoutFlags_a4fdf9c23da86d61f99a1f51c119e3ce2}\label{classretrocombinator_1_1EvolutionWithoutFlags_a4fdf9c23da86d61f99a1f51c119e3ce2}} 
+void \hyperlink{classretrocombinator_1_1EvolutionWithoutFlags_a4fdf9c23da86d61f99a1f51c119e3ce2}{calculate\+\_\+copy\+\_\+number\+\_\+tree} (\hyperlink{constants_8h_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} num\+\_\+init\+\_\+seq)
+\begin{DoxyCompactList}\small\item\em Calculates the copy numbers of the sequences for all times. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classretrocombinator_1_1EvolutionWithoutFlags_a9e27b532826998a88d2c157daf53c447}\label{classretrocombinator_1_1EvolutionWithoutFlags_a9e27b532826998a88d2c157daf53c447}} 
+void \hyperlink{classretrocombinator_1_1EvolutionWithoutFlags_a9e27b532826998a88d2c157daf53c447}{evolve} (\hyperlink{classretrocombinator_1_1Output}{Output} \&output, \hyperlink{classretrocombinator_1_1PointMutator}{Point\+Mutator} \&pm, const std\+::vector$<$ std\+::string $>$ \&init\+\_\+seqs, double recomb\+\_\+mean) override
+\begin{DoxyCompactList}\small\item\em Overrides to create a copy number tree if it hasn\textquotesingle{}t already been created. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classretrocombinator_1_1EvolutionWithoutFlags_a4c43801a8d66243f1a0c98240ee7f0e6}\label{classretrocombinator_1_1EvolutionWithoutFlags_a4c43801a8d66243f1a0c98240ee7f0e6}} 
+\hyperlink{classretrocombinator_1_1EvolutionWithoutFlags_a4c43801a8d66243f1a0c98240ee7f0e6}{Evolution\+Without\+Flags} (\hyperlink{constants_8h_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} \hyperlink{classretrocombinator_1_1Evolution_a043c016f93a961d0e3a2fc9d257b01d9}{num\+\_\+jumps}, double \hyperlink{classretrocombinator_1_1Evolution_afdb375b975d48d9915c6e8337c33a175}{timestep}, double \hyperlink{classretrocombinator_1_1Evolution_afb663b25070c1ca619e682cef2a32196}{burst\+\_\+probability}, double \hyperlink{classretrocombinator_1_1Evolution_ac2f4821269c08b23f21b5333f2067e5f}{burst\+\_\+mean}, \hyperlink{constants_8h_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} \hyperlink{classretrocombinator_1_1Evolution_a0e6b2c75bdc36f8f482162f2f8c67d56}{max\+\_\+active\+\_\+copies})
+\begin{DoxyCompactList}\small\item\em Inherited constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classretrocombinator_1_1EvolutionWithoutFlags_ab2a7134363eda804d9c7e06439d8e318}\label{classretrocombinator_1_1EvolutionWithoutFlags_ab2a7134363eda804d9c7e06439d8e318}} 
+const \hyperlink{classretrocombinator_1_1EvolutionWithoutFlags_ac6bd9b8af2b258bf76aae5b62ef78327}{tree\+\_\+type} \hyperlink{classretrocombinator_1_1EvolutionWithoutFlags_ab2a7134363eda804d9c7e06439d8e318}{get\+\_\+copy\+\_\+tree} ()
+\begin{DoxyCompactList}\small\item\em To return the copy tree for testing purposes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classretrocombinator_1_1EvolutionWithoutFlags_aeba3cc75049e0590e5dcaab9558f8c56}\label{classretrocombinator_1_1EvolutionWithoutFlags_aeba3cc75049e0590e5dcaab9558f8c56}} 
+void \hyperlink{classretrocombinator_1_1EvolutionWithoutFlags_aeba3cc75049e0590e5dcaab9558f8c56}{burst\+\_\+seqs} (const \hyperlink{constants_8h_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} t, const double recomb\+\_\+mean) override
+\begin{DoxyCompactList}\small\item\em Uses the copy number tree to burst sequences. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classretrocombinator_1_1EvolutionWithoutFlags_ac6bd9b8af2b258bf76aae5b62ef78327}{tree\+\_\+type} \hyperlink{classretrocombinator_1_1EvolutionWithoutFlags_a912ce2bb6d33f00706bcc81379498c42}{copy\+\_\+numbers}
+\begin{DoxyCompactList}\small\item\em The phyolgenetic tree of transposons for all times. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classretrocombinator_1_1EvolutionWithoutFlags_a25081461cff1a2b2cc6a613c71383778}\label{classretrocombinator_1_1EvolutionWithoutFlags_a25081461cff1a2b2cc6a613c71383778}} 
+static const \hyperlink{constants_8h_afd7c6eb4293e8c4d12827609a9a34b9b}{tag\+\_\+type} \hyperlink{classretrocombinator_1_1EvolutionWithoutFlags_a25081461cff1a2b2cc6a613c71383778}{S\+A\+M\+E\+\_\+\+S\+EQ} = -\/1
+\begin{DoxyCompactList}\small\item\em Used to denote a sequence at time {\itshape t-\/1} is present at time {\itshape t} in the copy number tree. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A simulation where all sequences are active. 
+
+In this class, a sequence beocoming inactive is equivalent to a sequence dying and being removed from the simulation and sequence pool. 
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classretrocombinator_1_1EvolutionWithoutFlags_ac6bd9b8af2b258bf76aae5b62ef78327}\label{classretrocombinator_1_1EvolutionWithoutFlags_ac6bd9b8af2b258bf76aae5b62ef78327}} 
+\index{retrocombinator\+::\+Evolution\+Without\+Flags@{retrocombinator\+::\+Evolution\+Without\+Flags}!tree\+\_\+type@{tree\+\_\+type}}
+\index{tree\+\_\+type@{tree\+\_\+type}!retrocombinator\+::\+Evolution\+Without\+Flags@{retrocombinator\+::\+Evolution\+Without\+Flags}}
+\subsubsection{\texorpdfstring{tree\+\_\+type}{tree\_type}}
+{\footnotesize\ttfamily typedef std\+::vector$<$std\+::list$<$std\+::pair$<$\hyperlink{constants_8h_afd7c6eb4293e8c4d12827609a9a34b9b}{tag\+\_\+type}, \hyperlink{constants_8h_afd7c6eb4293e8c4d12827609a9a34b9b}{tag\+\_\+type}$>$ $>$ $>$ \hyperlink{classretrocombinator_1_1EvolutionWithoutFlags_ac6bd9b8af2b258bf76aae5b62ef78327}{retrocombinator\+::\+Evolution\+Without\+Flags\+::tree\+\_\+type}}
+
+
+
+To represent a phyogenetic tree. 
+
+Refer to documentation of {\ttfamily copy\+\_\+numbers} for more details. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classretrocombinator_1_1EvolutionWithoutFlags_a912ce2bb6d33f00706bcc81379498c42}\label{classretrocombinator_1_1EvolutionWithoutFlags_a912ce2bb6d33f00706bcc81379498c42}} 
+\index{retrocombinator\+::\+Evolution\+Without\+Flags@{retrocombinator\+::\+Evolution\+Without\+Flags}!copy\+\_\+numbers@{copy\+\_\+numbers}}
+\index{copy\+\_\+numbers@{copy\+\_\+numbers}!retrocombinator\+::\+Evolution\+Without\+Flags@{retrocombinator\+::\+Evolution\+Without\+Flags}}
+\subsubsection{\texorpdfstring{copy\+\_\+numbers}{copy\_numbers}}
+{\footnotesize\ttfamily \hyperlink{classretrocombinator_1_1EvolutionWithoutFlags_ac6bd9b8af2b258bf76aae5b62ef78327}{tree\+\_\+type} retrocombinator\+::\+Evolution\+Without\+Flags\+::copy\+\_\+numbers\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The phyolgenetic tree of transposons for all times. 
+
+This assumes there is only one family for the time being. copy\+\_\+numbers\mbox{[}t\mbox{]}\mbox{[}i\mbox{]} = (a, b) means that at time t, the ith sequence is got by recombining sequence a and b at time t-\/1. If b = S\+A\+M\+E\+\_\+\+S\+EQ it was just that sequence a. This is different to the case when a=b (where a new sequence, with a new sequence tag, was created but it is identical to a). If recomb\+\_\+mean is 0, we pick sequence a to burst. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/evolution\+\_\+without\+\_\+flags.\+h\item 
+src/evolution\+\_\+without\+\_\+flags.\+cpp\end{DoxyCompactItemize}

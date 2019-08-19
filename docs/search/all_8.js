@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['init',['INIT',['../classrcombinator_1_1Sequence.html#a2ea5c3181fcb056ed3f0ab0a758f89a9',1,'rcombinator::Sequence']]],
-  ['init_5ffamily_5fcount',['INIT_FAMILY_COUNT',['../namespacercombinator_1_1Consts.html#ab7163f2df9e53340e78501c19f9dbe92',1,'rcombinator::Consts']]],
-  ['init_5fseq',['init_seq',['../classrcombinator_1_1Output.html#ade0f06566f9ee4896143cf0eaa15bf2b',1,'rcombinator::Output']]],
-  ['init_5fseq_5fsimilarity',['init_seq_similarity',['../classrcombinator_1_1Sequence.html#a71ce8dc60f882b4945993603f7ed677f',1,'rcombinator::Sequence']]],
-  ['is_5factive',['is_active',['../classrcombinator_1_1Sequence.html#a5af66ddd3c8bc05307b56737c56060bf',1,'rcombinator::Sequence']]],
-  ['is_5fin_5frange',['is_in_range',['../namespacercombinator_1_1Utils.html#a2693553db4ed242f1488e6c9fd491692',1,'rcombinator::Utils']]]
+  ['init',['INIT',['../classretrocombinator_1_1Sequence.html#a3ded5ce523bc4ed7471f33dda1ffa8c3',1,'retrocombinator::Sequence']]],
+  ['init_5ffamily_5fcount',['INIT_FAMILY_COUNT',['../namespaceretrocombinator_1_1Consts.html#af4adf5f1b75ede326285e110e2acf837',1,'retrocombinator::Consts']]],
+  ['init_5fseq',['init_seq',['../classretrocombinator_1_1Output.html#a338c2b8688791c8e1be4c5637e36f37f',1,'retrocombinator::Output']]],
+  ['init_5fseq_5fsimilarity',['init_seq_similarity',['../classretrocombinator_1_1Sequence.html#aaac564e24289e894507c99b82946f492',1,'retrocombinator::Sequence']]],
+  ['is_5factive',['is_active',['../classretrocombinator_1_1Sequence.html#a445120376c2e5c626d3ecfa509406843',1,'retrocombinator::Sequence']]],
+  ['is_5fin_5frange',['is_in_range',['../namespaceretrocombinator_1_1Utils.html#a984680ddd6d1f7ccee9e0f040ff16183',1,'retrocombinator::Utils']]]
 ];

@@ -1,0 +1,8 @@
+<map id="retrocombinator::T93Model" name="retrocombinator::T93Model">
+<area shape="rect" id="node4" href="$classretrocombinator_1_1HKY85Model.html" title="Hasegawa, Kishino and Yano 1985 Model. " alt="" coords="97,244,294,271"/>
+<area shape="rect" id="node2" href="$classretrocombinator_1_1GTRModel.html" title="General Time Reversible Model, Tavare 1986. " alt="" coords="104,95,287,121"/>
+<area shape="rect" id="node3" href="$classretrocombinator_1_1PointMutationModel.html" title="To represent a model of DNA evolution through point mutations. " alt="" coords="95,5,295,47"/>
+<area shape="rect" id="node5" href="$classretrocombinator_1_1F81Model.html" title="Felsenstein 1981 Model. " alt="" coords="5,319,183,345"/>
+<area shape="rect" id="node6" href="$classretrocombinator_1_1K80Model.html" title="Kimura 2 Parameter Model, 1980. " alt="" coords="207,319,386,345"/>
+<area shape="rect" id="node7" href="$classretrocombinator_1_1JC69Model.html" title="Jules and Cantor, 1969. " alt="" coords="203,393,390,420"/>
+</map>

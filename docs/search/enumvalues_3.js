@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['nuc_5fcount',['NUC_COUNT',['../namespacercombinator_1_1Consts.html#aaa096a23d1bc2fdb1992265192fae907aa51005e405016569840eefdd20caf39b',1,'rcombinator::Consts']]]
+  ['nuc_5fcount',['NUC_COUNT',['../namespaceretrocombinator_1_1Consts.html#a274e9195aeee16a2bc05c6c2d13da17da4267c64ef80aa3023d8e808832e04b4e',1,'retrocombinator::Consts']]]
 ];

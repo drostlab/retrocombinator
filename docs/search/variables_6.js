@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['init',['INIT',['../classrcombinator_1_1Sequence.html#a2ea5c3181fcb056ed3f0ab0a758f89a9',1,'rcombinator::Sequence']]],
-  ['init_5ffamily_5fcount',['INIT_FAMILY_COUNT',['../namespacercombinator_1_1Consts.html#ab7163f2df9e53340e78501c19f9dbe92',1,'rcombinator::Consts']]],
-  ['init_5fseq',['init_seq',['../classrcombinator_1_1Output.html#ade0f06566f9ee4896143cf0eaa15bf2b',1,'rcombinator::Output']]]
+  ['init',['INIT',['../classretrocombinator_1_1Sequence.html#a3ded5ce523bc4ed7471f33dda1ffa8c3',1,'retrocombinator::Sequence']]],
+  ['init_5ffamily_5fcount',['INIT_FAMILY_COUNT',['../namespaceretrocombinator_1_1Consts.html#af4adf5f1b75ede326285e110e2acf837',1,'retrocombinator::Consts']]],
+  ['init_5fseq',['init_seq',['../classretrocombinator_1_1Output.html#a338c2b8688791c8e1be4c5637e36f37f',1,'retrocombinator::Output']]]
 ];

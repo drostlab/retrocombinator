@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['k1',['k1',['../classrcombinator_1_1T93Model.html#a98c3187ba2e9da1f608f17b1e3cf341b',1,'rcombinator::T93Model']]],
-  ['k80_5fk',['K80_K',['../namespacercombinator_1_1Consts.html#af2e735f6e0661176144a8769131b8aa7',1,'rcombinator::Consts']]]
+  ['k1',['k1',['../classretrocombinator_1_1T93Model.html#a6844211aebb1deb555fa6f9b11b9d395',1,'retrocombinator::T93Model']]],
+  ['k80_5fk',['K80_K',['../namespaceretrocombinator_1_1Consts.html#ac72fd4ec7b9dc3b42523a83cd69eaee2',1,'retrocombinator::Consts']]]
 ];

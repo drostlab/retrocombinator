@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['q',['Q',['../classrcombinator_1_1PointMutationModel.html#a0260e78df73c82b912984b7c916f21a9',1,'rcombinator::PointMutationModel']]]
+  ['q',['Q',['../classretrocombinator_1_1PointMutationModel.html#a3f52ae4a94cb8a8cf75113f8b4a7a570',1,'retrocombinator::PointMutationModel']]]
 ];

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['dist_5ftype',['dist_type',['../constants_8h.html#a0d6ecb761af58b56a675077153fa9ba9',1,'rcombinator']]],
-  ['double_5ftolerance',['DOUBLE_TOLERANCE',['../namespacercombinator_1_1Consts.html#a52bd90fa02fe1a2d01f1b38b195be714',1,'rcombinator::Consts']]]
+  ['dist_5ftype',['dist_type',['../constants_8h.html#aa416b6a3a9e444eae3309a16b8607750',1,'retrocombinator']]],
+  ['double_5ftolerance',['DOUBLE_TOLERANCE',['../namespaceretrocombinator_1_1Consts.html#a2b743049e71f91009273f493c164679a',1,'retrocombinator::Consts']]]
 ];

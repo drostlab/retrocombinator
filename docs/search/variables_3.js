@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['error_5fmsg',['error_msg',['../classrcombinator_1_1Exception.html#a982a342c7c75134b7323ecd67e43e13d',1,'rcombinator::Exception']]]
+  ['error_5fmsg',['error_msg',['../classretrocombinator_1_1Exception.html#ae73ce0ae5fe506beb0c120901c828a84',1,'retrocombinator::Exception']]]
 ];
