@@ -75,8 +75,8 @@ TEST_HEADERS := $(addprefix $(TEST_DIR), $(TEST_HEADERS))
 _TESTS = test.o
 TESTS := $(addprefix $(TEST_OBJ_DIR), $(_TESTS))
 
-TARGET = rcombinator
-TEST_TARGET = test_rcombinator
+TARGET = retrocombinator
+TEST_TARGET = test_retrocombinator
 
 $(OBJ_DIR)%.o: $(CPP_DIR)%.cpp $(HEADERS) | $(OBJ_DIR)
 	$(CC) -c $(CPP_DIR)$*.cpp -o $(OBJ_DIR)$*.o $(CCFLAGS)

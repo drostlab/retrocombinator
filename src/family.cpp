@@ -1,11 +1,11 @@
 #include "family.h"
 
-namespace rcombinator
+namespace retrocombinator
 {
     tag_type Family::global_family_count = -1;
 }
 
-using namespace rcombinator;
+using namespace retrocombinator;
 
 void Family::renumber_families(tag_type new_start_tag)
 {

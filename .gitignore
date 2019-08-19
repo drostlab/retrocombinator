@@ -16,9 +16,9 @@ src/*.dll
 # C++ output
 test_obj/
 obj/
-rcombinator
-test_rcombinator
+retrocombinator
+test_retrocombinator
 
-# rcombinator output
+# output
 *.out
 inst/doc

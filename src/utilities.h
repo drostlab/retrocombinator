@@ -14,9 +14,9 @@
 #include "constants.h"
 #include "exception.h"
 
-namespace rcombinator
+namespace retrocombinator
 {
-    /** \namespace rcombinator::Utils
+    /** \namespace retrocombinator::Utils
      *  To store some useful functions in a namespace and prevent conflicts.
      */
     namespace Utils

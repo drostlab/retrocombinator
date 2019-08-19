@@ -3,7 +3,7 @@
 #include "rand_maths.h"
 #include "sequence.h"
 
-using namespace rcombinator;
+using namespace retrocombinator;
 
 PointMutator::PointMutator(std::string model, size_type n,
                            size_type num_sensitive_posns, double inactive_probability)

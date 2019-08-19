@@ -18,9 +18,9 @@
 #include <utility>
 #include <vector>
 
-namespace rcombinator
+namespace retrocombinator
 {
-    /** \namespace rcombinator::Consts
+    /** \namespace retrocombinator::Consts
      *  To store all constant values that we define.
      *  Stores biological constants and constants that are specific to the
      *  implementation of the simulation.

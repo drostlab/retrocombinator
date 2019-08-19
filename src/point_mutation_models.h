@@ -12,7 +12,7 @@
 
 #include "constants.h"
 
-namespace rcombinator
+namespace retrocombinator
 {
     /// To represent a model of DNA evolution through point mutations
     class PointMutationModel

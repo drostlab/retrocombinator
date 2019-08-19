@@ -1,7 +1,7 @@
 #include "output.h"
 #include "rand_maths.h"
 
-using namespace rcombinator;
+using namespace retrocombinator;
 using namespace std;
 
 Output::Output(const std::string& filename_out, size_type final_time,

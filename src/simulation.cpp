@@ -3,7 +3,7 @@
 #include "rand_maths.h"
 #include "simulation.h"
 
-namespace rcombinator
+namespace retrocombinator
 {
     void simulate_without_flags(
             std::vector<std::string> init_seqs, size_type init_seq_index,

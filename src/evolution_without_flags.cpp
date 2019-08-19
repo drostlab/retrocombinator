@@ -3,9 +3,9 @@
 
 #include <iterator>
 
-using namespace rcombinator;
+using namespace retrocombinator;
 
-namespace rcombinator
+namespace retrocombinator
 {
     const tag_type EvolutionWithoutFlags::SAME_SEQ = -1;
 }

@@ -10,7 +10,7 @@
 #include "test_header.h"
 #include "evolution_without_flags.h"
 
-namespace rcombinator
+namespace retrocombinator
 {
     /// Tests EvolutionWithoutFlags
     int test_evolution_without_flags()

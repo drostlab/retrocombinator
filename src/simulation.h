@@ -10,7 +10,7 @@
 #include "evolution_without_flags.h"
 #include "evolution_with_flags.h"
 
-namespace rcombinator
+namespace retrocombinator
 {
     /** Sets up and runs a simulation without flags.
      *  Takes a specified set of initial sequences.

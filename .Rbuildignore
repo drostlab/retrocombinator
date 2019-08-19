@@ -2,13 +2,13 @@
 ^\.Rproj\.user$
 ^Doxyfile$
 ^docs$
-^rcombinator$
-^test_rcombinator$
+^retrocombinator$
+^test_retrocombinator$
 ^obj$
 ^cpp$
 ^Makefile$
 ^tags$
 ^.vimrc$
-^clean_rcpp.sh$
+^clean_r.sh$
 ^test_obj$
 ^test_cpp$

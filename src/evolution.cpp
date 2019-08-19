@@ -2,7 +2,7 @@
 #include "output.h"
 #include "point_mutator.h"
 
-using namespace rcombinator;
+using namespace retrocombinator;
 
 Evolution::Evolution(size_type num_jumps, double timestep,
                      double burst_probability, double burst_mean,

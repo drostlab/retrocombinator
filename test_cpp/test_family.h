@@ -10,7 +10,7 @@
 #include "test_header.h"
 #include "family.h"
 
-namespace rcombinator
+namespace retrocombinator
 {
     /// Tests the Family class
     int test_family()

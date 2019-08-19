@@ -10,7 +10,7 @@
 #include "test_header.h"
 #include "simulation.h"
 
-namespace rcombinator
+namespace retrocombinator
 {
     /// Tests all the wrapper functions to set-up and run simulations
     int test_simulation()

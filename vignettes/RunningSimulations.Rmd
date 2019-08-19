@@ -16,12 +16,12 @@ knitr::opts_chunk$set(
 )
 ```
 
-The `rcombinator` package provides a method for simulating the molecular
+The `retrocombinator` package provides a method for simulating the molecular
 evolutionary process of retrotransposon recombination over large scales of time.
 
 To use it, load the library first.
 ```{r}
-library(rcombinator)
+library(retrocombinator)
 ```
 
 Simulations can be done in two ways - with and without flags for inactivity.

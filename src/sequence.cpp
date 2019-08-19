@@ -5,14 +5,14 @@
 #include <iterator>
 #include <algorithm>
 
-namespace rcombinator
+namespace retrocombinator
 {
     tag_type Sequence::global_sequence_count = -1;
     const long Sequence::RAND = -10;
     const long Sequence::INIT = -20;
 }
 
-namespace rcombinator
+namespace retrocombinator
 {
     size_type operator *(const Sequence& s1, const Sequence& s2)
     {
@@ -64,7 +64,7 @@ namespace rcombinator
     }
 }
 
-using namespace rcombinator;
+using namespace retrocombinator;
 
 void Sequence::renumber_sequences(tag_type new_start_tag)
 {

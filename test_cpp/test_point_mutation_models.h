@@ -13,7 +13,7 @@
 #include <iostream>
 #include <limits>
 
-namespace rcombinator
+namespace retrocombinator
 {
     /** Checks if two probability matrices are equal.
      *  Since this compares floating point values, it uses some tolerance.

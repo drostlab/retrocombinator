@@ -2,12 +2,12 @@
 #include "rand_maths.h"
 
 // Declaration of global random number generator
-namespace rcombinator
+namespace retrocombinator
 {
     RandMaths& RNG = RandMaths::get_instance();
 }
 
-using namespace rcombinator;
+using namespace retrocombinator;
 
 RandMaths::RandMaths()
 {

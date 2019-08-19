@@ -7,7 +7,7 @@
 #include <utility>
 #include <vector>
 
-namespace rcombinator
+namespace retrocombinator
 {
     /** A simulation where all sequences are active.
      *  In this class, a sequence beocoming inactive is equivalent to a sequence

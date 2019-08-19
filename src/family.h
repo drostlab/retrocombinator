@@ -9,7 +9,7 @@
 
 #include "sequence.h"
 
-namespace rcombinator
+namespace retrocombinator
 {
     /** To store a set of sequences that can recombine with each other.
      */

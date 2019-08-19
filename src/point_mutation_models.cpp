@@ -2,7 +2,7 @@
 
 #include "point_mutation_models.h"
 
-using namespace rcombinator;
+using namespace retrocombinator;
 
 const double (*PointMutationModel::get_Q())[Consts::NUC_COUNT]
 {

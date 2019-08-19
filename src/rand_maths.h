@@ -16,7 +16,7 @@
 #include <set>
 
 
-namespace rcombinator
+namespace retrocombinator
 {
     /** For all maths helper functions that use random number generation.
      *  This is implemented as a singleton that can either be specifically

@@ -10,7 +10,7 @@
 #include "test_header.h"
 #include "utilities.h"
 
-namespace rcombinator
+namespace retrocombinator
 {
     /// Tests all the helper functions in the Utils namespace
     int test_utilities()

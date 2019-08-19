@@ -3,7 +3,7 @@
 #include "simulation.h"
 
 using namespace Rcpp;
-using namespace rcombinator;
+using namespace retrocombinator;
 
 // Refer to the documentation in simulation.h for the details
 // This file is just to link the two functions

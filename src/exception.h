@@ -9,7 +9,7 @@
 
 #include <string>
 
-namespace rcombinator
+namespace retrocombinator
 {
     /** Basic class to represent exceptions.
      *  Stores an error message.

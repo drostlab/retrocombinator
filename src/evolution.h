@@ -4,7 +4,7 @@
 #include "family.h"
 #include <list>
 
-namespace rcombinator
+namespace retrocombinator
 {
     class Output;
     class PointMutator;

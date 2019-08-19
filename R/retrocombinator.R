@@ -1,4 +1,4 @@
-#' rcombinator: Simulating The Evolution of Retrotransposons Over Time
+#' retrocombinator: Simulating The Evolution of Retrotransposons Over Time
 #'
 #' This software package performs simulations on retrotransposon sequences over
 #' long periods of time (~500M years). It takes into account bursts and
@@ -6,7 +6,7 @@
 #' analysis on the simulation results.
 #'
 #' @docType package
-#' @useDynLib rcombinator
+#' @useDynLib retrocombinator
 #' @importFrom Rcpp sourceCpp
 #' @importFrom Rcpp evalCpp
 "_PACKAGE"

@@ -18,7 +18,7 @@
 #include <utility>
 #include <vector>
 
-namespace rcombinator
+namespace retrocombinator
 {
     /** To represent a DNA sequence and the mutations that it has
      *  undergone.

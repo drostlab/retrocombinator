@@ -13,7 +13,7 @@
 
 #include "rand_maths.h"
 
-namespace rcombinator
+namespace retrocombinator
 {
     /** Simple utility to check if two files are identical or not.
      *  Needs the command-line utility diff, on a Unix machine, to work.

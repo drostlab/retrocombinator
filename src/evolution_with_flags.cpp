@@ -3,7 +3,7 @@
 #include "utilities.h"
 
 #include <iterator>
-using namespace rcombinator;
+using namespace retrocombinator;
 
 EvolutionWithFlags::EvolutionWithFlags(size_type num_jumps, double timestep,
                   double burst_probability, double burst_mean,

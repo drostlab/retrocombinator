@@ -11,7 +11,7 @@
 #include "test_simulation.h"
 
 using namespace std;
-using namespace rcombinator;
+using namespace retrocombinator;
 
 int main()
 {

@@ -10,7 +10,7 @@
 #include "test_header.h"
 #include "output.h"
 
-namespace rcombinator
+namespace retrocombinator
 {
     /// Tests the Output class
     int test_output()

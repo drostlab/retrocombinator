@@ -12,7 +12,7 @@
 #include <fstream>
 #include <list>
 
-namespace rcombinator
+namespace retrocombinator
 {
     /** Outputs the results of the simulation to a file.
      *  Can output the following things at specified timesteps:

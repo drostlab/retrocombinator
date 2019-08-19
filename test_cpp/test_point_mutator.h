@@ -11,7 +11,7 @@
 #include "point_mutator.h"
 #include <iostream>
 
-namespace rcombinator
+namespace retrocombinator
 {
     /// Tests PointMutator
     int test_point_mutator()

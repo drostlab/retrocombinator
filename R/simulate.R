@@ -1,5 +1,5 @@
 #' Run an entire simulation with flags
-#' @useDynLib rcombinator, .registration = TRUE
+#' @useDynLib retrocombinator, .registration = TRUE
 #' @importFrom Rcpp sourceCpp`
 #' @export
 simulate_with_flags_random <- function(

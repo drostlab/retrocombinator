@@ -3,7 +3,7 @@
 
 #include "evolution.h"
 
-namespace rcombinator
+namespace retrocombinator
 {
     /** A simulation where some sequences can become inactive over time.
      *  A sequence becomes inactive if some sensitive positions are mutated. The

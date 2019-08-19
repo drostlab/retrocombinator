@@ -10,7 +10,7 @@
 #include "test_header.h"
 #include "sequence.h"
 
-namespace rcombinator
+namespace retrocombinator
 {
     /// Tests the Sequence class
     int test_sequence()

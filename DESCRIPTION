@@ -1,4 +1,4 @@
-Package: rcombinator
+Package: retrocombinator
 Version: 1.0
 Title: A molecular evolution framework for retrotransposon recombination
 Authors@R: c(
@@ -13,11 +13,11 @@ Imports:
     stringr
 LinkingTo: Rcpp
 License: GPL-3 + file LICENSE
-URL: https://github.com/sams25/rcombinator
-BugReports: https://github.com/sams25/rcombinator/issues
+URL: https://github.com/sams25/retrocombinator
+BugReports: https://github.com/sams25/retrocombinator/issues
 LazyData: true
 Encoding: UTF-8
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.1
 SystemRequirements: C++11
 Suggests: knitr,
     rmarkdown

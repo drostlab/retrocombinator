@@ -2,9 +2,9 @@
 #include <iterator>
 #include "utilities.h"
 
-using namespace rcombinator;
+using namespace retrocombinator;
 
-namespace rcombinator::Utils
+namespace retrocombinator::Utils
 {
     double cluster_dist(const dist_type& dist, size_type,
                         const cluster_type& C1,

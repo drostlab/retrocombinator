@@ -12,7 +12,7 @@
 #include <string>
 #include <vector>
 
-namespace rcombinator
+namespace retrocombinator
 {
     class PointMutationModel;
     class Sequence;
