@@ -90,7 +90,7 @@ namespace retrocombinator
     };
 
     /// Tamura ane Nei 1983 Model
-    class T93Model : public GTRModel
+    class TN93Model : public GTRModel
     {
     protected:
         //@{
@@ -111,14 +111,14 @@ namespace retrocombinator
          * k2    = rate of transition A <-> G when transversion rate is 1
          * scale = same as for GTR
          */
-        T93Model(double pi_T=0.25, double pi_C=0.25,
+        TN93Model(double pi_T=0.25, double pi_C=0.25,
                  double pi_A=0.25, double pi_G=0.25,
                  double k1=1, double k2=1,
                  double scale=1);
     };
 
     /// Hasegawa, Kishino and Yano 1985 Model
-    class HKY85Model : public T93Model
+    class HKY85Model : public TN93Model
     {
     public:
         /** 4 equilibrium base frequency parameters, 1 substitution rate

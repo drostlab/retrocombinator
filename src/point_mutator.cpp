@@ -12,9 +12,9 @@ PointMutator::PointMutator(std::string model, size_type n,
     {
         point_mutation_model = new GTRModel();
     }
-    else if (model == "T93")
+    else if (model == "TN93")
     {
-        point_mutation_model = new T93Model();
+        point_mutation_model = new TN93Model();
     }
     else if (model == "HKY85")
     {

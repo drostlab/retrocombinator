@@ -74,7 +74,7 @@ void GTRModel::compute_transition_matrix()
     throw Exception("To be implemented");
 }
 
-T93Model::T93Model(double pi_T, double pi_C, double pi_A, double pi_G,
+TN93Model::TN93Model(double pi_T, double pi_C, double pi_A, double pi_G,
                    double k1, double k2, double scale):
     GTRModel(pi_T, pi_C, pi_A, pi_G,
              /*T2C=*/k1, /*T2A=*/1, /*T2G=*/1,
@@ -85,7 +85,7 @@ T93Model::T93Model(double pi_T, double pi_C, double pi_A, double pi_G,
 {
 }
 
-void T93Model::compute_transition_matrix()
+void TN93Model::compute_transition_matrix()
 {
     double t = t_stored;
 
@@ -126,7 +126,7 @@ void T93Model::compute_transition_matrix()
 
 HKY85Model::HKY85Model(double pi_T, double pi_C, double pi_A, double pi_G,
                        double k, double scale):
-    T93Model(pi_T, pi_C, pi_A, pi_G, k, k, scale)
+    TN93Model(pi_T, pi_C, pi_A, pi_G, k, k, scale)
 {}
 
 F81Model::F81Model(double pi_T, double pi_C, double pi_A, double pi_G,
