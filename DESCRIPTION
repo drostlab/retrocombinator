@@ -1,5 +1,5 @@
 Package: retrocombinator
-Version: 1.0
+Version: 1.0.0
 Title: A molecular evolution framework for retrotransposon recombination
 Authors@R: c(
     person("Anindya", "Sharma", , "anindya.sharma1@gmail.com", role = c("aut", "cre")),

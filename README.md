@@ -11,3 +11,17 @@ viewed in RStudio or using the internal help function once the R package has
 been
 [installed](https://cran.r-project.org/web/packages/githubinstall/vignettes/githubinstall.html
 "Install R Packages Hosted on Github").
+
+### Testing C++ Utility Functions
+
+Build the test suite
+
+```
+make test
+```
+
+Run the tests 
+
+```
+test_retrocombinator
+```
