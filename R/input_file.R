@@ -158,7 +158,7 @@ input_data <- function(filename)
             {
               row <- list(step=t, real_time=real_time,
                           seq1=seq_tags[[f1]][s1], seq2=seq_tags[[f1]][s2],
-                          pair=pairs[count])
+                          dist=pairs[count])
               count <- count + 1
               data$pair <- rbind(data$pair, row)
               s2  <- s2 + 1
@@ -172,7 +172,7 @@ input_data <- function(filename)
               {
                 row <- list(step=t, real_time=real_time,
                             seq1=seq_tags[[f1]][s1], seq2=seq_tags[[f2]][s2],
-                            pair=pairs[count])
+                            dist=pairs[count])
                 count <- count + 1
                 data$pair <- rbind(data$pair, row)
                 s2 <- s2 + 1
