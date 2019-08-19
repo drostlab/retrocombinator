@@ -1,6 +1,64 @@
 #' Run an entire simulation with flags
 #' @useDynLib retrocombinator, .registration = TRUE
 #' @importFrom Rcpp sourceCpp
+#' @param num_seq The initial number of sequences to consider
+#' @param seq_length The number of nucleotides in each of the sequences in the
+#' simulation
+#' @param point_mutation_model Which point mutation/substitution model will be
+#' used to modify the sequences during the simulation? Options are "JC69" (Jules
+#' and Cantor 1969), "K80" (Kimura 1980), "F81" (Felsenstein 1981), "HKY85"
+#' (Hasegawa, Kishino and Yano, 1985), "TN93" (Timura and Nei 1993), or "GTR"
+#' (General Time Reversible Model, Tavaré 1986).
+#' @param num_sensitive_posns How many positions (chosen randomly) in the
+#' sequence are essential for the sequence to remain active (with the potential
+#' to burst)? If the sequence experiences mutations in these areas, it loses its
+#' activity with some probability
+#' @param inactive_probability What is the probability that a mutation at a
+#' sensitive position causes the sequence to lose its bursting potential?
+#' @param num_jumps How many steps we have in our simulation
+#' @param timestep How much time passes in one jump (unit: millions of years)
+#' @param burst_probability Probability that an active sequence bursts in one
+#' timestep
+#' @param burst_mean The Poisson mean for the distribution that specifies how
+#' many new sequences an active sequence will create during bursting
+#' @param max_active_copies The total number of sequences that have the ability
+#' to burst that we allow in a simulation (if the number ever exceeds this
+#' threshold, the simulation prunes the set of sequences by randomly choosing
+#' the ones that live on)
+#' @param max_total_copies The total number of active and inactive sequences
+#' that we allow in our simulation (if the number ever exceeds this threshold,
+#' the simulation prunes the set of sequences by randomly choosing the ones that
+#' live on)
+#' @param recomb_mean The expected number of template switches during
+#' recombination between two sequences (chosen from a Poisson distrubtion with
+#' this as its mean).
+#' @param selection_threshold What sequence similarity percentage to the
+#' original sequence we wish to maintin (distant sequences are dropped over the
+#' course of the simulation).
+#' @param fam_proportion If this proportion of the overall sequence similarity
+#' matrix falls below a certain percentage (fam_percentage), then we split the
+#' current family into two families, and allow for recombination only within
+#' families.
+#' @param fam_percentage Refer to documentation for fam_proportion
+#' @param file_out Where should the results of the simulation be saved? (This
+#' can be parsed by input_file)
+#' @param num_out_tags How many times across the simulation will we output the
+#' tags (unique identifiers) of the sequences and their families
+#' @param num_out_seqs How many times across the simulation will we output the
+#' raw sequences themselves
+#' @param num_out_init How many times across the simulation will we output the
+#' distance of each sequence to the initial sequence
+#' @param num_out_pair How many times across the simulation will we output the
+#' pairwise distance between all pairs of sequences
+#' @param to_randomise Should this simulation be run with a random seed to begin
+#' with? (Based on system time)
+#' @param to_seed Should this sequence be run with a specific initial seed? If
+#' so, then the seed is specified by the parameter sseed
+#' @param seed Refer to documentation of to_seed
+#' @param sequence_numbering Where should the numbering (specifying "tags", or
+#' unique identifiers) for sequences begin?
+#' @param family_numbering Where should the numbering (specifying "tags", or
+#' unique identifiers) for families begin?
 #' @export
 simulate_with_flags_random <- function(
                                 num_seq, seq_length,
@@ -35,6 +93,7 @@ simulate_with_flags_random <- function(
 }
 
 #' Run an entire simulation without flags
+#' @inheritParams simulate_with_flags_random
 #' @export
 simulate_without_flags_random <- function(
                                    num_seq, seq_length,
@@ -64,6 +123,10 @@ simulate_without_flags_random <- function(
 }
 
 #' Run an entire simulation with flags
+#' @param init_seqs What are the initial sequences to begin the simulation with?
+#' @param init_seq_index Which initial sequence from the set of init_seqs should
+#' we use as the reference for comparing other sequences to?
+#' @inheritParams simulate_with_flags_random
 #' @export
 simulate_with_flags_specified <- function(
                                 init_seqs, init_seq_index = 0,
@@ -98,6 +161,7 @@ simulate_with_flags_specified <- function(
 }
 
 #' Run an entire simulation without flags
+#' @inheritParams simulate_with_flags_specified
 #' @export
 simulate_without_flags_specified <- function(
                                    init_seqs, init_seq_index = 0,

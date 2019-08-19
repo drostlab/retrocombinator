@@ -23,5 +23,5 @@ make test
 Run the tests 
 
 ```
-test_retrocombinator
+./test_retrocombinator
 ```

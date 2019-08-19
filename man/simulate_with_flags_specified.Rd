@@ -14,6 +14,90 @@ simulate_with_flags_specified(init_seqs, init_seq_index = 0,
   num_out_pair = 20, to_randomise = TRUE, to_seed = FALSE,
   seed = 0, sequence_numbering = 0, family_numbering = 0)
 }
+\arguments{
+\item{init_seqs}{What are the initial sequences to begin the simulation with?}
+
+\item{init_seq_index}{Which initial sequence from the set of init_seqs should
+we use as the reference for comparing other sequences to?}
+
+\item{point_mutation_model}{Which point mutation/substitution model will be
+used to modify the sequences during the simulation? Options are "JC69" (Jules
+and Cantor 1969), "K80" (Kimura 1980), "F81" (Felsenstein 1981), "HKY85"
+(Hasegawa, Kishino and Yano, 1985), "TN93" (Timura and Nei 1993), or "GTR"
+(General Time Reversible Model, Tavaré 1986).}
+
+\item{num_sensitive_posns}{How many positions (chosen randomly) in the
+sequence are essential for the sequence to remain active (with the potential
+to burst)? If the sequence experiences mutations in these areas, it loses its
+activity with some probability}
+
+\item{inactive_probability}{What is the probability that a mutation at a
+sensitive position causes the sequence to lose its bursting potential?}
+
+\item{num_jumps}{How many steps we have in our simulation}
+
+\item{timestep}{How much time passes in one jump (unit: millions of years)}
+
+\item{burst_probability}{Probability that an active sequence bursts in one
+timestep}
+
+\item{burst_mean}{The Poisson mean for the distribution that specifies how
+many new sequences an active sequence will create during bursting}
+
+\item{max_active_copies}{The total number of sequences that have the ability
+to burst that we allow in a simulation (if the number ever exceeds this
+threshold, the simulation prunes the set of sequences by randomly choosing
+the ones that live on)}
+
+\item{max_total_copies}{The total number of active and inactive sequences
+that we allow in our simulation (if the number ever exceeds this threshold,
+the simulation prunes the set of sequences by randomly choosing the ones that
+live on)}
+
+\item{recomb_mean}{The expected number of template switches during
+recombination between two sequences (chosen from a Poisson distrubtion with
+this as its mean).}
+
+\item{selection_threshold}{What sequence similarity percentage to the
+original sequence we wish to maintin (distant sequences are dropped over the
+course of the simulation).}
+
+\item{fam_proportion}{If this proportion of the overall sequence similarity
+matrix falls below a certain percentage (fam_percentage), then we split the
+current family into two families, and allow for recombination only within
+families.}
+
+\item{fam_percentage}{Refer to documentation for fam_proportion}
+
+\item{file_out}{Where should the results of the simulation be saved? (This
+can be parsed by input_file)}
+
+\item{num_out_tags}{How many times across the simulation will we output the
+tags (unique identifiers) of the sequences and their families}
+
+\item{num_out_init}{How many times across the simulation will we output the
+distance of each sequence to the initial sequence}
+
+\item{num_out_seqs}{How many times across the simulation will we output the
+raw sequences themselves}
+
+\item{num_out_pair}{How many times across the simulation will we output the
+pairwise distance between all pairs of sequences}
+
+\item{to_randomise}{Should this simulation be run with a random seed to begin
+with? (Based on system time)}
+
+\item{to_seed}{Should this sequence be run with a specific initial seed? If
+so, then the seed is specified by the parameter sseed}
+
+\item{seed}{Refer to documentation of to_seed}
+
+\item{sequence_numbering}{Where should the numbering (specifying "tags", or
+unique identifiers) for sequences begin?}
+
+\item{family_numbering}{Where should the numbering (specifying "tags", or
+unique identifiers) for families begin?}
+}
 \description{
 Run an entire simulation with flags
 }

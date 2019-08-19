@@ -75,6 +75,7 @@ TEST_HEADERS := $(addprefix $(TEST_DIR), $(TEST_HEADERS))
 _TESTS = test.o
 TESTS := $(addprefix $(TEST_OBJ_DIR), $(_TESTS))
 
+# Currently only test is up and running
 TARGET = retrocombinator
 TEST_TARGET = test_retrocombinator
 
