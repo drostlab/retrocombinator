@@ -116,8 +116,8 @@ input_data <- function(filename)
           for (seq_i in 1:num_seqs)
           {
             row <- list(step=t, real_time=real_time,
-                        seq=seq_tags[[fam_i]][seq_i],
-                        fam=fam_tags[fam_i], fam_par=fam_par_tags[fam_i],
+                        seq_tag=seq_tags[[fam_i]][seq_i],
+                        fam_tag=fam_tags[fam_i], fam_par=fam_par_tags[fam_i],
                         p1=p1[seq_i], p2=p2[seq_i], is_active=is_active[seq_i],
                         init_dist=init_dists[seq_i], raw=NA)
             data$init <- rbind(data$init, row)
@@ -132,7 +132,7 @@ input_data <- function(filename)
           for (seq_i in 1:num_seqs)
           {
             raw_seq <- extract_line(con)
-            found <- which(data$init$step == t & data$init$seq==seq_tags[[fam_i]][seq_i],
+            found <- which(data$init$step == t & data$init$seq_tag==seq_tags[[fam_i]][seq_i],
                            arr.ind = TRUE)
             data$init[found, ]$raw  <- raw_seq
           }
