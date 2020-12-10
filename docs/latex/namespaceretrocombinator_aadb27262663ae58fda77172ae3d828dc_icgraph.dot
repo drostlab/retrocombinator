@@ -1,0 +1,16 @@
+digraph "retrocombinator::files_same"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="retrocombinator::files_same",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Simple utility to check if two files are identical or not."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="retrocombinator::test\l_evolution_with_flags",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceretrocombinator.html#a7900e3e3c62ac1f2231fee7a086225b7",tooltip="Tests EvolutionWithFlags."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="retrocombinator::test\l_evolution_without_flags",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceretrocombinator.html#a3ad1d5cfdeffa706970f9176989460ca",tooltip="Tests EvolutionWithoutFlags."];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="retrocombinator::test\l_output",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceretrocombinator.html#a48c6a2be6e6f3dbd9ae86114223983ac",tooltip="Tests the Output class."];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="retrocombinator::test\l_simulation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceretrocombinator.html#a48d115c48074ffd5cd46b517a23983ec",tooltip="Tests all the wrapper functions to set-up and run simulations."];
+}

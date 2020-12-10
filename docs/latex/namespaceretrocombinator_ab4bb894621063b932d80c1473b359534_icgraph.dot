@@ -1,0 +1,12 @@
+digraph "retrocombinator::simulate_without_flags"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="retrocombinator::simulate\l_without_flags",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Sets up and runs a simulation without flags."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="retrocombinator::simulate\l_without_flags",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceretrocombinator.html#a0dc31e2b9d6473e995395d8171f56312",tooltip="Sets up and runs a simulation without flags."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="retrocombinator::test\l_simulation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceretrocombinator.html#a48d115c48074ffd5cd46b517a23983ec",tooltip="Tests all the wrapper functions to set-up and run simulations."];
+}

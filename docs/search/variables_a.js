@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['num_5fjumps',['num_jumps',['../classretrocombinator_1_1Evolution.html#a043c016f93a961d0e3a2fc9d257b01d9',1,'retrocombinator::Evolution']]]
+  ['max_5factive_5fcopies_332',['max_active_copies',['../classretrocombinator_1_1Evolution.html#a0e6b2c75bdc36f8f482162f2f8c67d56',1,'retrocombinator::Evolution']]],
+  ['max_5ftotal_5fcopies_333',['max_total_copies',['../classretrocombinator_1_1EvolutionWithFlags.html#a8fa5c08653bfdf6425ac1dc4a0100642',1,'retrocombinator::EvolutionWithFlags']]],
+  ['mutations_334',['mutations',['../classretrocombinator_1_1Sequence.html#a07dd3101f7838d76300313ecfb97f3fc',1,'retrocombinator::Sequence']]]
 ];

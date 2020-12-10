@@ -14,8 +14,8 @@ analysis on the simulation results.
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/sams25/retrocombinator}
-  \item Report bugs at \url{https://github.com/sams25/retrocombinator/issues}
+  \item \url{https://github.com/drostlab/retrocombinator}
+  \item Report bugs at \url{https://github.com/drostlab/retrocombinator/issues}
 }
 
 }

@@ -13,11 +13,11 @@ Imports:
     stringr
 LinkingTo: Rcpp
 License: GPL-3 + file LICENSE
-URL: https://github.com/sams25/retrocombinator
-BugReports: https://github.com/sams25/retrocombinator/issues
+URL: https://github.com/drostlab/retrocombinator
+BugReports: https://github.com/drostlab/retrocombinator/issues
 LazyData: true
 Encoding: UTF-8
-RoxygenNote: 6.1.1
+RoxygenNote: 7.1.1
 SystemRequirements: C++11
 Suggests: knitr,
     rmarkdown

@@ -21,18 +21,17 @@
 namespace retrocombinator
 {
     /** \namespace retrocombinator::Consts
-     *  To store all constant values that we define.
-     *  Stores biological constants and constants that are specific to the
+     *  Stores biological constants and constants that are specific to an
      *  implementation of the simulation.
      */
     namespace Consts
     {
-        /** Tolerance for double operations.
+        /** Tolerance for operations on variables of datatype double.
          */
         const double DOUBLE_TOLERANCE = pow(10.0, -8);
 
-        /** This defines an ordering on the nucleotides, used for arrays and
-         *  transition matrices that work on nucleotides.
+        /** This defines an ordering on the nucleotides, it is used for arrays
+         * and transition matrices that work on nucleotides.
          */
         enum NUC_VALS
         {
@@ -46,8 +45,11 @@ namespace retrocombinator
         //@{
         /** Defaults for different point mutation models
          */
+        /// Default rate of transitions for a K80 point mutation model
         const double K80_K      = 10;
+        /// Default scale for a K80 point mutation model
         const double K80_SCALE  = 0.01;
+        /// Default scale for a JC69 point mutation model
         const double JC69_SCALE = 0.1;
         //@}
 
@@ -110,25 +112,26 @@ namespace retrocombinator
         }
     }
 
-    /// For transition matrices, rate matrices etc
+    /// Type for transition matrices, rate matrices etc
     typedef double NucMatrix[Consts::NUC_COUNT][Consts::NUC_COUNT];
 
-    /// For functions that return NucMatrix and accept no parameters
+    /// Type for functions that return NucMatrix and accept no parameters
     typedef const double (*ReturnsNucMatrix())[Consts::NUC_COUNT];
 
-    /// For functions that return NucMatrix and accept time as parameter
+    /// Type for functions that return NucMatrix and accept time as parameter
     typedef const double (*ReturnsNucMatrixFromDouble(double))[Consts::NUC_COUNT];
 
-    /// For all indices and sizes
+    /// Type for all indices and sizes
     typedef std::size_t size_type;
 
     //@{
-    /** For clustering algorithms.
+    /** Types for clustering algorithms.
      */
-    /// For a set of indices
+    /// Type for a set (cluster) of indices
     typedef std::set<size_type> cluster_type;
-    /// For a distance matrix between data points
+    /// Type for a distance matrix
     typedef std::vector<std::vector<double> > dist_type;
+    /// Type for a row in a distance matrix
     typedef std::vector<double> dist_row_type;
     //@}
 

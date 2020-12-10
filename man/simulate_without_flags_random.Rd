@@ -4,13 +4,27 @@
 \alias{simulate_without_flags_random}
 \title{Run an entire simulation without flags}
 \usage{
-simulate_without_flags_random(num_seq, seq_length,
-  point_mutation_model = "K80", num_jumps = 100, timestep = 1,
-  burst_probability = 0.1, burst_mean = 1, max_active_copies = 100,
-  recomb_mean = 1, file_out, num_out_tags = 100, num_out_init = 100,
-  num_out_seqs = 10, num_out_pair = 20, to_randomise = TRUE,
-  to_seed = FALSE, seed = 0, sequence_numbering = 0,
-  family_numbering = 0)
+simulate_without_flags_random(
+  num_seq,
+  seq_length,
+  point_mutation_model = "K80",
+  num_jumps = 100,
+  timestep = 1,
+  burst_probability = 0.1,
+  burst_mean = 1,
+  max_active_copies = 100,
+  recomb_mean = 1,
+  file_out,
+  num_out_tags = 100,
+  num_out_init = 100,
+  num_out_seqs = 10,
+  num_out_pair = 20,
+  to_randomise = TRUE,
+  to_seed = FALSE,
+  seed = 0,
+  sequence_numbering = 0,
+  family_numbering = 0
+)
 }
 \arguments{
 \item{num_seq}{The initial number of sequences to consider}

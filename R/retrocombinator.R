@@ -9,4 +9,5 @@
 #' @useDynLib retrocombinator
 #' @importFrom Rcpp sourceCpp
 #' @importFrom Rcpp evalCpp
+#' @importFrom magrittr "%>%"
 "_PACKAGE"

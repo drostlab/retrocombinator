@@ -1,0 +1,16 @@
+digraph "retrocombinator::operator*"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="retrocombinator::operator*",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="retrocombinator::Sequence\l::char_at",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classretrocombinator_1_1Sequence.html#a23c73a4ccfbe9baded2e99479e3ffb5e",tooltip="Returns the character for a base at a given position."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="retrocombinator::Sequence\l::bits_at",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classretrocombinator_1_1Sequence.html#a378e5aecc7fa4524cd90d352cfd651fe",tooltip="Returns the 2bit encoding for a base at a given position."];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="retrocombinator::Consts\l::NUC_BOOL2CHAR",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceretrocombinator_1_1Consts.html#af335f61cbdfff27175d7f41cd95d426d",tooltip="Returns the character of a nucleotide given its 2bit-encoding."];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="retrocombinator::Sequence\l::get_length",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classretrocombinator_1_1Sequence.html#aeefc98943c08769af4ed9f73157d26d1",tooltip="Returns length of the sequence."];
+}

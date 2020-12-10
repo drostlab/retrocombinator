@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['last_5fseed',['last_seed',['../classretrocombinator_1_1RandMaths.html#ab5b6bec8e0eaea80efe565cddc8e69ac',1,'retrocombinator::RandMaths']]],
-  ['lethal_5fmutation_5fprobs',['lethal_mutation_probs',['../classretrocombinator_1_1PointMutator.html#aa4911d6ec29d8a6b352c2eb698e3ba40',1,'retrocombinator::PointMutator']]],
-  ['lethal_5fmutations',['lethal_mutations',['../classretrocombinator_1_1Sequence.html#af5798b014aaeb7573197602dafb98818',1,'retrocombinator::Sequence']]]
+  ['k1_326',['k1',['../classretrocombinator_1_1TN93Model.html#a6fbf54b2d61ab035750c7dc451357a53',1,'retrocombinator::TN93Model']]],
+  ['k80_5fk_327',['K80_K',['../namespaceretrocombinator_1_1Consts.html#ac72fd4ec7b9dc3b42523a83cd69eaee2',1,'retrocombinator::Consts']]],
+  ['k80_5fscale_328',['K80_SCALE',['../namespaceretrocombinator_1_1Consts.html#a49787213bbb5ff96754671440c758270',1,'retrocombinator::Consts']]]
 ];

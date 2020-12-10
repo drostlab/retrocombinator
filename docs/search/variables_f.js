@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['t_5fstored',['t_stored',['../classretrocombinator_1_1PointMutationModel.html#a677f67cf3336af8aa105e60ee991bd13',1,'retrocombinator::PointMutationModel']]],
-  ['tag',['tag',['../classretrocombinator_1_1Family.html#a50f0b448e39c126db2c12bdcac5a488d',1,'retrocombinator::Family::tag()'],['../classretrocombinator_1_1Sequence.html#ae599e85a84a78e23d33f6c3085248726',1,'retrocombinator::Sequence::tag()']]],
-  ['timestep',['timestep',['../classretrocombinator_1_1Evolution.html#afdb375b975d48d9915c6e8337c33a175',1,'retrocombinator::Evolution']]],
-  ['to_5foutput_5ftags',['to_output_tags',['../classretrocombinator_1_1Output.html#a52a175aea7babe70c97021c0ccc47b4f',1,'retrocombinator::Output']]],
-  ['total_5fnum_5fsequences',['total_num_sequences',['../classretrocombinator_1_1Evolution.html#abc218e27bae28eb73089e56cc8b51b4e',1,'retrocombinator::Evolution']]]
+  ['same_5fseq_345',['SAME_SEQ',['../classretrocombinator_1_1EvolutionWithoutFlags.html#a25081461cff1a2b2cc6a613c71383778',1,'retrocombinator::EvolutionWithoutFlags']]],
+  ['scale_346',['scale',['../classretrocombinator_1_1PointMutationModel.html#a3258dfbdae0f2614cdc66f13ae028b46',1,'retrocombinator::PointMutationModel']]],
+  ['selection_5fthreshold_347',['selection_threshold',['../classretrocombinator_1_1EvolutionWithFlags.html#ad05bfc6282a746b9b67a1591f0a0073b',1,'retrocombinator::EvolutionWithFlags']]],
+  ['seqs_348',['seqs',['../classretrocombinator_1_1Family.html#a61f3880b5481b4ace7f4b50f80df3738',1,'retrocombinator::Family']]]
 ];
