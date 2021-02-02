@@ -65,7 +65,7 @@ namespace retrocombinator
          */
         const size_type final_time;
 
-        //@{
+        ///@{
         /** When to print out what data.
          *  * Only output X if \p to_output_X is a multiple of the current
          *    timestep in the simulation
@@ -75,7 +75,7 @@ namespace retrocombinator
         const size_type to_output_init;
         const size_type to_output_seqs;
         const size_type to_output_pair;
-        //@}
+        ///@}
 
         //@{
         /** Helper print functions.

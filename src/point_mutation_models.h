@@ -60,7 +60,7 @@ namespace retrocombinator
     class GTRModel : public PointMutationModel
     {
     protected:
-        //@{
+        ///@{
         /** The base frequency parameters.
          *  pi_X is the proportion of the sequence that has nucleotide X after
          *  the system has reached equilibrium.
@@ -69,7 +69,7 @@ namespace retrocombinator
         const double pi_C;
         const double pi_A;
         const double pi_G;
-        //@}
+        ///@}
 
         /// To be computed using exponentiation of Q
         void compute_transition_matrix() override;
@@ -93,13 +93,13 @@ namespace retrocombinator
     class TN93Model : public GTRModel
     {
     protected:
-        //@{
+        ///@{
         /** The subsitution rate parameters.
          *  Look at the constructor for more details.
          */
         const double k1;
         const double k2;
-        //@}
+        ///@}
 
         /// Computed by exploiting symmetry
         void compute_transition_matrix() override;

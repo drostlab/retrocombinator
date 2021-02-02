@@ -9,6 +9,8 @@ Description: An optimized framework to simulate the molecular evolutionary proce
 Depends: R (>= 3.5.0)
 Imports:
     Rcpp (>= 0.12.17),
+    dplyr,
+    ggplot2,
     magrittr,
     stringr
 LinkingTo: Rcpp

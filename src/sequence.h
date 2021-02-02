@@ -54,13 +54,13 @@ namespace retrocombinator
          */
         std::vector<bool> bases;
 
-        //@{
+        ///@{
         /** Basic typedefs - hashed data structures for quick lookup.
          *  For keeping track of mutations and lethal mutations.
          */
         typedef std::unordered_map<tag_type, char> mutations_type;
         typedef std::unordered_set<tag_type> lethal_mutations_type;
-        //@}
+        ///@}
 
         /** Positions of mutations and what the *original* nucleotide was.
          *  Stored as an unordered map locally.
@@ -122,19 +122,19 @@ namespace retrocombinator
         Sequence(const Sequence& s1, const Sequence& s2,
                  size_type num_template_switches);
 
-        //@{
+        ///@{
         /** Delete copy constructors as we want tags to be unique.
          */
         Sequence(Sequence const&) = delete;
         void operator=(Sequence const&) = delete;
-        //@}
+        ///@}
 
-        //@{
+        ///@{
         /** But make the objects moveable, to create containers of them.
          */
         Sequence(Sequence&&) = default;
         Sequence& operator=(Sequence&&) = default;
-        //@}
+        ///@}
 
         /// Returns length of the sequence
         size_type get_length() const { return (bases.size()/2); }

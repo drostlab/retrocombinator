@@ -43,14 +43,14 @@ namespace retrocombinator
          */
         void split_families();
 
-        //@{
+        ///@{
         /** Parameters for deciding when to split a family into two.
          *  If \p fam_proportion of the sequence similarity matrix goes
          *  below \p fam_percentage then split the family into two.
          */
         double fam_proportion;
         double fam_percentage;
-        //@}
+        ///@}
 
     public:
         /** Inherited constructor.

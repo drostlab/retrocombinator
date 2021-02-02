@@ -36,10 +36,12 @@ simulate_without_flags_random(num_seq = 5, seq_length = 20,
                        recomb_mean = 1,
                        file_out = "without_flags_vignette.out",
                        num_out_init = 10, num_out_tags = 10,
-                       num_out_seqs = 5, num_out_pair = 4,
+                       num_out_seqs = 10, num_out_pair = 10,
                        to_seed = TRUE, seed = 0)
 ```
 
+TODO: Add a not about how `num_out_pair` needs to be a multiple of
+`num_out_init` for helpful plotting
 This data can then be analysed in the following way:
 
 ```{r}
@@ -63,7 +65,7 @@ simulate_with_flags_random(num_seq = 10,
                     point_mutation_model = "K80",
                     num_sensitive_posns = 10, 
                     inactive_probability = 0.1, 
-                    num_jumps = 30, 
+                    num_jumps = 50, 
                     timestep = 2,
                     burst_probability = 0.1, 
                     burst_mean = 1,
@@ -74,8 +76,8 @@ simulate_with_flags_random(num_seq = 10,
                     file_out = "with_flags_vignette.out",
                     num_out_init = 10, 
                     num_out_tags = 10,
-                    num_out_seqs = 5, 
-                    num_out_pair = 4,
+                    num_out_seqs = 10, 
+                    num_out_pair = 10,
                     to_seed = TRUE, 
                     seed = 0)
 ```
@@ -84,6 +86,12 @@ Again the results of the simulation can be analysed using the `input_data` funct
 
 ```{r}
 data_with_flags <- input_data("with_flags_vignette.out")
-head(data_without_flags$init)
-head(data_without_flags$pair)
+head(data_with_flags$init)
+head(data_with_flags$pair)
+```
+
+Visualise the results
+```{r}
+plot_initial_distances(data_with_flags)
+plot_family_distances(data_with_flags)
 ```
