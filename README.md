@@ -2,7 +2,7 @@
 
 An R/C++ package for simulating the evolution of retrotransposons over time.
 
-[The C++ documentation can be found here.](https://sams25.github.io/retrocombinator/
+[The C++ documentation can be found here.](https://drostlab.github.io/retrocombinator/
 "C++ documentation")
 
 [The R documentation can be found here.](./man/ "R documentation") This is
