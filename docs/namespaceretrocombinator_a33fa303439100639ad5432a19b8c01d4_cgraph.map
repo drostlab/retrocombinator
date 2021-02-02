@@ -1,9 +1,7 @@
 <map id="retrocombinator::operator*" name="retrocombinator::operator*">
-<area shape="rect" id="node2" href="$classretrocombinator_1_1Sequence.html#aeefc98943c08769af4ed9f73157d26d1" title="Returns length of the sequence. " alt="" coords="225,39,404,80"/>
-<area shape="rect" id="node3" href="$classretrocombinator_1_1Sequence.html#a23c73a4ccfbe9baded2e99479e3ffb5e" title="Returns the character for a base at a given position. " alt="" coords="225,104,404,145"/>
-<area shape="rect" id="node4" href="$namespaceretrocombinator_1_1Consts.html#af335f61cbdfff27175d7f41cd95d426d" title="Returns the character of a nucleotide given its 2bit&#45;encoding. " alt="" coords="679,43,841,84"/>
-<area shape="rect" id="node5" href="$classretrocombinator_1_1Sequence.html#a378e5aecc7fa4524cd90d352cfd651fe" title="Returns the 2bit encoding for a base at a given position. " alt="" coords="452,39,631,80"/>
-<area shape="rect" id="node6" href="$classretrocombinator_1_1Sequence.html#a85299c3dbf2efb993a43acc2e42fcb00" title="Changes the nucleotide at position n to new_nucleotide. " alt="" coords="452,169,631,211"/>
-<area shape="rect" id="node8" href="$classretrocombinator_1_1Sequence.html#a5fa45e155a1e4b3c257f19369ace05a8" title="Returns the raw nucleotide sequence as a string. " alt="" coords="452,104,631,145"/>
-<area shape="rect" id="node7" href="$namespaceretrocombinator_1_1Consts.html#a95eb077a2bba2fe988b44e68a3284314" title="Returns the 2bit&#45;encoding of a nucleotide given its character form. " alt="" coords="679,169,841,211"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,78,203,105"/>
+<area shape="rect" id="node2" href="$classretrocombinator_1_1Sequence.html#a23c73a4ccfbe9baded2e99479e3ffb5e" title="Returns the character for a base at a given position." alt="" coords="251,37,449,79"/>
+<area shape="rect" id="node5" href="$classretrocombinator_1_1Sequence.html#aeefc98943c08769af4ed9f73157d26d1" title="Returns length of the sequence." alt="" coords="251,103,449,144"/>
+<area shape="rect" id="node3" href="$classretrocombinator_1_1Sequence.html#a378e5aecc7fa4524cd90d352cfd651fe" title="Returns the 2bit encoding for a base at a given position." alt="" coords="497,5,696,47"/>
+<area shape="rect" id="node4" href="$namespaceretrocombinator_1_1Consts.html#af335f61cbdfff27175d7f41cd95d426d" title="Returns the character of a nucleotide given its 2bit&#45;encoding." alt="" coords="507,71,686,112"/>
 </map>

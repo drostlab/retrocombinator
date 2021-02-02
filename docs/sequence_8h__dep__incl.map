@@ -1,14 +1,15 @@
 <map id="src/sequence.h" name="src/sequence.h">
-<area shape="rect" id="node2" href="$family_8h.html" title="To store a set of sequences that can recombine with each other. " alt="" coords="468,80,565,107"/>
-<area shape="rect" id="node13" href="$test__sequence_8h.html" title="To test the functionality of the Sequence class. " alt="" coords="590,80,777,107"/>
-<area shape="rect" id="node3" href="$evolution_8h_source.html" title="src/evolution.h" alt="" coords="296,155,415,181"/>
-<area shape="rect" id="node10" href="$output_8h.html" title="To output the results of our simulation to a file. " alt="" coords="467,155,566,181"/>
-<area shape="rect" id="node12" href="$test__family_8h.html" title="test_cpp/test_family.h" alt="" coords="590,155,755,181"/>
-<area shape="rect" id="node4" href="$evolution__with__flags_8h_source.html" title="src/evolution_with\l_flags.h" alt="" coords="109,229,250,271"/>
-<area shape="rect" id="node8" href="$evolution__without__flags_8h_source.html" title="src/evolution_without\l_flags.h" alt="" coords="274,229,437,271"/>
-<area shape="rect" id="node5" href="$simulation_8h.html" title="src/simulation.h" alt="" coords="204,326,331,353"/>
-<area shape="rect" id="node7" href="$test__evolution__with__flags_8h.html" title="To test the functionality of the EvolutionWithFlags class. " alt="" coords="5,319,180,360"/>
-<area shape="rect" id="node6" href="$test__simulation_8h.html" title="test_cpp/test_simulation.h" alt="" coords="170,408,365,435"/>
-<area shape="rect" id="node9" href="$test__evolution__without__flags_8h.html" title="To test the functionality of the EvolutionWithoutFlags class. " alt="" coords="355,319,529,360"/>
-<area shape="rect" id="node11" href="$test__output_8h.html" title="To test the functionality of the Output class. " alt="" coords="461,237,628,263"/>
+<area shape="rect" id="node1" title="To store a DNA sequence and the mutations that it has undergone." alt="" coords="540,5,659,32"/>
+<area shape="rect" id="node2" href="$family_8h.html" title="To store a set of sequences that can recombine with each other." alt="" coords="468,80,565,107"/>
+<area shape="rect" id="node13" href="$test__sequence_8h.html" title="To test the functionality of the Sequence class." alt="" coords="590,80,777,107"/>
+<area shape="rect" id="node3" href="$evolution_8h_source.html" title=" " alt="" coords="296,155,415,181"/>
+<area shape="rect" id="node10" href="$output_8h.html" title="To output the results of our simulation to a file." alt="" coords="467,155,566,181"/>
+<area shape="rect" id="node12" href="$test__family_8h.html" title=" " alt="" coords="590,155,755,181"/>
+<area shape="rect" id="node4" href="$evolution__with__flags_8h_source.html" title=" " alt="" coords="109,229,250,271"/>
+<area shape="rect" id="node8" href="$evolution__without__flags_8h_source.html" title=" " alt="" coords="274,229,437,271"/>
+<area shape="rect" id="node5" href="$simulation_8h.html" title=" " alt="" coords="204,326,331,353"/>
+<area shape="rect" id="node7" href="$test__evolution__with__flags_8h.html" title="To test the functionality of the EvolutionWithFlags class." alt="" coords="5,319,180,360"/>
+<area shape="rect" id="node6" href="$test__simulation_8h.html" title=" " alt="" coords="170,408,365,435"/>
+<area shape="rect" id="node9" href="$test__evolution__without__flags_8h.html" title="To test the functionality of the EvolutionWithoutFlags class." alt="" coords="355,319,529,360"/>
+<area shape="rect" id="node11" href="$test__output_8h.html" title="To test the functionality of the Output class." alt="" coords="461,237,628,263"/>
 </map>

@@ -1,3 +1,4 @@
 <map id="retrocombinator::Sequence::Sequence" name="retrocombinator::Sequence::Sequence">
-<area shape="rect" id="node2" href="$namespaceretrocombinator_1_1Consts.html#a95eb077a2bba2fe988b44e68a3284314" title="Returns the 2bit&#45;encoding of a nucleotide given its character form. " alt="" coords="232,5,395,47"/>
+<area shape="rect" id="node1" title="Constructs a sequence from a given string." alt="" coords="5,5,204,47"/>
+<area shape="rect" id="node2" href="$namespaceretrocombinator_1_1Consts.html#a95eb077a2bba2fe988b44e68a3284314" title="Returns the 2bit&#45;encoding of a nucleotide given its character form." alt="" coords="252,5,431,47"/>
 </map>

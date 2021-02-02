@@ -1,3 +1,4 @@
 <map id="retrocombinator::EvolutionWithFlags" name="retrocombinator::EvolutionWithFlags">
-<area shape="rect" id="node2" href="$classretrocombinator_1_1Evolution.html" title="An interface for simulating the evolution of sequences. " alt="" coords="5,5,180,32"/>
+<area shape="rect" id="node1" title="A simulation where some sequences can become inactive over time." alt="" coords="5,80,201,121"/>
+<area shape="rect" id="node2" href="$classretrocombinator_1_1Evolution.html" title="An interface for simulating the evolution of sequences." alt="" coords="5,5,201,32"/>
 </map>

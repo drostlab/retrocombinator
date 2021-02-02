@@ -1,3 +1,4 @@
 <map id="retrocombinator::RandMaths::sample_without_replacement" name="retrocombinator::RandMaths::sample_without_replacement">
-<area shape="rect" id="node2" href="$classretrocombinator_1_1RandMaths.html#a8072bad64e64ef042e5257e1bee85635" title="Generates a random integer within a range. " alt="" coords="252,5,439,47"/>
+<area shape="rect" id="node1" title="Samples m integers within a range, without replacement." alt="" coords="5,5,228,47"/>
+<area shape="rect" id="node2" href="$classretrocombinator_1_1RandMaths.html#a8072bad64e64ef042e5257e1bee85635" title="Generates a random integer within a range." alt="" coords="276,5,484,47"/>
 </map>

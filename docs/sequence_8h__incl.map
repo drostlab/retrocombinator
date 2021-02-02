@@ -1,4 +1,12 @@
 <map id="src/sequence.h" name="src/sequence.h">
-<area shape="rect" id="node7" href="$constants_8h.html" title="Definitions for enums/constants that are used throughout the project. " alt="" coords="456,80,553,107"/>
-<area shape="rect" id="node8" href="$exception_8h.html" title="Basic exception class that can store an error message. " alt="" coords="438,155,537,181"/>
+<area shape="rect" id="node1" title="To store a DNA sequence and the mutations that it has undergone." alt="" coords="309,5,427,32"/>
+<area shape="rect" id="node2" href="$constants_8h.html" title="Definitions for enums/constants/functions that are used everywhere." alt="" coords="207,80,305,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,229,64,256"/>
+<area shape="rect" id="node7" title=" " alt="" coords="307,155,367,181"/>
+<area shape="rect" id="node8" title=" " alt="" coords="391,155,454,181"/>
+<area shape="rect" id="node9" title=" " alt="" coords="431,80,555,107"/>
+<area shape="rect" id="node10" title=" " alt="" coords="580,80,695,107"/>
+<area shape="rect" id="node3" href="$exception_8h.html" title="Basic exception class that can store an error message." alt="" coords="29,155,128,181"/>
+<area shape="rect" id="node5" title=" " alt="" coords="153,155,215,181"/>
+<area shape="rect" id="node6" title=" " alt="" coords="240,155,283,181"/>
 </map>

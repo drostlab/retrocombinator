@@ -1,5 +1,5 @@
-\hypertarget{classretrocombinator_1_1PointMutator}{}\section{retrocombinator\+:\+:Point\+Mutator Class Reference}
-\label{classretrocombinator_1_1PointMutator}\index{retrocombinator\+::\+Point\+Mutator@{retrocombinator\+::\+Point\+Mutator}}
+\hypertarget{classretrocombinator_1_1PointMutator}{}\doxysection{retrocombinator\+::Point\+Mutator Class Reference}
+\label{classretrocombinator_1_1PointMutator}\index{retrocombinator::PointMutator@{retrocombinator::PointMutator}}
 
 
 A class that can mutate a given sequence according to a specified point mutation model.  
@@ -11,42 +11,43 @@ A class that can mutate a given sequence according to a specified point mutation
 
 
 
-Collaboration diagram for retrocombinator\+:\+:Point\+Mutator\+:\nopagebreak
+Collaboration diagram for retrocombinator\+::Point\+Mutator\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=254pt]{classretrocombinator_1_1PointMutator__coll__graph}
+\includegraphics[width=279pt]{classretrocombinator_1_1PointMutator__coll__graph}
 \end{center}
 \end{figure}
-\subsection*{Public Member Functions}
+\doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classretrocombinator_1_1PointMutator_a084f37ad47f0a820028a87695bd2c88e}\label{classretrocombinator_1_1PointMutator_a084f37ad47f0a820028a87695bd2c88e}} 
-\hyperlink{classretrocombinator_1_1PointMutator_a084f37ad47f0a820028a87695bd2c88e}{Point\+Mutator} (std\+::string model, \hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} n, \hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} num\+\_\+sensitive\+\_\+posns=0, double inactive\+\_\+probability=0.\+0)
+\mbox{\hyperlink{classretrocombinator_1_1PointMutator_a084f37ad47f0a820028a87695bd2c88e}{Point\+Mutator}} (std\+::string model, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} n, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} num\+\_\+sensitive\+\_\+posns=0, double inactive\+\_\+probability=0.\+0)
 \begin{DoxyCompactList}\small\item\em Constructor that chooses a point mutation model and the probabilities for lethal mutations at each position in the sequence. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classretrocombinator_1_1PointMutator_ab4bb79937f1824e7fba92fb824f27c56}\label{classretrocombinator_1_1PointMutator_ab4bb79937f1824e7fba92fb824f27c56}} 
-\hyperlink{classretrocombinator_1_1PointMutator_ab4bb79937f1824e7fba92fb824f27c56}{$\sim$\+Point\+Mutator} ()
+\mbox{\hyperlink{classretrocombinator_1_1PointMutator_ab4bb79937f1824e7fba92fb824f27c56}{$\sim$\+Point\+Mutator}} ()
 \begin{DoxyCompactList}\small\item\em Destructor that frees up memory. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classretrocombinator_1_1PointMutator_aba3c2b8641affe8a06d815c33cafdc1b}\label{classretrocombinator_1_1PointMutator_aba3c2b8641affe8a06d815c33cafdc1b}} 
-void \hyperlink{classretrocombinator_1_1PointMutator_aba3c2b8641affe8a06d815c33cafdc1b}{mutate\+\_\+sequence} (\hyperlink{classretrocombinator_1_1Sequence}{Sequence} \&s, double timestep) const
+void \mbox{\hyperlink{classretrocombinator_1_1PointMutator_aba3c2b8641affe8a06d815c33cafdc1b}{mutate\+\_\+sequence}} (\mbox{\hyperlink{classretrocombinator_1_1Sequence}{Sequence}} \&s, double timestep) const
 \begin{DoxyCompactList}\small\item\em Mutates a sequence according to a given transition matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Private Attributes}
+\doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classretrocombinator_1_1PointMutator_a4a8e94c15e583688d0ab0faa6106d0fb}\label{classretrocombinator_1_1PointMutator_a4a8e94c15e583688d0ab0faa6106d0fb}} 
-\hyperlink{classretrocombinator_1_1PointMutationModel}{Point\+Mutation\+Model} $\ast$ \hyperlink{classretrocombinator_1_1PointMutator_a4a8e94c15e583688d0ab0faa6106d0fb}{point\+\_\+mutation\+\_\+model}
+\mbox{\hyperlink{classretrocombinator_1_1PointMutationModel}{Point\+Mutation\+Model}} $\ast$ \mbox{\hyperlink{classretrocombinator_1_1PointMutator_a4a8e94c15e583688d0ab0faa6106d0fb}{point\+\_\+mutation\+\_\+model}}
 \begin{DoxyCompactList}\small\item\em Which point mutation model this mutator coressponds to. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classretrocombinator_1_1PointMutator_aa4911d6ec29d8a6b352c2eb698e3ba40}\label{classretrocombinator_1_1PointMutator_aa4911d6ec29d8a6b352c2eb698e3ba40}} 
-std\+::vector$<$ double $>$ \hyperlink{classretrocombinator_1_1PointMutator_aa4911d6ec29d8a6b352c2eb698e3ba40}{lethal\+\_\+mutation\+\_\+probs}
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classretrocombinator_1_1PointMutator_aa4911d6ec29d8a6b352c2eb698e3ba40}{lethal\+\_\+mutation\+\_\+probs}}
 \begin{DoxyCompactList}\small\item\em What is the probability that a mutation at a given position results in inactivity. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{Detailed Description}
+\doxysubsection{Detailed Description}
 A class that can mutate a given sequence according to a specified point mutation model. 
 
 We need to specify how long the sequence has evolved for. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-src/\hyperlink{point__mutator_8h}{point\+\_\+mutator.\+h}\item 
+src/\mbox{\hyperlink{point__mutator_8h}{point\+\_\+mutator.\+h}}\item 
 src/point\+\_\+mutator.\+cpp\end{DoxyCompactItemize}

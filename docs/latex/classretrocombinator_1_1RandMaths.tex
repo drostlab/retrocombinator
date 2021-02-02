@@ -1,5 +1,5 @@
-\hypertarget{classretrocombinator_1_1RandMaths}{}\section{retrocombinator\+:\+:Rand\+Maths Class Reference}
-\label{classretrocombinator_1_1RandMaths}\index{retrocombinator\+::\+Rand\+Maths@{retrocombinator\+::\+Rand\+Maths}}
+\hypertarget{classretrocombinator_1_1RandMaths}{}\doxysection{retrocombinator\+::Rand\+Maths Class Reference}
+\label{classretrocombinator_1_1RandMaths}\index{retrocombinator::RandMaths@{retrocombinator::RandMaths}}
 
 
 For all maths helper functions that use random number generation.  
@@ -9,70 +9,66 @@ For all maths helper functions that use random number generation.
 
 {\ttfamily \#include $<$rand\+\_\+maths.\+h$>$}
 
-\subsection*{Public Member Functions}
+\doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{classretrocombinator_1_1RandMaths_a0bf1c2e7a1eccb1f9246b3fceeb5db8a}{set\+\_\+specific\+\_\+seed} (\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} seed)
+\mbox{\hyperlink{classretrocombinator_1_1RandMaths_aca899b8322519172fe008e0697c432db}{Rand\+Maths}} (\mbox{\hyperlink{classretrocombinator_1_1RandMaths}{Rand\+Maths}} const \&)=delete
+\begin{DoxyCompactList}\small\item\em Delete copy constructors as want \mbox{\hyperlink{classretrocombinator_1_1RandMaths}{Rand\+Maths}} to be a singleton. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classretrocombinator_1_1RandMaths_a2ba731d3f29d3024da9df7e62f01f1bb}\label{classretrocombinator_1_1RandMaths_a2ba731d3f29d3024da9df7e62f01f1bb}} 
+void {\bfseries operator=} (\mbox{\hyperlink{classretrocombinator_1_1RandMaths}{Rand\+Maths}} const \&)=delete
+\item 
+void \mbox{\hyperlink{classretrocombinator_1_1RandMaths_a0bf1c2e7a1eccb1f9246b3fceeb5db8a}{set\+\_\+specific\+\_\+seed}} (\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} seed)
 \begin{DoxyCompactList}\small\item\em Uses a user-\/specified seed for R\+NG. \end{DoxyCompactList}\item 
-void \hyperlink{classretrocombinator_1_1RandMaths_a2b61e31de6067ffa35531d5bde40f4c6}{set\+\_\+random\+\_\+seed} ()
+void \mbox{\hyperlink{classretrocombinator_1_1RandMaths_a2b61e31de6067ffa35531d5bde40f4c6}{set\+\_\+random\+\_\+seed}} ()
 \begin{DoxyCompactList}\small\item\em Uses system time to seed the R\+NG. \end{DoxyCompactList}\item 
-\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} \hyperlink{classretrocombinator_1_1RandMaths_ae3a186a8f3124cbfc698eeae09b708a0}{get\+\_\+last\+\_\+seed} ()
+\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} \mbox{\hyperlink{classretrocombinator_1_1RandMaths_ae3a186a8f3124cbfc698eeae09b708a0}{get\+\_\+last\+\_\+seed}} ()
 \begin{DoxyCompactList}\small\item\em Gets the last set seed. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classretrocombinator_1_1RandMaths_a4f82863502ca04438a331fd309ca8b5e}\label{classretrocombinator_1_1RandMaths_a4f82863502ca04438a331fd309ca8b5e}} 
-bool \hyperlink{classretrocombinator_1_1RandMaths_a4f82863502ca04438a331fd309ca8b5e}{rand\+\_\+bit} ()
+bool \mbox{\hyperlink{classretrocombinator_1_1RandMaths_a4f82863502ca04438a331fd309ca8b5e}{rand\+\_\+bit}} ()
 \begin{DoxyCompactList}\small\item\em Generates a random true/false value. \end{DoxyCompactList}\item 
-\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} \hyperlink{classretrocombinator_1_1RandMaths_a8072bad64e64ef042e5257e1bee85635}{rand\+\_\+int} (\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} low, \hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} high)
+\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} \mbox{\hyperlink{classretrocombinator_1_1RandMaths_a8072bad64e64ef042e5257e1bee85635}{rand\+\_\+int}} (\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} low, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} high)
 \begin{DoxyCompactList}\small\item\em Generates a random integer within a range. \end{DoxyCompactList}\item 
-double \hyperlink{classretrocombinator_1_1RandMaths_aa6441baa59bff50f588c0c54e3c54140}{rand\+\_\+real} (double low=0.\+0, double high=1.\+0)
+double \mbox{\hyperlink{classretrocombinator_1_1RandMaths_aa6441baa59bff50f588c0c54e3c54140}{rand\+\_\+real}} (double low=0.\+0, double high=1.\+0)
 \begin{DoxyCompactList}\small\item\em Generates a random real number within a range. \end{DoxyCompactList}\item 
-\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} \hyperlink{classretrocombinator_1_1RandMaths_adef66efd4d58f6130982ff0ee0e25750}{rand\+\_\+poisson} (double mean)
+\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} \mbox{\hyperlink{classretrocombinator_1_1RandMaths_adef66efd4d58f6130982ff0ee0e25750}{rand\+\_\+poisson}} (double mean)
 \begin{DoxyCompactList}\small\item\em Chooses a number sampled from a Poisson distribution. \end{DoxyCompactList}\item 
-std\+::set$<$ \hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} $>$ \hyperlink{classretrocombinator_1_1RandMaths_a6a7fe159f46afec51d997e4d07d2cfe6}{sample\+\_\+without\+\_\+replacement} (\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} low, \hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} high, \hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} m)
+std\+::set$<$ \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} $>$ \mbox{\hyperlink{classretrocombinator_1_1RandMaths_a6a7fe159f46afec51d997e4d07d2cfe6}{sample\+\_\+without\+\_\+replacement}} (\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} low, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} high, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} m)
 \begin{DoxyCompactList}\small\item\em Samples {\itshape m} integers within a range, without replacement. \end{DoxyCompactList}\item 
-std\+::pair$<$ \hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}, \hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} $>$ \hyperlink{classretrocombinator_1_1RandMaths_a2758ba7c9818bc664c4b751a697e1fe6}{sample\+\_\+distinct\+\_\+pair} (\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} low, \hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} high)
+std\+::pair$<$ \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} $>$ \mbox{\hyperlink{classretrocombinator_1_1RandMaths_a2758ba7c9818bc664c4b751a697e1fe6}{sample\+\_\+distinct\+\_\+pair}} (\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} low, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} high)
 \begin{DoxyCompactList}\small\item\em Samples a non-\/diagonal pair (2 distinct values) within a range. \end{DoxyCompactList}\item 
-bool \hyperlink{classretrocombinator_1_1RandMaths_a183686140a9da18ad40c7e048ee8914e}{test\+\_\+event} (double event\+\_\+probability)
+bool \mbox{\hyperlink{classretrocombinator_1_1RandMaths_a183686140a9da18ad40c7e048ee8914e}{test\+\_\+event}} (double event\+\_\+probability)
 \begin{DoxyCompactList}\small\item\em Tests whether or not an event happened. \end{DoxyCompactList}\item 
-\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} \hyperlink{classretrocombinator_1_1RandMaths_a3834f9a074546f0d588247610f16fb0e}{choose\+\_\+event} (const double events\mbox{[}$\,$\mbox{]}, \hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} num\+\_\+events)
+\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} \mbox{\hyperlink{classretrocombinator_1_1RandMaths_a3834f9a074546f0d588247610f16fb0e}{choose\+\_\+event}} (const double events\mbox{[}$\,$\mbox{]}, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} num\+\_\+events)
 \begin{DoxyCompactList}\small\item\em Chooses an event from a list of possible events. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\textbf{ }\par
+\doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classretrocombinator_1_1RandMaths_aca899b8322519172fe008e0697c432db}{Rand\+Maths} (\hyperlink{classretrocombinator_1_1RandMaths}{Rand\+Maths} const \&)=delete
-\begin{DoxyCompactList}\small\item\em Delete copy constructors as want \hyperlink{classretrocombinator_1_1RandMaths}{Rand\+Maths} to be a singleton. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classretrocombinator_1_1RandMaths_a2ba731d3f29d3024da9df7e62f01f1bb}\label{classretrocombinator_1_1RandMaths_a2ba731d3f29d3024da9df7e62f01f1bb}} 
-void {\bfseries operator=} (\hyperlink{classretrocombinator_1_1RandMaths}{Rand\+Maths} const \&)=delete
-\end{DoxyCompactItemize}
-
-\subsection*{Static Public Member Functions}
+static \mbox{\hyperlink{classretrocombinator_1_1RandMaths}{Rand\+Maths}} \& \mbox{\hyperlink{classretrocombinator_1_1RandMaths_ae54dee1a16fb0e275e1624ccaa7dc87e}{get\+\_\+instance}} ()
+\begin{DoxyCompactList}\small\item\em Returns an instance of a \mbox{\hyperlink{classretrocombinator_1_1RandMaths}{Rand\+Maths}} class, after seeding it with system time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static \hyperlink{classretrocombinator_1_1RandMaths}{Rand\+Maths} \& \hyperlink{classretrocombinator_1_1RandMaths_ae54dee1a16fb0e275e1624ccaa7dc87e}{get\+\_\+instance} ()
-\begin{DoxyCompactList}\small\item\em Returns an instance of a \hyperlink{classretrocombinator_1_1RandMaths}{Rand\+Maths} class, after seeding it with system time. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Private Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-\hyperlink{classretrocombinator_1_1RandMaths_aa507e7465f9a650d560aa42c7f75310f}{Rand\+Maths} ()
+\mbox{\hyperlink{classretrocombinator_1_1RandMaths_aa507e7465f9a650d560aa42c7f75310f}{Rand\+Maths}} ()
 \begin{DoxyCompactList}\small\item\em Constructor, which seeds the random engine with system time. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Private Attributes}
+\doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-std\+::mt19937 \hyperlink{classretrocombinator_1_1RandMaths_a8455f3a94efd124edd0ecfc806744476}{re}
+std\+::mt19937 \mbox{\hyperlink{classretrocombinator_1_1RandMaths_a8455f3a94efd124edd0ecfc806744476}{re}}
 \begin{DoxyCompactList}\small\item\em Engine that produces random numbers for all functions that require them. \end{DoxyCompactList}\item 
-\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} \hyperlink{classretrocombinator_1_1RandMaths_ab5b6bec8e0eaea80efe565cddc8e69ac}{last\+\_\+seed}
+\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} \mbox{\hyperlink{classretrocombinator_1_1RandMaths_ab5b6bec8e0eaea80efe565cddc8e69ac}{last\+\_\+seed}}
 \begin{DoxyCompactList}\small\item\em Last seed for the random engine, either by the user or by the system. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{Detailed Description}
+\doxysubsection{Detailed Description}
 For all maths helper functions that use random number generation. 
 
 This is implemented as a singleton that can either be specifically seeded (for testing and debugging) or can be randomly seeded (for simulations). 
 
-\subsection{Constructor \& Destructor Documentation}
+\doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classretrocombinator_1_1RandMaths_aa507e7465f9a650d560aa42c7f75310f}\label{classretrocombinator_1_1RandMaths_aa507e7465f9a650d560aa42c7f75310f}} 
-\index{retrocombinator\+::\+Rand\+Maths@{retrocombinator\+::\+Rand\+Maths}!Rand\+Maths@{Rand\+Maths}}
-\index{Rand\+Maths@{Rand\+Maths}!retrocombinator\+::\+Rand\+Maths@{retrocombinator\+::\+Rand\+Maths}}
-\subsubsection{\texorpdfstring{Rand\+Maths()}{RandMaths()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\index{retrocombinator::RandMaths@{retrocombinator::RandMaths}!RandMaths@{RandMaths}}
+\index{RandMaths@{RandMaths}!retrocombinator::RandMaths@{retrocombinator::RandMaths}}
+\doxysubsubsection{\texorpdfstring{RandMaths()}{RandMaths()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily Rand\+Maths\+::\+Rand\+Maths (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
@@ -80,23 +76,23 @@ This is implemented as a singleton that can either be specifically seeded (for t
 Constructor, which seeds the random engine with system time. 
 
 Is private because we want this to be a singleton. \mbox{\Hypertarget{classretrocombinator_1_1RandMaths_aca899b8322519172fe008e0697c432db}\label{classretrocombinator_1_1RandMaths_aca899b8322519172fe008e0697c432db}} 
-\index{retrocombinator\+::\+Rand\+Maths@{retrocombinator\+::\+Rand\+Maths}!Rand\+Maths@{Rand\+Maths}}
-\index{Rand\+Maths@{Rand\+Maths}!retrocombinator\+::\+Rand\+Maths@{retrocombinator\+::\+Rand\+Maths}}
-\subsubsection{\texorpdfstring{Rand\+Maths()}{RandMaths()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily retrocombinator\+::\+Rand\+Maths\+::\+Rand\+Maths (\begin{DoxyParamCaption}\item[{\hyperlink{classretrocombinator_1_1RandMaths}{Rand\+Maths} const \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+\index{retrocombinator::RandMaths@{retrocombinator::RandMaths}!RandMaths@{RandMaths}}
+\index{RandMaths@{RandMaths}!retrocombinator::RandMaths@{retrocombinator::RandMaths}}
+\doxysubsubsection{\texorpdfstring{RandMaths()}{RandMaths()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily retrocombinator\+::\+Rand\+Maths\+::\+Rand\+Maths (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classretrocombinator_1_1RandMaths}{Rand\+Maths}} const \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
 
 
 
-Delete copy constructors as want \hyperlink{classretrocombinator_1_1RandMaths}{Rand\+Maths} to be a singleton. 
+Delete copy constructors as want \mbox{\hyperlink{classretrocombinator_1_1RandMaths}{Rand\+Maths}} to be a singleton. 
 
-The reason these are public is because most compilers check for private-\/ness before they check to see if functions are deleted, and we want our error messages to be helpful if we create a new \hyperlink{classretrocombinator_1_1RandMaths}{Rand\+Maths} object by mistake. 
+The reason these are public is because most compilers check for private-\/ness before they check to see if functions are deleted, and we want our error messages to be helpful if we create a new \mbox{\hyperlink{classretrocombinator_1_1RandMaths}{Rand\+Maths}} object by mistake. 
 
-\subsection{Member Function Documentation}
+\doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classretrocombinator_1_1RandMaths_a3834f9a074546f0d588247610f16fb0e}\label{classretrocombinator_1_1RandMaths_a3834f9a074546f0d588247610f16fb0e}} 
-\index{retrocombinator\+::\+Rand\+Maths@{retrocombinator\+::\+Rand\+Maths}!choose\+\_\+event@{choose\+\_\+event}}
-\index{choose\+\_\+event@{choose\+\_\+event}!retrocombinator\+::\+Rand\+Maths@{retrocombinator\+::\+Rand\+Maths}}
-\subsubsection{\texorpdfstring{choose\+\_\+event()}{choose\_event()}}
-{\footnotesize\ttfamily \hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} Rand\+Maths\+::choose\+\_\+event (\begin{DoxyParamCaption}\item[{const double}]{events\mbox{[}$\,$\mbox{]},  }\item[{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}]{num\+\_\+events }\end{DoxyParamCaption})}
+\index{retrocombinator::RandMaths@{retrocombinator::RandMaths}!choose\_event@{choose\_event}}
+\index{choose\_event@{choose\_event}!retrocombinator::RandMaths@{retrocombinator::RandMaths}}
+\doxysubsubsection{\texorpdfstring{choose\_event()}{choose\_event()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} Rand\+Maths\+::choose\+\_\+event (\begin{DoxyParamCaption}\item[{const double}]{events\mbox{[}$\,$\mbox{]},  }\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{num\+\_\+events }\end{DoxyParamCaption})}
 
 
 
@@ -104,7 +100,8 @@ Chooses an event from a list of possible events.
 
 Takes the probabilities of each of the events as input. Throws an exception if the probabilites do not add up to at least 1.
 
-This does not check if the array is valid. Here is the call graph for this function\+:\nopagebreak
+This does not check if the array is valid. Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -120,34 +117,26 @@ Here is the caller graph for this function\+:
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classretrocombinator_1_1RandMaths_ae54dee1a16fb0e275e1624ccaa7dc87e}\label{classretrocombinator_1_1RandMaths_ae54dee1a16fb0e275e1624ccaa7dc87e}} 
-\index{retrocombinator\+::\+Rand\+Maths@{retrocombinator\+::\+Rand\+Maths}!get\+\_\+instance@{get\+\_\+instance}}
-\index{get\+\_\+instance@{get\+\_\+instance}!retrocombinator\+::\+Rand\+Maths@{retrocombinator\+::\+Rand\+Maths}}
-\subsubsection{\texorpdfstring{get\+\_\+instance()}{get\_instance()}}
-{\footnotesize\ttfamily \hyperlink{classretrocombinator_1_1RandMaths}{Rand\+Maths} \& Rand\+Maths\+::get\+\_\+instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+\index{retrocombinator::RandMaths@{retrocombinator::RandMaths}!get\_instance@{get\_instance}}
+\index{get\_instance@{get\_instance}!retrocombinator::RandMaths@{retrocombinator::RandMaths}}
+\doxysubsubsection{\texorpdfstring{get\_instance()}{get\_instance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classretrocombinator_1_1RandMaths}{Rand\+Maths}} \& Rand\+Maths\+::get\+\_\+instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
-Returns an instance of a \hyperlink{classretrocombinator_1_1RandMaths}{Rand\+Maths} class, after seeding it with system time. 
+Returns an instance of a \mbox{\hyperlink{classretrocombinator_1_1RandMaths}{Rand\+Maths}} class, after seeding it with system time. 
 
 Can be done only once as we want to share the random number generation among all other classes, and seed only once for controlling the numbers that are generated. \mbox{\Hypertarget{classretrocombinator_1_1RandMaths_ae3a186a8f3124cbfc698eeae09b708a0}\label{classretrocombinator_1_1RandMaths_ae3a186a8f3124cbfc698eeae09b708a0}} 
-\index{retrocombinator\+::\+Rand\+Maths@{retrocombinator\+::\+Rand\+Maths}!get\+\_\+last\+\_\+seed@{get\+\_\+last\+\_\+seed}}
-\index{get\+\_\+last\+\_\+seed@{get\+\_\+last\+\_\+seed}!retrocombinator\+::\+Rand\+Maths@{retrocombinator\+::\+Rand\+Maths}}
-\subsubsection{\texorpdfstring{get\+\_\+last\+\_\+seed()}{get\_last\_seed()}}
-{\footnotesize\ttfamily \hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} retrocombinator\+::\+Rand\+Maths\+::get\+\_\+last\+\_\+seed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\index{retrocombinator::RandMaths@{retrocombinator::RandMaths}!get\_last\_seed@{get\_last\_seed}}
+\index{get\_last\_seed@{get\_last\_seed}!retrocombinator::RandMaths@{retrocombinator::RandMaths}}
+\doxysubsubsection{\texorpdfstring{get\_last\_seed()}{get\_last\_seed()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} retrocombinator\+::\+Rand\+Maths\+::get\+\_\+last\+\_\+seed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 Gets the last set seed. 
 
-Look at the definition of last\+\_\+seed for more details. Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classretrocombinator_1_1RandMaths_ae3a186a8f3124cbfc698eeae09b708a0_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:
+Look at the definition of last\+\_\+seed for more details. Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -156,10 +145,10 @@ Here is the caller graph for this function\+:
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classretrocombinator_1_1RandMaths_a8072bad64e64ef042e5257e1bee85635}\label{classretrocombinator_1_1RandMaths_a8072bad64e64ef042e5257e1bee85635}} 
-\index{retrocombinator\+::\+Rand\+Maths@{retrocombinator\+::\+Rand\+Maths}!rand\+\_\+int@{rand\+\_\+int}}
-\index{rand\+\_\+int@{rand\+\_\+int}!retrocombinator\+::\+Rand\+Maths@{retrocombinator\+::\+Rand\+Maths}}
-\subsubsection{\texorpdfstring{rand\+\_\+int()}{rand\_int()}}
-{\footnotesize\ttfamily \hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} Rand\+Maths\+::rand\+\_\+int (\begin{DoxyParamCaption}\item[{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}]{low,  }\item[{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}]{high }\end{DoxyParamCaption})}
+\index{retrocombinator::RandMaths@{retrocombinator::RandMaths}!rand\_int@{rand\_int}}
+\index{rand\_int@{rand\_int}!retrocombinator::RandMaths@{retrocombinator::RandMaths}}
+\doxysubsubsection{\texorpdfstring{rand\_int()}{rand\_int()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} Rand\+Maths\+::rand\+\_\+int (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{low,  }\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{high }\end{DoxyParamCaption})}
 
 
 
@@ -174,10 +163,10 @@ The bounds are \mbox{[}inclusive\+\_\+low, exclusive\+\_\+high). Here is the cal
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classretrocombinator_1_1RandMaths_adef66efd4d58f6130982ff0ee0e25750}\label{classretrocombinator_1_1RandMaths_adef66efd4d58f6130982ff0ee0e25750}} 
-\index{retrocombinator\+::\+Rand\+Maths@{retrocombinator\+::\+Rand\+Maths}!rand\+\_\+poisson@{rand\+\_\+poisson}}
-\index{rand\+\_\+poisson@{rand\+\_\+poisson}!retrocombinator\+::\+Rand\+Maths@{retrocombinator\+::\+Rand\+Maths}}
-\subsubsection{\texorpdfstring{rand\+\_\+poisson()}{rand\_poisson()}}
-{\footnotesize\ttfamily \hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} Rand\+Maths\+::rand\+\_\+poisson (\begin{DoxyParamCaption}\item[{double}]{mean }\end{DoxyParamCaption})}
+\index{retrocombinator::RandMaths@{retrocombinator::RandMaths}!rand\_poisson@{rand\_poisson}}
+\index{rand\_poisson@{rand\_poisson}!retrocombinator::RandMaths@{retrocombinator::RandMaths}}
+\doxysubsubsection{\texorpdfstring{rand\_poisson()}{rand\_poisson()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} Rand\+Maths\+::rand\+\_\+poisson (\begin{DoxyParamCaption}\item[{double}]{mean }\end{DoxyParamCaption})}
 
 
 
@@ -192,9 +181,9 @@ Takes the mean as a parameter. Here is the caller graph for this function\+:
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classretrocombinator_1_1RandMaths_aa6441baa59bff50f588c0c54e3c54140}\label{classretrocombinator_1_1RandMaths_aa6441baa59bff50f588c0c54e3c54140}} 
-\index{retrocombinator\+::\+Rand\+Maths@{retrocombinator\+::\+Rand\+Maths}!rand\+\_\+real@{rand\+\_\+real}}
-\index{rand\+\_\+real@{rand\+\_\+real}!retrocombinator\+::\+Rand\+Maths@{retrocombinator\+::\+Rand\+Maths}}
-\subsubsection{\texorpdfstring{rand\+\_\+real()}{rand\_real()}}
+\index{retrocombinator::RandMaths@{retrocombinator::RandMaths}!rand\_real@{rand\_real}}
+\index{rand\_real@{rand\_real}!retrocombinator::RandMaths@{retrocombinator::RandMaths}}
+\doxysubsubsection{\texorpdfstring{rand\_real()}{rand\_real()}}
 {\footnotesize\ttfamily double Rand\+Maths\+::rand\+\_\+real (\begin{DoxyParamCaption}\item[{double}]{low = {\ttfamily 0.0},  }\item[{double}]{high = {\ttfamily 1.0} }\end{DoxyParamCaption})}
 
 
@@ -210,10 +199,10 @@ The bounds are \mbox{[}inclusive\+\_\+low, exclusive high). Here is the caller g
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classretrocombinator_1_1RandMaths_a2758ba7c9818bc664c4b751a697e1fe6}\label{classretrocombinator_1_1RandMaths_a2758ba7c9818bc664c4b751a697e1fe6}} 
-\index{retrocombinator\+::\+Rand\+Maths@{retrocombinator\+::\+Rand\+Maths}!sample\+\_\+distinct\+\_\+pair@{sample\+\_\+distinct\+\_\+pair}}
-\index{sample\+\_\+distinct\+\_\+pair@{sample\+\_\+distinct\+\_\+pair}!retrocombinator\+::\+Rand\+Maths@{retrocombinator\+::\+Rand\+Maths}}
-\subsubsection{\texorpdfstring{sample\+\_\+distinct\+\_\+pair()}{sample\_distinct\_pair()}}
-{\footnotesize\ttfamily std\+::pair$<$ \hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}, \hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} $>$ Rand\+Maths\+::sample\+\_\+distinct\+\_\+pair (\begin{DoxyParamCaption}\item[{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}]{low,  }\item[{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}]{high }\end{DoxyParamCaption})}
+\index{retrocombinator::RandMaths@{retrocombinator::RandMaths}!sample\_distinct\_pair@{sample\_distinct\_pair}}
+\index{sample\_distinct\_pair@{sample\_distinct\_pair}!retrocombinator::RandMaths@{retrocombinator::RandMaths}}
+\doxysubsubsection{\texorpdfstring{sample\_distinct\_pair()}{sample\_distinct\_pair()}}
+{\footnotesize\ttfamily std\+::pair$<$ \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} $>$ Rand\+Maths\+::sample\+\_\+distinct\+\_\+pair (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{low,  }\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{high }\end{DoxyParamCaption})}
 
 
 
@@ -227,19 +216,11 @@ The bounds for each value are \mbox{[}inclusive\+\_\+low, exclusive high). Here 
 \includegraphics[width=350pt]{classretrocombinator_1_1RandMaths_a2758ba7c9818bc664c4b751a697e1fe6_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{classretrocombinator_1_1RandMaths_a2758ba7c9818bc664c4b751a697e1fe6_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{classretrocombinator_1_1RandMaths_a6a7fe159f46afec51d997e4d07d2cfe6}\label{classretrocombinator_1_1RandMaths_a6a7fe159f46afec51d997e4d07d2cfe6}} 
-\index{retrocombinator\+::\+Rand\+Maths@{retrocombinator\+::\+Rand\+Maths}!sample\+\_\+without\+\_\+replacement@{sample\+\_\+without\+\_\+replacement}}
-\index{sample\+\_\+without\+\_\+replacement@{sample\+\_\+without\+\_\+replacement}!retrocombinator\+::\+Rand\+Maths@{retrocombinator\+::\+Rand\+Maths}}
-\subsubsection{\texorpdfstring{sample\+\_\+without\+\_\+replacement()}{sample\_without\_replacement()}}
-{\footnotesize\ttfamily std\+::set$<$ \hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} $>$ Rand\+Maths\+::sample\+\_\+without\+\_\+replacement (\begin{DoxyParamCaption}\item[{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}]{low,  }\item[{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}]{high,  }\item[{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}]{m }\end{DoxyParamCaption})}
+\index{retrocombinator::RandMaths@{retrocombinator::RandMaths}!sample\_without\_replacement@{sample\_without\_replacement}}
+\index{sample\_without\_replacement@{sample\_without\_replacement}!retrocombinator::RandMaths@{retrocombinator::RandMaths}}
+\doxysubsubsection{\texorpdfstring{sample\_without\_replacement()}{sample\_without\_replacement()}}
+{\footnotesize\ttfamily std\+::set$<$ \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} $>$ Rand\+Maths\+::sample\+\_\+without\+\_\+replacement (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{low,  }\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{high,  }\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{m }\end{DoxyParamCaption})}
 
 
 
@@ -262,16 +243,16 @@ Here is the caller graph for this function\+:
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classretrocombinator_1_1RandMaths_a2b61e31de6067ffa35531d5bde40f4c6}\label{classretrocombinator_1_1RandMaths_a2b61e31de6067ffa35531d5bde40f4c6}} 
-\index{retrocombinator\+::\+Rand\+Maths@{retrocombinator\+::\+Rand\+Maths}!set\+\_\+random\+\_\+seed@{set\+\_\+random\+\_\+seed}}
-\index{set\+\_\+random\+\_\+seed@{set\+\_\+random\+\_\+seed}!retrocombinator\+::\+Rand\+Maths@{retrocombinator\+::\+Rand\+Maths}}
-\subsubsection{\texorpdfstring{set\+\_\+random\+\_\+seed()}{set\_random\_seed()}}
+\index{retrocombinator::RandMaths@{retrocombinator::RandMaths}!set\_random\_seed@{set\_random\_seed}}
+\index{set\_random\_seed@{set\_random\_seed}!retrocombinator::RandMaths@{retrocombinator::RandMaths}}
+\doxysubsubsection{\texorpdfstring{set\_random\_seed()}{set\_random\_seed()}}
 {\footnotesize\ttfamily void Rand\+Maths\+::set\+\_\+random\+\_\+seed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 Uses system time to seed the R\+NG. 
 
-This can be undone by calling {\ttfamily \hyperlink{classretrocombinator_1_1RandMaths_a0bf1c2e7a1eccb1f9246b3fceeb5db8a}{set\+\_\+specific\+\_\+seed()}} Here is the caller graph for this function\+:
+This can be undone by calling {\ttfamily \mbox{\hyperlink{classretrocombinator_1_1RandMaths_a0bf1c2e7a1eccb1f9246b3fceeb5db8a}{set\+\_\+specific\+\_\+seed()}}} Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -280,16 +261,16 @@ This can be undone by calling {\ttfamily \hyperlink{classretrocombinator_1_1Rand
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classretrocombinator_1_1RandMaths_a0bf1c2e7a1eccb1f9246b3fceeb5db8a}\label{classretrocombinator_1_1RandMaths_a0bf1c2e7a1eccb1f9246b3fceeb5db8a}} 
-\index{retrocombinator\+::\+Rand\+Maths@{retrocombinator\+::\+Rand\+Maths}!set\+\_\+specific\+\_\+seed@{set\+\_\+specific\+\_\+seed}}
-\index{set\+\_\+specific\+\_\+seed@{set\+\_\+specific\+\_\+seed}!retrocombinator\+::\+Rand\+Maths@{retrocombinator\+::\+Rand\+Maths}}
-\subsubsection{\texorpdfstring{set\+\_\+specific\+\_\+seed()}{set\_specific\_seed()}}
-{\footnotesize\ttfamily void Rand\+Maths\+::set\+\_\+specific\+\_\+seed (\begin{DoxyParamCaption}\item[{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}]{seed }\end{DoxyParamCaption})}
+\index{retrocombinator::RandMaths@{retrocombinator::RandMaths}!set\_specific\_seed@{set\_specific\_seed}}
+\index{set\_specific\_seed@{set\_specific\_seed}!retrocombinator::RandMaths@{retrocombinator::RandMaths}}
+\doxysubsubsection{\texorpdfstring{set\_specific\_seed()}{set\_specific\_seed()}}
+{\footnotesize\ttfamily void Rand\+Maths\+::set\+\_\+specific\+\_\+seed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{seed }\end{DoxyParamCaption})}
 
 
 
 Uses a user-\/specified seed for R\+NG. 
 
-This can be undone by calling {\ttfamily \hyperlink{classretrocombinator_1_1RandMaths_a2b61e31de6067ffa35531d5bde40f4c6}{set\+\_\+random\+\_\+seed()}} Here is the caller graph for this function\+:
+This can be undone by calling {\ttfamily \mbox{\hyperlink{classretrocombinator_1_1RandMaths_a2b61e31de6067ffa35531d5bde40f4c6}{set\+\_\+random\+\_\+seed()}}} Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -298,9 +279,9 @@ This can be undone by calling {\ttfamily \hyperlink{classretrocombinator_1_1Rand
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classretrocombinator_1_1RandMaths_a183686140a9da18ad40c7e048ee8914e}\label{classretrocombinator_1_1RandMaths_a183686140a9da18ad40c7e048ee8914e}} 
-\index{retrocombinator\+::\+Rand\+Maths@{retrocombinator\+::\+Rand\+Maths}!test\+\_\+event@{test\+\_\+event}}
-\index{test\+\_\+event@{test\+\_\+event}!retrocombinator\+::\+Rand\+Maths@{retrocombinator\+::\+Rand\+Maths}}
-\subsubsection{\texorpdfstring{test\+\_\+event()}{test\_event()}}
+\index{retrocombinator::RandMaths@{retrocombinator::RandMaths}!test\_event@{test\_event}}
+\index{test\_event@{test\_event}!retrocombinator::RandMaths@{retrocombinator::RandMaths}}
+\doxysubsubsection{\texorpdfstring{test\_event()}{test\_event()}}
 {\footnotesize\ttfamily bool Rand\+Maths\+::test\+\_\+event (\begin{DoxyParamCaption}\item[{double}]{event\+\_\+probability }\end{DoxyParamCaption})}
 
 
@@ -325,21 +306,21 @@ Here is the caller graph for this function\+:
 \end{figure}
 
 
-\subsection{Member Data Documentation}
+\doxysubsection{Member Data Documentation}
 \mbox{\Hypertarget{classretrocombinator_1_1RandMaths_ab5b6bec8e0eaea80efe565cddc8e69ac}\label{classretrocombinator_1_1RandMaths_ab5b6bec8e0eaea80efe565cddc8e69ac}} 
-\index{retrocombinator\+::\+Rand\+Maths@{retrocombinator\+::\+Rand\+Maths}!last\+\_\+seed@{last\+\_\+seed}}
-\index{last\+\_\+seed@{last\+\_\+seed}!retrocombinator\+::\+Rand\+Maths@{retrocombinator\+::\+Rand\+Maths}}
-\subsubsection{\texorpdfstring{last\+\_\+seed}{last\_seed}}
-{\footnotesize\ttfamily \hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} retrocombinator\+::\+Rand\+Maths\+::last\+\_\+seed\hspace{0.3cm}{\ttfamily [private]}}
+\index{retrocombinator::RandMaths@{retrocombinator::RandMaths}!last\_seed@{last\_seed}}
+\index{last\_seed@{last\_seed}!retrocombinator::RandMaths@{retrocombinator::RandMaths}}
+\doxysubsubsection{\texorpdfstring{last\_seed}{last\_seed}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} retrocombinator\+::\+Rand\+Maths\+::last\+\_\+seed\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
 Last seed for the random engine, either by the user or by the system. 
 
 Note that this does not reflect the internal state of the random engine at all points as once random number generation begins, this value is not touched. \mbox{\Hypertarget{classretrocombinator_1_1RandMaths_a8455f3a94efd124edd0ecfc806744476}\label{classretrocombinator_1_1RandMaths_a8455f3a94efd124edd0ecfc806744476}} 
-\index{retrocombinator\+::\+Rand\+Maths@{retrocombinator\+::\+Rand\+Maths}!re@{re}}
-\index{re@{re}!retrocombinator\+::\+Rand\+Maths@{retrocombinator\+::\+Rand\+Maths}}
-\subsubsection{\texorpdfstring{re}{re}}
+\index{retrocombinator::RandMaths@{retrocombinator::RandMaths}!re@{re}}
+\index{re@{re}!retrocombinator::RandMaths@{retrocombinator::RandMaths}}
+\doxysubsubsection{\texorpdfstring{re}{re}}
 {\footnotesize\ttfamily std\+::mt19937 retrocombinator\+::\+Rand\+Maths\+::re\hspace{0.3cm}{\ttfamily [private]}}
 
 
@@ -350,5 +331,5 @@ This is seeded during initialisation of the class, and once set, its R\+NG is sh
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-src/\hyperlink{rand__maths_8h}{rand\+\_\+maths.\+h}\item 
+src/\mbox{\hyperlink{rand__maths_8h}{rand\+\_\+maths.\+h}}\item 
 src/rand\+\_\+maths.\+cpp\end{DoxyCompactItemize}

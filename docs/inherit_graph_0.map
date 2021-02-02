@@ -1,5 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classretrocombinator_1_1Evolution.html" title="An interface for simulating the evolution of sequences. " alt="" coords="5,46,180,73"/>
-<area shape="rect" id="node2" href="$classretrocombinator_1_1EvolutionWithFlags.html" title="A simulation where some sequences can become inactive over time. " alt="" coords="228,5,403,47"/>
-<area shape="rect" id="node3" href="$classretrocombinator_1_1EvolutionWithoutFlags.html" title="A simulation where all sequences are active. " alt="" coords="228,71,403,112"/>
+<area shape="rect" id="node1" href="$classretrocombinator_1_1Evolution.html" title="An interface for simulating the evolution of sequences." alt="" coords="5,46,201,73"/>
+<area shape="rect" id="node2" href="$classretrocombinator_1_1EvolutionWithFlags.html" title="A simulation where some sequences can become inactive over time." alt="" coords="249,5,445,47"/>
+<area shape="rect" id="node3" href="$classretrocombinator_1_1EvolutionWithoutFlags.html" title="A simulation where all sequences are active." alt="" coords="249,71,445,112"/>
 </map>

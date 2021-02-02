@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['nucmatrix_358',['NucMatrix',['../namespaceretrocombinator.html#a47bcd6dd938a6f8e34b0996d940f81ef',1,'retrocombinator']]]
+  ['mutations_5ftype_377',['mutations_type',['../classretrocombinator_1_1Sequence.html#a2abbaf2376f035a997e02c4afae9f476',1,'retrocombinator::Sequence']]]
 ];

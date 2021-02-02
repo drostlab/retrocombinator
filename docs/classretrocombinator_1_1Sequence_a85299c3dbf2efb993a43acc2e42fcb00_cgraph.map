@@ -1,7 +1,7 @@
 <map id="retrocombinator::Sequence::point_mutate" name="retrocombinator::Sequence::point_mutate">
-<area shape="rect" id="node2" href="$classretrocombinator_1_1Sequence.html#a23c73a4ccfbe9baded2e99479e3ffb5e" title="Returns the character for a base at a given position. " alt="" coords="232,26,411,67"/>
-<area shape="rect" id="node6" href="$namespaceretrocombinator_1_1Consts.html#a95eb077a2bba2fe988b44e68a3284314" title="Returns the 2bit&#45;encoding of a nucleotide given its character form. " alt="" coords="240,91,403,133"/>
-<area shape="rect" id="node3" href="$namespaceretrocombinator_1_1Consts.html#af335f61cbdfff27175d7f41cd95d426d" title="Returns the character of a nucleotide given its 2bit&#45;encoding. " alt="" coords="685,30,848,71"/>
-<area shape="rect" id="node4" href="$classretrocombinator_1_1Sequence.html#a378e5aecc7fa4524cd90d352cfd651fe" title="Returns the 2bit encoding for a base at a given position. " alt="" coords="459,26,637,67"/>
-<area shape="rect" id="node5" href="$classretrocombinator_1_1Sequence.html#a5fa45e155a1e4b3c257f19369ace05a8" title="Returns the raw nucleotide sequence as a string. " alt="" coords="459,91,637,133"/>
+<area shape="rect" id="node1" title="Changes the nucleotide at position n to new_nucleotide." alt="" coords="5,71,204,112"/>
+<area shape="rect" id="node2" href="$classretrocombinator_1_1Sequence.html#a23c73a4ccfbe9baded2e99479e3ffb5e" title="Returns the character for a base at a given position." alt="" coords="252,37,451,79"/>
+<area shape="rect" id="node5" href="$namespaceretrocombinator_1_1Consts.html#a95eb077a2bba2fe988b44e68a3284314" title="Returns the 2bit&#45;encoding of a nucleotide given its character form." alt="" coords="262,103,441,144"/>
+<area shape="rect" id="node3" href="$classretrocombinator_1_1Sequence.html#a378e5aecc7fa4524cd90d352cfd651fe" title="Returns the 2bit encoding for a base at a given position." alt="" coords="499,5,697,47"/>
+<area shape="rect" id="node4" href="$namespaceretrocombinator_1_1Consts.html#af335f61cbdfff27175d7f41cd95d426d" title="Returns the character of a nucleotide given its 2bit&#45;encoding." alt="" coords="509,71,687,112"/>
 </map>

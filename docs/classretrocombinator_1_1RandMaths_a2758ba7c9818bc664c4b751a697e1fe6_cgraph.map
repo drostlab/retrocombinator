@@ -1,3 +1,4 @@
 <map id="retrocombinator::RandMaths::sample_distinct_pair" name="retrocombinator::RandMaths::sample_distinct_pair">
-<area shape="rect" id="node2" href="$classretrocombinator_1_1RandMaths.html#a8072bad64e64ef042e5257e1bee85635" title="Generates a random integer within a range. " alt="" coords="240,5,427,47"/>
+<area shape="rect" id="node1" title="Samples a non&#45;diagonal pair (2 distinct values) within a range." alt="" coords="5,5,213,47"/>
+<area shape="rect" id="node2" href="$classretrocombinator_1_1RandMaths.html#a8072bad64e64ef042e5257e1bee85635" title="Generates a random integer within a range." alt="" coords="261,5,469,47"/>
 </map>

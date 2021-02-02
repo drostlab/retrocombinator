@@ -1,7 +1,8 @@
 <map id="retrocombinator::K80Model" name="retrocombinator::K80Model">
-<area shape="rect" id="node6" href="$classretrocombinator_1_1JC69Model.html" title="Jules and Cantor, 1969. " alt="" coords="12,393,199,420"/>
-<area shape="rect" id="node2" href="$classretrocombinator_1_1HKY85Model.html" title="Hasegawa, Kishino and Yano 1985 Model. " alt="" coords="7,244,204,271"/>
-<area shape="rect" id="node3" href="$classretrocombinator_1_1T93Model.html" title="Tamura ane Nei 1983 Model. " alt="" coords="17,169,194,196"/>
-<area shape="rect" id="node4" href="$classretrocombinator_1_1GTRModel.html" title="General Time Reversible Model, Tavare 1986. " alt="" coords="14,95,197,121"/>
-<area shape="rect" id="node5" href="$classretrocombinator_1_1PointMutationModel.html" title="To represent a model of DNA evolution through point mutations. " alt="" coords="5,5,205,47"/>
+<area shape="rect" id="node1" title="Kimura 2 Parameter Model, 1980." alt="" coords="19,319,219,345"/>
+<area shape="rect" id="node6" href="$classretrocombinator_1_1JC69Model.html" title="Jules and Cantor, 1969." alt="" coords="17,393,221,420"/>
+<area shape="rect" id="node2" href="$classretrocombinator_1_1HKY85Model.html" title="Hasegawa, Kishino and Yano 1985 Model." alt="" coords="10,244,227,271"/>
+<area shape="rect" id="node3" href="$classretrocombinator_1_1TN93Model.html" title="Tamura ane Nei 1983 Model." alt="" coords="14,169,223,196"/>
+<area shape="rect" id="node4" href="$classretrocombinator_1_1GTRModel.html" title="General Time Reversible Model, Tavare 1986." alt="" coords="17,95,220,121"/>
+<area shape="rect" id="node5" href="$classretrocombinator_1_1PointMutationModel.html" title="To represent a model of DNA evolution through point mutations." alt="" coords="5,5,232,47"/>
 </map>

@@ -1,5 +1,5 @@
-\hypertarget{classretrocombinator_1_1Sequence}{}\section{retrocombinator\+:\+:Sequence Class Reference}
-\label{classretrocombinator_1_1Sequence}\index{retrocombinator\+::\+Sequence@{retrocombinator\+::\+Sequence}}
+\hypertarget{classretrocombinator_1_1Sequence}{}\doxysection{retrocombinator\+::Sequence Class Reference}
+\label{classretrocombinator_1_1Sequence}\index{retrocombinator::Sequence@{retrocombinator::Sequence}}
 
 
 To represent a D\+NA sequence and the mutations that it has undergone.  
@@ -9,133 +9,140 @@ To represent a D\+NA sequence and the mutations that it has undergone.
 
 {\ttfamily \#include $<$sequence.\+h$>$}
 
-\subsection*{Public Member Functions}
+\doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classretrocombinator_1_1Sequence_a04d0d6977316f2ab30844e584c4531ec}{Sequence} (\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} n)
+\mbox{\hyperlink{classretrocombinator_1_1Sequence_a04d0d6977316f2ab30844e584c4531ec}{Sequence}} (\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} n)
 \begin{DoxyCompactList}\small\item\em Constructs a random sequence of length {\itshape n}. \end{DoxyCompactList}\item 
-\hyperlink{classretrocombinator_1_1Sequence_af5b3b62eba07f0e09f532fcf1681c289}{Sequence} (std\+::string s)
+\mbox{\hyperlink{classretrocombinator_1_1Sequence_af5b3b62eba07f0e09f532fcf1681c289}{Sequence}} (std\+::string s)
 \begin{DoxyCompactList}\small\item\em Constructs a sequence from a given string. \end{DoxyCompactList}\item 
-\hyperlink{classretrocombinator_1_1Sequence_af334c44bea806196b5037e61b0e831b1}{Sequence} (const \hyperlink{classretrocombinator_1_1Sequence}{Sequence} \&s1, const \hyperlink{classretrocombinator_1_1Sequence}{Sequence} \&s2, \hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} num\+\_\+template\+\_\+switches)
+\mbox{\hyperlink{classretrocombinator_1_1Sequence_af334c44bea806196b5037e61b0e831b1}{Sequence}} (const \mbox{\hyperlink{classretrocombinator_1_1Sequence}{Sequence}} \&s1, const \mbox{\hyperlink{classretrocombinator_1_1Sequence}{Sequence}} \&s2, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} num\+\_\+template\+\_\+switches)
 \begin{DoxyCompactList}\small\item\em Constructs a sequence from recombining two other sequences. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classretrocombinator_1_1Sequence_aeefc98943c08769af4ed9f73157d26d1}\label{classretrocombinator_1_1Sequence_aeefc98943c08769af4ed9f73157d26d1}} 
-\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} \hyperlink{classretrocombinator_1_1Sequence_aeefc98943c08769af4ed9f73157d26d1}{get\+\_\+length} () const
+\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} \mbox{\hyperlink{classretrocombinator_1_1Sequence_aeefc98943c08769af4ed9f73157d26d1}{get\+\_\+length}} () const
 \begin{DoxyCompactList}\small\item\em Returns length of the sequence. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classretrocombinator_1_1Sequence_a6ef8ac65b574f4c0d6155b67efe581ec}\label{classretrocombinator_1_1Sequence_a6ef8ac65b574f4c0d6155b67efe581ec}} 
-\hyperlink{namespaceretrocombinator_afd7c6eb4293e8c4d12827609a9a34b9b}{tag\+\_\+type} \hyperlink{classretrocombinator_1_1Sequence_a6ef8ac65b574f4c0d6155b67efe581ec}{get\+\_\+tag} () const
+\mbox{\hyperlink{namespaceretrocombinator_afd7c6eb4293e8c4d12827609a9a34b9b}{tag\+\_\+type}} \mbox{\hyperlink{classretrocombinator_1_1Sequence_a6ef8ac65b574f4c0d6155b67efe581ec}{get\+\_\+tag}} () const
 \begin{DoxyCompactList}\small\item\em Returns the unique label for this sequence. \end{DoxyCompactList}\item 
-std\+::pair$<$ \hyperlink{namespaceretrocombinator_afd7c6eb4293e8c4d12827609a9a34b9b}{tag\+\_\+type}, \hyperlink{namespaceretrocombinator_afd7c6eb4293e8c4d12827609a9a34b9b}{tag\+\_\+type} $>$ \hyperlink{classretrocombinator_1_1Sequence_abd985b5164277d63c40f9580882335c8}{get\+\_\+parent\+\_\+tags} () const
+std\+::pair$<$ \mbox{\hyperlink{namespaceretrocombinator_afd7c6eb4293e8c4d12827609a9a34b9b}{tag\+\_\+type}}, \mbox{\hyperlink{namespaceretrocombinator_afd7c6eb4293e8c4d12827609a9a34b9b}{tag\+\_\+type}} $>$ \mbox{\hyperlink{classretrocombinator_1_1Sequence_abd985b5164277d63c40f9580882335c8}{get\+\_\+parent\+\_\+tags}} () const
 \begin{DoxyCompactList}\small\item\em Returns the tags of the sequences that this sequence was created from. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classretrocombinator_1_1Sequence_a23c73a4ccfbe9baded2e99479e3ffb5e}\label{classretrocombinator_1_1Sequence_a23c73a4ccfbe9baded2e99479e3ffb5e}} 
-char \hyperlink{classretrocombinator_1_1Sequence_a23c73a4ccfbe9baded2e99479e3ffb5e}{char\+\_\+at} (\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} n) const
+char \mbox{\hyperlink{classretrocombinator_1_1Sequence_a23c73a4ccfbe9baded2e99479e3ffb5e}{char\+\_\+at}} (\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} n) const
 \begin{DoxyCompactList}\small\item\em Returns the character for a base at a given position. \end{DoxyCompactList}\item 
-void \hyperlink{classretrocombinator_1_1Sequence_a85299c3dbf2efb993a43acc2e42fcb00}{point\+\_\+mutate} (\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} n, char new\+\_\+nucleotide, bool is\+\_\+lethal=false)
+void \mbox{\hyperlink{classretrocombinator_1_1Sequence_a85299c3dbf2efb993a43acc2e42fcb00}{point\+\_\+mutate}} (\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} n, char new\+\_\+nucleotide, bool is\+\_\+lethal=false)
 \begin{DoxyCompactList}\small\item\em Changes the nucleotide at position {\itshape n} to {\itshape new\+\_\+nucleotide}. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classretrocombinator_1_1Sequence_a5fa45e155a1e4b3c257f19369ace05a8}\label{classretrocombinator_1_1Sequence_a5fa45e155a1e4b3c257f19369ace05a8}} 
-std\+::string \hyperlink{classretrocombinator_1_1Sequence_a5fa45e155a1e4b3c257f19369ace05a8}{as\+\_\+string} () const
+std\+::string \mbox{\hyperlink{classretrocombinator_1_1Sequence_a5fa45e155a1e4b3c257f19369ace05a8}{as\+\_\+string}} () const
 \begin{DoxyCompactList}\small\item\em Returns the raw nucleotide sequence as a string. \end{DoxyCompactList}\item 
-bool \hyperlink{classretrocombinator_1_1Sequence_a445120376c2e5c626d3ecfa509406843}{is\+\_\+active} () const
+bool \mbox{\hyperlink{classretrocombinator_1_1Sequence_a445120376c2e5c626d3ecfa509406843}{is\+\_\+active}} () const
 \begin{DoxyCompactList}\small\item\em Tests whether this sequence is active (can transpose) or not. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classretrocombinator_1_1Sequence_a1140bea4ad0375ee514d140aa80e9bd5}\label{classretrocombinator_1_1Sequence_a1140bea4ad0375ee514d140aa80e9bd5}} 
-\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} \hyperlink{classretrocombinator_1_1Sequence_a1140bea4ad0375ee514d140aa80e9bd5}{num\+\_\+mutations} () const
+\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} \mbox{\hyperlink{classretrocombinator_1_1Sequence_a1140bea4ad0375ee514d140aa80e9bd5}{num\+\_\+mutations}} () const
 \begin{DoxyCompactList}\small\item\em Returns how many mutations are present in this sequence. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classretrocombinator_1_1Sequence_aaac564e24289e894507c99b82946f492}\label{classretrocombinator_1_1Sequence_aaac564e24289e894507c99b82946f492}} 
-double \hyperlink{classretrocombinator_1_1Sequence_aaac564e24289e894507c99b82946f492}{init\+\_\+seq\+\_\+similarity} () const
+double \mbox{\hyperlink{classretrocombinator_1_1Sequence_aaac564e24289e894507c99b82946f492}{init\+\_\+seq\+\_\+similarity}} () const
 \begin{DoxyCompactList}\small\item\em Returns sequence similarity to initial sequence. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \textbf{ }\par
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classretrocombinator_1_1Sequence_a5cf77ea0b07ba519d1f79ea781a77e8a}\label{classretrocombinator_1_1Sequence_a5cf77ea0b07ba519d1f79ea781a77e8a}} 
-\hyperlink{classretrocombinator_1_1Sequence_a5cf77ea0b07ba519d1f79ea781a77e8a}{Sequence} (\hyperlink{classretrocombinator_1_1Sequence}{Sequence} const \&)=delete
+\mbox{\hyperlink{classretrocombinator_1_1Sequence_a5cf77ea0b07ba519d1f79ea781a77e8a}{Sequence}} (\mbox{\hyperlink{classretrocombinator_1_1Sequence}{Sequence}} const \&)=delete
 \begin{DoxyCompactList}\small\item\em Delete copy constructors as we want tags to be unique. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classretrocombinator_1_1Sequence_aca2b4e5813b22d5181883c3de069301e}\label{classretrocombinator_1_1Sequence_aca2b4e5813b22d5181883c3de069301e}} 
-void {\bfseries operator=} (\hyperlink{classretrocombinator_1_1Sequence}{Sequence} const \&)=delete
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{classretrocombinator_1_1Sequence_aca2b4e5813b22d5181883c3de069301e}{operator=}} (\mbox{\hyperlink{classretrocombinator_1_1Sequence}{Sequence}} const \&)=delete
+\begin{DoxyCompactList}\small\item\em Delete copy constructors as we want tags to be unique. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 \textbf{ }\par
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classretrocombinator_1_1Sequence_aa7350870199cd599d0345bbc563ec239}\label{classretrocombinator_1_1Sequence_aa7350870199cd599d0345bbc563ec239}} 
-\hyperlink{classretrocombinator_1_1Sequence_aa7350870199cd599d0345bbc563ec239}{Sequence} (\hyperlink{classretrocombinator_1_1Sequence}{Sequence} \&\&)=default
+\mbox{\hyperlink{classretrocombinator_1_1Sequence_aa7350870199cd599d0345bbc563ec239}{Sequence}} (\mbox{\hyperlink{classretrocombinator_1_1Sequence}{Sequence}} \&\&)=default
 \begin{DoxyCompactList}\small\item\em But make the objects moveable, to create containers of them. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classretrocombinator_1_1Sequence_a3f08f9281e5b350ed824f857a78c1647}\label{classretrocombinator_1_1Sequence_a3f08f9281e5b350ed824f857a78c1647}} 
-\hyperlink{classretrocombinator_1_1Sequence}{Sequence} \& {\bfseries operator=} (\hyperlink{classretrocombinator_1_1Sequence}{Sequence} \&\&)=default
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classretrocombinator_1_1Sequence}{Sequence}} \& \mbox{\hyperlink{classretrocombinator_1_1Sequence_a3f08f9281e5b350ed824f857a78c1647}{operator=}} (\mbox{\hyperlink{classretrocombinator_1_1Sequence}{Sequence}} \&\&)=default
+\begin{DoxyCompactList}\small\item\em But make the objects moveable, to create containers of them. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
-\subsection*{Static Public Member Functions}
+\doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static void \hyperlink{classretrocombinator_1_1Sequence_ad4791ec3cefbea417081cd349ac6c23b}{renumber\+\_\+sequences} (\hyperlink{namespaceretrocombinator_afd7c6eb4293e8c4d12827609a9a34b9b}{tag\+\_\+type} new\+\_\+start\+\_\+tag)
+static void \mbox{\hyperlink{classretrocombinator_1_1Sequence_ad4791ec3cefbea417081cd349ac6c23b}{renumber\+\_\+sequences}} (\mbox{\hyperlink{namespaceretrocombinator_afd7c6eb4293e8c4d12827609a9a34b9b}{tag\+\_\+type}} new\+\_\+start\+\_\+tag)
 \begin{DoxyCompactList}\small\item\em Explicitly update the global sequence count to start from a particular number. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Static Public Attributes}
-\textbf{ }\par
+\doxysubsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classretrocombinator_1_1Sequence_aa89fde879519ff0513fce29a4d0a554a}\label{classretrocombinator_1_1Sequence_aa89fde879519ff0513fce29a4d0a554a}} 
-static const \hyperlink{namespaceretrocombinator_afd7c6eb4293e8c4d12827609a9a34b9b}{tag\+\_\+type} \hyperlink{classretrocombinator_1_1Sequence_aa89fde879519ff0513fce29a4d0a554a}{R\+A\+ND} = -\/10
+static const \mbox{\hyperlink{namespaceretrocombinator_afd7c6eb4293e8c4d12827609a9a34b9b}{tag\+\_\+type}} \mbox{\hyperlink{classretrocombinator_1_1Sequence_aa89fde879519ff0513fce29a4d0a554a}{R\+A\+ND}} = -\/10
 \begin{DoxyCompactList}\small\item\em This sequence was created randomly. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classretrocombinator_1_1Sequence_a3ded5ce523bc4ed7471f33dda1ffa8c3}\label{classretrocombinator_1_1Sequence_a3ded5ce523bc4ed7471f33dda1ffa8c3}} 
-static const \hyperlink{namespaceretrocombinator_afd7c6eb4293e8c4d12827609a9a34b9b}{tag\+\_\+type} \hyperlink{classretrocombinator_1_1Sequence_a3ded5ce523bc4ed7471f33dda1ffa8c3}{I\+N\+IT} = -\/20
+static const \mbox{\hyperlink{namespaceretrocombinator_afd7c6eb4293e8c4d12827609a9a34b9b}{tag\+\_\+type}} \mbox{\hyperlink{classretrocombinator_1_1Sequence_a3ded5ce523bc4ed7471f33dda1ffa8c3}{I\+N\+IT}} = -\/20
 \begin{DoxyCompactList}\small\item\em This sequence was created from a specified string. \end{DoxyCompactList}\end{DoxyCompactItemize}
-
-\subsection*{Private Types}
+\doxysubsection*{Private Types}
 \textbf{ }\par
 \begin{DoxyCompactItemize}
 \item 
-typedef std\+::unordered\+\_\+map$<$ \hyperlink{namespaceretrocombinator_afd7c6eb4293e8c4d12827609a9a34b9b}{tag\+\_\+type}, char $>$ \hyperlink{classretrocombinator_1_1Sequence_a2abbaf2376f035a997e02c4afae9f476}{mutations\+\_\+type}
+typedef std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{namespaceretrocombinator_afd7c6eb4293e8c4d12827609a9a34b9b}{tag\+\_\+type}}, char $>$ \mbox{\hyperlink{classretrocombinator_1_1Sequence_a2abbaf2376f035a997e02c4afae9f476}{mutations\+\_\+type}}
 \begin{DoxyCompactList}\small\item\em Basic typedefs -\/ hashed data structures for quick lookup. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classretrocombinator_1_1Sequence_aabef8f6c5b05d1343705872e8d17368f}\label{classretrocombinator_1_1Sequence_aabef8f6c5b05d1343705872e8d17368f}} 
-typedef std\+::unordered\+\_\+set$<$ \hyperlink{namespaceretrocombinator_afd7c6eb4293e8c4d12827609a9a34b9b}{tag\+\_\+type} $>$ {\bfseries lethal\+\_\+mutations\+\_\+type}
-\end{DoxyCompactItemize}
+typedef std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{namespaceretrocombinator_afd7c6eb4293e8c4d12827609a9a34b9b}{tag\+\_\+type}} $>$ \mbox{\hyperlink{classretrocombinator_1_1Sequence_aabef8f6c5b05d1343705872e8d17368f}{lethal\+\_\+mutations\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em Basic typedefs -\/ hashed data structures for quick lookup. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
-\subsection*{Private Member Functions}
+\doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classretrocombinator_1_1Sequence_a378e5aecc7fa4524cd90d352cfd651fe}\label{classretrocombinator_1_1Sequence_a378e5aecc7fa4524cd90d352cfd651fe}} 
-std\+::pair$<$ bool, bool $>$ \hyperlink{classretrocombinator_1_1Sequence_a378e5aecc7fa4524cd90d352cfd651fe}{bits\+\_\+at} (\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} n) const
+std\+::pair$<$ bool, bool $>$ \mbox{\hyperlink{classretrocombinator_1_1Sequence_a378e5aecc7fa4524cd90d352cfd651fe}{bits\+\_\+at}} (\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} n) const
 \begin{DoxyCompactList}\small\item\em Returns the 2bit encoding for a base at a given position. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Private Attributes}
+\doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{namespaceretrocombinator_afd7c6eb4293e8c4d12827609a9a34b9b}{tag\+\_\+type} \hyperlink{classretrocombinator_1_1Sequence_ae599e85a84a78e23d33f6c3085248726}{tag}
+\mbox{\hyperlink{namespaceretrocombinator_afd7c6eb4293e8c4d12827609a9a34b9b}{tag\+\_\+type}} \mbox{\hyperlink{classretrocombinator_1_1Sequence_ae599e85a84a78e23d33f6c3085248726}{tag}}
 \begin{DoxyCompactList}\small\item\em A number that uniquely identifies this sequence. \end{DoxyCompactList}\item 
-std\+::pair$<$ \hyperlink{namespaceretrocombinator_afd7c6eb4293e8c4d12827609a9a34b9b}{tag\+\_\+type}, \hyperlink{namespaceretrocombinator_afd7c6eb4293e8c4d12827609a9a34b9b}{tag\+\_\+type} $>$ \hyperlink{classretrocombinator_1_1Sequence_a023fef0801bd63048bf5c7b2442694cc}{parent\+\_\+tags}
+std\+::pair$<$ \mbox{\hyperlink{namespaceretrocombinator_afd7c6eb4293e8c4d12827609a9a34b9b}{tag\+\_\+type}}, \mbox{\hyperlink{namespaceretrocombinator_afd7c6eb4293e8c4d12827609a9a34b9b}{tag\+\_\+type}} $>$ \mbox{\hyperlink{classretrocombinator_1_1Sequence_a023fef0801bd63048bf5c7b2442694cc}{parent\+\_\+tags}}
 \begin{DoxyCompactList}\small\item\em The parent tags that this sequence was created from. \end{DoxyCompactList}\item 
-std\+::vector$<$ bool $>$ \hyperlink{classretrocombinator_1_1Sequence_a7c6072eaff9990a0bcaebcfa6287e3e0}{bases}
+std\+::vector$<$ bool $>$ \mbox{\hyperlink{classretrocombinator_1_1Sequence_a7c6072eaff9990a0bcaebcfa6287e3e0}{bases}}
 \begin{DoxyCompactList}\small\item\em Actual sequence of nucleotides. \end{DoxyCompactList}\item 
-\hyperlink{classretrocombinator_1_1Sequence_a2abbaf2376f035a997e02c4afae9f476}{mutations\+\_\+type} \hyperlink{classretrocombinator_1_1Sequence_a07dd3101f7838d76300313ecfb97f3fc}{mutations}
+\mbox{\hyperlink{classretrocombinator_1_1Sequence_a2abbaf2376f035a997e02c4afae9f476}{mutations\+\_\+type}} \mbox{\hyperlink{classretrocombinator_1_1Sequence_a07dd3101f7838d76300313ecfb97f3fc}{mutations}}
 \begin{DoxyCompactList}\small\item\em Positions of mutations and what the {\itshape original} nucleotide was. \end{DoxyCompactList}\item 
-lethal\+\_\+mutations\+\_\+type \hyperlink{classretrocombinator_1_1Sequence_af5798b014aaeb7573197602dafb98818}{lethal\+\_\+mutations}
+\mbox{\hyperlink{classretrocombinator_1_1Sequence_aabef8f6c5b05d1343705872e8d17368f}{lethal\+\_\+mutations\+\_\+type}} \mbox{\hyperlink{classretrocombinator_1_1Sequence_af5798b014aaeb7573197602dafb98818}{lethal\+\_\+mutations}}
 \begin{DoxyCompactList}\small\item\em Positions of mutations that are lethal. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Static Private Attributes}
+\doxysubsection*{Static Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-static \hyperlink{namespaceretrocombinator_afd7c6eb4293e8c4d12827609a9a34b9b}{tag\+\_\+type} \hyperlink{classretrocombinator_1_1Sequence_a486f1b680452f7162ee9a895c2871f92}{global\+\_\+sequence\+\_\+count} = -\/1
+static \mbox{\hyperlink{namespaceretrocombinator_afd7c6eb4293e8c4d12827609a9a34b9b}{tag\+\_\+type}} \mbox{\hyperlink{classretrocombinator_1_1Sequence_a486f1b680452f7162ee9a895c2871f92}{global\+\_\+sequence\+\_\+count}} = -\/1
 \begin{DoxyCompactList}\small\item\em An internal counter that is incremented every time a sequence is created. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Friends}
+\doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} \hyperlink{classretrocombinator_1_1Sequence_a8cd9dc2cfea97399387e2876ee028c32}{operator$\ast$} (const \hyperlink{classretrocombinator_1_1Sequence}{Sequence} \&s1, const \hyperlink{classretrocombinator_1_1Sequence}{Sequence} \&s2)
+\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} \mbox{\hyperlink{classretrocombinator_1_1Sequence_a8cd9dc2cfea97399387e2876ee028c32}{operator$\ast$}} (const \mbox{\hyperlink{classretrocombinator_1_1Sequence}{Sequence}} \&s1, const \mbox{\hyperlink{classretrocombinator_1_1Sequence}{Sequence}} \&s2)
 \begin{DoxyCompactList}\small\item\em Pairwise distances between two sequences. \end{DoxyCompactList}\item 
-\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} \hyperlink{classretrocombinator_1_1Sequence_afdd1af7009804b182798c40d25bb1bb5}{operator$\ast$} (const \hyperlink{classretrocombinator_1_1Sequence}{Sequence} \&s1, std\+::string s2)
+\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} \mbox{\hyperlink{classretrocombinator_1_1Sequence_afdd1af7009804b182798c40d25bb1bb5}{operator$\ast$}} (const \mbox{\hyperlink{classretrocombinator_1_1Sequence}{Sequence}} \&s1, std\+::string s2)
 \begin{DoxyCompactList}\small\item\em Pairwise distances between a sequence and a string. \end{DoxyCompactList}\item 
-double \hyperlink{classretrocombinator_1_1Sequence_a951eb38b75bb0b9a808e3a8bc7170a09}{operator\%} (const \hyperlink{classretrocombinator_1_1Sequence}{Sequence} \&s1, const \hyperlink{classretrocombinator_1_1Sequence}{Sequence} \&s2)
+double \mbox{\hyperlink{classretrocombinator_1_1Sequence_a951eb38b75bb0b9a808e3a8bc7170a09}{operator\%}} (const \mbox{\hyperlink{classretrocombinator_1_1Sequence}{Sequence}} \&s1, const \mbox{\hyperlink{classretrocombinator_1_1Sequence}{Sequence}} \&s2)
 \begin{DoxyCompactList}\small\item\em Pairwise dissimilarity (\%) between two sequences. \end{DoxyCompactList}\item 
-double \hyperlink{classretrocombinator_1_1Sequence_a56fd21ad6db6a3cb7f7f4b9b5b6c84ea}{operator\%} (const \hyperlink{classretrocombinator_1_1Sequence}{Sequence} \&s1, std\+::string s2)
+double \mbox{\hyperlink{classretrocombinator_1_1Sequence_a56fd21ad6db6a3cb7f7f4b9b5b6c84ea}{operator\%}} (const \mbox{\hyperlink{classretrocombinator_1_1Sequence}{Sequence}} \&s1, std\+::string s2)
 \begin{DoxyCompactList}\small\item\em Pairwise dissimilarity (\%) between a sequence and a string. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{Detailed Description}
+\doxysubsection{Detailed Description}
 To represent a D\+NA sequence and the mutations that it has undergone. 
 
 Keeps track of the actual sequence, mutations and lethal mutations. 
 
-\subsection{Member Typedef Documentation}
-\mbox{\Hypertarget{classretrocombinator_1_1Sequence_a2abbaf2376f035a997e02c4afae9f476}\label{classretrocombinator_1_1Sequence_a2abbaf2376f035a997e02c4afae9f476}} 
-\index{retrocombinator\+::\+Sequence@{retrocombinator\+::\+Sequence}!mutations\+\_\+type@{mutations\+\_\+type}}
-\index{mutations\+\_\+type@{mutations\+\_\+type}!retrocombinator\+::\+Sequence@{retrocombinator\+::\+Sequence}}
-\subsubsection{\texorpdfstring{mutations\+\_\+type}{mutations\_type}}
-{\footnotesize\ttfamily typedef std\+::unordered\+\_\+map$<$\hyperlink{namespaceretrocombinator_afd7c6eb4293e8c4d12827609a9a34b9b}{tag\+\_\+type}, char$>$ \hyperlink{classretrocombinator_1_1Sequence_a2abbaf2376f035a997e02c4afae9f476}{retrocombinator\+::\+Sequence\+::mutations\+\_\+type}\hspace{0.3cm}{\ttfamily [private]}}
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classretrocombinator_1_1Sequence_aabef8f6c5b05d1343705872e8d17368f}\label{classretrocombinator_1_1Sequence_aabef8f6c5b05d1343705872e8d17368f}} 
+\index{retrocombinator::Sequence@{retrocombinator::Sequence}!lethal\_mutations\_type@{lethal\_mutations\_type}}
+\index{lethal\_mutations\_type@{lethal\_mutations\_type}!retrocombinator::Sequence@{retrocombinator::Sequence}}
+\doxysubsubsection{\texorpdfstring{lethal\_mutations\_type}{lethal\_mutations\_type}}
+{\footnotesize\ttfamily typedef std\+::unordered\+\_\+set$<$\mbox{\hyperlink{namespaceretrocombinator_afd7c6eb4293e8c4d12827609a9a34b9b}{tag\+\_\+type}}$>$ \mbox{\hyperlink{classretrocombinator_1_1Sequence_aabef8f6c5b05d1343705872e8d17368f}{retrocombinator\+::\+Sequence\+::lethal\+\_\+mutations\+\_\+type}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Basic typedefs -\/ hashed data structures for quick lookup. 
+
+For keeping track of mutations and lethal mutations. \mbox{\Hypertarget{classretrocombinator_1_1Sequence_a2abbaf2376f035a997e02c4afae9f476}\label{classretrocombinator_1_1Sequence_a2abbaf2376f035a997e02c4afae9f476}} 
+\index{retrocombinator::Sequence@{retrocombinator::Sequence}!mutations\_type@{mutations\_type}}
+\index{mutations\_type@{mutations\_type}!retrocombinator::Sequence@{retrocombinator::Sequence}}
+\doxysubsubsection{\texorpdfstring{mutations\_type}{mutations\_type}}
+{\footnotesize\ttfamily typedef std\+::unordered\+\_\+map$<$\mbox{\hyperlink{namespaceretrocombinator_afd7c6eb4293e8c4d12827609a9a34b9b}{tag\+\_\+type}}, char$>$ \mbox{\hyperlink{classretrocombinator_1_1Sequence_a2abbaf2376f035a997e02c4afae9f476}{retrocombinator\+::\+Sequence\+::mutations\+\_\+type}}\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -143,18 +150,19 @@ Basic typedefs -\/ hashed data structures for quick lookup.
 
 For keeping track of mutations and lethal mutations. 
 
-\subsection{Constructor \& Destructor Documentation}
+\doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classretrocombinator_1_1Sequence_a04d0d6977316f2ab30844e584c4531ec}\label{classretrocombinator_1_1Sequence_a04d0d6977316f2ab30844e584c4531ec}} 
-\index{retrocombinator\+::\+Sequence@{retrocombinator\+::\+Sequence}!Sequence@{Sequence}}
-\index{Sequence@{Sequence}!retrocombinator\+::\+Sequence@{retrocombinator\+::\+Sequence}}
-\subsubsection{\texorpdfstring{Sequence()}{Sequence()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
-{\footnotesize\ttfamily Sequence\+::\+Sequence (\begin{DoxyParamCaption}\item[{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}]{n }\end{DoxyParamCaption})}
+\index{retrocombinator::Sequence@{retrocombinator::Sequence}!Sequence@{Sequence}}
+\index{Sequence@{Sequence}!retrocombinator::Sequence@{retrocombinator::Sequence}}
+\doxysubsubsection{\texorpdfstring{Sequence()}{Sequence()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Sequence\+::\+Sequence (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{n }\end{DoxyParamCaption})}
 
 
 
 Constructs a random sequence of length {\itshape n}. 
 
-This is considered initial, so no mutations are present. Here is the call graph for this function\+:\nopagebreak
+This is considered initial, so no mutations are present. Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -162,16 +170,17 @@ This is considered initial, so no mutations are present. Here is the call graph 
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classretrocombinator_1_1Sequence_af5b3b62eba07f0e09f532fcf1681c289}\label{classretrocombinator_1_1Sequence_af5b3b62eba07f0e09f532fcf1681c289}} 
-\index{retrocombinator\+::\+Sequence@{retrocombinator\+::\+Sequence}!Sequence@{Sequence}}
-\index{Sequence@{Sequence}!retrocombinator\+::\+Sequence@{retrocombinator\+::\+Sequence}}
-\subsubsection{\texorpdfstring{Sequence()}{Sequence()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+\index{retrocombinator::Sequence@{retrocombinator::Sequence}!Sequence@{Sequence}}
+\index{Sequence@{Sequence}!retrocombinator::Sequence@{retrocombinator::Sequence}}
+\doxysubsubsection{\texorpdfstring{Sequence()}{Sequence()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
 {\footnotesize\ttfamily Sequence\+::\+Sequence (\begin{DoxyParamCaption}\item[{std\+::string}]{s }\end{DoxyParamCaption})}
 
 
 
 Constructs a sequence from a given string. 
 
-This is considered initial, so no mutations are present. Here is the call graph for this function\+:\nopagebreak
+This is considered initial, so no mutations are present. Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -179,10 +188,10 @@ This is considered initial, so no mutations are present. Here is the call graph 
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classretrocombinator_1_1Sequence_af334c44bea806196b5037e61b0e831b1}\label{classretrocombinator_1_1Sequence_af334c44bea806196b5037e61b0e831b1}} 
-\index{retrocombinator\+::\+Sequence@{retrocombinator\+::\+Sequence}!Sequence@{Sequence}}
-\index{Sequence@{Sequence}!retrocombinator\+::\+Sequence@{retrocombinator\+::\+Sequence}}
-\subsubsection{\texorpdfstring{Sequence()}{Sequence()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
-{\footnotesize\ttfamily Sequence\+::\+Sequence (\begin{DoxyParamCaption}\item[{const \hyperlink{classretrocombinator_1_1Sequence}{Sequence} \&}]{s1,  }\item[{const \hyperlink{classretrocombinator_1_1Sequence}{Sequence} \&}]{s2,  }\item[{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}]{num\+\_\+template\+\_\+switches }\end{DoxyParamCaption})}
+\index{retrocombinator::Sequence@{retrocombinator::Sequence}!Sequence@{Sequence}}
+\index{Sequence@{Sequence}!retrocombinator::Sequence@{retrocombinator::Sequence}}
+\doxysubsubsection{\texorpdfstring{Sequence()}{Sequence()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Sequence\+::\+Sequence (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classretrocombinator_1_1Sequence}{Sequence}} \&}]{s1,  }\item[{const \mbox{\hyperlink{classretrocombinator_1_1Sequence}{Sequence}} \&}]{s2,  }\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{num\+\_\+template\+\_\+switches }\end{DoxyParamCaption})}
 
 
 
@@ -193,8 +202,9 @@ The number of template switches has to be specified, and the positions at which 
 The mutations recorded are with respect to the original sequences. That is, the new sequence {\itshape s\+\_\+new} will have a mutation {\itshape m} at position {\itshape l} if and only if the sequence {\itshape s\+\_\+old} whose nucleotide is used for {\itshape s\+\_\+new} at position {\itshape l} had mutation {\itshape m} present at that position.
 
 \begin{DoxyRefDesc}{Todo}
-\item[\hyperlink{todo__todo000001}{Todo}]Add an option for specifying the positions of the template switches too, or overload this function. \end{DoxyRefDesc}
-Here is the call graph for this function\+:\nopagebreak
+\item[\mbox{\hyperlink{todo__todo000001}{Todo}}]Add an option for specifying the positions of the template switches too, or overload this function. \end{DoxyRefDesc}
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -203,12 +213,12 @@ Here is the call graph for this function\+:\nopagebreak
 \end{figure}
 
 
-\subsection{Member Function Documentation}
+\doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classretrocombinator_1_1Sequence_abd985b5164277d63c40f9580882335c8}\label{classretrocombinator_1_1Sequence_abd985b5164277d63c40f9580882335c8}} 
-\index{retrocombinator\+::\+Sequence@{retrocombinator\+::\+Sequence}!get\+\_\+parent\+\_\+tags@{get\+\_\+parent\+\_\+tags}}
-\index{get\+\_\+parent\+\_\+tags@{get\+\_\+parent\+\_\+tags}!retrocombinator\+::\+Sequence@{retrocombinator\+::\+Sequence}}
-\subsubsection{\texorpdfstring{get\+\_\+parent\+\_\+tags()}{get\_parent\_tags()}}
-{\footnotesize\ttfamily std\+::pair$<$\hyperlink{namespaceretrocombinator_afd7c6eb4293e8c4d12827609a9a34b9b}{tag\+\_\+type}, \hyperlink{namespaceretrocombinator_afd7c6eb4293e8c4d12827609a9a34b9b}{tag\+\_\+type}$>$ retrocombinator\+::\+Sequence\+::get\+\_\+parent\+\_\+tags (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+\index{retrocombinator::Sequence@{retrocombinator::Sequence}!get\_parent\_tags@{get\_parent\_tags}}
+\index{get\_parent\_tags@{get\_parent\_tags}!retrocombinator::Sequence@{retrocombinator::Sequence}}
+\doxysubsubsection{\texorpdfstring{get\_parent\_tags()}{get\_parent\_tags()}}
+{\footnotesize\ttfamily std\+::pair$<$\mbox{\hyperlink{namespaceretrocombinator_afd7c6eb4293e8c4d12827609a9a34b9b}{tag\+\_\+type}}, \mbox{\hyperlink{namespaceretrocombinator_afd7c6eb4293e8c4d12827609a9a34b9b}{tag\+\_\+type}}$>$ retrocombinator\+::\+Sequence\+::get\+\_\+parent\+\_\+tags (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -223,9 +233,9 @@ See the definition of parent\+\_\+tags for more details. Here is the caller grap
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classretrocombinator_1_1Sequence_a445120376c2e5c626d3ecfa509406843}\label{classretrocombinator_1_1Sequence_a445120376c2e5c626d3ecfa509406843}} 
-\index{retrocombinator\+::\+Sequence@{retrocombinator\+::\+Sequence}!is\+\_\+active@{is\+\_\+active}}
-\index{is\+\_\+active@{is\+\_\+active}!retrocombinator\+::\+Sequence@{retrocombinator\+::\+Sequence}}
-\subsubsection{\texorpdfstring{is\+\_\+active()}{is\_active()}}
+\index{retrocombinator::Sequence@{retrocombinator::Sequence}!is\_active@{is\_active}}
+\index{is\_active@{is\_active}!retrocombinator::Sequence@{retrocombinator::Sequence}}
+\doxysubsubsection{\texorpdfstring{is\_active()}{is\_active()}}
 {\footnotesize\ttfamily bool retrocombinator\+::\+Sequence\+::is\+\_\+active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
@@ -241,16 +251,17 @@ Returns true if and only if there are no lethal mutations. Here is the caller gr
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classretrocombinator_1_1Sequence_a85299c3dbf2efb993a43acc2e42fcb00}\label{classretrocombinator_1_1Sequence_a85299c3dbf2efb993a43acc2e42fcb00}} 
-\index{retrocombinator\+::\+Sequence@{retrocombinator\+::\+Sequence}!point\+\_\+mutate@{point\+\_\+mutate}}
-\index{point\+\_\+mutate@{point\+\_\+mutate}!retrocombinator\+::\+Sequence@{retrocombinator\+::\+Sequence}}
-\subsubsection{\texorpdfstring{point\+\_\+mutate()}{point\_mutate()}}
-{\footnotesize\ttfamily void Sequence\+::point\+\_\+mutate (\begin{DoxyParamCaption}\item[{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}]{n,  }\item[{char}]{new\+\_\+nucleotide,  }\item[{bool}]{is\+\_\+lethal = {\ttfamily false} }\end{DoxyParamCaption})}
+\index{retrocombinator::Sequence@{retrocombinator::Sequence}!point\_mutate@{point\_mutate}}
+\index{point\_mutate@{point\_mutate}!retrocombinator::Sequence@{retrocombinator::Sequence}}
+\doxysubsubsection{\texorpdfstring{point\_mutate()}{point\_mutate()}}
+{\footnotesize\ttfamily void Sequence\+::point\+\_\+mutate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{n,  }\item[{char}]{new\+\_\+nucleotide,  }\item[{bool}]{is\+\_\+lethal = {\ttfamily false} }\end{DoxyParamCaption})}
 
 
 
 Changes the nucleotide at position {\itshape n} to {\itshape new\+\_\+nucleotide}. 
 
-If the new\+\_\+nucleotide is the same as the original nucleotide in the string, the mutation disappears, else a mutation is created. It can also be specified whether or not the mutation is lethal. Here is the call graph for this function\+:\nopagebreak
+If the new\+\_\+nucleotide is the same as the original nucleotide in the string, the mutation disappears, else a mutation is created. It can also be specified whether or not the mutation is lethal. Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -266,10 +277,10 @@ Here is the caller graph for this function\+:
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classretrocombinator_1_1Sequence_ad4791ec3cefbea417081cd349ac6c23b}\label{classretrocombinator_1_1Sequence_ad4791ec3cefbea417081cd349ac6c23b}} 
-\index{retrocombinator\+::\+Sequence@{retrocombinator\+::\+Sequence}!renumber\+\_\+sequences@{renumber\+\_\+sequences}}
-\index{renumber\+\_\+sequences@{renumber\+\_\+sequences}!retrocombinator\+::\+Sequence@{retrocombinator\+::\+Sequence}}
-\subsubsection{\texorpdfstring{renumber\+\_\+sequences()}{renumber\_sequences()}}
-{\footnotesize\ttfamily void Sequence\+::renumber\+\_\+sequences (\begin{DoxyParamCaption}\item[{\hyperlink{namespaceretrocombinator_afd7c6eb4293e8c4d12827609a9a34b9b}{tag\+\_\+type}}]{new\+\_\+start\+\_\+tag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+\index{retrocombinator::Sequence@{retrocombinator::Sequence}!renumber\_sequences@{renumber\_sequences}}
+\index{renumber\_sequences@{renumber\_sequences}!retrocombinator::Sequence@{retrocombinator::Sequence}}
+\doxysubsubsection{\texorpdfstring{renumber\_sequences()}{renumber\_sequences()}}
+{\footnotesize\ttfamily void Sequence\+::renumber\+\_\+sequences (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceretrocombinator_afd7c6eb4293e8c4d12827609a9a34b9b}{tag\+\_\+type}}}]{new\+\_\+start\+\_\+tag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -285,42 +296,42 @@ new\+\_\+start\+\_\+tag will be given to the next sequence created. Used when ru
 \end{figure}
 
 
-\subsection{Friends And Related Function Documentation}
+\doxysubsection{Friends And Related Function Documentation}
 \mbox{\Hypertarget{classretrocombinator_1_1Sequence_a951eb38b75bb0b9a808e3a8bc7170a09}\label{classretrocombinator_1_1Sequence_a951eb38b75bb0b9a808e3a8bc7170a09}} 
-\index{retrocombinator\+::\+Sequence@{retrocombinator\+::\+Sequence}!operator\%@{operator\%}}
-\index{operator\%@{operator\%}!retrocombinator\+::\+Sequence@{retrocombinator\+::\+Sequence}}
-\subsubsection{\texorpdfstring{operator\%}{operator\%}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily double operator\% (\begin{DoxyParamCaption}\item[{const \hyperlink{classretrocombinator_1_1Sequence}{Sequence} \&}]{s1,  }\item[{const \hyperlink{classretrocombinator_1_1Sequence}{Sequence} \&}]{s2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+\index{retrocombinator::Sequence@{retrocombinator::Sequence}!operator\%@{operator\%}}
+\index{operator\%@{operator\%}!retrocombinator::Sequence@{retrocombinator::Sequence}}
+\doxysubsubsection{\texorpdfstring{operator\%}{operator\%}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double operator\% (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classretrocombinator_1_1Sequence}{Sequence}} \&}]{s1,  }\item[{const \mbox{\hyperlink{classretrocombinator_1_1Sequence}{Sequence}} \&}]{s2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
 
 
 
 Pairwise dissimilarity (\%) between two sequences. 
 
 Similarity is 100-\/dissimilarity. \mbox{\Hypertarget{classretrocombinator_1_1Sequence_a56fd21ad6db6a3cb7f7f4b9b5b6c84ea}\label{classretrocombinator_1_1Sequence_a56fd21ad6db6a3cb7f7f4b9b5b6c84ea}} 
-\index{retrocombinator\+::\+Sequence@{retrocombinator\+::\+Sequence}!operator\%@{operator\%}}
-\index{operator\%@{operator\%}!retrocombinator\+::\+Sequence@{retrocombinator\+::\+Sequence}}
-\subsubsection{\texorpdfstring{operator\%}{operator\%}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily double operator\% (\begin{DoxyParamCaption}\item[{const \hyperlink{classretrocombinator_1_1Sequence}{Sequence} \&}]{s1,  }\item[{std\+::string}]{s2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+\index{retrocombinator::Sequence@{retrocombinator::Sequence}!operator\%@{operator\%}}
+\index{operator\%@{operator\%}!retrocombinator::Sequence@{retrocombinator::Sequence}}
+\doxysubsubsection{\texorpdfstring{operator\%}{operator\%}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily double operator\% (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classretrocombinator_1_1Sequence}{Sequence}} \&}]{s1,  }\item[{std\+::string}]{s2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
 
 
 
 Pairwise dissimilarity (\%) between a sequence and a string. 
 
 Similarity is 100-\/dissimilarity. \mbox{\Hypertarget{classretrocombinator_1_1Sequence_a8cd9dc2cfea97399387e2876ee028c32}\label{classretrocombinator_1_1Sequence_a8cd9dc2cfea97399387e2876ee028c32}} 
-\index{retrocombinator\+::\+Sequence@{retrocombinator\+::\+Sequence}!operator$\ast$@{operator$\ast$}}
-\index{operator$\ast$@{operator$\ast$}!retrocombinator\+::\+Sequence@{retrocombinator\+::\+Sequence}}
-\subsubsection{\texorpdfstring{operator$\ast$}{operator*}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily \hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} operator$\ast$ (\begin{DoxyParamCaption}\item[{const \hyperlink{classretrocombinator_1_1Sequence}{Sequence} \&}]{s1,  }\item[{const \hyperlink{classretrocombinator_1_1Sequence}{Sequence} \&}]{s2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+\index{retrocombinator::Sequence@{retrocombinator::Sequence}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!retrocombinator::Sequence@{retrocombinator::Sequence}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$}{operator*}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classretrocombinator_1_1Sequence}{Sequence}} \&}]{s1,  }\item[{const \mbox{\hyperlink{classretrocombinator_1_1Sequence}{Sequence}} \&}]{s2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
 
 
 
 Pairwise distances between two sequences. 
 
 This is the standard edit distance score, and is the number of mismatches (because insertions and deletions are not possible in this system). \mbox{\Hypertarget{classretrocombinator_1_1Sequence_afdd1af7009804b182798c40d25bb1bb5}\label{classretrocombinator_1_1Sequence_afdd1af7009804b182798c40d25bb1bb5}} 
-\index{retrocombinator\+::\+Sequence@{retrocombinator\+::\+Sequence}!operator$\ast$@{operator$\ast$}}
-\index{operator$\ast$@{operator$\ast$}!retrocombinator\+::\+Sequence@{retrocombinator\+::\+Sequence}}
-\subsubsection{\texorpdfstring{operator$\ast$}{operator*}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily \hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type} operator$\ast$ (\begin{DoxyParamCaption}\item[{const \hyperlink{classretrocombinator_1_1Sequence}{Sequence} \&}]{s1,  }\item[{std\+::string}]{s2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+\index{retrocombinator::Sequence@{retrocombinator::Sequence}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!retrocombinator::Sequence@{retrocombinator::Sequence}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$}{operator*}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classretrocombinator_1_1Sequence}{Sequence}} \&}]{s1,  }\item[{std\+::string}]{s2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
 
 
 
@@ -328,11 +339,11 @@ Pairwise distances between a sequence and a string.
 
 This is the standard edit distance score, and is the number of mismatches (because insertions and deletions are not possible in this system). 
 
-\subsection{Member Data Documentation}
+\doxysubsection{Member Data Documentation}
 \mbox{\Hypertarget{classretrocombinator_1_1Sequence_a7c6072eaff9990a0bcaebcfa6287e3e0}\label{classretrocombinator_1_1Sequence_a7c6072eaff9990a0bcaebcfa6287e3e0}} 
-\index{retrocombinator\+::\+Sequence@{retrocombinator\+::\+Sequence}!bases@{bases}}
-\index{bases@{bases}!retrocombinator\+::\+Sequence@{retrocombinator\+::\+Sequence}}
-\subsubsection{\texorpdfstring{bases}{bases}}
+\index{retrocombinator::Sequence@{retrocombinator::Sequence}!bases@{bases}}
+\index{bases@{bases}!retrocombinator::Sequence@{retrocombinator::Sequence}}
+\doxysubsubsection{\texorpdfstring{bases}{bases}}
 {\footnotesize\ttfamily std\+::vector$<$bool$>$ retrocombinator\+::\+Sequence\+::bases\hspace{0.3cm}{\ttfamily [private]}}
 
 
@@ -340,50 +351,50 @@ This is the standard edit distance score, and is the number of mismatches (becau
 Actual sequence of nucleotides. 
 
 Stored as a string internally. \mbox{\Hypertarget{classretrocombinator_1_1Sequence_a486f1b680452f7162ee9a895c2871f92}\label{classretrocombinator_1_1Sequence_a486f1b680452f7162ee9a895c2871f92}} 
-\index{retrocombinator\+::\+Sequence@{retrocombinator\+::\+Sequence}!global\+\_\+sequence\+\_\+count@{global\+\_\+sequence\+\_\+count}}
-\index{global\+\_\+sequence\+\_\+count@{global\+\_\+sequence\+\_\+count}!retrocombinator\+::\+Sequence@{retrocombinator\+::\+Sequence}}
-\subsubsection{\texorpdfstring{global\+\_\+sequence\+\_\+count}{global\_sequence\_count}}
-{\footnotesize\ttfamily \hyperlink{namespaceretrocombinator_afd7c6eb4293e8c4d12827609a9a34b9b}{tag\+\_\+type} retrocombinator\+::\+Sequence\+::global\+\_\+sequence\+\_\+count = -\/1\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+\index{retrocombinator::Sequence@{retrocombinator::Sequence}!global\_sequence\_count@{global\_sequence\_count}}
+\index{global\_sequence\_count@{global\_sequence\_count}!retrocombinator::Sequence@{retrocombinator::Sequence}}
+\doxysubsubsection{\texorpdfstring{global\_sequence\_count}{global\_sequence\_count}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceretrocombinator_afd7c6eb4293e8c4d12827609a9a34b9b}{tag\+\_\+type}} retrocombinator\+::\+Sequence\+::global\+\_\+sequence\+\_\+count = -\/1\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
 
 
 An internal counter that is incremented every time a sequence is created. 
 
 Used to assign each sequence a unique tag. \mbox{\Hypertarget{classretrocombinator_1_1Sequence_af5798b014aaeb7573197602dafb98818}\label{classretrocombinator_1_1Sequence_af5798b014aaeb7573197602dafb98818}} 
-\index{retrocombinator\+::\+Sequence@{retrocombinator\+::\+Sequence}!lethal\+\_\+mutations@{lethal\+\_\+mutations}}
-\index{lethal\+\_\+mutations@{lethal\+\_\+mutations}!retrocombinator\+::\+Sequence@{retrocombinator\+::\+Sequence}}
-\subsubsection{\texorpdfstring{lethal\+\_\+mutations}{lethal\_mutations}}
-{\footnotesize\ttfamily lethal\+\_\+mutations\+\_\+type retrocombinator\+::\+Sequence\+::lethal\+\_\+mutations\hspace{0.3cm}{\ttfamily [private]}}
+\index{retrocombinator::Sequence@{retrocombinator::Sequence}!lethal\_mutations@{lethal\_mutations}}
+\index{lethal\_mutations@{lethal\_mutations}!retrocombinator::Sequence@{retrocombinator::Sequence}}
+\doxysubsubsection{\texorpdfstring{lethal\_mutations}{lethal\_mutations}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classretrocombinator_1_1Sequence_aabef8f6c5b05d1343705872e8d17368f}{lethal\+\_\+mutations\+\_\+type}} retrocombinator\+::\+Sequence\+::lethal\+\_\+mutations\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
 Positions of mutations that are lethal. 
 
 Internally stored as a set. This set is always a subset of {\ttfamily mutations.\+keys}. \mbox{\Hypertarget{classretrocombinator_1_1Sequence_a07dd3101f7838d76300313ecfb97f3fc}\label{classretrocombinator_1_1Sequence_a07dd3101f7838d76300313ecfb97f3fc}} 
-\index{retrocombinator\+::\+Sequence@{retrocombinator\+::\+Sequence}!mutations@{mutations}}
-\index{mutations@{mutations}!retrocombinator\+::\+Sequence@{retrocombinator\+::\+Sequence}}
-\subsubsection{\texorpdfstring{mutations}{mutations}}
-{\footnotesize\ttfamily \hyperlink{classretrocombinator_1_1Sequence_a2abbaf2376f035a997e02c4afae9f476}{mutations\+\_\+type} retrocombinator\+::\+Sequence\+::mutations\hspace{0.3cm}{\ttfamily [private]}}
+\index{retrocombinator::Sequence@{retrocombinator::Sequence}!mutations@{mutations}}
+\index{mutations@{mutations}!retrocombinator::Sequence@{retrocombinator::Sequence}}
+\doxysubsubsection{\texorpdfstring{mutations}{mutations}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classretrocombinator_1_1Sequence_a2abbaf2376f035a997e02c4afae9f476}{mutations\+\_\+type}} retrocombinator\+::\+Sequence\+::mutations\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
 Positions of mutations and what the {\itshape original} nucleotide was. 
 
 Stored as an unordered map locally. \mbox{\Hypertarget{classretrocombinator_1_1Sequence_a023fef0801bd63048bf5c7b2442694cc}\label{classretrocombinator_1_1Sequence_a023fef0801bd63048bf5c7b2442694cc}} 
-\index{retrocombinator\+::\+Sequence@{retrocombinator\+::\+Sequence}!parent\+\_\+tags@{parent\+\_\+tags}}
-\index{parent\+\_\+tags@{parent\+\_\+tags}!retrocombinator\+::\+Sequence@{retrocombinator\+::\+Sequence}}
-\subsubsection{\texorpdfstring{parent\+\_\+tags}{parent\_tags}}
-{\footnotesize\ttfamily std\+::pair$<$\hyperlink{namespaceretrocombinator_afd7c6eb4293e8c4d12827609a9a34b9b}{tag\+\_\+type}, \hyperlink{namespaceretrocombinator_afd7c6eb4293e8c4d12827609a9a34b9b}{tag\+\_\+type}$>$ retrocombinator\+::\+Sequence\+::parent\+\_\+tags\hspace{0.3cm}{\ttfamily [private]}}
+\index{retrocombinator::Sequence@{retrocombinator::Sequence}!parent\_tags@{parent\_tags}}
+\index{parent\_tags@{parent\_tags}!retrocombinator::Sequence@{retrocombinator::Sequence}}
+\doxysubsubsection{\texorpdfstring{parent\_tags}{parent\_tags}}
+{\footnotesize\ttfamily std\+::pair$<$\mbox{\hyperlink{namespaceretrocombinator_afd7c6eb4293e8c4d12827609a9a34b9b}{tag\+\_\+type}}, \mbox{\hyperlink{namespaceretrocombinator_afd7c6eb4293e8c4d12827609a9a34b9b}{tag\+\_\+type}}$>$ retrocombinator\+::\+Sequence\+::parent\+\_\+tags\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
 The parent tags that this sequence was created from. 
 
 If this was created as Sequence(\+S1, S2), the tags are ordered as $<$S1.\+get\+\_\+tag(), S2.\+get\+\_\+tag()$>$. If this was created randomly, the tags are $<$R\+A\+ND, R\+A\+ND$>$. If this was created from a string, the tags are $<$I\+N\+IT, I\+N\+IT$>$. \mbox{\Hypertarget{classretrocombinator_1_1Sequence_ae599e85a84a78e23d33f6c3085248726}\label{classretrocombinator_1_1Sequence_ae599e85a84a78e23d33f6c3085248726}} 
-\index{retrocombinator\+::\+Sequence@{retrocombinator\+::\+Sequence}!tag@{tag}}
-\index{tag@{tag}!retrocombinator\+::\+Sequence@{retrocombinator\+::\+Sequence}}
-\subsubsection{\texorpdfstring{tag}{tag}}
-{\footnotesize\ttfamily \hyperlink{namespaceretrocombinator_afd7c6eb4293e8c4d12827609a9a34b9b}{tag\+\_\+type} retrocombinator\+::\+Sequence\+::tag\hspace{0.3cm}{\ttfamily [private]}}
+\index{retrocombinator::Sequence@{retrocombinator::Sequence}!tag@{tag}}
+\index{tag@{tag}!retrocombinator::Sequence@{retrocombinator::Sequence}}
+\doxysubsubsection{\texorpdfstring{tag}{tag}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceretrocombinator_afd7c6eb4293e8c4d12827609a9a34b9b}{tag\+\_\+type}} retrocombinator\+::\+Sequence\+::tag\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -393,5 +404,5 @@ This tag transcends activity (if an inactive sequence becomes active again, it h
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-src/\hyperlink{sequence_8h}{sequence.\+h}\item 
+src/\mbox{\hyperlink{sequence_8h}{sequence.\+h}}\item 
 src/sequence.\+cpp\end{DoxyCompactItemize}

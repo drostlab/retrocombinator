@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['tag_5ftype_361',['tag_type',['../namespaceretrocombinator.html#afd7c6eb4293e8c4d12827609a9a34b9b',1,'retrocombinator']]],
-  ['tree_5ftype_362',['tree_type',['../classretrocombinator_1_1EvolutionWithoutFlags.html#ac6bd9b8af2b258bf76aae5b62ef78327',1,'retrocombinator::EvolutionWithoutFlags']]]
+  ['seqs_5ftype_379',['seqs_type',['../classretrocombinator_1_1Evolution.html#a3a0a2c09c39e368fe321fbf2e6b8af8d',1,'retrocombinator::Evolution::seqs_type()'],['../classretrocombinator_1_1Family.html#a994b8646d1c0c4e19420d2e5c6c53c85',1,'retrocombinator::Family::seqs_type()'],['../classretrocombinator_1_1Output.html#a2df584f5a2dbb2bf4a6789118902d83c',1,'retrocombinator::Output::seqs_type()']]],
+  ['size_5ftype_380',['size_type',['../namespaceretrocombinator.html#a8e1541b50cee66a791df4c437ccbb385',1,'retrocombinator']]]
 ];

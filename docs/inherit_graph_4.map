@@ -1,9 +1,9 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classretrocombinator_1_1PointMutationModel.html" title="To represent a model of DNA evolution through point mutations. " alt="" coords="5,23,205,65"/>
-<area shape="rect" id="node2" href="$classretrocombinator_1_1GTRModel.html" title="General Time Reversible Model, Tavare 1986. " alt="" coords="253,31,436,57"/>
-<area shape="rect" id="node3" href="$classretrocombinator_1_1T93Model.html" title="Tamura ane Nei 1983 Model. " alt="" coords="484,31,661,57"/>
-<area shape="rect" id="node4" href="$classretrocombinator_1_1HKY85Model.html" title="Hasegawa, Kishino and Yano 1985 Model. " alt="" coords="709,31,907,57"/>
-<area shape="rect" id="node5" href="$classretrocombinator_1_1F81Model.html" title="Felsenstein 1981 Model. " alt="" coords="955,5,1133,32"/>
-<area shape="rect" id="node6" href="$classretrocombinator_1_1K80Model.html" title="Kimura 2 Parameter Model, 1980. " alt="" coords="955,56,1133,83"/>
-<area shape="rect" id="node7" href="$classretrocombinator_1_1JC69Model.html" title="Jules and Cantor, 1969. " alt="" coords="1181,56,1368,83"/>
+<area shape="rect" id="node1" href="$classretrocombinator_1_1PointMutationModel.html" title="To represent a model of DNA evolution through point mutations." alt="" coords="5,23,232,65"/>
+<area shape="rect" id="node2" href="$classretrocombinator_1_1GTRModel.html" title="General Time Reversible Model, Tavare 1986." alt="" coords="280,31,483,57"/>
+<area shape="rect" id="node3" href="$classretrocombinator_1_1TN93Model.html" title="Tamura ane Nei 1983 Model." alt="" coords="531,31,740,57"/>
+<area shape="rect" id="node4" href="$classretrocombinator_1_1HKY85Model.html" title="Hasegawa, Kishino and Yano 1985 Model." alt="" coords="788,31,1005,57"/>
+<area shape="rect" id="node5" href="$classretrocombinator_1_1F81Model.html" title="Felsenstein 1981 Model." alt="" coords="1054,5,1253,32"/>
+<area shape="rect" id="node6" href="$classretrocombinator_1_1K80Model.html" title="Kimura 2 Parameter Model, 1980." alt="" coords="1053,56,1253,83"/>
+<area shape="rect" id="node7" href="$classretrocombinator_1_1JC69Model.html" title="Jules and Cantor, 1969." alt="" coords="1301,56,1505,83"/>
 </map>

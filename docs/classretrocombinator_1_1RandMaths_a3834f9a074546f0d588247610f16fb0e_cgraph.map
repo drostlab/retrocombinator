@@ -1,3 +1,4 @@
 <map id="retrocombinator::RandMaths::choose_event" name="retrocombinator::RandMaths::choose_event">
-<area shape="rect" id="node2" href="$classretrocombinator_1_1RandMaths.html#aa6441baa59bff50f588c0c54e3c54140" title="Generates a random real number within a range. " alt="" coords="240,5,427,47"/>
+<area shape="rect" id="node1" title="Chooses an event from a list of possible events." alt="" coords="5,5,213,47"/>
+<area shape="rect" id="node2" href="$classretrocombinator_1_1RandMaths.html#aa6441baa59bff50f588c0c54e3c54140" title="Generates a random real number within a range." alt="" coords="261,5,469,47"/>
 </map>

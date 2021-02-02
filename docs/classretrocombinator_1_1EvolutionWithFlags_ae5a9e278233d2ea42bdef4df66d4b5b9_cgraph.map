@@ -1,4 +1,5 @@
 <map id="retrocombinator::EvolutionWithFlags::kill_sequences" name="retrocombinator::EvolutionWithFlags::kill_sequences">
-<area shape="rect" id="node2" href="$classretrocombinator_1_1EvolutionWithFlags.html#adbf96b693339f0b902ba1a2bb83a01d4" title="Removes empty families. " alt="" coords="234,5,409,61"/>
-<area shape="rect" id="node3" href="$classretrocombinator_1_1RandMaths.html#a8072bad64e64ef042e5257e1bee85635" title="Generates a random integer within a range. " alt="" coords="228,86,415,127"/>
+<area shape="rect" id="node1" title="Kill excess sequences." alt="" coords="5,43,201,84"/>
+<area shape="rect" id="node2" href="$classretrocombinator_1_1RandMaths.html#a8072bad64e64ef042e5257e1bee85635" title="Generates a random integer within a range." alt="" coords="249,5,457,47"/>
+<area shape="rect" id="node3" href="$classretrocombinator_1_1EvolutionWithFlags.html#adbf96b693339f0b902ba1a2bb83a01d4" title="Removes empty families." alt="" coords="255,71,451,127"/>
 </map>

@@ -12,11 +12,23 @@ A simulation where some sequences can become inactive over time.
 
 
 Inheritance diagram for retrocombinator\+::Evolution\+With\+Flags\+:
-% FIG 0
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{classretrocombinator_1_1EvolutionWithFlags__inherit__graph}
+\end{center}
+\end{figure}
 
 
 Collaboration diagram for retrocombinator\+::Evolution\+With\+Flags\+:
-% FIG 1
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{classretrocombinator_1_1EvolutionWithFlags__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -49,8 +61,107 @@ const \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb38
 \begin{DoxyCompactList}\small\item\em The total number of sequences (active + inactive) we allow in our simulation. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classretrocombinator_1_1EvolutionWithFlags_ad05bfc6282a746b9b67a1591f0a0073b}\label{classretrocombinator_1_1EvolutionWithFlags_ad05bfc6282a746b9b67a1591f0a0073b}} 
 double \mbox{\hyperlink{classretrocombinator_1_1EvolutionWithFlags_ad05bfc6282a746b9b67a1591f0a0073b}{selection\+\_\+threshold}}
-\begin{DoxyCompactList}\small\item\em What percentage sequence similarity to the original we wish to maintain. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em What percentage sequence similarity to the original we wish to maintain. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
 double \mbox{\hyperlink{classretrocombinator_1_1EvolutionWithFlags_a6bd3b124459c847b387b5d083abf0a98}{fam\+\_\+proportion}}
 \begin{DoxyCompactList}\small\item\em Parameters for deciding when to split a family into two. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classretrocombinator_1_1EvolutionWithFlags_ab731b0628b1a9bebb61cd3f86e9321ea}{fam\+\_\+percentage}}
+\begin{DoxyCompactList}\small\item\em Parameters for deciding when to split a family into two. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A simulation where some sequences can become inactive over time. 
+
+A sequence becomes inactive if some sensitive positions are mutated. The sequence is then \textquotesingle{}flagged\textquotesingle{}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classretrocombinator_1_1EvolutionWithFlags_a4e7809583d5dcf9cf9c1155587d7e99e}\label{classretrocombinator_1_1EvolutionWithFlags_a4e7809583d5dcf9cf9c1155587d7e99e}} 
+\index{retrocombinator::EvolutionWithFlags@{retrocombinator::EvolutionWithFlags}!EvolutionWithFlags@{EvolutionWithFlags}}
+\index{EvolutionWithFlags@{EvolutionWithFlags}!retrocombinator::EvolutionWithFlags@{retrocombinator::EvolutionWithFlags}}
+\doxysubsubsection{\texorpdfstring{EvolutionWithFlags()}{EvolutionWithFlags()}}
+{\footnotesize\ttfamily Evolution\+With\+Flags\+::\+Evolution\+With\+Flags (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{num\+\_\+jumps,  }\item[{double}]{timestep,  }\item[{double}]{burst\+\_\+probability,  }\item[{double}]{burst\+\_\+mean,  }\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{max\+\_\+active\+\_\+copies,  }\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{max\+\_\+total\+\_\+copies }\end{DoxyParamCaption})}
+
+
+
+Inherited constructor. 
+
+{\ttfamily max\+\_\+total\+\_\+copies} is the total number of active and inactive sequences that we allow in our simulation. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classretrocombinator_1_1EvolutionWithFlags_ae5a9e278233d2ea42bdef4df66d4b5b9}\label{classretrocombinator_1_1EvolutionWithFlags_ae5a9e278233d2ea42bdef4df66d4b5b9}} 
+\index{retrocombinator::EvolutionWithFlags@{retrocombinator::EvolutionWithFlags}!kill\_sequences@{kill\_sequences}}
+\index{kill\_sequences@{kill\_sequences}!retrocombinator::EvolutionWithFlags@{retrocombinator::EvolutionWithFlags}}
+\doxysubsubsection{\texorpdfstring{kill\_sequences()}{kill\_sequences()}}
+{\footnotesize\ttfamily void Evolution\+With\+Flags\+::kill\+\_\+sequences (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{num\+\_\+active\+\_\+copies,  }\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{num\+\_\+total\+\_\+copies }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Kill excess sequences. 
+
+Provide the number of active sequences and total sequences currently, remove sequences until we have met both selection threshold needs and max\+\_\+copies needs. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classretrocombinator_1_1EvolutionWithFlags_ae5a9e278233d2ea42bdef4df66d4b5b9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classretrocombinator_1_1EvolutionWithFlags_ae5a9e278233d2ea42bdef4df66d4b5b9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classretrocombinator_1_1EvolutionWithFlags_ad94cabcb6a894d503c3d84c6022a1438}\label{classretrocombinator_1_1EvolutionWithFlags_ad94cabcb6a894d503c3d84c6022a1438}} 
+\index{retrocombinator::EvolutionWithFlags@{retrocombinator::EvolutionWithFlags}!use\_families\_at@{use\_families\_at}}
+\index{use\_families\_at@{use\_families\_at}!retrocombinator::EvolutionWithFlags@{retrocombinator::EvolutionWithFlags}}
+\doxysubsubsection{\texorpdfstring{use\_families\_at()}{use\_families\_at()}}
+{\footnotesize\ttfamily void Evolution\+With\+Flags\+::use\+\_\+families\+\_\+at (\begin{DoxyParamCaption}\item[{double}]{proportion,  }\item[{double}]{percentage }\end{DoxyParamCaption})}
+
+
+
+To prevent distant sequences from recombining. 
+
+If {\ttfamily proportion} of the sequence similarity matrix goes below {\ttfamily percentage} then split the family into two. Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classretrocombinator_1_1EvolutionWithFlags_ad94cabcb6a894d503c3d84c6022a1438_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
 \mbox{\Hypertarget{classretrocombinator_1_1EvolutionWithFlags_ab731b0628b1a9bebb61cd3f86e9321ea}\label{classretrocombinator_1_1EvolutionWithFlags_ab731b0628b1a9bebb61cd3f86e9321ea}} 
-double {\bfseries fam\+\_\+percentage}
+\index{retrocombinator::EvolutionWithFlags@{retrocombinator::EvolutionWithFlags}!fam\_percentage@{fam\_percentage}}
+\index{fam\_percentage@{fam\_percentage}!retrocombinator::EvolutionWithFlags@{retrocombinator::EvolutionWithFlags}}
+\doxysubsubsection{\texorpdfstring{fam\_percentage}{fam\_percentage}}
+{\footnotesize\ttfamily double retrocombinator\+::\+Evolution\+With\+Flags\+::fam\+\_\+percentage\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Parameters for deciding when to split a family into two. 
+
+If {\ttfamily fam\+\_\+proportion} of the sequence similarity matrix goes below {\ttfamily fam\+\_\+percentage} then split the family into two. \mbox{\Hypertarget{classretrocombinator_1_1EvolutionWithFlags_a6bd3b124459c847b387b5d083abf0a98}\label{classretrocombinator_1_1EvolutionWithFlags_a6bd3b124459c847b387b5d083abf0a98}} 
+\index{retrocombinator::EvolutionWithFlags@{retrocombinator::EvolutionWithFlags}!fam\_proportion@{fam\_proportion}}
+\index{fam\_proportion@{fam\_proportion}!retrocombinator::EvolutionWithFlags@{retrocombinator::EvolutionWithFlags}}
+\doxysubsubsection{\texorpdfstring{fam\_proportion}{fam\_proportion}}
+{\footnotesize\ttfamily double retrocombinator\+::\+Evolution\+With\+Flags\+::fam\+\_\+proportion\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Parameters for deciding when to split a family into two. 
+
+If {\ttfamily fam\+\_\+proportion} of the sequence similarity matrix goes below {\ttfamily fam\+\_\+percentage} then split the family into two. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/evolution\+\_\+with\+\_\+flags.\+h\item 
+src/evolution\+\_\+with\+\_\+flags.\+cpp\end{DoxyCompactItemize}
