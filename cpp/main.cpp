@@ -43,8 +43,8 @@ int main() {
         num_sensitive_positions = 10;
         inactive_probability = 0.01;
 
-        num_jumps = 500;
-        timestep = 50;
+        num_jumps = 10;
+        timestep = 5;
 
         burst_probability = 0.3;
         burst_mean = 1;

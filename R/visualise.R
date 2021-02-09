@@ -58,5 +58,26 @@ plot_family_distances <- function(data) {
 #' @param data Simulation data obtained using `input_data`
 #' @export
 plot_phylogeny <- function(data) {
+  to_plot <- data$init %>%
+    dplyr::select(-raw)
+  starting <- to_plot %>%
+    dplyr::select(step == 0) %>%
+    pull(seq_tag)
+}
 
+#' Plot families over time
+#' @param data Simulation data obtained using `input_data`
+#' @export
+plot_phylogeny <- function(data) {
+  to_plot <- data$init %>%
+    dplyr::select(-raw) %>%
+    dplyr::mutate(fam_tag = as.factor(fam_tag)) %>%
+    dplyr::mutate(fam_par = as.factor(fam_par))
+  #families <- to_plot %>% dplyr::pull(fam_tag) %>% unique()
+
+  ggplot2::ggplot(to_plot, ggplot2::aes(x=real_time, y=fam_tag, color = fam_par)) +
+    ggplot2::geom_line() +
+    ggplot2::labs(x = "Time (millions of years)",
+                  y = "Family ") +
+    ggplot2::scale_color_discrete(name = "Original family")
 }
