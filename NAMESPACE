@@ -3,6 +3,7 @@
 export(input_data)
 export(plot_family_distances)
 export(plot_initial_distances)
+export(plot_phylogeny)
 export(simulate_with_flags_random)
 export(simulate_with_flags_specified)
 export(simulate_without_flags_random)

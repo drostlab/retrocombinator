@@ -1,0 +1,48 @@
+---
+title: "Running Simulations for Evolution of Transposons"
+author: "Anindya Sharma"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Running Simulations}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r, echo = FALSE}
+library(retrocombinator)
+```
+
+A 5k sequence with 10 copies to begin with, 500M years, with recombination and flags
+
+```{r, echo = FALSE}
+data <- input_data('./../main_simulation_with_flags_10_5000_K80_10.000000_0.010000_500_1_0.100000_1.000000_100_1000_1.000000_10.000000_0.700000_70.000000_10_10_0_10_0_1_0.out')
+```
+
+```{r, echo=FALSE, fig.width=7, fig.height=7}
+plot_initial_distances(data)
+```
+```{r, echo=FALSE, fig.width=7, fig.height=7}
+plot_family_distances(data)
+```
+
+A 5k sequence with 10 copies to begin with, 500M years, with recombination and no flags
+
+```{r, echo = FALSE}
+data <- input_data('./../main_simulation_without_flags_10_5000_K80_500_1_0.100000_1.000000_100_1.000000_10_10_0_10_0_1_0.out')
+```
+
+```{r, echo=FALSE, fig.width=7, fig.height=7}
+plot_initial_distances(data)
+```
+```{r, echo=FALSE, fig.width=7, fig.height=7}
+plot_family_distances(data)
+```
+

@@ -23,7 +23,8 @@ simulate_without_flags_specified(
   to_seed = FALSE,
   seed = 0,
   sequence_numbering = 0,
-  family_numbering = 0
+  family_numbering = 0,
+  logging = FALSE
 )
 }
 \arguments{
@@ -54,7 +55,7 @@ threshold, the simulation prunes the set of sequences by randomly choosing
 the ones that live on)}
 
 \item{recomb_mean}{The expected number of template switches during
-recombination between two sequences (chosen from a Poisson distrubtion with
+recombination between two sequences (chosen from a Poisson distribution with
 this as its mean).}
 
 \item{file_out}{Where should the results of the simulation be saved? (This

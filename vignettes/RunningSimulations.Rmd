@@ -29,15 +29,17 @@ The functions can be called in the following way:
 
 ```{r}
 # Calling a simulation without flags
-simulate_without_flags_random(num_seq = 5, seq_length = 20,
-                       point_mutation_model = "K80",
-                       num_jumps = 20, timestep = 2,
-                       burst_probability = 0.1, burst_mean = 1,
-                       recomb_mean = 1,
-                       file_out = "without_flags_vignette.out",
-                       num_out_init = 10, num_out_tags = 10,
-                       num_out_seqs = 10, num_out_pair = 10,
-                       to_seed = TRUE, seed = 0)
+simulate_without_flags_random(
+  num_seq = 10, seq_length = 1000, point_mutation_model = "K80",
+  num_jumps = 50, timestep = 1,
+  burst_probability = 0.1, burst_mean = 1,
+  max_active_copies = 100,
+  recomb_mean = 1,
+  file_out = "without_flags_vignette.out",
+  num_out_tags = 10, num_out_init = 10,
+  num_out_seqs = 0, num_out_pair = 10, 
+  to_seed = TRUE, seed = 0
+)
 ```
 
 TODO: Add a not about how `num_out_pair` needs to be a multiple of
@@ -60,26 +62,20 @@ Similarly, we can run a simulation with flags.
 
 ```{r}
 # Calling a simulation without flags
-simulate_with_flags_random(num_seq = 10, 
-                           seq_length = 200,
-                    point_mutation_model = "K80",
-                    num_sensitive_posns = 10, 
-                    inactive_probability = 0.1, 
-                    num_jumps = 50, 
-                    timestep = 2,
-                    burst_probability = 0.1, 
-                    burst_mean = 1,
-                    recomb_mean = 1,
-                    selection_threshold = 60, 
-                    fam_proportion = 0.7, 
-                    fam_percentage = 70,
-                    file_out = "with_flags_vignette.out",
-                    num_out_init = 10, 
-                    num_out_tags = 10,
-                    num_out_seqs = 10, 
-                    num_out_pair = 10,
-                    to_seed = TRUE, 
-                    seed = 0)
+simulate_with_flags_random(
+  num_seq = 10, seq_length = 1000, point_mutation_model = "K80",
+  num_sensitive_posns = 10, inactive_probability = 0.1, 
+  num_jumps = 50, timestep = 1, 
+  burst_probability = 0.1, burst_mean = 1, 
+  max_active_copies = 100, max_total_copies = 1000,
+  recomb_mean = 1, 
+  selection_threshold = 10, 
+  fam_proportion = 0.7, fam_percentage = 70,
+  file_out = "with_flags_vignette.out", 
+  num_out_tags = 10, num_out_init = 10, 
+  num_out_seqs = 0, num_out_pair = 10,
+  to_seed = TRUE, seed = 0
+)
 ```
 
 Again the results of the simulation can be analysed using the `input_data` function.
@@ -91,7 +87,9 @@ head(data_with_flags$pair)
 ```
 
 Visualise the results
-```{r}
+```{r, fig.width=10, fig.height=10}
 plot_initial_distances(data_with_flags)
+```
+```{r, fig.width=10, fig.height=10}
 plot_family_distances(data_with_flags)
 ```

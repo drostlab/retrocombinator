@@ -29,7 +29,8 @@ simulate_with_flags_specified(
   to_seed = FALSE,
   seed = 0,
   sequence_numbering = 0,
-  family_numbering = 0
+  family_numbering = 0,
+  logging = FALSE
 )
 }
 \arguments{
@@ -73,11 +74,11 @@ the simulation prunes the set of sequences by randomly choosing the ones that
 live on)}
 
 \item{recomb_mean}{The expected number of template switches during
-recombination between two sequences (chosen from a Poisson distrubtion with
+recombination between two sequences (chosen from a Poisson distribution with
 this as its mean).}
 
 \item{selection_threshold}{What sequence similarity percentage to the
-original sequence we wish to maintin (distant sequences are dropped over the
+original sequence we wish to maintain (distant sequences are dropped over the
 course of the simulation).}
 
 \item{fam_proportion}{If this proportion of the overall sequence similarity

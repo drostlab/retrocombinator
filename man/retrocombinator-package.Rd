@@ -24,7 +24,7 @@ Useful links:
 
 Authors:
 \itemize{
-  \item Hajk-Georg Drost \email{hgd23@cam.ac.uk}
+  \item Hajk-Georg Drost \email{hajk-georg.drost@tuebingen.mpg.de} [contributor]
 }
 
 }

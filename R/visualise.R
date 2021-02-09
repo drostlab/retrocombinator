@@ -2,24 +2,33 @@
 #' @param data Simulation data obtained using `input_data`
 #' @export
 plot_initial_distances <- function(data) {
-  to_plot <- data$init
-  to_plot$fam_tag <- as.factor(to_plot$fam_tag)
+  seq_length <- data$init %>%
+    dplyr::filter(step == 0) %>%
+    dplyr::pull(raw) %>% nchar() %>% mean()
+
+  to_plot <- data$init %>%
+    dplyr::mutate(init_seq_similarity = 1-init_dist/seq_length)
   ggplot2::ggplot(to_plot) +
     ggplot2::geom_line(
-      ggplot2::aes(x=real_time, y=init_dist,
+      ggplot2::aes(x=real_time, y=init_seq_similarity,
                    group=seq_tag,
-                   #linetype=is_active,
-                   color=fam_tag
+                   color=is_active,
+                   alpha=0.3
       )) +
   ggplot2::labs(x = "Time (millions of years)",
-                y = "Distance to initial sequence") +
-  ggplot2::scale_color_discrete(name = "Family")
+                y = "Similarity to initial sequence") +
+  ggplot2::scale_color_discrete(name = "Capable of transposition events") +
+  ggplot2::guides(alpha = FALSE)
 }
 
 #' Plot pairwise distance within families
 #' @param data Simulation data obtained using `input_data`
 #' @export
 plot_family_distances <- function(data) {
+  seq_length <- data$init %>%
+    dplyr::filter(step == 0) %>%
+    dplyr::pull(raw) %>% nchar() %>% mean()
+
   to_plot <- data$pair %>%
     dplyr::inner_join(data$init %>%
                 dplyr::select(real_time, seq_tag, fam_tag, is_active) %>%
@@ -28,19 +37,26 @@ plot_family_distances <- function(data) {
     dplyr::inner_join(data$init %>%
                 dplyr::select(real_time, seq_tag, fam_tag, is_active) %>%
                 dplyr::rename(seq2 = seq_tag, fam2 = fam_tag, is_active2 = is_active),
-              by = c('real_time', 'seq2'))
-
-  to_plot <- to_plot %>%
+              by = c('real_time', 'seq2')) %>%
     dplyr::mutate(same_family = fam1 == fam2) %>%
-    dplyr::mutate(group_fam = paste(fam1, fam2, sep="_"))
+    dplyr::mutate(group_fam = paste(fam1, fam2, sep="_")) %>%
+    dplyr::mutate(seq_similarity = 1-dist/seq_length)
+
   ggplot2::ggplot(to_plot) +
     ggplot2::geom_point(
-      ggplot2::aes(x=real_time, y=dist,
+      ggplot2::aes(x=real_time, y=seq_similarity,
                    group = group_fam,
                    #linetype=is_active,
                    color=same_family
       )) +
   ggplot2::labs(x = "Time (millions of years)",
-                y = "Pairwise distance") +
+                y = "Pairwise sequence similarity") +
   ggplot2::scale_color_discrete(name = "Within same Family")
+}
+
+#' Plot mosaic of recombination
+#' @param data Simulation data obtained using `input_data`
+#' @export
+plot_phylogeny <- function(data) {
+
 }

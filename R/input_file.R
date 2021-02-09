@@ -144,8 +144,13 @@ input_data <- function(filename)
         stopifnot(pairs_line[1] == "P")
         # Pairwise distances
         pairs <- as.numeric(extract_line(con))
-        count <- 1
+        nrows <- length(pairs)
+        steps <- rep(t, nrows)
+        real_times <- rep(real_time, nrows)
+        seq1s <- rep(NA, nrows)
+        seq2s <- rep(NA, nrows)
 
+        count <- 1
         f1 <- 1 # Family F1
         while (f1 <= length(fam_tags))
         {
@@ -155,12 +160,10 @@ input_data <- function(filename)
             s2 <- s1 + 1 # Sequence S2 in F1
             while (s2 <= length(seq_tags[[f1]]))
             {
-              row <- list(step=t, real_time=real_time,
-                          seq1=seq_tags[[f1]][s1], seq2=seq_tags[[f1]][s2],
-                          dist=pairs[count])
+              seq1s[count] <- seq_tags[[f1]][s1]
+              seq2s[count] <- seq_tags[[f1]][s2]
               count <- count + 1
-              data$pair <- rbind(data$pair, row)
-              s2  <- s2 + 1
+              s2 <- s2 + 1
             }
 
             f2 <- f1 + 1 # Family F2
@@ -169,19 +172,22 @@ input_data <- function(filename)
               s2 <- 1 # Sequence S2 in F2
               while (s2 <= length(seq_tags[[f2]]))
               {
-                row <- list(step=t, real_time=real_time,
-                            seq1=seq_tags[[f1]][s1], seq2=seq_tags[[f2]][s2],
-                            dist=pairs[count])
+                seq1s[count] <- seq_tags[[f1]][s1]
+                seq2s[count] <- seq_tags[[f2]][s2]
                 count <- count + 1
-                data$pair <- rbind(data$pair, row)
                 s2 <- s2 + 1
               }
               f2 <- f2 + 1
-            }
+            } # end <for family F2>
             s1 <- s1 + 1
           }
           f1 <- f1 + 1
         } # end <for family F1>
+
+        data$pair <- rbind(data$pair,
+                           data.frame(step=steps,real_time=real_times,
+                                      seq1=seq1s, seq2=seq2s,dist=pairs)
+        )
 
       } # end <extract pair data>
     } # end <for this timestamp>
