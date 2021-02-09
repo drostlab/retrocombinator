@@ -47,8 +47,8 @@ size_type RandMaths::rand_int(size_type low, size_type high)
 {
     if (low >= high)
     {
-        std::string msg = "rand_int: low is >= high: " + std::to_string(low) + " > " +
-            std::to_string(high);
+        std::string msg = "rand_int: low is >= high: " + std::to_string(low) +
+            " >= " + std::to_string(high);
         throw Exception(msg);
     }
     using Dist = std::uniform_int_distribution<size_type>;
@@ -60,8 +60,8 @@ double RandMaths::rand_real(double low /*= 0.0*/, double high /*= 1.0*/)
 {
     if (low >= high)
     {
-        std::string msg = "rand_real: low is >= high: " + std::to_string(low) + " > " +
-            std::to_string(high);
+        std::string msg = "rand_real: low is >= high: " + std::to_string(low) +
+            " >= " + std::to_string(high);
         throw Exception(msg);
     }
     using Dist = std::uniform_real_distribution<double>;
@@ -85,8 +85,7 @@ std::set<size_type> RandMaths::sample_without_replacement(size_type low, size_ty
     if (low >= high)
     {
         std::string msg = "sample_without_replacement: low is >= high: " +
-            std::to_string(low) + " > " +
-            std::to_string(high);
+            std::to_string(low) + " >= " + std::to_string(high);
         throw Exception(msg);
     }
     if (m > high - low)

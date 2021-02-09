@@ -5,6 +5,8 @@
 #include <iterator>
 using namespace retrocombinator;
 
+#include<iostream>
+
 EvolutionWithFlags::EvolutionWithFlags(size_type num_jumps, double timestep,
                   double burst_probability, double burst_mean,
                   size_type max_active_copies, size_type max_total_copies):
@@ -49,7 +51,9 @@ void EvolutionWithFlags::burst_seqs(const size_type /*unused t*/,
 
                         // then create the new sequence by recombining
                         seqs.emplace_back(seqs[i], seqs[recomb_index],
-                                          RNG.rand_poisson(recomb_mean));
+                                recomb_mean != 0 ?
+                                    RNG.rand_poisson(recomb_mean) : 0
+                        );
                         // check if we have new active sequences
                         if (seqs.back().is_active())
                         {
@@ -102,28 +106,15 @@ void EvolutionWithFlags::kill_sequences(size_type num_active_seqs,
             }
         }
     }
-
-    // remove dead families
-    for (auto family_it=families.begin(); family_it!=families.end(); )
-    {
-        if (family_it->seqs.size() == 0)
-        {
-            family_it = families.erase(family_it);
-        }
-        else
-        {
-            ++family_it;
-        }
-    }
     remove_dead_families();
 
     // then, kill sequences until we are within our limits
     while ((num_total_seqs > max_total_copies ||
-           num_active_seqs > max_active_copies) && families.size() > 0)
+                num_active_seqs > max_active_copies) &&
+            families.size() > 0)
     {
         size_type random_family_index = RNG.rand_int(0, families.size());
         auto& seqs = std::next(families.begin(), random_family_index)->seqs;
-
 
         auto to_delete = std::next(seqs.begin(), RNG.rand_int(0, seqs.size()));
         if (to_delete -> is_active())
@@ -134,15 +125,15 @@ void EvolutionWithFlags::kill_sequences(size_type num_active_seqs,
         // and one less sequence overall
         --num_total_seqs;
         seqs.erase(to_delete);
+        remove_dead_families();
     }
-    remove_dead_families();
 }
 
 void EvolutionWithFlags::remove_dead_families()
 {
     for (auto family_it=families.begin(); family_it!=families.end(); )
     {
-        if (family_it->seqs.size() == 0)
+        if ((family_it->seqs).size() == 0)
         {
             family_it = families.erase(family_it);
         }
