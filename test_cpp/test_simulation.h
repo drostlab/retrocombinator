@@ -17,24 +17,31 @@ namespace retrocombinator
     {
         try
         {
-            simulate_without_flags(4, 50,
-                                   "K80", 60, 2,
-                                   0.5, 1, 20, 1,
-                                   "test_obj/test_simulation_without_flags.out",
-                                   60, 30, 10, 6,
-                                   false, true, 0,
-                                   0, 0);
+            simulate_without_flags(
+                4, 50, "K80",
+                60, 2,
+                0.5, 1,
+                20, 1,
+                "test_obj/test_simulation_without_flags.out",
+                60, 30, 10, 6,
+                false, true, 0,
+                0, 0, false
+            );
             assert (files_same("test_obj/test_simulation_without_flags.out",
                                "test_cpp/benchmark_simulation_without_flags.test"));
 
-            simulate_with_flags(4, 50,
-                                "K80", 10, 0.5, 60, 2,
-                                0.5, 1, 20, 30, 1,
-                                50, 0.25, 80,
-                                "test_obj/test_simulation_with_flags.out",
-                                60, 30, 10, 6,
-                                false, true, 0,
-                                0, 0);
+            simulate_with_flags(
+                4, 50, "K80",
+                10, 0.5,
+                60, 2,
+                0.5, 1,
+                20, 30, 1,
+                50, 0.25, 80,
+                "test_obj/test_simulation_with_flags.out",
+                60, 30, 10, 6,
+                false, true, 0,
+                0, 0, false
+            );
             assert (files_same("test_obj/test_simulation_with_flags.out",
                                "test_cpp/benchmark_simulation_with_flags.test"));
             return 0;

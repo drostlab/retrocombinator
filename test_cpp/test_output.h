@@ -22,7 +22,7 @@ namespace retrocombinator
             Family::renumber_families(0);
 
             Output o1("test_obj/test_output.out", 60,
-                      60, 30, 10, 6);
+                      60, 30, 10, 6, false);
             o1.set_init_seq("TTTT");
 
             // Test basic frequency of outputting and header

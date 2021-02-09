@@ -27,7 +27,7 @@ namespace retrocombinator
 
             PointMutator pm1("K80", 50, 10, 0.5);
             Output output1("test_obj/test_with_flags_1.out", 60,
-                           60, 30, 10, 6);
+                           60, 30, 10, 6, false);
             output1.set_init_seq(S1.as_string());
 
             EvolutionWithFlags e1(60, 2,
@@ -47,7 +47,7 @@ namespace retrocombinator
 
             PointMutator pm2("K80", 50, 10, 0.5);
             Output output2("test_obj/test_with_flags_2.out", 60,
-                           60, 30, 10, 6);
+                           60, 30, 10, 6, false);
             output2.set_init_seq(S2.as_string());
 
             EvolutionWithFlags e2(60, 2,
@@ -68,7 +68,7 @@ namespace retrocombinator
 
             PointMutator pm3("K80", 50, 10, 0.5);
             Output output3("test_obj/test_with_flags_3.out", 60,
-                           60, 30, 10, 6);
+                           60, 30, 10, 6, false);
             output3.set_init_seq(S3.as_string());
 
             // TODO: change 5 to 60

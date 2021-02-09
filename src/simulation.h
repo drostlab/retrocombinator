@@ -29,7 +29,8 @@ namespace retrocombinator
             size_type num_out_tags, size_type num_out_init,
             size_type num_out_seqs, size_type num_out_pair,
             bool to_randomise, bool to_seed, size_type seed,
-            size_type sequence_numbering, size_type family_numbering);
+            size_type sequence_numbering, size_type family_numbering,
+            bool logging);
 
     /** Sets up and runs a simulation with flags.
      *  Takes a specified set of initial sequences.
@@ -48,7 +49,8 @@ namespace retrocombinator
             size_type num_out_tags, size_type num_out_init,
             size_type num_out_seqs, size_type num_out_pair,
             bool to_randomise, bool to_seed, size_type seed,
-            size_type sequence_numbering, size_type family_numbering);
+            size_type sequence_numbering, size_type family_numbering,
+            bool logging);
 
     /** Sets up and runs a simulation without flags.
      *  Constructs initial sequences randomly.
@@ -64,7 +66,8 @@ namespace retrocombinator
             size_type num_out_tags, size_type num_out_init,
             size_type num_out_seqs, size_type num_out_pair,
             bool to_randomise, bool to_seed, size_type seed,
-            size_type sequence_numbering, size_type family_numbering);
+            size_type sequence_numbering, size_type family_numbering,
+            bool logging);
 
     /** Sets up and runs a simulation with flags.
      *  Constructs initial sequences randomly.
@@ -83,7 +86,8 @@ namespace retrocombinator
             size_type num_out_tags, size_type num_out_init,
             size_type num_out_seqs, size_type num_out_pair,
             bool to_randomise, bool to_seed, size_type seed,
-            size_type sequence_numbering, size_type family_numbering);
+            size_type sequence_numbering, size_type family_numbering,
+            bool logging);
 }
 
 #endif // SIMULATION_H

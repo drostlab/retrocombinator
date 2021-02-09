@@ -35,7 +35,8 @@ namespace retrocombinator
                size_type num_out_tags,
                size_type num_out_init,
                size_type num_out_seqs,
-               size_type num_out_pair);
+               size_type num_out_pair,
+               bool logging);
 
         /** Destructor to close the file and clean-up.
          */
@@ -113,6 +114,9 @@ namespace retrocombinator
 
         /// The initial sequence to compare to
         std::string init_seq;
+
+        /// Whether or not to print messages to screen about progress
+        bool logging;
     };
 }
 

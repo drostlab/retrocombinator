@@ -20,7 +20,8 @@ void rcpp_simulate_without_flags_random(
         size_t num_out_tags, size_t num_out_init,
         size_t num_out_seqs, size_t num_out_pair,
         bool to_randomise, bool to_seed, size_t seed,
-        size_t sequence_numbering, size_t family_numbering)
+        size_t sequence_numbering, size_t family_numbering,
+        bool logging)
 {
     try
     {
@@ -28,7 +29,8 @@ void rcpp_simulate_without_flags_random(
             num_seq, seq_length, point_mutation_model, num_jumps, timestep,
             burst_probability, burst_mean, max_active_copies, recomb_mean, file_out,
             num_out_tags, num_out_init, num_out_seqs, num_out_pair, to_randomise,
-            to_seed, seed, sequence_numbering, family_numbering);
+            to_seed, seed, sequence_numbering, family_numbering,
+            logging);
     }
     catch (Exception e)
     {
@@ -51,7 +53,8 @@ void rcpp_simulate_with_flags_random(
         size_t num_out_tags, size_t num_out_init,
         size_t num_out_seqs, size_t num_out_pair,
         bool to_randomise, bool to_seed, size_t seed,
-        size_t sequence_numbering, size_t family_numbering)
+        size_t sequence_numbering, size_t family_numbering,
+        bool logging)
 {
     try
     {
@@ -61,7 +64,8 @@ void rcpp_simulate_with_flags_random(
             burst_mean, max_active_copies, max_total_copies, recomb_mean,
             selection_threshold, fam_proportion, fam_percentage, file_out,
             num_out_tags, num_out_init, num_out_seqs, num_out_pair, to_randomise,
-            to_seed, seed, sequence_numbering, family_numbering);
+            to_seed, seed, sequence_numbering, family_numbering,
+            logging);
     }
     catch (Exception e)
     {
@@ -81,7 +85,8 @@ void rcpp_simulate_without_flags_specified(
         size_t num_out_tags, size_t num_out_init,
         size_t num_out_seqs, size_t num_out_pair,
         bool to_randomise, bool to_seed, size_t seed,
-        size_t sequence_numbering, size_t family_numbering)
+        size_t sequence_numbering, size_t family_numbering,
+        bool logging)
 {
     try
     {
@@ -89,7 +94,8 @@ void rcpp_simulate_without_flags_specified(
             init_seqs, init_seq_index, point_mutation_model, num_jumps, timestep,
             burst_probability, burst_mean, max_active_copies, recomb_mean, file_out,
             num_out_tags, num_out_init, num_out_seqs, num_out_pair, to_randomise,
-            to_seed, seed, sequence_numbering, family_numbering);
+            to_seed, seed, sequence_numbering, family_numbering,
+            logging);
     }
     catch (Exception e)
     {
@@ -112,7 +118,8 @@ void rcpp_simulate_with_flags_specified(
         size_t num_out_tags, size_t num_out_init,
         size_t num_out_seqs, size_t num_out_pair,
         bool to_randomise, bool to_seed, size_t seed,
-        size_t sequence_numbering, size_t family_numbering)
+        size_t sequence_numbering, size_t family_numbering,
+        bool logging)
 {
     try
     {
@@ -122,7 +129,8 @@ void rcpp_simulate_with_flags_specified(
             burst_mean, max_active_copies, max_total_copies, recomb_mean,
             selection_threshold, fam_proportion, fam_percentage, file_out,
             num_out_tags, num_out_init, num_out_seqs, num_out_pair, to_randomise,
-            to_seed, seed, sequence_numbering, family_numbering);
+            to_seed, seed, sequence_numbering, family_numbering,
+            logging);
     }
     catch (Exception e)
     {

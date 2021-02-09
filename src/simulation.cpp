@@ -3,6 +3,8 @@
 #include "rand_maths.h"
 #include "simulation.h"
 
+#include <iostream>
+
 namespace retrocombinator
 {
     void simulate_without_flags(
@@ -16,7 +18,8 @@ namespace retrocombinator
             size_type num_out_tags, size_type num_out_init,
             size_type num_out_seqs, size_type num_out_pair,
             bool to_randomise, bool to_seed, size_type seed,
-            size_type sequence_numbering, size_type family_numbering)
+            size_type sequence_numbering, size_type family_numbering,
+            bool logging)
     {
         if (init_seq_index >= init_seqs.size())
         {
@@ -38,6 +41,9 @@ namespace retrocombinator
                                 burst_probability, burst_mean,
                                 max_active_copies);
         e.calculate_copy_number_tree(init_seqs.size());
+        if (logging) {
+            std::cout << "Calculated bursts" << std::endl;
+        }
 
         size_type max_seq_length = 0;
         for (const auto& seq : init_seqs)
@@ -50,7 +56,8 @@ namespace retrocombinator
         PointMutator pm(point_mutation_model, max_seq_length);
 
         Output output(file_out, num_jumps,
-                      num_out_tags, num_out_init, num_out_seqs, num_out_pair);
+                      num_out_tags, num_out_init, num_out_seqs, num_out_pair,
+                      logging);
         output.set_init_seq(init_seqs[init_seq_index]);
         e.evolve(output, pm, init_seqs, recomb_mean);
     }
@@ -69,7 +76,8 @@ namespace retrocombinator
             size_type num_out_tags, size_type num_out_init,
             size_type num_out_seqs, size_type num_out_pair,
             bool to_randomise, bool to_seed, size_type seed,
-            size_type sequence_numbering, size_type family_numbering)
+            size_type sequence_numbering, size_type family_numbering,
+            bool logging)
     {
         if (init_seq_index >= init_seqs.size())
         {
@@ -90,6 +98,9 @@ namespace retrocombinator
         EvolutionWithFlags e(num_jumps, timestep,
                              burst_probability, burst_mean,
                              max_active_copies, max_total_copies);
+        if (logging) {
+            std::cout << "Calculated bursts" << std::endl;
+        }
 
         size_type max_seq_length = 0;
         for (const auto& seq : init_seqs)
@@ -103,7 +114,8 @@ namespace retrocombinator
                         num_sensitive_posns, inactive_probability);
 
         Output output(file_out, num_jumps,
-                      num_out_tags, num_out_init, num_out_seqs, num_out_pair);
+                      num_out_tags, num_out_init, num_out_seqs, num_out_pair,
+                      logging);
         output.set_init_seq(init_seqs[init_seq_index]);
         e.set_selection_threshold(selection_threshold);
         e.use_families_at(fam_proportion, fam_percentage);
@@ -122,7 +134,8 @@ namespace retrocombinator
             size_type num_out_tags, size_type num_out_init,
             size_type num_out_seqs, size_type num_out_pair,
             bool to_randomise, bool to_seed, size_type seed,
-            size_type sequence_numbering, size_type family_numbering)
+            size_type sequence_numbering, size_type family_numbering,
+            bool logging)
     {
         if (to_randomise)
         {
@@ -142,7 +155,8 @@ namespace retrocombinator
             num_jumps, timestep, burst_probability, burst_mean,
             max_active_copies, recomb_mean,
             file_out, num_out_tags, num_out_init, num_out_seqs, num_out_pair,
-            false, false, seed, sequence_numbering, family_numbering);
+            false, false, seed, sequence_numbering, family_numbering,
+            logging);
     }
 
     void simulate_with_flags(
@@ -159,7 +173,8 @@ namespace retrocombinator
             size_type num_out_tags, size_type num_out_init,
             size_type num_out_seqs, size_type num_out_pair,
             bool to_randomise, bool to_seed, size_type seed,
-            size_type sequence_numbering, size_type family_numbering)
+            size_type sequence_numbering, size_type family_numbering,
+            bool logging)
     {
         if (to_randomise)
         {
@@ -181,7 +196,8 @@ namespace retrocombinator
             max_active_copies, max_total_copies, recomb_mean,
             selection_threshold, fam_proportion, fam_percentage,
             file_out, num_out_tags, num_out_init, num_out_seqs, num_out_pair,
-            false, false, seed, sequence_numbering, family_numbering);
+            false, false, seed, sequence_numbering, family_numbering,
+            logging);
     }
 
 }

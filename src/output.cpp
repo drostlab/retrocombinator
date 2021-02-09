@@ -1,6 +1,8 @@
 #include "output.h"
 #include "rand_maths.h"
 
+# include <iostream>
+
 using namespace retrocombinator;
 using namespace std;
 
@@ -8,7 +10,8 @@ Output::Output(const std::string& filename_out, size_type final_time,
                size_type num_out_tags,
                size_type num_out_init,
                size_type num_out_seqs,
-               size_type num_out_pair):
+               size_type num_out_pair,
+               bool logging):
     final_time(final_time),
     to_output_tags(num_out_tags != 0 ?
                         floor(double(final_time)/num_out_tags) : final_time),
@@ -17,7 +20,8 @@ Output::Output(const std::string& filename_out, size_type final_time,
     to_output_seqs(num_out_seqs != 0 ?
                         floor(double(final_time)/num_out_seqs) : final_time),
     to_output_pair(num_out_pair != 0 ?
-                        floor(double(final_time)/num_out_pair) : final_time)
+                        floor(double(final_time)/num_out_pair) : final_time),
+    logging(logging)
 {
     fout.open(filename_out, std::fstream::out | std::fstream::trunc);
 }
@@ -139,6 +143,9 @@ void Output::print(size_type time, double real_time,
         fout << time << " " << real_time << endl;
         fout << p_tags << " " << p_init << " " << p_seqs << " " << p_pair
              << endl;
+        if (logging) {
+            cout << time << "," << flush;
+        }
 
         fout << "F" << endl;
         fout << families.size() << endl;
@@ -150,6 +157,9 @@ void Output::print(size_type time, double real_time,
             if (p_seqs) print_seqs(family.seqs);
         }
         if (p_pair) print_pair(families);
+    }
+    if (logging && time == final_time) {
+        cout << endl;
     }
 }
 
