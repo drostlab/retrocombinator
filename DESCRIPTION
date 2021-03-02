@@ -6,7 +6,7 @@ Authors@R: c(
     person("Hajk-Georg", "Drost", , "hajk-georg.drost@tuebingen.mpg.de", role = c("aut", "ctb"))
     )
 Description: An optimized framework to simulate the molecular evolutionary processes of retrotransposon evolution including extrachromosomal recombination.
-Depends: R (>= 3.5.0)
+Depends: R (>= 3.4.4)
 Imports:
     Rcpp (>= 0.12.17),
     dplyr,
