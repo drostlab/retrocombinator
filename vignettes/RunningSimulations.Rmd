@@ -42,10 +42,6 @@ simulate_without_flags_random(
 )
 ```
 
-TODO: Add a not about how `num_out_pair` needs to be a multiple of
-`num_out_init` for helpful plotting
-This data can then be analysed in the following way:
-
 ```{r}
 # Import the data file
 data_without_flags <- input_data("without_flags_vignette.out")
