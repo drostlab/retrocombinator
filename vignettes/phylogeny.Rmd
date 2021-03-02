@@ -1,0 +1,39 @@
+---
+title: "Running Simulations for Evolution of Transposons"
+author: "Anindya Sharma"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Running Simulations}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r, echo = FALSE}
+library(retrocombinator)
+```
+
+A 5k sequence with 10 copies to begin with, 500M years, (100 timesteps, with
+flags), with and without recombination
+
+```{r, echo = FALSE}
+data_recomb <- input_data('./../main_simulation_with_flags_10_5000_K80_10.000000_0.010000_100_5_0.300000_1.000000_100_1000_1.000000_10.000000_0.700000_70.000000_10_100_0_10_0_1_0.out')
+```
+
+```{r, echo=FALSE, fig.width=7, fig.height=7}
+plot_family_distances(data_recomb)
+```
+
+```{r, echo = FALSE}
+data_no_recomb <- input_data('./../main_simulation_with_flags_10_5000_K80_10.000000_0.010000_100_5_0.300000_1.000000_100_1000_0_10.000000_0.700000_70.000000_10_100_0_10_0_1_0.out')
+```
+```{r, echo=FALSE, fig.width=7, fig.height=7}
+plot_family_distances(data_no_recomb)
+```
