@@ -2,7 +2,7 @@
 % Please edit documentation in R/visualise.R
 \name{plot_phylogeny}
 \alias{plot_phylogeny}
-\title{Plot mosaic of recombination}
+\title{Plot families over time}
 \usage{
 plot_phylogeny(data)
 }
@@ -10,5 +10,5 @@ plot_phylogeny(data)
 \item{data}{Simulation data obtained using `input_data`}
 }
 \description{
-Plot mosaic of recombination
+Plot families over time
 }

@@ -16,10 +16,8 @@ knitr::opts_chunk$set(
 )
 ```
 
-# Parameters and their defaults
+> TODO: 
 
-TODO: 
-* Import sequences as a starting point instead of a random sequence
 * Give a print message that describes the paramaters that have been run in an
   intuitive fashion
 * For each object, have a print function that can do this
@@ -27,19 +25,30 @@ TODO:
   file
 * Search parameter space and label parameters with what scenarios they are
   likely to lead to
-
+  
+# Parameters and their defaults
 
 * `SequenceParams` represents what set of retrotransposons the simulation
   starts off with. It starts of multiple identical copies of the same sequence,
-  where that sequence is sampled from a uniform A/G/C/T distribution. It is constructed
-  from one of the following:
-    * `num_seq : numeric` Number of initial retrotransposons **(default =
+  where that sequence is sampled from a uniform A/G/C/T distribution. It is
+  constructed by either specifying a sequence length or by specifying a file to
+  a sequence:
+    * `num_initial_copies : numeric` Number of initial retrotransposons **(default =
       100)**
     * `seq_length : numeric` Sequence length (number of nucleotides) of the
       retrotransposons **(default = 5000)**
+    * `seq_filename : character` Path to initial sequence
+* `SimulationParams` represents how long the simulation will run for, and at what
+  timescale. It comprises of the following:
+    * `num_jumps : numeric` The number of steps (jumps) in our simulation
+      **(default = 20)**
+    * `timestep : numeric` How much real time does one step (jump) in our
+      simulation measure, in millions of years **(default = 1)**
+    * `max_active_copies : numeric` What is the largest population size of
+      active sequences to keep track of? **(default = 500)**
 * `MutationParams` represents how what nucleotide subtstition model will be
-  used to modify the sequences during the simulation. It is one of the following
-  `character` literals:
+  used to modify the sequences during the simulation. It is constructed from one
+  of the following `character` literals to the argument `model`:
     * `"JC69"` Jules and Cantor - 1969
     * `"K80"` Kimura - 1980 **(default)**
     * `"F81"` Felsenstein - 1981
@@ -52,7 +61,7 @@ TODO:
   active status if a point mutation affects a critical part of the sequence.
     * `length_critical_region: numeric`  Sequence length (number of nucleotides)
       of the critical region of a retrotransposon **(default = 10)**
-    * `prob_inactivity_when_mutated : numeric` The probability that a point
+    * `prob_inactive_when_mutated : numeric` The probability that a point
       mutation to the critical region causes a sequence to become inactive
       **(default = 0.001)**
     * `max_inactive_copies : numeric` What is the largest population size of
@@ -67,30 +76,22 @@ TODO:
       bursting **(default = 1)**
     * `recomb_mean : numeric` The expected number of template switches during 
       recombination between two sequences (chosen from a Poisson distribution
-      with this as its mean) **(default = 0.5)**
+      with this as its mean) **(default = 1.5)**
     * `recomb_similarity : numeric` How similar does an active sequence have to
       be with another sequence for them to be allowed to be recombine during
       transposition? **(default = 0.85)**
-* `SimulationParams` represents how long the simulation will run for, and at what
-  timescale. It comprises of the following:
-    * `num_jumps : numeric` The number of steps (jumps) in our simulation
-      **(default = 20)**
-    * `timestep : numeric` How much real time does one step (jump) in our
-      simulation measure, in millions of years **(default = 1)**
-    * `max_active_copies : numeric` What is the largest population size of
-      active sequences to keep track of? **(default = 500)**
-* `SpeciationParams` represents how we keep track of families during the
+* `SpeciationParams` represents how we keep track of species during the
   simulation. It comprises of the following:
     * `selection_threshold : numeric` What sequence similarity to the
       original sequence do we wish to maintain? Sequences that diverge beyond
       this similarity level are dropped over the course of simulation
       **(default = 0.5)**
-    * `family_similarity : numeric` What sequence similarity do two sequences
+    * `species_similarity : numeric` What sequence similarity do two sequences
       have to be to each other for them to be considered to be of the same
-      family? **(default = 0.7)**
-    * `family_coherence : numeric` What proportion of the overall sequence
-      similarity matrix of a family needs to score be above `family_similarity`
-      before we decide the family has split into further sub-families?
+      species? **(default = 0.7)**
+    * `species_coherence : numeric` What proportion of the overall sequence
+      similarity matrix of a species needs to score be above `species_similarity`
+      before we decide the species has split into two species?
       **(default = 0.5)**
 * `OutputParams` represents how and where the output of the simulation will
   be saved. It comprises of the following:
@@ -105,8 +106,8 @@ TODO:
     * `num_out_pair : numeric` How many times during the event of the simulation
       should we output pairwise distances between all pairs of sequences?
       **(default = 10)**
-    * `num_out_fam : numeric` How many times during the event of the simulation
-      should we output the family tags of each of the sequences?
+    * `num_out_species : numeric` How many times during the event of the simulation
+      should we output the species tags of each of the sequences?
       **(default = 10)**
 * `SeedParams` represents how to select the seed for randomisation for the
   simulation. It comprises of the following:
@@ -122,7 +123,7 @@ TODO:
 To run a simulation, just call the main function `simulate()` and it will run with the default
 parameters. 
 
-```{r, eval = FALSE}
+```{r}
 simulate()
 ```
 
@@ -131,7 +132,7 @@ you wish to overwrite. Say for example you want to change the recombination
 mean, and the flagging parameters, run the following code. Whenever a parameter is
 not specified explicitly, the default will be used.
 
-```{r, eval = FALSE}
+```{r}
 burst_params <- BurstParams(recomb_mean = 1.0)
 flag_params <- FlagParameters(length_critical_region = 0,
                               prob_inactivity_when_mutated = 0)

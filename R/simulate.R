@@ -1,183 +1,68 @@
 #' Run an entire simulation with flags
 #' @useDynLib retrocombinator, .registration = TRUE
 #' @importFrom Rcpp sourceCpp
-#' @param num_seq The initial number of sequences to consider
-#' @param seq_length The number of nucleotides in each of the sequences in the
-#' simulation
-#' @param point_mutation_model Which point mutation/substitution model will be
-#' used to modify the sequences during the simulation? Options are "JC69" (Jules
-#' and Cantor 1969), "K80" (Kimura 1980), "F81" (Felsenstein 1981), "HKY85"
-#' (Hasegawa, Kishino and Yano, 1985), "TN93" (Timura and Nei 1993), or "GTR"
-#' (General Time Reversible Model, Tavaré 1986).
-#' @param num_sensitive_posns How many positions (chosen randomly) in the
-#' sequence are essential for the sequence to remain active (with the potential
-#' to burst)? If the sequence experiences mutations in these areas, it loses its
-#' activity with some probability
-#' @param inactive_probability What is the probability that a mutation at a
-#' sensitive position causes the sequence to lose its bursting potential?
-#' @param num_jumps How many steps we have in our simulation
-#' @param timestep How much time passes in one jump (unit: millions of years)
-#' @param burst_probability Probability that an active sequence bursts in one
-#' timestep
-#' @param burst_mean The Poisson mean for the distribution that specifies how
-#' many new sequences an active sequence will create during bursting
-#' @param max_active_copies The total number of sequences that have the ability
-#' to burst that we allow in a simulation (if the number ever exceeds this
-#' threshold, the simulation prunes the set of sequences by randomly choosing
-#' the ones that live on)
-#' @param max_total_copies The total number of active and inactive sequences
-#' that we allow in our simulation (if the number ever exceeds this threshold,
-#' the simulation prunes the set of sequences by randomly choosing the ones that
-#' live on)
-#' @param recomb_mean The expected number of template switches during
-#' recombination between two sequences (chosen from a Poisson distribution with
-#' this as its mean).
-#' @param selection_threshold What sequence similarity percentage to the
-#' original sequence we wish to maintain (distant sequences are dropped over the
-#' course of the simulation).
-#' @param fam_proportion If this proportion of the overall sequence similarity
-#' matrix falls below a certain percentage (fam_percentage), then we split the
-#' current family into two families, and allow for recombination only within
-#' families.
-#' @param fam_percentage Refer to documentation for fam_proportion
-#' @param file_out Where should the results of the simulation be saved? (This
-#' can be parsed by input_file)
-#' @param num_out_tags How many times across the simulation will we output the
-#' tags (unique identifiers) of the sequences and their families
-#' @param num_out_seqs How many times across the simulation will we output the
-#' raw sequences themselves
-#' @param num_out_init How many times across the simulation will we output the
-#' distance of each sequence to the initial sequence
-#' @param num_out_pair How many times across the simulation will we output the
-#' pairwise distance between all pairs of sequences
-#' @param to_randomise Should this simulation be run with a random seed to begin
-#' with? (Based on system time)
-#' @param to_seed Should this sequence be run with a specific initial seed? If
-#' so, then the seed is specified by the parameter sseed
-#' @param seed Refer to documentation of to_seed
-#' @param sequence_numbering Where should the numbering (specifying "tags", or
-#' unique identifiers) for sequences begin?
-#' @param family_numbering Where should the numbering (specifying "tags", or
-#' unique identifiers) for families begin?
 #' @export
-simulate_with_flags_random <- function(
-  num_seq, seq_length, point_mutation_model = "K80",
-  num_sensitive_posns = 10, inactive_probability = 0.1,
-  num_jumps = 100, timestep = 1,
-  burst_probability = 0.1, burst_mean = 1,
-  max_active_copies = 100, max_total_copies = 200,
-  recomb_mean = 1,
-  selection_threshold = 0, fam_proportion = 1, fam_percentage = 100,
-  file_out,
-  num_out_tags = 100, num_out_init = 100, num_out_seqs = 10, num_out_pair = 20,
-  to_randomise = TRUE, to_seed = FALSE, seed = 0,
-  sequence_numbering = 0, family_numbering = 0,
-  logging = FALSE
-) {
-  rcpp_simulate_with_flags_random(
-    num_seq, seq_length,
-    point_mutation_model,
-    num_sensitive_posns, inactive_probability,
-    num_jumps, timestep,
-    burst_probability, burst_mean,
-    max_active_copies, max_total_copies,
-    recomb_mean,
-    selection_threshold, fam_proportion, fam_percentage,
-    file_out, num_out_tags, num_out_init, num_out_seqs, num_out_pair,
-    to_randomise, to_seed, seed,
-    sequence_numbering, family_numbering,
-    logging
-  )
-}
-
-#' Run an entire simulation without flags
-#' @inheritParams simulate_with_flags_random
-#' @export
-simulate_without_flags_random <- function(
-  num_seq, seq_length, point_mutation_model = "K80",
-  num_jumps = 100, timestep = 1,
-  burst_probability = 0.1, burst_mean = 1,
-  max_active_copies = 100,
-  recomb_mean = 1,
-  file_out,
-  num_out_tags = 100, num_out_init = 100, num_out_seqs = 10, num_out_pair = 20,
-  to_randomise = TRUE, to_seed = FALSE, seed = 0,
-  sequence_numbering = 0, family_numbering = 0,
-  logging = FALSE
-) {
-  rcpp_simulate_without_flags_random(
-    num_seq, seq_length, point_mutation_model,
-    num_jumps, timestep,
-    burst_probability, burst_mean,
-    max_active_copies,
-    recomb_mean,
-    file_out,
-    num_out_tags, num_out_init, num_out_seqs, num_out_pair,
-    to_randomise, to_seed, seed,
-    sequence_numbering, family_numbering,
-    logging
-  )
-}
-
-#' Run an entire simulation with flags
-#' @param init_seqs What are the initial sequences to begin the simulation with?
-#' @param init_seq_index Which initial sequence from the set of init_seqs should
-#' we use as the reference for comparing other sequences to?
-#' @inheritParams simulate_with_flags_random
-#' @export
-simulate_with_flags_specified <- function(
-  init_seqs, init_seq_index = 0, point_mutation_model = "K80",
-  num_sensitive_posns = 10, inactive_probability = 0.1,
-  num_jumps = 100, timestep = 1,
-  burst_probability = 0.1, burst_mean = 1,
-  max_active_copies = 100, max_total_copies = 200,
-  recomb_mean = 1,
-  selection_threshold = 0, fam_proportion = 1, fam_percentage = 100,
-  file_out,
-  num_out_tags = 100, num_out_init = 100, num_out_seqs = 10, num_out_pair = 20,
-  to_randomise = TRUE, to_seed = FALSE, seed = 0,
-  sequence_numbering = 0, family_numbering = 0,
-  logging = FALSE)
+simulate <- function(sequenceParams = SequenceParams(),
+                     simulationParams = SimulationParams(),
+                     mutationParams = MutationParams(),
+                     flagParams = FlagParams(),
+                     burstParams = BurstParams(),
+                     speciationParams = SpeciationParams(),
+                     outputParams = OutputParams(),
+                     seedParams = SeedParams())
 {
-  rcpp_simulate_with_flags_specified(
-    init_seqs, init_seq_index, point_mutation_model,
-    num_sensitive_posns, inactive_probability,
-    num_jumps, timestep,
-    burst_probability, burst_mean,
-    max_active_copies, max_total_copies,
-    recomb_mean,
-    selection_threshold, fam_proportion, fam_percentage,
-    file_out,
-    num_out_tags, num_out_init, num_out_seqs, num_out_pair,
-    to_randomise, to_seed, seed,
-    sequence_numbering, family_numbering,
-    logging)
-}
+  num_seq <- sequenceParams$num_initial_copies
+  seq_length <- sequenceParams$seq_length
+  num_jumps <- simulationParams$num_jumps
+  timestep <- simulationParams$timestep
+  max_active_copies <- simulationParams$max_active_copies
+  model <- mutationParams$model
+  length_critial_region <- flagParams$length_critial_region
+  prob_inactive_when_mutated <- flagParams$prob_inactive_when_mutated
+  max_inactive_copies <- flagParams$max_inactive_copies
+  burst_probability <- burstParams$burst_probability
+  burst_mean <- burstParams$burst_mean
+  recomb_mean <- burstParams$recomb_mean
+  recomb_similarity <- burstParams$recomb_similarity # TODO: Use this
+  selection_threshold <- speciationParams$selection_threshold
+  species_similarity <- speciationParams$species_similarity
+  species_coherence <- speciationParams$species_coherence
+  file_out <- outputParams$file_out
+  num_out_seqs <- outputParams$num_out_seqs
+  num_out_init <- outputParams$num_out_init
+  num_out_pair <- outputParams$num_out_pair
+  num_out_species <- outputParams$num_out_species
+  to_randomise <- seedParams$to_randomise
+  to_seed <- seedParams$to_seed
+  seed <- seedParams$seed
 
-#' Run an entire simulation without flags
-#' @inheritParams simulate_with_flags_specified
-#' @export
-simulate_without_flags_specified <- function(
-  init_seqs, init_seq_index = 0, point_mutation_model = "K80",
-  num_jumps = 100, timestep = 1,
-  burst_probability = 0.1, burst_mean = 1,
-  max_active_copies = 100,
-  recomb_mean = 1,
-  file_out,
-  num_out_tags = 100, num_out_init = 100, num_out_seqs = 10, num_out_pair = 20,
-  to_randomise = TRUE, to_seed = FALSE, seed = 0,
-  sequence_numbering = 0, family_numbering = 0,
-  logging = FALSE)
-{
-  rcpp_simulate_without_flags_specified(
-    init_seqs, init_seq_index, point_mutation_model,
-    num_jumps, timestep,
-    burst_probability, burst_mean,
-    max_active_copies,
-    recomb_mean,
-    file_out,
-    num_out_tags, num_out_init, num_out_seqs, num_out_pair,
-    to_randomise, to_seed, seed,
-    sequence_numbering, family_numbering,
-    logging)
+  if (prob_inactive_when_mutated > 0 && length_critial_region >= 1) {
+    rcpp_simulate_with_flags_random(
+      num_seq, seq_length,
+      model,
+      length_critial_region, prob_inactive_when_mutated,
+      num_jumps, timestep,
+      burst_probability, burst_mean,
+      max_active_copies, max_active_copies + max_inactive_copies,
+      recomb_mean,
+      selection_threshold, species_similarity, species_coherence,
+      file_out, num_out_species, num_out_init, num_out_seqs, num_out_pair,
+      to_randomise, to_seed, seed,
+      0, 0,
+      FALSE
+    )
+  } else {
+    rcpp_simulate_without_flags_random(
+      num_seq, seq_length,
+      model,
+      num_jumps, timestep,
+      burst_probability, burst_mean,
+      max_active_copies,
+      recomb_mean,
+      file_out, num_out_species, num_out_init, num_out_seqs, num_out_pair,
+      to_randomise, to_seed, seed,
+      0, 0,
+      FALSE
+    )
+  }
 }

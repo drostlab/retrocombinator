@@ -19,7 +19,7 @@ int main() {
     int num_out_init = 10;
     int num_out_seqs = 0;
     int num_out_pair = 10;
-    string simulation = "Old";
+    string simulation = "Phylogeny";
 
     if (simulation == "Big") {
         num_seq = 10;
@@ -58,8 +58,8 @@ int main() {
         max_total_copies =  1000;
 
         selection_threshold = 10;
-        fam_proportion = 0.7;
-        fam_percentage = 70;
+        fam_proportion = 0.5;
+        fam_percentage = 50;
     }
     else if (simulation == "Old") {
         num_seq = 10;
