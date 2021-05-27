@@ -26,7 +26,7 @@ plotInitialDistance <- function(data) {
       ggplot2::aes(x=realTime, y=seqSimilarity,
                    group=sequenceId,
                    color=isActive,
-                   alpha=0.3)
+                   alpha=0.2)
     ) +
     ggplot2::geom_line() +
     ggplot2::geom_point() +
@@ -77,7 +77,7 @@ plotPairwiseDistance <- function(data) {
                    #linetype=is_active,
                    color=sameSpecies,
                    size = age,
-                   alpha = 0.5
+                   alpha = 0.2
       )) +
     ggplot2::labs(x = "Time (millions of years)",
                   y = "Pairwise sequence similarity") +

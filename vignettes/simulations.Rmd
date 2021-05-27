@@ -27,7 +27,8 @@ library(retrocombinator)
 ```
 
 To run a simulation, call the `simulateEvolution()` function. This runs a
-simulation with default parameters.
+simulation with default parameters, and returns a path to a simulation output
+file.
 
 ```{r}
 simulateEvolution()
@@ -38,11 +39,13 @@ you wish to overwrite, such as in the example given below. Refer to the section
 below for what the various parameters are.  Whenever a parameter is not
 specified explicitly, the default will be used.
 
-```{r}
+```{r, eval = FALSE}
+# --- NOT RUN (this is an alternative) ---
 burstParams <- BurstParams(recombMean = 1.0)
 flagParams <- FlagParams(lengthCriticalRegion = 5,
                          probInactiveWhenMutated = 0.1)
 simulateEvolution(burstParams = burstParams, flagParams = flagParams)
+# ----------------------------------------
 ```
 
 ### Using custom sequences
@@ -98,7 +101,7 @@ simulateEvolution(sequenceParams = sequenceParams)
       of the critical region of a retrotransposon **(default = 10)**
     * `probInactiveWhenMutated : numeric` The probability that a point
       mutation to the critical region causes a sequence to become inactive
-      **(default = 0.001)**
+      **(default = 0.01)**
     * `maxInactiveCopies : numeric` The largest population size of
       inactive sequences to keep track of (if this is exceeded, sequences are
       randomly discarded to simulate death) **(default = 500)** 
@@ -134,11 +137,11 @@ simulateEvolution(sequenceParams = sequenceParams)
       **(default = 0.5)**
     * `speciesSimilarity : numeric` What sequence similarity do two sequences
       have to be to each other for them to be considered to be of the same
-      species? **(default = 0.7)**
+      species? **(default = 0.9)**
     * `speciesCoherence : numeric` What proportion of the overall sequence
       similarity matrix of a species needs to score be above `speciesSimilarity`
       before we decide the species has split into two species?
-      **(default = 0.5)**
+      **(default = 0.8)**
 * `OutputParams` represents how and where the output of the simulation will
   be saved. It comprises of the following:
     * `outputFilename : character` Where should the simulation be saved? **(default =
@@ -187,18 +190,27 @@ data <- simulateEvolution() %>%
 
 This contains a list of two dataframes, that keep track of retrotransposon
 sequences, their similarity to the initial sequence, their pairwise similarity,
-and their lineage, across the timesteps of the evolution.
+and their lineage, across the timesteps of the evolution. 
 
-```{r, eval = FALSE}
+For pairwise similarity, pairs are not duplicated, and only distinct pairs are
+given. That is, for any timestep and sequences with `sequenceId` $a$ and $b$
+present at that time, a row is present in the `pairwise` dataframe if and only
+if $a < b$ .
+
+```{r}
 print(colnames(data$sequences))
 
 # step - timestep in the simulation
 # realTime - time since the start of the simulation (in millions of years)
-# sequenceId - the unique ID of the sequence (to track it over time); initial sequence has sequenceId 0 to (numInitialCopies-1)
+# sequenceId - the unique ID of the sequence (to track it over time); initial
+#              sequence has sequenceId 0 to (numInitialCopies-1)
 # speciesId - the unique ID of a species; initial species has speciesId 0
-# previousSpeciesId - the unique ID of the species this species emerged from; (-1 if nothing)
-# parentMain the unique ID of the sequence this burst from; (-1 if nothing)
-# parentOther - the unique ID of the sequence its parent recombined with; (-1 if nothing)
+# previousSpeciesId - the unique ID of the species this species emerged from; 
+#                     (-1 if nothing)
+# parentMain - the unique ID of the sequence this burst from; 
+#              (-1 if nothing)
+# parentOther - the unique ID of the sequence its parent recombined with; 
+#               (-1 if nothing)
 # distanceToInitial - the distance to the initial sequence
 # rawSequence - the raw sequence, as a character
 # isActive - whether or not the sequence is capable of transposition
@@ -208,7 +220,9 @@ print(colnames(data$pairwise))
 # step - timestep in the simulation
 # realTime - time since the start of the simulation (in millions of years)
 # sequenceId1 - an ID of a sequence present at the time
-# sequenceId2 - an ID of a different sequence present at the time
+# sequenceId2 - an ID of a different sequence present at the time; not all pairs
+#               are given - that is, for sequences a and b, either (a, b) or (b, a) 
+#               is present as a row but not both
 # distancePairwise - the distance between the two sequences
 
 # TODO: colnames(data$params)
@@ -218,13 +232,13 @@ print(colnames(data$pairwise))
 
 Summary statistics can be obtained from the data as follows.
 
-```{r, eval = FALSE}
+```{r}
 # TODO: summariseEvolution(data)
 ```
 
 The data can be visualised using the `plotEvolution` function
-```{r, eval = FALSE}
-# TODO: plotEvolution(data, "initial")   # Distance to initial sequence
-# TODO: plotEvolution(data, "pairwise")  # Pairwise distances between sequences
+```{r}
+plotEvolution(data, "initial")   # Distance to initial sequence
+plotEvolution(data, "pairwise")  # Pairwise distances between sequences
 # TODO: plotEvolution(data, "phylogeny") # Phylogeny of the sequences
 ```
