@@ -53,7 +53,7 @@ namespace retrocombinator
             EvolutionWithFlags e2(60, 2,
                                   0.5, 1,
                                   20, 30);
-            e2.set_selection_threshold(50);
+            e2.set_selection_threshold(0.50);
             e2.evolve(output2, pm2, base_strings2, 1);
             assert (files_same("test_obj/test_with_flags_2.out",
                                "test_cpp/benchmark_with_flags_2.test"));
@@ -75,7 +75,7 @@ namespace retrocombinator
             EvolutionWithFlags e3(5, 2,
                                   0.5, 1,
                                   20, 30);
-            e3.use_families_at(0.25, 80);
+            e3.use_families_at(0.25, 0.80);
             e3.evolve(output3, pm3, base_strings3, 1);
             assert (files_same("test_obj/test_with_flags_3.out",
                                "test_cpp/benchmark_with_flags_3.test"));

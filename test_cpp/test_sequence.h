@@ -47,7 +47,7 @@ namespace retrocombinator
         assert (S2.as_string() == "TTCTATTTGTTT");
         assert (S2.num_mutations() == 3);
         // Testing sequence similarity as a percentage
-        assert (S2.init_seq_similarity() == 75);
+        assert (S2.init_seq_similarity() == 0.75);
         assert (!S2.is_active());
 
         // Testing diff operator
@@ -55,9 +55,9 @@ namespace retrocombinator
         Sequence S3(seq_string3);
 
         assert (S2 * S3 == 3);
-        assert (S2 % S3 == 25);
+        assert (S2 % S3 == 0.25);
         assert (S2 * "TTTTTTTTTTTT" == 3);
-        assert (S2 % "TTTTTTTTTTTT" == 25);
+        assert (S2 % "TTTTTTTTTTTT" == 0.25);
 
         // Testing recombination
         std::string seq_string4("AAAAAAAAAAAA");

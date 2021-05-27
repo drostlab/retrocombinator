@@ -8,7 +8,7 @@ parseSimulationOutput <- function(filename)
   # TODO: extract parameters and store in the same dataframe
   data$params <- c()
   data$sequences <- data.frame()
-  data$pair <- data.frame()
+  data$pairwise <- data.frame()
 
   con = file(filename, "r")
 
@@ -119,7 +119,8 @@ parseSimulationOutput <- function(filename)
                         sequenceId=sequenceIds[[fam_i]][seq_i],
                         speciesId=speciesIds[fam_i], previousSpeciesId=previousSpeciesId_tags[fam_i],
                         parentMain=parentMain[seq_i], parentOther=parentOther[seq_i], isActive=isActive[seq_i],
-                        distanceToInitial=distanceToInitials[seq_i], raw=NA)
+                        distanceToInitial=distanceToInitials[seq_i],
+                        rawSequence=NA)
             data$sequences <- rbind(data$sequences, row)
           }
         }
@@ -134,7 +135,7 @@ parseSimulationOutput <- function(filename)
             rawSequence <- extract_line(con)
             found <- which(data$sequences$step == t & data$sequences$sequenceId==sequenceIds[[fam_i]][seq_i],
                            arr.ind = TRUE)
-            data$sequences[found, ]$raw  <- rawSequence
+            data$sequences[found, ]$rawSequence  <- rawSequence
           }
         }
       } # End 'for each family'
@@ -185,10 +186,13 @@ parseSimulationOutput <- function(filename)
           f1 <- f1 + 1
         } # end <for family F1>
 
-        data$pair <- rbind(data$pair,
+        data$pairwise <- rbind(data$pairwise,
                            data.frame(step=steps,realTime=realTimes,
                                       sequenceId1=sequenceId1s, sequenceId2=sequenceId2s,
-                                      distancePairwise=pairs)
+                                      distancePairwise=pairs) %>%
+                           dplyr::mutate(sequenceId1 = pmin(sequenceId1, sequenceId2),
+                                         sequenceId2 = pmax(sequenceId1, sequenceId2)
+                           )
         )
 
       } # end <extract pair data>

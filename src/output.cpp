@@ -62,10 +62,12 @@ void Output::print_pair(const std::list<Family>& families)
     {
         for (auto s1 = f1->seqs.begin(); s1 != f1->seqs.end(); ++s1)
         {
+            // same family
             for (auto s2 = std::next(s1); s2 != f1->seqs.end(); ++s2)
             {
                 fout << ((*s1) * (*s2)) << " ";
             }
+            // different family
             for (auto f2 = std::next(f1); f2 != families.end(); ++f2)
             {
                 for (auto s2 = f2->seqs.begin(); s2 != f2->seqs.end(); ++s2)

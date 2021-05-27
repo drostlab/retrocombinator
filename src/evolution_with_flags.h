@@ -17,7 +17,7 @@ namespace retrocombinator
          */
         const size_type max_total_copies;
 
-        /** What percentage sequence similarity to the original we wish to
+        /** What sequence similarity to the original we wish to
          *  maintain.
          */
         double selection_threshold;
@@ -46,10 +46,10 @@ namespace retrocombinator
         ///@{
         /** Parameters for deciding when to split a family into two.
          *  If \p fam_proportion of the sequence similarity matrix goes
-         *  below \p fam_percentage then split the family into two.
+         *  below \p fam_coherence then split the family into two.
          */
         double fam_proportion;
-        double fam_percentage;
+        double fam_coherence;
         ///@}
 
     public:
@@ -62,13 +62,13 @@ namespace retrocombinator
                   size_type max_active_copies, size_type max_total_copies);
 
         /// To kill sequences that have diverged too much
-        void set_selection_threshold(double percentage);
+        void set_selection_threshold(double threshold);
 
         /** To prevent distant sequences from recombining.
-         *  If \p proportion of the sequence similarity matrix goes below \p
-         *  percentage then split the family into two.
+         *  If \p proportion of the sequence similarity matrix goes below
+          * \p coherence then split the family into two.
          */
-        void use_families_at(double proportion, double percentage);
+        void use_families_at(double proportion, double coherence);
     };
 }
 

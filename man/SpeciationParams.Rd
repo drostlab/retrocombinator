@@ -6,8 +6,8 @@
 \usage{
 SpeciationParams(
   selectionThreshold = 0.5,
-  speciesSimilarity = 0.7,
-  speciesCoherence = 0.5
+  speciesSimilarity = 0.9,
+  speciesCoherence = 0.8
 )
 }
 \arguments{

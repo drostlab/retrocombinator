@@ -10,7 +10,7 @@ is.SequenceParams  <- function(x) inherits(x, 'SequenceParams')
 #' specified)
 #' @export
 SequenceParams <- function(numInitialCopies = 20,
-                           sequenceLength = 500,
+                           sequenceLength = 5000,
                            initialSequence = NULL) {
 
   stopifnot("numInitialCopies must be a positive integer" =
@@ -99,7 +99,7 @@ is.FlagParams  <- function(x) inherits(x, 'FlagParams')
 #' live on)
 #' @export
 FlagParams <- function(lengthCriticalRegion = 10,
-                       probInactiveWhenMutated = 0.001,
+                       probInactiveWhenMutated = 0.01,
                        maxInactiveCopies = 500) {
   stopifnot("lengthCriticalRegion must be a positive integer" =
             isPositiveNumber(lengthCriticalRegion))
@@ -165,8 +165,8 @@ is.SpeciationParams  <- function(x) inherits(x, 'SpeciationParams')
 #' @param speciesCoherence Refer to `speciesSimilarity`
 #' @export
 SpeciationParams <- function(selectionThreshold = 0.5,
-                             speciesSimilarity = 0.7,
-                             speciesCoherence = 0.5) {
+                             speciesSimilarity = 0.9,
+                             speciesCoherence = 0.8) {
   stopifnot("selectionThreshold must be a valid number between 0 and 1" =
             isProbability(selectionThreshold))
   stopifnot("speciesSimilarity must be a valid number between 0 and 1" =

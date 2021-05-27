@@ -180,7 +180,7 @@ namespace retrocombinator
          */
         double init_seq_similarity() const
         {
-            return (100.0-(100.0*mutations.size())/this->get_length());
+            return (1.0-(1.0*mutations.size())/this->get_length());
         }
 
         /** Pairwise distances between two sequences.
@@ -196,12 +196,12 @@ namespace retrocombinator
           */
         friend size_type operator *(const Sequence& s1, std::string s2);
 
-        /** Pairwise dissimilarity (%) between two sequences.
-         *  Similarity is 100-dissimilarity.
+        /** Pairwise dissimilarity between two sequences.
+         *  Similarity is 1-dissimilarity.
           */
         friend double operator %(const Sequence& s1, const Sequence& s2);
-        /** Pairwise dissimilarity (%) between a sequence and a string.
-         *  Similarity is 100-dissimilarity.
+        /** Pairwise dissimilarity between a sequence and a string.
+         *  Similarity is 1-dissimilarity.
           */
         friend double operator %(const Sequence& s1, std::string s2);
     };

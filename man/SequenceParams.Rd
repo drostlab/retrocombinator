@@ -5,8 +5,8 @@
 \title{Create SequenceParams object}
 \usage{
 SequenceParams(
-  numInitialCopies = 100,
-  sequenceLength = 500,
+  numInitialCopies = 20,
+  sequenceLength = 5000,
   initialSequence = NULL
 )
 }

@@ -5,12 +5,17 @@
 \title{Create FlagParams object}
 \usage{
 FlagParams(
-  length_critial_region = 10,
-  probInactiveWhenMutated = 0.001,
+  lengthCriticalRegion = 10,
+  probInactiveWhenMutated = 0.01,
   maxInactiveCopies = 500
 )
 }
 \arguments{
+\item{lengthCriticalRegion}{How many positions (chosen randomly) in the
+sequence are essential for the sequence to remain active (with the potential
+to burst)? If the sequence experiences mutations in these areas, it loses its
+activity with some probability}
+
 \item{probInactiveWhenMutated}{What is the probability that a mutation in
 the critical region causes the sequence to lose its bursting potential?}
 
@@ -18,11 +23,6 @@ the critical region causes the sequence to lose its bursting potential?}
 allow in our simulation (if the number ever exceeds this threshold, the
 simulation prunes the set of sequences by randomly choosing the ones that
 live on)}
-
-\item{lengthCriticalRegion}{How many positions (chosen randomly) in the
-sequence are essential for the sequence to remain active (with the potential
-to burst)? If the sequence experiences mutations in these areas, it loses its
-activity with some probability}
 }
 \description{
 Create FlagParams object

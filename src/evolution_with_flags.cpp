@@ -14,7 +14,7 @@ EvolutionWithFlags::EvolutionWithFlags(size_type num_jumps, double timestep,
               max_active_copies),
     max_total_copies(max_total_copies),
     selection_threshold(0), // no selection bias initially
-    fam_proportion(1.0), fam_percentage(100) // no family splitting initially
+    fam_proportion(1.0), fam_coherence(1.0) // no family splitting initially
 {}
 
 void EvolutionWithFlags::burst_seqs(const size_type /*unused t*/,
@@ -71,7 +71,7 @@ void EvolutionWithFlags::burst_seqs(const size_type /*unused t*/,
     }
 
     kill_sequences(num_active_seqs, num_total_seqs);
-    if (fam_percentage < 100)
+    if (fam_coherence < 1.0)
     {
         split_families();
     }
@@ -173,9 +173,9 @@ void EvolutionWithFlags::split_families()
             for (size_type j=i+1; j < fam_size; ++j)
             {
                 auto diss = family_it->seqs[i] % family_it->seqs[j];
-                dist_matrix[i][j] = 100.0 - diss;
+                dist_matrix[i][j] = 1.0 - diss;
                 dist_matrix[j][i] = dist_matrix[i][j];
-                if (dist_matrix[i][j] < fam_percentage)
+                if (dist_matrix[i][j] < fam_coherence)
                 {
                     ++num_dissimilar;
                 }
@@ -214,26 +214,26 @@ void EvolutionWithFlags::split_families()
     }
 }
 
-void EvolutionWithFlags::set_selection_threshold(double percentage)
+void EvolutionWithFlags::set_selection_threshold(double threshold)
 {
-    if (percentage < 0 || percentage > 100)
+    if (threshold < 0 || threshold > 1.0)
     {
-        throw Exception("Percentage needs to be between 0 and 100");
+        throw Exception("Similarity needs to be between 0 and 1.0");
     }
-    selection_threshold = percentage;
+    selection_threshold = threshold;
 }
 
-void EvolutionWithFlags::use_families_at(double proportion, double percentage)
+void EvolutionWithFlags::use_families_at(double proportion, double coherence)
 {
     if (proportion < 0 || proportion > 1.0)
     {
         throw Exception("Proportion needs to be between 0.0 and 1.0");
     }
-    if (percentage < 0 || percentage > 100)
+    if (coherence < 0 || coherence > 1.0)
     {
-        throw Exception("Percentage needs to be between 0 and 100");
+        throw Exception("Similarity needs to be between 0 and 1.0");
     }
 
     fam_proportion = proportion;
-    fam_percentage = percentage;
+    fam_coherence = coherence;
 }

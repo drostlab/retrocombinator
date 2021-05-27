@@ -4,16 +4,14 @@
 \alias{SeedParams}
 \title{Create SeedParams object}
 \usage{
-SeedParams(toRandomise = FALSE, toSeed = TRUE, seedForRandom = 0)
+SeedParams(toSeed = TRUE, seedForRandom = 0)
 }
 \arguments{
-\item{toRandomise}{Should this simulation be run with a random seed to begin
-with? (Based on system time)}
-
 \item{toSeed}{Should this sequence be run with a specific initial seed? If
-so, then the seed is specified by the parameter seedForRandom}
+so, then the seed is specified by the parameter seedForRandom; else a seed
+based on system time is used}
 
-\item{seedForRandom}{Refer to documentation of toSeed}
+\item{seedForRandom}{seed to a (pseudo)random number generator, only used if `toSeed` is TRUE}
 }
 \description{
 Create SeedParams object

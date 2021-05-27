@@ -36,7 +36,7 @@ namespace retrocombinator
                 60, 2,
                 0.5, 1,
                 20, 30, 1,
-                50, 0.25, 80,
+                0.50, 0.25, 0.80,
                 "test_obj/test_simulation_with_flags.out",
                 60, 30, 10, 6,
                 false, true, 0,
