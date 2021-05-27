@@ -6,21 +6,29 @@ is.SequenceParams  <- function(x) inherits(x, 'SequenceParams')
 #' @param num_initial_copies The initial number of sequences to consider
 #' @param seq_length The number of nucleotides in each of the sequences in the
 #' simulation
-#' @param seq_filename A path to a sequence to be used as initial sequence
+#' @param initial_sequence An initial sequence (ignores seq_length if this is
+#' specified)
 #' @export
 SequenceParams <- function(num_initial_copies = 100,
                            seq_length = 500,
-                           seq_filename = NULL) {
-  if(!is.null(seq_filename)) {
-    stop('Not yet implemented reading of sequence file')
-  }
-  stopifnot('num_initial_copies must be a positive integer' =
-            isPositiveNumber(num_initial_copies))
-  stopifnot('seq_length must be a positive integer' =
-            isPositiveNumber(seq_length))
+                           initial_sequence = NULL) {
 
-  params <- list(num_initial_copies = num_initial_copies,
-                 seq_length = seq_length)
+  stopifnot("num_initial_copies must be a positive integer" =
+            isPositiveNumber(num_initial_copies))
+  params <- list(num_initial_copies = num_initial_copies)
+
+  if(!is.null(initial_sequence)) {
+    stopifnot("initial_sequence must be a character" =
+              is.character(initial_sequence))
+    stopifnot("initial_sequence must be a character" =
+              is.character(initial_sequence))
+    params$initial_sequence <- initial_sequence
+  }
+  else {
+    stopifnot("seq_length must be a positive integer" =
+              isPositiveNumber(seq_length))
+    params$seq_length <- seq_length
+  }
   class(params) <- 'SequenceParams'
   return(params)
 }
@@ -40,11 +48,11 @@ is.SimulationParams  <- function(x) inherits(x, 'SimulationParms')
 SimulationParams <- function(num_jumps = 20,
                              timestep = 1,
                              max_active_copies = 500) {
-  stopifnot('num_jumps must be a positive integer' =
+  stopifnot("num_jumps must be a positive integer" =
             isPositiveNumber(num_jumps))
-  stopifnot('timestep must be a positive number' =
+  stopifnot("timestep must be a positive number" =
             isPositiveNumber(timestep))
-  stopifnot('max_active_copies must be a positive integer' =
+  stopifnot("max_active_copies must be a positive integer" =
             isPositiveNumber(max_active_copies))
 
   params <- list(num_jumps = num_jumps,
@@ -66,7 +74,7 @@ is.MutationParams  <- function(x) inherits(x, 'MutationParams')
 #' Reversible Model, Tavaré 1986).
 #' @export
 MutationParams <- function(model = 'K80') {
-  stopifnot('point mutation model name is invalid' =
+  stopifnot("point mutation model name is invalid" =
             model %in% c('JC69', 'K80', 'F81', 'HKY85', 'TN93', 'GTR'))
 
   params <- list(model = model)
@@ -93,11 +101,11 @@ is.FlagParams  <- function(x) inherits(x, 'FlagParams')
 FlagParams <- function(length_critial_region = 10,
                        prob_inactive_when_mutated = 0.001,
                        max_inactive_copies = 500) {
-  stopifnot('length_critial_region must be a positive integer' =
+  stopifnot("length_critial_region must be a positive integer" =
             isPositiveNumber(length_critial_region))
-  stopifnot('prob_inactive_when_mutated must be a valid number between 0 and 1' =
+  stopifnot("prob_inactive_when_mutated must be a valid number between 0 and 1" =
             isProbability(prob_inactive_when_mutated))
-  stopifnot('max_inactive_copies must be a positive integer' =
+  stopifnot("max_inactive_copies must be a positive integer" =
             isPositiveNumber(max_inactive_copies))
 
   params <- list(length_critial_region = length_critial_region,
@@ -125,13 +133,13 @@ BurstParams <- function(burst_probability = 0.1,
                         burst_mean = 1,
                         recomb_mean = 1.5,
                         recomb_similarity = 0.85) {
-  stopifnot('burst_probability must be a valid number between 0 and 1' =
+  stopifnot("burst_probability must be a valid number between 0 and 1" =
             isProbability(burst_probability))
-  stopifnot('burst_mean must be a positive number' =
+  stopifnot("burst_mean must be a positive number" =
             isPositiveNumber(burst_mean))
-  stopifnot('recomb_mean must be a positive number' =
+  stopifnot("recomb_mean must be a positive number" =
             isPositiveNumber(recomb_mean))
-  stopifnot('recomb_similarity must be a valid number between 0 and 1' =
+  stopifnot("recomb_similarity must be a valid number between 0 and 1" =
             isProbability(recomb_similarity))
 
   params <- list(burst_probability = burst_probability,
@@ -159,11 +167,11 @@ is.SpeciationParams  <- function(x) inherits(x, 'SpeciationParams')
 SpeciationParams <- function(selection_threshold = 0.5,
                              species_similarity = 0.7,
                              species_coherence = 0.5) {
-  stopifnot('selection_threshold must be a valid number between 0 and 1' =
+  stopifnot("selection_threshold must be a valid number between 0 and 1" =
             isProbability(selection_threshold))
-  stopifnot('species_similarity must be a valid number between 0 and 1' =
+  stopifnot("species_similarity must be a valid number between 0 and 1" =
             isProbability(species_similarity))
-  stopifnot('species_coherence must be a valid number between 0 and 1' =
+  stopifnot("species_coherence must be a valid number between 0 and 1" =
             isProbability(species_coherence))
 
   params <- list(selection_threshold = selection_threshold,
@@ -194,13 +202,13 @@ OutputParams <- function(file_out = 'output.out',
                          num_out_init = 10,
                          num_out_pair = 10,
                          num_out_species = 10) {
-  stopifnot('num_out_seqs must be a positive integer' =
+  stopifnot("num_out_seqs must be a positive integer" =
             isPositiveNumber(num_out_seqs))
-  stopifnot('num_out_init must be a positive integer' =
+  stopifnot("num_out_init must be a positive integer" =
             isPositiveNumber(num_out_init))
-  stopifnot('num_out_pair must be a positive integer' =
+  stopifnot("num_out_pair must be a positive integer" =
             isPositiveNumber(num_out_pair))
-  stopifnot('num_out_species must be a positive integer' =
+  stopifnot("num_out_species must be a positive integer" =
             isPositiveNumber(num_out_species))
 
   params <- list(file_out = file_out,
@@ -226,11 +234,11 @@ is.SeedParams  <- function(x) inherits(x, 'SeedParams')
 SeedParams <- function(to_randomise = FALSE,
                        to_seed = TRUE,
                        seed = 0) {
-  stopifnot('to_randomise must be a logical' =
+  stopifnot("to_randomise must be a logical" =
             is.logical(to_randomise))
-  stopifnot('to_seed must be a logical' =
+  stopifnot("to_seed must be a logical" =
             is.logical(to_seed))
-  stopifnot('seed must be a number' =
+  stopifnot("seed must be a number" =
             is.numeric(seed))
 
   params <- list(to_randomise = to_randomise,

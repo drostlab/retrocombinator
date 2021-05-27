@@ -13,6 +13,7 @@ simulate <- function(sequenceParams = SequenceParams(),
 {
   num_seq <- sequenceParams$num_initial_copies
   seq_length <- sequenceParams$seq_length
+  initial_sequence <- sequenceParams$initial_sequence
   num_jumps <- simulationParams$num_jumps
   timestep <- simulationParams$timestep
   max_active_copies <- simulationParams$max_active_copies
@@ -37,32 +38,64 @@ simulate <- function(sequenceParams = SequenceParams(),
   seed <- seedParams$seed
 
   if (prob_inactive_when_mutated > 0 && length_critial_region >= 1) {
-    rcpp_simulate_with_flags_random(
-      num_seq, seq_length,
-      model,
-      length_critial_region, prob_inactive_when_mutated,
-      num_jumps, timestep,
-      burst_probability, burst_mean,
-      max_active_copies, max_active_copies + max_inactive_copies,
-      recomb_mean,
-      selection_threshold, species_similarity, species_coherence,
-      file_out, num_out_species, num_out_init, num_out_seqs, num_out_pair,
-      to_randomise, to_seed, seed,
-      0, 0,
-      FALSE
-    )
+    if (is.null(initial_sequence)) {
+      rcpp_simulate_with_flags_random(
+        num_seq, seq_length,
+        model,
+        length_critial_region, prob_inactive_when_mutated,
+        num_jumps, timestep,
+        burst_probability, burst_mean,
+        max_active_copies, max_active_copies + max_inactive_copies,
+        recomb_mean,
+        selection_threshold, species_similarity, species_coherence,
+        file_out, num_out_species, num_out_init, num_out_seqs, num_out_pair,
+        to_randomise, to_seed, seed,
+        0, 0,
+        FALSE
+      )
+    } else {
+      rcpp_simulate_with_flags_specified(
+        initial_sequence, 0,
+        model,
+        length_critial_region, prob_inactive_when_mutated,
+        num_jumps, timestep,
+        burst_probability, burst_mean,
+        max_active_copies, max_active_copies + max_inactive_copies,
+        recomb_mean,
+        selection_threshold, species_similarity, species_coherence,
+        file_out, num_out_species, num_out_init, num_out_seqs, num_out_pair,
+        to_randomise, to_seed, seed,
+        0, 0,
+        FALSE
+      )
+    }
   } else {
-    rcpp_simulate_without_flags_random(
-      num_seq, seq_length,
-      model,
-      num_jumps, timestep,
-      burst_probability, burst_mean,
-      max_active_copies,
-      recomb_mean,
-      file_out, num_out_species, num_out_init, num_out_seqs, num_out_pair,
-      to_randomise, to_seed, seed,
-      0, 0,
-      FALSE
-    )
+    if (is.null(initial_sequence)) {
+      rcpp_simulate_without_flags_random(
+        num_seq, seq_length,
+        model,
+        num_jumps, timestep,
+        burst_probability, burst_mean,
+        max_active_copies,
+        recomb_mean,
+        file_out, num_out_species, num_out_init, num_out_seqs, num_out_pair,
+        to_randomise, to_seed, seed,
+        0, 0,
+        FALSE
+      )
+    } else {
+      rcpp_simulate_without_flags_specified(
+        initial_sequence, 0,
+        model,
+        num_jumps, timestep,
+        burst_probability, burst_mean,
+        max_active_copies,
+        recomb_mean,
+        file_out, num_out_species, num_out_init, num_out_seqs, num_out_pair,
+        to_randomise, to_seed, seed,
+        0, 0,
+        FALSE
+      )
+    }
   }
 }
