@@ -5,22 +5,22 @@
 \title{Create SpeciationParams object}
 \usage{
 SpeciationParams(
-  selection_threshold = 0.5,
-  species_similarity = 0.7,
-  species_coherence = 0.5
+  selectionThreshold = 0.5,
+  speciesSimilarity = 0.7,
+  speciesCoherence = 0.5
 )
 }
 \arguments{
-\item{selection_threshold}{What sequence similarity percentage to the
+\item{selectionThreshold}{What sequence similarity percentage to the
 original sequence we wish to maintain (distant sequences are dropped over the
 course of the simulation)}
 
-\item{species_similarity}{If this proportion of the overall sequence similarity
+\item{speciesSimilarity}{If this proportion of the overall sequence similarity
 matrix falls below a certain percentage (species_coehrence), then we split the
 current species into two species, and allow for recombination only within
 species.}
 
-\item{species_coherence}{Refer to `species_similarity`}
+\item{speciesCoherence}{Refer to `speciesSimilarity`}
 }
 \description{
 Create SpeciationParams object

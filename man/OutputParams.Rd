@@ -5,27 +5,27 @@
 \title{Create OutputParams object}
 \usage{
 OutputParams(
-  file_out,
-  num_out_seqs = 2,
-  num_out_init = 10,
-  num_out_pair = 10,
-  num_out_species = 10
+  outputFilename = "simulationOutput.out",
+  outputNumRawSequence = 2,
+  outputNumInitialDistance = 10,
+  outputNumPairwiseDistance = 10,
+  outputNumSpeciesTags = 10
 )
 }
 \arguments{
-\item{file_out}{Where should the results of the simulation be saved? (This
+\item{outputFilename}{Where should the results of the simulation be saved? (This
 can be parsed by input_file)}
 
-\item{num_out_seqs}{How many times across the simulation will we output the
+\item{outputNumRawSequence}{How many times across the simulation will we output the
 raw sequences themselves}
 
-\item{num_out_init}{How many times across the simulation will we output the
+\item{outputNumInitialDistance}{How many times across the simulation will we output the
 distance of each sequence to the initial sequence}
 
-\item{num_out_pair}{How many times across the simulation will we output the
+\item{outputNumPairwiseDistance}{How many times across the simulation will we output the
 pairwise distance between all pairs of sequences}
 
-\item{num_out_species}{How many times across the simulation will we output
+\item{outputNumSpeciesTags}{How many times across the simulation will we output
 the tags (unique identifiers) of the sequences and their species}
 }
 \description{

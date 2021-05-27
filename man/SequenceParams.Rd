@@ -4,15 +4,20 @@
 \alias{SequenceParams}
 \title{Create SequenceParams object}
 \usage{
-SequenceParams(num_initial_copies = 100, seq_length = 500, seq_filename = NULL)
+SequenceParams(
+  numInitialCopies = 100,
+  sequenceLength = 500,
+  initialSequence = NULL
+)
 }
 \arguments{
-\item{num_initial_copies}{The initial number of sequences to consider}
+\item{numInitialCopies}{The initial number of copies of a given sequence to consider}
 
-\item{seq_length}{The number of nucleotides in each of the sequences in the
+\item{sequenceLength}{The number of nucleotides in each of the sequences in the
 simulation}
 
-\item{seq_filename}{A path to a sequence to be used as initial sequence}
+\item{initialSequence}{An initial sequence (ignores sequenceLength if this is
+specified)}
 }
 \description{
 Create SequenceParams object

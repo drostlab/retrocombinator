@@ -5,24 +5,24 @@
 \title{Create BurstParams object}
 \usage{
 BurstParams(
-  burst_probability = 0.1,
-  burst_mean = 1,
-  recomb_mean = 1.5,
-  recomb_similarity = 0.85
+  burstProbability = 0.1,
+  burstMean = 1,
+  recombMean = 1.5,
+  recombSimilarity = 0.85
 )
 }
 \arguments{
-\item{burst_probability}{Probability that an active sequence bursts in one
+\item{burstProbability}{Probability that an active sequence bursts in one
 timestep}
 
-\item{burst_mean}{The Poisson mean for the distribution that specifies how
+\item{burstMean}{The Poisson mean for the distribution that specifies how
 many new sequences an active sequence will create during bursting}
 
-\item{recomb_mean}{The expected number of template switches during
+\item{recombMean}{The expected number of template switches during
 recombination between two sequences (chosen from a Poisson distribution with
 this as its mean).}
 
-\item{recomb_similarity}{TODO}
+\item{recombSimilarity}{TODO}
 }
 \description{
 Create BurstParams object

@@ -3,31 +3,31 @@
 is.SequenceParams  <- function(x) inherits(x, 'SequenceParams')
 
 #' Create SequenceParams object
-#' @param num_initial_copies The initial number of sequences to consider
-#' @param seq_length The number of nucleotides in each of the sequences in the
+#' @param numInitialCopies The initial number of copies of a given sequence to consider
+#' @param sequenceLength The number of nucleotides in each of the sequences in the
 #' simulation
-#' @param initial_sequence An initial sequence (ignores seq_length if this is
+#' @param initialSequence An initial sequence (ignores sequenceLength if this is
 #' specified)
 #' @export
-SequenceParams <- function(num_initial_copies = 100,
-                           seq_length = 500,
-                           initial_sequence = NULL) {
+SequenceParams <- function(numInitialCopies = 20,
+                           sequenceLength = 500,
+                           initialSequence = NULL) {
 
-  stopifnot("num_initial_copies must be a positive integer" =
-            isPositiveNumber(num_initial_copies))
-  params <- list(num_initial_copies = num_initial_copies)
+  stopifnot("numInitialCopies must be a positive integer" =
+            isPositiveNumber(numInitialCopies))
+  params <- list(numInitialCopies = numInitialCopies)
 
-  if(!is.null(initial_sequence)) {
-    stopifnot("initial_sequence must be a character" =
-              is.character(initial_sequence))
-    stopifnot("initial_sequence must be a character" =
-              is.character(initial_sequence))
-    params$initial_sequence <- initial_sequence
+  if(!is.null(initialSequence)) {
+    stopifnot("initialSequence must be a character" =
+              is.character(initialSequence))
+    stopifnot("initialSequence must be a character" =
+              is.character(initialSequence))
+    params$initialSequence <- initialSequence
   }
   else {
-    stopifnot("seq_length must be a positive integer" =
-              isPositiveNumber(seq_length))
-    params$seq_length <- seq_length
+    stopifnot("sequenceLength must be a positive integer if initialSequence is not specified" =
+              isPositiveNumber(sequenceLength))
+    params$sequenceLength <- sequenceLength
   }
   class(params) <- 'SequenceParams'
   return(params)
@@ -38,26 +38,26 @@ SequenceParams <- function(num_initial_copies = 100,
 is.SimulationParams  <- function(x) inherits(x, 'SimulationParms')
 
 #' Create SimulationParams object
-#' @param num_jumps How many steps we have in our simulation
+#' @param numSteps How many steps we have in our simulation
 #' @param timestep How much time passes in one jump (unit: millions of years)
-#' @param max_active_copies The total number of sequences that have the ability
+#' @param maxActiveCopies The total number of sequences that have the ability
 #' to burst that we allow in a simulation (if the number ever exceeds this
 #' threshold, the simulation prunes the set of sequences by randomly choosing
 #' the ones that live on)
 #' @export
-SimulationParams <- function(num_jumps = 20,
+SimulationParams <- function(numSteps = 20,
                              timestep = 1,
-                             max_active_copies = 500) {
-  stopifnot("num_jumps must be a positive integer" =
-            isPositiveNumber(num_jumps))
+                             maxActiveCopies = 500) {
+  stopifnot("numSteps must be a positive integer" =
+            isPositiveNumber(numSteps))
   stopifnot("timestep must be a positive number" =
             isPositiveNumber(timestep))
-  stopifnot("max_active_copies must be a positive integer" =
-            isPositiveNumber(max_active_copies))
+  stopifnot("maxActiveCopies must be a positive integer" =
+            isPositiveNumber(maxActiveCopies))
 
-  params <- list(num_jumps = num_jumps,
+  params <- list(numSteps = numSteps,
                  timestep = timestep,
-                 max_active_copies = max_active_copies)
+                 maxActiveCopies = maxActiveCopies)
   class(params) <- 'SimulationParams'
   return(params)
 }
@@ -87,30 +87,30 @@ MutationParams <- function(model = 'K80') {
 is.FlagParams  <- function(x) inherits(x, 'FlagParams')
 
 #' Create FlagParams object
-#' @param length_critical_region How many positions (chosen randomly) in the
+#' @param lengthCriticalRegion How many positions (chosen randomly) in the
 #' sequence are essential for the sequence to remain active (with the potential
 #' to burst)? If the sequence experiences mutations in these areas, it loses its
 #' activity with some probability
-#' @param prob_inactive_when_mutated What is the probability that a mutation in
+#' @param probInactiveWhenMutated What is the probability that a mutation in
 #' the critical region causes the sequence to lose its bursting potential?
-#' @param max_inactive_copies The total number of inactive sequences that we
+#' @param maxInactiveCopies The total number of inactive sequences that we
 #' allow in our simulation (if the number ever exceeds this threshold, the
 #' simulation prunes the set of sequences by randomly choosing the ones that
 #' live on)
 #' @export
-FlagParams <- function(length_critial_region = 10,
-                       prob_inactive_when_mutated = 0.001,
-                       max_inactive_copies = 500) {
-  stopifnot("length_critial_region must be a positive integer" =
-            isPositiveNumber(length_critial_region))
-  stopifnot("prob_inactive_when_mutated must be a valid number between 0 and 1" =
-            isProbability(prob_inactive_when_mutated))
-  stopifnot("max_inactive_copies must be a positive integer" =
-            isPositiveNumber(max_inactive_copies))
+FlagParams <- function(lengthCriticalRegion = 10,
+                       probInactiveWhenMutated = 0.001,
+                       maxInactiveCopies = 500) {
+  stopifnot("lengthCriticalRegion must be a positive integer" =
+            isPositiveNumber(lengthCriticalRegion))
+  stopifnot("probInactiveWhenMutated must be a valid number between 0 and 1" =
+            isProbability(probInactiveWhenMutated))
+  stopifnot("maxInactiveCopies must be a positive integer" =
+            isPositiveNumber(maxInactiveCopies))
 
-  params <- list(length_critial_region = length_critial_region,
-                 prob_inactive_when_mutated = prob_inactive_when_mutated,
-                 max_inactive_copies = max_inactive_copies)
+  params <- list(lengthCriticalRegion = lengthCriticalRegion,
+                 probInactiveWhenMutated = probInactiveWhenMutated,
+                 maxInactiveCopies = maxInactiveCopies)
   class(params) <- 'FlagParams'
   return(params)
 }
@@ -120,32 +120,32 @@ FlagParams <- function(length_critial_region = 10,
 is.BurstParams  <- function(x) inherits(x, 'BurstParams')
 
 #' Create BurstParams object
-#' @param burst_probability Probability that an active sequence bursts in one
+#' @param burstProbability Probability that an active sequence bursts in one
 #' timestep
-#' @param burst_mean The Poisson mean for the distribution that specifies how
+#' @param burstMean The Poisson mean for the distribution that specifies how
 #' many new sequences an active sequence will create during bursting
-#' @param recomb_mean The expected number of template switches during
+#' @param recombMean The expected number of template switches during
 #' recombination between two sequences (chosen from a Poisson distribution with
 #' this as its mean).
-#' @param recomb_similarity TODO
+#' @param recombSimilarity TODO
 #' @export
-BurstParams <- function(burst_probability = 0.1,
-                        burst_mean = 1,
-                        recomb_mean = 1.5,
-                        recomb_similarity = 0.85) {
-  stopifnot("burst_probability must be a valid number between 0 and 1" =
-            isProbability(burst_probability))
-  stopifnot("burst_mean must be a positive number" =
-            isPositiveNumber(burst_mean))
-  stopifnot("recomb_mean must be a positive number" =
-            isPositiveNumber(recomb_mean))
-  stopifnot("recomb_similarity must be a valid number between 0 and 1" =
-            isProbability(recomb_similarity))
+BurstParams <- function(burstProbability = 0.1,
+                        burstMean = 1,
+                        recombMean = 1.5,
+                        recombSimilarity = 0.85) {
+  stopifnot("burstProbability must be a valid number between 0 and 1" =
+            isProbability(burstProbability))
+  stopifnot("burstMean must be a positive number" =
+            isPositiveNumber(burstMean))
+  stopifnot("recombMean must be a positive number" =
+            isPositiveNumber(recombMean))
+  stopifnot("recombSimilarity must be a valid number between 0 and 1" =
+            isProbability(recombSimilarity))
 
-  params <- list(burst_probability = burst_probability,
-                 burst_mean = burst_mean,
-                 recomb_mean = recomb_mean,
-                 recomb_similarity = recomb_similarity)
+  params <- list(burstProbability = burstProbability,
+                 burstMean = burstMean,
+                 recombMean = recombMean,
+                 recombSimilarity = recombSimilarity)
   class(params) <- 'BurstParams'
   return(params)
 }
@@ -155,28 +155,28 @@ BurstParams <- function(burst_probability = 0.1,
 is.SpeciationParams  <- function(x) inherits(x, 'SpeciationParams')
 
 #' Create SpeciationParams object
-#' @param selection_threshold What sequence similarity percentage to the
+#' @param selectionThreshold What sequence similarity percentage to the
 #' original sequence we wish to maintain (distant sequences are dropped over the
 #' course of the simulation)
-#' @param species_similarity If this proportion of the overall sequence similarity
+#' @param speciesSimilarity If this proportion of the overall sequence similarity
 #' matrix falls below a certain percentage (species_coehrence), then we split the
 #' current species into two species, and allow for recombination only within
 #' species.
-#' @param species_coherence Refer to `species_similarity`
+#' @param speciesCoherence Refer to `speciesSimilarity`
 #' @export
-SpeciationParams <- function(selection_threshold = 0.5,
-                             species_similarity = 0.7,
-                             species_coherence = 0.5) {
-  stopifnot("selection_threshold must be a valid number between 0 and 1" =
-            isProbability(selection_threshold))
-  stopifnot("species_similarity must be a valid number between 0 and 1" =
-            isProbability(species_similarity))
-  stopifnot("species_coherence must be a valid number between 0 and 1" =
-            isProbability(species_coherence))
+SpeciationParams <- function(selectionThreshold = 0.5,
+                             speciesSimilarity = 0.7,
+                             speciesCoherence = 0.5) {
+  stopifnot("selectionThreshold must be a valid number between 0 and 1" =
+            isProbability(selectionThreshold))
+  stopifnot("speciesSimilarity must be a valid number between 0 and 1" =
+            isProbability(speciesSimilarity))
+  stopifnot("speciesCoherence must be a valid number between 0 and 1" =
+            isProbability(speciesCoherence))
 
-  params <- list(selection_threshold = selection_threshold,
-                 species_similarity = species_similarity,
-                 species_coherence = species_coherence)
+  params <- list(selectionThreshold = selectionThreshold,
+                 speciesSimilarity = speciesSimilarity,
+                 speciesCoherence = speciesCoherence)
   class(params) <- 'SpeciationParams'
   return(params)
 }
@@ -186,36 +186,36 @@ SpeciationParams <- function(selection_threshold = 0.5,
 is.OutputParams  <- function(x) inherits(x, 'OutputParams')
 
 #' Create OutputParams object
-#' @param file_out Where should the results of the simulation be saved? (This
+#' @param outputFilename Where should the results of the simulation be saved? (This
 #' can be parsed by input_file)
-#' @param num_out_seqs How many times across the simulation will we output the
+#' @param outputNumRawSequence How many times across the simulation will we output the
 #' raw sequences themselves
-#' @param num_out_init How many times across the simulation will we output the
+#' @param outputNumInitialDistance How many times across the simulation will we output the
 #' distance of each sequence to the initial sequence
-#' @param num_out_pair How many times across the simulation will we output the
+#' @param outputNumPairwiseDistance How many times across the simulation will we output the
 #' pairwise distance between all pairs of sequences
-#' @param num_out_species How many times across the simulation will we output
+#' @param outputNumSpeciesTags How many times across the simulation will we output
 #' the tags (unique identifiers) of the sequences and their species
 #' @export
-OutputParams <- function(file_out = 'output.out',
-                         num_out_seqs = 2,
-                         num_out_init = 10,
-                         num_out_pair = 10,
-                         num_out_species = 10) {
-  stopifnot("num_out_seqs must be a positive integer" =
-            isPositiveNumber(num_out_seqs))
-  stopifnot("num_out_init must be a positive integer" =
-            isPositiveNumber(num_out_init))
-  stopifnot("num_out_pair must be a positive integer" =
-            isPositiveNumber(num_out_pair))
-  stopifnot("num_out_species must be a positive integer" =
-            isPositiveNumber(num_out_species))
+OutputParams <- function(outputFilename = 'simulationOutput.out',
+                         outputNumRawSequence = 2,
+                         outputNumInitialDistance = 10,
+                         outputNumPairwiseDistance = 10,
+                         outputNumSpeciesTags = 10) {
+  stopifnot("outputNumRawSequence must be a positive integer" =
+            isPositiveNumber(outputNumRawSequence))
+  stopifnot("outputNumInitialDistance must be a positive integer" =
+            isPositiveNumber(outputNumInitialDistance))
+  stopifnot("outputNumPairwiseDistance must be a positive integer" =
+            isPositiveNumber(outputNumPairwiseDistance))
+  stopifnot("outputNumSpeciesTags must be a positive integer" =
+            isPositiveNumber(outputNumSpeciesTags))
 
-  params <- list(file_out = file_out,
-                 num_out_seqs = num_out_seqs,
-                 num_out_init = num_out_init,
-                 num_out_pair = num_out_pair,
-                 num_out_species = num_out_species)
+  params <- list(outputFilename = outputFilename,
+                 outputNumRawSequence = outputNumRawSequence,
+                 outputNumInitialDistance = outputNumInitialDistance,
+                 outputNumPairwiseDistance = outputNumPairwiseDistance,
+                 outputNumSpeciesTags = outputNumSpeciesTags)
   class(params) <- 'OutputParams'
   return(params)
 }
@@ -225,25 +225,20 @@ OutputParams <- function(file_out = 'output.out',
 is.SeedParams  <- function(x) inherits(x, 'SeedParams')
 
 #' Create SeedParams object
-#' @param to_randomise Should this simulation be run with a random seed to begin
-#' with? (Based on system time)
-#' @param to_seed Should this sequence be run with a specific initial seed? If
-#' so, then the seed is specified by the parameter sseed
-#' @param seed Refer to documentation of to_seed
+#' @param toSeed Should this sequence be run with a specific initial seed? If
+#' so, then the seed is specified by the parameter seedForRandom; else a seed
+#' based on system time is used
+#' @param seedForRandom seed to a (pseudo)random number generator, only used if `toSeed` is TRUE
 #' @export
-SeedParams <- function(to_randomise = FALSE,
-                       to_seed = TRUE,
-                       seed = 0) {
-  stopifnot("to_randomise must be a logical" =
-            is.logical(to_randomise))
-  stopifnot("to_seed must be a logical" =
-            is.logical(to_seed))
-  stopifnot("seed must be a number" =
-            is.numeric(seed))
+SeedParams <- function(toSeed = TRUE,
+                       seedForRandom = 0) {
 
-  params <- list(to_randomise = to_randomise,
-                 to_seed = to_seed,
-                 seed = seed)
+  stopifnot("toSeed must be a logical" = is.logical(toSeed))
+  if (toSeed) {
+    stopifnot("seedForRandom must be a number" = is.numeric(seedForRandom))
+  }
+
+  params <- list(toSeed = toSeed, seedForRandom = seedForRandom)
   class(params) <- 'SeedParams'
   return(params)
 }

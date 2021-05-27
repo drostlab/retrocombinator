@@ -6,20 +6,20 @@
 \usage{
 FlagParams(
   length_critial_region = 10,
-  prob_inactive_when_mutated = 0.001,
-  max_inactive_copies = 500
+  probInactiveWhenMutated = 0.001,
+  maxInactiveCopies = 500
 )
 }
 \arguments{
-\item{prob_inactive_when_mutated}{What is the probability that a mutation in
+\item{probInactiveWhenMutated}{What is the probability that a mutation in
 the critical region causes the sequence to lose its bursting potential?}
 
-\item{max_inactive_copies}{The total number of inactive sequences that we
+\item{maxInactiveCopies}{The total number of inactive sequences that we
 allow in our simulation (if the number ever exceeds this threshold, the
 simulation prunes the set of sequences by randomly choosing the ones that
 live on)}
 
-\item{length_critical_region}{How many positions (chosen randomly) in the
+\item{lengthCriticalRegion}{How many positions (chosen randomly) in the
 sequence are essential for the sequence to remain active (with the potential
 to burst)? If the sequence experiences mutations in these areas, it loses its
 activity with some probability}
