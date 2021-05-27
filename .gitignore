@@ -22,3 +22,4 @@ test_retrocombinator
 # output
 *.out
 inst/doc
+*.png

@@ -240,5 +240,5 @@ The data can be visualised using the `plotEvolution` function
 ```{r}
 plotEvolution(data, "initial")   # Distance to initial sequence
 plotEvolution(data, "pairwise")  # Pairwise distances between sequences
-# TODO: plotEvolution(data, "phylogeny") # Phylogeny of the sequences
+plotEvolution(data, "phylogeny") # Phylogeny of the sequences
 ```

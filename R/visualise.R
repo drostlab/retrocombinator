@@ -26,15 +26,14 @@ plotInitialDistance <- function(data) {
       ggplot2::aes(x=realTime, y=seqSimilarity,
                    group=sequenceId,
                    color=isActive,
-                   alpha=0.2)
+                   alpha=0.05)
     ) +
     ggplot2::geom_line() +
-    ggplot2::geom_point() +
     ggplot2::labs(x = "Time (millions of years)",
                   y = "Similarity to initial sequence") +
     ggplot2::scale_color_manual(
       name = "Capable of transposition events (active status)",
-      values = c("TRUE" = "blue", "FALSE" = "red")
+      values = c("TRUE" = "lightblue", "FALSE" = "salmon")
     ) +
     ggplot2::guides(alpha = FALSE) +
     retrocombinatorTheme()
@@ -83,7 +82,7 @@ plotPairwiseDistance <- function(data) {
                   y = "Pairwise sequence similarity") +
     ggplot2::scale_color_manual(
       name = "Pair within the same species)",
-      values = c("TRUE" = "blue", "FALSE" = "red")
+      values = c("TRUE" = "lightblue", "FALSE" = "salmon")
     ) +
     ggplot2::scale_size_continuous(name = "Age of species (millions of years)") +
     ggplot2::guides(alpha = FALSE) +
@@ -93,17 +92,76 @@ plotPairwiseDistance <- function(data) {
 #' @inherit plotEvolution
 plotPhylogeny <- function(data) {
   to_plot <- data$sequences %>%
-    dplyr::select(-raw) %>%
-    dplyr::mutate(fam_tag = as.factor(fam_tag)) %>%
-    dplyr::mutate(fam_par = as.factor(fam_par))
-  #families <- to_plot %>% dplyr::pull(fam_tag) %>% unique()
+    dplyr::select(-rawSequence) %>%
+    dplyr::mutate(speciesId = as.factor(speciesId)) %>%
+    dplyr::group_by(realTime, speciesId) %>%
+    dplyr::summarise(numSequences = dplyr::n_distinct(sequenceId))
 
-  ggplot2::ggplot(to_plot, ggplot2::aes(x=real_time, y=fam_par, color = fam_tag)) +
+  ggplot2::ggplot(to_plot, ggplot2::aes(x=realTime, y=speciesId)) +
+    ggplot2::geom_point(ggplot2::aes(size=numSequences)) +
     ggplot2::geom_line() +
     ggplot2::labs(x = "Time (millions of years)",
-                  y = "Family ") +
-    ggplot2::scale_color_discrete(name = "Original family") +
-    ggplot2::geom_line(ggplot2::aes(x=real_time, y=fam_tag, color = fam_par)) +
-    ggplot2::guides(color = FALSE) +
+                  y = "Species Id ") +
+    ggplot2::scale_size_continuous(
+      name ="Number of sequences in species",
+    ) +
+    #ggplot2::guides(color = FALSE) +
     retrocombinatorTheme()
+}
+
+plotSpeciesComparison <- function(data) {
+  seqLength <- data$sequences %>%
+    dplyr::filter(step == 0) %>%
+    dplyr::pull(rawSequence) %>% nchar() %>% mean()
+
+  speciesDistance <- data$pairwise %>%
+    dplyr::left_join(data$sequences %>% dplyr::select(sequenceId, speciesId) %>% dplyr::rename(sequenceId1=sequenceId, speciesId1=speciesId)) %>%
+    dplyr::left_join(data$sequences %>% dplyr::select(sequenceId, speciesId) %>% dplyr::rename(sequenceId2=sequenceId, speciesId2=speciesId)) %>%
+    dplyr::group_by(realTime, speciesId1, speciesId2) %>%
+    dplyr::summarise(aggregatedDistanceMin = min(distancePairwise),
+                     aggregatedDistanceMax = max(distancePairwise)
+                     ) %>%
+    dplyr::mutate(
+      aggregatedSimilarityMax = 1-aggregatedDistanceMin/seqLength,
+      aggregatedSimilarityMin = 1-aggregatedDistanceMax/seqLength
+    )
+
+  to_plot <- speciesDistance %>%
+    dplyr::filter(realTime == max(speciesDistance$realTime))
+
+  ggplot2::ggplot(to_plot) +
+    ggplot2::geom_point(ggplot2::aes(
+      x=speciesId1, y=speciesId2,
+      size=aggregatedSimilarityMax,
+      color = "red",
+      alpha=0.3
+    )) +
+    ggplot2::geom_point(ggplot2::aes(
+      x=speciesId2, y=speciesId1,
+      size=aggregatedSimilarityMax,
+      color = "red",
+      alpha=0.3
+    )) +
+    ggplot2::geom_point(ggplot2::aes(
+      x=speciesId1, y=speciesId2,
+      size=aggregatedSimilarityMin,
+      color = "blue",
+      alpha=0.3
+    )) +
+    ggplot2::geom_point(ggplot2::aes(
+      x=speciesId2, y=speciesId1,
+      size=aggregatedSimilarityMin,
+      color = "blue",
+      alpha=0.3
+    )) +
+    ggplot2::labs(x = "SpeciesId1",
+                  y = "SpeciesId2 ") +
+    ggplot2::scale_size_continuous(
+      name ="Mean similarity between species",
+      breaks = c(0.3, 0.6, 0.9),
+      limits = c(0, 1.0),
+      range = c(0, 6)
+    ) +
+    ggplot2::guides(alpha = FALSE)
+    #retrocombinatorTheme()
 }
