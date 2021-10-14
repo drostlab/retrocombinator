@@ -4,25 +4,14 @@
 \alias{BurstParams}
 \title{Create BurstParams object}
 \usage{
-BurstParams(
-  burstProbability = 0.1,
-  burstMean = 1,
-  recombMean = 1.5,
-  recombSimilarity = 0.85
-)
+BurstParams(burstProbability = 0.1, burstMean = 1, maxTotalCopies = 50)
 }
 \arguments{
-\item{burstProbability}{Probability that an active sequence bursts in one
-timestep}
+\item{burstProbability}{The probability that an active retrotransposon will increase in copy number during a time jump of one timestep}
 
-\item{burstMean}{The Poisson mean for the distribution that specifies how
-many new sequences an active sequence will create during bursting}
+\item{burstMean}{The Poisson mean for the distribution that specifies how many new sequences an active sequence will create during bursting}
 
-\item{recombMean}{The expected number of template switches during
-recombination between two sequences (chosen from a Poisson distribution with
-this as its mean).}
-
-\item{recombSimilarity}{TODO}
+\item{maxTotalCopies}{The largest population size of sequences to keep track of (if this is exceeded, sequences are randomly discarded to simulate death)}
 }
 \description{
 Create BurstParams object

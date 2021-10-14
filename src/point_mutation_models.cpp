@@ -17,7 +17,7 @@ PointMutationModel::PointMutationModel(double scale) :
         for(int j=0; j<Consts::NUC_COUNT; ++j)
         {
             Q[i][j] = 0;
-            P[i][j] = 0;
+            P[i][j] = i == j ? 1: 0;
         }
     }
 }
@@ -71,6 +71,7 @@ GTRModel::GTRModel(
 
 void GTRModel::compute_transition_matrix()
 {
+    // TODO: Implement this
     throw Exception("To be implemented");
 }
 
@@ -182,7 +183,7 @@ void K80Model::compute_transition_matrix()
 {
     double t = t_stored;
 
-    // effective alpha and beta for this timestep
+    // effective alpha and beta for this time_per_step
     double alpha = t*scale*Q[Consts::T][Consts::C];
     double beta  = t*scale*Q[Consts::T][Consts::G];
 

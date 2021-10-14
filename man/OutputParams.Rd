@@ -6,18 +6,16 @@
 \usage{
 OutputParams(
   outputFilename = "simulationOutput.out",
-  outputNumRawSequence = 2,
   outputNumInitialDistance = 10,
   outputNumPairwiseDistance = 10,
-  outputNumSpeciesTags = 10
+  outputNumFamilyLabels = 10,
+  outputNumFamilyMatrix = 10,
+  outputMinSimilarity = 0.5
 )
 }
 \arguments{
 \item{outputFilename}{Where should the results of the simulation be saved? (This
 can be parsed by input_file)}
-
-\item{outputNumRawSequence}{How many times across the simulation will we output the
-raw sequences themselves}
 
 \item{outputNumInitialDistance}{How many times across the simulation will we output the
 distance of each sequence to the initial sequence}
@@ -25,8 +23,13 @@ distance of each sequence to the initial sequence}
 \item{outputNumPairwiseDistance}{How many times across the simulation will we output the
 pairwise distance between all pairs of sequences}
 
-\item{outputNumSpeciesTags}{How many times across the simulation will we output
-the tags (unique identifiers) of the sequences and their species}
+\item{outputNumFamilyLabels}{How many times across the simulation will we output
+the representative sequences for each family?}
+
+\item{outputNumFamilyMatrix}{How many times across the simulation will we output
+the pairwise distances between family representatives?}
+
+\item{outputMinSimilarity}{What is the minimum similarity between two sequences we should report on?}
 }
 \description{
 Create OutputParams object

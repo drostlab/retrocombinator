@@ -6,11 +6,13 @@
 \usage{
 simulateEvolution(
   sequenceParams = SequenceParams(),
-  simulationParams = SimulationParams(),
+  activityParams = ActivityParams(),
   mutationParams = MutationParams(),
-  flagParams = FlagParams(),
   burstParams = BurstParams(),
-  speciationParams = SpeciationParams(),
+  recombParams = RecombParams(),
+  selectionParams = SelectionParams(),
+  familyParams = FamilyParams(),
+  simulationParams = SimulationParams(),
   outputParams = OutputParams(),
   seedParams = SeedParams()
 )

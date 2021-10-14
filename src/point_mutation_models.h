@@ -3,7 +3,7 @@
  *
  * \brief To store different models of DNA evolution.
  *
- * Declares an interface for defintion of different point mutation models.
+ * Declares an interface for definition of different point mutation models.
  */
 #ifndef POINT_MUTATION_MODELS_H
 #define POINT_MUTATION_MODELS_H
@@ -14,17 +14,31 @@
 
 namespace retrocombinator
 {
+    namespace Consts {
+        //TODO: Move to external file
+        //@{
+        /** Defaults for different point mutation models
+         */
+        /// Default rate of transitions for a K80 point mutation model
+        const double K80_K      = 10;
+        /// Default scale for a K80 point mutation model
+        const double K80_SCALE  = 0.01;
+        /// Default scale for a JC69 point mutation model
+        const double JC69_SCALE = 0.1;
+        //@
+    }
+
     /// To represent a model of DNA evolution through point mutations
     class PointMutationModel
     {
     protected:
         /// The transition rate matrix (unscaled)
         NucMatrix Q;
-        /// The transition matrix for timestep \a t_stored
+        /// The transition matrix for times_per_step \a t_stored
         NucMatrix P;
         /// P = exp(scale * Q * time)
         double scale;
-        /// The timestep jump for which our transition matrix is valid
+        /// The time_per_step jump for which our transition matrix is valid
         double t_stored;
 
         /** Computes Q from P using t_stored.
@@ -94,7 +108,7 @@ namespace retrocombinator
     {
     protected:
         ///@{
-        /** The subsitution rate parameters.
+        /** The substitution rate parameters.
          *  Look at the constructor for more details.
          */
         const double k1;

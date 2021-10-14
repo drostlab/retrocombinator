@@ -4,17 +4,12 @@
 \alias{SimulationParams}
 \title{Create SimulationParams object}
 \usage{
-SimulationParams(numSteps = 20, timestep = 1, maxActiveCopies = 500)
+SimulationParams(numSteps = 20, timePerStep = 1)
 }
 \arguments{
 \item{numSteps}{How many steps we have in our simulation}
 
-\item{timestep}{How much time passes in one jump (unit: millions of years)}
-
-\item{maxActiveCopies}{The total number of sequences that have the ability
-to burst that we allow in a simulation (if the number ever exceeds this
-threshold, the simulation prunes the set of sequences by randomly choosing
-the ones that live on)}
+\item{timePerStep}{How much time passes in one jump (unit: millions of years)}
 }
 \description{
 Create SimulationParams object

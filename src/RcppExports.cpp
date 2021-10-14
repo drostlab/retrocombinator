@@ -5,140 +5,42 @@
 
 using namespace Rcpp;
 
-// rcpp_simulate_without_flags_random
-void rcpp_simulate_without_flags_random(size_t num_seq, size_t seq_length, std::string point_mutation_model, size_t num_jumps, double timestep, double burst_probability, double burst_mean, size_t max_active_copies, double recomb_mean, std::string file_out, size_t num_out_tags, size_t num_out_init, size_t num_out_seqs, size_t num_out_pair, bool to_randomise, bool to_seed, size_t seed, size_t sequence_numbering, size_t family_numbering, bool logging);
-RcppExport SEXP _retrocombinator_rcpp_simulate_without_flags_random(SEXP num_seqSEXP, SEXP seq_lengthSEXP, SEXP point_mutation_modelSEXP, SEXP num_jumpsSEXP, SEXP timestepSEXP, SEXP burst_probabilitySEXP, SEXP burst_meanSEXP, SEXP max_active_copiesSEXP, SEXP recomb_meanSEXP, SEXP file_outSEXP, SEXP num_out_tagsSEXP, SEXP num_out_initSEXP, SEXP num_out_seqsSEXP, SEXP num_out_pairSEXP, SEXP to_randomiseSEXP, SEXP to_seedSEXP, SEXP seedSEXP, SEXP sequence_numberingSEXP, SEXP family_numberingSEXP, SEXP loggingSEXP) {
+// rcpp_simulate_evolution
+void rcpp_simulate_evolution(std::string sequence, size_t sequence_length, size_t num_initial_copies, size_t critical_region_length, double inactive_probability, std::string mutation_model, double burst_probability, double burst_mean, size_t max_total_copies, double recomb_mean, double recomb_similarity, double selection_threshold, double family_coherence, size_t max_num_representatives, size_t num_steps, double time_per_step, std::string filename_out, size_t num_init_dist, size_t num_pair_dist, size_t num_fam_size, size_t num_fam_dist, double min_output_similarity, bool to_seed, size_t seed);
+RcppExport SEXP _retrocombinator_rcpp_simulate_evolution(SEXP sequenceSEXP, SEXP sequence_lengthSEXP, SEXP num_initial_copiesSEXP, SEXP critical_region_lengthSEXP, SEXP inactive_probabilitySEXP, SEXP mutation_modelSEXP, SEXP burst_probabilitySEXP, SEXP burst_meanSEXP, SEXP max_total_copiesSEXP, SEXP recomb_meanSEXP, SEXP recomb_similaritySEXP, SEXP selection_thresholdSEXP, SEXP family_coherenceSEXP, SEXP max_num_representativesSEXP, SEXP num_stepsSEXP, SEXP time_per_stepSEXP, SEXP filename_outSEXP, SEXP num_init_distSEXP, SEXP num_pair_distSEXP, SEXP num_fam_sizeSEXP, SEXP num_fam_distSEXP, SEXP min_output_similaritySEXP, SEXP to_seedSEXP, SEXP seedSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< size_t >::type num_seq(num_seqSEXP);
-    Rcpp::traits::input_parameter< size_t >::type seq_length(seq_lengthSEXP);
-    Rcpp::traits::input_parameter< std::string >::type point_mutation_model(point_mutation_modelSEXP);
-    Rcpp::traits::input_parameter< size_t >::type num_jumps(num_jumpsSEXP);
-    Rcpp::traits::input_parameter< double >::type timestep(timestepSEXP);
-    Rcpp::traits::input_parameter< double >::type burst_probability(burst_probabilitySEXP);
-    Rcpp::traits::input_parameter< double >::type burst_mean(burst_meanSEXP);
-    Rcpp::traits::input_parameter< size_t >::type max_active_copies(max_active_copiesSEXP);
-    Rcpp::traits::input_parameter< double >::type recomb_mean(recomb_meanSEXP);
-    Rcpp::traits::input_parameter< std::string >::type file_out(file_outSEXP);
-    Rcpp::traits::input_parameter< size_t >::type num_out_tags(num_out_tagsSEXP);
-    Rcpp::traits::input_parameter< size_t >::type num_out_init(num_out_initSEXP);
-    Rcpp::traits::input_parameter< size_t >::type num_out_seqs(num_out_seqsSEXP);
-    Rcpp::traits::input_parameter< size_t >::type num_out_pair(num_out_pairSEXP);
-    Rcpp::traits::input_parameter< bool >::type to_randomise(to_randomiseSEXP);
-    Rcpp::traits::input_parameter< bool >::type to_seed(to_seedSEXP);
-    Rcpp::traits::input_parameter< size_t >::type seed(seedSEXP);
-    Rcpp::traits::input_parameter< size_t >::type sequence_numbering(sequence_numberingSEXP);
-    Rcpp::traits::input_parameter< size_t >::type family_numbering(family_numberingSEXP);
-    Rcpp::traits::input_parameter< bool >::type logging(loggingSEXP);
-    rcpp_simulate_without_flags_random(num_seq, seq_length, point_mutation_model, num_jumps, timestep, burst_probability, burst_mean, max_active_copies, recomb_mean, file_out, num_out_tags, num_out_init, num_out_seqs, num_out_pair, to_randomise, to_seed, seed, sequence_numbering, family_numbering, logging);
-    return R_NilValue;
-END_RCPP
-}
-// rcpp_simulate_with_flags_random
-void rcpp_simulate_with_flags_random(size_t num_seq, size_t seq_length, std::string point_mutation_model, size_t num_sensitive_posns, double inactive_probability, size_t num_jumps, double timestep, double burst_probability, double burst_mean, size_t max_active_copies, size_t max_total_copies, double recomb_mean, double selection_threshold, double fam_proportion, double fam_percentage, std::string file_out, size_t num_out_tags, size_t num_out_init, size_t num_out_seqs, size_t num_out_pair, bool to_randomise, bool to_seed, size_t seed, size_t sequence_numbering, size_t family_numbering, bool logging);
-RcppExport SEXP _retrocombinator_rcpp_simulate_with_flags_random(SEXP num_seqSEXP, SEXP seq_lengthSEXP, SEXP point_mutation_modelSEXP, SEXP num_sensitive_posnsSEXP, SEXP inactive_probabilitySEXP, SEXP num_jumpsSEXP, SEXP timestepSEXP, SEXP burst_probabilitySEXP, SEXP burst_meanSEXP, SEXP max_active_copiesSEXP, SEXP max_total_copiesSEXP, SEXP recomb_meanSEXP, SEXP selection_thresholdSEXP, SEXP fam_proportionSEXP, SEXP fam_percentageSEXP, SEXP file_outSEXP, SEXP num_out_tagsSEXP, SEXP num_out_initSEXP, SEXP num_out_seqsSEXP, SEXP num_out_pairSEXP, SEXP to_randomiseSEXP, SEXP to_seedSEXP, SEXP seedSEXP, SEXP sequence_numberingSEXP, SEXP family_numberingSEXP, SEXP loggingSEXP) {
-BEGIN_RCPP
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< size_t >::type num_seq(num_seqSEXP);
-    Rcpp::traits::input_parameter< size_t >::type seq_length(seq_lengthSEXP);
-    Rcpp::traits::input_parameter< std::string >::type point_mutation_model(point_mutation_modelSEXP);
-    Rcpp::traits::input_parameter< size_t >::type num_sensitive_posns(num_sensitive_posnsSEXP);
+    Rcpp::traits::input_parameter< std::string >::type sequence(sequenceSEXP);
+    Rcpp::traits::input_parameter< size_t >::type sequence_length(sequence_lengthSEXP);
+    Rcpp::traits::input_parameter< size_t >::type num_initial_copies(num_initial_copiesSEXP);
+    Rcpp::traits::input_parameter< size_t >::type critical_region_length(critical_region_lengthSEXP);
     Rcpp::traits::input_parameter< double >::type inactive_probability(inactive_probabilitySEXP);
-    Rcpp::traits::input_parameter< size_t >::type num_jumps(num_jumpsSEXP);
-    Rcpp::traits::input_parameter< double >::type timestep(timestepSEXP);
+    Rcpp::traits::input_parameter< std::string >::type mutation_model(mutation_modelSEXP);
     Rcpp::traits::input_parameter< double >::type burst_probability(burst_probabilitySEXP);
     Rcpp::traits::input_parameter< double >::type burst_mean(burst_meanSEXP);
-    Rcpp::traits::input_parameter< size_t >::type max_active_copies(max_active_copiesSEXP);
     Rcpp::traits::input_parameter< size_t >::type max_total_copies(max_total_copiesSEXP);
     Rcpp::traits::input_parameter< double >::type recomb_mean(recomb_meanSEXP);
+    Rcpp::traits::input_parameter< double >::type recomb_similarity(recomb_similaritySEXP);
     Rcpp::traits::input_parameter< double >::type selection_threshold(selection_thresholdSEXP);
-    Rcpp::traits::input_parameter< double >::type fam_proportion(fam_proportionSEXP);
-    Rcpp::traits::input_parameter< double >::type fam_percentage(fam_percentageSEXP);
-    Rcpp::traits::input_parameter< std::string >::type file_out(file_outSEXP);
-    Rcpp::traits::input_parameter< size_t >::type num_out_tags(num_out_tagsSEXP);
-    Rcpp::traits::input_parameter< size_t >::type num_out_init(num_out_initSEXP);
-    Rcpp::traits::input_parameter< size_t >::type num_out_seqs(num_out_seqsSEXP);
-    Rcpp::traits::input_parameter< size_t >::type num_out_pair(num_out_pairSEXP);
-    Rcpp::traits::input_parameter< bool >::type to_randomise(to_randomiseSEXP);
+    Rcpp::traits::input_parameter< double >::type family_coherence(family_coherenceSEXP);
+    Rcpp::traits::input_parameter< size_t >::type max_num_representatives(max_num_representativesSEXP);
+    Rcpp::traits::input_parameter< size_t >::type num_steps(num_stepsSEXP);
+    Rcpp::traits::input_parameter< double >::type time_per_step(time_per_stepSEXP);
+    Rcpp::traits::input_parameter< std::string >::type filename_out(filename_outSEXP);
+    Rcpp::traits::input_parameter< size_t >::type num_init_dist(num_init_distSEXP);
+    Rcpp::traits::input_parameter< size_t >::type num_pair_dist(num_pair_distSEXP);
+    Rcpp::traits::input_parameter< size_t >::type num_fam_size(num_fam_sizeSEXP);
+    Rcpp::traits::input_parameter< size_t >::type num_fam_dist(num_fam_distSEXP);
+    Rcpp::traits::input_parameter< double >::type min_output_similarity(min_output_similaritySEXP);
     Rcpp::traits::input_parameter< bool >::type to_seed(to_seedSEXP);
     Rcpp::traits::input_parameter< size_t >::type seed(seedSEXP);
-    Rcpp::traits::input_parameter< size_t >::type sequence_numbering(sequence_numberingSEXP);
-    Rcpp::traits::input_parameter< size_t >::type family_numbering(family_numberingSEXP);
-    Rcpp::traits::input_parameter< bool >::type logging(loggingSEXP);
-    rcpp_simulate_with_flags_random(num_seq, seq_length, point_mutation_model, num_sensitive_posns, inactive_probability, num_jumps, timestep, burst_probability, burst_mean, max_active_copies, max_total_copies, recomb_mean, selection_threshold, fam_proportion, fam_percentage, file_out, num_out_tags, num_out_init, num_out_seqs, num_out_pair, to_randomise, to_seed, seed, sequence_numbering, family_numbering, logging);
-    return R_NilValue;
-END_RCPP
-}
-// rcpp_simulate_without_flags_specified
-void rcpp_simulate_without_flags_specified(std::vector<std::string> init_seqs, size_t init_seq_index, std::string point_mutation_model, size_t num_jumps, double timestep, double burst_probability, double burst_mean, size_t max_active_copies, double recomb_mean, std::string file_out, size_t num_out_tags, size_t num_out_init, size_t num_out_seqs, size_t num_out_pair, bool to_randomise, bool to_seed, size_t seed, size_t sequence_numbering, size_t family_numbering, bool logging);
-RcppExport SEXP _retrocombinator_rcpp_simulate_without_flags_specified(SEXP init_seqsSEXP, SEXP init_seq_indexSEXP, SEXP point_mutation_modelSEXP, SEXP num_jumpsSEXP, SEXP timestepSEXP, SEXP burst_probabilitySEXP, SEXP burst_meanSEXP, SEXP max_active_copiesSEXP, SEXP recomb_meanSEXP, SEXP file_outSEXP, SEXP num_out_tagsSEXP, SEXP num_out_initSEXP, SEXP num_out_seqsSEXP, SEXP num_out_pairSEXP, SEXP to_randomiseSEXP, SEXP to_seedSEXP, SEXP seedSEXP, SEXP sequence_numberingSEXP, SEXP family_numberingSEXP, SEXP loggingSEXP) {
-BEGIN_RCPP
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< std::vector<std::string> >::type init_seqs(init_seqsSEXP);
-    Rcpp::traits::input_parameter< size_t >::type init_seq_index(init_seq_indexSEXP);
-    Rcpp::traits::input_parameter< std::string >::type point_mutation_model(point_mutation_modelSEXP);
-    Rcpp::traits::input_parameter< size_t >::type num_jumps(num_jumpsSEXP);
-    Rcpp::traits::input_parameter< double >::type timestep(timestepSEXP);
-    Rcpp::traits::input_parameter< double >::type burst_probability(burst_probabilitySEXP);
-    Rcpp::traits::input_parameter< double >::type burst_mean(burst_meanSEXP);
-    Rcpp::traits::input_parameter< size_t >::type max_active_copies(max_active_copiesSEXP);
-    Rcpp::traits::input_parameter< double >::type recomb_mean(recomb_meanSEXP);
-    Rcpp::traits::input_parameter< std::string >::type file_out(file_outSEXP);
-    Rcpp::traits::input_parameter< size_t >::type num_out_tags(num_out_tagsSEXP);
-    Rcpp::traits::input_parameter< size_t >::type num_out_init(num_out_initSEXP);
-    Rcpp::traits::input_parameter< size_t >::type num_out_seqs(num_out_seqsSEXP);
-    Rcpp::traits::input_parameter< size_t >::type num_out_pair(num_out_pairSEXP);
-    Rcpp::traits::input_parameter< bool >::type to_randomise(to_randomiseSEXP);
-    Rcpp::traits::input_parameter< bool >::type to_seed(to_seedSEXP);
-    Rcpp::traits::input_parameter< size_t >::type seed(seedSEXP);
-    Rcpp::traits::input_parameter< size_t >::type sequence_numbering(sequence_numberingSEXP);
-    Rcpp::traits::input_parameter< size_t >::type family_numbering(family_numberingSEXP);
-    Rcpp::traits::input_parameter< bool >::type logging(loggingSEXP);
-    rcpp_simulate_without_flags_specified(init_seqs, init_seq_index, point_mutation_model, num_jumps, timestep, burst_probability, burst_mean, max_active_copies, recomb_mean, file_out, num_out_tags, num_out_init, num_out_seqs, num_out_pair, to_randomise, to_seed, seed, sequence_numbering, family_numbering, logging);
-    return R_NilValue;
-END_RCPP
-}
-// rcpp_simulate_with_flags_specified
-void rcpp_simulate_with_flags_specified(std::vector<std::string> init_seqs, size_t init_seq_index, std::string point_mutation_model, size_t num_sensitive_posns, double inactive_probability, size_t num_jumps, double timestep, double burst_probability, double burst_mean, size_t max_active_copies, size_t max_total_copies, double recomb_mean, double selection_threshold, double fam_proportion, double fam_percentage, std::string file_out, size_t num_out_tags, size_t num_out_init, size_t num_out_seqs, size_t num_out_pair, bool to_randomise, bool to_seed, size_t seed, size_t sequence_numbering, size_t family_numbering, bool logging);
-RcppExport SEXP _retrocombinator_rcpp_simulate_with_flags_specified(SEXP init_seqsSEXP, SEXP init_seq_indexSEXP, SEXP point_mutation_modelSEXP, SEXP num_sensitive_posnsSEXP, SEXP inactive_probabilitySEXP, SEXP num_jumpsSEXP, SEXP timestepSEXP, SEXP burst_probabilitySEXP, SEXP burst_meanSEXP, SEXP max_active_copiesSEXP, SEXP max_total_copiesSEXP, SEXP recomb_meanSEXP, SEXP selection_thresholdSEXP, SEXP fam_proportionSEXP, SEXP fam_percentageSEXP, SEXP file_outSEXP, SEXP num_out_tagsSEXP, SEXP num_out_initSEXP, SEXP num_out_seqsSEXP, SEXP num_out_pairSEXP, SEXP to_randomiseSEXP, SEXP to_seedSEXP, SEXP seedSEXP, SEXP sequence_numberingSEXP, SEXP family_numberingSEXP, SEXP loggingSEXP) {
-BEGIN_RCPP
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< std::vector<std::string> >::type init_seqs(init_seqsSEXP);
-    Rcpp::traits::input_parameter< size_t >::type init_seq_index(init_seq_indexSEXP);
-    Rcpp::traits::input_parameter< std::string >::type point_mutation_model(point_mutation_modelSEXP);
-    Rcpp::traits::input_parameter< size_t >::type num_sensitive_posns(num_sensitive_posnsSEXP);
-    Rcpp::traits::input_parameter< double >::type inactive_probability(inactive_probabilitySEXP);
-    Rcpp::traits::input_parameter< size_t >::type num_jumps(num_jumpsSEXP);
-    Rcpp::traits::input_parameter< double >::type timestep(timestepSEXP);
-    Rcpp::traits::input_parameter< double >::type burst_probability(burst_probabilitySEXP);
-    Rcpp::traits::input_parameter< double >::type burst_mean(burst_meanSEXP);
-    Rcpp::traits::input_parameter< size_t >::type max_active_copies(max_active_copiesSEXP);
-    Rcpp::traits::input_parameter< size_t >::type max_total_copies(max_total_copiesSEXP);
-    Rcpp::traits::input_parameter< double >::type recomb_mean(recomb_meanSEXP);
-    Rcpp::traits::input_parameter< double >::type selection_threshold(selection_thresholdSEXP);
-    Rcpp::traits::input_parameter< double >::type fam_proportion(fam_proportionSEXP);
-    Rcpp::traits::input_parameter< double >::type fam_percentage(fam_percentageSEXP);
-    Rcpp::traits::input_parameter< std::string >::type file_out(file_outSEXP);
-    Rcpp::traits::input_parameter< size_t >::type num_out_tags(num_out_tagsSEXP);
-    Rcpp::traits::input_parameter< size_t >::type num_out_init(num_out_initSEXP);
-    Rcpp::traits::input_parameter< size_t >::type num_out_seqs(num_out_seqsSEXP);
-    Rcpp::traits::input_parameter< size_t >::type num_out_pair(num_out_pairSEXP);
-    Rcpp::traits::input_parameter< bool >::type to_randomise(to_randomiseSEXP);
-    Rcpp::traits::input_parameter< bool >::type to_seed(to_seedSEXP);
-    Rcpp::traits::input_parameter< size_t >::type seed(seedSEXP);
-    Rcpp::traits::input_parameter< size_t >::type sequence_numbering(sequence_numberingSEXP);
-    Rcpp::traits::input_parameter< size_t >::type family_numbering(family_numberingSEXP);
-    Rcpp::traits::input_parameter< bool >::type logging(loggingSEXP);
-    rcpp_simulate_with_flags_specified(init_seqs, init_seq_index, point_mutation_model, num_sensitive_posns, inactive_probability, num_jumps, timestep, burst_probability, burst_mean, max_active_copies, max_total_copies, recomb_mean, selection_threshold, fam_proportion, fam_percentage, file_out, num_out_tags, num_out_init, num_out_seqs, num_out_pair, to_randomise, to_seed, seed, sequence_numbering, family_numbering, logging);
+    rcpp_simulate_evolution(sequence, sequence_length, num_initial_copies, critical_region_length, inactive_probability, mutation_model, burst_probability, burst_mean, max_total_copies, recomb_mean, recomb_similarity, selection_threshold, family_coherence, max_num_representatives, num_steps, time_per_step, filename_out, num_init_dist, num_pair_dist, num_fam_size, num_fam_dist, min_output_similarity, to_seed, seed);
     return R_NilValue;
 END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_retrocombinator_rcpp_simulate_without_flags_random", (DL_FUNC) &_retrocombinator_rcpp_simulate_without_flags_random, 20},
-    {"_retrocombinator_rcpp_simulate_with_flags_random", (DL_FUNC) &_retrocombinator_rcpp_simulate_with_flags_random, 26},
-    {"_retrocombinator_rcpp_simulate_without_flags_specified", (DL_FUNC) &_retrocombinator_rcpp_simulate_without_flags_specified, 20},
-    {"_retrocombinator_rcpp_simulate_with_flags_specified", (DL_FUNC) &_retrocombinator_rcpp_simulate_with_flags_specified, 26},
+    {"_retrocombinator_rcpp_simulate_evolution", (DL_FUNC) &_retrocombinator_rcpp_simulate_evolution, 24},
     {NULL, NULL, 0}
 };
 

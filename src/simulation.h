@@ -1,93 +1,51 @@
 /**
  * @file
  *
- * \brief
- *
+ *  To run an entire simulation.
  */
+
 #ifndef SIMULATION_H
 #define SIMULATION_H
 
-#include "evolution_without_flags.h"
-#include "evolution_with_flags.h"
+#include "pool.h"
+#include "families.h"
+#include "output.h"
 
-/** \namespace retrocombinator
- *  The overall namespace for the C++ component of the package.
- */
 namespace retrocombinator
 {
-    /** Sets up and runs a simulation without flags.
-     *  Takes a specified set of initial sequences.
-     */
-    void simulate_without_flags(
-            std::vector<std::string> init_seqs, size_type init_seq_index,
-            std::string point_mutation_model,
-            size_type num_jumps, double timestep,
-            double burst_probability, double burst_mean,
-            size_type max_active_copies,
-            double recomb_mean,
-            std::string file_out,
-            size_type num_out_tags, size_type num_out_init,
-            size_type num_out_seqs, size_type num_out_pair,
-            bool to_randomise, bool to_seed, size_type seed,
-            size_type sequence_numbering, size_type family_numbering,
-            bool logging);
-
-    /** Sets up and runs a simulation with flags.
-     *  Takes a specified set of initial sequences.
-     */
-    void simulate_with_flags(
-            std::vector<std::string> init_seqs, size_type init_seq_index,
-            std::string point_mutation_model,
-            size_type num_sensitive_posns, double inactive_probability,
-            size_type num_jumps, double timestep,
-            double burst_probability, double burst_mean,
-            size_type max_active_copies, size_type max_total_copies,
-            double recomb_mean,
+    class Simulation
+    {
+    public:
+        Simulation(
+            std::string sequence, size_type sequence_length, size_type num_initial_copies,
+            size_type critical_region_length, double inactive_probability,
+            std::string mutation_model,
+            double burst_probability, double burst_mean, size_type max_total_copies,
+            double recomb_mean, double recomb_similarity,
             double selection_threshold,
-            double fam_proportion, double fam_percentage,
-            std::string file_out,
-            size_type num_out_tags, size_type num_out_init,
-            size_type num_out_seqs, size_type num_out_pair,
-            bool to_randomise, bool to_seed, size_type seed,
-            size_type sequence_numbering, size_type family_numbering,
-            bool logging);
+            double family_coherence, size_type max_num_representatives,
+            size_type num_steps, double time_per_step,
+            std::string filename_out,
+            size_type num_init_dist, size_type num_pair_dist,
+            size_type num_fam_size, size_type num_fam_dist,
+            double min_output_similarity
+            );
 
-    /** Sets up and runs a simulation without flags.
-     *  Constructs initial sequences randomly.
-     */
-    void simulate_without_flags(
-            size_type num_seq, size_type seq_length,
-            std::string point_mutation_model,
-            size_type num_jumps, double timestep,
-            double burst_probability, double burst_mean,
-            size_type max_active_copies,
-            double recomb_mean,
-            std::string file_out,
-            size_type num_out_tags, size_type num_out_init,
-            size_type num_out_seqs, size_type num_out_pair,
-            bool to_randomise, bool to_seed, size_type seed,
-            size_type sequence_numbering, size_type family_numbering,
-            bool logging);
+        void print_seed(bool to_seed, size_type seed);
+        void simulate();
 
-    /** Sets up and runs a simulation with flags.
-     *  Constructs initial sequences randomly.
-     */
-    void simulate_with_flags(
-            size_type num_seq, size_type seq_length,
-            std::string point_mutation_model,
-            size_type num_sensitive_posns, double inactive_probability,
-            size_type num_jumps, double timestep,
-            double burst_probability, double burst_mean,
-            size_type max_active_copies, size_type max_total_copies,
-            double recomb_mean,
-            double selection_threshold,
-            double fam_proportion, double fam_percentage,
-            std::string file_out,
-            size_type num_out_tags, size_type num_out_init,
-            size_type num_out_seqs, size_type num_out_pair,
-            bool to_randomise, bool to_seed, size_type seed,
-            size_type sequence_numbering, size_type family_numbering,
-            bool logging);
+        const sequence_list& get_pool() const { return pool.get_pool(); }
+    private:
+        const size_type sequence_length;
+
+        Pool pool;
+        Families families;
+
+        size_type num_steps;
+        double time_per_step;
+
+        Output output;
+    };
 }
 
 #endif // SIMULATION_H

@@ -1,5 +1,7 @@
 #include "constants.h"
 #include "rand_maths.h"
+#include <algorithm>
+#include <numeric>
 
 // Declaration of global random number generator
 namespace retrocombinator
@@ -39,7 +41,7 @@ void RandMaths::set_random_seed()
 bool RandMaths::rand_bit()
 {
     static std::uniform_int_distribution<size_type> bit_gen(0, 1);
-    // implicity convert 0 or 1 to bool
+    // implicitly convert 0 or 1 to bool
     return bit_gen(re);
 }
 
@@ -127,6 +129,10 @@ bool RandMaths::test_event(double event_probability)
 
 size_type RandMaths::choose_event(const double events[], size_type num_events)
 {
+    if(num_events <= 0) {
+        throw Exception("Number of events needs to be strictly positive");
+    }
+
     double rand_num = rand_real();
     double running_total = 0;
     for (size_type i=0; i<num_events; ++i)
@@ -143,4 +149,25 @@ size_type RandMaths::choose_event(const double events[], size_type num_events)
         // else it is the last event
         return (num_events-1);
     }
+}
+
+std::vector<size_type> RandMaths::choose_items(std::vector<size_type> items,
+                                               size_type num_picks)
+{
+    if(items.size() <= 0) {
+        throw Exception("Number of items needs to be strictly positive");
+    }
+    if (long(num_picks) >= std::accumulate(items.begin(), items.end(), 0)) {
+        return items;
+    }
+
+    std::vector<size_type> picks(items.size(), 0);
+
+    for (size_type i=0; i<num_picks; ++i) {
+        auto pick = choose_event<size_type>(items);
+        picks[pick] += 1;
+        items[pick] -= 1;
+    }
+
+    return picks;
 }

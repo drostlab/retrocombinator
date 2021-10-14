@@ -1,91 +1,97 @@
+#include <limits>
 #include <list>
 #include <iterator>
 #include "utilities.h"
 
 using namespace retrocombinator;
 
-namespace retrocombinator { namespace Utils
-{
-    double cluster_dist(const dist_type& dist, size_type,
-                        const cluster_type& C1,
-                        const cluster_type& C2)
+namespace retrocombinator {
+    std::vector<Utils::cluster_type> Utils::cluster_slink(
+            dist_type dist, size_type n, size_type join_threshold_max)
     {
-        double total_dist = 0;
+        typedef std::pair<size_type, size_type> edge_type;
+        size_type INFTY = std::numeric_limits<size_type>::max();
 
-        for (const auto& a1 : C1)
-        {
-            for (const auto& a2 : C2)
-            {
-                total_dist += dist[a1][a2];
-            }
-        }
-        double num_pairs = C1.size() * C2.size();
-        return (total_dist/num_pairs);
-    }
-
-    cluster_type cluster(const dist_type& dist, size_type n)
-    {
-        if (n < 2)
-        {
-            throw Exception("Can't split a set of size < 2 into clusters");
+        // Initially, each cluster is just the number
+        std::vector<cluster_type> clusters;
+        for (size_type i=0; i<n; ++i) {
+            clusters.emplace_back(cluster_type { i });
         }
 
-        // Create n individual clusters
-        std::list<cluster_type> all_clusters;
-        for (size_type i=0; i<n; ++i)
-        {
-            cluster_type ind_cluster;
-            ind_cluster.insert(i);
-            all_clusters.push_back(ind_cluster);
-        }
-
-        while (all_clusters.size() > 2)
-        {
-            // initialize the two to-be-joined clusters with the first two
-            // clusters we can access
-            auto join_1 = all_clusters.begin();
-            auto join_2 = std::next(join_1);
-            double min_so_far = cluster_dist(dist, n, *join_1, *join_2);
-
-            for (auto it = all_clusters.begin(); it != all_clusters.end(); ++it)
-            {
-                for (auto jt = std::next(it); jt != all_clusters.end(); ++jt)
-                {
-                    auto this_dist = cluster_dist(dist, n, *it, *jt);
-                    // two clusters are closer to each other than the ones we
-                    // have so far
-                    if (this_dist < min_so_far)
-                    {
-                        join_1 = it;
-                        join_2 = jt;
-                        min_so_far = this_dist;
-                    }
+        // Get the nearest neighbour for each cluster
+        std::vector<edge_type> nearest;
+        for (size_type i=0; i<n; ++i) {
+            size_type cur_nearest = -1;
+            size_type cur_dist = INFTY;
+            for (size_type j=0; j<n; ++j) {
+                if (j != i && dist[i][j] < cur_dist) {
+                    cur_nearest = j;
+                    cur_dist = dist[i][j];
                 }
             }
+            nearest.emplace_back(edge_type{cur_nearest, cur_dist});
+        }
 
-            auto smaller = join_1;
-            auto bigger  = join_2;
-            if (join_1->size() > join_2->size())
-            {
-                smaller = join_2;
-                bigger  = join_1;
-            }
+        // Start at 1 so we only do n-1 steps
+        for(size_type loop = 1; loop < n; ++loop) {
 
-            // add the smaller cluster to the bigger cluster to union-ise them
-            for (auto elem : *smaller)
-            {
-                bigger->insert(elem);
+            // 1) Find the nearest distance between clusters
+            size_type best = 0;
+            size_type best_dist = INFTY;
+            for (size_type i=0; i<n; ++i) {
+                if (nearest[i].second < best_dist) {
+                    best = i;
+                    best_dist = nearest[i].second;
+                }
             }
-            all_clusters.erase(smaller);
+            if(best_dist >= join_threshold_max) { break; }
+
+            // 2) Join the 'next' cluster to the 'best' cluster
+            size_type next = nearest[best].first;
+            clusters[best].insert(clusters[next].begin(), clusters[next].end());
+            clusters[next].clear();
+
+            // 3) Recompute distances
+            nearest[next].first = -1;
+            nearest[next].second = INFTY;
+
+            size_type best_update = -1;
+            size_type best_update_dist = INFTY;
+            for (size_type i=0; i<n; ++i) {
+                if (i == best || i == next) { continue; }
+                if (dist[best][i] < best_update_dist) {
+                    best_update = i;
+                    best_update_dist = dist[best][i];
+                }
+                if (dist[next][i] < best_update_dist) {
+                    best_update = i;
+                    best_update_dist = dist[next][i];
+                }
+            }
+            nearest[best].first = best_update;
+            nearest[best].second = best_update_dist;
+
+            for(size_type i=0; i<n; ++i) {
+                dist[next][i] = INFTY;
+                dist[i][next] = INFTY;
+            }
         }
-        // return the smaller cluster
-        if (all_clusters.front().size() < all_clusters.back().size())
-        {
-            return (all_clusters.front());
+
+        std::vector<cluster_type> non_empty_clusters;
+        for (size_type i=0; i<clusters.size(); ++i) {
+            if (!clusters[i].empty()) {
+                non_empty_clusters.push_back(clusters[i]);
+            }
         }
-        else
-        {
-            return(all_clusters.back());
-        }
+        return non_empty_clusters;
     }
-} }
+
+    std::vector<size_type>
+    Utils::select_representatives(std::vector<Utils::cluster_type> clusters) {
+        std::vector<size_type> representatives;
+        for (const auto& cluster: clusters) {
+            representatives.push_back(*cluster.begin());
+        }
+        return representatives;
+    }
+}

@@ -3,14 +3,13 @@
  *
  * \brief To store a DNA sequence and the mutations that it has undergone.
  *
- * Includes methods to keep track of which mutations are lethal, methods to
- * recombine sequences and methods to get the pairwise distances between two
- * strings.
+ * Includes methods to keep track of nucleotides, and get sequence distances.
  */
 #ifndef SEQUENCE_H
 #define SEQUENCE_H
 
 #include "constants.h"
+#include "activity_tracker.h"
 
 #include <string>
 #include <unordered_map>
@@ -20,14 +19,28 @@
 
 namespace retrocombinator
 {
+    namespace Consts {
+
+        //@{ Constants that represent how a sequence was born.
+        /// This sequence was created randomly.
+        const tag_type SEQUENCE_CREATED_RANDOMLY_TAG = -2;
+        /// This sequence was created from a specified string
+        const tag_type SEQUENCE_INITIALISED_EXTERNALLY_TAG = -1;
+        //@}
+
+    }
+
     /** To represent a DNA sequence and the mutations that it has
      *  undergone.
      *
-     *  Keeps track of the actual sequence, mutations and lethal mutations.
+     *  Keeps track of the actual sequence, mutations and critical mutations.
      */
     class Sequence
     {
     private:
+
+        /// For the raw sequence
+        typedef std::vector<bool> raw_sequence_type;
 
         /** An internal counter that is incremented every time a sequence is
          *  created.
@@ -35,31 +48,35 @@ namespace retrocombinator
          */
         static tag_type global_sequence_count;
 
+        /** To keep track of the activity of all the sequences.
+         */
+        static ActivityTracker activity_tracker;
+
         /** A number that uniquely identifies this sequence.
          *  This tag transcends activity (if an inactive sequence becomes active
          *  again, it has the same tag)
          */
-        tag_type tag;
+        const tag_type tag;
 
         /** The parent tags that this sequence was created from.
          *  If this was created as Sequence(S1, S2), the tags are ordered as
          *  <S1.get_tag(), S2.get_tag()>.
-         *  If this was created randomly, the tags are <RAND, RAND>.
-         *  If this was created from a string, the tags are <INIT, INIT>.
+         *  If this was created randomly, the tags are <RAND_TAG, RAND_TAG>.
+         *  If this was created from a string, the tags are <INIT_TAG, INIT_TAG>.
          */
-        std::pair<tag_type, tag_type> parent_tags;
+        const std::pair<tag_type, tag_type> parent_tags;
 
         /** Actual sequence of nucleotides.
          *  Stored as a string internally.
          */
-        std::vector<bool> bases;
+        raw_sequence_type bases;
 
         ///@{
         /** Basic typedefs - hashed data structures for quick lookup.
-         *  For keeping track of mutations and lethal mutations.
+         *  For keeping track of mutations and critical mutations.
          */
-        typedef std::unordered_map<tag_type, char> mutations_type;
-        typedef std::unordered_set<tag_type> lethal_mutations_type;
+        typedef std::unordered_map<size_type, char> mutations_type;
+        typedef std::unordered_set<size_type> critical_mutations_type;
         ///@}
 
         /** Positions of mutations and what the *original* nucleotide was.
@@ -67,11 +84,15 @@ namespace retrocombinator
          */
         mutations_type mutations;
 
-        /** Positions of mutations that are lethal.
+        /** Positions of mutations that are critical.
          *  Internally stored as a set. This set is always a subset of
          *  \p mutations.keys.
          */
-        lethal_mutations_type lethal_mutations;
+        critical_mutations_type critical_mutations;
+
+        /** Whether or not this sequence is capable of transposition.
+          */
+        bool active_status;
 
         /** Returns the 2bit encoding for a base at a given position.
          */
@@ -81,25 +102,21 @@ namespace retrocombinator
         }
 
     public:
-
-        //@{ Constants that represent how a sequence was born.
-        /// This sequence was created randomly.
-        static const tag_type RAND;
-        /// This sequence was created from a specified string
-        static const tag_type INIT;
-        //@}
-
         /** Explicitly update the global sequence count to start from a
          *  particular number.
          *  new_start_tag will be given to the next sequence created.
          *  Used when running multiple simulations one after the other.
          */
-        static void renumber_sequences(tag_type new_start_tag);
+        static void renumber_sequences(tag_type new_start_tag = 1);
 
-        /** Constructs a random sequence of length \a n.
+        /** Use a specified activity tracker.
+          */
+        static void set_activity_tracker(ActivityTracker activity_tracker_);
+
+        /** Constructs a random sequence.
          *  This is considered initial, so no mutations are present.
          */
-        Sequence(size_type n);
+        Sequence();
 
         /** Constructs a sequence from a given string.
          *  This is considered initial, so no mutations are present.
@@ -107,8 +124,13 @@ namespace retrocombinator
         Sequence(std::string s);
 
         /** Constructs a sequence from recombining two other sequences.
+         *
          *  The number of template switches has to be specified, and the
          *  positions at which the template switches are made is random.
+         *
+         *  The first sequence is the "active" sequence, and reading starts from
+         *  there. Reading can start from either end of that sequence, and
+         *  continue in that direction.
          *
          *  The mutations recorded are with respect to the original sequences.
          *  That is, the new sequence \a s_new will have a mutation \a m at
@@ -116,8 +138,6 @@ namespace retrocombinator
          *  is used for \a s_new at position \a l had mutation \a m present at
          *  that position.
          *
-         *  \todo Add an option for specifying the positions of the template
-         *  switches too, or overload this function.
          */
         Sequence(const Sequence& s1, const Sequence& s2,
                  size_type num_template_switches);
@@ -159,22 +179,28 @@ namespace retrocombinator
          *
          *  If the new_nucleotide is the same as the original nucleotide in the
          *  string, the mutation disappears, else a mutation is created.
-         *  It can also be specified whether or not the mutation is lethal.
+         *  The activity tracker is used to determined whether or not a mutation
+         *  is critical.
+         *
+         *  Returns true iff there is a mutation present at the end.
          */
-        void point_mutate(size_type n, char new_nucleotide, bool is_lethal = false);
+        bool point_mutate(size_type n, char new_nucleotide);
 
         /** Returns the raw nucleotide sequence as a string.
          */
         std::string as_string() const;
 
         /** Tests whether this sequence is active (can transpose) or not.
-         *  Returns true if and only if there are no lethal mutations.
          */
-        bool is_active() const { return lethal_mutations.empty(); }
+        bool is_active() const { return active_status; }
 
         /** Returns how many mutations are present in this sequence.
          */
         size_type num_mutations() const { return mutations.size(); }
+
+        /** Returns how many critical region mutations are present in this sequence.
+         */
+        size_type num_critical_mutations() const { return critical_mutations.size(); }
 
         /** Returns sequence similarity to initial sequence.
          */
@@ -205,6 +231,12 @@ namespace retrocombinator
           */
         friend double operator %(const Sequence& s1, std::string s2);
     };
+
+    /// A list of sequences
+    typedef std::list<Sequence> sequence_list;
+
+    size_type operator *(std::string s1, std::string s2);
+    double operator %(std::string s1, std::string s2);
 }
 
 #endif //SEQUENCE_H

@@ -84,7 +84,16 @@ simulateEvolution(sequenceParams = sequenceParams)
     * `initialSequence : character` The initial retrotransposon to consider; can
       be `NULL` if `sequenceLength` is specified instead (**default = `NULL`**)
     * `numInitialCopies : numeric` Number of copies of initial retrotransposon **(default = 20)**
-* `MutationParams` represents how what nucleotide subtstition model will be
+* `ActivityParams` represents the parameters used during a simulation in which
+  we keep track of a retrotransposon's *active* status. A retrotransposon that
+  is active is capable of transposition or bursting, but potentially loses its
+  active status if a point mutation affects a critical part of the sequence.
+    * `lengthCriticalRegion: numeric`  Sequence length (number of nucleotides)
+      of the critical region of a retrotransposon **(default = 10)**
+    * `probInactiveWhenMutated : numeric` The probability that a singe point
+      mutation to the critical region causes a sequence to become inactive
+      **(default = 0.01)**
+* `MutationParams` represents how what nucleotide substitution model will be
   used to modify the sequences during the simulation. It is constructed from one
   of the following `character` literals to the argument `model`:
     * `"JC69"` Jules and Cantor - 1969
@@ -93,28 +102,6 @@ simulateEvolution(sequenceParams = sequenceParams)
     * `"HKY85"` Hasegawa, Kishino and Yano - 1985
     * `"TN93"` Timura and Nei - 1993
     * `"GTR"`  General Time Reversible Model, Tavaré - 1986
-* `FlagParams` represents the parameters used during a simulation in which
-  we keep track of a retrotransposon's *active* status. A retrotransposon that
-  is active is capable of transposition or bursting, but potentially loses its
-  active status if a point mutation affects a critical part of the sequence.
-    * `lengthCriticalRegion: numeric`  Sequence length (number of nucleotides)
-      of the critical region of a retrotransposon **(default = 10)**
-    * `probInactiveWhenMutated : numeric` The probability that a point
-      mutation to the critical region causes a sequence to become inactive
-      **(default = 0.01)**
-    * `maxInactiveCopies : numeric` The largest population size of
-      inactive sequences to keep track of (if this is exceeded, sequences are
-      randomly discarded to simulate death) **(default = 500)** 
-* `SimulationParams` represents how long the simulation will run for, and at what
-  timescale. It comprises of the following:
-    * `numSteps : numeric` The number of steps in our simulation - the
-      simulation starts at a step count of 0, and runs until the step count is `numSteps`
-      **(default = 20)**
-    * `timestep : numeric` How much real time does one step in our
-      simulation measure, in millions of years **(default = 1)**
-    * `maxActiveCopies : numeric` The largest population size of
-      active sequences to keep track of (if this is exceeded, sequences are
-      randomly discarded to simulate death) **(default = 500)** 
 * `BurstParams` represents how an active retrotransposon will burst during
   transposition. It comprises of the following:
     * `burstProbability : numeric` The probability that an active
@@ -123,46 +110,59 @@ simulateEvolution(sequenceParams = sequenceParams)
     * `burstMean : numeric` The Poisson mean for the distribution that
       specifies how many new sequences an active sequence will create during
       bursting **(default = 1)**
+    * `maxTotalCopies : numeric` The largest population size of sequences to
+      keep track of (if this is exceeded, sequences are randomly discarded to
+      simulate death) **(default = 50)** 
+* `RecombParams` represents how two transposons recombine during transposition
     * `recombMean : numeric` The expected number of template switches during 
       recombination between two sequences (chosen from a Poisson distribution
       with this as its mean) **(default = 1.5)**
     * `recombSimilarity : numeric` How similar does an active sequence have to
       be with another sequence for them to be allowed to be recombine during
-      transposition? **(default = 0.85)**
-* `SpeciationParams` represents how we keep track of species during the
-  simulation. It comprises of the following:
+      transposition? **(default = 0.80)**
+* `SelectionParams` represents what sequences we are interested in storing during
+  the simulation. It comprises of the following:
     * `selectionThreshold : numeric` What sequence similarity to the
       original sequence do we wish to maintain? Sequences that diverge beyond
       this similarity level are dropped over the course of simulation
-      **(default = 0.5)**
-    * `speciesSimilarity : numeric` What sequence similarity do two sequences
+      **(default = 0.3)**
+* `FamilyParams` represents how we keep track of families during the
+  simulation. It comprises of the following:
+    * `familyCoherence : numeric` What sequence similarity do two sequences
       have to be to each other for them to be considered to be of the same
-      species? **(default = 0.9)**
-    * `speciesCoherence : numeric` What proportion of the overall sequence
-      similarity matrix of a species needs to score be above `speciesSimilarity`
-      before we decide the species has split into two species?
-      **(default = 0.8)**
+      family? **(default = 0.70)**
+    * `maxFamilyRepresentatives : numeric` How many family representatives to
+      keep track of during the simulation?  **(default = 20)**
+* `SimulationParams` represents how long the simulation will run for, and at what
+  timescale. It comprises of the following:
+    * `numSteps : numeric` The number of steps in our simulation - the
+      simulation starts at a step count of 0, and runs until the step count is `numSteps`
+      **(default = 20)**
+    * `timePerStep : numeric` How much real time does one step in our
+      simulation measure, in millions of years **(default = 1)**
 * `OutputParams` represents how and where the output of the simulation will
   be saved. It comprises of the following:
     * `outputFilename : character` Where should the simulation be saved? **(default =
       'simulationOutput.out')**
-    * `outputNumRawSequence : numeric` How many times during the event of the simulation
-      should we output the raw sequences (as nucleotide strings) themselves?
-      **(default = 2)**
-    * `outputNumInitialDistance : numeric` How many times during the event of the simulation
+    * `outputNumInitialDistance : numeric` How many times during the simulation
       should we output the distance of sequences to the initial sequence?
       **(default = 10)**
-    * `outputNumPairwiseDistance : numeric` How many times during the event of the simulation
+    * `outputNumPairwiseDistance : numeric` How many times during the simulation
       should we output pairwise distances between all pairs of sequences?
       **(default = 10)**
-    * `outputNumSpeciesTags : numeric` How many times during the event of the simulation
-      should we output the species tags of each of the sequences?
+    * `outputNumFamilyLabels : numeric` How many times during the simulation
+      should we output the family numbers of each sequence?
       **(default = 10)**
+    * `outputNumFamilyMatrix : numeric` How many times during the simulation
+      should we output the pairwise distances between family representatives?
+      **(default = 10)**
+    * `outputMinSimilarity : numeric` What is the minimum similarity
+      between two sequences we should report on? **(default = 0.5)**
 * `SeedParams` represents how to select the seed for randomisation for the
   simulation. It comprises of the following:
     * `toSeed : logical` Should this simulation be run with a specified seed to
       begin with? If `FALSE`, a seed based on system time is used **(default =
-      true)**
+      `TRUE`)**
     * `seedForRandom : numeric` If `toSeed` is `TRUE`, what should the initial seed for
       the random number generator be? **(default = 0)**
 
@@ -198,25 +198,22 @@ present at that time, a row is present in the `pairwise` dataframe if and only
 if $a < b$ .
 
 ```{r}
-print(colnames(data$sequences))
+print(names(data$params))
+# Prints out all the parameters the simulation was run with
 
+print(colnames(data$sequences))
 # step - timestep in the simulation
 # realTime - time since the start of the simulation (in millions of years)
 # sequenceId - the unique ID of the sequence (to track it over time); initial
 #              sequence has sequenceId 0 to (numInitialCopies-1)
-# speciesId - the unique ID of a species; initial species has speciesId 0
-# previousSpeciesId - the unique ID of the species this species emerged from; 
-#                     (-1 if nothing)
 # parentMain - the unique ID of the sequence this burst from; 
 #              (-1 if nothing)
 # parentOther - the unique ID of the sequence its parent recombined with; 
 #               (-1 if nothing)
 # distanceToInitial - the distance to the initial sequence
-# rawSequence - the raw sequence, as a character
 # isActive - whether or not the sequence is capable of transposition
 
 print(colnames(data$pairwise))
-
 # step - timestep in the simulation
 # realTime - time since the start of the simulation (in millions of years)
 # sequenceId1 - an ID of a sequence present at the time
@@ -225,20 +222,36 @@ print(colnames(data$pairwise))
 #               is present as a row but not both
 # distancePairwise - the distance between the two sequences
 
-# TODO: colnames(data$params)
+print(colnames(data$familyRepresentatives))
+# step - timestep in the simulation
+# realTime - time since the start of the simulation (in millions of years)
+# familyId - the unique ID of the family representative (to track it over time)
+# creationTime - time this family representative was created (in millions of years)
+# sequenceId - a sequence belonging to that family (sequences belonging to a
+#              family are listed as separate rows, and all sequences belonging
+#              to that family are listed)
+
+print(colnames(data$familyPairwise))
+# step - timestep in the simulation
+# realTime - time since the start of the simulation (in millions of years)
+# familyId1 - an ID of a family representative present at the time
+# familyId2 - an ID of a different family representative present at the time;
+#             not all pairs are given - that is, for sequences a and b, either (a, b) or (b,
+#             a) is present as a row but not both
+# distancePairwise - the distance between the two family representatives
 ```
 
 ## Analysis
 
 Summary statistics can be obtained from the data as follows.
 
-```{r}
-# TODO: summariseEvolution(data)
+```{r, eval = FALSE}
+summariseEvolution(data) # TODO
 ```
 
 The data can be visualised using the `plotEvolution` function
 ```{r}
 plotEvolution(data, "initial")   # Distance to initial sequence
 plotEvolution(data, "pairwise")  # Pairwise distances between sequences
-plotEvolution(data, "phylogeny") # Phylogeny of the sequences
+plotEvolution(data, "families")  # Family sizes
 ```

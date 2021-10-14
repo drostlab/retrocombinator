@@ -10,50 +10,50 @@
 
 #include <algorithm>
 #include <cmath>
+#include <vector>
 
 #include "constants.h"
 #include "exception.h"
 
 namespace retrocombinator
 {
-    /** \namespace retrocombinator::Utils
+    /**
      *  To store some useful functions in a namespace and prevent conflicts.
      */
-    namespace Utils
+    class Utils
     {
+    public:
         /** Checks whether a number lies within a range.
          *  The bounds are [inclusive, exclusive).
          */
-        inline bool is_in_range(size_type test, size_type lb, size_type ub)
+        static inline bool is_in_range(size_type test, size_type lb, size_type ub)
         {
             return ((lb <= test) && (test < ub));
         }
 
-        /** Breaks a set into two clusters.
+        /// Type for a set (cluster) of indices
+        typedef std::set<size_type> cluster_type;
+
+        /** Returns a set of clusters (using SLINK)
          *  \param n the number of data points
          *  \param dist the nXn distance matrix between the data points
+         *  \param join_threshold_max we cluster whilst we can merge two
+         *  clusters with distance < join_threshold_max between them - if the
+         *  closest distance between two clusters becomes >= than this, we stop
+         *  clustering
+         *
          *  Takes a distance matrix D, where D(i, j) is the distance between i
          *  and j, with D(i, i) being 0 for all i.
-         *  Returns a vector of indices that belong to the first cluster (the
-         *  second cluster corresponds to everything else).
          *
-         *  Algorithm:
-         *      Start with n clusters
-         *          Compute the cluster distance between all pairs of clusters
-         *          Where cluster distance is:
-         *              average distance of points from one cluster to the other
-         *          Pick the two closest clusters, and merge them
          */
-        cluster_type cluster(const dist_type& dist, size_type n);
+        static std::vector<cluster_type> cluster_slink(dist_type dist, size_type n,
+                size_type join_threshold_max);
 
+        /// Selects a representative from each cluster
+        static std::vector<size_type>
+        select_representatives(std::vector<cluster_type> clusters);
 
-        /** Computes the cluster distance between two clusters.
-         *  Equal to the average of all pairs (a1, a2) in C1 X C2.
-         */
-        double cluster_dist(const dist_type& dist, size_type n,
-                            const cluster_type& C1,
-                            const cluster_type& C2);
-    }
+    };
 }
 
 #endif // UTILITIES_H

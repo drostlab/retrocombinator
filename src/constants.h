@@ -14,9 +14,12 @@
 #include "exception.h"
 
 #include <cmath>
+#include <list>
 #include <set>
 #include <utility>
 #include <vector>
+#include <unordered_map>
+#include <unordered_set>
 
 namespace retrocombinator
 {
@@ -41,17 +44,6 @@ namespace retrocombinator
             G = 3,          ///< Guanine
             NUC_COUNT = 4   ///< Number of nucleotides
         };
-
-        //@{
-        /** Defaults for different point mutation models
-         */
-        /// Default rate of transitions for a K80 point mutation model
-        const double K80_K      = 10;
-        /// Default scale for a K80 point mutation model
-        const double K80_SCALE  = 0.01;
-        /// Default scale for a JC69 point mutation model
-        const double JC69_SCALE = 0.1;
-        //@}
 
         /** Returns a character corresponding a nucleotide given its index.
          */
@@ -121,29 +113,16 @@ namespace retrocombinator
     /// Type for functions that return NucMatrix and accept time as parameter
     typedef const double (*ReturnsNucMatrixFromDouble(double))[Consts::NUC_COUNT];
 
-    /// Type for all indices and sizes
+    /// Type for all indices, sizes, and edit distances
     typedef std::size_t size_type;
-
-    //@{
-    /** Types for clustering algorithms.
-     */
-    /// Type for a set (cluster) of indices
-    typedef std::set<size_type> cluster_type;
-    /// Type for a distance matrix
-    typedef std::vector<std::vector<double> > dist_type;
-    /// Type for a row in a distance matrix
-    typedef std::vector<double> dist_row_type;
-    //@}
-
     /// For all integer-based codes
     typedef long tag_type;
 
-    namespace Consts
-    {
-        /** The family tag to represent initial sequences in a simulation.
-         */
-        const tag_type INIT_FAMILY_COUNT = -1;
-    }
+    /// Type for a row in a distance matrix
+    typedef std::vector<size_type> dist_row_type;
+    /// Type for a distance matrix
+    typedef std::vector<dist_row_type > dist_type;
+
 }
 
 #endif //CONSTANTS_H

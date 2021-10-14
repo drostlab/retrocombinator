@@ -1,203 +1,60 @@
-#include "output.h"
-#include "point_mutator.h"
-#include "rand_maths.h"
 #include "simulation.h"
+#include "rand_maths.h"
 
-#include <iostream>
+using namespace retrocombinator;
 
-namespace retrocombinator
+Simulation::Simulation(
+    std::string sequence, size_type sequence_length_in, size_type num_initial_copies,
+    size_type critical_region_length, double inactive_probability,
+    std::string mutation_model,
+    double burst_probability, double burst_mean, size_type max_total_copies,
+    double recomb_mean, double recomb_similarity,
+    double selection_threshold,
+    double family_coherence, size_type max_num_representatives,
+    size_type num_steps, double time_per_step,
+    std::string filename_out,
+    size_type num_init_dist, size_type num_pair_dist,
+    size_type num_fam_size, size_type num_fam_dist,
+    double min_output_similarity
+):
+    sequence_length(sequence.empty() ? sequence_length_in : sequence.length()),
+    pool(sequence, sequence_length, num_initial_copies,
+         critical_region_length, inactive_probability,
+         mutation_model,
+         burst_probability, burst_mean, max_total_copies,
+         recomb_mean, recomb_similarity,
+         selection_threshold),
+    families((1.0-family_coherence)*sequence_length, max_num_representatives),
+    num_steps(num_steps), time_per_step(time_per_step),
+    output(filename_out, num_steps,
+           num_init_dist, num_pair_dist, num_fam_size, num_fam_dist,
+           floor((1.0-min_output_similarity)*sequence_length))
 {
-    void simulate_without_flags(
-            std::vector<std::string> init_seqs, size_type init_seq_index,
-            std::string point_mutation_model,
-            size_type num_jumps, double timestep,
-            double burst_probability, double burst_mean,
-            size_type max_active_copies,
-            double recomb_mean,
-            std::string file_out,
-            size_type num_out_tags, size_type num_out_init,
-            size_type num_out_seqs, size_type num_out_pair,
-            bool to_randomise, bool to_seed, size_type seed,
-            size_type sequence_numbering, size_type family_numbering,
-            bool logging)
-    {
-        if (init_seq_index >= init_seqs.size())
-        {
-            throw Exception("Choose a valid index for the initial sequence.");
-        }
+    output.print_params(sequence, sequence_length, num_initial_copies,
+        critical_region_length, inactive_probability,
+        mutation_model,
+        burst_probability, burst_mean, max_total_copies,
+        recomb_mean, recomb_similarity,
+        selection_threshold,
+        family_coherence, max_num_representatives,
+        num_steps, time_per_step,
+        filename_out,
+        num_init_dist, num_pair_dist,
+        num_fam_size, num_fam_dist,
+        min_output_similarity
+    );
+}
 
-        if (to_randomise)
-        {
-            RNG.set_random_seed();
-        }
-        if (to_seed)
-        {
-            RNG.set_specific_seed(seed);
-        }
-        Sequence::renumber_sequences(sequence_numbering);
-        Family::renumber_families(family_numbering);
-
-        EvolutionWithoutFlags e(num_jumps, timestep,
-                                burst_probability, burst_mean,
-                                max_active_copies);
-        e.calculate_copy_number_tree(init_seqs.size());
-        if (logging) {
-            std::cout << "Calculated bursts" << std::endl;
-        }
-
-        size_type max_seq_length = 0;
-        for (const auto& seq : init_seqs)
-        {
-            if (seq.size() > max_seq_length)
-            {
-                max_seq_length = seq.size();
-            }
-        }
-        PointMutator pm(point_mutation_model, max_seq_length);
-
-        Output output(file_out, num_jumps,
-                      num_out_tags, num_out_init, num_out_seqs, num_out_pair,
-                      logging);
-        output.set_init_seq(init_seqs[init_seq_index]);
-        e.evolve(output, pm, init_seqs, recomb_mean);
+using namespace std;
+void Simulation::simulate() {
+    // timestep 0 is initial case
+    for(size_type timestep = 1; timestep <= num_steps; ++timestep) {
+        pool.step(time_per_step);
+        families.update(pool, timestep);
+        output.output(timestep, pool, families);
     }
+}
 
-    void simulate_with_flags(
-            std::vector<std::string> init_seqs, size_type init_seq_index,
-            std::string point_mutation_model,
-            size_type num_sensitive_posns, double inactive_probability,
-            size_type num_jumps, double timestep,
-            double burst_probability, double burst_mean,
-            size_type max_active_copies, size_type max_total_copies,
-            double recomb_mean,
-            double selection_threshold,
-            double fam_proportion, double fam_percentage,
-            std::string file_out,
-            size_type num_out_tags, size_type num_out_init,
-            size_type num_out_seqs, size_type num_out_pair,
-            bool to_randomise, bool to_seed, size_type seed,
-            size_type sequence_numbering, size_type family_numbering,
-            bool logging)
-    {
-        if (init_seq_index >= init_seqs.size())
-        {
-            throw Exception("Choose a valid index for the initial sequence.");
-        }
-
-        if (to_randomise)
-        {
-            RNG.set_random_seed();
-        }
-        if (to_seed)
-        {
-            RNG.set_specific_seed(seed);
-        }
-        Sequence::renumber_sequences(sequence_numbering);
-        Family::renumber_families(family_numbering);
-
-        EvolutionWithFlags e(num_jumps, timestep,
-                             burst_probability, burst_mean,
-                             max_active_copies, max_total_copies);
-        if (logging) {
-            std::cout << "Calculated bursts" << std::endl;
-        }
-
-        size_type max_seq_length = 0;
-        for (const auto& seq : init_seqs)
-        {
-            if (seq.size() > max_seq_length)
-            {
-                max_seq_length = seq.size();
-            }
-        }
-        PointMutator pm(point_mutation_model, max_seq_length,
-                        num_sensitive_posns, inactive_probability);
-
-        Output output(file_out, num_jumps,
-                      num_out_tags, num_out_init, num_out_seqs, num_out_pair,
-                      logging);
-        output.set_init_seq(init_seqs[init_seq_index]);
-        e.set_selection_threshold(selection_threshold);
-        e.use_families_at(fam_proportion, fam_percentage);
-        e.evolve(output, pm, init_seqs, recomb_mean);
-
-    }
-
-    void simulate_without_flags(
-            size_type num_seq, size_type seq_length,
-            std::string point_mutation_model,
-            size_type num_jumps, double timestep,
-            double burst_probability, double burst_mean,
-            size_type max_active_copies,
-            double recomb_mean,
-            std::string file_out,
-            size_type num_out_tags, size_type num_out_init,
-            size_type num_out_seqs, size_type num_out_pair,
-            bool to_randomise, bool to_seed, size_type seed,
-            size_type sequence_numbering, size_type family_numbering,
-            bool logging)
-    {
-        if (to_randomise)
-        {
-            RNG.set_random_seed();
-        }
-        if (to_seed)
-        {
-            RNG.set_specific_seed(seed);
-        }
-
-        Sequence S0(seq_length);
-        std::vector<std::string> init_seqs(num_seq, S0.as_string());
-
-        simulate_without_flags(
-            init_seqs, size_type(0),
-            point_mutation_model,
-            num_jumps, timestep, burst_probability, burst_mean,
-            max_active_copies, recomb_mean,
-            file_out, num_out_tags, num_out_init, num_out_seqs, num_out_pair,
-            false, false, seed, sequence_numbering, family_numbering,
-            logging);
-    }
-
-    void simulate_with_flags(
-            size_type num_seq, size_type seq_length,
-            std::string point_mutation_model,
-            size_type num_sensitive_posns, double inactive_probability,
-            size_type num_jumps, double timestep,
-            double burst_probability, double burst_mean,
-            size_type max_active_copies, size_type max_total_copies,
-            double recomb_mean,
-            double selection_threshold,
-            double fam_proportion, double fam_percentage,
-            std::string file_out,
-            size_type num_out_tags, size_type num_out_init,
-            size_type num_out_seqs, size_type num_out_pair,
-            bool to_randomise, bool to_seed, size_type seed,
-            size_type sequence_numbering, size_type family_numbering,
-            bool logging)
-    {
-        if (to_randomise)
-        {
-            RNG.set_random_seed();
-        }
-        if (to_seed)
-        {
-            RNG.set_specific_seed(seed);
-        }
-
-        Sequence S0(seq_length);
-        std::vector<std::string> init_seqs(num_seq, S0.as_string());
-
-        simulate_with_flags(
-            init_seqs, size_type(0),
-            point_mutation_model,
-            num_sensitive_posns, inactive_probability,
-            num_jumps, timestep, burst_probability, burst_mean,
-            max_active_copies, max_total_copies, recomb_mean,
-            selection_threshold, fam_proportion, fam_percentage,
-            file_out, num_out_tags, num_out_init, num_out_seqs, num_out_pair,
-            false, false, seed, sequence_numbering, family_numbering,
-            logging);
-    }
-
+void Simulation::print_seed(bool to_seed, size_type seed) {
+    output.print_params(to_seed, seed);
 }

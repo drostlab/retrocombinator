@@ -14,7 +14,7 @@
 #include <chrono>
 #include <random>
 #include <set>
-
+#include <vector>
 
 namespace retrocombinator
 {
@@ -80,7 +80,7 @@ namespace retrocombinator
         /** Gets the last set seed.
          *  Look at the definition of last_seed for more details.
          */
-        size_type get_last_seed() { return last_seed; }
+        size_type get_last_seed() const { return last_seed; }
 
         /** Generates a random true/false value.
          */
@@ -116,18 +116,118 @@ namespace retrocombinator
                                                              size_type high);
 
         /** Tests whether or not an event happened.
-         *  Takes the probability of an event as paramter, and then compares it to a
-         *  random value in [0, 1).
+         *  Takes the probability of an event as parameter, and then compares it
+         *  to a random value in [0, 1).
          */
         bool test_event(double event_probability);
 
         /** Chooses an event from a list of possible events.
-         *  Takes the probabilities of each of the events as input.
-         *  Throws an exception if the probabilites do not add up to at least 1.
+         *  Takes the probabilities of each of the events as input.  Throws an
+         *  exception if the probabilities do not add up to at least 1.
          *
-         *  This does not check if the array is valid.
+         *  This does not check if the array is valid, i.e. if the probabilities
+         *  add up to 1.
          */
         size_type choose_event(const double events[], size_type num_events);
+
+        /** Chooses an event from a list of possible events.
+         *  Takes the *relative* probabilities of each of the events as input
+         */
+        template<typename T>
+        size_type choose_event(const std::vector<T> events)
+        {
+            if(events.size() <= 0) {
+                throw Exception("Number of events needs to be strictly positive");
+            }
+            double rand_num = rand_real();
+            // some proportion of the overall sum
+            double target = rand_num * std::accumulate(events.begin(), events.end(), 0);
+            double running_total = 0;
+            for (size_type i=0; i<events.size(); ++i)
+            {
+                running_total += events[i];
+                if (running_total >= target) return i;
+            }
+            // it is the last event if say target rounded down from the total sum
+            return (events.size()-1);
+
+        }
+
+        /** Chooses many events from a list of possible events, with
+         *  replacement.
+         *
+         *  Returns a vector \p picks of the same size as events, where
+         *      \a picks_i is the number of times event \p i was chosen.
+         *
+         *  Takes the *relative* probabilities of each of the events as input.
+         */
+        template<typename T>
+        std::vector<size_type> choose_events(std::vector<T> events,
+                                             size_type num_picks)
+        {
+            if(events.size() <= 0) {
+                throw Exception("Number of events needs to be strictly positive");
+            }
+            // Make the (relative) probabilities cumulative
+            std::vector<double> events_cum(events.size(), 0);
+            double running_total = 0;
+            for (size_type i=0; i<events.size(); ++i) {
+                events_cum[i] = events[i] + running_total;
+                running_total = events_cum[i];
+            }
+
+            // running_total now contains the sum of all (relative) probabilities
+
+            std::vector<size_type> picks(events_cum.size(), 0);
+
+            for (size_type i=0; i<num_picks; ++i) {
+                double target = rand_real() * running_total;
+
+                // binary search on the sorted array to see which event was chosen
+                size_type beg = 0;
+                size_type end = events_cum.size() - 1;
+                size_type mid;
+
+                while (beg <= end) {
+                    mid = (beg + end) / 2;
+
+                    if(target > events_cum[mid]) {
+                        // mid *must* be < end
+                        beg = mid + 1;
+                    } else {
+                        if (mid == 0) {
+                            picks[0] += 1;
+                            break;
+                        }
+                        else if (target > events_cum[mid-1]) {
+                            // Need strictly bigger, if equal then P(mid) was 0
+                            picks[mid] += 1;
+                            break;
+                        }
+                        else {
+                            end = mid - 1;
+                        }
+                    }
+                }
+            }
+
+            return picks;
+        }
+
+        /** Chooses (without replacement) a given number of items randomly from
+         *  a list of distinct types, where each type has some number of items to
+         *  begin with.
+         *
+         *  Returns a vector \p picks of the same size as items, where
+         *      \a picks_i is the number of times item \a i was chosen, and
+         *      \a picks_i <= \p item_i
+         *
+         *  If the number of items to be picked is larger than we have
+         *  available, all items are picked and so we just return the original
+         *  list given to us.
+         */
+        std::vector<size_type> choose_items(std::vector<size_type> items,
+                                            size_type num_picks);
     };
 
     // Global random number generator
