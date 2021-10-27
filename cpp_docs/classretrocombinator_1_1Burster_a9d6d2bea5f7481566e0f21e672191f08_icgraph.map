@@ -1,0 +1,5 @@
+<map id="retrocombinator::Burster::get_new_sequence_counts" name="retrocombinator::Burster::get_new_sequence_counts">
+<area shape="rect" id="node1" title="What are we trying to burst the N sequences into?" alt="" coords="447,5,651,47"/>
+<area shape="rect" id="node2" href="$classretrocombinator_1_1Burster.html#ae704e422926d3d7087c714badc033eef" title="How the sequences burst after a timestep in the simulation." alt="" coords="216,5,399,47"/>
+<area shape="rect" id="node3" href="$classretrocombinator_1_1Pool.html#ac6ae2f77dee8cd2c89bdead9ad4075ed" title="Refresh the pool to the next timestep." alt="" coords="5,5,168,47"/>
+</map>

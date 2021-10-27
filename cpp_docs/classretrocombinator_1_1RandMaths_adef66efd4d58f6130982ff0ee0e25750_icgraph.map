@@ -1,0 +1,6 @@
+<map id="retrocombinator::RandMaths::rand_poisson" name="retrocombinator::RandMaths::rand_poisson">
+<area shape="rect" id="node1" title="Chooses a number sampled from a Poisson distribution." alt="" coords="699,5,907,47"/>
+<area shape="rect" id="node2" href="$classretrocombinator_1_1Burster.html#ae704e422926d3d7087c714badc033eef" title="How the sequences burst after a timestep in the simulation." alt="" coords="216,5,399,47"/>
+<area shape="rect" id="node4" href="$classretrocombinator_1_1Burster.html#a9d6d2bea5f7481566e0f21e672191f08" title="What are we trying to burst the N sequences into?" alt="" coords="447,35,651,76"/>
+<area shape="rect" id="node3" href="$classretrocombinator_1_1Pool.html#ac6ae2f77dee8cd2c89bdead9ad4075ed" title="Refresh the pool to the next timestep." alt="" coords="5,5,168,47"/>
+</map>

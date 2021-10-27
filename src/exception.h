@@ -1,8 +1,5 @@
 /**
  * @file
- *
- * \brief Basic exception class that can store an error message.
- *
  */
 #ifndef EXCEPTION_H
 #define EXCEPTION_H
@@ -12,22 +9,22 @@
 namespace retrocombinator
 {
     /** Basic class to represent exceptions.
-     *  Stores an error message.
+     *  Stores the error message corresponding to when it was raised.
      */
     class Exception
     {
     private:
-        /// A helpful diagnostic message
+        /// A helpful diagnostic message of why this exception was thrown
         const std::string error_msg;
 
     public:
         /** Basic constructor for an exception that is to be thrown.
-         *  Takes the error message as input argument.
+         *  \param error_msg \copydoc Exception::error_msg
          */
         Exception(std::string error_msg) :
             error_msg(error_msg) {}
 
-        /** The error message for this exception.
+        /** What was the error message for this exception?
          */
         std::string what() const { return error_msg; }
     };

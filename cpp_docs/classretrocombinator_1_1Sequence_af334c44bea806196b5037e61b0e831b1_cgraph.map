@@ -1,0 +1,11 @@
+<map id="retrocombinator::Sequence::Sequence" name="retrocombinator::Sequence::Sequence">
+<area shape="rect" id="node1" title="Constructs a sequence from recombining two other sequences." alt="" coords="5,169,204,211"/>
+<area shape="rect" id="node2" href="$classretrocombinator_1_1ActivityTracker.html#aa715c4869424bc3a2714a31d84385466" title="Has a sequence with a given number of mutations to the critical region become inactive?" alt="" coords="271,5,456,47"/>
+<area shape="rect" id="node5" href="$classretrocombinator_1_1Sequence.html#aeefc98943c08769af4ed9f73157d26d1" title="Returns length of the sequence." alt="" coords="264,71,463,112"/>
+<area shape="rect" id="node6" href="$classretrocombinator_1_1Utils.html#a6847a3aae1daec87ebebd9b98b8efde9" title="Checks whether a number lies within a range." alt="" coords="281,136,446,177"/>
+<area shape="rect" id="node7" href="$classretrocombinator_1_1Sequence.html#a81e8fedf2893e16e194f3e3a532a24b8" title="Returns how many critical region mutations are present in this sequence." alt="" coords="264,201,463,243"/>
+<area shape="rect" id="node8" href="$classretrocombinator_1_1RandMaths.html#a8072bad64e64ef042e5257e1bee85635" title="Generates a random integer within a range." alt="" coords="523,289,731,331"/>
+<area shape="rect" id="node9" href="$classretrocombinator_1_1RandMaths.html#a6a7fe159f46afec51d997e4d07d2cfe6" title="Samples m integers within a range, without replacement." alt="" coords="252,319,475,360"/>
+<area shape="rect" id="node3" href="$classretrocombinator_1_1RandMaths.html#a183686140a9da18ad40c7e048ee8914e" title="Tests whether or not an event happened." alt="" coords="523,5,731,47"/>
+<area shape="rect" id="node4" href="$classretrocombinator_1_1RandMaths.html#aa6441baa59bff50f588c0c54e3c54140" title="Generates a random real number within a range." alt="" coords="779,5,987,47"/>
+</map>

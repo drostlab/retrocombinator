@@ -4,7 +4,10 @@
 check_memory = "off"
 
 # Options for profiling: "on"/"off"
-check_profiling = "on"
+check_profiling = "off"
+
+# Options for optimisation
+optimisation = "off"
 
 # Library files
 SRC_DIR = src/
@@ -33,6 +36,10 @@ endif
 
 ifeq ($(check_profiling), "on")
 	CCFLAGS += -pg
+endif
+
+ifeq ($(optimisation), "on")
+	CCFLAGS += -O2
 endif
 
 _HEADERS = exception.h					\

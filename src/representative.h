@@ -1,10 +1,6 @@
 /**
  * @file
- *
- *  To represent a centroid in a cluster of the sequence pool, that is, a
- *  'family representative'.
  */
-
 #ifndef REPRESENTATIVE_H
 #define REPRESENTATIVE_H
 
@@ -13,6 +9,9 @@
 
 namespace retrocombinator
 {
+    /** To store a representative sequence for each family of retrontransposons
+      * that emerge during the simulation.
+      */
     struct Representative
     {
     public:
@@ -29,6 +28,7 @@ namespace retrocombinator
         const size_type creation_timestep;
 
 
+        /// Simple plain-old-data constructor
         Representative(std::string raw_sequence, size_type num_mutations,
                        size_type creation_timestep);
     private:

@@ -1,0 +1,10 @@
+<map id="retrocombinator::RandMaths::test_event" name="retrocombinator::RandMaths::test_event">
+<area shape="rect" id="node1" title="Tests whether or not an event happened." alt="" coords="949,97,1157,139"/>
+<area shape="rect" id="node2" href="$classretrocombinator_1_1ActivityTracker.html#aa715c4869424bc3a2714a31d84385466" title="Has a sequence with a given number of mutations to the critical region become inactive?" alt="" coords="707,64,892,105"/>
+<area shape="rect" id="node7" href="$classretrocombinator_1_1Burster.html#a9d6d2bea5f7481566e0f21e672191f08" title="What are we trying to burst the N sequences into?" alt="" coords="697,129,901,171"/>
+<area shape="rect" id="node3" href="$classretrocombinator_1_1Sequence.html#a7cee5844bb9de4f0f900a863b0cf41bd" title="Changes the nucleotide at position n to new_nucleotide." alt="" coords="451,5,649,47"/>
+<area shape="rect" id="node6" href="$classretrocombinator_1_1Sequence.html#af334c44bea806196b5037e61b0e831b1" title="Constructs a sequence from recombining two other sequences." alt="" coords="451,71,649,112"/>
+<area shape="rect" id="node4" href="$classretrocombinator_1_1Mutator.html#ae9946ad76f8efc7e954fbdfe0d97c0bd" title="Mutates a sequence according to a given transition matrix." alt="" coords="216,20,403,61"/>
+<area shape="rect" id="node5" href="$classretrocombinator_1_1Pool.html#ac6ae2f77dee8cd2c89bdead9ad4075ed" title="Refresh the pool to the next timestep." alt="" coords="5,68,168,109"/>
+<area shape="rect" id="node8" href="$classretrocombinator_1_1Burster.html#ae704e422926d3d7087c714badc033eef" title="How the sequences burst after a timestep in the simulation." alt="" coords="218,100,401,141"/>
+</map>

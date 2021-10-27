@@ -1,0 +1,4 @@
+<map id="retrocombinator::Sequence::renumber_sequences" name="retrocombinator::Sequence::renumber_sequences">
+<area shape="rect" id="node1" title="Explicitly update the global sequence count to start from a particular number." alt="" coords="216,5,415,47"/>
+<area shape="rect" id="node2" href="$classretrocombinator_1_1Pool.html#a35d4c8e37589265376e39d523c830f5e" title="Constructor of Sequence Pool, that gives it access to a burster/pruner and a mutator." alt="" coords="5,5,168,47"/>
+</map>

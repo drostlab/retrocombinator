@@ -1,12 +1,5 @@
 /**
  * @file
- *
- * \brief To keep track of what sequences are bursting and what are not
- *
- * This takes in a pool of sequences, tries bursting the active ones, and then
- * prunes down to a set number of sequences by sampling from all possible
- * sequences.
- *
  */
 
 #ifndef BURSTER_H
@@ -17,6 +10,11 @@
 
 namespace retrocombinator
 {
+    /** To keep track of what sequences are bursting and what are not.
+      * This takes in a pool of sequences, tries bursting the active ones, and
+      * then prunes down to a set number of sequences by sampling from all
+      * possible sequences.
+      */
     class Burster
     {
     private:

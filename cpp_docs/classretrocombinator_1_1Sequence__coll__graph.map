@@ -1,0 +1,4 @@
+<map id="retrocombinator::Sequence" name="retrocombinator::Sequence">
+<area shape="rect" id="node1" title="To represent a DNA sequence and the mutations that it has undergone." alt="" coords="5,109,204,136"/>
+<area shape="rect" id="node2" href="$classretrocombinator_1_1ActivityTracker.html" title="To store the information and logic of whether or not a sequence is active, that is,..." alt="" coords="12,5,197,47"/>
+</map>

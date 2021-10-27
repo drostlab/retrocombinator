@@ -1,0 +1,70 @@
+\hypertarget{classretrocombinator_1_1ActivityTracker}{}\doxysection{retrocombinator\+::Activity\+Tracker Class Reference}
+\label{classretrocombinator_1_1ActivityTracker}\index{retrocombinator::ActivityTracker@{retrocombinator::ActivityTracker}}
+
+
+To store the information and logic of whether or not a sequence is active, that is, capable of bursting/transposition.  
+
+
+
+
+{\ttfamily \#include $<$activity\+\_\+tracker.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classretrocombinator_1_1ActivityTracker_a2fe4bd86131969569ca387e201168028}{Activity\+Tracker}} (\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} \mbox{\hyperlink{classretrocombinator_1_1ActivityTracker_aca98df069fd1971afd6e381a992abc9c}{sequence\+\_\+length}}, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} \mbox{\hyperlink{classretrocombinator_1_1ActivityTracker_a0492421d1d5318bdc7d46133f9c70a82}{critical\+\_\+region\+\_\+length}}, double \mbox{\hyperlink{classretrocombinator_1_1ActivityTracker_a20bdc61404326c3bb29a3c41ee1890b0}{inactive\+\_\+probability}})
+\begin{DoxyCompactList}\small\item\em Configure our activity model. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classretrocombinator_1_1ActivityTracker_a70d91d2da72433159f7dcbf6ac5470b7}\label{classretrocombinator_1_1ActivityTracker_a70d91d2da72433159f7dcbf6ac5470b7}} 
+\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} \mbox{\hyperlink{classretrocombinator_1_1ActivityTracker_a70d91d2da72433159f7dcbf6ac5470b7}{get\+\_\+sequence\+\_\+length}} () const
+\begin{DoxyCompactList}\small\item\em Gets the length of sequences to be considered, in number of nucleotides. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classretrocombinator_1_1ActivityTracker_ac4ec903ed6dec143db9e1c538f868f20}\label{classretrocombinator_1_1ActivityTracker_ac4ec903ed6dec143db9e1c538f868f20}} 
+bool \mbox{\hyperlink{classretrocombinator_1_1ActivityTracker_ac4ec903ed6dec143db9e1c538f868f20}{is\+\_\+critical}} (\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} n) const
+\begin{DoxyCompactList}\small\item\em Is a position in the critical region? \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classretrocombinator_1_1ActivityTracker_aa715c4869424bc3a2714a31d84385466}\label{classretrocombinator_1_1ActivityTracker_aa715c4869424bc3a2714a31d84385466}} 
+bool \mbox{\hyperlink{classretrocombinator_1_1ActivityTracker_aa715c4869424bc3a2714a31d84385466}{check\+\_\+activity}} (\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} num\+\_\+critical\+\_\+mutations) const
+\begin{DoxyCompactList}\small\item\em Has a sequence with a given number of mutations to the critical region become inactive? \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classretrocombinator_1_1ActivityTracker_aca98df069fd1971afd6e381a992abc9c}\label{classretrocombinator_1_1ActivityTracker_aca98df069fd1971afd6e381a992abc9c}} 
+\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} \mbox{\hyperlink{classretrocombinator_1_1ActivityTracker_aca98df069fd1971afd6e381a992abc9c}{sequence\+\_\+length}}
+\begin{DoxyCompactList}\small\item\em Length of the sequence we allow. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classretrocombinator_1_1ActivityTracker_a0492421d1d5318bdc7d46133f9c70a82}\label{classretrocombinator_1_1ActivityTracker_a0492421d1d5318bdc7d46133f9c70a82}} 
+\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} \mbox{\hyperlink{classretrocombinator_1_1ActivityTracker_a0492421d1d5318bdc7d46133f9c70a82}{critical\+\_\+region\+\_\+length}}
+\begin{DoxyCompactList}\small\item\em How many positions on either side of the sequence is the critical region? A mutation to a critical region is what can perhaps cause inactivity. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classretrocombinator_1_1ActivityTracker_a20bdc61404326c3bb29a3c41ee1890b0}\label{classretrocombinator_1_1ActivityTracker_a20bdc61404326c3bb29a3c41ee1890b0}} 
+double \mbox{\hyperlink{classretrocombinator_1_1ActivityTracker_a20bdc61404326c3bb29a3c41ee1890b0}{inactive\+\_\+probability}}
+\begin{DoxyCompactList}\small\item\em What is the probability that a mutation to the critical region causes inactivity? \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+To store the information and logic of whether or not a sequence is active, that is, capable of bursting/transposition. 
+
+This class \textquotesingle{}configures\textquotesingle{} the set of sequences we are dealing with 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classretrocombinator_1_1ActivityTracker_a2fe4bd86131969569ca387e201168028}\label{classretrocombinator_1_1ActivityTracker_a2fe4bd86131969569ca387e201168028}} 
+\index{retrocombinator::ActivityTracker@{retrocombinator::ActivityTracker}!ActivityTracker@{ActivityTracker}}
+\index{ActivityTracker@{ActivityTracker}!retrocombinator::ActivityTracker@{retrocombinator::ActivityTracker}}
+\doxysubsubsection{\texorpdfstring{ActivityTracker()}{ActivityTracker()}}
+{\footnotesize\ttfamily Activity\+Tracker\+::\+Activity\+Tracker (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{sequence\+\_\+length,  }\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{critical\+\_\+region\+\_\+length,  }\item[{double}]{inactive\+\_\+probability }\end{DoxyParamCaption})}
+
+
+
+Configure our activity model. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sequence\+\_\+length} & Length of the sequence we allow.\\
+\hline
+{\em critical\+\_\+region\+\_\+length} & How many positions on either side of the sequence is the critical region? A mutation to a critical region is what can perhaps cause inactivity.\\
+\hline
+{\em inactive\+\_\+probability} & What is the probability that a mutation to the critical region causes inactivity?\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{activity__tracker_8h}{activity\+\_\+tracker.\+h}}\item 
+src/activity\+\_\+tracker.\+cpp\end{DoxyCompactItemize}

@@ -1,9 +1,5 @@
 /**
  * @file
- *
- * \brief Definitions of basic helper functions.
- *
- * A collection of short, useful functions and data structures
  */
 #ifndef UTILITIES_H
 #define UTILITIES_H
@@ -18,7 +14,8 @@
 namespace retrocombinator
 {
     /**
-     *  To store some useful functions in a namespace and prevent conflicts.
+     *  A collection of short, useful functions and data structures.
+     *  Stored in a class to prevent namespace conflicts
      */
     class Utils
     {
@@ -31,25 +28,29 @@ namespace retrocombinator
             return ((lb <= test) && (test < ub));
         }
 
-        /// Type for a set (cluster) of indices
+        /// Type for a set of indices that represent a cluster
         typedef std::set<size_type> cluster_type;
 
         /** Returns a set of clusters (using SLINK)
          *  \param n the number of data points
-         *  \param dist the nXn distance matrix between the data points
-         *  \param join_threshold_max we cluster whilst we can merge two
-         *  clusters with distance < join_threshold_max between them - if the
-         *  closest distance between two clusters becomes >= than this, we stop
-         *  clustering
-         *
-         *  Takes a distance matrix D, where D(i, j) is the distance between i
-         *  and j, with D(i, i) being 0 for all i.
-         *
+         *  \param dist the nXn distance matrix between the data points, the
+         *  distance between \c i and \c j is given by <tt>dist[i, j]</tt>, and
+         *  we assume <tt>dist[i, i] == 0</tt> for all \c i
+         *  \param join_threshold_max we merge two for as long as the distance
+         *  between them is < \a join_threshold_max (once the closest distance
+         *  between two clusters becomes >= \a join_threshold_max this, we stop
+         *  clustering)
+         *  \return a sequence of clusters, where each cluster is a collection
+         *  of indices belonging to it
          */
         static std::vector<cluster_type> cluster_slink(dist_type dist, size_type n,
                 size_type join_threshold_max);
 
-        /// Selects a representative from each cluster
+        /** Selects a representative from each cluster
+          * \param clusters a sequence of clusters, where each cluster has all
+          * the indices belonging to it
+          * \return a sequence of indices, the representatives for each cluster
+          */
         static std::vector<size_type>
         select_representatives(std::vector<cluster_type> clusters);
 

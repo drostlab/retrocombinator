@@ -143,9 +143,9 @@ parseSimulationOutput <- function(filename)
         steps <- rep(timestep, length(seqIds))
         data$familyRepresentatives <- rbind(data$familyRepresentatives,
           data.frame(step = steps, realTime = steps*data$params$SimulationParams_timePerStep,
-                     familyId = rep(famId, length(seqIds)),
-                     creationTime = rep(creationId, length(seqIds)),
-                     sequenceId = seqIds
+                     familyId = rep(as.numeric(famId), length(seqIds)),
+                     creationTime = rep(as.numeric(creationId), length(seqIds)),
+                     sequenceId = as.numeric(seqIds)
           )
         )
         i <- i+1

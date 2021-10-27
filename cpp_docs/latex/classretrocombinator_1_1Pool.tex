@@ -1,0 +1,64 @@
+\hypertarget{classretrocombinator_1_1Pool}{}\doxysection{retrocombinator\+::Pool Class Reference}
+\label{classretrocombinator_1_1Pool}\index{retrocombinator::Pool@{retrocombinator::Pool}}
+
+
+To keep track of our current pool of sequences during a simulation.  
+
+
+
+
+{\ttfamily \#include $<$pool.\+h$>$}
+
+
+
+Collaboration diagram for retrocombinator\+::Pool\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classretrocombinator_1_1Pool__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classretrocombinator_1_1Pool_a35d4c8e37589265376e39d523c830f5e}\label{classretrocombinator_1_1Pool_a35d4c8e37589265376e39d523c830f5e}} 
+\mbox{\hyperlink{classretrocombinator_1_1Pool_a35d4c8e37589265376e39d523c830f5e}{Pool}} (std\+::string sequence, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} sequence\+\_\+length, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} num\+\_\+initial\+\_\+copies, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} critical\+\_\+region\+\_\+length, double inactive\+\_\+probability, std\+::string mutation\+\_\+model, double burst\+\_\+probability, double burst\+\_\+mean, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} max\+\_\+total\+\_\+copies, double recomb\+\_\+mean, double recomb\+\_\+similarity, double \mbox{\hyperlink{classretrocombinator_1_1Pool_ac5c193cd54402d74996a00f18ef72d73}{selection\+\_\+threshold}})
+\begin{DoxyCompactList}\small\item\em Constructor of \mbox{\hyperlink{classretrocombinator_1_1Sequence}{Sequence}} \mbox{\hyperlink{classretrocombinator_1_1Pool}{Pool}}, that gives it access to a burster/pruner and a mutator. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classretrocombinator_1_1Pool_ac6ae2f77dee8cd2c89bdead9ad4075ed}\label{classretrocombinator_1_1Pool_ac6ae2f77dee8cd2c89bdead9ad4075ed}} 
+void \mbox{\hyperlink{classretrocombinator_1_1Pool_ac6ae2f77dee8cd2c89bdead9ad4075ed}{step}} (double time\+\_\+per\+\_\+step)
+\begin{DoxyCompactList}\small\item\em Refresh the pool to the next timestep. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classretrocombinator_1_1Pool_a58b735b55d10bf44e4995d56d6402bba}\label{classretrocombinator_1_1Pool_a58b735b55d10bf44e4995d56d6402bba}} 
+const \mbox{\hyperlink{namespaceretrocombinator_aad1e3f1da3091479de238da696e10f0d}{sequence\+\_\+list}} \& \mbox{\hyperlink{classretrocombinator_1_1Pool_a58b735b55d10bf44e4995d56d6402bba}{get\+\_\+pool}} () const
+\begin{DoxyCompactList}\small\item\em What is the current state of the pool? \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classretrocombinator_1_1Pool_ac182a12abbc21be48c71f67f3c2a7786}\label{classretrocombinator_1_1Pool_ac182a12abbc21be48c71f67f3c2a7786}} 
+\mbox{\hyperlink{namespaceretrocombinator_a7d5931e432c55c58d0a3cc47779caddc}{dist\+\_\+type}} \mbox{\hyperlink{classretrocombinator_1_1Pool_ac182a12abbc21be48c71f67f3c2a7786}{get\+\_\+distance\+\_\+matrix}} () const
+\begin{DoxyCompactList}\small\item\em What are the pairwise distances between sequences at this state? \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classretrocombinator_1_1Pool_a862a302f344dc3444209cf9e95298fd7}\label{classretrocombinator_1_1Pool_a862a302f344dc3444209cf9e95298fd7}} 
+\mbox{\hyperlink{classretrocombinator_1_1ActivityTracker}{Activity\+Tracker}} \mbox{\hyperlink{classretrocombinator_1_1Pool_a862a302f344dc3444209cf9e95298fd7}{activity\+\_\+tracker}}
+\begin{DoxyCompactList}\small\item\em Our model to keep track of whether a sequence is active or not. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classretrocombinator_1_1Pool_ae7ef9c94c044b77785a02d4aee2891c9}\label{classretrocombinator_1_1Pool_ae7ef9c94c044b77785a02d4aee2891c9}} 
+\mbox{\hyperlink{classretrocombinator_1_1Mutator}{Mutator}} \mbox{\hyperlink{classretrocombinator_1_1Pool_ae7ef9c94c044b77785a02d4aee2891c9}{mutator}}
+\begin{DoxyCompactList}\small\item\em How to mutate our pool of sequences? \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classretrocombinator_1_1Pool_add7ab245a601480be233290f569d9cfa}\label{classretrocombinator_1_1Pool_add7ab245a601480be233290f569d9cfa}} 
+\mbox{\hyperlink{classretrocombinator_1_1Burster}{Burster}} \mbox{\hyperlink{classretrocombinator_1_1Pool_add7ab245a601480be233290f569d9cfa}{burster}}
+\begin{DoxyCompactList}\small\item\em How to burst our pool of sequences? \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classretrocombinator_1_1Pool_ac5c193cd54402d74996a00f18ef72d73}\label{classretrocombinator_1_1Pool_ac5c193cd54402d74996a00f18ef72d73}} 
+double \mbox{\hyperlink{classretrocombinator_1_1Pool_ac5c193cd54402d74996a00f18ef72d73}{selection\+\_\+threshold}}
+\begin{DoxyCompactList}\small\item\em Kill sequences below this similarity to initial sequence. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classretrocombinator_1_1Pool_a6b1c6b0084db7dc44acad4a75ae4f918}\label{classretrocombinator_1_1Pool_a6b1c6b0084db7dc44acad4a75ae4f918}} 
+\mbox{\hyperlink{namespaceretrocombinator_aad1e3f1da3091479de238da696e10f0d}{sequence\+\_\+list}} \mbox{\hyperlink{classretrocombinator_1_1Pool_a6b1c6b0084db7dc44acad4a75ae4f918}{pool}}
+\begin{DoxyCompactList}\small\item\em The current pool of sequences during our simulation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+To keep track of our current pool of sequences during a simulation. 
+
+Every sequence in this pool is mutated, given the opportunity to be burst and pruned, and selected based on some requirement. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{pool_8h}{pool.\+h}}\item 
+src/pool.\+cpp\end{DoxyCompactItemize}

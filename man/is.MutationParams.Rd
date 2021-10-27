@@ -6,6 +6,9 @@
 \usage{
 is.MutationParams(x)
 }
+\arguments{
+\item{x}{An arbitrary object}
+}
 \description{
 Is x a MutationParams object?
 }

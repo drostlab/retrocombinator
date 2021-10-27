@@ -6,21 +6,23 @@ Authors@R: c(
     person("Hajk-Georg", "Drost", , "hajk-georg.drost@tuebingen.mpg.de", role = c("aut", "ctb"))
     )
 Description: An optimized framework to simulate the molecular evolutionary processes of retrotransposon evolution including extrachromosomal recombination.
-Depends: R (>= 3.4.4)
+Depends: R (>= 3.5.0)
 Imports:
     Rcpp (>= 0.12.17),
     dplyr,
     ggplot2,
     magrittr,
-    stringr
+    rlang
 LinkingTo: Rcpp
 License: GPL-3 + file LICENSE
 URL: https://github.com/drostlab/retrocombinator
 BugReports: https://github.com/drostlab/retrocombinator/issues
-LazyData: true
 Encoding: UTF-8
 RoxygenNote: 7.1.1
 SystemRequirements: C++11
-Suggests: knitr,
+Suggests:
+    testthat (>= 3.0.0),
+    knitr,
     rmarkdown
 VignetteBuilder: knitr
+Config/testthat/edition: 3

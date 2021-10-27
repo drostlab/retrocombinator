@@ -1,9 +1,8 @@
 /**
- * @file
+ * \file
  *
- * \brief To store different models of DNA evolution.
- *
- * Declares an interface for definition of different point mutation models.
+ * \brief This file has multiple classes, all of which represent models for how
+ * to apply point mutations to sequences.
  */
 #ifndef POINT_MUTATION_MODELS_H
 #define POINT_MUTATION_MODELS_H

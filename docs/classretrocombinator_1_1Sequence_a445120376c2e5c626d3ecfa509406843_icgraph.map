@@ -1,5 +1,0 @@
-<map id="retrocombinator::Sequence::is_active" name="retrocombinator::Sequence::is_active">
-<area shape="rect" id="node1" title="Tests whether this sequence is active (can transpose) or not." alt="" coords="213,39,412,80"/>
-<area shape="rect" id="node2" href="$namespaceretrocombinator.html#a3f99050424a8b7cf5dcb7978dc09a9dd" title="Tests PointMutator." alt="" coords="5,5,165,47"/>
-<area shape="rect" id="node3" href="$namespaceretrocombinator.html#a15194234ee9ebb9f3901e14cf7b77450" title="Tests the Sequence class." alt="" coords="5,71,165,112"/>
-</map>

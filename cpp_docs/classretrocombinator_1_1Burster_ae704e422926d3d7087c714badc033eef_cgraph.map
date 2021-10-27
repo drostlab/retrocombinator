@@ -1,0 +1,9 @@
+<map id="retrocombinator::Burster::burst_sequences" name="retrocombinator::Burster::burst_sequences">
+<area shape="rect" id="node1" title="How the sequences burst after a timestep in the simulation." alt="" coords="5,93,188,135"/>
+<area shape="rect" id="node2" href="$classretrocombinator_1_1RandMaths.html#a2d4fdd627a0d5e24da1d8affec21ac28" title="Chooses (without replacement) a given number of items randomly from a list of distinct types,..." alt="" coords="236,5,444,47"/>
+<area shape="rect" id="node3" href="$classretrocombinator_1_1Burster.html#a9d6d2bea5f7481566e0f21e672191f08" title="What are we trying to burst the N sequences into?" alt="" coords="238,123,442,164"/>
+<area shape="rect" id="node4" href="$classretrocombinator_1_1RandMaths.html#adef66efd4d58f6130982ff0ee0e25750" title="Chooses a number sampled from a Poisson distribution." alt="" coords="492,64,700,105"/>
+<area shape="rect" id="node7" href="$classretrocombinator_1_1RandMaths.html#a8072bad64e64ef042e5257e1bee85635" title="Generates a random integer within a range." alt="" coords="236,188,444,229"/>
+<area shape="rect" id="node5" href="$classretrocombinator_1_1RandMaths.html#a183686140a9da18ad40c7e048ee8914e" title="Tests whether or not an event happened." alt="" coords="492,129,700,171"/>
+<area shape="rect" id="node6" href="$classretrocombinator_1_1RandMaths.html#aa6441baa59bff50f588c0c54e3c54140" title="Generates a random real number within a range." alt="" coords="748,129,956,171"/>
+</map>

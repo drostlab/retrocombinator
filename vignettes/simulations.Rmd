@@ -41,10 +41,10 @@ specified explicitly, the default will be used.
 
 ```{r, eval = FALSE}
 # --- NOT RUN (this is an alternative) ---
-burstParams <- BurstParams(recombMean = 1.0)
-flagParams <- FlagParams(lengthCriticalRegion = 5,
-                         probInactiveWhenMutated = 0.1)
-simulateEvolution(burstParams = burstParams, flagParams = flagParams)
+recombParams <- RecombParams(recombMean = 1.0)
+activityParams <- ActivityParams(lengthCriticalRegion = 20,
+                                 probInactiveWhenMutated = 0.1)
+simulateEvolution(recombParams = recombParams, activityParams = activityParams)
 # ----------------------------------------
 ```
 

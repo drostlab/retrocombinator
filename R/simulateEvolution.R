@@ -1,4 +1,14 @@
 #' Run an entire simulation with flags
+#' @param sequenceParams A [retrocombinator::SequenceParams()] object for the simulation
+#' @param activityParams An [retrocombinator::ActivityParams()] object for the simulation
+#' @param mutationParams A [retrocombinator::MutationParams()] object for the simulation
+#' @param burstParams A [retrocombinator::BurstParams()] object for the simulation
+#' @param recombParams A [retrocombinator::RecombParams()] object for the simulation
+#' @param selectionParams A [retrocombinator::SelectionParams()] object for the simulation
+#' @param familyParams A [retrocombinator::FamilyParams()] object for the simulation
+#' @param simulationParams A [retrocombinator::SimulationParams()] object for the simulation
+#' @param outputParams A [retrocombinator::OutputParams()] object for the simulation
+#' @param seedParams A [retrocombinator::SeedParams()] object for the simulation
 #' @useDynLib retrocombinator, .registration = TRUE
 #' @importFrom Rcpp sourceCpp
 #' @export

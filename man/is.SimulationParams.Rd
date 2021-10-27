@@ -6,6 +6,9 @@
 \usage{
 is.SimulationParams(x)
 }
+\arguments{
+\item{x}{An arbitrary object}
+}
 \description{
 Is x a SimulationParams object?
 }

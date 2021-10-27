@@ -6,6 +6,9 @@
 \usage{
 is.SequenceParams(x)
 }
+\arguments{
+\item{x}{An arbitrary object}
+}
 \description{
 Is x a SequenceParams object?
 }

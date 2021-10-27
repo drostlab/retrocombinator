@@ -2,6 +2,7 @@
 # TODO: Check that integers are actually integers
 
 #' Is x a SequenceParams object?
+#' @param x An arbitrary object
 #' @export
 is.SequenceParams  <- function(x) inherits(x, 'SequenceParams')
 
@@ -37,6 +38,7 @@ SequenceParams <- function(numInitialCopies = 20,
 }
 
 #' Is x an ActivityParams object?
+#' @param x An arbitrary object
 #' @export
 is.ActivityParams  <- function(x) inherits(x, 'ActivityParams')
 
@@ -59,6 +61,7 @@ ActivityParams <- function(lengthCriticalRegion = 10,
 }
 
 #' Is x a MutationParams object?
+#' @param x An arbitrary object
 #' @export
 is.MutationParams  <- function(x) inherits(x, 'MutationParams')
 
@@ -79,6 +82,7 @@ MutationParams <- function(model = 'K80') {
 }
 
 #' Is x a BurstParams object?
+#' @param x An arbitrary object
 #' @export
 is.BurstParams  <- function(x) inherits(x, 'BurstParams')
 
@@ -105,6 +109,7 @@ BurstParams <- function(burstProbability = 0.1,
 }
 
 #' Is x a RecombParams object?
+#' @param x An arbitrary object
 #' @export
 is.RecombParams  <- function(x) inherits(x, 'RecombParams')
 
@@ -126,6 +131,7 @@ RecombParams <- function(recombMean = 1.5,
 }
 
 #' Is x a SelectionParams object?
+#' @param x An arbitrary object
 #' @export
 is.SelectionParams  <- function(x) inherits(x, 'SelectionParams')
 
@@ -142,6 +148,7 @@ SelectionParams <- function(selectionThreshold = 0.3) {
 }
 
 #' Is x a FamilyParams object?
+#' @param x An arbitrary object
 #' @export
 is.FamilyParams  <- function(x) inherits(x, 'FamilyParams')
 
@@ -163,6 +170,7 @@ FamilyParams <- function(familyCoherence = 0.70,
 }
 
 #' Is x a SimulationParams object?
+#' @param x An arbitrary object
 #' @export
 is.SimulationParams  <- function(x) inherits(x, 'SimulationParms')
 
@@ -185,6 +193,7 @@ SimulationParams <- function(numSteps = 20,
 
 
 #' Is x a OutputParams object?
+#' @param x An arbitrary object
 #' @export
 is.OutputParams  <- function(x) inherits(x, 'OutputParams')
 
@@ -230,6 +239,7 @@ OutputParams <- function(outputFilename = 'simulationOutput.out',
 }
 
 #' Is x a SeedParams object?
+#' @param x An arbitrary object
 #' @export
 is.SeedParams  <- function(x) inherits(x, 'SeedParams')
 

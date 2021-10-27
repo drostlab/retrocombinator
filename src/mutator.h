@@ -1,10 +1,5 @@
 /**
  * @file
- *
- * \brief To mutate sequences by point mutation using a model
- *
- * Includes a class which has methods for modifying sequences in place according
- * to some point mutation model
  */
 #ifndef MUTATOR_H
 #define MUTATOR_H
@@ -21,7 +16,6 @@ namespace retrocombinator
 
     /** A class that can mutate a given sequence according to a specified point
      *  mutation model.
-     *  We need to specify how long the sequence has evolved for.
      */
     class Mutator
     {
@@ -30,8 +24,9 @@ namespace retrocombinator
         PointMutationModel * point_mutation_model;
 
     public:
-        /** Constructor that chooses a point mutation model and the
-         *  probabilities for critical mutations at each position in the sequence
+        /** Chooses a point mutation model.
+         *  Can be "JC69", "K80", "F81", "HKY85", "TN93" or "GTR", but note that
+         *  "GTR" is not yet implemented
          */
         Mutator(std::string model);
 

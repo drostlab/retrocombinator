@@ -6,6 +6,9 @@
 \usage{
 is.OutputParams(x)
 }
+\arguments{
+\item{x}{An arbitrary object}
+}
 \description{
 Is x a OutputParams object?
 }

@@ -1,5 +1,0 @@
-<map id="retrocombinator::RandMaths::sample_without_replacement" name="retrocombinator::RandMaths::sample_without_replacement">
-<area shape="rect" id="node1" title="Samples m integers within a range, without replacement." alt="" coords="272,39,495,80"/>
-<area shape="rect" id="node2" href="$classretrocombinator_1_1PointMutator.html#a084f37ad47f0a820028a87695bd2c88e" title="Constructor that chooses a point mutation model and the probabilities for lethal mutations at each po..." alt="" coords="5,5,224,47"/>
-<area shape="rect" id="node3" href="$classretrocombinator_1_1Sequence.html#af334c44bea806196b5037e61b0e831b1" title="Constructs a sequence from recombining two other sequences." alt="" coords="15,71,214,112"/>
-</map>

@@ -1,0 +1,8 @@
+<map id="retrocombinator::RandMaths::rand_int" name="retrocombinator::RandMaths::rand_int">
+<area shape="rect" id="node1" title="Generates a random integer within a range." alt="" coords="523,104,731,145"/>
+<area shape="rect" id="node2" href="$classretrocombinator_1_1Burster.html#ae704e422926d3d7087c714badc033eef" title="How the sequences burst after a timestep in the simulation." alt="" coords="272,5,455,47"/>
+<area shape="rect" id="node4" href="$classretrocombinator_1_1RandMaths.html#a2758ba7c9818bc664c4b751a697e1fe6" title="Samples a non&#45;diagonal pair (2 distinct values) within a range." alt="" coords="259,71,467,112"/>
+<area shape="rect" id="node5" href="$classretrocombinator_1_1RandMaths.html#a6a7fe159f46afec51d997e4d07d2cfe6" title="Samples m integers within a range, without replacement." alt="" coords="252,136,475,177"/>
+<area shape="rect" id="node6" href="$classretrocombinator_1_1Sequence.html#af334c44bea806196b5037e61b0e831b1" title="Constructs a sequence from recombining two other sequences." alt="" coords="5,165,204,207"/>
+<area shape="rect" id="node3" href="$classretrocombinator_1_1Pool.html#ac6ae2f77dee8cd2c89bdead9ad4075ed" title="Refresh the pool to the next timestep." alt="" coords="23,5,186,47"/>
+</map>

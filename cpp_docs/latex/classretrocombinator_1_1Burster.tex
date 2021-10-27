@@ -1,0 +1,108 @@
+\hypertarget{classretrocombinator_1_1Burster}{}\doxysection{retrocombinator\+::Burster Class Reference}
+\label{classretrocombinator_1_1Burster}\index{retrocombinator::Burster@{retrocombinator::Burster}}
+
+
+To keep track of what sequences are bursting and what are not.  
+
+
+
+
+{\ttfamily \#include $<$burster.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classretrocombinator_1_1Burster_ab56d91b52fe95c23f88af7fa0db9f6c4}\label{classretrocombinator_1_1Burster_ab56d91b52fe95c23f88af7fa0db9f6c4}} 
+\mbox{\hyperlink{classretrocombinator_1_1Burster_ab56d91b52fe95c23f88af7fa0db9f6c4}{Burster}} (double \mbox{\hyperlink{classretrocombinator_1_1Burster_afba7aca9e2d08c4a08e76f2eed768f8b}{burst\+\_\+probability}}, double \mbox{\hyperlink{classretrocombinator_1_1Burster_a64849fe877967c62cb5a6fa3a75e60ed}{burst\+\_\+mean}}, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} \mbox{\hyperlink{classretrocombinator_1_1Burster_afc593afa0a0d8c6394abd2a108695b8f}{max\+\_\+total\+\_\+copies}}, double \mbox{\hyperlink{classretrocombinator_1_1Burster_a2c912685da246b7a1dcec43e773c230a}{recomb\+\_\+mean}}, double \mbox{\hyperlink{classretrocombinator_1_1Burster_acb1c37f6a497c4473ebba3b49868f91b}{recomb\+\_\+similarity}})
+\begin{DoxyCompactList}\small\item\em Constructs a burster with input information about how often sequences burst, and how many copies they create. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classretrocombinator_1_1Burster_ae704e422926d3d7087c714badc033eef}{burst\+\_\+sequences}} (\mbox{\hyperlink{namespaceretrocombinator_aad1e3f1da3091479de238da696e10f0d}{sequence\+\_\+list}} \&pool)
+\begin{DoxyCompactList}\small\item\em How the sequences burst after a timestep in the simulation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} $>$ \mbox{\hyperlink{classretrocombinator_1_1Burster_a9d6d2bea5f7481566e0f21e672191f08}{get\+\_\+new\+\_\+sequence\+\_\+counts}} (const \mbox{\hyperlink{namespaceretrocombinator_aad1e3f1da3091479de238da696e10f0d}{sequence\+\_\+list}} \&pool)
+\begin{DoxyCompactList}\small\item\em What are we trying to burst the N sequences into? \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classretrocombinator_1_1Burster_afba7aca9e2d08c4a08e76f2eed768f8b}\label{classretrocombinator_1_1Burster_afba7aca9e2d08c4a08e76f2eed768f8b}} 
+const double \mbox{\hyperlink{classretrocombinator_1_1Burster_afba7aca9e2d08c4a08e76f2eed768f8b}{burst\+\_\+probability}}
+\begin{DoxyCompactList}\small\item\em Probability that an active sequence bursts in a timestep. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classretrocombinator_1_1Burster_a64849fe877967c62cb5a6fa3a75e60ed}\label{classretrocombinator_1_1Burster_a64849fe877967c62cb5a6fa3a75e60ed}} 
+const double \mbox{\hyperlink{classretrocombinator_1_1Burster_a64849fe877967c62cb5a6fa3a75e60ed}{burst\+\_\+mean}}
+\begin{DoxyCompactList}\small\item\em The Poisson mean for new number of sequences to be created. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classretrocombinator_1_1Burster_afc593afa0a0d8c6394abd2a108695b8f}\label{classretrocombinator_1_1Burster_afc593afa0a0d8c6394abd2a108695b8f}} 
+const \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} \mbox{\hyperlink{classretrocombinator_1_1Burster_afc593afa0a0d8c6394abd2a108695b8f}{max\+\_\+total\+\_\+copies}}
+\begin{DoxyCompactList}\small\item\em The total number of sequences that we need to keep track of in our simulation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classretrocombinator_1_1Burster_a2c912685da246b7a1dcec43e773c230a}\label{classretrocombinator_1_1Burster_a2c912685da246b7a1dcec43e773c230a}} 
+const double \mbox{\hyperlink{classretrocombinator_1_1Burster_a2c912685da246b7a1dcec43e773c230a}{recomb\+\_\+mean}}
+\begin{DoxyCompactList}\small\item\em The Poisson mean for number of template switches during recombination. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classretrocombinator_1_1Burster_acb1c37f6a497c4473ebba3b49868f91b}\label{classretrocombinator_1_1Burster_acb1c37f6a497c4473ebba3b49868f91b}} 
+const double \mbox{\hyperlink{classretrocombinator_1_1Burster_acb1c37f6a497c4473ebba3b49868f91b}{recomb\+\_\+similarity}}
+\begin{DoxyCompactList}\small\item\em Only recombine between two sequences if they are at least this similar. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+To keep track of what sequences are bursting and what are not. 
+
+This takes in a pool of sequences, tries bursting the active ones, and then prunes down to a set number of sequences by sampling from all possible sequences. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classretrocombinator_1_1Burster_ae704e422926d3d7087c714badc033eef}\label{classretrocombinator_1_1Burster_ae704e422926d3d7087c714badc033eef}} 
+\index{retrocombinator::Burster@{retrocombinator::Burster}!burst\_sequences@{burst\_sequences}}
+\index{burst\_sequences@{burst\_sequences}!retrocombinator::Burster@{retrocombinator::Burster}}
+\doxysubsubsection{\texorpdfstring{burst\_sequences()}{burst\_sequences()}}
+{\footnotesize\ttfamily void Burster\+::burst\+\_\+sequences (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceretrocombinator_aad1e3f1da3091479de238da696e10f0d}{sequence\+\_\+list}} \&}]{pool }\end{DoxyParamCaption})}
+
+
+
+How the sequences burst after a timestep in the simulation. 
+
+Input is a list of active sequences that are capable of bursting. \mbox{\hyperlink{classretrocombinator_1_1Output}{Output}} is a list of how much each sequence is present Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classretrocombinator_1_1Burster_ae704e422926d3d7087c714badc033eef_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classretrocombinator_1_1Burster_ae704e422926d3d7087c714badc033eef_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classretrocombinator_1_1Burster_a9d6d2bea5f7481566e0f21e672191f08}\label{classretrocombinator_1_1Burster_a9d6d2bea5f7481566e0f21e672191f08}} 
+\index{retrocombinator::Burster@{retrocombinator::Burster}!get\_new\_sequence\_counts@{get\_new\_sequence\_counts}}
+\index{get\_new\_sequence\_counts@{get\_new\_sequence\_counts}!retrocombinator::Burster@{retrocombinator::Burster}}
+\doxysubsubsection{\texorpdfstring{get\_new\_sequence\_counts()}{get\_new\_sequence\_counts()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} $>$ Burster\+::get\+\_\+new\+\_\+sequence\+\_\+counts (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespaceretrocombinator_aad1e3f1da3091479de238da696e10f0d}{sequence\+\_\+list}} \&}]{pool }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+What are we trying to burst the N sequences into? 
+
+
+\begin{DoxyItemize}
+\item The first N values are 1, representing the sequences themselves
+\item Value (N+i) represents the number of new sequences created by bursting sequence i 
+\end{DoxyItemize}Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classretrocombinator_1_1Burster_a9d6d2bea5f7481566e0f21e672191f08_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classretrocombinator_1_1Burster_a9d6d2bea5f7481566e0f21e672191f08_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{burster_8h}{burster.\+h}}\item 
+src/burster.\+cpp\end{DoxyCompactItemize}

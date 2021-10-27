@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['consts_113',['Consts',['../namespaceretrocombinator_1_1Consts.html',1,'retrocombinator']]],
+  ['retrocombinator_114',['Retrocombinator',['../index.html',1,'']]],
+  ['rand_5fbit_115',['rand_bit',['../classretrocombinator_1_1RandMaths.html#a4f82863502ca04438a331fd309ca8b5e',1,'retrocombinator::RandMaths']]],
+  ['rand_5fint_116',['rand_int',['../classretrocombinator_1_1RandMaths.html#a8072bad64e64ef042e5257e1bee85635',1,'retrocombinator::RandMaths']]],
+  ['rand_5fmaths_2eh_117',['rand_maths.h',['../rand__maths_8h.html',1,'']]],
+  ['rand_5fpoisson_118',['rand_poisson',['../classretrocombinator_1_1RandMaths.html#adef66efd4d58f6130982ff0ee0e25750',1,'retrocombinator::RandMaths']]],
+  ['rand_5freal_119',['rand_real',['../classretrocombinator_1_1RandMaths.html#aa6441baa59bff50f588c0c54e3c54140',1,'retrocombinator::RandMaths']]],
+  ['randmaths_120',['RandMaths',['../classretrocombinator_1_1RandMaths.html',1,'retrocombinator::RandMaths'],['../classretrocombinator_1_1RandMaths.html#aa507e7465f9a650d560aa42c7f75310f',1,'retrocombinator::RandMaths::RandMaths()'],['../classretrocombinator_1_1RandMaths.html#aca899b8322519172fe008e0697c432db',1,'retrocombinator::RandMaths::RandMaths(RandMaths const &amp;)=delete']]],
+  ['raw_5fsequence_121',['raw_sequence',['../structretrocombinator_1_1Representative.html#a64f992ffb46730d43976dd525adac031',1,'retrocombinator::Representative']]],
+  ['raw_5fsequence_5ftype_122',['raw_sequence_type',['../classretrocombinator_1_1Sequence.html#aad0f7c6d4d2372632b6a9515a40e5452',1,'retrocombinator::Sequence']]],
+  ['re_123',['re',['../classretrocombinator_1_1RandMaths.html#a8455f3a94efd124edd0ecfc806744476',1,'retrocombinator::RandMaths']]],
+  ['recomb_5fmean_124',['recomb_mean',['../classretrocombinator_1_1Burster.html#a2c912685da246b7a1dcec43e773c230a',1,'retrocombinator::Burster']]],
+  ['recomb_5fsimilarity_125',['recomb_similarity',['../classretrocombinator_1_1Burster.html#acb1c37f6a497c4473ebba3b49868f91b',1,'retrocombinator::Burster']]],
+  ['renumber_5fsequences_126',['renumber_sequences',['../classretrocombinator_1_1Sequence.html#a586bc3b2ed4b09807efa5d410ed8417c',1,'retrocombinator::Sequence']]],
+  ['rep_5fpairwise_5fdist_127',['rep_pairwise_dist',['../classretrocombinator_1_1Families.html#a14b3d6d975576f0b2cb1126a9f5863fc',1,'retrocombinator::Families']]],
+  ['representative_128',['Representative',['../structretrocombinator_1_1Representative.html',1,'retrocombinator::Representative'],['../structretrocombinator_1_1Representative.html#a47f759aeaff1dd179f152b2899c7985c',1,'retrocombinator::Representative::Representative()']]],
+  ['representative_2eh_129',['representative.h',['../representative_8h.html',1,'']]],
+  ['representatives_130',['representatives',['../classretrocombinator_1_1Families.html#aa3f8e8ac00bea1d41f0548c2eddb9c04',1,'retrocombinator::Families']]],
+  ['retrocombinator_131',['retrocombinator',['../namespaceretrocombinator.html',1,'']]],
+  ['returnsnucmatrix_132',['ReturnsNucMatrix',['../namespaceretrocombinator.html#a04664f475f33337cf2a7a4a0b0e3125c',1,'retrocombinator']]],
+  ['returnsnucmatrixfromdouble_133',['ReturnsNucMatrixFromDouble',['../namespaceretrocombinator.html#a4cbfa6c71aed12291a2875e9f4ce1438',1,'retrocombinator']]],
+  ['rng_134',['RNG',['../namespaceretrocombinator.html#a4987db6a228df9ffab41c0a5342556f6',1,'retrocombinator']]]
+];

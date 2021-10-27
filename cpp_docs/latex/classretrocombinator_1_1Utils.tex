@@ -1,0 +1,111 @@
+\hypertarget{classretrocombinator_1_1Utils}{}\doxysection{retrocombinator\+::Utils Class Reference}
+\label{classretrocombinator_1_1Utils}\index{retrocombinator::Utils@{retrocombinator::Utils}}
+
+
+A collection of short, useful functions and data structures.  
+
+
+
+
+{\ttfamily \#include $<$utilities.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classretrocombinator_1_1Utils_ad7b3d3bbd244968f21c7f7ffc3dd1870}\label{classretrocombinator_1_1Utils_ad7b3d3bbd244968f21c7f7ffc3dd1870}} 
+typedef std\+::set$<$ \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} $>$ \mbox{\hyperlink{classretrocombinator_1_1Utils_ad7b3d3bbd244968f21c7f7ffc3dd1870}{cluster\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em Type for a set of indices that represent a cluster. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classretrocombinator_1_1Utils_a6847a3aae1daec87ebebd9b98b8efde9}{is\+\_\+in\+\_\+range}} (\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} test, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} lb, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} ub)
+\begin{DoxyCompactList}\small\item\em Checks whether a number lies within a range. \end{DoxyCompactList}\item 
+static std\+::vector$<$ \mbox{\hyperlink{classretrocombinator_1_1Utils_ad7b3d3bbd244968f21c7f7ffc3dd1870}{cluster\+\_\+type}} $>$ \mbox{\hyperlink{classretrocombinator_1_1Utils_a1780efafc8f5b69d0e577783a7938032}{cluster\+\_\+slink}} (\mbox{\hyperlink{namespaceretrocombinator_a7d5931e432c55c58d0a3cc47779caddc}{dist\+\_\+type}} dist, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} n, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} join\+\_\+threshold\+\_\+max)
+\begin{DoxyCompactList}\small\item\em Returns a set of clusters (using S\+L\+I\+NK) \end{DoxyCompactList}\item 
+static std\+::vector$<$ \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} $>$ \mbox{\hyperlink{classretrocombinator_1_1Utils_afa1a5a8ea4a0f2442b840a94e09b5106}{select\+\_\+representatives}} (std\+::vector$<$ \mbox{\hyperlink{classretrocombinator_1_1Utils_ad7b3d3bbd244968f21c7f7ffc3dd1870}{cluster\+\_\+type}} $>$ clusters)
+\begin{DoxyCompactList}\small\item\em Selects a representative from each cluster. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A collection of short, useful functions and data structures. 
+
+Stored in a class to prevent namespace conflicts 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classretrocombinator_1_1Utils_a1780efafc8f5b69d0e577783a7938032}\label{classretrocombinator_1_1Utils_a1780efafc8f5b69d0e577783a7938032}} 
+\index{retrocombinator::Utils@{retrocombinator::Utils}!cluster\_slink@{cluster\_slink}}
+\index{cluster\_slink@{cluster\_slink}!retrocombinator::Utils@{retrocombinator::Utils}}
+\doxysubsubsection{\texorpdfstring{cluster\_slink()}{cluster\_slink()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classretrocombinator_1_1Utils_ad7b3d3bbd244968f21c7f7ffc3dd1870}{Utils\+::cluster\+\_\+type}} $>$ retrocombinator\+::\+Utils\+::cluster\+\_\+slink (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceretrocombinator_a7d5931e432c55c58d0a3cc47779caddc}{dist\+\_\+type}}}]{dist,  }\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{n,  }\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{join\+\_\+threshold\+\_\+max }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns a set of clusters (using S\+L\+I\+NK) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & the number of data points \\
+\hline
+{\em dist} & the n\+Xn distance matrix between the data points, the distance between {\ttfamily i} and {\ttfamily j} is given by {\ttfamily dist\mbox{[}i, j\mbox{]}}, and we assume {\ttfamily dist\mbox{[}i, i\mbox{]} == 0} for all {\ttfamily i} \\
+\hline
+{\em join\+\_\+threshold\+\_\+max} & we merge two for as long as the distance between them is $<$ {\itshape join\+\_\+threshold\+\_\+max} (once the closest distance between two clusters becomes $>$= {\itshape join\+\_\+threshold\+\_\+max} this, we stop clustering) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a sequence of clusters, where each cluster is a collection of indices belonging to it 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classretrocombinator_1_1Utils_a1780efafc8f5b69d0e577783a7938032_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classretrocombinator_1_1Utils_a6847a3aae1daec87ebebd9b98b8efde9}\label{classretrocombinator_1_1Utils_a6847a3aae1daec87ebebd9b98b8efde9}} 
+\index{retrocombinator::Utils@{retrocombinator::Utils}!is\_in\_range@{is\_in\_range}}
+\index{is\_in\_range@{is\_in\_range}!retrocombinator::Utils@{retrocombinator::Utils}}
+\doxysubsubsection{\texorpdfstring{is\_in\_range()}{is\_in\_range()}}
+{\footnotesize\ttfamily static bool retrocombinator\+::\+Utils\+::is\+\_\+in\+\_\+range (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{test,  }\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{lb,  }\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{ub }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Checks whether a number lies within a range. 
+
+The bounds are \mbox{[}inclusive, exclusive). Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classretrocombinator_1_1Utils_a6847a3aae1daec87ebebd9b98b8efde9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classretrocombinator_1_1Utils_afa1a5a8ea4a0f2442b840a94e09b5106}\label{classretrocombinator_1_1Utils_afa1a5a8ea4a0f2442b840a94e09b5106}} 
+\index{retrocombinator::Utils@{retrocombinator::Utils}!select\_representatives@{select\_representatives}}
+\index{select\_representatives@{select\_representatives}!retrocombinator::Utils@{retrocombinator::Utils}}
+\doxysubsubsection{\texorpdfstring{select\_representatives()}{select\_representatives()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} $>$ retrocombinator\+::\+Utils\+::select\+\_\+representatives (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classretrocombinator_1_1Utils_ad7b3d3bbd244968f21c7f7ffc3dd1870}{cluster\+\_\+type}} $>$}]{clusters }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Selects a representative from each cluster. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clusters} & a sequence of clusters, where each cluster has all the indices belonging to it \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a sequence of indices, the representatives for each cluster 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classretrocombinator_1_1Utils_afa1a5a8ea4a0f2442b840a94e09b5106_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{utilities_8h}{utilities.\+h}}\item 
+src/utilities.\+cpp\end{DoxyCompactItemize}

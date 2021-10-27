@@ -1,7 +1,0 @@
-<map id="retrocombinator::Utils::cluster_dist" name="retrocombinator::Utils::cluster_dist">
-<area shape="rect" id="node1" title="Computes the cluster distance between two clusters." alt="" coords="707,41,872,83"/>
-<area shape="rect" id="node2" href="$namespaceretrocombinator_1_1Utils.html#a03dcc302a7444a0c0897ea1b306e69ef" title="Breaks a set into two clusters." alt="" coords="493,12,659,53"/>
-<area shape="rect" id="node5" href="$namespaceretrocombinator.html#a750d1c81b59d284885ae7141e62229a1" title="Tests all the helper functions in the Utils namespace." alt="" coords="267,71,427,112"/>
-<area shape="rect" id="node3" href="$classretrocombinator_1_1EvolutionWithFlags.html#a53b7da04d209f7c1adb2f74af5d56149" title="To split any large family into two families that can no longer recombine with each other." alt="" coords="249,5,445,47"/>
-<area shape="rect" id="node4" href="$classretrocombinator_1_1EvolutionWithFlags.html#abad180fa8494b259e5167a13285347dd" title="Burst by taking into consideration activity of sequences, events, and selection." alt="" coords="5,5,201,47"/>
-</map>

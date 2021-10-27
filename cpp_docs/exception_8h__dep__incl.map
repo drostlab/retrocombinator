@@ -1,0 +1,16 @@
+<map id="src/exception.h" name="src/exception.h">
+<area shape="rect" id="node1" title=" " alt="" coords="314,5,436,32"/>
+<area shape="rect" id="node2" href="$constants_8h.html" title="Definitions for enums/constants/functions that are used everywhere." alt="" coords="267,80,387,107"/>
+<area shape="rect" id="node13" href="$utilities_8h.html" title=" " alt="" coords="692,162,799,189"/>
+<area shape="rect" id="node3" href="$rand__maths_8h.html" title="Besides the class for random number generation, this file declares the random number generator to be ..." alt="" coords="533,162,668,189"/>
+<area shape="rect" id="node4" href="$activity__tracker_8h.html" title=" " alt="" coords="31,162,188,189"/>
+<area shape="rect" id="node5" href="$sequence_8h.html" title="For the Sequence class and auxiliary functions relating to sequences." alt="" coords="120,244,238,271"/>
+<area shape="rect" id="node6" href="$burster_8h.html" title=" " alt="" coords="41,319,144,345"/>
+<area shape="rect" id="node11" href="$mutator_8h.html" title=" " alt="" coords="220,319,328,345"/>
+<area shape="rect" id="node12" href="$representative_8h.html" title=" " alt="" coords="314,244,466,271"/>
+<area shape="rect" id="node14" href="$point__mutation__models_8h.html" title="This file has multiple classes, all of which represent models for how to apply point mutations to seq..." alt="" coords="364,155,508,196"/>
+<area shape="rect" id="node7" href="$pool_8h.html" title=" " alt="" coords="179,393,264,420"/>
+<area shape="rect" id="node8" href="$families_8h.html" title=" " alt="" coords="285,468,396,495"/>
+<area shape="rect" id="node9" href="$output_8h.html" title=" " alt="" coords="219,543,318,569"/>
+<area shape="rect" id="node10" href="$simulation_8h.html" title=" " alt="" coords="205,617,332,644"/>
+</map>

@@ -1,0 +1,59 @@
+\hypertarget{classretrocombinator_1_1Mutator}{}\doxysection{retrocombinator\+::Mutator Class Reference}
+\label{classretrocombinator_1_1Mutator}\index{retrocombinator::Mutator@{retrocombinator::Mutator}}
+
+
+A class that can mutate a given sequence according to a specified point mutation model.  
+
+
+
+
+{\ttfamily \#include $<$mutator.\+h$>$}
+
+
+
+Collaboration diagram for retrocombinator\+::Mutator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{classretrocombinator_1_1Mutator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classretrocombinator_1_1Mutator_a147c53dc5c6c4c6073ed763f78dd5538}{Mutator}} (std\+::string model)
+\begin{DoxyCompactList}\small\item\em Chooses a point mutation model. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classretrocombinator_1_1Mutator_a40f733ade6466c647f9f161ca97cb36f}\label{classretrocombinator_1_1Mutator_a40f733ade6466c647f9f161ca97cb36f}} 
+\mbox{\hyperlink{classretrocombinator_1_1Mutator_a40f733ade6466c647f9f161ca97cb36f}{$\sim$\+Mutator}} ()
+\begin{DoxyCompactList}\small\item\em Destructor that frees up memory. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classretrocombinator_1_1Mutator_ae9946ad76f8efc7e954fbdfe0d97c0bd}\label{classretrocombinator_1_1Mutator_ae9946ad76f8efc7e954fbdfe0d97c0bd}} 
+void \mbox{\hyperlink{classretrocombinator_1_1Mutator_ae9946ad76f8efc7e954fbdfe0d97c0bd}{mutate\+\_\+sequence}} (\mbox{\hyperlink{classretrocombinator_1_1Sequence}{Sequence}} \&s, double time\+\_\+per\+\_\+step) const
+\begin{DoxyCompactList}\small\item\em Mutates a sequence according to a given transition matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classretrocombinator_1_1Mutator_ad279ae6c7af37e93d88829429158a6ca}\label{classretrocombinator_1_1Mutator_ad279ae6c7af37e93d88829429158a6ca}} 
+\mbox{\hyperlink{classretrocombinator_1_1PointMutationModel}{Point\+Mutation\+Model}} $\ast$ \mbox{\hyperlink{classretrocombinator_1_1Mutator_ad279ae6c7af37e93d88829429158a6ca}{point\+\_\+mutation\+\_\+model}}
+\begin{DoxyCompactList}\small\item\em Which point mutation model this mutator corresponds to. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class that can mutate a given sequence according to a specified point mutation model. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classretrocombinator_1_1Mutator_a147c53dc5c6c4c6073ed763f78dd5538}\label{classretrocombinator_1_1Mutator_a147c53dc5c6c4c6073ed763f78dd5538}} 
+\index{retrocombinator::Mutator@{retrocombinator::Mutator}!Mutator@{Mutator}}
+\index{Mutator@{Mutator}!retrocombinator::Mutator@{retrocombinator::Mutator}}
+\doxysubsubsection{\texorpdfstring{Mutator()}{Mutator()}}
+{\footnotesize\ttfamily Mutator\+::\+Mutator (\begin{DoxyParamCaption}\item[{std\+::string}]{model }\end{DoxyParamCaption})}
+
+
+
+Chooses a point mutation model. 
+
+Can be \char`\"{}\+J\+C69\char`\"{}, \char`\"{}\+K80\char`\"{}, \char`\"{}\+F81\char`\"{}, \char`\"{}\+H\+K\+Y85\char`\"{}, \char`\"{}\+T\+N93\char`\"{} or \char`\"{}\+G\+T\+R\char`\"{}, but note that \char`\"{}\+G\+T\+R\char`\"{} is not yet implemented 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{mutator_8h}{mutator.\+h}}\item 
+src/mutator.\+cpp\end{DoxyCompactItemize}

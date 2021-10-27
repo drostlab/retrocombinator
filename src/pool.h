@@ -1,10 +1,5 @@
 /**
  * @file
- *
- * \brief To keep track of our current pool of Sequences
- *
- * Every sequence in this pool is mutated, given the opportunity to be burst and
- * pruned, and selected based on some requirement.
  */
 
 #ifndef POOL_H
@@ -16,17 +11,25 @@
 
 namespace retrocombinator
 {
+    /** To keep track of our current pool of sequences during a simulation.
+      * Every sequence in this pool is mutated, given the opportunity to be
+      * burst and pruned, and selected based on some requirement.
+      */
     class Pool
     {
     private:
+        /// Our model to keep track of whether a sequence is active or not
         ActivityTracker activity_tracker;
 
+        /// How to mutate our pool of sequences?
         Mutator mutator;
+        /// How to burst our pool of sequences?
         Burster burster;
 
         /// Kill sequences below this similarity to initial sequence
         double selection_threshold;
 
+        /// The current pool of sequences during our simulation
         sequence_list pool;
 
     public:
@@ -45,8 +48,10 @@ namespace retrocombinator
         /// Refresh the pool to the next timestep
         void step(double time_per_step);
 
+        /// What is the current state of the pool?
         const sequence_list& get_pool() const { return pool; }
 
+        /// What are the pairwise distances between sequences at this state?
         dist_type get_distance_matrix() const;
     };
 }

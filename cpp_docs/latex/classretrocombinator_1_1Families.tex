@@ -1,0 +1,65 @@
+\hypertarget{classretrocombinator_1_1Families}{}\doxysection{retrocombinator\+::Families Class Reference}
+\label{classretrocombinator_1_1Families}\index{retrocombinator::Families@{retrocombinator::Families}}
+
+
+To store all families of retrotranposons that emerge during a simulation, by saving a representative for each family.  
+
+
+
+
+{\ttfamily \#include $<$families.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classretrocombinator_1_1Families_a3cf87086727303a4789bae7aabbf4eaf}{Families}} (\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} \mbox{\hyperlink{classretrocombinator_1_1Families_ac18a44b766fa388d7dca1b5d307b87ee}{join\+\_\+threshold\+\_\+max}}, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} \mbox{\hyperlink{classretrocombinator_1_1Families_a875593fbd4f10a59a6439d7ab5a62316}{max\+\_\+num\+\_\+representatives}})
+\begin{DoxyCompactList}\small\item\em {\ttfamily join\+\_\+threshold\+\_\+max} indicates that the distance between two clusters must be at most {\ttfamily join\+\_\+threshold\+\_\+max} for them to be considered the same family. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classretrocombinator_1_1Families_a5a683e127e449501b8a3f16bd4e50db7}\label{classretrocombinator_1_1Families_a5a683e127e449501b8a3f16bd4e50db7}} 
+double \mbox{\hyperlink{classretrocombinator_1_1Families_a5a683e127e449501b8a3f16bd4e50db7}{get\+\_\+join\+\_\+threshold\+\_\+max}} () const
+\begin{DoxyCompactList}\small\item\em Returns the maximum permitted distance between two clusters. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classretrocombinator_1_1Families_ad39650739b03fae2b0764518f6e32eda}\label{classretrocombinator_1_1Families_ad39650739b03fae2b0764518f6e32eda}} 
+const std\+::vector$<$ \mbox{\hyperlink{structretrocombinator_1_1Representative}{Representative}} $>$ \& \mbox{\hyperlink{classretrocombinator_1_1Families_ad39650739b03fae2b0764518f6e32eda}{get\+\_\+representatives}} () const
+\begin{DoxyCompactList}\small\item\em What are the representatives of each family? \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classretrocombinator_1_1Families_ac482ac2fbb58bbcef726b01ed422163a}\label{classretrocombinator_1_1Families_ac482ac2fbb58bbcef726b01ed422163a}} 
+const \mbox{\hyperlink{namespaceretrocombinator_a7d5931e432c55c58d0a3cc47779caddc}{dist\+\_\+type}} \& \mbox{\hyperlink{classretrocombinator_1_1Families_ac482ac2fbb58bbcef726b01ed422163a}{get\+\_\+representative\+\_\+matrix}} () const
+\begin{DoxyCompactList}\small\item\em What is the pairwise distance between the representatives of each family? \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classretrocombinator_1_1Families_af2e562adf150bdbaf0e1194c7e3dcbfe}\label{classretrocombinator_1_1Families_af2e562adf150bdbaf0e1194c7e3dcbfe}} 
+void \mbox{\hyperlink{classretrocombinator_1_1Families_af2e562adf150bdbaf0e1194c7e3dcbfe}{update}} (const \mbox{\hyperlink{classretrocombinator_1_1Pool}{Pool}} \&pool, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} timestep)
+\begin{DoxyCompactList}\small\item\em Store new representatives if need, and re-\/calculate the pairwise distance matrix between representatives if needed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classretrocombinator_1_1Families_ac18a44b766fa388d7dca1b5d307b87ee}\label{classretrocombinator_1_1Families_ac18a44b766fa388d7dca1b5d307b87ee}} 
+const \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} \mbox{\hyperlink{classretrocombinator_1_1Families_ac18a44b766fa388d7dca1b5d307b87ee}{join\+\_\+threshold\+\_\+max}}
+\begin{DoxyCompactList}\small\item\em join\+\_\+threshold\+\_\+max indicates that the distance between two clusters must be at most {\ttfamily join\+\_\+threshold\+\_\+max} for them to be considered the same family. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classretrocombinator_1_1Families_a875593fbd4f10a59a6439d7ab5a62316}\label{classretrocombinator_1_1Families_a875593fbd4f10a59a6439d7ab5a62316}} 
+\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} \mbox{\hyperlink{classretrocombinator_1_1Families_a875593fbd4f10a59a6439d7ab5a62316}{max\+\_\+num\+\_\+representatives}}
+\begin{DoxyCompactList}\small\item\em The maximum number of families to keep track of (we stop keeping track of families that emerge once this threshold is passed) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classretrocombinator_1_1Families_aa3f8e8ac00bea1d41f0548c2eddb9c04}\label{classretrocombinator_1_1Families_aa3f8e8ac00bea1d41f0548c2eddb9c04}} 
+std\+::vector$<$ \mbox{\hyperlink{structretrocombinator_1_1Representative}{Representative}} $>$ \mbox{\hyperlink{classretrocombinator_1_1Families_aa3f8e8ac00bea1d41f0548c2eddb9c04}{representatives}}
+\begin{DoxyCompactList}\small\item\em What the actual representatives for each family are. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classretrocombinator_1_1Families_a14b3d6d975576f0b2cb1126a9f5863fc}\label{classretrocombinator_1_1Families_a14b3d6d975576f0b2cb1126a9f5863fc}} 
+\mbox{\hyperlink{namespaceretrocombinator_a7d5931e432c55c58d0a3cc47779caddc}{dist\+\_\+type}} \mbox{\hyperlink{classretrocombinator_1_1Families_a14b3d6d975576f0b2cb1126a9f5863fc}{rep\+\_\+pairwise\+\_\+dist}}
+\begin{DoxyCompactList}\small\item\em dist\mbox{[}i\mbox{]}\mbox{[}j\mbox{]} stores the distance between rep\+\_\+i and rep\+\_\+j for i $<$= j \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+To store all families of retrotranposons that emerge during a simulation, by saving a representative for each family. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classretrocombinator_1_1Families_a3cf87086727303a4789bae7aabbf4eaf}\label{classretrocombinator_1_1Families_a3cf87086727303a4789bae7aabbf4eaf}} 
+\index{retrocombinator::Families@{retrocombinator::Families}!Families@{Families}}
+\index{Families@{Families}!retrocombinator::Families@{retrocombinator::Families}}
+\doxysubsubsection{\texorpdfstring{Families()}{Families()}}
+{\footnotesize\ttfamily Families\+::\+Families (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{join\+\_\+threshold\+\_\+max,  }\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{max\+\_\+num\+\_\+representatives }\end{DoxyParamCaption})}
+
+
+
+{\ttfamily join\+\_\+threshold\+\_\+max} indicates that the distance between two clusters must be at most {\ttfamily join\+\_\+threshold\+\_\+max} for them to be considered the same family. 
+
+Also, new representatives are saved only if they are more than {\ttfamily join\+\_\+threshold\+\_\+max} away from previous representatives. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{families_8h}{families.\+h}}\item 
+src/families.\+cpp\end{DoxyCompactItemize}

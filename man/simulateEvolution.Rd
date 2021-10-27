@@ -17,6 +17,27 @@ simulateEvolution(
   seedParams = SeedParams()
 )
 }
+\arguments{
+\item{sequenceParams}{A [retrocombinator::SequenceParams()] object for the simulation}
+
+\item{activityParams}{An [retrocombinator::ActivityParams()] object for the simulation}
+
+\item{mutationParams}{A [retrocombinator::MutationParams()] object for the simulation}
+
+\item{burstParams}{A [retrocombinator::BurstParams()] object for the simulation}
+
+\item{recombParams}{A [retrocombinator::RecombParams()] object for the simulation}
+
+\item{selectionParams}{A [retrocombinator::SelectionParams()] object for the simulation}
+
+\item{familyParams}{A [retrocombinator::FamilyParams()] object for the simulation}
+
+\item{simulationParams}{A [retrocombinator::SimulationParams()] object for the simulation}
+
+\item{outputParams}{A [retrocombinator::OutputParams()] object for the simulation}
+
+\item{seedParams}{A [retrocombinator::SeedParams()] object for the simulation}
+}
 \description{
 Run an entire simulation with flags
 }

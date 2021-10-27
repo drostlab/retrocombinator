@@ -1,0 +1,4 @@
+<map id="retrocombinator::Burster::burst_sequences" name="retrocombinator::Burster::burst_sequences">
+<area shape="rect" id="node1" title="How the sequences burst after a timestep in the simulation." alt="" coords="216,5,399,47"/>
+<area shape="rect" id="node2" href="$classretrocombinator_1_1Pool.html#ac6ae2f77dee8cd2c89bdead9ad4075ed" title="Refresh the pool to the next timestep." alt="" coords="5,5,168,47"/>
+</map>

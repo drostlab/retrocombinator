@@ -1,10 +1,5 @@
 /**
  * @file
- *
- * \brief To keep track of what sequences are active and what are not
- *
- * A class that 'configures' the set of sequences we are dealing with and keeps
- * track of whether or not they are capable of bursting.
  */
 
 #ifndef ACTIVITY_TRACKER_H
@@ -14,6 +9,10 @@
 
 namespace retrocombinator
 {
+    /** To store the information and logic of whether or not a sequence is
+      *  active, that is, capable of bursting/transposition.
+      *  This class 'configures' the set of sequences we are dealing with
+      */
     class ActivityTracker
     {
     private:
@@ -23,6 +22,7 @@ namespace retrocombinator
 
         /** How many positions on either side of the sequence is the critical
          *  region?
+         *  A mutation to a critical region is what can perhaps cause inactivity
          */
         size_type critical_region_length;
 
@@ -32,7 +32,11 @@ namespace retrocombinator
         double inactive_probability;
 
     public:
-        /// Constructor
+        /** Configure our activity model
+          * \param sequence_length \copydoc ActivityTracker::sequence_length
+          * \param critical_region_length \copydoc ActivityTracker::critical_region_length
+          * \param inactive_probability \copydoc ActivityTracker::inactive_probability
+          */
         ActivityTracker(size_type sequence_length, size_type
                 critical_region_length, double inactive_probability);
 

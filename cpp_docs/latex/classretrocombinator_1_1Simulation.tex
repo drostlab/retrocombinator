@@ -1,0 +1,143 @@
+\hypertarget{classretrocombinator_1_1Simulation}{}\doxysection{retrocombinator\+::Simulation Class Reference}
+\label{classretrocombinator_1_1Simulation}\index{retrocombinator::Simulation@{retrocombinator::Simulation}}
+
+
+To run a simulation of the molecular evolutionary process of a collection of retrotranposons.  
+
+
+
+
+{\ttfamily \#include $<$simulation.\+h$>$}
+
+
+
+Collaboration diagram for retrocombinator\+::Simulation\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classretrocombinator_1_1Simulation__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classretrocombinator_1_1Simulation_a89a2a61f9c517f470e783270a26055b4}{Simulation}} (std\+::string sequence, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} \mbox{\hyperlink{classretrocombinator_1_1Simulation_a5738846bf80b7a013400e0f2f71e0a7a}{sequence\+\_\+length}}, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} num\+\_\+initial\+\_\+copies, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} critical\+\_\+region\+\_\+length, double inactive\+\_\+probability, std\+::string mutation\+\_\+model, double burst\+\_\+probability, double burst\+\_\+mean, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} max\+\_\+total\+\_\+copies, double recomb\+\_\+mean, double recomb\+\_\+similarity, double selection\+\_\+threshold, double family\+\_\+coherence, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} max\+\_\+num\+\_\+representatives, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} \mbox{\hyperlink{classretrocombinator_1_1Simulation_a5a1d81cd467582ef6c8a06e9f546665d}{num\+\_\+steps}}, double \mbox{\hyperlink{classretrocombinator_1_1Simulation_ad6bd658550410f2827e86b709025a5dd}{time\+\_\+per\+\_\+step}}, std\+::string filename\+\_\+out, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} num\+\_\+init\+\_\+dist, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} num\+\_\+pair\+\_\+dist, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} num\+\_\+fam\+\_\+size, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} num\+\_\+fam\+\_\+dist, double min\+\_\+output\+\_\+similarity)
+\begin{DoxyCompactList}\small\item\em Set up a simulation with the following parameters. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classretrocombinator_1_1Simulation_af80d5d81619cdf60798525b14b49405f}\label{classretrocombinator_1_1Simulation_af80d5d81619cdf60798525b14b49405f}} 
+void \mbox{\hyperlink{classretrocombinator_1_1Simulation_af80d5d81619cdf60798525b14b49405f}{print\+\_\+seed}} (bool to\+\_\+seed, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} seed)
+\begin{DoxyCompactList}\small\item\em Prints the seed for random number generation to to output file for reproducibility of experiments. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classretrocombinator_1_1Simulation_a37f499ca0e5e424564f995f11631bb2c}\label{classretrocombinator_1_1Simulation_a37f499ca0e5e424564f995f11631bb2c}} 
+void \mbox{\hyperlink{classretrocombinator_1_1Simulation_a37f499ca0e5e424564f995f11631bb2c}{simulate}} ()
+\begin{DoxyCompactList}\small\item\em Runs the simulation with its specified parameters. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classretrocombinator_1_1Simulation_a5b0ea12a39109ae1504bf1c3b7d39193}\label{classretrocombinator_1_1Simulation_a5b0ea12a39109ae1504bf1c3b7d39193}} 
+const \mbox{\hyperlink{namespaceretrocombinator_aad1e3f1da3091479de238da696e10f0d}{sequence\+\_\+list}} \& \mbox{\hyperlink{classretrocombinator_1_1Simulation_a5b0ea12a39109ae1504bf1c3b7d39193}{get\+\_\+pool}} () const
+\begin{DoxyCompactList}\small\item\em Returns the current state of our pool of sequences. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} \mbox{\hyperlink{classretrocombinator_1_1Simulation_a5738846bf80b7a013400e0f2f71e0a7a}{sequence\+\_\+length}}
+\begin{DoxyCompactList}\small\item\em Length of the sequence we allow. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classretrocombinator_1_1Simulation_af1da248b939fd5c00799563d680435ae}\label{classretrocombinator_1_1Simulation_af1da248b939fd5c00799563d680435ae}} 
+\mbox{\hyperlink{classretrocombinator_1_1Pool}{Pool}} \mbox{\hyperlink{classretrocombinator_1_1Simulation_af1da248b939fd5c00799563d680435ae}{pool}}
+\begin{DoxyCompactList}\small\item\em Stores the current state of our pool of sequences. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classretrocombinator_1_1Simulation_aa14eb93edd4069fac87f4a975be907e4}\label{classretrocombinator_1_1Simulation_aa14eb93edd4069fac87f4a975be907e4}} 
+\mbox{\hyperlink{classretrocombinator_1_1Families}{Families}} \mbox{\hyperlink{classretrocombinator_1_1Simulation_aa14eb93edd4069fac87f4a975be907e4}{families}}
+\begin{DoxyCompactList}\small\item\em Stores the family representatives discovered so far. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classretrocombinator_1_1Simulation_a5a1d81cd467582ef6c8a06e9f546665d}\label{classretrocombinator_1_1Simulation_a5a1d81cd467582ef6c8a06e9f546665d}} 
+\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} \mbox{\hyperlink{classretrocombinator_1_1Simulation_a5a1d81cd467582ef6c8a06e9f546665d}{num\+\_\+steps}}
+\begin{DoxyCompactList}\small\item\em Number of timesteps to run our simulation for. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classretrocombinator_1_1Simulation_ad6bd658550410f2827e86b709025a5dd}\label{classretrocombinator_1_1Simulation_ad6bd658550410f2827e86b709025a5dd}} 
+double \mbox{\hyperlink{classretrocombinator_1_1Simulation_ad6bd658550410f2827e86b709025a5dd}{time\+\_\+per\+\_\+step}}
+\begin{DoxyCompactList}\small\item\em How much real time corresponds to one timestep in our simulation? (in millions of years) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classretrocombinator_1_1Simulation_a2c2012dbbfd7cfca8173edc2b8cbb50d}\label{classretrocombinator_1_1Simulation_a2c2012dbbfd7cfca8173edc2b8cbb50d}} 
+\mbox{\hyperlink{classretrocombinator_1_1Output}{Output}} \mbox{\hyperlink{classretrocombinator_1_1Simulation_a2c2012dbbfd7cfca8173edc2b8cbb50d}{output}}
+\begin{DoxyCompactList}\small\item\em The object we use to write our results to file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+To run a simulation of the molecular evolutionary process of a collection of retrotranposons. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classretrocombinator_1_1Simulation_a89a2a61f9c517f470e783270a26055b4}\label{classretrocombinator_1_1Simulation_a89a2a61f9c517f470e783270a26055b4}} 
+\index{retrocombinator::Simulation@{retrocombinator::Simulation}!Simulation@{Simulation}}
+\index{Simulation@{Simulation}!retrocombinator::Simulation@{retrocombinator::Simulation}}
+\doxysubsubsection{\texorpdfstring{Simulation()}{Simulation()}}
+{\footnotesize\ttfamily Simulation\+::\+Simulation (\begin{DoxyParamCaption}\item[{std\+::string}]{sequence,  }\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{sequence\+\_\+length,  }\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{num\+\_\+initial\+\_\+copies,  }\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{critical\+\_\+region\+\_\+length,  }\item[{double}]{inactive\+\_\+probability,  }\item[{std\+::string}]{mutation\+\_\+model,  }\item[{double}]{burst\+\_\+probability,  }\item[{double}]{burst\+\_\+mean,  }\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{max\+\_\+total\+\_\+copies,  }\item[{double}]{recomb\+\_\+mean,  }\item[{double}]{recomb\+\_\+similarity,  }\item[{double}]{selection\+\_\+threshold,  }\item[{double}]{family\+\_\+coherence,  }\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{max\+\_\+num\+\_\+representatives,  }\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{num\+\_\+steps,  }\item[{double}]{time\+\_\+per\+\_\+step,  }\item[{std\+::string}]{filename\+\_\+out,  }\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{num\+\_\+init\+\_\+dist,  }\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{num\+\_\+pair\+\_\+dist,  }\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{num\+\_\+fam\+\_\+size,  }\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{num\+\_\+fam\+\_\+dist,  }\item[{double}]{min\+\_\+output\+\_\+similarity }\end{DoxyParamCaption})}
+
+
+
+Set up a simulation with the following parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sequence} & What is our initial sequence? If this is an empty string, create one randomly, else use this sequence. \\
+\hline
+{\em sequence\+\_\+length} & If {\ttfamily sequence} is non-\/empty, ignore this. Else, the length of sequences we are to consider for our simulation. \\
+\hline
+{\em num\+\_\+initial\+\_\+copies} & How many sequences to start off with? \\
+\hline
+{\em critical\+\_\+region\+\_\+length} & How many positions on either side of the sequence is the critical region? A mutation to a critical region is what can perhaps cause inactivity.\\
+\hline
+{\em inactive\+\_\+probability} & What is the probability that a mutation to the critical region causes inactivity?\\
+\hline
+{\em mutation\+\_\+model} & Chooses a point mutation model. Can be \char`\"{}\+J\+C69\char`\"{}, \char`\"{}\+K80\char`\"{}, \char`\"{}\+F81\char`\"{}, \char`\"{}\+H\+K\+Y85\char`\"{}, \char`\"{}\+T\+N93\char`\"{} or \char`\"{}\+G\+T\+R\char`\"{}, but note that \char`\"{}\+G\+T\+R\char`\"{} is not yet implemented \\
+\hline
+{\em burst\+\_\+probability} & Probability that an active sequence bursts in a timestep.\\
+\hline
+{\em burst\+\_\+mean} & The Poisson mean for new number of sequences to be created.\\
+\hline
+{\em max\+\_\+total\+\_\+copies} & The total number of sequences that we need to keep track of in our simulation.\\
+\hline
+{\em recomb\+\_\+mean} & The Poisson mean for number of template switches during recombination.\\
+\hline
+{\em recomb\+\_\+similarity} & Only recombine between two sequences if they are at least this similar.\\
+\hline
+{\em selection\+\_\+threshold} & Kill sequences below this similarity to initial sequence.\\
+\hline
+{\em family\+\_\+coherence} & The minimum similarity needed between clusters for them to form the same family \\
+\hline
+{\em max\+\_\+num\+\_\+representatives} & The maximum number of families to keep track of (we stop keeping track of families that emerge once this threshold is passed)\\
+\hline
+{\em num\+\_\+steps} & Number of timesteps to run our simulation for.\\
+\hline
+{\em time\+\_\+per\+\_\+step} & How much real time corresponds to one timestep in our simulation? (in millions of years)\\
+\hline
+{\em filename\+\_\+out} & What file to save output to? \\
+\hline
+{\em num\+\_\+init\+\_\+dist} & How many times should we print out distances to the initial sequence? \\
+\hline
+{\em num\+\_\+pair\+\_\+dist} & How many times should we print out pairwise distances between our sequences? \\
+\hline
+{\em num\+\_\+fam\+\_\+size} & How many times should we print out family sizes? \\
+\hline
+{\em num\+\_\+fam\+\_\+dist} & How many times should we print out pairwise distances between family representatives? \\
+\hline
+{\em min\+\_\+output\+\_\+similarity} & What is the lowest sequence similarity we should print out (inclusive)? Similarities smaller than this are suppressed (not printed) in the output file \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classretrocombinator_1_1Simulation_a89a2a61f9c517f470e783270a26055b4_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classretrocombinator_1_1Simulation_a5738846bf80b7a013400e0f2f71e0a7a}\label{classretrocombinator_1_1Simulation_a5738846bf80b7a013400e0f2f71e0a7a}} 
+\index{retrocombinator::Simulation@{retrocombinator::Simulation}!sequence\_length@{sequence\_length}}
+\index{sequence\_length@{sequence\_length}!retrocombinator::Simulation@{retrocombinator::Simulation}}
+\doxysubsubsection{\texorpdfstring{sequence\_length}{sequence\_length}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} retrocombinator\+::\+Simulation\+::sequence\+\_\+length\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Length of the sequence we allow. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{simulation_8h}{simulation.\+h}}\item 
+src/simulation.\+cpp\end{DoxyCompactItemize}

@@ -34,7 +34,7 @@ namespace retrocombinator
         const double DOUBLE_TOLERANCE = pow(10.0, -8);
 
         /** This defines an ordering on the nucleotides, it is used for arrays
-         * and transition matrices that work on nucleotides.
+         *  and transition matrices that work on nucleotides.
          */
         enum NUC_VALS
         {
@@ -45,7 +45,15 @@ namespace retrocombinator
             NUC_COUNT = 4   ///< Number of nucleotides
         };
 
-        /** Returns a character corresponding a nucleotide given its index.
+
+        ///@{
+        /** Converts between different forms of representing a nucleotide (its
+         * index based on NUC_VALS, its representation as two consecutive bits
+         * based on that index, and its character representation - 'T', 'C', 'A'
+         * or 'G')
+         * \copydoc NUC_VALS
+         */
+        /** \param index The nucleotide index, based on NUC_VALS
          */
         inline char NUC_INT2CHAR(int index)
         {
@@ -58,9 +66,9 @@ namespace retrocombinator
                 default: throw Exception("Not a valid nucleotide index");
             }
         }
-
-        /** Returns the index of a nucleotide given its character form.
-         */
+         /**  \param nucleotide The character for a nucleotide, 'T', 'C', 'A' or
+           *  'G'
+          */
         inline int NUC_CHAR2INT(char nucleotide)
         {
             switch(nucleotide)
@@ -72,9 +80,9 @@ namespace retrocombinator
                 default: throw Exception("Not a valid nucleotide");
             }
         }
-
-        /** Returns the 2bit-encoding of a nucleotide given its character form.
-         */
+         /**  \param nucleotide The character for a nucleotide, 'T', 'C', 'A' or
+           *  'G'
+          */
         inline std::pair<bool, bool> NUC_CHAR2BOOL(char nucleotide)
         {
             switch(nucleotide)
@@ -86,8 +94,8 @@ namespace retrocombinator
                 default: throw Exception("Not a valid nucleotide");
             }
         }
-
-        /** Returns the character of a nucleotide given its 2bit-encoding.
+        /** \param bits Two bits that when interpreted as a number correspond to
+         *  a nucleotide index
          */
         inline char NUC_BOOL2CHAR(std::pair<bool, bool> bits)
         {
@@ -102,9 +110,10 @@ namespace retrocombinator
                 else             return 'G';
             }
         }
+        ///@}
     }
 
-    /// Type for transition matrices, rate matrices etc
+    /// Type for transition matrices and rate matrices
     typedef double NucMatrix[Consts::NUC_COUNT][Consts::NUC_COUNT];
 
     /// Type for functions that return NucMatrix and accept no parameters

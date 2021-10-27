@@ -1,0 +1,6 @@
+<map id="retrocombinator::Burster::get_new_sequence_counts" name="retrocombinator::Burster::get_new_sequence_counts">
+<area shape="rect" id="node1" title="What are we trying to burst the N sequences into?" alt="" coords="5,39,209,80"/>
+<area shape="rect" id="node2" href="$classretrocombinator_1_1RandMaths.html#adef66efd4d58f6130982ff0ee0e25750" title="Chooses a number sampled from a Poisson distribution." alt="" coords="257,5,465,47"/>
+<area shape="rect" id="node3" href="$classretrocombinator_1_1RandMaths.html#a183686140a9da18ad40c7e048ee8914e" title="Tests whether or not an event happened." alt="" coords="257,71,465,112"/>
+<area shape="rect" id="node4" href="$classretrocombinator_1_1RandMaths.html#aa6441baa59bff50f588c0c54e3c54140" title="Generates a random real number within a range." alt="" coords="513,71,721,112"/>
+</map>

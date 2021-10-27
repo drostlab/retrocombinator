@@ -1,8 +1,0 @@
-<map id="retrocombinator::Sequence::Sequence" name="retrocombinator::Sequence::Sequence">
-<area shape="rect" id="node1" title="Constructs a sequence from recombining two other sequences." alt="" coords="5,136,204,177"/>
-<area shape="rect" id="node2" href="$classretrocombinator_1_1Sequence.html#aeefc98943c08769af4ed9f73157d26d1" title="Returns length of the sequence." alt="" coords="264,5,463,47"/>
-<area shape="rect" id="node3" href="$classretrocombinator_1_1Sequence.html#a6ef8ac65b574f4c0d6155b67efe581ec" title="Returns the unique label for this sequence." alt="" coords="264,71,463,112"/>
-<area shape="rect" id="node4" href="$namespaceretrocombinator_1_1Utils.html#a984680ddd6d1f7ccee9e0f040ff16183" title="Checks whether a number lies within a range." alt="" coords="281,136,446,177"/>
-<area shape="rect" id="node5" href="$classretrocombinator_1_1RandMaths.html#a8072bad64e64ef042e5257e1bee85635" title="Generates a random integer within a range." alt="" coords="523,224,731,265"/>
-<area shape="rect" id="node6" href="$classretrocombinator_1_1RandMaths.html#a6a7fe159f46afec51d997e4d07d2cfe6" title="Samples m integers within a range, without replacement." alt="" coords="252,253,475,295"/>
-</map>

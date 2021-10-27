@@ -6,6 +6,9 @@
 \usage{
 is.ActivityParams(x)
 }
+\arguments{
+\item{x}{An arbitrary object}
+}
 \description{
 Is x an ActivityParams object?
 }

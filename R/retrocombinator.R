@@ -10,4 +10,5 @@
 #' @importFrom Rcpp sourceCpp
 #' @importFrom Rcpp evalCpp
 #' @importFrom magrittr "%>%"
+#' @importFrom rlang .data
 "_PACKAGE"

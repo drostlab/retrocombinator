@@ -1,0 +1,187 @@
+\hypertarget{namespaceretrocombinator}{}\doxysection{retrocombinator Namespace Reference}
+\label{namespaceretrocombinator}\index{retrocombinator@{retrocombinator}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceretrocombinator_1_1Consts}{Consts}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classretrocombinator_1_1ActivityTracker}{Activity\+Tracker}}
+\begin{DoxyCompactList}\small\item\em To store the information and logic of whether or not a sequence is active, that is, capable of bursting/transposition. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classretrocombinator_1_1Burster}{Burster}}
+\begin{DoxyCompactList}\small\item\em To keep track of what sequences are bursting and what are not. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classretrocombinator_1_1Exception}{Exception}}
+\begin{DoxyCompactList}\small\item\em Basic class to represent exceptions. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classretrocombinator_1_1F81Model}{F81\+Model}}
+\begin{DoxyCompactList}\small\item\em Felsenstein 1981 Model. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classretrocombinator_1_1Families}{Families}}
+\begin{DoxyCompactList}\small\item\em To store all families of retrotranposons that emerge during a simulation, by saving a representative for each family. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classretrocombinator_1_1GTRModel}{G\+T\+R\+Model}}
+\begin{DoxyCompactList}\small\item\em General Time Reversible Model, Tavare 1986. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classretrocombinator_1_1HKY85Model}{H\+K\+Y85\+Model}}
+\begin{DoxyCompactList}\small\item\em Hasegawa, Kishino and Yano 1985 Model. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classretrocombinator_1_1JC69Model}{J\+C69\+Model}}
+\begin{DoxyCompactList}\small\item\em Jules and Cantor, 1969. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classretrocombinator_1_1K80Model}{K80\+Model}}
+\begin{DoxyCompactList}\small\item\em Kimura 2 Parameter Model, 1980. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classretrocombinator_1_1Mutator}{Mutator}}
+\begin{DoxyCompactList}\small\item\em A class that can mutate a given sequence according to a specified point mutation model. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classretrocombinator_1_1Output}{Output}}
+\begin{DoxyCompactList}\small\item\em To store the results of our simulation to file. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classretrocombinator_1_1PointMutationModel}{Point\+Mutation\+Model}}
+\begin{DoxyCompactList}\small\item\em To represent a model of D\+NA evolution through point mutations. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classretrocombinator_1_1Pool}{Pool}}
+\begin{DoxyCompactList}\small\item\em To keep track of our current pool of sequences during a simulation. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classretrocombinator_1_1RandMaths}{Rand\+Maths}}
+\begin{DoxyCompactList}\small\item\em For all maths helper functions that use random number generation. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structretrocombinator_1_1Representative}{Representative}}
+\begin{DoxyCompactList}\small\item\em To store a representative sequence for each family of retrontransposons that emerge during the simulation. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classretrocombinator_1_1Sequence}{Sequence}}
+\begin{DoxyCompactList}\small\item\em To represent a D\+NA sequence and the mutations that it has undergone. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classretrocombinator_1_1Simulation}{Simulation}}
+\begin{DoxyCompactList}\small\item\em To run a simulation of the molecular evolutionary process of a collection of retrotranposons. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classretrocombinator_1_1TN93Model}{T\+N93\+Model}}
+\begin{DoxyCompactList}\small\item\em Tamura ane Nei 1983 Model. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classretrocombinator_1_1Utils}{Utils}}
+\begin{DoxyCompactList}\small\item\em A collection of short, useful functions and data structures. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespaceretrocombinator_a47bcd6dd938a6f8e34b0996d940f81ef}\label{namespaceretrocombinator_a47bcd6dd938a6f8e34b0996d940f81ef}} 
+typedef double \mbox{\hyperlink{namespaceretrocombinator_a47bcd6dd938a6f8e34b0996d940f81ef}{Nuc\+Matrix}}\mbox{[}\mbox{\hyperlink{namespaceretrocombinator_1_1Consts_a274e9195aeee16a2bc05c6c2d13da17da4267c64ef80aa3023d8e808832e04b4e}{Consts\+::\+N\+U\+C\+\_\+\+C\+O\+U\+NT}}\mbox{]}\mbox{[}\mbox{\hyperlink{namespaceretrocombinator_1_1Consts_a274e9195aeee16a2bc05c6c2d13da17da4267c64ef80aa3023d8e808832e04b4e}{Consts\+::\+N\+U\+C\+\_\+\+C\+O\+U\+NT}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Type for transition matrices and rate matrices. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}\label{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}} 
+typedef std\+::size\+\_\+t \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em Type for all indices, sizes, and edit distances. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespaceretrocombinator_afd7c6eb4293e8c4d12827609a9a34b9b}\label{namespaceretrocombinator_afd7c6eb4293e8c4d12827609a9a34b9b}} 
+typedef long \mbox{\hyperlink{namespaceretrocombinator_afd7c6eb4293e8c4d12827609a9a34b9b}{tag\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em For all integer-\/based codes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespaceretrocombinator_a07cb40d155af7460670426d432f53c77}\label{namespaceretrocombinator_a07cb40d155af7460670426d432f53c77}} 
+typedef std\+::vector$<$ \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} $>$ \mbox{\hyperlink{namespaceretrocombinator_a07cb40d155af7460670426d432f53c77}{dist\+\_\+row\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em Type for a row in a distance matrix. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespaceretrocombinator_a7d5931e432c55c58d0a3cc47779caddc}\label{namespaceretrocombinator_a7d5931e432c55c58d0a3cc47779caddc}} 
+typedef std\+::vector$<$ \mbox{\hyperlink{namespaceretrocombinator_a07cb40d155af7460670426d432f53c77}{dist\+\_\+row\+\_\+type}} $>$ \mbox{\hyperlink{namespaceretrocombinator_a7d5931e432c55c58d0a3cc47779caddc}{dist\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em Type for a distance matrix. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespaceretrocombinator_aad1e3f1da3091479de238da696e10f0d}\label{namespaceretrocombinator_aad1e3f1da3091479de238da696e10f0d}} 
+typedef std\+::list$<$ \mbox{\hyperlink{classretrocombinator_1_1Sequence}{Sequence}} $>$ \mbox{\hyperlink{namespaceretrocombinator_aad1e3f1da3091479de238da696e10f0d}{sequence\+\_\+list}}
+\begin{DoxyCompactList}\small\item\em A list of sequences. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespaceretrocombinator_a04664f475f33337cf2a7a4a0b0e3125c}\label{namespaceretrocombinator_a04664f475f33337cf2a7a4a0b0e3125c}} 
+const typedef double($\ast$ \mbox{\hyperlink{namespaceretrocombinator_a04664f475f33337cf2a7a4a0b0e3125c}{Returns\+Nuc\+Matrix}} ())\mbox{[}\mbox{\hyperlink{namespaceretrocombinator_1_1Consts_a274e9195aeee16a2bc05c6c2d13da17da4267c64ef80aa3023d8e808832e04b4e}{Consts\+::\+N\+U\+C\+\_\+\+C\+O\+U\+NT}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Type for functions that return Nuc\+Matrix and accept no parameters. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespaceretrocombinator_a4cbfa6c71aed12291a2875e9f4ce1438}\label{namespaceretrocombinator_a4cbfa6c71aed12291a2875e9f4ce1438}} 
+const typedef double($\ast$ \mbox{\hyperlink{namespaceretrocombinator_a4cbfa6c71aed12291a2875e9f4ce1438}{Returns\+Nuc\+Matrix\+From\+Double}} (double))\mbox{[}\mbox{\hyperlink{namespaceretrocombinator_1_1Consts_a274e9195aeee16a2bc05c6c2d13da17da4267c64ef80aa3023d8e808832e04b4e}{Consts\+::\+N\+U\+C\+\_\+\+C\+O\+U\+NT}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Type for functions that return Nuc\+Matrix and accept time as parameter. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} \mbox{\hyperlink{namespaceretrocombinator_a2d223ac406c9e02cf5687c709ad5da9d}{operator$\ast$}} (const \mbox{\hyperlink{classretrocombinator_1_1Sequence}{Sequence}} \&s1, const \mbox{\hyperlink{classretrocombinator_1_1Sequence}{Sequence}} \&s2)
+\item 
+\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} \mbox{\hyperlink{namespaceretrocombinator_a33fa303439100639ad5432a19b8c01d4}{operator$\ast$}} (const \mbox{\hyperlink{classretrocombinator_1_1Sequence}{Sequence}} \&s1, std\+::string s2)
+\item 
+\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} \mbox{\hyperlink{namespaceretrocombinator_a4a6c95f0ea1c2ceefef81f347aa1a7fc}{operator$\ast$}} (std\+::string s1, std\+::string s2)
+\begin{DoxyCompactList}\small\item\em Pairwise distances between two strings. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{namespaceretrocombinator_a08dcf1f00c5ea301ff04e3389ed9b3e1}{operator\%}} (const \mbox{\hyperlink{classretrocombinator_1_1Sequence}{Sequence}} \&s1, const \mbox{\hyperlink{classretrocombinator_1_1Sequence}{Sequence}} \&s2)
+\item 
+double \mbox{\hyperlink{namespaceretrocombinator_a540b38522d54f6df8c0b7d9541b287c7}{operator\%}} (const \mbox{\hyperlink{classretrocombinator_1_1Sequence}{Sequence}} \&s1, std\+::string s2)
+\item 
+double \mbox{\hyperlink{namespaceretrocombinator_aae4efd19b9679bc87c68676d61c90af1}{operator\%}} (std\+::string s1, std\+::string s2)
+\begin{DoxyCompactList}\small\item\em Pairwise dissimilarity between two strings. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classretrocombinator_1_1RandMaths}{Rand\+Maths}} \& \mbox{\hyperlink{namespaceretrocombinator_a4987db6a228df9ffab41c0a5342556f6}{R\+NG}} = \mbox{\hyperlink{classretrocombinator_1_1RandMaths_ae54dee1a16fb0e275e1624ccaa7dc87e}{Rand\+Maths\+::get\+\_\+instance}}()
+\begin{DoxyCompactList}\small\item\em Global random number generator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Main namespace for all code in this C++ package 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespaceretrocombinator_a08dcf1f00c5ea301ff04e3389ed9b3e1}\label{namespaceretrocombinator_a08dcf1f00c5ea301ff04e3389ed9b3e1}} 
+\index{retrocombinator@{retrocombinator}!operator\%@{operator\%}}
+\index{operator\%@{operator\%}!retrocombinator@{retrocombinator}}
+\doxysubsubsection{\texorpdfstring{operator\%()}{operator\%()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily double retrocombinator\+::operator\% (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classretrocombinator_1_1Sequence}{Sequence}} \&}]{s1,  }\item[{const \mbox{\hyperlink{classretrocombinator_1_1Sequence}{Sequence}} \&}]{s2 }\end{DoxyParamCaption})}
+
+Similarity is 1-\/dissimilarity. Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceretrocombinator_a08dcf1f00c5ea301ff04e3389ed9b3e1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceretrocombinator_a540b38522d54f6df8c0b7d9541b287c7}\label{namespaceretrocombinator_a540b38522d54f6df8c0b7d9541b287c7}} 
+\index{retrocombinator@{retrocombinator}!operator\%@{operator\%}}
+\index{operator\%@{operator\%}!retrocombinator@{retrocombinator}}
+\doxysubsubsection{\texorpdfstring{operator\%()}{operator\%()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily double retrocombinator\+::operator\% (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classretrocombinator_1_1Sequence}{Sequence}} \&}]{s1,  }\item[{std\+::string}]{s2 }\end{DoxyParamCaption})}
+
+Similarity is 1-\/dissimilarity. Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceretrocombinator_a540b38522d54f6df8c0b7d9541b287c7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceretrocombinator_aae4efd19b9679bc87c68676d61c90af1}\label{namespaceretrocombinator_aae4efd19b9679bc87c68676d61c90af1}} 
+\index{retrocombinator@{retrocombinator}!operator\%@{operator\%}}
+\index{operator\%@{operator\%}!retrocombinator@{retrocombinator}}
+\doxysubsubsection{\texorpdfstring{operator\%()}{operator\%()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily double retrocombinator\+::operator\% (\begin{DoxyParamCaption}\item[{std\+::string}]{s1,  }\item[{std\+::string}]{s2 }\end{DoxyParamCaption})}
+
+
+
+Pairwise dissimilarity between two strings. 
+
+Similarity is 1-\/dissimilarity. \mbox{\Hypertarget{namespaceretrocombinator_a2d223ac406c9e02cf5687c709ad5da9d}\label{namespaceretrocombinator_a2d223ac406c9e02cf5687c709ad5da9d}} 
+\index{retrocombinator@{retrocombinator}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!retrocombinator@{retrocombinator}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} retrocombinator\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classretrocombinator_1_1Sequence}{Sequence}} \&}]{s1,  }\item[{const \mbox{\hyperlink{classretrocombinator_1_1Sequence}{Sequence}} \&}]{s2 }\end{DoxyParamCaption})}
+
+This is the standard edit distance score, and is the number of mismatches (because insertions and deletions are not possible in this system). Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceretrocombinator_a2d223ac406c9e02cf5687c709ad5da9d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceretrocombinator_a33fa303439100639ad5432a19b8c01d4}\label{namespaceretrocombinator_a33fa303439100639ad5432a19b8c01d4}} 
+\index{retrocombinator@{retrocombinator}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!retrocombinator@{retrocombinator}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} retrocombinator\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classretrocombinator_1_1Sequence}{Sequence}} \&}]{s1,  }\item[{std\+::string}]{s2 }\end{DoxyParamCaption})}
+
+This is the standard edit distance score, and is the number of mismatches (because insertions and deletions are not possible in this system). Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceretrocombinator_a33fa303439100639ad5432a19b8c01d4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceretrocombinator_a4a6c95f0ea1c2ceefef81f347aa1a7fc}\label{namespaceretrocombinator_a4a6c95f0ea1c2ceefef81f347aa1a7fc}} 
+\index{retrocombinator@{retrocombinator}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!retrocombinator@{retrocombinator}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} retrocombinator\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{std\+::string}]{s1,  }\item[{std\+::string}]{s2 }\end{DoxyParamCaption})}
+
+
+
+Pairwise distances between two strings. 
+
+This is the standard edit distance score, and is the number of mismatches (because insertions and deletions are not possible in this system). 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespaceretrocombinator_a4987db6a228df9ffab41c0a5342556f6}\label{namespaceretrocombinator_a4987db6a228df9ffab41c0a5342556f6}} 
+\index{retrocombinator@{retrocombinator}!RNG@{RNG}}
+\index{RNG@{RNG}!retrocombinator@{retrocombinator}}
+\doxysubsubsection{\texorpdfstring{RNG}{RNG}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classretrocombinator_1_1RandMaths}{Rand\+Maths}} \& retrocombinator\+::\+R\+NG = \mbox{\hyperlink{classretrocombinator_1_1RandMaths_ae54dee1a16fb0e275e1624ccaa7dc87e}{Rand\+Maths\+::get\+\_\+instance}}()}
+
+
+
+Global random number generator. 
+
+Used to completely determine the random effects of a simulation by specifying a seed. 

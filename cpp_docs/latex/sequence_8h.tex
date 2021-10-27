@@ -1,0 +1,69 @@
+\hypertarget{sequence_8h}{}\doxysection{src/sequence.h File Reference}
+\label{sequence_8h}\index{src/sequence.h@{src/sequence.h}}
+
+
+For the Sequence class and auxiliary functions relating to sequences.  
+
+
+{\ttfamily \#include \char`\"{}constants.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}activity\+\_\+tracker.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+set$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+Include dependency graph for sequence.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{sequence_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=295pt]{sequence_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classretrocombinator_1_1Sequence}{retrocombinator\+::\+Sequence}}
+\begin{DoxyCompactList}\small\item\em To represent a D\+NA sequence and the mutations that it has undergone. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceretrocombinator}{retrocombinator}}
+\item 
+ \mbox{\hyperlink{namespaceretrocombinator_1_1Consts}{retrocombinator\+::\+Consts}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespaceretrocombinator_aad1e3f1da3091479de238da696e10f0d}\label{namespaceretrocombinator_aad1e3f1da3091479de238da696e10f0d}} 
+typedef std\+::list$<$ Sequence $>$ \mbox{\hyperlink{namespaceretrocombinator_aad1e3f1da3091479de238da696e10f0d}{retrocombinator\+::sequence\+\_\+list}}
+\begin{DoxyCompactList}\small\item\em A list of sequences. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} \mbox{\hyperlink{namespaceretrocombinator_a4a6c95f0ea1c2ceefef81f347aa1a7fc}{retrocombinator\+::operator$\ast$}} (std\+::string s1, std\+::string s2)
+\begin{DoxyCompactList}\small\item\em Pairwise distances between two strings. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{namespaceretrocombinator_aae4efd19b9679bc87c68676d61c90af1}{retrocombinator\+::operator\%}} (std\+::string s1, std\+::string s2)
+\begin{DoxyCompactList}\small\item\em Pairwise dissimilarity between two strings. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespaceretrocombinator_1_1Consts_a9fe3e4c2ceb5762fd6bbec07db4c9df6}\label{namespaceretrocombinator_1_1Consts_a9fe3e4c2ceb5762fd6bbec07db4c9df6}} 
+const tag\+\_\+type \mbox{\hyperlink{namespaceretrocombinator_1_1Consts_a9fe3e4c2ceb5762fd6bbec07db4c9df6}{retrocombinator\+::\+Consts\+::\+S\+E\+Q\+U\+E\+N\+C\+E\+\_\+\+C\+R\+E\+A\+T\+E\+D\+\_\+\+R\+A\+N\+D\+O\+M\+L\+Y\+\_\+\+T\+AG}} = -\/2
+\begin{DoxyCompactList}\small\item\em This sequence was created randomly. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespaceretrocombinator_1_1Consts_ab9b7b2e7167a2e8565bf95a9e02c2330}\label{namespaceretrocombinator_1_1Consts_ab9b7b2e7167a2e8565bf95a9e02c2330}} 
+const tag\+\_\+type \mbox{\hyperlink{namespaceretrocombinator_1_1Consts_ab9b7b2e7167a2e8565bf95a9e02c2330}{retrocombinator\+::\+Consts\+::\+S\+E\+Q\+U\+E\+N\+C\+E\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+S\+E\+D\+\_\+\+E\+X\+T\+E\+R\+N\+A\+L\+L\+Y\+\_\+\+T\+AG}} = -\/1
+\begin{DoxyCompactList}\small\item\em This sequence was created from a specified string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+For the Sequence class and auxiliary functions relating to sequences. 
+

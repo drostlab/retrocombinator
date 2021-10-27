@@ -1,0 +1,10 @@
+<map id="retrocombinator::Simulation" name="retrocombinator::Simulation">
+<area shape="rect" id="node1" title="To run a simulation of the molecular evolutionary process of a collection of retrotranposons." alt="" coords="200,303,405,329"/>
+<area shape="rect" id="node2" href="$classretrocombinator_1_1Output.html" title="To store the results of our simulation to file." alt="" coords="5,213,184,240"/>
+<area shape="rect" id="node3" href="$classretrocombinator_1_1Families.html" title="To store all families of retrotranposons that emerge during a simulation, by saving a representative ..." alt="" coords="208,213,397,240"/>
+<area shape="rect" id="node4" href="$classretrocombinator_1_1Pool.html" title="To keep track of our current pool of sequences during a simulation." alt="" coords="421,213,584,240"/>
+<area shape="rect" id="node5" href="$classretrocombinator_1_1Burster.html" title="To keep track of what sequences are bursting and what are not." alt="" coords="203,117,386,143"/>
+<area shape="rect" id="node6" href="$classretrocombinator_1_1ActivityTracker.html" title="To store the information and logic of whether or not a sequence is active, that is,..." alt="" coords="410,109,595,151"/>
+<area shape="rect" id="node7" href="$classretrocombinator_1_1Mutator.html" title="A class that can mutate a given sequence according to a specified point mutation model." alt="" coords="620,117,807,143"/>
+<area shape="rect" id="node8" href="$classretrocombinator_1_1PointMutationModel.html" title="To represent a model of DNA evolution through point mutations." alt="" coords="600,5,827,47"/>
+</map>

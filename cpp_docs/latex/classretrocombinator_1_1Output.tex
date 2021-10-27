@@ -1,0 +1,159 @@
+\hypertarget{classretrocombinator_1_1Output}{}\doxysection{retrocombinator\+::Output Class Reference}
+\label{classretrocombinator_1_1Output}\index{retrocombinator::Output@{retrocombinator::Output}}
+
+
+To store the results of our simulation to file.  
+
+
+
+
+{\ttfamily \#include $<$output.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classretrocombinator_1_1Output_ab279cc5ef9e298fcd5c3e3f53adee0dd}{Output}} (std\+::string filename\+\_\+out, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} \mbox{\hyperlink{classretrocombinator_1_1Output_a9316e7bf3ff925bce1289267a27fb017}{final\+\_\+timestep}}, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} num\+\_\+init\+\_\+dist, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} num\+\_\+pair\+\_\+dist, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} num\+\_\+fam\+\_\+size, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} num\+\_\+fam\+\_\+dist, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} \mbox{\hyperlink{classretrocombinator_1_1Output_a84e637ae4716769ab72b7f8cf935a444}{max\+\_\+seq\+\_\+dist\+\_\+incl}})
+\begin{DoxyCompactList}\small\item\em Initialise our writer to file and create an object for writing. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classretrocombinator_1_1Output_a61d0840daf98bea49e4dc471f235eeab}\label{classretrocombinator_1_1Output_a61d0840daf98bea49e4dc471f235eeab}} 
+\mbox{\hyperlink{classretrocombinator_1_1Output_a61d0840daf98bea49e4dc471f235eeab}{$\sim$\+Output}} ()
+\begin{DoxyCompactList}\small\item\em Default destructor that closes our file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classretrocombinator_1_1Output_a9a68329d2f82ccc508212ac85d219839}{output}} (\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} t, const \mbox{\hyperlink{classretrocombinator_1_1Pool}{Pool}} \&pool, const \mbox{\hyperlink{classretrocombinator_1_1Families}{Families}} \&families)
+\begin{DoxyCompactList}\small\item\em Writes the data for one timestep in our simulation to file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classretrocombinator_1_1Output_a12f6afd853d2c3537e4b34cfb954df52}{print\+\_\+params}} (std\+::string sequence, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} sequence\+\_\+length, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} num\+\_\+initial\+\_\+copies, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} critical\+\_\+region\+\_\+length, double inactive\+\_\+probability, std\+::string mutation\+\_\+model, double burst\+\_\+probability, double burst\+\_\+mean, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} max\+\_\+total\+\_\+copies, double recomb\+\_\+mean, double recomb\+\_\+similarity, double selection\+\_\+threshold, double family\+\_\+coherence, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} max\+\_\+num\+\_\+representatives, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} num\+\_\+steps, double time\+\_\+per\+\_\+step, std\+::string filename\+\_\+out, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} num\+\_\+init\+\_\+dist, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} num\+\_\+pair\+\_\+dist, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} num\+\_\+fam\+\_\+size, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} num\+\_\+fam\+\_\+dist, double min\+\_\+output\+\_\+similarity)
+\item 
+void \mbox{\hyperlink{classretrocombinator_1_1Output_a58260d50238f5e128eda51860f5864e6}{print\+\_\+params}} (bool to\+\_\+seed, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} seed)
+\end{DoxyCompactItemize}
+
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classretrocombinator_1_1Output_a7f9e27aeea1c38d75a183251cd960818}\label{classretrocombinator_1_1Output_a7f9e27aeea1c38d75a183251cd960818}} 
+void \mbox{\hyperlink{classretrocombinator_1_1Output_a7f9e27aeea1c38d75a183251cd960818}{print\+\_\+initial\+\_\+dist}} (\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} t, const \mbox{\hyperlink{classretrocombinator_1_1Pool}{Pool}} \&pool)
+\begin{DoxyCompactList}\small\item\em Prints distances to initial sequence at time {\ttfamily t}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classretrocombinator_1_1Output_afab0c2869348322e3af074c7edda60de}\label{classretrocombinator_1_1Output_afab0c2869348322e3af074c7edda60de}} 
+void \mbox{\hyperlink{classretrocombinator_1_1Output_afab0c2869348322e3af074c7edda60de}{print\+\_\+pairwise\+\_\+dist}} (\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} t, const \mbox{\hyperlink{classretrocombinator_1_1Pool}{Pool}} \&pool)
+\begin{DoxyCompactList}\small\item\em Prints pairwise distances between sequences at time {\ttfamily t}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classretrocombinator_1_1Output_a686bbffbc2021ec6144e02b557ead337}\label{classretrocombinator_1_1Output_a686bbffbc2021ec6144e02b557ead337}} 
+void \mbox{\hyperlink{classretrocombinator_1_1Output_a686bbffbc2021ec6144e02b557ead337}{print\+\_\+family\+\_\+sizes}} (\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} t, const \mbox{\hyperlink{classretrocombinator_1_1Families}{Families}} \&families, const \mbox{\hyperlink{classretrocombinator_1_1Pool}{Pool}} \&pool)
+\begin{DoxyCompactList}\small\item\em Prints family representatives and their members at time {\ttfamily t}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classretrocombinator_1_1Output_ab793ab5ca8075c773a0d224f9345e7c2}\label{classretrocombinator_1_1Output_ab793ab5ca8075c773a0d224f9345e7c2}} 
+void \mbox{\hyperlink{classretrocombinator_1_1Output_ab793ab5ca8075c773a0d224f9345e7c2}{print\+\_\+family\+\_\+dist}} (\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} t, const \mbox{\hyperlink{classretrocombinator_1_1Families}{Families}} \&families)
+\begin{DoxyCompactList}\small\item\em Prints pairwise distances between representatives at time {\ttfamily t}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classretrocombinator_1_1Output_a9316e7bf3ff925bce1289267a27fb017}\label{classretrocombinator_1_1Output_a9316e7bf3ff925bce1289267a27fb017}} 
+const \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} \mbox{\hyperlink{classretrocombinator_1_1Output_a9316e7bf3ff925bce1289267a27fb017}{final\+\_\+timestep}}
+\begin{DoxyCompactList}\small\item\em What is the timestep of our last step in the simulation? \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classretrocombinator_1_1Output_a84e637ae4716769ab72b7f8cf935a444}\label{classretrocombinator_1_1Output_a84e637ae4716769ab72b7f8cf935a444}} 
+const \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} \mbox{\hyperlink{classretrocombinator_1_1Output_a84e637ae4716769ab72b7f8cf935a444}{max\+\_\+seq\+\_\+dist\+\_\+incl}}
+\begin{DoxyCompactList}\small\item\em What is the largest sequence distance we should print out (inclusive)? Distances greater than this are suppressed (not printed) in the output file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classretrocombinator_1_1Output_a892712f42ff097ec7b3622fe88d7c441}\label{classretrocombinator_1_1Output_a892712f42ff097ec7b3622fe88d7c441}} 
+std\+::fstream \mbox{\hyperlink{classretrocombinator_1_1Output_a892712f42ff097ec7b3622fe88d7c441}{fout}}
+\begin{DoxyCompactList}\small\item\em A stream for the output. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classretrocombinator_1_1Output_adaf0d298ffb29cabc67e4e712a7a4082}\label{classretrocombinator_1_1Output_adaf0d298ffb29cabc67e4e712a7a4082}} 
+const \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} \mbox{\hyperlink{classretrocombinator_1_1Output_adaf0d298ffb29cabc67e4e712a7a4082}{to\+\_\+print\+\_\+init\+\_\+dist}}
+\begin{DoxyCompactList}\small\item\em Call the appropriate {\ttfamily print\+\_\+$<$xxx$>$} if the current time is a multiple of {\ttfamily to\+\_\+print\+\_\+$<$xxx$>$} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classretrocombinator_1_1Output_a51f874b61893323269f67b735cd9f31b}\label{classretrocombinator_1_1Output_a51f874b61893323269f67b735cd9f31b}} 
+const \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} \mbox{\hyperlink{classretrocombinator_1_1Output_a51f874b61893323269f67b735cd9f31b}{to\+\_\+print\+\_\+pair\+\_\+dist}}
+\begin{DoxyCompactList}\small\item\em Call the appropriate {\ttfamily print\+\_\+$<$xxx$>$} if the current time is a multiple of {\ttfamily to\+\_\+print\+\_\+$<$xxx$>$} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classretrocombinator_1_1Output_ab677914142554bee209d6c22a7c8a5de}\label{classretrocombinator_1_1Output_ab677914142554bee209d6c22a7c8a5de}} 
+const \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} \mbox{\hyperlink{classretrocombinator_1_1Output_ab677914142554bee209d6c22a7c8a5de}{to\+\_\+print\+\_\+fam\+\_\+size}}
+\begin{DoxyCompactList}\small\item\em Call the appropriate {\ttfamily print\+\_\+$<$xxx$>$} if the current time is a multiple of {\ttfamily to\+\_\+print\+\_\+$<$xxx$>$} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classretrocombinator_1_1Output_a93152a0e11e2666f1a91048f46d8ac00}\label{classretrocombinator_1_1Output_a93152a0e11e2666f1a91048f46d8ac00}} 
+const \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} \mbox{\hyperlink{classretrocombinator_1_1Output_a93152a0e11e2666f1a91048f46d8ac00}{to\+\_\+print\+\_\+fam\+\_\+dist}}
+\begin{DoxyCompactList}\small\item\em Call the appropriate {\ttfamily print\+\_\+$<$xxx$>$} if the current time is a multiple of {\ttfamily to\+\_\+print\+\_\+$<$xxx$>$} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+
+\doxysubsection{Detailed Description}
+To store the results of our simulation to file. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classretrocombinator_1_1Output_ab279cc5ef9e298fcd5c3e3f53adee0dd}\label{classretrocombinator_1_1Output_ab279cc5ef9e298fcd5c3e3f53adee0dd}} 
+\index{retrocombinator::Output@{retrocombinator::Output}!Output@{Output}}
+\index{Output@{Output}!retrocombinator::Output@{retrocombinator::Output}}
+\doxysubsubsection{\texorpdfstring{Output()}{Output()}}
+{\footnotesize\ttfamily Output\+::\+Output (\begin{DoxyParamCaption}\item[{std\+::string}]{filename\+\_\+out,  }\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{final\+\_\+timestep,  }\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{num\+\_\+init\+\_\+dist,  }\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{num\+\_\+pair\+\_\+dist,  }\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{num\+\_\+fam\+\_\+size,  }\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{num\+\_\+fam\+\_\+dist,  }\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{max\+\_\+seq\+\_\+dist\+\_\+incl }\end{DoxyParamCaption})}
+
+
+
+Initialise our writer to file and create an object for writing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename\+\_\+out} & What file to save output to? \\
+\hline
+{\em final\+\_\+timestep} & What is the timestep of our last step in the simulation?\\
+\hline
+{\em num\+\_\+init\+\_\+dist} & How many times should we print out distances to the initial sequence? \\
+\hline
+{\em num\+\_\+pair\+\_\+dist} & How many times should we print out pairwise distances between our sequences? \\
+\hline
+{\em num\+\_\+fam\+\_\+size} & How many times should we print out family sizes? \\
+\hline
+{\em num\+\_\+fam\+\_\+dist} & How many times should we print out pairwise distances between family representatives? \\
+\hline
+{\em max\+\_\+seq\+\_\+dist\+\_\+incl} & What is the largest sequence distance we should print out (inclusive)? Distances greater than this are suppressed (not printed) in the output file.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classretrocombinator_1_1Output_a9a68329d2f82ccc508212ac85d219839}\label{classretrocombinator_1_1Output_a9a68329d2f82ccc508212ac85d219839}} 
+\index{retrocombinator::Output@{retrocombinator::Output}!output@{output}}
+\index{output@{output}!retrocombinator::Output@{retrocombinator::Output}}
+\doxysubsubsection{\texorpdfstring{output()}{output()}}
+{\footnotesize\ttfamily void Output\+::output (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{t,  }\item[{const \mbox{\hyperlink{classretrocombinator_1_1Pool}{Pool}} \&}]{pool,  }\item[{const \mbox{\hyperlink{classretrocombinator_1_1Families}{Families}} \&}]{families }\end{DoxyParamCaption})}
+
+
+
+Writes the data for one timestep in our simulation to file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & Which timestep are we on? \\
+\hline
+{\em pool} & What is the pool of sequences at time {\ttfamily t}? \\
+\hline
+{\em families} & What are the families at time {\ttfamily t}? \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classretrocombinator_1_1Output_a9a68329d2f82ccc508212ac85d219839_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classretrocombinator_1_1Output_a58260d50238f5e128eda51860f5864e6}\label{classretrocombinator_1_1Output_a58260d50238f5e128eda51860f5864e6}} 
+\index{retrocombinator::Output@{retrocombinator::Output}!print\_params@{print\_params}}
+\index{print\_params@{print\_params}!retrocombinator::Output@{retrocombinator::Output}}
+\doxysubsubsection{\texorpdfstring{print\_params()}{print\_params()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Output\+::print\+\_\+params (\begin{DoxyParamCaption}\item[{bool}]{to\+\_\+seed,  }\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{seed }\end{DoxyParamCaption})}
+
+Prints the simulation parameters to file \mbox{\Hypertarget{classretrocombinator_1_1Output_a12f6afd853d2c3537e4b34cfb954df52}\label{classretrocombinator_1_1Output_a12f6afd853d2c3537e4b34cfb954df52}} 
+\index{retrocombinator::Output@{retrocombinator::Output}!print\_params@{print\_params}}
+\index{print\_params@{print\_params}!retrocombinator::Output@{retrocombinator::Output}}
+\doxysubsubsection{\texorpdfstring{print\_params()}{print\_params()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Output\+::print\+\_\+params (\begin{DoxyParamCaption}\item[{std\+::string}]{sequence,  }\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{sequence\+\_\+length,  }\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{num\+\_\+initial\+\_\+copies,  }\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{critical\+\_\+region\+\_\+length,  }\item[{double}]{inactive\+\_\+probability,  }\item[{std\+::string}]{mutation\+\_\+model,  }\item[{double}]{burst\+\_\+probability,  }\item[{double}]{burst\+\_\+mean,  }\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{max\+\_\+total\+\_\+copies,  }\item[{double}]{recomb\+\_\+mean,  }\item[{double}]{recomb\+\_\+similarity,  }\item[{double}]{selection\+\_\+threshold,  }\item[{double}]{family\+\_\+coherence,  }\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{max\+\_\+num\+\_\+representatives,  }\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{num\+\_\+steps,  }\item[{double}]{time\+\_\+per\+\_\+step,  }\item[{std\+::string}]{filename\+\_\+out,  }\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{num\+\_\+init\+\_\+dist,  }\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{num\+\_\+pair\+\_\+dist,  }\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{num\+\_\+fam\+\_\+size,  }\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{num\+\_\+fam\+\_\+dist,  }\item[{double}]{min\+\_\+output\+\_\+similarity }\end{DoxyParamCaption})}
+
+Prints the simulation parameters to file Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classretrocombinator_1_1Output_a12f6afd853d2c3537e4b34cfb954df52_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{output_8h}{output.\+h}}\item 
+src/output.\+cpp\end{DoxyCompactItemize}

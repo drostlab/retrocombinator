@@ -6,6 +6,9 @@
 \usage{
 is.RecombParams(x)
 }
+\arguments{
+\item{x}{An arbitrary object}
+}
 \description{
 Is x a RecombParams object?
 }

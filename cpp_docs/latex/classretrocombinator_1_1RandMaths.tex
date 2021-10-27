@@ -1,0 +1,364 @@
+\hypertarget{classretrocombinator_1_1RandMaths}{}\doxysection{retrocombinator\+::Rand\+Maths Class Reference}
+\label{classretrocombinator_1_1RandMaths}\index{retrocombinator::RandMaths@{retrocombinator::RandMaths}}
+
+
+For all maths helper functions that use random number generation.  
+
+
+
+
+{\ttfamily \#include $<$rand\+\_\+maths.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classretrocombinator_1_1RandMaths_aca899b8322519172fe008e0697c432db}{Rand\+Maths}} (\mbox{\hyperlink{classretrocombinator_1_1RandMaths}{Rand\+Maths}} const \&)=delete
+\begin{DoxyCompactList}\small\item\em Delete copy constructors as want \mbox{\hyperlink{classretrocombinator_1_1RandMaths}{Rand\+Maths}} to be a singleton. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classretrocombinator_1_1RandMaths_a2ba731d3f29d3024da9df7e62f01f1bb}\label{classretrocombinator_1_1RandMaths_a2ba731d3f29d3024da9df7e62f01f1bb}} 
+void {\bfseries operator=} (\mbox{\hyperlink{classretrocombinator_1_1RandMaths}{Rand\+Maths}} const \&)=delete
+\item 
+void \mbox{\hyperlink{classretrocombinator_1_1RandMaths_a0bf1c2e7a1eccb1f9246b3fceeb5db8a}{set\+\_\+specific\+\_\+seed}} (\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} seed)
+\begin{DoxyCompactList}\small\item\em Uses a user-\/specified seed for R\+NG. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classretrocombinator_1_1RandMaths_a2b61e31de6067ffa35531d5bde40f4c6}{set\+\_\+random\+\_\+seed}} ()
+\begin{DoxyCompactList}\small\item\em Uses system time to seed the R\+NG. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} \mbox{\hyperlink{classretrocombinator_1_1RandMaths_a59d3ee4c79f732e3f0b9e587bd4f66e9}{get\+\_\+last\+\_\+seed}} () const
+\begin{DoxyCompactList}\small\item\em Gets the last set seed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classretrocombinator_1_1RandMaths_a4f82863502ca04438a331fd309ca8b5e}\label{classretrocombinator_1_1RandMaths_a4f82863502ca04438a331fd309ca8b5e}} 
+bool \mbox{\hyperlink{classretrocombinator_1_1RandMaths_a4f82863502ca04438a331fd309ca8b5e}{rand\+\_\+bit}} ()
+\begin{DoxyCompactList}\small\item\em Generates a random true/false value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} \mbox{\hyperlink{classretrocombinator_1_1RandMaths_a8072bad64e64ef042e5257e1bee85635}{rand\+\_\+int}} (\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} low, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} high)
+\begin{DoxyCompactList}\small\item\em Generates a random integer within a range. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classretrocombinator_1_1RandMaths_aa6441baa59bff50f588c0c54e3c54140}{rand\+\_\+real}} (double low=0.\+0, double high=1.\+0)
+\begin{DoxyCompactList}\small\item\em Generates a random real number within a range. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} \mbox{\hyperlink{classretrocombinator_1_1RandMaths_adef66efd4d58f6130982ff0ee0e25750}{rand\+\_\+poisson}} (double mean)
+\begin{DoxyCompactList}\small\item\em Chooses a number sampled from a Poisson distribution. \end{DoxyCompactList}\item 
+std\+::set$<$ \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} $>$ \mbox{\hyperlink{classretrocombinator_1_1RandMaths_a6a7fe159f46afec51d997e4d07d2cfe6}{sample\+\_\+without\+\_\+replacement}} (\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} low, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} high, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} m)
+\begin{DoxyCompactList}\small\item\em Samples {\itshape m} integers within a range, without replacement. \end{DoxyCompactList}\item 
+std\+::pair$<$ \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} $>$ \mbox{\hyperlink{classretrocombinator_1_1RandMaths_a2758ba7c9818bc664c4b751a697e1fe6}{sample\+\_\+distinct\+\_\+pair}} (\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} low, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} high)
+\begin{DoxyCompactList}\small\item\em Samples a non-\/diagonal pair (2 distinct values) within a range. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classretrocombinator_1_1RandMaths_a183686140a9da18ad40c7e048ee8914e}{test\+\_\+event}} (double event\+\_\+probability)
+\begin{DoxyCompactList}\small\item\em Tests whether or not an event happened. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} \mbox{\hyperlink{classretrocombinator_1_1RandMaths_a3834f9a074546f0d588247610f16fb0e}{choose\+\_\+event}} (const double events\mbox{[}$\,$\mbox{]}, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} num\+\_\+events)
+\begin{DoxyCompactList}\small\item\em Chooses an event from a list of possible events. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} \mbox{\hyperlink{classretrocombinator_1_1RandMaths_a801f694872b80cd801824d8984f7825a}{choose\+\_\+event}} (const std\+::vector$<$ T $>$ events)
+\begin{DoxyCompactList}\small\item\em Chooses an event from a list of possible events. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::vector$<$ \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} $>$ \mbox{\hyperlink{classretrocombinator_1_1RandMaths_a119bf0b2c75779517d0dabf58c8169bb}{choose\+\_\+events}} (std\+::vector$<$ T $>$ events, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} num\+\_\+picks)
+\begin{DoxyCompactList}\small\item\em Chooses many events from a list of possible events, with replacement. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} $>$ \mbox{\hyperlink{classretrocombinator_1_1RandMaths_a2d4fdd627a0d5e24da1d8affec21ac28}{choose\+\_\+items}} (std\+::vector$<$ \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} $>$ items, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} num\+\_\+picks)
+\begin{DoxyCompactList}\small\item\em Chooses (without replacement) a given number of items randomly from a list of distinct types, where each type has some number of items to begin with. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classretrocombinator_1_1RandMaths}{Rand\+Maths}} \& \mbox{\hyperlink{classretrocombinator_1_1RandMaths_ae54dee1a16fb0e275e1624ccaa7dc87e}{get\+\_\+instance}} ()
+\begin{DoxyCompactList}\small\item\em Returns an instance of a \mbox{\hyperlink{classretrocombinator_1_1RandMaths}{Rand\+Maths}} class, after seeding it with system time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classretrocombinator_1_1RandMaths_aa507e7465f9a650d560aa42c7f75310f}{Rand\+Maths}} ()
+\begin{DoxyCompactList}\small\item\em Constructor, which seeds the random engine with system time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::mt19937 \mbox{\hyperlink{classretrocombinator_1_1RandMaths_a8455f3a94efd124edd0ecfc806744476}{re}}
+\begin{DoxyCompactList}\small\item\em Engine that produces random numbers for all functions that require them. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} \mbox{\hyperlink{classretrocombinator_1_1RandMaths_ab5b6bec8e0eaea80efe565cddc8e69ac}{last\+\_\+seed}}
+\begin{DoxyCompactList}\small\item\em Last seed for the random engine, either by the user or by the system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+For all maths helper functions that use random number generation. 
+
+This is implemented as a singleton that can either be specifically seeded (for testing and debugging) or can be randomly seeded (for simulations). 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classretrocombinator_1_1RandMaths_aa507e7465f9a650d560aa42c7f75310f}\label{classretrocombinator_1_1RandMaths_aa507e7465f9a650d560aa42c7f75310f}} 
+\index{retrocombinator::RandMaths@{retrocombinator::RandMaths}!RandMaths@{RandMaths}}
+\index{RandMaths@{RandMaths}!retrocombinator::RandMaths@{retrocombinator::RandMaths}}
+\doxysubsubsection{\texorpdfstring{RandMaths()}{RandMaths()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Rand\+Maths\+::\+Rand\+Maths (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Constructor, which seeds the random engine with system time. 
+
+Is private because we want this to be a singleton. \mbox{\Hypertarget{classretrocombinator_1_1RandMaths_aca899b8322519172fe008e0697c432db}\label{classretrocombinator_1_1RandMaths_aca899b8322519172fe008e0697c432db}} 
+\index{retrocombinator::RandMaths@{retrocombinator::RandMaths}!RandMaths@{RandMaths}}
+\index{RandMaths@{RandMaths}!retrocombinator::RandMaths@{retrocombinator::RandMaths}}
+\doxysubsubsection{\texorpdfstring{RandMaths()}{RandMaths()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily retrocombinator\+::\+Rand\+Maths\+::\+Rand\+Maths (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classretrocombinator_1_1RandMaths}{Rand\+Maths}} const \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Delete copy constructors as want \mbox{\hyperlink{classretrocombinator_1_1RandMaths}{Rand\+Maths}} to be a singleton. 
+
+The reason these are public is because most compilers check for private-\/ness before they check to see if functions are deleted, and we want our error messages to be helpful if we create a new \mbox{\hyperlink{classretrocombinator_1_1RandMaths}{Rand\+Maths}} object by mistake. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classretrocombinator_1_1RandMaths_a3834f9a074546f0d588247610f16fb0e}\label{classretrocombinator_1_1RandMaths_a3834f9a074546f0d588247610f16fb0e}} 
+\index{retrocombinator::RandMaths@{retrocombinator::RandMaths}!choose\_event@{choose\_event}}
+\index{choose\_event@{choose\_event}!retrocombinator::RandMaths@{retrocombinator::RandMaths}}
+\doxysubsubsection{\texorpdfstring{choose\_event()}{choose\_event()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} Rand\+Maths\+::choose\+\_\+event (\begin{DoxyParamCaption}\item[{const double}]{events\mbox{[}$\,$\mbox{]},  }\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{num\+\_\+events }\end{DoxyParamCaption})}
+
+
+
+Chooses an event from a list of possible events. 
+
+Takes the probabilities of each of the events as input. Throws an exception if the probabilities do not add up to at least 1.
+
+This does not check if the array is valid, i.\+e. if the probabilities add up to 1. Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classretrocombinator_1_1RandMaths_a3834f9a074546f0d588247610f16fb0e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classretrocombinator_1_1RandMaths_a3834f9a074546f0d588247610f16fb0e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classretrocombinator_1_1RandMaths_a801f694872b80cd801824d8984f7825a}\label{classretrocombinator_1_1RandMaths_a801f694872b80cd801824d8984f7825a}} 
+\index{retrocombinator::RandMaths@{retrocombinator::RandMaths}!choose\_event@{choose\_event}}
+\index{choose\_event@{choose\_event}!retrocombinator::RandMaths@{retrocombinator::RandMaths}}
+\doxysubsubsection{\texorpdfstring{choose\_event()}{choose\_event()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} retrocombinator\+::\+Rand\+Maths\+::choose\+\_\+event (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ T $>$}]{events }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Chooses an event from a list of possible events. 
+
+Takes the {\itshape relative} probabilities of each of the events as input Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classretrocombinator_1_1RandMaths_a801f694872b80cd801824d8984f7825a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classretrocombinator_1_1RandMaths_a119bf0b2c75779517d0dabf58c8169bb}\label{classretrocombinator_1_1RandMaths_a119bf0b2c75779517d0dabf58c8169bb}} 
+\index{retrocombinator::RandMaths@{retrocombinator::RandMaths}!choose\_events@{choose\_events}}
+\index{choose\_events@{choose\_events}!retrocombinator::RandMaths@{retrocombinator::RandMaths}}
+\doxysubsubsection{\texorpdfstring{choose\_events()}{choose\_events()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::vector$<$\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}$>$ retrocombinator\+::\+Rand\+Maths\+::choose\+\_\+events (\begin{DoxyParamCaption}\item[{std\+::vector$<$ T $>$}]{events,  }\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{num\+\_\+picks }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Chooses many events from a list of possible events, with replacement. 
+
+Returns a vector {\ttfamily picks} of the same size as events, where {\itshape picks\+\_\+i} is the number of times event {\ttfamily i} was chosen.
+
+Takes the {\itshape relative} probabilities of each of the events as input. Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classretrocombinator_1_1RandMaths_a119bf0b2c75779517d0dabf58c8169bb_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classretrocombinator_1_1RandMaths_a2d4fdd627a0d5e24da1d8affec21ac28}\label{classretrocombinator_1_1RandMaths_a2d4fdd627a0d5e24da1d8affec21ac28}} 
+\index{retrocombinator::RandMaths@{retrocombinator::RandMaths}!choose\_items@{choose\_items}}
+\index{choose\_items@{choose\_items}!retrocombinator::RandMaths@{retrocombinator::RandMaths}}
+\doxysubsubsection{\texorpdfstring{choose\_items()}{choose\_items()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} $>$ Rand\+Maths\+::choose\+\_\+items (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} $>$}]{items,  }\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{num\+\_\+picks }\end{DoxyParamCaption})}
+
+
+
+Chooses (without replacement) a given number of items randomly from a list of distinct types, where each type has some number of items to begin with. 
+
+Returns a vector {\ttfamily picks} of the same size as items, where {\itshape picks\+\_\+i} is the number of times item {\itshape i} was chosen, and {\itshape picks\+\_\+i} $<$= {\ttfamily item\+\_\+i} 
+
+If the number of items to be picked is larger than we have available, all items are picked and so we just return the original list given to us. Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classretrocombinator_1_1RandMaths_a2d4fdd627a0d5e24da1d8affec21ac28_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classretrocombinator_1_1RandMaths_ae54dee1a16fb0e275e1624ccaa7dc87e}\label{classretrocombinator_1_1RandMaths_ae54dee1a16fb0e275e1624ccaa7dc87e}} 
+\index{retrocombinator::RandMaths@{retrocombinator::RandMaths}!get\_instance@{get\_instance}}
+\index{get\_instance@{get\_instance}!retrocombinator::RandMaths@{retrocombinator::RandMaths}}
+\doxysubsubsection{\texorpdfstring{get\_instance()}{get\_instance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classretrocombinator_1_1RandMaths}{Rand\+Maths}} \& Rand\+Maths\+::get\+\_\+instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns an instance of a \mbox{\hyperlink{classretrocombinator_1_1RandMaths}{Rand\+Maths}} class, after seeding it with system time. 
+
+Can be done only once as we want to share the random number generation among all other classes, and seed only once for controlling the numbers that are generated. \mbox{\Hypertarget{classretrocombinator_1_1RandMaths_a59d3ee4c79f732e3f0b9e587bd4f66e9}\label{classretrocombinator_1_1RandMaths_a59d3ee4c79f732e3f0b9e587bd4f66e9}} 
+\index{retrocombinator::RandMaths@{retrocombinator::RandMaths}!get\_last\_seed@{get\_last\_seed}}
+\index{get\_last\_seed@{get\_last\_seed}!retrocombinator::RandMaths@{retrocombinator::RandMaths}}
+\doxysubsubsection{\texorpdfstring{get\_last\_seed()}{get\_last\_seed()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} retrocombinator\+::\+Rand\+Maths\+::get\+\_\+last\+\_\+seed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the last set seed. 
+
+Look at the definition of last\+\_\+seed for more details. \mbox{\Hypertarget{classretrocombinator_1_1RandMaths_a8072bad64e64ef042e5257e1bee85635}\label{classretrocombinator_1_1RandMaths_a8072bad64e64ef042e5257e1bee85635}} 
+\index{retrocombinator::RandMaths@{retrocombinator::RandMaths}!rand\_int@{rand\_int}}
+\index{rand\_int@{rand\_int}!retrocombinator::RandMaths@{retrocombinator::RandMaths}}
+\doxysubsubsection{\texorpdfstring{rand\_int()}{rand\_int()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} Rand\+Maths\+::rand\+\_\+int (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{low,  }\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{high }\end{DoxyParamCaption})}
+
+
+
+Generates a random integer within a range. 
+
+The bounds are \mbox{[}inclusive\+\_\+low, exclusive\+\_\+high). Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classretrocombinator_1_1RandMaths_a8072bad64e64ef042e5257e1bee85635_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classretrocombinator_1_1RandMaths_adef66efd4d58f6130982ff0ee0e25750}\label{classretrocombinator_1_1RandMaths_adef66efd4d58f6130982ff0ee0e25750}} 
+\index{retrocombinator::RandMaths@{retrocombinator::RandMaths}!rand\_poisson@{rand\_poisson}}
+\index{rand\_poisson@{rand\_poisson}!retrocombinator::RandMaths@{retrocombinator::RandMaths}}
+\doxysubsubsection{\texorpdfstring{rand\_poisson()}{rand\_poisson()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} Rand\+Maths\+::rand\+\_\+poisson (\begin{DoxyParamCaption}\item[{double}]{mean }\end{DoxyParamCaption})}
+
+
+
+Chooses a number sampled from a Poisson distribution. 
+
+Takes the mean as a parameter. Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classretrocombinator_1_1RandMaths_adef66efd4d58f6130982ff0ee0e25750_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classretrocombinator_1_1RandMaths_aa6441baa59bff50f588c0c54e3c54140}\label{classretrocombinator_1_1RandMaths_aa6441baa59bff50f588c0c54e3c54140}} 
+\index{retrocombinator::RandMaths@{retrocombinator::RandMaths}!rand\_real@{rand\_real}}
+\index{rand\_real@{rand\_real}!retrocombinator::RandMaths@{retrocombinator::RandMaths}}
+\doxysubsubsection{\texorpdfstring{rand\_real()}{rand\_real()}}
+{\footnotesize\ttfamily double Rand\+Maths\+::rand\+\_\+real (\begin{DoxyParamCaption}\item[{double}]{low = {\ttfamily 0.0},  }\item[{double}]{high = {\ttfamily 1.0} }\end{DoxyParamCaption})}
+
+
+
+Generates a random real number within a range. 
+
+The bounds are \mbox{[}inclusive\+\_\+low, exclusive high). Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classretrocombinator_1_1RandMaths_aa6441baa59bff50f588c0c54e3c54140_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classretrocombinator_1_1RandMaths_a2758ba7c9818bc664c4b751a697e1fe6}\label{classretrocombinator_1_1RandMaths_a2758ba7c9818bc664c4b751a697e1fe6}} 
+\index{retrocombinator::RandMaths@{retrocombinator::RandMaths}!sample\_distinct\_pair@{sample\_distinct\_pair}}
+\index{sample\_distinct\_pair@{sample\_distinct\_pair}!retrocombinator::RandMaths@{retrocombinator::RandMaths}}
+\doxysubsubsection{\texorpdfstring{sample\_distinct\_pair()}{sample\_distinct\_pair()}}
+{\footnotesize\ttfamily std\+::pair$<$ \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}, \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} $>$ Rand\+Maths\+::sample\+\_\+distinct\+\_\+pair (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{low,  }\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{high }\end{DoxyParamCaption})}
+
+
+
+Samples a non-\/diagonal pair (2 distinct values) within a range. 
+
+The bounds for each value are \mbox{[}inclusive\+\_\+low, exclusive high). Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classretrocombinator_1_1RandMaths_a2758ba7c9818bc664c4b751a697e1fe6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classretrocombinator_1_1RandMaths_a6a7fe159f46afec51d997e4d07d2cfe6}\label{classretrocombinator_1_1RandMaths_a6a7fe159f46afec51d997e4d07d2cfe6}} 
+\index{retrocombinator::RandMaths@{retrocombinator::RandMaths}!sample\_without\_replacement@{sample\_without\_replacement}}
+\index{sample\_without\_replacement@{sample\_without\_replacement}!retrocombinator::RandMaths@{retrocombinator::RandMaths}}
+\doxysubsubsection{\texorpdfstring{sample\_without\_replacement()}{sample\_without\_replacement()}}
+{\footnotesize\ttfamily std\+::set$<$ \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} $>$ Rand\+Maths\+::sample\+\_\+without\+\_\+replacement (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{low,  }\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{high,  }\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{m }\end{DoxyParamCaption})}
+
+
+
+Samples {\itshape m} integers within a range, without replacement. 
+
+The bounds are \mbox{[}inclusive\+\_\+low, exclusive high). The integers are returned in ascending order. Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classretrocombinator_1_1RandMaths_a6a7fe159f46afec51d997e4d07d2cfe6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classretrocombinator_1_1RandMaths_a6a7fe159f46afec51d997e4d07d2cfe6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classretrocombinator_1_1RandMaths_a2b61e31de6067ffa35531d5bde40f4c6}\label{classretrocombinator_1_1RandMaths_a2b61e31de6067ffa35531d5bde40f4c6}} 
+\index{retrocombinator::RandMaths@{retrocombinator::RandMaths}!set\_random\_seed@{set\_random\_seed}}
+\index{set\_random\_seed@{set\_random\_seed}!retrocombinator::RandMaths@{retrocombinator::RandMaths}}
+\doxysubsubsection{\texorpdfstring{set\_random\_seed()}{set\_random\_seed()}}
+{\footnotesize\ttfamily void Rand\+Maths\+::set\+\_\+random\+\_\+seed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Uses system time to seed the R\+NG. 
+
+This can be undone by calling {\ttfamily \mbox{\hyperlink{classretrocombinator_1_1RandMaths_a0bf1c2e7a1eccb1f9246b3fceeb5db8a}{set\+\_\+specific\+\_\+seed()}}} \mbox{\Hypertarget{classretrocombinator_1_1RandMaths_a0bf1c2e7a1eccb1f9246b3fceeb5db8a}\label{classretrocombinator_1_1RandMaths_a0bf1c2e7a1eccb1f9246b3fceeb5db8a}} 
+\index{retrocombinator::RandMaths@{retrocombinator::RandMaths}!set\_specific\_seed@{set\_specific\_seed}}
+\index{set\_specific\_seed@{set\_specific\_seed}!retrocombinator::RandMaths@{retrocombinator::RandMaths}}
+\doxysubsubsection{\texorpdfstring{set\_specific\_seed()}{set\_specific\_seed()}}
+{\footnotesize\ttfamily void Rand\+Maths\+::set\+\_\+specific\+\_\+seed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}}}]{seed }\end{DoxyParamCaption})}
+
+
+
+Uses a user-\/specified seed for R\+NG. 
+
+This can be undone by calling {\ttfamily \mbox{\hyperlink{classretrocombinator_1_1RandMaths_a2b61e31de6067ffa35531d5bde40f4c6}{set\+\_\+random\+\_\+seed()}}} \mbox{\Hypertarget{classretrocombinator_1_1RandMaths_a183686140a9da18ad40c7e048ee8914e}\label{classretrocombinator_1_1RandMaths_a183686140a9da18ad40c7e048ee8914e}} 
+\index{retrocombinator::RandMaths@{retrocombinator::RandMaths}!test\_event@{test\_event}}
+\index{test\_event@{test\_event}!retrocombinator::RandMaths@{retrocombinator::RandMaths}}
+\doxysubsubsection{\texorpdfstring{test\_event()}{test\_event()}}
+{\footnotesize\ttfamily bool Rand\+Maths\+::test\+\_\+event (\begin{DoxyParamCaption}\item[{double}]{event\+\_\+probability }\end{DoxyParamCaption})}
+
+
+
+Tests whether or not an event happened. 
+
+Takes the probability of an event as parameter, and then compares it to a random value in \mbox{[}0, 1). Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classretrocombinator_1_1RandMaths_a183686140a9da18ad40c7e048ee8914e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classretrocombinator_1_1RandMaths_a183686140a9da18ad40c7e048ee8914e_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classretrocombinator_1_1RandMaths_ab5b6bec8e0eaea80efe565cddc8e69ac}\label{classretrocombinator_1_1RandMaths_ab5b6bec8e0eaea80efe565cddc8e69ac}} 
+\index{retrocombinator::RandMaths@{retrocombinator::RandMaths}!last\_seed@{last\_seed}}
+\index{last\_seed@{last\_seed}!retrocombinator::RandMaths@{retrocombinator::RandMaths}}
+\doxysubsubsection{\texorpdfstring{last\_seed}{last\_seed}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceretrocombinator_a8e1541b50cee66a791df4c437ccbb385}{size\+\_\+type}} retrocombinator\+::\+Rand\+Maths\+::last\+\_\+seed\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Last seed for the random engine, either by the user or by the system. 
+
+Note that this does not reflect the internal state of the random engine at all points as once random number generation begins, this value is not touched. \mbox{\Hypertarget{classretrocombinator_1_1RandMaths_a8455f3a94efd124edd0ecfc806744476}\label{classretrocombinator_1_1RandMaths_a8455f3a94efd124edd0ecfc806744476}} 
+\index{retrocombinator::RandMaths@{retrocombinator::RandMaths}!re@{re}}
+\index{re@{re}!retrocombinator::RandMaths@{retrocombinator::RandMaths}}
+\doxysubsubsection{\texorpdfstring{re}{re}}
+{\footnotesize\ttfamily std\+::mt19937 retrocombinator\+::\+Rand\+Maths\+::re\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Engine that produces random numbers for all functions that require them. 
+
+This is seeded during initialisation of the class, and once set, its R\+NG is shared by all other parts of the code that require it. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{rand__maths_8h}{rand\+\_\+maths.\+h}}\item 
+src/rand\+\_\+maths.\+cpp\end{DoxyCompactItemize}

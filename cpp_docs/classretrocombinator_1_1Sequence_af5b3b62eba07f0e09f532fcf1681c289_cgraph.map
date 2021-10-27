@@ -1,0 +1,5 @@
+<map id="retrocombinator::Sequence::Sequence" name="retrocombinator::Sequence::Sequence">
+<area shape="rect" id="node1" title="Constructs a sequence from a given string." alt="" coords="5,39,204,80"/>
+<area shape="rect" id="node2" href="$classretrocombinator_1_1ActivityTracker.html#a70d91d2da72433159f7dcbf6ac5470b7" title="Gets the length of sequences to be considered, in number of nucleotides." alt="" coords="252,5,467,47"/>
+<area shape="rect" id="node3" href="$namespaceretrocombinator_1_1Consts.html#a95eb077a2bba2fe988b44e68a3284314" title=" " alt="" coords="270,71,449,112"/>
+</map>

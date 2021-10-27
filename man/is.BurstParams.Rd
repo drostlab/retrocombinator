@@ -6,6 +6,9 @@
 \usage{
 is.BurstParams(x)
 }
+\arguments{
+\item{x}{An arbitrary object}
+}
 \description{
 Is x a BurstParams object?
 }

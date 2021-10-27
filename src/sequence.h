@@ -1,9 +1,7 @@
 /**
  * @file
  *
- * \brief To store a DNA sequence and the mutations that it has undergone.
- *
- * Includes methods to keep track of nucleotides, and get sequence distances.
+ * \brief For the Sequence class and auxiliary functions relating to sequences
  */
 #ifndef SEQUENCE_H
 #define SEQUENCE_H
@@ -235,7 +233,16 @@ namespace retrocombinator
     /// A list of sequences
     typedef std::list<Sequence> sequence_list;
 
+    /** Pairwise distances between two strings.
+     *  This is the standard edit distance score, and is the number of
+     *  mismatches (because insertions and deletions are not possible in
+     *  this system).
+      */
     size_type operator *(std::string s1, std::string s2);
+
+    /** Pairwise dissimilarity between two strings.
+      *  Similarity is 1-dissimilarity.
+      */
     double operator %(std::string s1, std::string s2);
 }
 

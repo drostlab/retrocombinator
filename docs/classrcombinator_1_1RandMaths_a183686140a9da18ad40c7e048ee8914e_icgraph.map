@@ -1,9 +1,0 @@
-<map id="rcombinator::RandMaths::test_event" name="rcombinator::RandMaths::test_event">
-<area shape="rect" id="node2" href="$classrcombinator_1_1EvolutionWithFlags.html#abad180fa8494b259e5167a13285347dd" title="Burst by taking into consideration activity of sequences, events, and selection. " alt="" coords="235,5,435,47"/>
-<area shape="rect" id="node3" href="$classrcombinator_1_1EvolutionWithoutFlags.html#a4fdf9c23da86d61f99a1f51c119e3ce2" title="Calculates the copy numbers of the sequences for all times. " alt="" coords="483,60,733,101"/>
-<area shape="rect" id="node5" href="$classrcombinator_1_1PointMutator.html#aba3c2b8641affe8a06d815c33cafdc1b" title="Mutates a sequence according to a given transition matrix. " alt="" coords="239,125,431,167"/>
-<area shape="rect" id="node4" href="$classrcombinator_1_1EvolutionWithoutFlags.html#a9e27b532826998a88d2c157daf53c447" title="Overrides to create a copy number tree if it hasn&#39;t already been created. " alt="" coords="781,60,1003,101"/>
-<area shape="rect" id="node6" href="$classrcombinator_1_1Evolution.html#a0b8a181242ea8ee3072258fa7ed416f4" title="Run a simulation, modify the sequences, and output results to file. " alt="" coords="523,125,693,167"/>
-<area shape="rect" id="node8" href="$test__point__mutator_8h.html#a2853d097c1b068f0a631ece5eab08154" title="Tests PointMutator. " alt="" coords="521,215,695,256"/>
-<area shape="rect" id="node7" href="$test__evolution__with__flags_8h.html#a2d63c076cc4d62869e4ed031a81bebca" title="Tests EvolutionWithFlags. " alt="" coords="791,149,993,191"/>
-</map>

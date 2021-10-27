@@ -1,6 +1,0 @@
-<map id="rcombinator::Sequence::point_mutate" name="rcombinator::Sequence::point_mutate">
-<area shape="rect" id="node2" href="$classrcombinator_1_1Sequence.html#a5f8b25d42af4aaf2463b4d2bdf3f023a" title="Returns the character for a base at a given position. " alt="" coords="225,37,397,79"/>
-<area shape="rect" id="node5" href="$namespacercombinator_1_1Consts.html#ab38bb458e46ca910f572862145ca2948" title="Returns the 2bit&#45;encoding of a nucleotide given its character form. " alt="" coords="235,103,388,144"/>
-<area shape="rect" id="node3" href="$namespacercombinator_1_1Consts.html#acebf7c5a777e8d06bd20142a969bc606" title="Returns the character of a nucleotide given its 2bit&#45;encoding. " alt="" coords="455,5,608,47"/>
-<area shape="rect" id="node4" href="$classrcombinator_1_1Sequence.html#a9ee9c6d8eec0a284a4a02d813ea5ea76" title="Returns the 2bit encoding for a base at a given position. " alt="" coords="445,71,617,112"/>
-</map>

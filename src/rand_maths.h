@@ -1,10 +1,8 @@
 /**
  * @file
  *
- * \brief Declaration of the global random number generator.
- *
- * Used for basic methods in statistics and probability.
- * RNG is the global instance name.
+ * \brief Besides the class for random number generation, this file declares \a
+ * the random number generator to be used everywhere, \p RNG
  */
 #ifndef RAND_MATHS_H
 #define RAND_MATHS_H
@@ -230,7 +228,7 @@ namespace retrocombinator
                                             size_type num_picks);
     };
 
-    // Global random number generator
+    // Global random number generator, documented in CPP file
     extern RandMaths& RNG;
 }
 
