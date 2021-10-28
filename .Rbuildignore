@@ -16,3 +16,4 @@
 ^tags$
 ^.vimrc$
 ^.*.out$
+^vignettes/.*.pdf$
