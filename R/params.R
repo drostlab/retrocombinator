@@ -22,17 +22,29 @@ SequenceParams <- function(numInitialCopies = 20,
   params <- list(numInitialCopies = numInitialCopies)
 
   if(!is.null(initialSequence)) {
+    initialSequence <- initialSequence[[1]]
     stopifnot("initialSequence must be a character" =
               is.character(initialSequence))
     stopifnot("initialSequence must be a character" =
               is.character(initialSequence))
+
+    chars <- unlist(strsplit(initialSequence, ""))
+    if(!all(chars %in% c("A", "T", "G", "C"))) {
+      warning("String not comprising of only ATGC characters, ignoring other characters")
+      chars_fixed <- chars[chars %in% c("A", "T", "G", "C")]
+      initialSequence <- paste0(chars_fixed, collapse = "")
+    }
+
     params$initialSequence <- initialSequence
+    params$sequenceLength <- nchar(initialSequence)
   }
   else {
     stopifnot("sequenceLength must be a positive integer if initialSequence is not specified" =
               isPositiveNumber(sequenceLength))
+    params$initialSequence <- ""
     params$sequenceLength <- sequenceLength
   }
+
   class(params) <- 'SequenceParams'
   return(params)
 }
@@ -245,7 +257,7 @@ is.SeedParams  <- function(x) inherits(x, 'SeedParams')
 
 #' Create SeedParams object
 #' @param toSeed Should this sequence be run with a specific initial seed? If
-#' so, then the seed is specified by the parameter seedForRandom; else a seed
+#' so, then the seed is specified by the parameter seedForRNG; else a seed
 #' based on system time is used
 #' @param seedForRNG seed to a (pseudo)random number generator, only used if `toSeed` is TRUE
 #' @export

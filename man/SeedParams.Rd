@@ -8,7 +8,7 @@ SeedParams(toSeed = TRUE, seedForRNG = 0)
 }
 \arguments{
 \item{toSeed}{Should this sequence be run with a specific initial seed? If
-so, then the seed is specified by the parameter seedForRandom; else a seed
+so, then the seed is specified by the parameter seedForRNG; else a seed
 based on system time is used}
 
 \item{seedForRNG}{seed to a (pseudo)random number generator, only used if `toSeed` is TRUE}

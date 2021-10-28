@@ -25,14 +25,6 @@ simulateEvolution <- function(
     seedParams = SeedParams()
   ) {
 
-  # TODO: Do this fixing in the SequenceParams object
-  sequenceParams$initialSequence <- ifelse(is.null(sequenceParams$initialSequence), "", sequenceParams$initialSequence)
-  chars <- unlist(strsplit(sequenceParams$initialSequence, ""))
-  if(!all(chars %in% c("A", "T", "G", "C"))) {
-    warning("String not comprising of only ATGC characters, ignoring other characters")
-    chars_fixed <- chars[chars %in% c("A", "T", "G", "C")]
-    sequenceParams$initialSequence <- paste0(chars_fixed, collapse = "")
-  }
   rcpp_simulate_evolution(
     sequenceParams$initialSequence,
     sequenceParams$sequenceLength, sequenceParams$numInitialCopies,

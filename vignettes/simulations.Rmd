@@ -163,7 +163,7 @@ simulateEvolution(sequenceParams = sequenceParams)
     * `toSeed : logical` Should this simulation be run with a specified seed to
       begin with? If `FALSE`, a seed based on system time is used **(default =
       `TRUE`)**
-    * `seedForRandom : numeric` If `toSeed` is `TRUE`, what should the initial seed for
+    * `seedForRNG : numeric` If `toSeed` is `TRUE`, what should the initial seed for
       the random number generator be? **(default = 0)**
 
 ## Output
@@ -254,4 +254,40 @@ The data can be visualised using the `plotEvolution` function
 plotEvolution(data, "initial")   # Distance to initial sequence
 plotEvolution(data, "pairwise")  # Pairwise distances between sequences
 plotEvolution(data, "families")  # Family sizes
+```
+
+## Example with all parameters
+
+```{r}
+sequenceParams <- SequenceParams(initialSequence = "TCAGTCAGTCAGTCAGTGTG",
+                                 numInitialCopies = 10)
+activityParams <- ActivityParams(lengthCriticalRegion = 2,
+                                 probInactiveWhenMutated = 0.1)
+mutationParams <- MutationParams(model = "F81")
+burstParams <- BurstParams(burstProbability = 0.2,
+                           burstMean = 2,
+                           maxTotalCopies = 40)
+recombParams <- RecombParams(recombMean = 2.0,
+                             recombSimilarity = 0.85)
+selectionParams <- SelectionParams(selectionThreshold = 0.25)
+familyParams <- FamilyParams(familyCoherence = 0.65,
+                             maxFamilyRepresentatives = 15)
+simulationParams <- SimulationParams(numSteps = 35,
+                                     timePerStep = 1.5)
+outputParams <- OutputParams(outputFilename = 'simulationExampleParameters.out',
+                             outputNumInitialDistance = 5,
+                             outputNumPairwiseDistance = 5,
+                             outputNumFamilyLabels = 5,
+                             outputNumFamilyMatrix = 5,
+                             outputMinSimilarity = 0.1)
+seedParams <- SeedParams(toSeed = TRUE, seedForRNG = 1)
+simulateEvolution(sequenceParams = sequenceParams,
+                  activityParams = activityParams,
+                  mutationParams = mutationParams,
+                  burstParams = burstParams,
+                  recombParams = recombParams,
+                  selectionParams = selectionParams,
+                  familyParams = familyParams,
+                  simulationParams = simulationParams,
+                  outputParams = outputParams)
 ```
