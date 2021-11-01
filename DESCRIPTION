@@ -1,6 +1,6 @@
 Package: retrocombinator
 Version: 1.0.0
-Title: Simulating the molecular evolutionary process of retrotransposon recombination
+Title: Simulating the Molecular Evolutionary Process of Retrotransposon Recombination
 Authors@R: c(
     person("Anindya", "Sharma", , "anindya.sharma1@gmail.com", role = c("aut", "cre")),
     person("Hajk-Georg", "Drost", , "hajk-georg.drost@tuebingen.mpg.de", role = c("aut", "ctb"))
