@@ -1,5 +1,7 @@
 ## R CMD check results
 
+* Note that this is my first submission to CRAN
+
 ```
 * checking installed package size ... NOTE
   installed size is  5.1Mb
