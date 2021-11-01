@@ -8,6 +8,7 @@ tags
 .RData
 .Ruserdata
 ..Rcheck/
+*.Rcheck/
 
 # RCpp output
 src/*.o
