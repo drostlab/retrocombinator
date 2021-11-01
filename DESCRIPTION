@@ -14,7 +14,7 @@ Imports:
     magrittr,
     rlang
 LinkingTo: Rcpp
-License: GPL-3 + file LICENSE
+License: GPL-3
 URL: https://github.com/drostlab/retrocombinator
 BugReports: https://github.com/drostlab/retrocombinator/issues
 Encoding: UTF-8

@@ -18,3 +18,4 @@
 ^.*.out$
 ^vignettes/.*.pdf$
 ^cran-comments.md$
+^CRAN-RELEASE$

@@ -1,3 +1,10 @@
+## Resubmission
+
+I am resubmitting my package without the "+ file LICENSE" in DESCRIPTION and the
+LICENSE file because they were superfluous, as I am using GPL-3.
+
+## Original message
+
 Dear CRAN maintainers,
 
 I have uploaded a new package named retrocombinator to CRAN. The package is also
@@ -43,7 +50,7 @@ Possibly mis-spelled words in DESCRIPTION:
   retrotransposon (3:57, 9:89)
 ```
 
-* The words "extrachromosomal" and "retrotransposon" are not mis-spelled, they
-  are words in the research field of biology which is investigating transposable
-  elements that copy and paste themselves into different genomic locations via
-  RNA intermediates. 
+* The words "extrachromosomal" and "retrotransposon" (/"Retrotransposon") are
+  not mis-spelled, they are words in the research field of biology which is
+  investigating transposable elements that copy and paste themselves into
+  different genomic locations via RNA intermediates.
