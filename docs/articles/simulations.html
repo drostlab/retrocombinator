@@ -83,7 +83,7 @@
 </h1>
                         <h4 class="author">Anindya Sharma</h4>
             
-            <h4 class="date">2021-10-27</h4>
+            <h4 class="date">2021-11-01</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/drostlab/retrocombinator/blob/master/vignettes/simulations.Rmd"><code>vignettes/simulations.Rmd</code></a></small>
       <div class="hidden name"><code>simulations.Rmd</code></div>
@@ -259,7 +259,7 @@
 <code>toSeed : logical</code> Should this simulation be run with a specified seed to begin with? If <code>FALSE</code>, a seed based on system time is used <strong>(default = <code>TRUE</code>)</strong>
 </li>
 <li>
-<code>seedForRandom : numeric</code> If <code>toSeed</code> is <code>TRUE</code>, what should the initial seed for the random number generator be? <strong>(default = 0)</strong>
+<code>seedForRNG : numeric</code> If <code>toSeed</code> is <code>TRUE</code>, what should the initial seed for the random number generator be? <strong>(default = 0)</strong>
 </li>
 </ul>
 </li>
@@ -365,14 +365,51 @@
 <code class="sourceCode R"><span class="fu">summariseEvolution</span><span class="op">(</span><span class="va">data</span><span class="op">)</span> <span class="co"># TODO</span></code></pre></div>
 <p>The data can be visualised using the <code>plotEvolution</code> function</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/plotEvolution.html">plotEvolution</a></span><span class="op">(</span><span class="va">data</span>, <span class="st">"initial"</span><span class="op">)</span>   <span class="co"># Distance to initial sequence</span></code></pre></div>
+<code class="sourceCode R"><span class="fu"><a href="../reference/plotEvolution.html">plotEvolution</a></span><span class="op">(</span><span class="va">data</span>, <span class="st">"initial"</span><span class="op">)</span>         <span class="co"># Distance to initial sequence</span></code></pre></div>
 <p><img src="simulations_files/figure-html/unnamed-chunk-9-1.png" width="700"></p>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/plotEvolution.html">plotEvolution</a></span><span class="op">(</span><span class="va">data</span>, <span class="st">"pairwise"</span><span class="op">)</span>  <span class="co"># Pairwise distances between sequences</span></code></pre></div>
+<code class="sourceCode R"><span class="fu"><a href="../reference/plotEvolution.html">plotEvolution</a></span><span class="op">(</span><span class="va">data</span>, <span class="st">"pairwise"</span><span class="op">)</span>        <span class="co"># Pairwise distances between sequences</span></code></pre></div>
 <p><img src="simulations_files/figure-html/unnamed-chunk-9-2.png" width="700"></p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/plotEvolution.html">plotEvolution</a></span><span class="op">(</span><span class="va">data</span>, <span class="st">"families"</span><span class="op">)</span>  <span class="co"># Family sizes</span></code></pre></div>
+<code class="sourceCode R"><span class="fu"><a href="../reference/plotEvolution.html">plotEvolution</a></span><span class="op">(</span><span class="va">data</span>, <span class="st">"families"</span><span class="op">)</span>        <span class="co"># Family sizes</span></code></pre></div>
 <p><img src="simulations_files/figure-html/unnamed-chunk-9-3.png" width="700"></p>
+</div>
+<div id="example-with-all-parameters" class="section level2">
+<h2 class="hasAnchor">
+<a href="#example-with-all-parameters" class="anchor"></a>Example with all parameters</h2>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">sequenceParams</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/SequenceParams.html">SequenceParams</a></span><span class="op">(</span>initialSequence <span class="op">=</span> <span class="st">"TCAGTCAGTCAGTCAGTGTG"</span>,
+                                 numInitialCopies <span class="op">=</span> <span class="fl">10</span><span class="op">)</span>
+<span class="va">activityParams</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/ActivityParams.html">ActivityParams</a></span><span class="op">(</span>lengthCriticalRegion <span class="op">=</span> <span class="fl">2</span>,
+                                 probInactiveWhenMutated <span class="op">=</span> <span class="fl">0.1</span><span class="op">)</span>
+<span class="va">mutationParams</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/MutationParams.html">MutationParams</a></span><span class="op">(</span>model <span class="op">=</span> <span class="st">"F81"</span><span class="op">)</span>
+<span class="va">burstParams</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/BurstParams.html">BurstParams</a></span><span class="op">(</span>burstProbability <span class="op">=</span> <span class="fl">0.2</span>,
+                           burstMean <span class="op">=</span> <span class="fl">2</span>,
+                           maxTotalCopies <span class="op">=</span> <span class="fl">40</span><span class="op">)</span>
+<span class="va">recombParams</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/RecombParams.html">RecombParams</a></span><span class="op">(</span>recombMean <span class="op">=</span> <span class="fl">2.0</span>,
+                             recombSimilarity <span class="op">=</span> <span class="fl">0.85</span><span class="op">)</span>
+<span class="va">selectionParams</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/SelectionParams.html">SelectionParams</a></span><span class="op">(</span>selectionThreshold <span class="op">=</span> <span class="fl">0.25</span><span class="op">)</span>
+<span class="va">familyParams</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/FamilyParams.html">FamilyParams</a></span><span class="op">(</span>familyCoherence <span class="op">=</span> <span class="fl">0.65</span>,
+                             maxFamilyRepresentatives <span class="op">=</span> <span class="fl">15</span><span class="op">)</span>
+<span class="va">simulationParams</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/SimulationParams.html">SimulationParams</a></span><span class="op">(</span>numSteps <span class="op">=</span> <span class="fl">35</span>,
+                                     timePerStep <span class="op">=</span> <span class="fl">1.5</span><span class="op">)</span>
+<span class="va">outputParams</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/OutputParams.html">OutputParams</a></span><span class="op">(</span>outputFilename <span class="op">=</span> <span class="st">'simulationExampleParameters.out'</span>,
+                             outputNumInitialDistance <span class="op">=</span> <span class="fl">5</span>,
+                             outputNumPairwiseDistance <span class="op">=</span> <span class="fl">5</span>,
+                             outputNumFamilyLabels <span class="op">=</span> <span class="fl">5</span>,
+                             outputNumFamilyMatrix <span class="op">=</span> <span class="fl">5</span>,
+                             outputMinSimilarity <span class="op">=</span> <span class="fl">0.1</span><span class="op">)</span>
+<span class="va">seedParams</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/SeedParams.html">SeedParams</a></span><span class="op">(</span>toSeed <span class="op">=</span> <span class="cn">TRUE</span>, seedForRNG <span class="op">=</span> <span class="fl">1</span><span class="op">)</span>
+<span class="fu"><a href="../reference/simulateEvolution.html">simulateEvolution</a></span><span class="op">(</span>sequenceParams <span class="op">=</span> <span class="va">sequenceParams</span>,
+                  activityParams <span class="op">=</span> <span class="va">activityParams</span>,
+                  mutationParams <span class="op">=</span> <span class="va">mutationParams</span>,
+                  burstParams <span class="op">=</span> <span class="va">burstParams</span>,
+                  recombParams <span class="op">=</span> <span class="va">recombParams</span>,
+                  selectionParams <span class="op">=</span> <span class="va">selectionParams</span>,
+                  familyParams <span class="op">=</span> <span class="va">familyParams</span>,
+                  simulationParams <span class="op">=</span> <span class="va">simulationParams</span>,
+                  outputParams <span class="op">=</span> <span class="va">outputParams</span><span class="op">)</span>
+<span class="co">#&gt; [1] "simulationExampleParameters.out"</span></code></pre></div>
 </div>
 </div>
   </div>

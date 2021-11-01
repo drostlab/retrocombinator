@@ -23,5 +23,4 @@ test_retrocombinator
 # output
 *.out
 inst/doc
-*.png
 *.tar.gz

@@ -11,7 +11,7 @@ plotEvolution(data, type, ...)
 
 \item{type}{"initial"  - Plot similarity to initial sequence over time.
 "pairwise" - Plot the similarity between sequences over time.
-"phylogeny" - Plot the evolution of families over time.}
+"families" - Plot the evolution of families over time.}
 
 \item{...}{Any additional arguments to pass to specialised plotting functions
 (currently unused)}

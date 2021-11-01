@@ -251,9 +251,9 @@ summariseEvolution(data) # TODO
 
 The data can be visualised using the `plotEvolution` function
 ```{r}
-plotEvolution(data, "initial")   # Distance to initial sequence
-plotEvolution(data, "pairwise")  # Pairwise distances between sequences
-plotEvolution(data, "families")  # Family sizes
+plotEvolution(data, "initial")         # Distance to initial sequence
+plotEvolution(data, "pairwise")        # Pairwise distances between sequences
+plotEvolution(data, "families")        # Family sizes
 ```
 
 ## Example with all parameters
