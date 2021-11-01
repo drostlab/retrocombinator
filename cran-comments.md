@@ -3,7 +3,7 @@ Dear CRAN maintainers,
 I have uploaded a new package named retrocombinator to CRAN. The package is also
 hosted on https://github.com/drostlab/retrocombinator
 
-I have read and agree to the CRAN policies.
+I have read the CRAN policies and agree with them.
 
 All automated checks have passed, with 0 ERRORs and 0 WARNINGs. Listed
 below are some NOTEs from `R CMD CHECK`, and why they are OK.
