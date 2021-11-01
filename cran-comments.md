@@ -1,4 +1,23 @@
-## R CMD check results
+Dear CRAN maintainers,
+
+I have uploaded a new package named retrocombinator to CRAN. The package is also
+hosted on https://github.com/drostlab/retrocombinator
+
+I have read and agree to the CRAN policies.
+
+All automated checks have passed, with 0 ERRORs and 0 WARNINGs. Listed
+below are some NOTEs from `R CMD CHECK`, and why they are OK.
+
+Thank you very much!
+
+Kind regards,
+Anindya
+
+## `R CMD check` - possible NOTEs and explanations
+
+```
+New submission
+```
 
 * Note that this is my first submission to CRAN
 
@@ -9,11 +28,14 @@
     libs   4.5Mb
 ```
 
-* On some machines, where binaries are compiled with debugging symbols, the
-  installed size is 5.1Mb, with the libs directory taking up 4.5Mb. On any
-  machine that strips out this debug information during compilation,
-  (by having `SHLIB_CXX11LDFLAGS = -Wl,-S -shared` in `Makevars`), this is not
-  an issue.
+* This R package uses C++ code underneath for optimisation, and links the C++
+  code to R using the Rcpp package. On some machines, where binaries are
+  compiled with debugging symbols left in, the overall installed size becomes
+  *5.1Mb*, with the libs directory taking up *4.5Mb*. On any machine that strips
+  out this debug information during compilation, which is what most machines do,
+  this is not a problem. On exceptional machines, debugging information can be
+  stripped out by having `SHLIB_CXX11LDFLAGS = -Wl,-S -shared` in `Makevars`,
+  which dramatically reduces the size of the package.
 
 ```
 Possibly mis-spelled words in DESCRIPTION:
@@ -22,6 +44,6 @@ Possibly mis-spelled words in DESCRIPTION:
 ```
 
 * The words "extrachromosomal" and "retrotransposon" are not mis-spelled, they
-  reflect neologisms in the research fields investigating transposable elements
-  that copy and paste themselves into different genomic locations via RNA
-  intermediates. 
+  are words in the research field of biology which is investigating transposable
+  elements that copy and paste themselves into different genomic locations via
+  RNA intermediates. 
