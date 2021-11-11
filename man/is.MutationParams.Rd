@@ -9,6 +9,13 @@ is.MutationParams(x)
 \arguments{
 \item{x}{An arbitrary object}
 }
+\value{
+A logical, TRUE if \code{x} is a MutationParams object, and FALSE otherwise
+}
 \description{
 Is x a MutationParams object?
+}
+\examples{
+is.MutationParams(MutationParams()) # TRUE
+is.MutationParams(data.frame()) # FALSE
 }

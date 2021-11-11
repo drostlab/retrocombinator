@@ -58,6 +58,9 @@
     </li>
   </ul>
 </li>
+<li>
+  <a href="../news/index.html">Changelog</a>
+</li>
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
@@ -83,7 +86,7 @@
 </h1>
                         <h4 class="author">Anindya Sharma</h4>
             
-            <h4 class="date">2021-11-01</h4>
+            <h4 class="date">2021-11-11</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/drostlab/retrocombinator/blob/master/vignettes/simulations.Rmd"><code>vignettes/simulations.Rmd</code></a></small>
       <div class="hidden name"><code>simulations.Rmd</code></div>
@@ -280,7 +283,14 @@
   <span class="fu"><a href="../reference/parseSimulationOutput.html">parseSimulationOutput</a></span><span class="op">(</span><span class="op">)</span>
 
 <span class="co"># ----------------------------------------</span></code></pre></div>
-<p>This contains a list of two dataframes, that keep track of retrotransposon sequences, their similarity to the initial sequence, their pairwise similarity, and their lineage, across the timesteps of the evolution.</p>
+<p>This contains</p>
+<ul>
+<li>a list of the parameters used to run the simulation</li>
+<li>a data frame of the sequences over time and their similarity to the initial sequence</li>
+<li>a data frame of the pairwise similarity of sequences over time</li>
+<li>a data frame of the family representatives for the retrotransposons over time</li>
+<li>a data frame of the pairwise similarity of the family representatives for the retrotransposons over time</li>
+</ul>
 <p>For pairwise similarity, pairs are not duplicated, and only distinct pairs are given. That is, for any timestep and sequences with <code>sequenceId</code> <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> present at that time, a row is present in the <code>pairwise</code> dataframe if and only if <span class="math inline">\(a &lt; b\)</span> .</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">data</span><span class="op">$</span><span class="va">params</span><span class="op">)</span><span class="op">)</span>

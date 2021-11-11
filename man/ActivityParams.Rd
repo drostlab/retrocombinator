@@ -11,6 +11,12 @@ ActivityParams(lengthCriticalRegion = 10, probInactiveWhenMutated = 0.01)
 
 \item{probInactiveWhenMutated}{The probability that a singe point mutation to the critical region causes a sequence to become inactive}
 }
+\value{
+A bundling of the parameters given to it as a ActivityParams object
+}
 \description{
 Create ActivityParams object
+}
+\examples{
+activityParams <- ActivityParams(lengthCriticalRegion = 40)
 }

@@ -19,6 +19,12 @@ simulation}
 \item{initialSequence}{An initial sequence (ignores sequenceLength if this is
 specified)}
 }
+\value{
+A bundling of the parameters given to it as a SequenceParams object
+}
 \description{
 Create SequenceParams object
+}
+\examples{
+sequenceParams <- SequenceParams(numInitialCopies = 40)
 }

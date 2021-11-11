@@ -11,6 +11,12 @@ SimulationParams(numSteps = 20, timePerStep = 1)
 
 \item{timePerStep}{How much time passes in one jump (unit: millions of years)}
 }
+\value{
+A bundling of the parameters given to it as a SimulationParams object
+}
 \description{
 Create SimulationParams object
+}
+\examples{
+simulationParams <- SimulationParams(numSteps = 40)
 }

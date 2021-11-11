@@ -9,6 +9,12 @@ SelectionParams(selectionThreshold = 0.3)
 \arguments{
 \item{selectionThreshold}{What sequence similarity to the original sequence do we wish to maintain? Sequences that diverge beyond this similarity level are dropped over the course of simulation}
 }
+\value{
+A bundling of the parameters given to it as a SelectionParams object
+}
 \description{
 Create SelectionParams object
+}
+\examples{
+selectionParams <- SelectionParams(selectionThreshold = 0.5)
 }

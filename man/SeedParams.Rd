@@ -13,6 +13,12 @@ based on system time is used}
 
 \item{seedForRNG}{seed to a (pseudo)random number generator, only used if `toSeed` is TRUE}
 }
+\value{
+A bundling of the parameters given to it as a SeedParams object
+}
 \description{
 Create SeedParams object
+}
+\examples{
+seedParams <- SeedParams(toSeed = FALSE)
 }

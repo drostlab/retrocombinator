@@ -11,8 +11,15 @@ MutationParams(model = "K80")
 the sequences during the simulation? Options are "JC69" (Jules and Cantor
 1969), "K80" (Kimura 1980), "F81" (Felsenstein 1981), "HKY85" (Hasegawa,
 Kishino and Yano, 1985), "TN93" (Timura and Nei 1993), or "GTR" (General Time
-Reversible Model, Tavaré 1986).}
+Reversible Model, Tavaré 1986), note however that "GTR" is currently
+unsupported.}
+}
+\value{
+A bundling of the parameters given to it as a MutationParams object
 }
 \description{
 Create MutationParams object
+}
+\examples{
+mutationParams <- MutationParams(model = 'F81')
 }

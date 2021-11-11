@@ -13,6 +13,12 @@ BurstParams(burstProbability = 0.1, burstMean = 1, maxTotalCopies = 50)
 
 \item{maxTotalCopies}{The largest population size of sequences to keep track of (if this is exceeded, sequences are randomly discarded to simulate death)}
 }
+\value{
+A bundling of the parameters given to it as a BurstParams object
+}
 \description{
 Create BurstParams object
+}
+\examples{
+burstParams <- BurstParams(burstMean = 2)
 }

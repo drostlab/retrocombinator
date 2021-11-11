@@ -11,6 +11,12 @@ FamilyParams(familyCoherence = 0.7, maxFamilyRepresentatives = 20)
 
 \item{maxFamilyRepresentatives}{How many family representatives to keep track of during the simulation?}
 }
+\value{
+A bundling of the parameters given to it as a FamilyParams object
+}
 \description{
 Create FamilyParams object
+}
+\examples{
+familyParams <- FamilyParams(familyCoherence = 0.775)
 }

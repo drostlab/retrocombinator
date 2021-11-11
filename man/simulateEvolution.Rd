@@ -38,6 +38,16 @@ simulateEvolution(
 
 \item{seedParams}{A [retrocombinator::SeedParams()] object for the simulation}
 }
+\value{
+A single character, the filename of the output of the simulation that
+can then be loaded into R using [retrocombinator::parseSimulationOutput()]
+}
 \description{
 Run an entire simulation with flags
+}
+\examples{
+\dontrun{
+simulateEvolution(sequenceParams = mySequenceParams,
+                  familyParams = myFamilyParams)
+}
 }

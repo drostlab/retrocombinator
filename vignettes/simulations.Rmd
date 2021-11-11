@@ -188,9 +188,15 @@ data <- simulateEvolution() %>%
 # ----------------------------------------
 ```
 
-This contains a list of two dataframes, that keep track of retrotransposon
-sequences, their similarity to the initial sequence, their pairwise similarity,
-and their lineage, across the timesteps of the evolution. 
+This contains
+
+* a list of the parameters used to run the simulation
+* a data frame of the sequences over time and their similarity to the initial
+  sequence
+* a data frame of the pairwise similarity of sequences over time
+* a data frame of the family representatives for the retrotransposons over time
+* a data frame of the pairwise similarity of the family representatives for the
+  retrotransposons over time
 
 For pairwise similarity, pairs are not duplicated, and only distinct pairs are
 given. That is, for any timestep and sequences with `sequenceId` $a$ and $b$

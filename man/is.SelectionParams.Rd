@@ -9,6 +9,13 @@ is.SelectionParams(x)
 \arguments{
 \item{x}{An arbitrary object}
 }
+\value{
+A logical, TRUE if \code{x} is a SelectionParams object, and FALSE otherwise
+}
 \description{
 Is x a SelectionParams object?
+}
+\examples{
+is.SelectionParams(SelectionParams()) # TRUE
+is.SelectionParams(data.frame()) # FALSE
 }

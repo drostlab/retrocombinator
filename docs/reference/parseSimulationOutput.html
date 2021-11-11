@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Input data from CPP output into a set of R data frames — parseSimulationOutput • retrocombinator</title>
+<title>Input data from CPP output into a list of data frames — parseSimulationOutput • retrocombinator</title>
 
 
 <!-- jquery -->
@@ -39,8 +39,8 @@
 
 
 
-<meta property="og:title" content="Input data from CPP output into a set of R data frames — parseSimulationOutput" />
-<meta property="og:description" content="Input data from CPP output into a set of R data frames" />
+<meta property="og:title" content="Input data from CPP output into a list of data frames — parseSimulationOutput" />
+<meta property="og:description" content="Input data from CPP output into a list of data frames" />
 
 
 
@@ -99,6 +99,9 @@
     </li>
   </ul>
 </li>
+<li>
+  <a href="../news/index.html">Changelog</a>
+</li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
@@ -120,13 +123,13 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Input data from CPP output into a set of R data frames</h1>
+    <h1>Input data from CPP output into a list of data frames</h1>
     <small class="dont-index">Source: <a href='https://github.com/drostlab/retrocombinator/blob/master/R/parseSimulationOutput.R'><code>R/parseSimulationOutput.R</code></a></small>
     <div class="hidden name"><code>parseSimulationOutput.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Input data from CPP output into a set of R data frames</p>
+    <p>Input data from CPP output into a list of data frames</p>
     </div>
 
     <pre class="usage"><span class='fu'>parseSimulationOutput</span><span class='op'>(</span><span class='va'>filename</span><span class='op'>)</span></pre>
@@ -140,7 +143,65 @@
     </tr>
     </table>
 
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
+    <p>A list containing</p><dl>
+<dt>params</dt><dd><p>the parameters used to run the simulation</p></dd>
+<dt>sequences</dt><dd><p>a data frame of the sequences over time and their similarity
+to the initial sequence
+<ul>
+<li><p>step - timestep in the simulation</p></li>
+<li><p>realTime - time since the start of the simulation (in millions of years)</p></li>
+<li><p>sequenceId - the unique ID of the sequence (to track it over time);
+  initial sequence has sequenceId 0 to (numInitialCopies-1)</p></li>
+<li><p>parentMain - the unique ID of the sequence this burst from;
+               (-1 if nothing)</p></li>
+<li><p>parentOther - the unique ID of the sequence its parent recombined with;
+                (-1 if nothing)</p></li>
+<li><p>distanceToInitial - the distance to the initial sequence</p></li>
+<li><p>isActive - whether or not the sequence is capable of transposition</p></li>
+</ul></p></dd>
+<dt>pairwise</dt><dd><p>a data frame of the pairwise similarity of sequences over time
+<ul>
+<li><p>step - timestep in the simulation</p></li>
+<li><p>realTime - time since the start of the simulation (in millions of years)</p></li>
+<li><p>sequenceId1 - an ID of a sequence present at the time</p></li>
+<li><p>sequenceId2 - an ID of a different sequence present at the time; not all pairs
+                are given - that is, for sequences a and b, either (a, b) or (b, a)
+                is present as a row but not both</p></li>
+<li><p>distancePairwise - the distance between the two sequences</p></li>
+</ul></p></dd>
+<dt>familyRepresentatives</dt><dd><p>a data frame of the family representatives
+    for the retrotransposons over time
+<ul>
+<li><p>step - timestep in the simulation</p></li>
+<li><p>realTime - time since the start of the simulation (in millions of years)</p></li>
+<li><p>familyId - the unique ID of the family representative (to track it over time)</p></li>
+<li><p>creationTime - time this family representative was created (in millions of years)</p></li>
+<li><p>sequenceId - a sequence belonging to that family (sequences belonging to a
+               family are listed as separate rows, and all sequences belonging
+               to that family are listed)</p></li>
+</ul></p></dd>
+<dt>familyPairwise</dt><dd><p>a data frame of the pairwise similarity of the
+    family representatives for the retrotransposons over time
+<ul>
+<li><p>step - timestep in the simulation</p></li>
+<li><p>realTime - time since the start of the simulation (in millions of years)</p></li>
+<li><p>familyId1 - an ID of a family representative present at the time</p></li>
+<li><p>familyId2 - an ID of a different family representative present at the time;
+              not all pairs are given - that is, for sequences a and b,
+              either (a, b) or (b, a) is present as a row but not both</p></li>
+<li><p>distancePairwise - the distance between the two family representatives</p></li>
+</ul></p></dd>
+
+</dl>
+
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
+<span class='va'>data</span> <span class='op'>&lt;-</span> <span class='fu'>parseSimulationOutput</span><span class='op'>(</span><span class='st'>'simulationOutput.out'</span><span class='op'>)</span>
+<span class='op'>}</span>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

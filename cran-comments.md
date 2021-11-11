@@ -1,5 +1,12 @@
 ## Resubmission
 
+I am resubmitting my package after expanding the documentation to have `\value`
+and `\examples` documentation for all functions. We are planning to publish a
+paper accompanying this software after the CRAN package is released, and then I
+shall quote those references in the DESCRIPTION after that paper is released.
+
+## Resubmission
+
 I am resubmitting my package without the "+ file LICENSE" in DESCRIPTION and the
 LICENSE file because they were superfluous, as I am using GPL-3.
 

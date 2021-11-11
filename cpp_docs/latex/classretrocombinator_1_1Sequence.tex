@@ -11,8 +11,7 @@ To represent a D\+NA sequence and the mutations that it has undergone.
 
 
 
-Collaboration diagram for retrocombinator\+::Sequence\+:
-\nopagebreak
+Collaboration diagram for retrocombinator\+::Sequence\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -180,8 +179,7 @@ For keeping track of mutations and critical mutations.
 
 Constructs a random sequence. 
 
-This is considered initial, so no mutations are present. Here is the call graph for this function\+:
-\nopagebreak
+This is considered initial, so no mutations are present. Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -198,8 +196,7 @@ This is considered initial, so no mutations are present. Here is the call graph 
 
 Constructs a sequence from a given string. 
 
-This is considered initial, so no mutations are present. Here is the call graph for this function\+:
-\nopagebreak
+This is considered initial, so no mutations are present. Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -220,8 +217,7 @@ The number of template switches has to be specified, and the positions at which 
 
 The first sequence is the \char`\"{}active\char`\"{} sequence, and reading starts from there. Reading can start from either end of that sequence, and continue in that direction.
 
-The mutations recorded are with respect to the original sequences. That is, the new sequence {\itshape s\+\_\+new} will have a mutation {\itshape m} at position {\itshape l} if and only if the sequence {\itshape s\+\_\+old} whose nucleotide is used for {\itshape s\+\_\+new} at position {\itshape l} had mutation {\itshape m} present at that position. Here is the call graph for this function\+:
-\nopagebreak
+The mutations recorded are with respect to the original sequences. That is, the new sequence {\itshape s\+\_\+new} will have a mutation {\itshape m} at position {\itshape l} if and only if the sequence {\itshape s\+\_\+old} whose nucleotide is used for {\itshape s\+\_\+new} at position {\itshape l} had mutation {\itshape m} present at that position. Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -253,16 +249,14 @@ Changes the nucleotide at position {\itshape n} to {\itshape new\+\_\+nucleotide
 
 If the new\+\_\+nucleotide is the same as the original nucleotide in the string, the mutation disappears, else a mutation is created. The activity tracker is used to determined whether or not a mutation is critical.
 
-Returns true iff there is a mutation present at the end. Here is the call graph for this function\+:
-\nopagebreak
+Returns true iff there is a mutation present at the end. Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classretrocombinator_1_1Sequence_a7cee5844bb9de4f0f900a863b0cf41bd_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -279,8 +273,7 @@ Here is the caller graph for this function\+:
 
 Explicitly update the global sequence count to start from a particular number. 
 
-new\+\_\+start\+\_\+tag will be given to the next sequence created. Used when running multiple simulations one after the other. Here is the caller graph for this function\+:
-\nopagebreak
+new\+\_\+start\+\_\+tag will be given to the next sequence created. Used when running multiple simulations one after the other. Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

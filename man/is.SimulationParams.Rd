@@ -9,6 +9,13 @@ is.SimulationParams(x)
 \arguments{
 \item{x}{An arbitrary object}
 }
+\value{
+A logical, TRUE if \code{x} is a SimulationParams object, and FALSE otherwise
+}
 \description{
 Is x a SimulationParams object?
+}
+\examples{
+is.SimulationParams(SimulationParams()) # TRUE
+is.SimulationParams(data.frame()) # FALSE
 }

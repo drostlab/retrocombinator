@@ -9,6 +9,13 @@ is.OutputParams(x)
 \arguments{
 \item{x}{An arbitrary object}
 }
+\value{
+A logical, TRUE if \code{x} is a OutputParams object, and FALSE otherwise
+}
 \description{
 Is x a OutputParams object?
+}
+\examples{
+is.OutputParams(OutputParams()) # TRUE
+is.OutputParams(data.frame()) # FALSE
 }

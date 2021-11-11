@@ -11,6 +11,12 @@ RecombParams(recombMean = 1.5, recombSimilarity = 0.8)
 
 \item{recombSimilarity}{How similar does an active sequence have to be with another sequence for them to be allowed to be recombine during transposition?}
 }
+\value{
+A bundling of the parameters given to it as a RecombParams object
+}
 \description{
 Create RecombParams object
+}
+\examples{
+recombParams <- RecombParams(recombMean = 2)
 }

@@ -9,6 +9,13 @@ is.ActivityParams(x)
 \arguments{
 \item{x}{An arbitrary object}
 }
+\value{
+A logical, TRUE if \code{x} is a ActivityParams object, and FALSE otherwise
+}
 \description{
 Is x an ActivityParams object?
+}
+\examples{
+is.ActivityParams(ActivityParams()) # TRUE
+is.ActivityParams(data.frame()) # FALSE
 }

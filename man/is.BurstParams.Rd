@@ -9,6 +9,13 @@ is.BurstParams(x)
 \arguments{
 \item{x}{An arbitrary object}
 }
+\value{
+A logical, TRUE if \code{x} is a BurstParams object, and FALSE otherwise
+}
 \description{
 Is x a BurstParams object?
+}
+\examples{
+is.BurstParams(BurstParams()) # TRUE
+is.BurstParams(data.frame()) # FALSE
 }

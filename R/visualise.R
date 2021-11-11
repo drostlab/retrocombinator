@@ -1,10 +1,19 @@
 #' Plotting function wrapper
-#' @param data Simulation output data obtained from parseEvolutionOutput
-#' @param type "initial"  - Plot similarity to initial sequence over time.
-#'       "pairwise" - Plot the similarity between sequences over time.
-#'       "families" - Plot the evolution of families over time.
+#' @param data Simulation output data obtained from [retrocombinator::parseEvolutionOutput()()]
+#' @param type What should be plotted?
+#' \describe{
+#' \item{"initial"}{Plot similarity to initial sequence over time.}
+#' \item{"pairwise"}{Plot the similarity between sequences over time.}
+#' \item{"families"}{Plot the evolution of families over time.}
+#' }
 #' @param ... Any additional arguments to pass to specialised plotting functions
-#'            (currently unused)
+#'        (currently unused)
+#' @return A corresponding evolutionary history plot, based on the simulation of
+#'         the evolution of retrotransposons
+#' @examples
+#' \dontrun{
+#' plotEvolution(myData, "initial")
+#' }
 #' @export
 plotEvolution <- function(data, type, ...) {
   switch(type,
@@ -13,7 +22,7 @@ plotEvolution <- function(data, type, ...) {
     families = plotFamilies(data, ...)
   )
 }
-#' @inherit plotEvolution
+
 plotInitialDistance <- function(data) {
   seqLength <- data$params$SequenceParams_sequenceLength
 
@@ -38,7 +47,7 @@ plotInitialDistance <- function(data) {
     retrocombinatorTheme()
 }
 
-#' @inherit plotEvolution
+
 plotPairwiseDistance <- function(data) {
   seqLength <- data$params$SequenceParams_sequenceLength
 
@@ -64,7 +73,7 @@ plotPairwiseDistance <- function(data) {
     retrocombinatorTheme()
 }
 
-#' @inherit plotEvolution
+
 plotFamilies <- function(data) {
   to_plot <- data$familyRepresentatives %>%
     dplyr::mutate(familyId = factor(.data$familyId)) %>%
@@ -83,8 +92,8 @@ plotFamilies <- function(data) {
     retrocombinatorTheme()
 }
 
-##' @inherit plotEvolution
-#plotFamiliesPairwise <- function(data) {
+
+# plotFamiliesPairwise <- function(data) {
 #  seqLength <- data$params$SequenceParams_sequenceLength
 #  maxRealTime <- max(data$familyRepresentatives$realTime)
 #

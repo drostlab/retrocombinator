@@ -3,6 +3,10 @@
 
 #' Is x a SequenceParams object?
 #' @param x An arbitrary object
+#' @return A logical, TRUE if \code{x} is a SequenceParams object, and FALSE otherwise
+#' @examples
+#' is.SequenceParams(SequenceParams()) # TRUE
+#' is.SequenceParams(data.frame()) # FALSE
 #' @export
 is.SequenceParams  <- function(x) inherits(x, 'SequenceParams')
 
@@ -12,6 +16,9 @@ is.SequenceParams  <- function(x) inherits(x, 'SequenceParams')
 #' simulation
 #' @param initialSequence An initial sequence (ignores sequenceLength if this is
 #' specified)
+#' @return A bundling of the parameters given to it as a SequenceParams object
+#' @examples
+#' sequenceParams <- SequenceParams(numInitialCopies = 40)
 #' @export
 SequenceParams <- function(numInitialCopies = 20,
                            sequenceLength = 5000,
@@ -51,12 +58,19 @@ SequenceParams <- function(numInitialCopies = 20,
 
 #' Is x an ActivityParams object?
 #' @param x An arbitrary object
+#' @return A logical, TRUE if \code{x} is a ActivityParams object, and FALSE otherwise
+#' @examples
+#' is.ActivityParams(ActivityParams()) # TRUE
+#' is.ActivityParams(data.frame()) # FALSE
 #' @export
 is.ActivityParams  <- function(x) inherits(x, 'ActivityParams')
 
 #' Create ActivityParams object
 #' @param lengthCriticalRegion Sequence length (number of nucleotides) of the critical region of a retrotransposon
 #' @param probInactiveWhenMutated The probability that a singe point mutation to the critical region causes a sequence to become inactive
+#' @return A bundling of the parameters given to it as a ActivityParams object
+#' @examples
+#' activityParams <- ActivityParams(lengthCriticalRegion = 40)
 #' @export
 ActivityParams <- function(lengthCriticalRegion = 10,
                            probInactiveWhenMutated = 0.01) {
@@ -74,6 +88,10 @@ ActivityParams <- function(lengthCriticalRegion = 10,
 
 #' Is x a MutationParams object?
 #' @param x An arbitrary object
+#' @return A logical, TRUE if \code{x} is a MutationParams object, and FALSE otherwise
+#' @examples
+#' is.MutationParams(MutationParams()) # TRUE
+#' is.MutationParams(data.frame()) # FALSE
 #' @export
 is.MutationParams  <- function(x) inherits(x, 'MutationParams')
 
@@ -82,7 +100,11 @@ is.MutationParams  <- function(x) inherits(x, 'MutationParams')
 #' the sequences during the simulation? Options are "JC69" (Jules and Cantor
 #' 1969), "K80" (Kimura 1980), "F81" (Felsenstein 1981), "HKY85" (Hasegawa,
 #' Kishino and Yano, 1985), "TN93" (Timura and Nei 1993), or "GTR" (General Time
-#' Reversible Model, Tavaré 1986).
+#' Reversible Model, Tavaré 1986), note however that "GTR" is currently
+#' unsupported.
+#' @return A bundling of the parameters given to it as a MutationParams object
+#' @examples
+#' mutationParams <- MutationParams(model = 'F81')
 #' @export
 MutationParams <- function(model = 'K80') {
   stopifnot("point mutation model name is invalid" =
@@ -95,6 +117,10 @@ MutationParams <- function(model = 'K80') {
 
 #' Is x a BurstParams object?
 #' @param x An arbitrary object
+#' @return A logical, TRUE if \code{x} is a BurstParams object, and FALSE otherwise
+#' @examples
+#' is.BurstParams(BurstParams()) # TRUE
+#' is.BurstParams(data.frame()) # FALSE
 #' @export
 is.BurstParams  <- function(x) inherits(x, 'BurstParams')
 
@@ -102,6 +128,9 @@ is.BurstParams  <- function(x) inherits(x, 'BurstParams')
 #' @param burstProbability The probability that an active retrotransposon will increase in copy number during a time jump of one timestep
 #' @param burstMean The Poisson mean for the distribution that specifies how many new sequences an active sequence will create during bursting
 #' @param maxTotalCopies The largest population size of sequences to keep track of (if this is exceeded, sequences are randomly discarded to simulate death)
+#' @return A bundling of the parameters given to it as a BurstParams object
+#' @examples
+#' burstParams <- BurstParams(burstMean = 2)
 #' @export
 BurstParams <- function(burstProbability = 0.1,
                         burstMean = 1,
@@ -122,12 +151,19 @@ BurstParams <- function(burstProbability = 0.1,
 
 #' Is x a RecombParams object?
 #' @param x An arbitrary object
+#' @return A logical, TRUE if \code{x} is a RecombParams object, and FALSE otherwise
+#' @examples
+#' is.RecombParams(RecombParams()) # TRUE
+#' is.RecombParams(data.frame()) # FALSE
 #' @export
 is.RecombParams  <- function(x) inherits(x, 'RecombParams')
 
 #' Create RecombParams object
 #' @param recombMean The expected number of template switches during recombination between two sequences (chosen from a Poisson distribution with this as its mean)
 #' @param recombSimilarity How similar does an active sequence have to be with another sequence for them to be allowed to be recombine during transposition?
+#' @return A bundling of the parameters given to it as a RecombParams object
+#' @examples
+#' recombParams <- RecombParams(recombMean = 2)
 #' @export
 RecombParams <- function(recombMean = 1.5,
                          recombSimilarity = 0.80) {
@@ -144,11 +180,18 @@ RecombParams <- function(recombMean = 1.5,
 
 #' Is x a SelectionParams object?
 #' @param x An arbitrary object
+#' @return A logical, TRUE if \code{x} is a SelectionParams object, and FALSE otherwise
+#' @examples
+#' is.SelectionParams(SelectionParams()) # TRUE
+#' is.SelectionParams(data.frame()) # FALSE
 #' @export
 is.SelectionParams  <- function(x) inherits(x, 'SelectionParams')
 
 #' Create SelectionParams object
 #' @param selectionThreshold What sequence similarity to the original sequence do we wish to maintain? Sequences that diverge beyond this similarity level are dropped over the course of simulation
+#' @return A bundling of the parameters given to it as a SelectionParams object
+#' @examples
+#' selectionParams <- SelectionParams(selectionThreshold = 0.5)
 #' @export
 SelectionParams <- function(selectionThreshold = 0.3) {
   stopifnot("selectionThreshold must be a valid number between 0 and 1" =
@@ -161,12 +204,19 @@ SelectionParams <- function(selectionThreshold = 0.3) {
 
 #' Is x a FamilyParams object?
 #' @param x An arbitrary object
+#' @return A logical, TRUE if \code{x} is a FamilyParams object, and FALSE otherwise
+#' @examples
+#' is.FamilyParams(FamilyParams()) # TRUE
+#' is.FamilyParams(data.frame()) # FALSE
 #' @export
 is.FamilyParams  <- function(x) inherits(x, 'FamilyParams')
 
 #' Create FamilyParams object
 #' @param familyCoherence What sequence similarity do two sequences have to be to each other for them to be considered to be of the same family?
 #' @param maxFamilyRepresentatives How many family representatives to keep track of during the simulation?
+#' @return A bundling of the parameters given to it as a FamilyParams object
+#' @examples
+#' familyParams <- FamilyParams(familyCoherence = 0.775)
 #' @export
 FamilyParams <- function(familyCoherence = 0.70,
                          maxFamilyRepresentatives = 20) {
@@ -183,12 +233,19 @@ FamilyParams <- function(familyCoherence = 0.70,
 
 #' Is x a SimulationParams object?
 #' @param x An arbitrary object
+#' @return A logical, TRUE if \code{x} is a SimulationParams object, and FALSE otherwise
+#' @examples
+#' is.SimulationParams(SimulationParams()) # TRUE
+#' is.SimulationParams(data.frame()) # FALSE
 #' @export
 is.SimulationParams  <- function(x) inherits(x, 'SimulationParms')
 
 #' Create SimulationParams object
 #' @param numSteps How many steps we have in our simulation
 #' @param timePerStep How much time passes in one jump (unit: millions of years)
+#' @return A bundling of the parameters given to it as a SimulationParams object
+#' @examples
+#' simulationParams <- SimulationParams(numSteps = 40)
 #' @export
 SimulationParams <- function(numSteps = 20,
                              timePerStep = 1) {
@@ -206,6 +263,10 @@ SimulationParams <- function(numSteps = 20,
 
 #' Is x a OutputParams object?
 #' @param x An arbitrary object
+#' @return A logical, TRUE if \code{x} is a OutputParams object, and FALSE otherwise
+#' @examples
+#' is.OutputParams(OutputParams()) # TRUE
+#' is.OutputParams(data.frame()) # FALSE
 #' @export
 is.OutputParams  <- function(x) inherits(x, 'OutputParams')
 
@@ -221,6 +282,9 @@ is.OutputParams  <- function(x) inherits(x, 'OutputParams')
 #' @param outputNumFamilyMatrix How many times across the simulation will we output
 #' the pairwise distances between family representatives?
 #' @param outputMinSimilarity What is the minimum similarity between two sequences we should report on?
+#' @return A bundling of the parameters given to it as a SimulationParams object
+#' @examples
+#' outputParams <- OutputParams(outputFilename = 'myOutputFilename.out')
 #' @export
 OutputParams <- function(outputFilename = 'simulationOutput.out',
                          outputNumInitialDistance = 10,
@@ -252,6 +316,10 @@ OutputParams <- function(outputFilename = 'simulationOutput.out',
 
 #' Is x a SeedParams object?
 #' @param x An arbitrary object
+#' @return A logical, TRUE if \code{x} is a SeedParams object, and FALSE otherwise
+#' @examples
+#' is.SeedParams(SeedParams()) # TRUE
+#' is.SeedParams(data.frame()) # FALSE
 #' @export
 is.SeedParams  <- function(x) inherits(x, 'SeedParams')
 
@@ -260,6 +328,9 @@ is.SeedParams  <- function(x) inherits(x, 'SeedParams')
 #' so, then the seed is specified by the parameter seedForRNG; else a seed
 #' based on system time is used
 #' @param seedForRNG seed to a (pseudo)random number generator, only used if `toSeed` is TRUE
+#' @return A bundling of the parameters given to it as a SeedParams object
+#' @examples
+#' seedParams <- SeedParams(toSeed = FALSE)
 #' @export
 SeedParams <- function(toSeed = TRUE,
                        seedForRNG = 0) {

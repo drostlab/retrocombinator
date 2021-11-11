@@ -31,6 +31,12 @@ the pairwise distances between family representatives?}
 
 \item{outputMinSimilarity}{What is the minimum similarity between two sequences we should report on?}
 }
+\value{
+A bundling of the parameters given to it as a SimulationParams object
+}
 \description{
 Create OutputParams object
+}
+\examples{
+outputParams <- OutputParams(outputFilename = 'myOutputFilename.out')
 }

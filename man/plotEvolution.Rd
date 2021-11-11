@@ -7,15 +7,27 @@
 plotEvolution(data, type, ...)
 }
 \arguments{
-\item{data}{Simulation output data obtained from parseEvolutionOutput}
+\item{data}{Simulation output data obtained from [retrocombinator::parseEvolutionOutput()()]}
 
-\item{type}{"initial"  - Plot similarity to initial sequence over time.
-"pairwise" - Plot the similarity between sequences over time.
-"families" - Plot the evolution of families over time.}
+\item{type}{What should be plotted?
+\describe{
+\item{"initial"}{Plot similarity to initial sequence over time.}
+\item{"pairwise"}{Plot the similarity between sequences over time.}
+\item{"families"}{Plot the evolution of families over time.}
+}}
 
 \item{...}{Any additional arguments to pass to specialised plotting functions
 (currently unused)}
 }
+\value{
+A corresponding evolutionary history plot, based on the simulation of
+        the evolution of retrotransposons
+}
 \description{
 Plotting function wrapper
+}
+\examples{
+\dontrun{
+plotEvolution(myData, "initial")
+}
 }

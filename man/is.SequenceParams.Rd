@@ -9,6 +9,13 @@ is.SequenceParams(x)
 \arguments{
 \item{x}{An arbitrary object}
 }
+\value{
+A logical, TRUE if \code{x} is a SequenceParams object, and FALSE otherwise
+}
 \description{
 Is x a SequenceParams object?
+}
+\examples{
+is.SequenceParams(SequenceParams()) # TRUE
+is.SequenceParams(data.frame()) # FALSE
 }

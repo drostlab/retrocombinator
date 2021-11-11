@@ -9,6 +9,13 @@ is.RecombParams(x)
 \arguments{
 \item{x}{An arbitrary object}
 }
+\value{
+A logical, TRUE if \code{x} is a RecombParams object, and FALSE otherwise
+}
 \description{
 Is x a RecombParams object?
+}
+\examples{
+is.RecombParams(RecombParams()) # TRUE
+is.RecombParams(data.frame()) # FALSE
 }

@@ -9,6 +9,13 @@
 #' @param simulationParams A [retrocombinator::SimulationParams()] object for the simulation
 #' @param outputParams A [retrocombinator::OutputParams()] object for the simulation
 #' @param seedParams A [retrocombinator::SeedParams()] object for the simulation
+#' @return A single character, the filename of the output of the simulation that
+#' can then be loaded into R using [retrocombinator::parseSimulationOutput()]
+#' @examples
+#' \dontrun{
+#' simulateEvolution(sequenceParams = mySequenceParams,
+#'                   familyParams = myFamilyParams)
+#' }
 #' @useDynLib retrocombinator, .registration = TRUE
 #' @importFrom Rcpp sourceCpp
 #' @export
