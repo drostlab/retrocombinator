@@ -36,6 +36,7 @@ plotInitialDistance <- function(data) {
                    color=.data$isActive,
                    alpha=0.05)
     ) +
+    ggplot2::geom_point() +
     ggplot2::geom_line() +
     ggplot2::labs(x = "Time (millions of years)",
                   y = "Similarity to initial sequence") +
@@ -91,38 +92,4 @@ plotFamilies <- function(data) {
     ) +
     retrocombinatorTheme()
 }
-
-
-# plotFamiliesPairwise <- function(data) {
-#  seqLength <- data$params$SequenceParams_sequenceLength
-#  maxRealTime <- max(data$familyRepresentatives$realTime)
-#
-#  halfData <- data$familyPairwise %>%
-#    dplyr::filter(.data$realTime == maxRealTime)
-#
-#  fullData <- halfData %>%
-#    rbind(data.frame(step = halfData$step,
-#                     realTime = halfData$realTime,
-#                     familyId1 = halfData$familyId2,
-#                     familyId2 = halfData$familyId1,
-#                     distancePairwise = halfData$distancePairwise))
-#
-#  familyIdLevels <- unique(sort(fullData$familyId1))
-#  to_plot <- fullData %>%
-#    dplyr::mutate(familyId1 = factor(.data$familyId1, levels = familyIdLevels)) %>%
-#    dplyr::mutate(familyId2 = factor(.data$familyId2, levels = familyIdLevels)) %>%
-#    dplyr::mutate(seqSimilarity = 1-.data$distancePairwise/seqLength)
-#
-#  ggplot2::ggplot(to_plot) +
-#    ggplot2::geom_point(
-#      ggplot2::aes(x=.data$familyId1, y=.data$familyId2,
-#                   size = .data$seqSimilarity
-#      )) +
-#    ggplot2::labs(x = "Family Id",
-#                  y = "Family Id") +
-#    ggplot2::scale_size_continuous(
-#      name ="Sequence similarity"
-#    ) +
-#    retrocombinatorTheme()
-#}
 

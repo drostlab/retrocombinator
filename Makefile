@@ -7,7 +7,7 @@ check_memory = "off"
 check_profiling = "off"
 
 # Options for optimisation
-optimisation = "off"
+optimisation = "on"
 
 # Library files
 SRC_DIR = src/

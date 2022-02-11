@@ -238,6 +238,10 @@ parseSimulationOutput <- function(filename)
       }
 
     }
+    else {
+      stop(paste("Output file from simulation is corrupted, unable to parse.\n",
+                 "Unknown line: ", nextLine))
+    }
   }
 
   close(con)

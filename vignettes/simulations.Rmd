@@ -252,7 +252,29 @@ print(colnames(data$familyPairwise))
 Summary statistics can be obtained from the data as follows.
 
 ```{r, eval = FALSE}
-summariseEvolution(data) # TODO
+summary <- summariseEvolution(data)
+
+print(colnames(summary$summaryAtEveryStep))
+# step - timestep in the simulation
+# realTime - time since the start of the simulation (in millions of years)
+# numSequences - how many sequences are present at that time?
+# numFamilies - how many families are present at that time?
+# divergence - the min, Q25, median, Q75, and max of the similarity to
+#              the initial sequence
+# pairwiseDivergence - the min, Q25, median, Q75, and max of the
+#                      pairwise divergence of the sequences
+# familySizes - the mean and standard deviation of family sizes
+
+summary$timeOfDeath
+# If NA, the sequences did not die.
+# Else, the realTime (in millions of years) at when the population became 0
+
+summary$timeBetweenFamilies
+# The min, Q25, median, Q75 and max of the time between new families emerging
+# (in millions of years)
+
+summary$timeBetweenResurrection
+# TODO
 ```
 
 The data can be visualised using the `plotEvolution` function
@@ -297,3 +319,4 @@ simulateEvolution(sequenceParams = sequenceParams,
                   simulationParams = simulationParams,
                   outputParams = outputParams)
 ```
+
