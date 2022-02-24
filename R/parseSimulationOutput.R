@@ -205,6 +205,7 @@ parseSimulationOutput <- function(filename)
         i <- i+1
       }
     }
+    else if (nextLine == ">FamTags") {  } # Ignore this, taken care of
     else if (nextLine == "FamDist<")
     {
       timestep <- as.numeric(trimws(extractLine(con), "left", whitespace = "@"))
