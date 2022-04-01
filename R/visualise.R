@@ -2,7 +2,7 @@
 #' @param data Simulation output data obtained from [retrocombinator::parseEvolutionOutput()()]
 #' @param type What should be plotted?
 #' \describe{
-#' \item{"initial"}{Plot similarity to initial sequence over time.}
+#' \item{"initial"}{Plot the similarity to initial sequence over time.}
 #' \item{"pairwise"}{Plot the similarity between sequences over time.}
 #' \item{"families"}{Plot the evolution of families over time.}
 #' }
@@ -92,4 +92,3 @@ plotFamilies <- function(data) {
     ) +
     retrocombinatorTheme()
 }
-

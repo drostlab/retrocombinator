@@ -95,13 +95,57 @@ simulateEvolution(sequenceParams = sequenceParams)
       **(default = 0.01)**
 * `MutationParams` represents how what nucleotide substitution model will be
   used to modify the sequences during the simulation. It is constructed from one
-  of the following `character` literals to the argument `model`:
-    * `"JC69"` Jules and Cantor - 1969
-    * `"K80"` Kimura - 1980 **(default)**
-    * `"F81"` Felsenstein - 1981
-    * `"HKY85"` Hasegawa, Kishino and Yano - 1985
+  of the following `character` literals to the argument `model`, and the
+  appropriate optional arguments (all of type `numeric`) to set the parameters
+  within the model.
+    * `"GTR"`  General Time Reversible Model, Tavaré - 1986 **(this model is not
+      fully supported)**
+      * `pi_T`, `pi_C`, `pi_A`, `pi_G` - proportion of the sequence that
+        comprises of the nucleotide T, C, A or G (respectively )after the system
+        has reached equilibrium
+      * `T2C`, `T2A`, `T2G`, `C2A`, `C2G`, `A2G` - X2Y represents the
+        corresponding entry in the transition matrix, which is the rate at which
+        nucleotide X mutates into nucleotide Y
+      * `scale` - the scalar by which the default transition matrix is to be
+        scaled by in order to get the number of expected mutations per
+        millions of years
     * `"TN93"` Timura and Nei - 1993
-    * `"GTR"`  General Time Reversible Model, Tavaré - 1986
+      * `pi_T`, `pi_C`, `pi_A`, `pi_G` - proportion of the sequence that
+        comprises of the nucleotide T, C, A or G (respectively )after the system
+        has reached equilibrium
+      * `k1` - rate of transition from T to C (or vice-versa) when the
+        transversion rate is 1
+      * `k2` - rate of transition from A to G (or vice-versa) when the
+        transversion rate is 1
+      * `scale` - the scalar by which the default transition matrix is to be
+        scaled by in order to get the number of expected mutations per
+        millions of years
+    * `"HKY85"` Hasegawa, Kishino and Yano - 1985
+      * `pi_T`, `pi_C`, `pi_A`, `pi_G` - proportion of the sequence that
+        comprises of the nucleotide T, C, A or G (respectively )after the system
+        has reached equilibrium
+      * `k` - rate of any transition (i.e. either a swap between T and C or a
+        swap between A and G) when the transversion rate is 1
+      * `scale` - the scalar by which the default transition matrix is to be
+        scaled by in order to get the number of expected mutations per
+        millions of years
+    * `"F81"` Felsenstein - 1981
+      * `pi_T`, `pi_C`, `pi_A`, `pi_G` - proportion of the sequence that
+        comprises of the nucleotide T, C, A or G (respectively )after the system
+        has reached equilibrium
+      * `scale` - the scalar by which the default transition matrix is to be
+        scaled by in order to get the number of expected mutations per
+        millions of years
+    * `"K80"` Kimura - 1980 **(default)**
+      * `k` - rate of any transition (i.e. either a swap between T and C or a
+        swap between A and G) when the transversion rate is 1
+      * `scale` - the scalar by which the default transition matrix is to be
+        scaled by in order to get the number of expected mutations per
+        millions of years
+    * `"JC69"` Jules and Cantor - 1969
+        * `scale` - the scalar by which the default transition matrix is to be
+          scaled by in order to get the number of expected mutations per
+          millions of years
 * `BurstParams` represents how an active retrotransposon will burst during
   transposition. It comprises of the following:
     * `burstProbability : numeric` The probability that an active
@@ -247,41 +291,79 @@ print(colnames(data$familyPairwise))
 # distancePairwise - the distance between the two family representatives
 ```
 
-## Analysis
+## Visualising the results
 
-Summary statistics can be obtained from the data as follows.
+The results of the simulation can be visualised using the `plotEvolution`
+function.
 
-```{r, eval = FALSE}
-summary <- summariseEvolution(data)
+```{r}
+plotEvolution(data, "initial")  # Similarity to initial sequence
+plotEvolution(data, "pairwise") # Pairwise similarities between sequences
+plotEvolution(data, "families") # Families of sequences
+```
 
-print(colnames(summary$summaryAtEveryStep))
+## Summarising the results
+
+The results of the simulation can also be visualised using the
+`summariseEvolution` function, which can in turn be visualised using the
+`plotSummary` function.
+
+```{r}
+summary <- summariseEvolution(data, 'initial')
+
+print(colnames(summary))
+# step - timestep in the simulation
+# realTime - time since the start of the simulation (in millions of years)
+# numSequences - how many sequences are present at that time?
+# divergenceMin - the minimum similarity to the initial sequence
+# divergenceQ25 - the first quartile similarity to the initial sequence
+# divergenceMedian - the median similarity to the initial sequence
+# divergenceQ75 - the third quartile similarity to the initial sequence
+# divergenceMax - the maximum quartile similarity to the initial sequence
+# divergenceMean - the mean similarity to the initial sequence
+```
+
+```{r}
+summary <- summariseEvolution(data, 'pairwise')
+
+print(colnames(summary))
+# step - timestep in the simulation
+# realTime - time since the start of the simulation (in millions of years)
+# pairwiseMin - the minimum pairwise similarity between sequences
+# pairwiseQ25 - the first quartile pairwise similarity between sequences
+# pairwiseMedian - the median pairwise similarity between sequences
+# pairwiseQ75 - the third quartile pairwise similarity between sequences
+# pairwiseMax - the maximum pairwise similarity between sequences
+# pairwiseMean - the mean similarity to the initial sequence
+```
+
+```{r}
+summary <- summariseEvolution(data, 'families')
+
+print(colnames(summary))
 # step - timestep in the simulation
 # realTime - time since the start of the simulation (in millions of years)
 # numSequences - how many sequences are present at that time?
 # numFamilies - how many families are present at that time?
-# divergence - the min, Q25, median, Q75, and max of the similarity to
-#              the initial sequence
-# pairwiseDivergence - the min, Q25, median, Q75, and max of the
-#                      pairwise divergence of the sequences
-# familySizes - the mean and standard deviation of family sizes
+# familiesMin - the minimum family size
+# familiesQ25 - the first quartile family size
+# familiesMedian - the median family size
+# familiesQ75 - the third quartile family size
+# familiesMax - the maximum quartile family size
+# familiesMean - the mean family size
+```
 
+```{r, eval = FALSE}
+summary <- summariseEvolution(data, 'history')
+
+# TODO: This section
 summary$timeOfDeath
 # If NA, the sequences did not die.
 # Else, the realTime (in millions of years) at when the population became 0
-
 summary$timeBetweenFamilies
 # The min, Q25, median, Q75 and max of the time between new families emerging
 # (in millions of years)
-
 summary$timeBetweenResurrection
-# TODO
-```
-
-The data can be visualised using the `plotEvolution` function
-```{r}
-plotEvolution(data, "initial")         # Distance to initial sequence
-plotEvolution(data, "pairwise")        # Pairwise distances between sequences
-plotEvolution(data, "families")        # Family sizes
 ```
 
 ## Example with all parameters

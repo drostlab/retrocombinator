@@ -1,0 +1,124 @@
+---
+title: "Comparing parameters using `retrocombinator`"
+author: "Anindya Sharma"
+date: "`r Sys.Date()`"
+output: rmarkdown::pdf_document
+vignette: >
+  %\VignetteIndexEntry{Comparing Parameters}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r}
+library(ggplot2)
+library(dplyr)
+library(magrittr)
+library(retrocombinator)
+```
+
+```{r}
+sequenceParams <- SequenceParams(numInitialCopies = 20,
+                                 sequenceLength = 5000
+)
+activityParams <- ActivityParams(lengthCriticalRegion = 50,
+                                 probInactiveWhenMutated = 0.01)
+burstParams <- BurstParams(burstProbability = 0.2, burstMean = 5,
+                           maxTotalCopies = 100)
+selectionParams <- SelectionParams(selectionThreshold = 0.3)
+familyParams <- FamilyParams(familyCoherence = 0.6)
+simulationParams <- SimulationParams(numSteps = 100, timePerStep = 0.5)
+
+simulateEvolution(sequenceParams = sequenceParams,
+                  activityParams = activityParams,
+                  burstParams = burstParams,
+                  simulationParams = simulationParams,
+                  familyParams = familyParams,
+                  selectionParams = selectionParams,
+                  recombParams = RecombParams(recombMean = 0, 
+                                              recombSimilarity = 0.8),
+                  outputParams = OutputParams('simulationRecomb_no.out')
+)
+simulateEvolution(sequenceParams = sequenceParams,
+                  activityParams = activityParams,
+                  burstParams = burstParams,
+                  simulationParams = simulationParams,
+                  familyParams = familyParams,
+                  selectionParams = selectionParams,
+                  recombParams = RecombParams(recombMean = 2,
+                                              recombSimilarity = 0.8
+                                              ),
+                  outputParams = OutputParams('simulationRecomb_lo.out')
+)
+simulateEvolution(sequenceParams = sequenceParams,
+                  activityParams = activityParams,
+                  burstParams = burstParams,
+                  simulationParams = simulationParams,
+                  familyParams = familyParams,
+                  selectionParams = selectionParams,
+                  recombParams = RecombParams(recombMean = 10,
+                                              recombSimilarity = 0.8
+                                              ),
+                  outputParams = OutputParams('simulationRecomb_hi.out')
+)
+
+data_no <- parseSimulationOutput('simulationRecomb_no.out')
+data_lo <- parseSimulationOutput('simulationRecomb_lo.out')
+data_hi <- parseSimulationOutput('simulationRecomb_hi.out')
+```
+
+# Distance to initial sequence
+
+```{r}
+summary_no <- summariseEvolution(data_no, 'initial')
+summary_lo <- summariseEvolution(data_lo, 'initial')
+summary_hi <- summariseEvolution(data_hi, 'initial')
+
+ggplot() +
+  geom_line(data=summary_no, aes(x=realTime, y = divergenceMean, 
+                color = "No recombination")) +
+  geom_line(data=summary_lo, aes(x=realTime, y = divergenceMean, 
+                color = "Low recombination")) +
+  geom_line(data=summary_hi, aes(x=realTime, y = divergenceMean, 
+                color = "High recombination")) +
+  scale_color_manual(
+    name = "Type of simulation",
+    values = c("No recombination" = "green",
+               "Low recombination" = "blue",
+               "High recombination" = "red"
+    )
+  ) +
+  labs(x = 'Time', y = 'Median similarity to initial sequence') +
+  retrocombinatorTheme()
+```
+
+# Pairwise distances 
+
+```{r}
+summary_no <- summariseEvolution(data_no, 'families')
+summary_lo <- summariseEvolution(data_lo, 'families')
+summary_hi <- summariseEvolution(data_hi, 'families')
+
+ggplot() +
+  geom_line(data=summary_no, aes(x=realTime, y = familiesMedian, 
+                color = "No recombination")) +
+  geom_line(data=summary_lo, aes(x=realTime, y = familiesMedian, 
+                color = "Low recombination")) +
+  geom_line(data=summary_hi, aes(x=realTime, y = familiesMedian, 
+                color = "High recombination")) +
+  scale_color_manual(
+    name = "Type of simulation",
+    values = c("No recombination" = "green",
+               "Low recombination" = "blue",
+               "High recombination" = "red"
+    )
+  ) +
+  labs(x = 'Time', y = 'Median family size') +
+  retrocombinatorTheme()
+```

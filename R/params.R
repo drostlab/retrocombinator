@@ -167,8 +167,8 @@ is.RecombParams  <- function(x) inherits(x, 'RecombParams')
 #' @export
 RecombParams <- function(recombMean = 1.5,
                          recombSimilarity = 0.80) {
-  stopifnot("recombMean must be a positive number" =
-            isPositiveNumber(recombMean))
+  stopifnot("recombMean must be a semi-positive number" =
+            isSemiPositiveNumber(recombMean))
   stopifnot("recombSimilarity must be a valid number between 0 and 1" =
             isProbability(recombSimilarity))
 
